@@ -15,3 +15,6 @@ If installation fails, try updating pip
 2. `pip cache purge`
 3. `pip install -r requirements.txt`
 
+
+## Wandb reporting
+1. `wandb login`

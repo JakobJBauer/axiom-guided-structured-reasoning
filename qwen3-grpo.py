@@ -12,6 +12,8 @@ trainer = GRPOTrainer(
     model="Qwen/Qwen2-0.5B-Instruct",
     reward_funcs=reward_num_unique_letters,
     args=training_args,
-    train_dataset=dataset
+    train_dataset=dataset,
+    report_to="wandb",
+    run_name="qwen2-grpo-unique-letters",
 )
 trainer.train()
