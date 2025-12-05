@@ -9,7 +9,7 @@ def reward_num_unique_letters(completions, **kwargs):
 
 training_args = GRPOConfig(output_dir="Qwen3-3B-Instruct-GRPO")
 trainer = GRPOTrainer(
-    model="Qwen/Qwen3-3B-Instruct",
+    model="Qwen/Qwen3-4B-Instruct-2507",
     reward_funcs=reward_num_unique_letters,
     args=training_args,
     train_dataset=dataset
