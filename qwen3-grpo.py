@@ -8,7 +8,7 @@ def reward_num_unique_letters(completions, **kwargs):
     return [float(len(set(content))) for content in completions_contents]
 
 training_args = GRPOConfig(
-    output_dir="Qwen2-Instruct-GRPO"
+    output_dir="Qwen2-Instruct-GRPO",
     report_to="wandb",
     run_name="qwen2-grpo-unique-letters",
 )
