@@ -2,3 +2,5 @@ trl
 accelerate
 datasets
 wandb
+transformers
+torch
