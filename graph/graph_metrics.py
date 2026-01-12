@@ -12,11 +12,73 @@ class GraphMetrics:
 
     
     # Additional Metrics
-    ## ToDo: Implement Subsumption relations (another lambda function for auto-inference)
     ## ToDo: Add Tree edit distance metric to closest graph solution
 
 
     # Structure Metrics
+    def _is_edge_required(self, edge):
+        """
+        Check if an edge from the reference graph is required for the predicted graph.
+        An edge is required if:
+        1. The target node exists in the predicted graph
+        2. The target node's formula requires the source node to form a valid path
+        3. The current edges to that node don't already form a valid path without it
+        """
+        target_node = self.predicted.get_node_by_id(edge.target)
+        
+        if target_node is None: return False
+        if target_node.formula is None: return False
+        if target_node.valid_path_parents is None: return True # default
+        
+        # Get current incoming edges to target node in predicted graph
+        current_incoming = self.predicted.get_incoming_edges(target_node)
+        current_parents = set(e.source for e in current_incoming)
+        
+        # Check if current parents form a valid path
+        has_valid_path = any(
+            set(valid_path).issubset(current_parents)
+            for valid_path in target_node.valid_path_parents
+        )
+        
+        # If we already have a valid path, this edge is not required
+        if has_valid_path: return False
+        
+        # Check if the source node is needed for any valid path
+        # (even if the source node doesn't exist in predicted graph yet)
+        source_needed = any(
+            edge.source in valid_path
+            for valid_path in target_node.valid_path_parents
+        )
+        
+        if not source_needed: return False
+        
+        # Check if adding this edge (and potentially the source node) would create a valid path
+        # We check if there's a valid path that includes this source
+        potential_parents = current_parents | {edge.source}
+        would_create_valid_path = any(
+            set(valid_path).issubset(potential_parents)
+            for valid_path in target_node.valid_path_parents
+        )
+        
+        # If adding this edge creates a valid path, it's required
+        return would_create_valid_path
+    
+    def _has_valid_path(self, node):
+        """
+        Check if a node in the predicted graph has a valid path according to its formula.
+        """
+        if node.formula is None or node.valid_path_parents is None:
+            return True  # Leaf nodes or nodes without formulas are always valid
+        
+        current_incoming = self.predicted.get_incoming_edges(node)
+        current_parents = set(e.source for e in current_incoming)
+        
+        # Check if current parents form a valid path
+        return any(
+            set(valid_path).issubset(current_parents)
+            for valid_path in node.valid_path_parents
+        )
+    
     def correct_reasoning_edges(self, check_values=False):
         """
         Counts the number of edges that are in the correct position in the reasoning tree.
@@ -32,9 +94,18 @@ class GraphMetrics:
 
     def missing_reasoning_edges(self, check_values=False):
         """
-        Counts the number of edges that are in the reference graph but not in the predicted graph.
+        Counts the number of edges that are in the reference graph but not in the predicted graph,
+        AND are actually required for the predicted graph to be valid.
+        For minimal reasoning paths, edges that aren't needed don't count as missing.
         """
-        return len(self.reference.get_edges()) - self.correct_reasoning_edges(check_values=check_values)
+        required_missing = 0
+        for ref_edge in self.reference.get_edges():
+            # Check if this edge is in the predicted graph
+            if ref_edge not in self.predicted.get_edges():
+                # Check if this edge is actually required
+                if self._is_edge_required(ref_edge):
+                    required_missing += 1
+        return required_missing
 
     def hallucinated_reasoning_edges(self):
         """
@@ -43,7 +114,31 @@ class GraphMetrics:
         return sum(pred_edge not in self.reference.edges for pred_edge in self.predicted.get_edges())
 
     def full_graph_match(self, check_values=False):
-        return self.correct_reasoning_edges(check_values=check_values) == len(self.reference.edges) and self.missing_reasoning_edges(check_values=check_values) == 0
+        """
+        Returns True if the predicted graph is a valid (possibly minimal) match.
+        For minimal reasoning paths, this returns True if:
+        1. All edges in the solution are correct (no hallucinations)
+        2. All nodes in the solution have valid paths
+        3. No required edges are missing
+        """
+        # Check for hallucinations
+        if self.hallucinated_reasoning_edges() > 0:
+            return False
+        
+        # Check that all edges in solution are correct
+        if self.correct_reasoning_edges(check_values=check_values) != len(self.predicted.get_edges()):
+            return False
+        
+        # Check that all nodes in solution have valid paths
+        for pred_node in self.predicted.nodes:
+            if not self._has_valid_path(pred_node):
+                return False
+        
+        # Check that no required edges are missing
+        if self.missing_reasoning_edges(check_values=check_values) > 0:
+            return False
+        
+        return True
 
     
     def longest_correct_reasoning_path(self, check_values=False):
