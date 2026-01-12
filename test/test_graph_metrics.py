@@ -105,10 +105,9 @@ class TestGraphMetricsStructure(unittest.TestCase):
         self.assertEqual(metrics.correct_reasoning_edges(), 2)
         self.assertEqual(metrics.missing_reasoning_edges(), 0)
         self.assertEqual(metrics.hallucinated_reasoning_edges(), 1)
-        # Note: full_graph_match only checks correct edges == reference edges and missing == 0
-        # It doesn't check for hallucinated edges, so this can be True even with hallucinations
-        # This is the current behavior - if needed, full_graph_match could be updated
-        self.assertTrue(metrics.full_graph_match())  # Current behavior
+        # full_graph_match should return False when there are hallucinations
+        # This is the correct behavior - hallucinations indicate incorrect reasoning
+        self.assertFalse(metrics.full_graph_match())
     
     def test_longest_correct_reasoning_path(self):
         """Test longest correct reasoning path"""
