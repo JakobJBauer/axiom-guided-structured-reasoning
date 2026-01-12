@@ -1,0 +1,37 @@
+[NOUN]
+A story is noun if it starts with a noun (a person, place, thing, or concept).
+
+[NON-NOUN]
+A story is non-noun if it is not [NOUN].
+
+[SHORT] 
+A story is short if it contains fewer than 150 words.
+
+[DENSE]
+A story is dense if both of the following are true:
+- The story is [NON-NOUN]
+- The story is [SHORT]
+
+[MAGICAL] 
+A story is magical if it contains clearly fantastical, supernatural, or impossible elements (e.g. magic, dragons, time travel, spells, mythical creatures).
+
+[SERIOUS]
+A story is serious if it contains realistic, grave, somber, or high-stakes themes (e.g. death, war, injustice, moral dilemmas, tragedy) and uses a non-playful tone.
+
+[THRILLING]
+A story is thrilling if either of the following is true:
+- The story is [MAGICAL]
+- The story is [SERIOUS]
+
+[ENGAGING]
+A story is engaging if both of the following are true:
+- The story is [DENSE]
+- The story is [THRILLING]
+
+[RANDOM-SEED]  
+The random-seed value is an external random boolean (true/false) assigned independently of the story’s content.
+
+[WELL-SELLING]
+A story is well-selling if both of the following is true:
+- The story is [ENGAGING]
+- The [RANDOM-SEED] value is true
