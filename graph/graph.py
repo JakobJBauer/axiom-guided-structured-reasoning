@@ -1,17 +1,33 @@
 class Node:
-    def __init__(self, id, label=None, value=None, formula=None):
+    def __init__(self, id, label=None, value=None, formula=None, valid_path_parents=None):
+        """
+        id: The id of the node.
+        label: The label of the node.
+        value: The value of the node.
+        formula: The formula of the node (can be a Formula object or callable function).
+        valid_path_parents: The parent nodes that are required for the formula to be valid. List of lists, each inner list is a valid path of parent nodes.
+                          If None and formula is a Formula object, will be auto-inferred from the formula.
+        """
         self.id = id
         self.label = label if label is not None else id
         self.value = value
         self.formula = formula
+        
+        # Auto-infer valid_path_parents if not provided and formula is a Formula object
+        if valid_path_parents is None and formula is not None:
+            if hasattr(formula, 'get_valid_path_parents'):
+                self.valid_path_parents = formula.get_valid_path_parents()
+            else:
+                self.valid_path_parents = None
+        else:
+            self.valid_path_parents = valid_path_parents
     
     def set_value(self, value):
         self.value = value
     
     def compute_value(self, incoming_values):
-        if self.formula is not None:
-            return self.formula(incoming_values)
-        return None
+        if self.formula is None: return None
+        return self.formula(incoming_values)
 
     def __eq__(self, other):
         if not isinstance(other, Node): return False
@@ -19,7 +35,7 @@ class Node:
     
     def copy(self):
         """Create a copy of this node with the same attributes."""
-        return Node(self.id, self.label, self.value, self.formula)
+        return Node(self.id, self.label, self.value, self.formula, self.valid_path_parents)
 
 
 class Edge:
@@ -105,7 +121,8 @@ class Graph:
         return all(leave.value is not None for leave in leaves)
 
     def non_leaf_formula_set(self):
-        non_leaves = set(self.nodes) - set(self.get_leaf_nodes())
+        leaf_node_ids = {node.id for node in self.get_leaf_nodes()}
+        non_leaves = [node for node in self.nodes if node.id not in leaf_node_ids]
         return all(non_leaf.formula is not None for non_leaf in non_leaves)
     
     def auto_infer_values(self):
