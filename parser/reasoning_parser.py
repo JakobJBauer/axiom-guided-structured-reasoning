@@ -3,7 +3,7 @@ Parser for generating reasoning trees from reasoning text.
 
 Parses reasoning text in the format:
 <thinking>
-Paragraph with [SOURCE] nodes and (TARGET : True/False) conclusion.
+Paragraph with [SOURCE] nodes and (TARGET : True/False/"categorical") conclusion.
 </thinking>
 """
 
@@ -15,7 +15,7 @@ from typing import List, Dict, Optional, Set
 # Add parent directory to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
-from graph.graph import Node, Edge, Graph
+from graph import Node, Edge, Graph
 
 
 class ReasoningParser:
@@ -24,7 +24,8 @@ class ReasoningParser:
     
     Format:
     - Paragraphs with [NODE] citations (sources)
-    - (NODE : True/False) at end indicates target node and its value
+    - (NODE : True/False/"categorical") at end indicates target node and its value
+    - Values can be boolean (True/False) or categorical (strings)
     - Edges are created from [NODE] sources to (NODE) target
     - Case-insensitive matching, but node names stored as uppercase
     - A node is never connected to itself
@@ -77,16 +78,17 @@ class ReasoningParser:
             source_names = self._extract_source_nodes(paragraph)
             
             # Create or update target node
+            parsed_value = self._parse_value(target_value)
             if target_id not in nodes_dict:
                 nodes_dict[target_id] = Node(
                     id=target_id,
                     label=target_id,
-                    value=self._parse_bool_value(target_value)
+                    value=parsed_value
                 )
             else:
                 # Update value if not already set
                 if nodes_dict[target_id].value is None:
-                    nodes_dict[target_id].value = self._parse_bool_value(target_value)
+                    nodes_dict[target_id].value = parsed_value
             
             # Create edges from sources to target
             for source_name in source_names:
@@ -137,19 +139,26 @@ class ReasoningParser:
     
     def _extract_target_node(self, paragraph: str) -> Optional[tuple]:
         """
-        Extract target node and value from (NODE : True/False) pattern.
+        Extract target node and value from (NODE : value) pattern.
+        Supports boolean values (True/False) and categorical values (strings).
         
         Returns:
             Tuple of (node_name, value_string) or None
         """
-        # Pattern to match (NODE : True/False) or (NODE: True/False)
-        # Case-insensitive matching
-        pattern = r'\(([A-Z0-9\-_]+)\s*:\s*(True|False)\)'
+        # Pattern to match (NODE : value) where value can be:
+        # - Boolean: True, False
+        # - Quoted string: "value", 'value'
+        # - Unquoted string: any string that's not True/False
+        # Case-insensitive matching for node name
+        pattern = r'\(([A-Z0-9\-_]+)\s*:\s*([^)]+)\)'
         match = re.search(pattern, paragraph, re.IGNORECASE)
         
         if match:
             node_name = match.group(1)
-            value_str = match.group(2)
+            value_str = match.group(2).strip()
+            # Remove closing parenthesis if it's part of the value
+            if value_str.endswith(')'):
+                value_str = value_str[:-1].strip()
             return (node_name, value_str)
         
         return None
@@ -164,14 +173,29 @@ class ReasoningParser:
         matches = re.findall(pattern, paragraph, re.IGNORECASE)
         return matches
     
-    def _parse_bool_value(self, value_str: str) -> Optional[bool]:
+    def _parse_value(self, value_str: str):
         """
-        Parse boolean value from string.
+        Parse value from string. Supports both boolean and categorical values.
+        
+        Args:
+            value_str: String representation of the value
+        
+        Returns:
+            bool for True/False, str for categorical values, None if invalid
         """
-        value_lower = value_str.lower().strip()
+        value_str = value_str.strip()
+        
+        # Check for boolean values (case-insensitive)
+        value_lower = value_str.lower()
         if value_lower == 'true':
             return True
         elif value_lower == 'false':
             return False
-        return None
+        
+        # Check for quoted strings (remove quotes)
+        if (value_str.startswith('"') and value_str.endswith('"')) or (value_str.startswith("'") and value_str.endswith("'")):
+            return value_str[1:-1]  # Remove surrounding quotes
+        
+        # Otherwise treat as categorical string value
+        return value_str
 
