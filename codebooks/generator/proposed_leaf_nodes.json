@@ -1,0 +1,357 @@
+[
+  {
+    "id": "topic-hidden-treasures",
+    "description": "The story is about hidden treasures",
+    "type": "categorical_match",
+    "feature": "topic",
+    "value": "hidden treasures"
+  },
+  {
+    "id": "topic-magical-lands",
+    "description": "The story is about magical lands",
+    "type": "categorical_match",
+    "feature": "topic",
+    "value": "magical lands"
+  },
+  {
+    "id": "topic-bygone-eras",
+    "description": "The story is about bygone eras",
+    "type": "categorical_match",
+    "feature": "topic",
+    "value": "bygone eras"
+  },
+  {
+    "id": "topic-the-arts",
+    "description": "The story is about the arts",
+    "type": "categorical_match",
+    "feature": "topic",
+    "value": "the arts"
+  },
+  {
+    "id": "topic-cultural-traditions",
+    "description": "The story is about cultural traditions",
+    "type": "categorical_match",
+    "feature": "topic",
+    "value": "cultural traditions"
+  },
+  {
+    "id": "topic-seasonal-changes",
+    "description": "The story is about seasonal changes",
+    "type": "categorical_match",
+    "feature": "topic",
+    "value": "seasonal changes"
+  },
+  {
+    "id": "topic-giant-creatures",
+    "description": "The story is about giant creatures",
+    "type": "categorical_match",
+    "feature": "topic",
+    "value": "giant creatures"
+  },
+  {
+    "id": "topic-mystical-creatures",
+    "description": "The story is about mystical creatures",
+    "type": "categorical_match",
+    "feature": "topic",
+    "value": "mystical creatures"
+  },
+  {
+    "id": "topic-time-travel",
+    "description": "The story is about time travel",
+    "type": "categorical_match",
+    "feature": "topic",
+    "value": "time travel"
+  },
+  {
+    "id": "topic-lost-civilizations",
+    "description": "The story is about lost civilizations",
+    "type": "categorical_match",
+    "feature": "topic",
+    "value": "lost civilizations"
+  },
+  {
+    "id": "theme-magic",
+    "description": "The story has the theme Magic",
+    "type": "categorical_match",
+    "feature": "theme",
+    "value": "Magic"
+  },
+  {
+    "id": "theme-deception",
+    "description": "The story has the theme Deception",
+    "type": "categorical_match",
+    "feature": "theme",
+    "value": "Deception"
+  },
+  {
+    "id": "theme-helping-others",
+    "description": "The story has the theme Helping Others",
+    "type": "categorical_match",
+    "feature": "theme",
+    "value": "Helping Others"
+  },
+  {
+    "id": "theme-agency",
+    "description": "The story has the theme Agency",
+    "type": "categorical_match",
+    "feature": "theme",
+    "value": "Agency"
+  },
+  {
+    "id": "theme-innovation",
+    "description": "The story has the theme Innovation",
+    "type": "categorical_match",
+    "feature": "theme",
+    "value": "Innovation"
+  },
+  {
+    "id": "theme-kindness",
+    "description": "The story has the theme Kindness",
+    "type": "categorical_match",
+    "feature": "theme",
+    "value": "Kindness"
+  },
+  {
+    "id": "theme-problem-solving",
+    "description": "The story has the theme Problem-Solving",
+    "type": "categorical_match",
+    "feature": "theme",
+    "value": "Problem-Solving"
+  },
+  {
+    "id": "theme-humor",
+    "description": "The story has the theme Humor",
+    "type": "categorical_match",
+    "feature": "theme",
+    "value": "Humor"
+  },
+  {
+    "id": "theme-growth",
+    "description": "The story has the theme Growth",
+    "type": "categorical_match",
+    "feature": "theme",
+    "value": "Growth"
+  },
+  {
+    "id": "theme-hardship",
+    "description": "The story has the theme Hardship",
+    "type": "categorical_match",
+    "feature": "theme",
+    "value": "Hardship"
+  },
+  {
+    "id": "style-minimalist",
+    "description": "The story is minimalist",
+    "type": "categorical_match",
+    "feature": "style",
+    "value": "minimalist"
+  },
+  {
+    "id": "style-classic",
+    "description": "The story is classic",
+    "type": "categorical_match",
+    "feature": "style",
+    "value": "classic"
+  },
+  {
+    "id": "style-lighthearted",
+    "description": "The story is lighthearted",
+    "type": "categorical_match",
+    "feature": "style",
+    "value": "lighthearted"
+  },
+  {
+    "id": "style-playful",
+    "description": "The story is playful",
+    "type": "categorical_match",
+    "feature": "style",
+    "value": "playful"
+  },
+  {
+    "id": "style-modern",
+    "description": "The story is modern",
+    "type": "categorical_match",
+    "feature": "style",
+    "value": "modern"
+  },
+  {
+    "id": "style-surreal",
+    "description": "The story is surreal",
+    "type": "categorical_match",
+    "feature": "style",
+    "value": "surreal"
+  },
+  {
+    "id": "style-philosophical",
+    "description": "The story is philosophical",
+    "type": "categorical_match",
+    "feature": "style",
+    "value": "philosophical"
+  },
+  {
+    "id": "style-humorous",
+    "description": "The story is humorous",
+    "type": "categorical_match",
+    "feature": "style",
+    "value": "humorous"
+  },
+  {
+    "id": "has-a-flashback",
+    "description": "The story has a flashback",
+    "type": "categorical_match",
+    "feature": "feature",
+    "value": "a flashback"
+  },
+  {
+    "id": "has-circular-narrative-struct",
+    "description": "The story has circular narrative structure",
+    "type": "categorical_match",
+    "feature": "feature",
+    "value": "circular narrative structure"
+  },
+  {
+    "id": "has-a-cliffhanger",
+    "description": "The story has a cliffhanger",
+    "type": "categorical_match",
+    "feature": "feature",
+    "value": "a cliffhanger"
+  },
+  {
+    "id": "has-a-red-herring",
+    "description": "The story has a Red Herring",
+    "type": "categorical_match",
+    "feature": "feature",
+    "value": "a Red Herring"
+  },
+  {
+    "id": "has-juxtaposition",
+    "description": "The story has juxtaposition",
+    "type": "categorical_match",
+    "feature": "feature",
+    "value": "juxtaposition"
+  },
+  {
+    "id": "has-a-story-within-a-story",
+    "description": "The story has a story within a story",
+    "type": "categorical_match",
+    "feature": "feature",
+    "value": "a story within a story"
+  },
+  {
+    "id": "has-checkhovs-gun",
+    "description": "The story has Checkhov's gun",
+    "type": "categorical_match",
+    "feature": "feature",
+    "value": "Checkhov's gun"
+  },
+  {
+    "id": "has-a-moral-lesson",
+    "description": "The story has a moral lesson",
+    "type": "categorical_match",
+    "feature": "feature",
+    "value": "a moral lesson"
+  },
+  {
+    "id": "uses-conditional-mood",
+    "description": "The story uses conditional mood",
+    "type": "categorical_match",
+    "feature": "grammar",
+    "value": "conditional mood"
+  },
+  {
+    "id": "uses-wh-questions",
+    "description": "The story uses wh-questions",
+    "type": "categorical_match",
+    "feature": "grammar",
+    "value": "wh-questions"
+  },
+  {
+    "id": "uses-superlative-forms",
+    "description": "The story uses superlative forms",
+    "type": "categorical_match",
+    "feature": "grammar",
+    "value": "superlative forms"
+  },
+  {
+    "id": "uses-discourse-markers",
+    "description": "The story uses discourse markers",
+    "type": "categorical_match",
+    "feature": "grammar",
+    "value": "discourse markers"
+  },
+  {
+    "id": "uses-perfect-aspect",
+    "description": "The story uses perfect aspect",
+    "type": "categorical_match",
+    "feature": "grammar",
+    "value": "perfect aspect"
+  },
+  {
+    "id": "starts-with-noun",
+    "description": "The story starts with a noun",
+    "type": "categorical_match",
+    "feature": "initial_word_type",
+    "value": "noun"
+  },
+  {
+    "id": "starts-with-adjective",
+    "description": "The story starts with a adjective",
+    "type": "categorical_match",
+    "feature": "initial_word_type",
+    "value": "adjective"
+  },
+  {
+    "id": "starts-with-adverb",
+    "description": "The story starts with a adverb",
+    "type": "categorical_match",
+    "feature": "initial_word_type",
+    "value": "adverb"
+  },
+  {
+    "id": "starts-with-preposition",
+    "description": "The story starts with a preposition",
+    "type": "categorical_match",
+    "feature": "initial_word_type",
+    "value": "preposition"
+  },
+  {
+    "id": "short-story",
+    "description": "The story has fewer than 160 words",
+    "type": "numeric_threshold",
+    "feature": "word_count",
+    "threshold": 160,
+    "operator": "<"
+  },
+  {
+    "id": "long-story",
+    "description": "The story has more than 375 words",
+    "type": "numeric_threshold",
+    "feature": "word_count",
+    "threshold": 375,
+    "operator": ">"
+  },
+  {
+    "id": "low-readability",
+    "description": "The story has readability score below 86.4",
+    "type": "numeric_threshold",
+    "feature": "flesch_reading_ease",
+    "threshold": 86.4,
+    "operator": "<"
+  },
+  {
+    "id": "high-readability",
+    "description": "The story has readability score above 96.1",
+    "type": "numeric_threshold",
+    "feature": "flesch_reading_ease",
+    "threshold": 96.08,
+    "operator": ">"
+  },
+  {
+    "id": "many-paragraphs",
+    "description": "The story has more than 6 paragraphs",
+    "type": "numeric_threshold",
+    "feature": "num_paragraphs",
+    "threshold": 6,
+    "operator": ">"
+  }
+]
