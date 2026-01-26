@@ -148,6 +148,42 @@ class Graph:
         copied_edges = [Edge(edge.source, edge.target) for edge in self.edges]
         return Graph(copied_nodes, copied_edges)
     
+    def __eq__(self, other):
+        """Compare two graphs for structural and formula equality."""
+        if not isinstance(other, Graph):
+            return False
+        
+        # Compare node IDs
+        node_ids1 = {node.id for node in self.nodes}
+        node_ids2 = {node.id for node in other.nodes}
+        if node_ids1 != node_ids2:
+            return False
+        
+        # Compare edges
+        edges1 = {(edge.source, edge.target) for edge in self.edges}
+        edges2 = {(edge.source, edge.target) for edge in other.edges}
+        if edges1 != edges2:
+            return False
+        
+        # Compare formulas for each node
+        for node_id in node_ids1:
+            node1 = self.get_node_by_id(node_id)
+            node2 = other.get_node_by_id(node_id)
+            
+            # Compare formulas
+            if node1.formula is None and node2.formula is None:
+                continue
+            if node1.formula is None or node2.formula is None:
+                return False
+            
+            # Convert formulas to strings for comparison (use repr for unambiguous comparison)
+            formula1_str = repr(node1.formula)
+            formula2_str = repr(node2.formula)
+            if formula1_str != formula2_str:
+                return False
+        
+        return True
+    
     def __str__(self) -> str:
         return f"Graph with {len(self.nodes)} nodes and {len(self.edges)} edges:\n" + \
         "\n".join([f"Node {node.id}: {node.label} ({node.value})" for node in self.nodes]) + "\n" +\

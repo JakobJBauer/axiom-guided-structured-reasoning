@@ -32,6 +32,10 @@ class Not(Formula):
     
     def __repr__(self):
         return f"Not({self.key_or_formula!r})"
+    
+    def __str__(self):
+        arg_str = str(self.key_or_formula)
+        return f"NOT {arg_str}"
 
 
 class And(Formula):    
@@ -71,6 +75,10 @@ class And(Formula):
     
     def __repr__(self):
         return f"And({', '.join(repr(kf) for kf in self.keys_or_formulas)})"
+    
+    def __str__(self):
+        args = [str(kf) for kf in self.keys_or_formulas]
+        return " AND ".join(f"({arg})" if " " in arg else arg for arg in args)
 
 
 class Or(Formula):    
@@ -115,6 +123,10 @@ class Or(Formula):
     
     def __repr__(self):
         return f"Or({', '.join(repr(kf) for kf in self.keys_or_formulas)})"
+    
+    def __str__(self):
+        args = [str(kf) for kf in self.keys_or_formulas]
+        return " OR ".join(f"({arg})" if " " in arg else arg for arg in args)
 
 
 class Xor(Formula):    
@@ -160,6 +172,10 @@ class Xor(Formula):
     
     def __repr__(self):
         return f"Xor({', '.join(repr(kf) for kf in self.keys_or_formulas)})"
+    
+    def __str__(self):
+        args = [str(kf) for kf in self.keys_or_formulas]
+        return " XOR ".join(f"({arg})" if " " in arg else arg for arg in args)
 
 
 class Equal(Formula):
@@ -186,6 +202,9 @@ class Equal(Formula):
     
     def __repr__(self):
         return f"Equal({self.key!r}, {self.value!r})"
+    
+    def __str__(self):
+        return f"{self.key} == {self.value!r}"
 
 
 class In(Formula):
@@ -211,3 +230,7 @@ class In(Formula):
     
     def __repr__(self):
         return f"In({self.key!r}, {self.values!r})"
+    
+    def __str__(self):
+        values_str = ", ".join(str(v) for v in self.values)
+        return f"{self.key} IN [{values_str}]"

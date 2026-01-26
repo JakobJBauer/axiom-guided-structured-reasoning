@@ -3,60 +3,6 @@ from pathlib import Path
 from typing import Optional, Dict, List, Tuple
 import warnings
 import graphviz
-from .formulas import Formula
-
-
-def _formula_to_string(formula: Formula) -> str:
-    """Convert a formula to a readable string representation."""
-    if formula is None:
-        return ""
-    
-    formula_type = type(formula).__name__
-    
-    if formula_type == "Not":
-        arg = formula.key_or_formula
-        if isinstance(arg, Formula):
-            arg_str = _formula_to_string(arg)
-        else:
-            arg_str = str(arg)
-        return f"NOT {arg_str}"
-    
-    elif formula_type == "And":
-        args = []
-        for kf in formula.keys_or_formulas:
-            if isinstance(kf, Formula):
-                args.append(_formula_to_string(kf))
-            else:
-                args.append(str(kf))
-        return " AND ".join(f"({arg})" if " " in arg else arg for arg in args)
-    
-    elif formula_type == "Or":
-        args = []
-        for kf in formula.keys_or_formulas:
-            if isinstance(kf, Formula):
-                args.append(_formula_to_string(kf))
-            else:
-                args.append(str(kf))
-        return " OR ".join(f"({arg})" if " " in arg else arg for arg in args)
-    
-    elif formula_type == "Xor":
-        args = []
-        for kf in formula.keys_or_formulas:
-            if isinstance(kf, Formula):
-                args.append(_formula_to_string(kf))
-            else:
-                args.append(str(kf))
-        return " XOR ".join(f"({arg})" if " " in arg else arg for arg in args)
-    
-    elif formula_type == "Equal":
-        return f"{formula.key} == {formula.value!r}"
-    
-    elif formula_type == "In":
-        values_str = ", ".join(str(v) for v in formula.values)
-        return f"{formula.key} IN [{values_str}]"
-    
-    else:
-        return str(formula)
 
 
 def visualize_graph(
@@ -102,7 +48,7 @@ def _visualize_with_graphviz(
         # Add formula as small text beneath the node if present
         formula_str = ""
         if node.formula is not None:
-            formula_str = _formula_to_string(node.formula)
+            formula_str = str(node.formula)
         
         # Use HTML-like label for multi-line formatting with different font sizes
         if formula_str:

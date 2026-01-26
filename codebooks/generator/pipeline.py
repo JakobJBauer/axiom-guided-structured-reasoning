@@ -9,6 +9,7 @@ This script runs the entire pipeline:
 5. Parse all codebooks into graphs
 6. Serialize all graphs (pickle + JSON)
 7. Visualize all graphs (save images to images/ subdirectory)
+8. Verify graph equality across variants (logs unequal graphs to graph_equality_log.txt)
 
 Files that cannot be parsed are moved to a "corrupted" subdirectory along with
 all their associated files (.txt, .pkl, .json).
@@ -91,6 +92,10 @@ class CodebookPipeline:
         print("\nStep 6: Visualizing all graphs...")
         print("-" * 80)
         self._visualize_all_graphs(output_path)
+        
+        print("\nStep 7: Verifying graph equality...")
+        print("-" * 80)
+        self._verify_graph_equality(output_path)
         
         print("\n" + "=" * 80)
         print("✓ PIPELINE COMPLETE!")
@@ -432,6 +437,156 @@ class CodebookPipeline:
                     pbar.update(1)
         
         print(f"\nVisualization complete: {successful} successful, {failed} failed")
+    
+    
+    def _get_base_codebook_name(self, filename: str) -> str:
+        """Extract base codebook name from filename (removes style and obfc suffixes)."""
+        # Remove .pkl extension
+        stem = Path(filename).stem
+        
+        # Remove obfc suffix first (it's always last if present)
+        if stem.endswith("-obfc"):
+            stem = stem[:-5]
+        
+        # Remove style suffixes (they come before obfc if present)
+        style_suffixes = [f"-{style}" for style in CodebookRewriter.STYLES]
+        for suffix in style_suffixes:
+            if stem.endswith(suffix):
+                stem = stem[:-len(suffix)]
+                break  # Only one style suffix per file
+        
+        return stem
+    
+    def _get_variant_name(self, filename: str) -> str:
+        """Get the variant name (style and obfc info) from filename."""
+        stem = Path(filename).stem
+        base = self._get_base_codebook_name(filename)
+        
+        variant = stem[len(base):]
+        if variant.startswith("-"):
+            variant = variant[1:]
+        
+        if not variant:
+            return "base"
+        
+        return variant
+    
+    def _verify_graph_equality(self, output_path: Path):
+        """Verify that graphs from rephrased codebooks are equal."""
+        # Find all .pkl files
+        pkl_files = list(output_path.glob("*.pkl"))
+        
+        # Exclude files in corrupted directory
+        pkl_files = [f for f in pkl_files if "corrupted" not in str(f)]
+        
+        if not pkl_files:
+            print("No graph files to verify.")
+            return
+        
+        # Group files by base codebook name
+        from collections import defaultdict
+        from serializer import load_graph
+        
+        codebook_groups = defaultdict(list)
+        for pkl_file in pkl_files:
+            base_name = self._get_base_codebook_name(pkl_file.name)
+            codebook_groups[base_name].append(pkl_file)
+        
+        # Filter to only groups with multiple variants (base + rewritten + obfuscated)
+        groups_to_check = {
+            name: files for name, files in codebook_groups.items()
+            if len(files) > 1
+        }
+        
+        if not groups_to_check:
+            print("No codebook groups with multiple variants found.")
+            return
+        
+        print(f"Verifying {len(groups_to_check)} codebook groups...")
+        
+        log_entries = []
+        
+        with tqdm(total=len(groups_to_check), desc="Verifying") as pbar:
+            for base_name, files in groups_to_check.items():
+                try:
+                    # Load all graphs for this codebook
+                    graphs = {}
+                    for pkl_file in files:
+                        try:
+                            graph = load_graph(str(pkl_file))
+                            variant = self._get_variant_name(pkl_file.name)
+                            graphs[variant] = graph
+                        except Exception as e:
+                            print(f"\nWarning: Could not load {pkl_file.name}: {e}")
+                            continue
+                    
+                    if len(graphs) < 2:
+                        continue
+                    
+                    # Find groups of equal graphs
+                    equal_groups = self._find_equal_groups(graphs)
+                    
+                    # Check if all graphs are equal
+                    if len(equal_groups) == 1:
+                        # All graphs are equal, skip logging
+                        continue
+                    
+                    # Not all graphs are equal, log the groups
+                    log_entry = [base_name]
+                    for _, variant_names in equal_groups:
+                        variant_list = ", ".join(sorted(variant_names))
+                        log_entry.append(f"Group: {len(variant_names)} ({variant_list})")
+                    
+                    log_entries.append(log_entry)
+                    
+                except Exception as e:
+                    print(f"\nError verifying {base_name}: {e}")
+                finally:
+                    pbar.update(1)
+        
+        # Write log file
+        if log_entries:
+            log_file = output_path / "graph_equality_log.txt"
+            with open(log_file, 'w', encoding='utf-8') as f:
+                for entry in log_entries:
+                    f.write(entry[0] + "\n")
+                    for line in entry[1:]:
+                        f.write("  " + line + "\n")
+                    f.write("\n")
+            
+            print(f"\nVerification complete: {len(log_entries)} codebooks with unequal graphs logged to {log_file}")
+        else:
+            print("\nVerification complete: All graphs are equal across all variants!")
+    
+    def _find_equal_groups(self, graphs: dict) -> List[tuple]:
+        """Find groups of equal graphs. Returns list of (graph, variant_names) tuples."""
+        from collections import defaultdict
+        
+        # Create a mapping of graph signature to variant names
+        graph_groups = defaultdict(list)
+        
+        # For each graph, find which other graphs it's equal to
+        processed = set()
+        equal_groups = []
+        
+        for variant1, graph1 in graphs.items():
+            if variant1 in processed:
+                continue
+            
+            # Find all graphs equal to this one
+            equal_variants = [variant1]
+            for variant2, graph2 in graphs.items():
+                if variant2 == variant1 or variant2 in processed:
+                    continue
+                
+                if graph1 == graph2:
+                    equal_variants.append(variant2)
+                    processed.add(variant2)
+            
+            processed.add(variant1)
+            equal_groups.append((graph1, equal_variants))
+        
+        return equal_groups
 
 
 def main():
