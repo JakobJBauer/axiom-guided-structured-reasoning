@@ -8,6 +8,10 @@ This script runs the entire pipeline:
 4. Obfuscate rewritten codebooks
 5. Parse all codebooks into graphs
 6. Serialize all graphs (pickle + JSON)
+7. Visualize all graphs (save images to images/ subdirectory)
+
+Files that cannot be parsed are moved to a "corrupted" subdirectory along with
+all their associated files (.txt, .pkl, .json).
 
 All files are saved in the same directory with appropriate suffixes.
 """
@@ -24,6 +28,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../..'))
 from generate_codebooks import CodebookGenerator
 from rewrite_codebooks import CodebookRewriter
 from parser import CodebookParser
+from graph.visualization import visualize_graph
 
 load_dotenv()
 
@@ -82,6 +87,10 @@ class CodebookPipeline:
         print("\nStep 5: Parsing and serializing all codebooks...")
         print("-" * 80)
         self._parse_and_serialize_all(output_path)
+        
+        print("\nStep 6: Visualizing all graphs...")
+        print("-" * 80)
+        self._visualize_all_graphs(output_path)
         
         print("\n" + "=" * 80)
         print("✓ PIPELINE COMPLETE!")
@@ -269,8 +278,37 @@ class CodebookPipeline:
                 finally:
                     pbar.update(1)
     
+    def _get_associated_files(self, base_file: Path) -> List[Path]:
+        associated_files = []
+        base_stem = base_file.stem
+        
+        # Common extensions to look for
+        extensions = ['.txt', '.pkl', '.json']
+        
+        for ext in extensions:
+            associated_file = base_file.parent / f"{base_stem}{ext}"
+            if associated_file.exists():
+                associated_files.append(associated_file)
+        
+        return associated_files
+    
+    def _move_to_corrupted(self, file_path: Path, output_path: Path):
+        corrupted_dir = output_path / "corrupted"
+        corrupted_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Get all associated files
+        associated_files = self._get_associated_files(file_path)
+        
+        # Move all associated files
+        for file_to_move in associated_files:
+            dest_file = corrupted_dir / file_to_move.name
+            if file_to_move.exists():
+                # If destination already exists, remove it first
+                if dest_file.exists():
+                    dest_file.unlink()
+                file_to_move.rename(dest_file)
+    
     def _parse_and_serialize_all(self, output_path: Path):
-        """Parse all codebook files and serialize them as graphs."""
         codebook_files = list(output_path.glob("*.txt"))
         
         if not codebook_files:
@@ -320,10 +358,80 @@ class CodebookPipeline:
                 except Exception as e:
                     failed += 1
                     print(f"\nError parsing {codebook_file.name}: {e}")
+                    # Move corrupted file and all associated files
+                    self._move_to_corrupted(codebook_file, output_path)
+                    print(f"  Moved corrupted files to: {output_path / 'corrupted'}")
                 finally:
                     pbar.update(1)
         
         print(f"\nParsing complete: {successful} successful, {failed} failed")
+    
+    def _visualize_all_graphs(self, output_path: Path):
+        # Find all .pkl files (these are the serialized graphs)
+        pkl_files = list(output_path.glob("*.pkl"))
+        
+        # Exclude files in corrupted directory
+        pkl_files = [f for f in pkl_files if "corrupted" not in str(f)]
+        
+        if not pkl_files:
+            print("No graph files to visualize.")
+            return
+        
+        # Create images directory
+        images_dir = output_path / "images"
+        images_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Filter out files that already have images
+        files_to_process = []
+        skipped = 0
+        for pkl_file in pkl_files:
+            image_file = images_dir / f"{pkl_file.stem}.png"
+            if image_file.exists():
+                skipped += 1
+            else:
+                files_to_process.append(pkl_file)
+        
+        if skipped > 0:
+            print(f"Skipping {skipped} already visualized graphs.")
+        if not files_to_process:
+            print("All graphs already visualized.")
+            return
+        
+        print(f"Visualizing {len(files_to_process)} graphs...")
+        
+        successful = 0
+        failed = 0
+        
+        with tqdm(total=len(files_to_process), desc="Visualizing") as pbar:
+            for pkl_file in files_to_process:
+                try:
+                    # Load graph
+                    from serializer import load_graph
+                    graph = load_graph(str(pkl_file))
+                    
+                    # Create output path in images directory
+                    image_path = images_dir / f"{pkl_file.stem}.png"
+                    
+                    # Visualize
+                    visualize_graph(
+                        graph,
+                        output_path=str(image_path),
+                        format="png"
+                    )
+                    
+                    successful += 1
+                    pbar.set_postfix({
+                        'file': pkl_file.name[:25],
+                        'success': successful,
+                        'failed': failed
+                    })
+                except Exception as e:
+                    failed += 1
+                    print(f"\nError visualizing {pkl_file.name}: {e}")
+                finally:
+                    pbar.update(1)
+        
+        print(f"\nVisualization complete: {successful} successful, {failed} failed")
 
 
 def main():
