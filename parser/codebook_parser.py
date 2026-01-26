@@ -1,12 +1,34 @@
 import os
 import json
 import sys
-from typing import Dict, List, Optional, Any
+import asyncio
+from typing import Dict, List, Optional, Any, Callable
 from pathlib import Path
 import openai
 from dotenv import load_dotenv
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../codebooks/generator'))
+
+# Import api_utils - handle both relative and absolute imports
+try:
+    from codebooks.generator.api_utils import parallel_api_calls, create_chat_task
+except ImportError:
+    # Fallback for direct imports or when package structure is different
+    try:
+        from .api_utils import parallel_api_calls, create_chat_task
+    except ImportError:
+        # Last resort: use importlib with explicit reload
+        import importlib.util
+        import importlib
+        api_utils_path = os.path.join(os.path.dirname(__file__), '../codebooks/generator/api_utils.py')
+        # Use a unique module name to avoid caching issues
+        module_name = f"api_utils_parser_{id(api_utils_path)}"
+        spec = importlib.util.spec_from_file_location(module_name, api_utils_path)
+        api_utils = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(api_utils)
+        parallel_api_calls = api_utils.parallel_api_calls
+        create_chat_task = api_utils.create_chat_task
 
 from graph import Node, Edge, Graph
 from graph.formulas import Not, And, Or, Xor, Equal, In
@@ -62,7 +84,7 @@ class CodebookParser:
                         "content": prompt
                     }
                 ],
-                temperature=0.0,  # Use deterministic output
+                temperature=1.0,  # Explicitly set to 1.0 (model default)
                 response_format={"type": "json_object"}
             )
             
@@ -73,6 +95,74 @@ class CodebookParser:
             
         except Exception as e:
             raise RuntimeError(f"Failed to extract graph structure from LLM: {e}")
+    
+    async def parse_codebooks_parallel(
+        self,
+        codebook_texts: List[str],
+        max_concurrent: int = 10,
+        on_complete: Optional[Callable[[int, Any], None]] = None
+    ) -> tuple[List[Graph], List[Dict[str, Any]]]:
+        """
+        Parse multiple codebooks in parallel.
+        
+        Args:
+            codebook_texts: List of codebook texts to parse
+            max_concurrent: Maximum number of concurrent API calls
+            on_complete: Optional callback function(index, result) called immediately when each result is ready
+        
+        Returns:
+            Tuple of (list of parsed Graph objects, list of graph_data dicts) in same order as inputs
+        """
+        tasks = []
+        for codebook_text in codebook_texts:
+            prompt = self._create_extraction_prompt(codebook_text)
+            task = create_chat_task(
+                user_message=prompt,
+                temperature=1.0,  # Explicitly set to 1.0 (model default)
+                response_format={"type": "json_object"}
+            )
+            tasks.append(task)
+        
+        results = await parallel_api_calls(
+            tasks=tasks,
+            api_key=self.api_key,
+            model=self.model,
+            max_concurrent=max_concurrent,
+            system_message="You are an expert at analyzing codebooks and extracting logical graph structures. "
+                          "You extract nodes, edges, and logical formulas from natural language descriptions.",
+            progress_desc="Parsing codebooks",
+            on_complete=on_complete
+        )
+        
+        # Parse results into graphs and graph_data
+        graphs = []
+        graph_data_list = []
+        errors = []
+        for i, result in enumerate(results):
+            if isinstance(result, Exception):
+                errors.append((i, result))
+                # Create placeholder None entries to maintain order
+                graphs.append(None)
+                graph_data_list.append(None)
+                continue
+            
+            try:
+                graph_data = json.loads(result)
+                graph = self._create_graph_from_data(graph_data)
+                graphs.append(graph)
+                graph_data_list.append(graph_data)
+            except Exception as e:
+                errors.append((i, e))
+                # Create placeholder None entries to maintain order
+                graphs.append(None)
+                graph_data_list.append(None)
+        
+        # If there are errors, raise them after processing all results
+        if errors:
+            error_messages = [f"Failed to parse codebook {i}: {err}" for i, err in errors]
+            raise RuntimeError(f"Failed to parse {len(errors)} codebook(s):\n" + "\n".join(error_messages[:5]))
+        
+        return graphs, graph_data_list
     
     def _create_extraction_prompt(self, codebook_text: str) -> str:
         return f"""Analyze the following codebook and extract the graph structure.

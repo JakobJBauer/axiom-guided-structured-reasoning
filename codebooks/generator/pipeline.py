@@ -19,8 +19,10 @@ All files are saved in the same directory with appropriate suffixes.
 
 import os
 import sys
+import asyncio
+import json
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Any
 from tqdm import tqdm
 from dotenv import load_dotenv
 
@@ -115,7 +117,8 @@ class CodebookPipeline:
             small_count=small_count,
             medium_count=medium_count,
             large_count=large_count,
-            insane_count=insane_count
+            insane_count=insane_count,
+            logging=False
         )
     
     def _obfuscate_codebooks(self, output_path: Path, exclude_patterns: List[str]):
@@ -206,27 +209,59 @@ class CodebookPipeline:
         
         print(f"Rewriting {len(original_files)} codebooks in {len(self.rewrite_styles)} styles ({total_to_process} files to create)...")
         
-        with tqdm(total=total_to_process, desc="Rewriting") as pbar:
-            for codebook_file in original_files:
-                for style in self.rewrite_styles:
-                    rewritten_file = codebook_file.parent / f"{codebook_file.stem}-{style}{codebook_file.suffix}"
-                    if rewritten_file.exists():
-                        pbar.update(1)
-                        continue
-                    
-                    try:
-                        rewritten_path = self.rewriter.rewrite_codebook_file(
-                            str(codebook_file),
-                            style
-                        )
-                        pbar.set_postfix({
-                            'file': codebook_file.name[:25],
-                            'style': style
-                        })
-                    except Exception as e:
-                        print(f"\nError rewriting {codebook_file.name} in {style}: {e}")
-                    finally:
-                        pbar.update(1)
+        # Collect all rewrites to do
+        rewrite_tasks = []
+        rewrite_metadata = []
+        
+        for codebook_file in original_files:
+            for style in self.rewrite_styles:
+                rewritten_file = codebook_file.parent / f"{codebook_file.stem}-{style}{codebook_file.suffix}"
+                if rewritten_file.exists():
+                    continue
+                
+                # Read codebook text
+                with open(codebook_file, 'r', encoding='utf-8') as f:
+                    codebook_text = f.read()
+                
+                rewrite_tasks.append((codebook_text, style))
+                rewrite_metadata.append({
+                    "codebook_file": codebook_file,
+                    "rewritten_file": rewritten_file
+                })
+        
+        # Rewrite in parallel
+        if rewrite_tasks:
+            print(f"Rewriting {len(rewrite_tasks)} codebooks in parallel...")
+            codebook_texts, styles_list = zip(*rewrite_tasks)
+            
+            # Define callback to save immediately when each rewrite completes
+            def save_rewrite_callback(index: int, result: Any):
+                if isinstance(result, Exception):
+                    return  # Skip errors, they'll be handled later
+                
+                metadata = rewrite_metadata[index]
+                with open(metadata["rewritten_file"], 'w', encoding='utf-8') as f:
+                    f.write(result)
+            
+            try:
+                from .api_utils import run_async
+            except ImportError:
+                from api_utils import run_async
+            rewritten_texts = run_async(
+                self.rewriter.rewrite_codebooks_parallel(
+                    list(codebook_texts),
+                    list(styles_list),
+                    max_concurrent=10,
+                    on_complete=save_rewrite_callback
+                )
+            )
+            
+            # Verify all were saved (they should be already, but check for any errors)
+            for rewritten_text, metadata in zip(rewritten_texts, rewrite_metadata):
+                if not metadata["rewritten_file"].exists():
+                    # Re-save if somehow missed
+                    with open(metadata["rewritten_file"], 'w', encoding='utf-8') as f:
+                        f.write(rewritten_text)
     
     def _obfuscate_rewritten_codebooks(self, output_path: Path):
         codebook_files = list(output_path.glob("*.txt"))
@@ -339,35 +374,110 @@ class CodebookPipeline:
         
         print(f"Parsing and serializing {len(files_to_process)} codebook files...")
         
+        # Read all codebook texts
+        codebook_texts = []
+        codebook_metadata = []
+        for codebook_file in files_to_process:
+            try:
+                with open(codebook_file, 'r', encoding='utf-8') as f:
+                    codebook_text = f.read()
+                codebook_texts.append(codebook_text)
+                codebook_metadata.append({
+                    "codebook_file": codebook_file,
+                    "output_path": codebook_file.with_suffix('.pkl')
+                })
+            except Exception as e:
+                print(f"\nError reading {codebook_file.name}: {e}")
+                self._move_to_corrupted(codebook_file, output_path)
+                continue
+        
+        if not codebook_texts:
+            print("No codebooks to parse.")
+            return
+        
+        # Parse in parallel
         successful = 0
         failed = 0
         
-        with tqdm(total=len(files_to_process), desc="Parsing & serializing") as pbar:
+        # Define callback to save immediately when each graph is parsed
+        from serializer import save_graph
+        
+        def save_parse_callback(index: int, result: Any):
+            if isinstance(result, Exception):
+                return  # Skip errors, they'll be handled later
+            
+            try:
+                metadata = codebook_metadata[index]
+                # Parse the result into graph_data and graph
+                graph_data = json.loads(result)
+                graph = self.parser._create_graph_from_data(graph_data)
+                
+                # Save pickle file immediately
+                save_graph(graph, str(metadata["output_path"]))
+                
+                # Save JSON file immediately using parser's method
+                json_path = metadata["output_path"].with_suffix('.json')
+                self.parser._save_graph_json(graph_data, str(json_path))
+            except Exception as e:
+                # Error will be handled in main loop
+                pass
+        
+        try:
+            try:
+                from .api_utils import run_async
+            except ImportError:
+                from api_utils import run_async
+            graphs, graph_data_list = run_async(
+                self.parser.parse_codebooks_parallel(
+                    codebook_texts, 
+                    max_concurrent=10,
+                    on_complete=save_parse_callback
+                )
+            )
+            
+            # Verify all were saved and handle any errors
+            for graph, graph_data, metadata in zip(graphs, graph_data_list, codebook_metadata):
+                try:
+                    # Skip None entries (these are errors that were caught)
+                    if graph is None or graph_data is None:
+                        failed += 1
+                        self._move_to_corrupted(metadata["codebook_file"], output_path)
+                        continue
+                    
+                    # Check if files exist, re-save if needed
+                    if not metadata["output_path"].exists():
+                        save_graph(graph, str(metadata["output_path"]))
+                    json_path = metadata["output_path"].with_suffix('.json')
+                    if not json_path.exists():
+                        self.parser._save_graph_json(graph_data, str(json_path))
+                    
+                    successful += 1
+                except Exception as e:
+                    failed += 1
+                    print(f"\nError saving graph for {metadata['codebook_file'].name}: {e}")
+                    self._move_to_corrupted(metadata["codebook_file"], output_path)
+                    print(f"  Moved corrupted files to: {output_path / 'corrupted'}")
+        
+        except Exception as e:
+            print(f"\nError during parallel parsing: {e}")
+            import traceback
+            traceback.print_exc()
+            # Fall back to sequential parsing
+            print("Falling back to sequential parsing...")
             for codebook_file in files_to_process:
                 try:
-                    # Parse codebook (this automatically saves both .pkl and .json)
-                    # Temporarily suppress parser's print statements
                     import io
                     import contextlib
                     
                     f = io.StringIO()
                     with contextlib.redirect_stdout(f):
                         graph = self.parser.parse_codebook(str(codebook_file))
-                    
                     successful += 1
-                    pbar.set_postfix({
-                        'file': codebook_file.name[:25],
-                        'success': successful,
-                        'failed': failed
-                    })
-                except Exception as e:
+                except Exception as parse_error:
                     failed += 1
-                    print(f"\nError parsing {codebook_file.name}: {e}")
-                    # Move corrupted file and all associated files
+                    print(f"\nError parsing {codebook_file.name}: {parse_error}")
                     self._move_to_corrupted(codebook_file, output_path)
                     print(f"  Moved corrupted files to: {output_path / 'corrupted'}")
-                finally:
-                    pbar.update(1)
         
         print(f"\nParsing complete: {successful} successful, {failed} failed")
     

@@ -8,13 +8,21 @@ Also generates obfuscated versions with renamed nodes.
 import os
 import json
 import sys
-from typing import List, Dict, Any, Optional
+import asyncio
+from typing import List, Dict, Any, Optional, Callable
 from pathlib import Path
 import openai
 from dotenv import load_dotenv
 from tqdm import tqdm
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../..'))
+
+# Import api_utils - handle both relative and absolute imports
+try:
+    from .api_utils import parallel_api_calls, create_chat_task
+except ImportError:
+    # Fallback for direct imports (e.g., in notebooks)
+    from api_utils import parallel_api_calls, create_chat_task
 
 load_dotenv()
 
@@ -88,6 +96,54 @@ class CodebookGenerator:
             
         except Exception as e:
             raise RuntimeError(f"Failed to generate codebook: {e}")
+    
+    async def generate_codebooks_parallel(
+        self,
+        generation_configs: List[Dict[str, Any]],
+        max_concurrent: int = 10,
+        on_complete: Optional[Callable[[int, Any], None]] = None
+    ) -> List[str]:
+        """
+        Generate multiple codebooks in parallel.
+        
+        Args:
+            generation_configs: List of dicts with keys: leaf_nodes, size, difficulty, use_all_formulas
+            max_concurrent: Maximum number of concurrent API calls
+            on_complete: Optional callback function(index, result) called immediately when each result is ready
+        
+        Returns:
+            List of generated codebook texts (in same order as configs)
+        """
+        tasks = []
+        for config in generation_configs:
+            prompt = self._create_generation_prompt(
+                config["leaf_nodes"],
+                config["constraints"],
+                config["difficulty"],
+                config.get("use_all_formulas", False)
+            )
+            task = create_chat_task(user_message=prompt)
+            tasks.append(task)
+        
+        results = await parallel_api_calls(
+            tasks=tasks,
+            api_key=self.api_key,
+            model=self.model,
+            max_concurrent=max_concurrent,
+            system_message="You are an expert at creating logical codebooks that define concepts through boolean logic. "
+                          "You create clear, well-structured codebooks with nodes and their logical relationships.",
+            progress_desc="Generating codebooks",
+            on_complete=on_complete
+        )
+        
+        # Check for errors
+        codebooks = []
+        for i, result in enumerate(results):
+            if isinstance(result, Exception):
+                raise RuntimeError(f"Failed to generate codebook {i}: {result}")
+            codebooks.append(result)
+        
+        return codebooks
     
     def _create_generation_prompt(
         self,
@@ -210,11 +266,11 @@ Generate the codebook now, following this format exactly:"""
         
         return obfuscated_text
     
-    def save_codebook(self, codebook_text: str, filename: str, output_dir: str = "."):
+    def save_codebook(self, codebook_text: str, filename: str, output_dir: str = ".", logging: bool = False):
         output_path = Path(output_dir) / filename
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(codebook_text)
-        print(f"Saved: {output_path}")
+        if logging: print(f"Saved: {output_path}")
     
     def generate_all_codebooks(
         self,
@@ -222,160 +278,243 @@ Generate the codebook now, following this format exactly:"""
         small_count: int = 20,
         medium_count: int = 20,
         large_count: int = 10,
-        insane_count: int = 5
+        insane_count: int = 5,
+        max_concurrent: int = 20,
+        logging: bool = False
     ):
         leaf_nodes = self.load_leaf_nodes()
         
         output_path = Path(__file__).parent / output_dir
         output_path.mkdir(exist_ok=True)
         
-        codebook_num = 1
+        size_constraints = {
+            "small": {"min_nodes": 3, "max_nodes": 7, "max_depth": 3},
+            "medium": {"min_nodes": 8, "max_nodes": 12, "max_depth": 4},
+            "large": {"min_nodes": 13, "max_nodes": 25, "max_depth": 6},
+            "insane": {"min_nodes": 26, "max_nodes": 50, "max_depth": 9}
+        }
         
-        # Generate small codebooks
+        codebook_num = 1
         skipped_originals = 0
         skipped_obfuscated = 0
-        for i in tqdm(range(small_count), desc="Small codebooks"):
+        
+        # Collect all codebooks to generate
+        generation_configs = []
+        codebook_metadata = []  # Store metadata for each codebook
+        
+        # Small codebooks
+        for i in range(small_count):
             difficulty = "easy" if i < 10 else "medium"
-            use_all_formulas = (i % 5 == 0)  # Every 5th uses all formulas
-            
-            # Create filename with size and difficulty
+            use_all_formulas = (i % 5 == 0)
             formula_suffix = "-allf" if use_all_formulas else ""
             filename = f"cb-{codebook_num:03d}-small-{difficulty}{formula_suffix}.txt"
             filepath = output_path / filename
             
-            # Skip if already exists
-            if filepath.exists():
-                skipped_originals += 1
-            else:
-                codebook = self.generate_codebook(
-                    leaf_nodes,
-                    size="small",
-                    difficulty=difficulty,
-                    use_all_formulas=use_all_formulas
+            if not filepath.exists():
+                import random
+                constraints = size_constraints["small"]
+                num_leaf_nodes = min(
+                    random.randint(constraints["min_nodes"] - 2, constraints["max_nodes"] - 1),
+                    len(leaf_nodes)
                 )
-                self.save_codebook(codebook, filename, output_dir=str(output_path))
-            
-            # Generate obfuscated version
-            obf_filename = f"cb-{codebook_num:03d}-small-{difficulty}{formula_suffix}-obfc.txt"
-            obf_filepath = output_path / obf_filename
-            if obf_filepath.exists():
-                skipped_obfuscated += 1
+                selected_leaf_nodes = random.sample(leaf_nodes, num_leaf_nodes)
+                
+                generation_configs.append({
+                    "leaf_nodes": selected_leaf_nodes,
+                    "constraints": constraints,
+                    "difficulty": difficulty,
+                    "use_all_formulas": use_all_formulas
+                })
+                codebook_metadata.append({
+                    "filename": filename,
+                    "filepath": filepath,
+                    "codebook_num": codebook_num,
+                    "size": "small",
+                    "difficulty": difficulty,
+                    "formula_suffix": formula_suffix
+                })
             else:
-                # Read the codebook file (it should exist at this point)
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    codebook = f.read()
-                obfuscated = self.obfuscate_codebook(codebook)
-                self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path))
+                skipped_originals += 1
             
             codebook_num += 1
         
-        # Generate medium codebooks
-        for i in tqdm(range(medium_count), desc="Medium codebooks"):
+        # Medium codebooks
+        for i in range(medium_count):
             difficulty = "medium" if i < 15 else "hard"
-            use_all_formulas = (i % 4 == 0)  # Every 4th uses all formulas
-            
-            # Create filename with size and difficulty
+            use_all_formulas = (i % 4 == 0)
             formula_suffix = "-allf" if use_all_formulas else ""
             filename = f"cb-{codebook_num:03d}-medium-{difficulty}{formula_suffix}.txt"
             filepath = output_path / filename
             
-            # Skip if already exists
-            if filepath.exists():
-                skipped_originals += 1
-            else:
-                codebook = self.generate_codebook(
-                    leaf_nodes,
-                    size="medium",
-                    difficulty=difficulty,
-                    use_all_formulas=use_all_formulas
+            if not filepath.exists():
+                import random
+                constraints = size_constraints["medium"]
+                num_leaf_nodes = min(
+                    random.randint(constraints["min_nodes"] - 2, constraints["max_nodes"] - 1),
+                    len(leaf_nodes)
                 )
-                self.save_codebook(codebook, filename, output_dir=str(output_path))
-            
-            # Generate obfuscated version
-            obf_filename = f"cb-{codebook_num:03d}-medium-{difficulty}{formula_suffix}-obfc.txt"
-            obf_filepath = output_path / obf_filename
-            if obf_filepath.exists():
-                skipped_obfuscated += 1
+                selected_leaf_nodes = random.sample(leaf_nodes, num_leaf_nodes)
+                
+                generation_configs.append({
+                    "leaf_nodes": selected_leaf_nodes,
+                    "constraints": constraints,
+                    "difficulty": difficulty,
+                    "use_all_formulas": use_all_formulas
+                })
+                codebook_metadata.append({
+                    "filename": filename,
+                    "filepath": filepath,
+                    "codebook_num": codebook_num,
+                    "size": "medium",
+                    "difficulty": difficulty,
+                    "formula_suffix": formula_suffix
+                })
             else:
-                # Read the codebook file (it should exist at this point)
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    codebook = f.read()
-                obfuscated = self.obfuscate_codebook(codebook)
-                self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path))
+                skipped_originals += 1
             
             codebook_num += 1
         
-        # Generate large codebooks
-        for i in tqdm(range(large_count), desc="Large codebooks"):
+        # Large codebooks
+        for i in range(large_count):
             difficulty = "hard"
             use_all_formulas = (i % 5 == 0)
-            
-            # Create filename with size and difficulty
             formula_suffix = "-allf" if use_all_formulas else ""
             filename = f"cb-{codebook_num:03d}-large-{difficulty}{formula_suffix}.txt"
             filepath = output_path / filename
             
-            # Skip if already exists
-            if filepath.exists():
-                skipped_originals += 1
-            else:
-                codebook = self.generate_codebook(
-                    leaf_nodes,
-                    size="large",
-                    difficulty=difficulty,
-                    use_all_formulas=use_all_formulas
+            if not filepath.exists():
+                import random
+                constraints = size_constraints["large"]
+                num_leaf_nodes = min(
+                    random.randint(constraints["min_nodes"] - 2, constraints["max_nodes"] - 1),
+                    len(leaf_nodes)
                 )
-                self.save_codebook(codebook, filename, output_dir=str(output_path))
-            
-            # Generate obfuscated version
-            obf_filename = f"cb-{codebook_num:03d}-large-{difficulty}{formula_suffix}-obfc.txt"
-            obf_filepath = output_path / obf_filename
-            if obf_filepath.exists():
-                skipped_obfuscated += 1
+                selected_leaf_nodes = random.sample(leaf_nodes, num_leaf_nodes)
+                
+                generation_configs.append({
+                    "leaf_nodes": selected_leaf_nodes,
+                    "constraints": constraints,
+                    "difficulty": difficulty,
+                    "use_all_formulas": use_all_formulas
+                })
+                codebook_metadata.append({
+                    "filename": filename,
+                    "filepath": filepath,
+                    "codebook_num": codebook_num,
+                    "size": "large",
+                    "difficulty": difficulty,
+                    "formula_suffix": formula_suffix
+                })
             else:
-                # Read the codebook file (it should exist at this point)
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    codebook = f.read()
-                obfuscated = self.obfuscate_codebook(codebook)
-                self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path))
+                skipped_originals += 1
             
             codebook_num += 1
-
-        # Generate insane codebooks (insane size, but hard difficulty)
-        for i in tqdm(range(insane_count), desc="Insane codebooks"):
-            difficulty = "hard"  # Use hard difficulty, insane refers only to size
+        
+        # Insane codebooks
+        for i in range(insane_count):
+            difficulty = "hard"
             use_all_formulas = (i % 5 == 0)
-            
-            # Create filename with size and difficulty
             formula_suffix = "-allf" if use_all_formulas else ""
             filename = f"cb-{codebook_num:03d}-insane-{difficulty}{formula_suffix}.txt"
             filepath = output_path / filename
             
-            # Skip if already exists
-            if filepath.exists():
-                skipped_originals += 1
-            else:
-                codebook = self.generate_codebook(
-                    leaf_nodes,
-                    size="insane",
-                    difficulty=difficulty,
-                    use_all_formulas=use_all_formulas
+            if not filepath.exists():
+                import random
+                constraints = size_constraints["insane"]
+                num_leaf_nodes = min(
+                    random.randint(constraints["min_nodes"] - 2, constraints["max_nodes"] - 1),
+                    len(leaf_nodes)
                 )
-                self.save_codebook(codebook, filename, output_dir=str(output_path))
-            
-            # Generate obfuscated version
-            obf_filename = f"cb-{codebook_num:03d}-insane-{difficulty}{formula_suffix}-obfc.txt"
-            obf_filepath = output_path / obf_filename
-            if obf_filepath.exists():
-                skipped_obfuscated += 1
+                selected_leaf_nodes = random.sample(leaf_nodes, num_leaf_nodes)
+                
+                generation_configs.append({
+                    "leaf_nodes": selected_leaf_nodes,
+                    "constraints": constraints,
+                    "difficulty": difficulty,
+                    "use_all_formulas": use_all_formulas
+                })
+                codebook_metadata.append({
+                    "filename": filename,
+                    "filepath": filepath,
+                    "codebook_num": codebook_num,
+                    "size": "insane",
+                    "difficulty": difficulty,
+                    "formula_suffix": formula_suffix
+                })
             else:
-                # Read the codebook file (it should exist at this point)
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    codebook = f.read()
-                obfuscated = self.obfuscate_codebook(codebook)
-                self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path))
+                skipped_originals += 1
             
             codebook_num += 1
+        
+        # Generate all codebooks in parallel
+        if generation_configs:
+            print(f"Generating {len(generation_configs)} codebooks in parallel...")
+            
+            # Define callback to save immediately when each codebook is generated
+            def save_callback(index: int, result: Any):
+                """Save codebook immediately when API call completes."""
+                if isinstance(result, Exception):
+                    return  # Skip errors, they'll be handled later
+                
+                metadata = codebook_metadata[index]
+                # Save original codebook immediately
+                self.save_codebook(result, metadata["filename"], output_dir=str(output_path), logging=logging)
+                
+                # Generate and save obfuscated version immediately
+                obf_filename = f"cb-{metadata['codebook_num']:03d}-{metadata['size']}-{metadata['difficulty']}{metadata['formula_suffix']}-obfc.txt"
+                obf_filepath = output_path / obf_filename
+                if not obf_filepath.exists():
+                    obfuscated = self.obfuscate_codebook(result)
+                    self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path), logging=logging)
+            
+            try:
+                from .api_utils import run_async
+            except ImportError:
+                from api_utils import run_async
+            codebooks = run_async(
+                self.generate_codebooks_parallel(
+                    generation_configs, 
+                    max_concurrent=max_concurrent,
+                    on_complete=save_callback
+                )
+            )
+            
+            # Verify all were saved (they should be already, but check for any errors)
+            for i, (codebook_text, metadata) in enumerate(zip(codebooks, codebook_metadata)):
+                filepath = output_path / metadata["filename"]
+                if not filepath.exists():
+                    # Re-save if somehow missed
+                    self.save_codebook(codebook_text, metadata["filename"], output_dir=str(output_path), logging=logging)
+        
+        # Handle obfuscation for existing files
+        codebook_num = 1
+        for size, count in [("small", small_count), ("medium", medium_count), ("large", large_count), ("insane", insane_count)]:
+            for i in range(count):
+                if size == "small":
+                    difficulty = "easy" if i < 10 else "medium"
+                    use_all_formulas = (i % 5 == 0)
+                elif size == "medium":
+                    difficulty = "medium" if i < 15 else "hard"
+                    use_all_formulas = (i % 4 == 0)
+                else:
+                    difficulty = "hard"
+                    use_all_formulas = (i % 5 == 0)
+                
+                formula_suffix = "-allf" if use_all_formulas else ""
+                filename = f"cb-{codebook_num:03d}-{size}-{difficulty}{formula_suffix}.txt"
+                filepath = output_path / filename
+                obf_filename = f"cb-{codebook_num:03d}-{size}-{difficulty}{formula_suffix}-obfc.txt"
+                obf_filepath = output_path / obf_filename
+                
+                if filepath.exists() and not obf_filepath.exists():
+                    with open(filepath, 'r', encoding='utf-8') as f:
+                        codebook = f.read()
+                    obfuscated = self.obfuscate_codebook(codebook)
+                    self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path), logging=logging)
+                elif obf_filepath.exists():
+                    skipped_obfuscated += 1
+                
+                codebook_num += 1
 
         total_generated = codebook_num - 1
         print(f"\n✓ Processed {total_generated} codebooks")
