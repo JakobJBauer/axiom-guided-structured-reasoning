@@ -3,6 +3,60 @@ from pathlib import Path
 from typing import Optional, Dict, List, Tuple
 import warnings
 import graphviz
+from .formulas import Formula
+
+
+def _formula_to_string(formula: Formula) -> str:
+    """Convert a formula to a readable string representation."""
+    if formula is None:
+        return ""
+    
+    formula_type = type(formula).__name__
+    
+    if formula_type == "Not":
+        arg = formula.key_or_formula
+        if isinstance(arg, Formula):
+            arg_str = _formula_to_string(arg)
+        else:
+            arg_str = str(arg)
+        return f"NOT {arg_str}"
+    
+    elif formula_type == "And":
+        args = []
+        for kf in formula.keys_or_formulas:
+            if isinstance(kf, Formula):
+                args.append(_formula_to_string(kf))
+            else:
+                args.append(str(kf))
+        return " AND ".join(f"({arg})" if " " in arg else arg for arg in args)
+    
+    elif formula_type == "Or":
+        args = []
+        for kf in formula.keys_or_formulas:
+            if isinstance(kf, Formula):
+                args.append(_formula_to_string(kf))
+            else:
+                args.append(str(kf))
+        return " OR ".join(f"({arg})" if " " in arg else arg for arg in args)
+    
+    elif formula_type == "Xor":
+        args = []
+        for kf in formula.keys_or_formulas:
+            if isinstance(kf, Formula):
+                args.append(_formula_to_string(kf))
+            else:
+                args.append(str(kf))
+        return " XOR ".join(f"({arg})" if " " in arg else arg for arg in args)
+    
+    elif formula_type == "Equal":
+        return f"{formula.key} == {formula.value!r}"
+    
+    elif formula_type == "In":
+        values_str = ", ".join(str(v) for v in formula.values)
+        return f"{formula.key} IN [{values_str}]"
+    
+    else:
+        return str(formula)
 
 
 def visualize_graph(
@@ -10,7 +64,7 @@ def visualize_graph(
     output_path: Optional[str] = None,
     format: str = "png",
     layout: str = "hierarchical",
-    show_values: bool = False,
+    show_values: bool = True,
     node_shape: str = "box",
     engine: str = "dot"
 ) -> Optional[str]:
@@ -37,11 +91,28 @@ def _visualize_with_graphviz(
     # Add nodes
     node_ids = {node.id for node in graph.nodes}
     for node in graph.nodes:
-        label = node.label if node.label else node.id
+        name = node.label if node.label else node.id
         
-        # Add value to label if requested
+        # Build label with value if present
         if show_values and node.value is not None:
-            label = f"{label}\n({node.value})"
+            label = f"{name} : {node.value}"
+        else:
+            label = name
+        
+        # Add formula as small text beneath the node if present
+        formula_str = ""
+        if node.formula is not None:
+            formula_str = _formula_to_string(node.formula)
+        
+        # Use HTML-like label for multi-line formatting with different font sizes
+        if formula_str:
+            # Escape special characters for Graphviz HTML labels
+            formula_str_escaped = formula_str.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+            label_escaped = label.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+            # Graphviz HTML labels use angle brackets and support font size
+            html_label = f'<{label_escaped}<BR ALIGN="LEFT"/><FONT POINT-SIZE="8">{formula_str_escaped}</FONT>>'
+        else:
+            html_label = label
         
         # Determine if it's a leaf node
         is_leaf = graph.is_leaf_node(node)
@@ -50,12 +121,12 @@ def _visualize_with_graphviz(
         if is_leaf:
             dot.node(
                 str(node.id),
-                label=label,
+                label=html_label,
                 fillcolor='lightgreen',
                 shape='ellipse'
             )
         else:
-            dot.node(str(node.id), label=label)
+            dot.node(str(node.id), label=html_label)
     
     # Add edges
     for edge in graph.edges:
