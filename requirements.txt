@@ -4,3 +4,5 @@ datasets
 wandb
 transformers
 torch
+openai
+python-dotenv
