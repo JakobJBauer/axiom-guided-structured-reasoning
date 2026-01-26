@@ -1,0 +1,103 @@
+import os
+from pathlib import Path
+from typing import Optional, Dict, List, Tuple
+import warnings
+import graphviz
+
+
+def visualize_graph(
+    graph,
+    output_path: Optional[str] = None,
+    format: str = "png",
+    layout: str = "hierarchical",
+    show_values: bool = False,
+    node_shape: str = "box",
+    engine: str = "dot"
+) -> Optional[str]:
+    return _visualize_with_graphviz(
+        graph, output_path, format, layout, show_values, node_shape, engine
+    )
+
+
+def _visualize_with_graphviz(
+    graph,
+    output_path: Optional[str],
+    format: str,
+    layout: str,
+    show_values: bool,
+    node_shape: str,
+    engine: str
+) -> Optional[str]:
+    # Create a directed graph
+    dot = graphviz.Digraph(format=format, engine=engine)
+    dot.attr(rankdir='TB')  # Top to bottom
+    dot.attr('node', shape=node_shape, style='rounded,filled', fillcolor='lightblue')
+    dot.attr('edge', arrowsize='0.8')
+    
+    # Add nodes
+    node_ids = {node.id for node in graph.nodes}
+    for node in graph.nodes:
+        label = node.label if node.label else node.id
+        
+        # Add value to label if requested
+        if show_values and node.value is not None:
+            label = f"{label}\n({node.value})"
+        
+        # Determine if it's a leaf node
+        is_leaf = graph.is_leaf_node(node)
+        
+        # Style leaf nodes differently
+        if is_leaf:
+            dot.node(
+                str(node.id),
+                label=label,
+                fillcolor='lightgreen',
+                shape='ellipse'
+            )
+        else:
+            dot.node(str(node.id), label=label)
+    
+    # Add edges
+    for edge in graph.edges:
+        # Verify both nodes exist
+        if edge.source in node_ids and edge.target in node_ids:
+            dot.edge(str(edge.source), str(edge.target))
+    
+    # Render the graph
+    if output_path is None:
+        output_path = "graph_visualization"
+    
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Remove extension if present, graphviz will add it
+    output_stem = output_path.stem
+    output_dir = output_path.parent
+    
+    filepath = dot.render(
+        filename=output_stem,
+        directory=str(output_dir),
+        cleanup=True  # Remove intermediate files
+    )
+    return filepath
+
+
+def visualize_graph_from_file(
+    filepath: str,
+    output_path: Optional[str] = None,
+    format: str = "png",
+    **kwargs
+) -> Optional[str]:
+    import sys
+    import os
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../..'))
+    from serializer import load_graph
+    
+    graph = load_graph(filepath)
+    
+    if output_path is None:
+        input_path = Path(filepath)
+        output_path = input_path.with_suffix(f'.{format}')
+    
+    return visualize_graph(graph, output_path, format, **kwargs)
+
