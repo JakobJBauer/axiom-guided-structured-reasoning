@@ -122,10 +122,26 @@ class CodebookPipeline:
             print("No original codebooks to obfuscate.")
             return
         
-        print(f"Obfuscating {len(original_files)} original codebooks...")
+        # Filter out files that already have obfuscated versions
+        files_to_process = []
+        skipped = 0
+        for codebook_file in original_files:
+            obfuscated_file = codebook_file.parent / f"{codebook_file.stem}-obfc{codebook_file.suffix}"
+            if obfuscated_file.exists():
+                skipped += 1
+            else:
+                files_to_process.append(codebook_file)
         
-        with tqdm(total=len(original_files), desc="Obfuscating") as pbar:
-            for codebook_file in original_files:
+        if skipped > 0:
+            print(f"Skipping {skipped} already obfuscated files.")
+        if not files_to_process:
+            print("All original codebooks already obfuscated.")
+            return
+        
+        print(f"Obfuscating {len(files_to_process)} original codebooks...")
+        
+        with tqdm(total=len(files_to_process), desc="Obfuscating") as pbar:
+            for codebook_file in files_to_process:
                 try:
                     with open(codebook_file, 'r', encoding='utf-8') as f:
                         codebook_text = f.read()
@@ -157,12 +173,33 @@ class CodebookPipeline:
             print("No original codebooks to rewrite.")
             return
         
-        total_rewrites = len(original_files) * len(self.rewrite_styles)
-        print(f"Rewriting {len(original_files)} codebooks in {len(self.rewrite_styles)} styles...")
+        # Count files that need rewriting
+        total_to_process = 0
+        skipped = 0
+        for codebook_file in original_files:
+            for style in self.rewrite_styles:
+                rewritten_file = codebook_file.parent / f"{codebook_file.stem}-{style}{codebook_file.suffix}"
+                if rewritten_file.exists():
+                    skipped += 1
+                else:
+                    total_to_process += 1
         
-        with tqdm(total=total_rewrites, desc="Rewriting") as pbar:
+        if skipped > 0:
+            print(f"Skipping {skipped} already rewritten files.")
+        if total_to_process == 0:
+            print("All codebooks already rewritten in all styles.")
+            return
+        
+        print(f"Rewriting {len(original_files)} codebooks in {len(self.rewrite_styles)} styles ({total_to_process} files to create)...")
+        
+        with tqdm(total=total_to_process, desc="Rewriting") as pbar:
             for codebook_file in original_files:
                 for style in self.rewrite_styles:
+                    rewritten_file = codebook_file.parent / f"{codebook_file.stem}-{style}{codebook_file.suffix}"
+                    if rewritten_file.exists():
+                        pbar.update(1)
+                        continue
+                    
                     try:
                         rewritten_path = self.rewriter.rewrite_codebook_file(
                             str(codebook_file),
@@ -193,10 +230,26 @@ class CodebookPipeline:
             print("No rewritten codebooks to obfuscate.")
             return
         
-        print(f"Obfuscating {len(rewritten_files)} rewritten codebooks...")
+        # Filter out files that already have obfuscated versions
+        files_to_process = []
+        skipped = 0
+        for codebook_file in rewritten_files:
+            obfuscated_file = codebook_file.parent / f"{codebook_file.stem}-obfc{codebook_file.suffix}"
+            if obfuscated_file.exists():
+                skipped += 1
+            else:
+                files_to_process.append(codebook_file)
         
-        with tqdm(total=len(rewritten_files), desc="Obfuscating rewritten") as pbar:
-            for codebook_file in rewritten_files:
+        if skipped > 0:
+            print(f"Skipping {skipped} already obfuscated rewritten files.")
+        if not files_to_process:
+            print("All rewritten codebooks already obfuscated.")
+            return
+        
+        print(f"Obfuscating {len(files_to_process)} rewritten codebooks...")
+        
+        with tqdm(total=len(files_to_process), desc="Obfuscating rewritten") as pbar:
+            for codebook_file in files_to_process:
                 try:
                     # Read rewritten
                     with open(codebook_file, 'r', encoding='utf-8') as f:
@@ -224,13 +277,30 @@ class CodebookPipeline:
             print("No codebook files to parse.")
             return
         
-        print(f"Parsing and serializing {len(codebook_files)} codebook files...")
+        # Filter out files that already have both .pkl and .json
+        files_to_process = []
+        skipped = 0
+        for codebook_file in codebook_files:
+            pkl_file = codebook_file.with_suffix('.pkl')
+            json_file = codebook_file.with_suffix('.json')
+            if pkl_file.exists() and json_file.exists():
+                skipped += 1
+            else:
+                files_to_process.append(codebook_file)
+        
+        if skipped > 0:
+            print(f"Skipping {skipped} already parsed files.")
+        if not files_to_process:
+            print("All codebooks already parsed and serialized.")
+            return
+        
+        print(f"Parsing and serializing {len(files_to_process)} codebook files...")
         
         successful = 0
         failed = 0
         
-        with tqdm(total=len(codebook_files), desc="Parsing & serializing") as pbar:
-            for codebook_file in codebook_files:
+        with tqdm(total=len(files_to_process), desc="Parsing & serializing") as pbar:
+            for codebook_file in files_to_process:
                 try:
                     # Parse codebook (this automatically saves both .pkl and .json)
                     # Temporarily suppress parser's print statements

@@ -37,8 +37,8 @@ class CodebookGenerator:
     def generate_codebook(
         self,
         leaf_nodes: List[Dict[str, Any]],
-        size: str = "medium",  # "small", "medium", "large"
-        difficulty: str = "medium",  # "easy", "medium", "hard", "insane"
+        size: str = "medium",  # "small", "medium", "large", "insane"
+        difficulty: str = "medium",  # "easy", "medium", "hard"
         use_all_formulas: bool = False
     ) -> str:
         size_constraints = {
@@ -232,26 +232,40 @@ Generate the codebook now, following this format exactly:"""
         codebook_num = 1
         
         # Generate small codebooks
+        skipped_originals = 0
+        skipped_obfuscated = 0
         for i in tqdm(range(small_count), desc="Small codebooks"):
             difficulty = "easy" if i < 10 else "medium"
             use_all_formulas = (i % 5 == 0)  # Every 5th uses all formulas
             
-            codebook = self.generate_codebook(
-                leaf_nodes,
-                size="small",
-                difficulty=difficulty,
-                use_all_formulas=use_all_formulas
-            )
-            
             # Create filename with size and difficulty
             formula_suffix = "-allf" if use_all_formulas else ""
             filename = f"cb-{codebook_num:03d}-small-{difficulty}{formula_suffix}.txt"
-            self.save_codebook(codebook, filename, output_dir=str(output_path))
+            filepath = output_path / filename
+            
+            # Skip if already exists
+            if filepath.exists():
+                skipped_originals += 1
+            else:
+                codebook = self.generate_codebook(
+                    leaf_nodes,
+                    size="small",
+                    difficulty=difficulty,
+                    use_all_formulas=use_all_formulas
+                )
+                self.save_codebook(codebook, filename, output_dir=str(output_path))
             
             # Generate obfuscated version
-            obfuscated = self.obfuscate_codebook(codebook)
             obf_filename = f"cb-{codebook_num:03d}-small-{difficulty}{formula_suffix}-obfc.txt"
-            self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path))
+            obf_filepath = output_path / obf_filename
+            if obf_filepath.exists():
+                skipped_obfuscated += 1
+            else:
+                # Read the codebook file (it should exist at this point)
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    codebook = f.read()
+                obfuscated = self.obfuscate_codebook(codebook)
+                self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path))
             
             codebook_num += 1
         
@@ -260,22 +274,34 @@ Generate the codebook now, following this format exactly:"""
             difficulty = "medium" if i < 15 else "hard"
             use_all_formulas = (i % 4 == 0)  # Every 4th uses all formulas
             
-            codebook = self.generate_codebook(
-                leaf_nodes,
-                size="medium",
-                difficulty=difficulty,
-                use_all_formulas=use_all_formulas
-            )
-            
             # Create filename with size and difficulty
             formula_suffix = "-allf" if use_all_formulas else ""
             filename = f"cb-{codebook_num:03d}-medium-{difficulty}{formula_suffix}.txt"
-            self.save_codebook(codebook, filename, output_dir=str(output_path))
+            filepath = output_path / filename
+            
+            # Skip if already exists
+            if filepath.exists():
+                skipped_originals += 1
+            else:
+                codebook = self.generate_codebook(
+                    leaf_nodes,
+                    size="medium",
+                    difficulty=difficulty,
+                    use_all_formulas=use_all_formulas
+                )
+                self.save_codebook(codebook, filename, output_dir=str(output_path))
             
             # Generate obfuscated version
-            obfuscated = self.obfuscate_codebook(codebook)
             obf_filename = f"cb-{codebook_num:03d}-medium-{difficulty}{formula_suffix}-obfc.txt"
-            self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path))
+            obf_filepath = output_path / obf_filename
+            if obf_filepath.exists():
+                skipped_obfuscated += 1
+            else:
+                # Read the codebook file (it should exist at this point)
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    codebook = f.read()
+                obfuscated = self.obfuscate_codebook(codebook)
+                self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path))
             
             codebook_num += 1
         
@@ -284,48 +310,77 @@ Generate the codebook now, following this format exactly:"""
             difficulty = "hard"
             use_all_formulas = (i % 5 == 0)
             
-            codebook = self.generate_codebook(
-                leaf_nodes,
-                size="large",
-                difficulty=difficulty,
-                use_all_formulas=use_all_formulas
-            )
-            
             # Create filename with size and difficulty
             formula_suffix = "-allf" if use_all_formulas else ""
             filename = f"cb-{codebook_num:03d}-large-{difficulty}{formula_suffix}.txt"
-            self.save_codebook(codebook, filename, output_dir=str(output_path))
+            filepath = output_path / filename
+            
+            # Skip if already exists
+            if filepath.exists():
+                skipped_originals += 1
+            else:
+                codebook = self.generate_codebook(
+                    leaf_nodes,
+                    size="large",
+                    difficulty=difficulty,
+                    use_all_formulas=use_all_formulas
+                )
+                self.save_codebook(codebook, filename, output_dir=str(output_path))
             
             # Generate obfuscated version
-            obfuscated = self.obfuscate_codebook(codebook)
             obf_filename = f"cb-{codebook_num:03d}-large-{difficulty}{formula_suffix}-obfc.txt"
-            self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path))
+            obf_filepath = output_path / obf_filename
+            if obf_filepath.exists():
+                skipped_obfuscated += 1
+            else:
+                # Read the codebook file (it should exist at this point)
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    codebook = f.read()
+                obfuscated = self.obfuscate_codebook(codebook)
+                self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path))
             
             codebook_num += 1
 
-        # Generate insane codebooks
+        # Generate insane codebooks (insane size, but hard difficulty)
         for i in tqdm(range(insane_count), desc="Insane codebooks"):
-            difficulty = "insane"
+            difficulty = "hard"  # Use hard difficulty, insane refers only to size
             use_all_formulas = (i % 5 == 0)
-            
-            codebook = self.generate_codebook(
-                leaf_nodes,
-                size="insane",
-                difficulty=difficulty,
-                use_all_formulas=use_all_formulas
-            )
             
             # Create filename with size and difficulty
             formula_suffix = "-allf" if use_all_formulas else ""
             filename = f"cb-{codebook_num:03d}-insane-{difficulty}{formula_suffix}.txt"
-            self.save_codebook(codebook, filename, output_dir=str(output_path))
+            filepath = output_path / filename
+            
+            # Skip if already exists
+            if filepath.exists():
+                skipped_originals += 1
+            else:
+                codebook = self.generate_codebook(
+                    leaf_nodes,
+                    size="insane",
+                    difficulty=difficulty,
+                    use_all_formulas=use_all_formulas
+                )
+                self.save_codebook(codebook, filename, output_dir=str(output_path))
             
             # Generate obfuscated version
-            obfuscated = self.obfuscate_codebook(codebook)
             obf_filename = f"cb-{codebook_num:03d}-insane-{difficulty}{formula_suffix}-obfc.txt"
-            self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path))
+            obf_filepath = output_path / obf_filename
+            if obf_filepath.exists():
+                skipped_obfuscated += 1
+            else:
+                # Read the codebook file (it should exist at this point)
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    codebook = f.read()
+                obfuscated = self.obfuscate_codebook(codebook)
+                self.save_codebook(obfuscated, obf_filename, output_dir=str(output_path))
             
             codebook_num += 1
 
-        print(f"\n✓ Generated {codebook_num - 1} codebooks (and obfuscated versions)")
+        total_generated = codebook_num - 1
+        print(f"\n✓ Processed {total_generated} codebooks")
+        if skipped_originals > 0:
+            print(f"  Skipped {skipped_originals} existing original codebooks")
+        if skipped_obfuscated > 0:
+            print(f"  Skipped {skipped_obfuscated} existing obfuscated codebooks")
         print(f"  Output directory: {output_path}")
