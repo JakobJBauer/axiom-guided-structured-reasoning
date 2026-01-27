@@ -656,7 +656,10 @@ class CodebookPipeline:
         
         # Write log file
         if log_entries:
-            log_file = output_path / "graph_equality_log.txt"
+            from datetime import datetime
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            log_file = output_path / "logs" / f"graph_equality_log_{timestamp}.txt"
+            log_file.parent.mkdir(parents=True, exist_ok=True)
             with open(log_file, 'w', encoding='utf-8') as f:
                 for entry in log_entries:
                     f.write(entry[0] + "\n")
