@@ -398,65 +398,83 @@ class CodebookPipeline:
         # Parse in parallel
         successful = 0
         failed = 0
-        
+
         # Define callback to save immediately when each graph is parsed
         from serializer import save_graph
-        
+
         def save_parse_callback(index: int, result: Any):
             if isinstance(result, Exception):
                 return  # Skip errors, they'll be handled later
-            
+
             try:
                 metadata = codebook_metadata[index]
-                # Parse the result into graph_data and graph
                 graph_data = json.loads(result)
                 graph = self.parser._create_graph_from_data(graph_data)
-                
+
                 # Save pickle file immediately
                 save_graph(graph, str(metadata["output_path"]))
-                
+
                 # Save JSON file immediately using parser's method
                 json_path = metadata["output_path"].with_suffix('.json')
                 self.parser._save_graph_json(graph_data, str(json_path))
-            except Exception as e:
-                # Error will be handled in main loop
-                pass
-        
+            except Exception:
+                # Any issues are handled in the main loop; don't crash callback
+                return
+
         try:
             try:
                 from .api_utils import run_async
             except ImportError:
                 from api_utils import run_async
-            graphs, graph_data_list = run_async(
+
+            # Run parsing in parallel; collect per-file errors instead of raising
+            graphs, graph_data_list, errors = run_async(
                 self.parser.parse_codebooks_parallel(
-                    codebook_texts, 
+                    codebook_texts,
                     max_concurrent=10,
                     on_complete=save_parse_callback
                 )
             )
-            
+
+            # Open a log file for parse/save errors
+            from datetime import datetime
+            error_log_path = output_path / "logs" / f"parse_errors_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+            error_log_path.parent.mkdir(parents=True, exist_ok=True)
+            error_log = open(error_log_path, "w", encoding="utf-8")
+
             # Verify all were saved and handle any errors
-            for graph, graph_data, metadata in zip(graphs, graph_data_list, codebook_metadata):
+            for graph, graph_data, metadata, error_msg in zip(
+                graphs, graph_data_list, codebook_metadata, errors
+            ):
+                codebook_file = metadata["codebook_file"]
                 try:
-                    # Skip None entries (these are errors that were caught)
-                    if graph is None or graph_data is None:
+                    # Any explicit error or None graph/data → treat as failed
+                    if error_msg is not None or graph is None or graph_data is None:
                         failed += 1
-                        self._move_to_corrupted(metadata["codebook_file"], output_path)
+                        error_log.write(
+                            f"{codebook_file.name}: {error_msg or 'Unknown parse error'}\n"
+                        )
+                        self._move_to_corrupted(codebook_file, output_path)
                         continue
-                    
+
                     # Check if files exist, re-save if needed
                     if not metadata["output_path"].exists():
                         save_graph(graph, str(metadata["output_path"]))
                     json_path = metadata["output_path"].with_suffix('.json')
                     if not json_path.exists():
                         self.parser._save_graph_json(graph_data, str(json_path))
-                    
+
                     successful += 1
                 except Exception as e:
                     failed += 1
-                    print(f"\nError saving graph for {metadata['codebook_file'].name}: {e}")
-                    self._move_to_corrupted(metadata["codebook_file"], output_path)
+                    print(f"\nError saving graph for {codebook_file.name}: {e}")
+                    error_log.write(
+                        f"{codebook_file.name}: error during save: {e}\n"
+                    )
+                    self._move_to_corrupted(codebook_file, output_path)
                     print(f"  Moved corrupted files to: {output_path / 'corrupted'}")
+
+            error_log.close()
         
         except Exception as e:
             print(f"\nError during parallel parsing: {e}")

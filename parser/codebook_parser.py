@@ -101,17 +101,21 @@ class CodebookParser:
         codebook_texts: List[str],
         max_concurrent: int = 10,
         on_complete: Optional[Callable[[int, Any], None]] = None
-    ) -> tuple[List[Graph], List[Dict[str, Any]]]:
+    ) -> tuple[List[Optional[Graph]], List[Optional[Dict[str, Any]]], List[Optional[str]]]:
         """
         Parse multiple codebooks in parallel.
-        
+
         Args:
             codebook_texts: List of codebook texts to parse
             max_concurrent: Maximum number of concurrent API calls
-            on_complete: Optional callback function(index, result) called immediately when each result is ready
-        
+            on_complete: Optional callback function(index, result) called
+                         immediately when each raw LLM result is ready
+
         Returns:
-            Tuple of (list of parsed Graph objects, list of graph_data dicts) in same order as inputs
+            Tuple of:
+                - list of Graph objects or None (for failed parses)
+                - list of graph_data dicts or None (for failed parses)
+                - list of error messages (str) or None (for successful parses)
         """
         tasks = []
         for codebook_text in codebook_texts:
@@ -122,7 +126,7 @@ class CodebookParser:
                 response_format={"type": "json_object"}
             )
             tasks.append(task)
-        
+
         results = await parallel_api_calls(
             tasks=tasks,
             api_key=self.api_key,
@@ -133,36 +137,36 @@ class CodebookParser:
             progress_desc="Parsing codebooks",
             on_complete=on_complete
         )
-        
-        # Parse results into graphs and graph_data
-        graphs = []
-        graph_data_list = []
-        errors = []
-        for i, result in enumerate(results):
+
+        graphs: List[Optional[Graph]] = []
+        graph_data_list: List[Optional[Dict[str, Any]]] = []
+        errors: List[Optional[str]] = []
+
+        for result in results:
+            # API-level failure
             if isinstance(result, Exception):
-                errors.append((i, result))
-                # Create placeholder None entries to maintain order
                 graphs.append(None)
                 graph_data_list.append(None)
+                errors.append(str(result))
                 continue
-            
+
+            # JSON / graph construction failure
             try:
                 graph_data = json.loads(result)
                 graph = self._create_graph_from_data(graph_data)
                 graphs.append(graph)
                 graph_data_list.append(graph_data)
+                errors.append(None)
             except Exception as e:
-                errors.append((i, e))
-                # Create placeholder None entries to maintain order
                 graphs.append(None)
                 graph_data_list.append(None)
-        
-        # If there are errors, raise them after processing all results
-        if errors:
-            error_messages = [f"Failed to parse codebook {i}: {err}" for i, err in errors]
-            raise RuntimeError(f"Failed to parse {len(errors)} codebook(s):\n" + "\n".join(error_messages[:5]))
-        
-        return graphs, graph_data_list
+                errors.append(str(e))
+
+        failed_count = sum(1 for e in errors if e is not None)
+        if failed_count:
+            print(f"Warning: {failed_count} codebook(s) failed to parse; see parse_errors_log.txt for details.")
+
+        return graphs, graph_data_list, errors
     
     def _create_extraction_prompt(self, codebook_text: str) -> str:
         return f"""Analyze the following codebook and extract the graph structure.
