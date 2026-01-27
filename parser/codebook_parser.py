@@ -256,7 +256,7 @@ Return only valid JSON, no additional text."""
         
         return Graph(nodes, edges)
     
-    def _create_formula(self, formula_type: str, args: List[str]) -> Any:
+    def _create_formula(self, formula_type: str, args: List[Any]) -> Any:
         """
         Create a Formula object from type and arguments.
         
@@ -312,14 +312,32 @@ Return only valid JSON, no additional text."""
             if len(normalized_args) < 2:
                 raise ValueError(f"In formula requires at least 2 arguments, got {len(normalized_args)}")
             key = normalized_args[0]  # Node ID (normalized)
-            values = [self._parse_value(v) for v in normalized_args[1:]]
+            if isinstance(normalized_args[1], list):
+                values = self._parse_value(normalized_args[1])
+            else:
+                values = [self._parse_value(v) for v in normalized_args[1:]]
             return In(key, values)
         
         else:
             raise ValueError(f"Unknown formula type: {formula_type}")
     
-    def _parse_value(self, value_str: str) -> Any:
-        value_str = value_str.strip()
+    def _parse_value(self, value: Any) -> Any:
+        """
+        Robustly parse a value that may be a string, list, or primitive.
+        
+        - Lists: recursively parse each element
+        - Strings: strip and try bool/int/float, else keep as string
+        - Other types: return as-is (already a primitive or structured value)
+        """
+        # Handle lists: parse each element
+        if isinstance(value, list):
+            return [self._parse_value(v) for v in value]
+        
+        # Non-string, non-list: return as-is (already a primitive or structured value)
+        if not isinstance(value, str):
+            return value
+        
+        value_str = value.strip()
         
         # Try boolean
         if value_str.lower() == "true":

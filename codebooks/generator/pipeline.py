@@ -32,6 +32,7 @@ from generate_codebooks import CodebookGenerator
 from rewrite_codebooks import CodebookRewriter
 from parser import CodebookParser
 from graph.visualization import visualize_graph
+from graph.graph import Graph
 
 load_dotenv()
 
@@ -633,6 +634,8 @@ class CodebookPipeline:
         print(f"Verifying {len(groups_to_check)} codebook groups...")
         
         log_entries = []
+        equal_count = 0
+        unequal_count = 0
         
         with tqdm(total=len(groups_to_check), desc="Verifying") as pbar:
             for base_name, files in groups_to_check.items():
@@ -657,9 +660,11 @@ class CodebookPipeline:
                     # Check if all graphs are equal
                     if len(equal_groups) == 1:
                         # All graphs are equal, skip logging
+                        equal_count += 1
                         continue
                     
                     # Not all graphs are equal, log the groups
+                    unequal_count += 1
                     log_entry = [base_name]
                     for _, variant_names in equal_groups:
                         variant_list = ", ".join(sorted(variant_names))
@@ -673,24 +678,48 @@ class CodebookPipeline:
                     pbar.update(1)
         
         # Write log file
-        if log_entries:
-            from datetime import datetime
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            log_file = output_path / "logs" / f"graph_equality_log_{timestamp}.txt"
-            log_file.parent.mkdir(parents=True, exist_ok=True)
-            with open(log_file, 'w', encoding='utf-8') as f:
+        from datetime import datetime
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        log_file = output_path / "logs" / f"graph_equality_log_{timestamp}.txt"
+        log_file.parent.mkdir(parents=True, exist_ok=True)
+        
+        with open(log_file, 'w', encoding='utf-8') as f:
+            # Write header with summary counts
+            f.write("=" * 80 + "\n")
+            f.write("GRAPH EQUALITY VERIFICATION SUMMARY\n")
+            f.write("=" * 80 + "\n")
+            f.write(f"Codebooks with all variants equal: {equal_count}\n")
+            f.write(f"Codebooks with unequal variants: {unequal_count}\n")
+            f.write("=" * 80 + "\n\n")
+            
+            if log_entries:
+                f.write("UNEQUAL CODEBOOKS:\n")
+                f.write("-" * 80 + "\n\n")
                 for entry in log_entries:
                     f.write(entry[0] + "\n")
                     for line in entry[1:]:
                         f.write("  " + line + "\n")
                     f.write("\n")
-            
-            print(f"\nVerification complete: {len(log_entries)} codebooks with unequal graphs logged to {log_file}")
+            else:
+                f.write("All codebooks have equal graphs across all variants.\n")
+        
+        if log_entries:
+            print(f"\nVerification complete: {equal_count} equal, {unequal_count} unequal codebooks logged to {log_file}")
         else:
-            print("\nVerification complete: All graphs are equal across all variants!")
+            print(f"\nVerification complete: All {equal_count} codebooks are equal across all variants!")
+    
+    def _is_obfuscated(self, variant_name: str) -> bool:
+        """Check if a variant name indicates obfuscation."""
+        return "obfc" in variant_name.lower()
     
     def _find_equal_groups(self, graphs: dict) -> List[tuple]:
-        """Find groups of equal graphs. Returns list of (graph, variant_names) tuples."""
+        """
+        Find groups of equal graphs. Returns list of (graph, variant_names) tuples.
+        
+        Comparison logic:
+        - If both graphs are obfuscated or both are non-obfuscated: use exact comparison (node IDs must match)
+        - If one is obfuscated and one isn't: use structural comparison (ignore node IDs)
+        """
         from collections import defaultdict
         
         # Create a mapping of graph signature to variant names
@@ -704,13 +733,20 @@ class CodebookPipeline:
             if variant1 in processed:
                 continue
             
+            is_obf1 = self._is_obfuscated(variant1)
+            
             # Find all graphs equal to this one
             equal_variants = [variant1]
             for variant2, graph2 in graphs.items():
                 if variant2 == variant1 or variant2 in processed:
                     continue
                 
-                if graph1 == graph2:
+                is_obf2 = self._is_obfuscated(variant2)
+                
+                if is_obf1 == is_obf2: are_equal = graph1 == graph2
+                else: are_equal = graph1.__eq__(graph2, check_ids=False)
+                
+                if are_equal:
                     equal_variants.append(variant2)
                     processed.add(variant2)
             
