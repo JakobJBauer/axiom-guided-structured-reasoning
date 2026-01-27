@@ -148,41 +148,166 @@ class Graph:
         copied_edges = [Edge(edge.source, edge.target) for edge in self.edges]
         return Graph(copied_nodes, copied_edges)
     
-    def __eq__(self, other):
-        """Compare two graphs for structural and formula equality."""
+    def __eq__(self, other, check_ids=True):
+        """
+        Compare two graphs for structural and formula equality.
+        
+        Args:
+            other: The other graph to compare with
+            check_ids: If True, node IDs must match exactly. If False, compares
+                      structurally using topological order mapping (ignores node IDs).
+                      Default is True for backward compatibility.
+        """
         if not isinstance(other, Graph):
             return False
         
-        # Compare node IDs
-        node_ids1 = {node.id for node in self.nodes}
-        node_ids2 = {node.id for node in other.nodes}
-        if node_ids1 != node_ids2:
-            return False
-        
-        # Compare edges
-        edges1 = {(edge.source, edge.target) for edge in self.edges}
-        edges2 = {(edge.source, edge.target) for edge in other.edges}
-        if edges1 != edges2:
-            return False
-        
-        # Compare formulas for each node
-        for node_id in node_ids1:
-            node1 = self.get_node_by_id(node_id)
-            node2 = other.get_node_by_id(node_id)
-            
-            # Compare formulas
-            if node1.formula is None and node2.formula is None:
-                continue
-            if node1.formula is None or node2.formula is None:
+        if check_ids:
+            # Original comparison: node IDs must match exactly
+            node_ids1 = {node.id for node in self.nodes}
+            node_ids2 = {node.id for node in other.nodes}
+            if node_ids1 != node_ids2:
                 return False
             
-            # Convert formulas to strings for comparison (use repr for unambiguous comparison)
-            formula1_str = repr(node1.formula)
-            formula2_str = repr(node2.formula)
-            if formula1_str != formula2_str:
+            # Compare edges
+            edges1 = {(edge.source, edge.target) for edge in self.edges}
+            edges2 = {(edge.source, edge.target) for edge in other.edges}
+            if edges1 != edges2:
                 return False
+            
+            # Compare formulas for each node
+            for node_id in node_ids1:
+                node1 = self.get_node_by_id(node_id)
+                node2 = other.get_node_by_id(node_id)
+                
+                # Compare formulas
+                if node1.formula is None and node2.formula is None:
+                    continue
+                if node1.formula is None or node2.formula is None:
+                    return False
+                
+                # Convert formulas to strings for comparison (use repr for unambiguous comparison)
+                formula1_str = repr(node1.formula)
+                formula2_str = repr(node2.formula)
+                if formula1_str != formula2_str:
+                    return False
+        else:
+            # Structural comparison: ignore node IDs, use topological order mapping
+            # Must have same number of nodes
+            if len(self.nodes) != len(other.nodes):
+                return False
+            
+            # Must have same number of edges
+            if len(self.edges) != len(other.edges):
+                return False
+            
+            # Get topological order for both graphs
+            try:
+                topo1 = self.topological_sort()
+                topo2 = other.topological_sort()
+            except Exception:
+                # If topological sort fails, fall back to regular comparison
+                return False
+            
+            if len(topo1) != len(topo2):
+                return False
+            
+            # Create mapping from node position to node
+            node_map1 = {i: node for i, node in enumerate(topo1)}
+            node_map2 = {i: node for i, node in enumerate(topo2)}
+            
+            # Compare edge structure using positional indices
+            def get_edge_set(graph, node_map):
+                """Get edges as (source_pos, target_pos) tuples."""
+                edge_set = set()
+                pos_by_id = {node.id: pos for pos, node in node_map.items()}
+                for edge in graph.edges:
+                    source_pos = pos_by_id.get(edge.source)
+                    target_pos = pos_by_id.get(edge.target)
+                    if source_pos is not None and target_pos is not None:
+                        edge_set.add((source_pos, target_pos))
+                return edge_set
+            
+            edges1 = get_edge_set(self, node_map1)
+            edges2 = get_edge_set(other, node_map2)
+            if edges1 != edges2:
+                return False
+            
+            # Compare formulas by position
+            for pos in range(len(topo1)):
+                node1 = node_map1[pos]
+                node2 = node_map2[pos]
+                
+                # Both must have formula or both must not have formula
+                if (node1.formula is None) != (node2.formula is None):
+                    return False
+                
+                if node1.formula is None:
+                    continue
+                
+                # Compare formulas by converting node IDs to positional indices
+                formula1_str = self._normalize_formula_repr(node1.formula, node_map1)
+                formula2_str = other._normalize_formula_repr(node2.formula, node_map2)
+                
+                if formula1_str != formula2_str:
+                    return False
         
         return True
+    
+    def _normalize_formula_repr(self, formula, node_map):
+        """
+        Convert formula to string representation with node IDs replaced by positional indices.
+        This allows comparing formulas from different graphs that may have different node IDs.
+        """
+        from graph.formulas.formula import Formula
+        
+        pos_by_id = {node.id: pos for pos, node in node_map.items()}
+        
+        def normalize_arg(arg):
+            """Normalize a formula argument (node ID, value, or nested formula)."""
+            if isinstance(arg, str):
+                # Check if it's a node ID
+                if arg in pos_by_id:
+                    return f"node_{pos_by_id[arg]}"
+                # Otherwise it's a value, keep as-is
+                return repr(arg)
+            elif isinstance(arg, Formula):
+                # Recursively normalize nested formulas
+                return self._normalize_formula_repr(arg, node_map)
+            else:
+                return repr(arg)
+        
+        from graph.formulas import Not, And, Or, Xor, Equal, In
+        
+        if isinstance(formula, Not):
+            arg = formula.key_or_formula
+            normalized_arg = normalize_arg(arg)
+            return f"Not({normalized_arg})"
+        
+        elif isinstance(formula, And):
+            args = [normalize_arg(arg) for arg in formula.keys_or_formulas]
+            return f"And({', '.join(args)})"
+        
+        elif isinstance(formula, Or):
+            args = [normalize_arg(arg) for arg in formula.keys_or_formulas]
+            return f"Or({', '.join(args)})"
+        
+        elif isinstance(formula, Xor):
+            args = [normalize_arg(arg) for arg in formula.keys_or_formulas]
+            return f"Xor({', '.join(args)})"
+        
+        elif isinstance(formula, Equal):
+            key = normalize_arg(formula.key)
+            value = repr(formula.value)
+            return f"Equal({key}, {value})"
+        
+        elif isinstance(formula, In):
+            key = normalize_arg(formula.key)
+            values = [repr(v) for v in formula.values]
+            return f"In({key}, [{', '.join(values)}])"
+        
+        else:
+            # Fallback to repr
+            return repr(formula)
     
     def __str__(self) -> str:
         return f"Graph with {len(self.nodes)} nodes and {len(self.edges)} edges:\n" + \
