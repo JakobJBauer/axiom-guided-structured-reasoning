@@ -1,0 +1,22 @@
+[attr-4]  
+A story is [attr-4] if the tale carries, at its very heart, the theme Helping Others—like a lantern held aloft in darkness, guiding one soul to ease another’s burden.
+
+[attr-5]  
+A story is [attr-5] if the story is about mystical creatures—those moonlit beings and ancient wonders that drift through legend: fae and wyrms, spirits and shapeshifters, all breathing enchantment into the world of the page.
+
+[attr-3]  
+A story is [attr-3] if the story starts with a preposition—opening not with a name or a cry, but with a small, subtle hinge-word that swings the reader into place: *In*, *On*, *Under*, *Beyond*, and their kin.
+
+[attr-2]  
+A story is [attr-2] if both of the following are true:  
+- The story is [attr-5]  
+- The story is not [attr-4]  
+
+In the old archivist’s tower—where vellum smelled of rain and ink seemed to remember every hand that ever held a quill—scribes used this mark for tales steeped in marvels, yet untouched by the gentle impulse of mercy. Such a story may glitter with magic, but it withholds the warmth of aid; its wonders remain wondrous, yet its heart does not turn toward helping.
+
+[attr-1]  
+A story is [attr-1] if both of the following are true:  
+- The story is [attr-3]  
+- The story is not [attr-2]  
+
+This is the seal the librarians reserved for doorways that feel welcoming: a beginning that steps forth with a preposition—quietly positioning the reader at the threshold—while avoiding the particular chill of [attr-2]. In other words, the opening beckons, and the story is not one that is simultaneously about mystical creatures and not about helping others.

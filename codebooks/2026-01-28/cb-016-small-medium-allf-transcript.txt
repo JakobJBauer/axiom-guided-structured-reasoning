@@ -1,0 +1,43 @@
+Interviewer: Let's walk through this codebook together. First question — what does [THEME-HELPING-OTHERS] mean?
+
+Expert: A story is [THEME-HELPING-OTHERS] if
+- The story has the theme Helping Others.
+
+Interviewer: So that's straightforward — the label applies when the story's theme is Helping Others. Got it. Next — what's [HELPFUL-ACTION]?
+
+Expert: A story is [HELPFUL-ACTION] if either of the following is true:
+- The protagonist's central action is in the set {aid, rescue}
+- The protagonist's central action is in the set {donate, teach}
+
+Interviewer: To make sure I understand — [HELPFUL-ACTION] is true when the protagonist's main action is one of those listed actions. Either they perform aid/rescue, or they perform donate/teach.
+
+Expert: Exactly.
+
+Interviewer: Now, what about [MOTIVE-SELFISH]? How is that defined?
+
+Expert: A story is [MOTIVE-SELFISH] if
+- The protagonist's motive is equal to "personal gain"
+
+Interviewer: So that flags stories where the protagonist is acting for personal gain. Clear. Moving on — how do we identify a [SELFLESS-ARC]?
+
+Expert: A story is [SELFLESS-ARC] if both of the following are true:
+- The story is [HELPFUL-ACTION]
+- The story is not [MOTIVE-SELFISH]
+
+Interviewer: Let me paraphrase: [SELFLESS-ARC] requires that the protagonist performs a helpful action and that their motive is not "personal gain." Both conditions must hold.
+
+Expert: Correct.
+
+Interviewer: Finally, how does [ALTRUISTIC-HELP] work? I see "exactly one" in the rule — what does that enforce?
+
+Expert: A story is [ALTRUISTIC-HELP] if exactly one of the following is true:
+- The story is [THEME-HELPING-OTHERS]
+- The story is [SELFLESS-ARC]
+
+Interviewer: So [ALTRUISTIC-HELP] is true when the story satisfies exactly one of those two labels — either it has the Helping Others theme, or it qualifies as a Selfless Arc, but not both at the same time.
+
+Expert: That's right. The "exactly one" condition enforces exclusivity between those two possibilities.
+
+Interviewer: Thanks — that preserves the logical relationships cleanly while making it easier to follow. Any final notes?
+
+Expert: Just this: all of these definitions should be applied exactly as stated — node IDs like [THEME-HELPING-OTHERS], [HELPFUL-ACTION], [MOTIVE-SELFISH], [SELFLESS-ARC], and [ALTRUISTIC-HELP] remain the anchors for annotation, and the logical connectors (either, both, not, exactly one) determine how those anchors relate.

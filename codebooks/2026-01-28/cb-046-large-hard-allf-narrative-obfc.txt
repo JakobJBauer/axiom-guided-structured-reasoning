@@ -1,0 +1,125 @@
+Picture a library of stories, each spine labeled with a tiny, precise tag. Walk with me as we open each book and listen for the quiet rule that earns it a name. I’ll whisper the name of the tag and then read aloud the rule that crowns the tale with that badge—unchanged, exact, and true—so your annotations and judgments remain rock-solid even as the language around them sings.
+
+[attr-14]
+A story is [attr-14] if the story is lighthearted.
+
+[attr-16]
+A story is [attr-16] if the story is philosophical.
+
+[attr-24]
+A story is [attr-24] if the story is about magical lands.
+
+[attr-26]
+A story is [attr-26] if the story uses wh-questions.
+
+[attr-11]
+A story is [attr-11] if the story has fewer than 160 words.
+
+[attr-18]
+A story is [attr-18] if the story has the theme Kindness.
+
+[attr-7]
+A story is [attr-7] if the story has more than 6 paragraphs.
+
+[attr-25]
+A story is [attr-25] if the story uses conditional mood.
+
+[attr-20]
+A story is [attr-20] if the story has the theme Problem-Solving.
+
+[attr-17]
+A story is [attr-17] if the story has the theme Growth.
+
+[attr-12]
+A story is [attr-12] if the story starts with a preposition.
+
+[attr-21]
+A story is [attr-21] if the story is about giant creatures.
+
+[attr-15]
+A story is [attr-15] if the story is modern.
+
+[attr-13]
+A story is [attr-13] if the story is classic.
+
+[attr-19]
+A story is [attr-19] if the story has the theme Magic.
+
+[attr-23]
+A story is [attr-23] if the story is about lost civilizations.
+
+[attr-4]
+A story is [attr-4] if the story has a flashback.
+
+[attr-22]
+A story is [attr-22] if the story is about hidden treasures.
+
+[attr-9]
+A story is [attr-9] if the story is not [attr-14].
+
+[attr-8]
+A story is [attr-8] if exactly one of the following is true:
+- The story is [attr-15]
+- The story is [attr-13]
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- The story is [attr-24]
+- Either of the following is true:
+  - The story is [attr-19]
+  - Both of the following are true:
+    - The story is [attr-21]
+    - The story is [attr-20]
+
+[attr-5]
+A story is [attr-5] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-22]
+  - The story is [attr-23]
+- Both of the following are true:
+  - The story is [attr-22]
+  - The story is [attr-23]
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- [attr-26] is in the set of devices the story uses (it explicitly uses wh-questions)
+- Either of the following is true:
+  - The story is [attr-25]
+  - The story is [attr-12]
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The set of themes in the story is equal to the set containing [attr-18] and [attr-17]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-20]
+    - The story is [attr-4]
+  - Both of the following are true:
+    - The story is [attr-7]
+    - The story is not [attr-11]
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- Both of the following are true:
+  - The story is [attr-21]
+  - The story is [attr-23]
+
+[attr-2]
+A story is [attr-2] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-1]
+  - Both of the following are true:
+    - The story is [attr-8]
+    - Either of the following is true:
+      - The story is [attr-18]
+      - The story is [attr-19]
+- Both of the following are true:
+  - The story is [attr-3]
+  - Both of the following are true:
+    - The story is not [attr-9]
+    - The story is [attr-10]
+
+And there, like a map in the front of a book, are the rules written plainly. Read them as you would a prophecy: each label a verdict arrived at by these exact conditions. The tale of classification continues to unfold, but these sentences—untouched in their logic—are the compass you carry.

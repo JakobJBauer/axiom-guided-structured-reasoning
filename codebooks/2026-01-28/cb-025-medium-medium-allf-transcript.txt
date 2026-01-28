@@ -1,0 +1,81 @@
+Interviewer: Let's go through this codebook together. Can you define the simple labels first?
+
+Expert: Sure.
+
+Interviewer: What does [HAS-A-MORAL-LESSON] mean?
+
+Expert: A story is [HAS-A-MORAL-LESSON] if The story has a moral lesson.
+
+Interviewer: And [USES-PERFECT-ASPECT]?
+
+Expert: A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+
+Interviewer: How about [HAS-A-CLIFFHANGER]?
+
+Expert: A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger.
+
+Interviewer: [THEME-KINDNESS]?
+
+Expert: A story is [THEME-KINDNESS] if The story has the theme Kindness.
+
+Interviewer: [STYLE-MODERN]?
+
+Expert: A story is [STYLE-MODERN] if The story is modern.
+
+Interviewer: [HAS-A-FLASHBACK]?
+
+Expert: A story is [HAS-A-FLASHBACK] if The story has a flashback.
+
+Interviewer: [STYLE-CLASSIC]?
+
+Expert: A story is [STYLE-CLASSIC] if The story is classic.
+
+Interviewer: [LONG-STORY]?
+
+Expert: A story is [LONG-STORY] if The story has more than 375 words.
+
+Interviewer: [HAS-JUXTAPOSITION]?
+
+Expert: A story is [HAS-JUXTAPOSITION] if The story has juxtaposition.
+
+Interviewer: [STYLE-LIGHTHEARTED]?
+
+Expert: A story is [STYLE-LIGHTHEARTED] if The story is lighthearted.
+
+Interviewer: Great. Now the composite definitions get more detailed. Explain [RICH-NARRATIVE].
+
+Expert: Of course. A story is [RICH-NARRATIVE] if all of the following are true:
+- Either of the following is true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is [HAS-A-FLASHBACK]
+- Exactly one of the following is true:
+  - The story is [HAS-JUXTAPOSITION]
+  - The story is [USES-PERFECT-ASPECT]
+- The story is not [STYLE-LIGHTHEARTED]
+- At least one of the story's structural features is in the set { [HAS-A-CLIFFHANGER], [HAS-A-FLASHBACK], [HAS-JUXTAPOSITION] }
+
+Interviewer: Let me pause you—why list both the first and the last condition? Aren't they similar?
+
+Expert: They are related but not redundant. The first condition requires the presence of either a cliffhanger or a flashback. The last condition broadens structural features to include juxtaposition as well, ensuring at least one of those three is present. The middle condition then forces an exclusive choice between juxtaposition and perfect aspect. All of these together create the exact logical profile of [RICH-NARRATIVE].
+
+Interviewer: That helps. Now explain [COMPLEX-STORY].
+
+Expert: A story is [COMPLEX-STORY] if both of the following are true:
+- The story is [RICH-NARRATIVE]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [THEME-KINDNESS]
+    - The story is [HAS-A-MORAL-LESSON]
+  - The presence of [STYLE-MODERN] equals the presence of [STYLE-CLASSIC]
+
+Interviewer: Can you clarify "The presence of [STYLE-MODERN] equals the presence of [STYLE-CLASSIC]"?
+
+Expert: That line means modern style and classic style must either both be present or both be absent. The code requires that their presence matches exactly.
+
+Interviewer: So to summarize, [COMPLEX-STORY] builds on [RICH-NARRATIVE] and then adds a thematic/moral requirement plus a parity condition between modern and classic styles?
+
+Expert: Exactly. You need the narrative richness as defined earlier, plus either a kindness theme or a moral lesson, and you must have modern and classic styles either both present or both absent.
+
+Interviewer: Thank you. This transcript preserves the exact logical relationships and node identifiers, but puts them in a conversational form for easier reading.
+
+Expert: You're welcome. If you want, we can walk through example stories and check which nodes they'd trigger, step by step.

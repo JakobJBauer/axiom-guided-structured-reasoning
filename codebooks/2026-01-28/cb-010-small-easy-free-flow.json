@@ -1,0 +1,74 @@
+{
+  "nodes": [
+    {
+      "id": "theme-innovation",
+      "label": "Theme Innovation",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-cultural-traditions",
+      "label": "Topic Cultural Traditions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-bygone-eras",
+      "label": "Topic Bygone Eras",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "Uses WH Questions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-noun",
+      "label": "Starts With Noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-preposition",
+      "label": "Starts With Preposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "cultural-innovation-questions",
+      "label": "Cultural Innovation Questions",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-innovation",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "topic-cultural-traditions",
+            "topic-bygone-eras"
+          ]
+        },
+        "uses-wh-questions"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "theme-innovation",
+      "target": "cultural-innovation-questions"
+    },
+    {
+      "source": "topic-cultural-traditions",
+      "target": "cultural-innovation-questions"
+    },
+    {
+      "source": "topic-bygone-eras",
+      "target": "cultural-innovation-questions"
+    },
+    {
+      "source": "uses-wh-questions",
+      "target": "cultural-innovation-questions"
+    }
+  ]
+}

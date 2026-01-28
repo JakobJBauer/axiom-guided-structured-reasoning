@@ -1,0 +1,244 @@
+Prelude — an enchanted prologue:
+In a sun-dappled library where labels bloom like flowers upon the shelves of countless tales, this codebook lives as a gardener of categories. Each bracketed sigil is a petal or a thorn: precise in its place, exact in its meaning, yet whispered about in lyrical, curious prose so that annotators may both reason with rigor and delight in the language as they read. Below, every pact of logic is preserved; the formal conditions stand firm, and around them I have woven gentle, flowery commentary to illuminate their purpose.
+
+[attr-30]
+A story is [attr-30] if The story has the theme Growth.
+In other words, affix this badge when a tale charts transformation, when characters unfurl like spring leaves and the narrative breathes a lesson of becoming.
+
+[attr-22]
+A story is [attr-22] if The story is humorous.
+Bestow this label on stories that wear laughter like a cloak — those that wink, stumble, and make the reader smile.
+
+[attr-32]
+A story is [attr-32] if The story has the theme Helping Others.
+This emblem belongs to narratives where reaching a hand to another is the central refrain, where compassion and assistance drive the plot.
+
+[attr-21]
+A story is [attr-21] if The story starts with a preposition.
+Apply this marker when the very first word of the tale is a preposition — a tiny grammatical doorway that opens the scene.
+
+[attr-25]
+A story is [attr-25] if The story is modern.
+This tag glints like chrome: for stories steeped in contemporary sensibilities, present-day voice, or a now-ish setting.
+
+[attr-48]
+A story is [attr-48] if The story uses perfect aspect.
+Mark this when the narrative employs the perfect tenses — those delicate time-weavers that link past achievements to present vantage points.
+
+[attr-23]
+A story is [attr-23] if The story is lighthearted.
+Reserve this for stories that float, breezy and unburdened, where tone is gentle and worries are few.
+
+[attr-29]
+A story is [attr-29] if The story has the theme Deception.
+Pin this label on tales where misdirection, secrets, or deliberate untruths form a thematic thread.
+
+[attr-35]
+A story is [attr-35] if The story has the theme Kindness.
+Use this when benevolence is woven into the fabric of the story — kindness is not merely an act but a theme.
+
+[attr-50]
+A story is [attr-50] if The story uses wh-questions.
+This is for narratives that invoke curiosity in interrogative form — who, what, where, when, why, how — to steer inquiry or suspense.
+
+[attr-42]
+A story is [attr-42] if The story is about lost civilizations.
+Award this when ruins, vanished empires, or the echoes of bygone societies take center stage.
+
+[attr-46]
+A story is [attr-46] if The story is about time travel.
+Affix this to adventures that fold time — journeys forward, backward, or kaleidoscopic loops through eras.
+
+[attr-6]
+A story is [attr-6] if The story has Checkhov's gun.
+Label any tale that plants an apparently minor element which later unfolds into essential significance — the promise of narrative economy fulfilled.
+
+[attr-4]
+A story is [attr-4] if The story has a moral lesson.
+Use this for tales that consciously teach or conclude with an explicit moral or ethical takeaway.
+
+[attr-31]
+A story is [attr-31] if The story has the theme Hardship.
+Choose this marker when struggle, adversity, and trials form an essential thematic core.
+
+[attr-11]
+A story is [attr-11] if The story has more than 375 words.
+This practical tag distinguishes length: any narrative whose word-count blooms beyond 375 earns this label.
+
+[attr-45]
+A story is [attr-45] if The story is about seasonal changes.
+Assign this to works that turn on the wheel of the year — the shifting hues and rhythms of seasons.
+
+[attr-2]
+A story is [attr-2] if The story has a cliffhanger.
+This is for endings that leave the reader hanging, breathless at an unresolved precipice.
+
+[attr-37]
+A story is [attr-37] if The story has the theme Problem-Solving.
+Attach this when the arc revolves around puzzles, obstacles, and the crafted intellect of resolution.
+
+[attr-34]
+A story is [attr-34] if The story has the theme Innovation.
+Bestowed upon tales that celebrate invention, novelty, or creative breakthroughs.
+
+[attr-36]
+A story is [attr-36] if The story has the theme Magic.
+Affix this when the narrative’s heart is touched by the supernatural, the wondrous, or arcane forces.
+
+[attr-7]
+A story is [attr-7] if The story has circular narrative structure.
+Use this for stories that loop back upon themselves in structure, returning to an origin or reframing the opening.
+
+[attr-41]
+A story is [attr-41] if The story is about giant creatures.
+Label stories where titanic beasts stride across the stage, their size a dramatic presence.
+
+[attr-47]
+A story is [attr-47] if The story uses discourse markers.
+Apply this when the narrative makes liberal use of connectives and signposts — words that guide the reader through argument or flow.
+
+[attr-26]
+A story is [attr-26] if The story is philosophical.
+Grant this to works that muse, argue, or ponder big ideas with contemplative tone.
+
+[attr-19]
+A story is [attr-19] if The story starts with a adverb.
+This is the tag for openings whose first breath is an adverbial word, setting manner or intensity at once.
+
+[attr-40]
+A story is [attr-40] if The story is about cultural traditions.
+Use this for narratives rooted in ritual, custom, or inherited communal practices.
+
+[attr-3]
+A story is [attr-3] if The story has a flashback.
+Attach this when the narrative slips backward in time to reveal antecedent events.
+
+[attr-8]
+A story is [attr-8] if The story has readability score above 96.1.
+Formally mark works whose measured readability soars above 96.1, indicating exceptionally smooth clarity.
+
+[attr-24]
+A story is [attr-24] if The story is minimalist.
+Award this to stories pared down to essentials, where restraint and simplicity define style.
+
+[attr-49]
+A story is [attr-49] if The story uses superlative forms.
+This is for texts that employ words like “best,” “most,” or other superlatives to convey extremes.
+
+[attr-43]
+A story is [attr-43] if The story is about magical lands.
+Attach this label to journeys through enchanted geographies, where maps shimmer and rules bend.
+
+[attr-5]
+A story is [attr-5] if The story has a story within a story.
+Use this when narratives nest other narratives inside themselves, like dolls within dolls.
+
+[attr-27]
+A story is [attr-27] if The story is surreal.
+Tag works that delight in dreamlogic, uncanny imagery, and the illogical made luminous.
+
+[attr-20]
+A story is [attr-20] if The story starts with a noun.
+This simple yet telling marker applies when a noun stands as the tale’s first breath.
+
+[attr-39]
+A story is [attr-39] if The story is about bygone eras.
+Use this for works that wander through old times, evoking epochs past and their atmospheres.
+
+[attr-12]
+A story is [attr-12] if The story has readability score below 86.4.
+Formally mark works whose readability measure falls below 86.4, signaling denser or more complex prose.
+
+[attr-33]
+A story is [attr-33] if The story has the theme Humor.
+Apply this to stories where humor is not merely tone but a guiding thematic element.
+
+[attr-44]
+A story is [attr-44] if The story is about mystical creatures.
+Affix this when spectral, fey, or other-worldly beings populate the tale.
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- The story is [attr-22]
+- The story is [attr-23]
+This compound label blooms only when mirth and buoyancy coexist — a duet of comedic spirit and gentle mood.
+
+[attr-14]
+A story is [attr-14] if either of the following is true:
+- The story is [attr-25]
+- both of the following are true:
+  - The story is [attr-26]
+  - The story is [attr-27]
+This constellation groups together modern sensibility or the rarer fusion of contemplative and dreamlike qualities.
+
+[attr-18]
+A story is [attr-18] if exactly one of the following is true:
+- The story is [attr-8]
+- The story is [attr-12]
+This tag captures exclusivity: either the prose is unusually breezy, or it tilts toward density, but not both.
+
+[attr-16]
+A story is [attr-16] if all of the following are true:
+- The story is [attr-5]
+- The story is [attr-3]
+- The story is [attr-7]
+When these three narrative devices entwine — nesting, temporal backsliding, and circular form — the story earns this badge of structural intricacy.
+
+[attr-28]
+A story is [attr-28] if both of the following are true:
+- The story is [attr-32]
+- The story is [attr-35]
+This junction honors tales where assistance and kindness are twin pillars of the theme.
+
+[attr-13]
+A story is [attr-13] if both of the following are true:
+- The story is [attr-43]
+- either of the following is true:
+  - The story is [attr-44]
+  - The story is [attr-41]
+Use this when enchanted realms and extraordinary beings — whether mystical sprites or colossal beasts — share the stage.
+
+[attr-38]
+A story is [attr-38] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-46]
+  - The story is [attr-42]
+- The story is [attr-39]
+This category gathers tales that travel in time to vanished worlds, or otherwise dwell in the landscapes of long-ago eras.
+
+[attr-15]
+A story is [attr-15] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-35]
+- The story is not [attr-29]
+This filter selects narratives that teach a moral anchored in kindness and explicitly avoids those that rely on deception.
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- The story is [attr-34]
+- The story is [attr-37]
+Affix this when invention and the art of solving problems are inextricably intertwined within the theme.
+
+[attr-17]
+A story is [attr-17] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-2]
+This marker flags lengthy narratives that conclude on a suspenseful precipice.
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- all of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-15]
+  - either of the following is true:
+    - The story is [attr-16]
+    - The story is [attr-17]
+- exactly one of the following is true:
+  - both of the following are true:
+    - The story is [attr-13]
+    - The story is not [attr-24]
+  - The story is [attr-38]
+This final, ornate archetype crowns stories that satisfy a rich blend of qualities: comedic lightness coupled with moral clarity and either structural complexity or a dramatic pause; or alternately, enchanted realms with creatures (so long as the story is not minimalist), or tales folded in time and history. It is, appropriately, a complex bouquet of features.
+
+Epilogue — a gentle reminder:
+Each bracketed title above is both a rule and a lantern: the formal condition is written plainly to guide annotation, and the flowery commentary is meant to illuminate purpose and help readers remember. The logical bones remain unaltered; only the surrounding language has been gilded so that this codebook can be both exact and delightful to read.

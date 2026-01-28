@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "attr-2",
+      "label": "Innovation (theme)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Cultural traditions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Bygone eras (historical)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Uses wh-questions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "Composite: Innovation + (Cultural traditions OR Bygone eras) + Wh-questions",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-2",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-4",
+            "attr-3"
+          ]
+        },
+        "attr-5"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-2",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    }
+  ]
+}

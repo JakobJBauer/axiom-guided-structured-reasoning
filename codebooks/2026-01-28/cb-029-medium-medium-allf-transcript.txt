@@ -1,0 +1,86 @@
+Interviewer: Let's go through this codebook together. Can you tell me what each node means, one by one?
+
+Expert: Sure — I'll read each definition and explain it like we're annotators checking a story. I'll keep the exact node IDs and logical structures as written.
+
+Interviewer: Great. Start with the simple labels.
+
+Expert:
+- Question: What does [STYLE-PHILOSOPHICAL] mean?
+  - Answer: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+- Question: What does [HAS-A-STORY-WITHIN-A-STORY] mean?
+  - Answer: A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+- Question: What does [USES-CONDITIONAL-MOOD] mean?
+  - Answer: A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+- Question: What does [HAS-CIRCULAR-NARRATIVE-STRUCT] mean?
+  - Answer: A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+- Question: What does [TOPIC-CULTURAL-TRADITIONS] mean?
+  - Answer: A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+- Question: What does [SHORT-STORY] mean?
+  - Answer: A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+- Question: What does [TOPIC-SEASONAL-CHANGES] mean?
+  - Answer: A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+
+- Question: What does [LOW-READABILITY] mean?
+  - Answer: A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+Interviewer: Okay, those are the atomic definitions. What about the composite nodes that combine conditions?
+
+Expert:
+- Question: How is [INNER-CONDITIONAL] defined?
+  - Answer: A story is [INNER-CONDITIONAL] if both of the following are true:
+    - The story is [HAS-A-STORY-WITHIN-A-STORY]
+    - The story is [USES-CONDITIONAL-MOOD]
+
+Interviewer: So [INNER-CONDITIONAL] requires both a nested story and conditional mood. What about the more complex XOR-style node?
+
+Expert:
+- Question: How is [PHILOS-CIRCULAR-XOR] defined?
+  - Answer: A story is [PHILOS-CIRCULAR-XOR] if both of the following are true:
+    - Exactly one of the following is true:
+      - The story is [STYLE-PHILOSOPHICAL]
+      - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+    - The truth value of the following are equal:
+      - [SHORT-STORY]
+      - [LOW-READABILITY]
+
+Interviewer: Let me check I understand: [PHILOS-CIRCULAR-XOR] demands that either the story is philosophical or circular (but not both), and separately that the two boolean values [SHORT-STORY] and [LOW-READABILITY] match (both true or both false). Correct?
+
+Expert: Exactly — that's the intended logic.
+
+Interviewer: What's [THEMATIC-IN]?
+
+Expert:
+- Question: How is [THEMATIC-IN] defined?
+  - Answer: A story is [THEMATIC-IN] if the story's topic is in the set:
+    - [TOPIC-CULTURAL-TRADITIONS]
+    - [TOPIC-SEASONAL-CHANGES]
+
+Interviewer: So [THEMATIC-IN] just means the topic is one of those two topic nodes.
+
+Expert: Right.
+
+Interviewer: Finally, the most composite node: [COMPLEX-NARRATIVE]. Walk me through it.
+
+Expert:
+- Question: How is [COMPLEX-NARRATIVE] defined?
+  - Answer: A story is [COMPLEX-NARRATIVE] if all of the following are true:
+    - Either of the following is true:
+      - The story is [INNER-CONDITIONAL]
+      - The story is [PHILOS-CIRCULAR-XOR]
+    - Both of the following are true:
+      - The story is [THEMATIC-IN]
+      - The story is not [SHORT-STORY]
+
+Interviewer: So to tag something as [COMPLEX-NARRATIVE], it must (1) satisfy one of the two higher-level conditions ([INNER-CONDITIONAL] or [PHILOS-CIRCULAR-XOR]) and (2) be thematically in the allowed set and not be a short story. Clear.
+
+Expert: Yes. That keeps the logical relationships intact: combinations, exclusive-or, equality of truth values, membership in a small topic set, and a negation on [SHORT-STORY]. All node IDs and logical operators are preserved as in the original codebook.
+
+Interviewer: Thanks — that makes the structure both clear and easy to apply when annotating.
+
+Expert: You're welcome. If you want, we can run through an example story and annotate it step by step using these definitions.

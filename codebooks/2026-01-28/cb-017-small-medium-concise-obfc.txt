@@ -1,0 +1,22 @@
+[attr-3]
+A story is [attr-3] if the story is humorous.
+
+[attr-4]
+A story is [attr-4] if the story is lighthearted.
+
+[attr-5]
+A story is [attr-5] if the story has the theme Kindness.
+
+[attr-2]
+A story is [attr-2] if exactly one of the following is true:
+- The story is [attr-3]
+- The story is [attr-4]
+
+[attr-1]
+A story is GENRE-GENTLE if both of the following are true:
+- The story is [attr-5]
+- Either of the following are true:
+  - The story is [attr-2]
+  - Both of the following are true:
+    - The story is [attr-4]
+    - The story is not [attr-3]

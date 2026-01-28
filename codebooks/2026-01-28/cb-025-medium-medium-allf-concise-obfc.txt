@@ -1,0 +1,49 @@
+[attr-4]
+A story is [attr-4] if the story has a moral lesson.
+
+[attr-12]
+A story is [attr-12] if the story uses perfect aspect.
+
+[attr-2]
+A story is [attr-2] if the story has a cliffhanger.
+
+[attr-11]
+A story is [attr-11] if the story has the theme Kindness.
+
+[attr-10]
+A story is [attr-10] if the story is modern.
+
+[attr-3]
+A story is [attr-3] if the story has a flashback.
+
+[attr-8]
+A story is [attr-8] if the story is classic.
+
+[attr-6]
+A story is [attr-6] if the story has more than 375 words.
+
+[attr-5]
+A story is [attr-5] if the story has juxtaposition.
+
+[attr-9]
+A story is [attr-9] if the story is lighthearted.
+
+[attr-7]
+A story is [attr-7] if all of the following are true:
+- Either of the following is true:
+  - The story is [attr-2]
+  - The story is [attr-3]
+- Exactly one of the following is true:
+  - The story is [attr-5]
+  - The story is [attr-12]
+- The story is not [attr-9]
+- At least one of the story's structural features is in the set { [attr-2], [attr-3], [attr-5] }
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-7]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [attr-11]
+    - The story is [attr-4]
+  - The presence of [attr-10] equals the presence of [attr-8]

@@ -1,0 +1,48 @@
+[attr-9]
+A story is [attr-9] if The story has the theme Deception.
+
+[attr-2]
+A story is [attr-2] if The story has a story within a story.
+
+[attr-8]
+A story is [attr-8] if The story is surreal.
+
+[attr-11]
+A story is [attr-11] if The story has the theme Helping Others.
+
+[attr-7]
+A story is [attr-7] if The story is minimalist.
+
+[attr-10]
+A story is [attr-10] if The story has the theme Growth.
+
+[attr-6]
+A story is [attr-6] if The story is humorous.
+
+[attr-12]
+A story is [attr-12] if The story uses discourse markers.
+
+[attr-5]
+A story is [attr-5] if The story starts with a noun.
+
+[attr-3]
+A story is [attr-3] if The story has circular narrative structure.
+
+[attr-4]
+A story is [attr-4] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-2]
+  - Exactly one of the following is true:
+    - The story is [attr-9]
+    - The story is [attr-10]
+- The story is [attr-3] and the story is not [attr-5]
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-4]
+- Either of the following is true:
+  - The truth of [attr-12] equals the truth of [attr-5] (both true or both false)
+  - One of the following style nodes is in the story:
+    - The story is [attr-8]
+    - The story is [attr-6]
+    - The story is [attr-7]

@@ -1,0 +1,27 @@
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if it uses the perfect aspect.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if it’s about cultural traditions.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if it’s about the arts.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if it’s lighthearted.
+
+[ARTS-TRADITIONAL]
+A story is [ARTS-TRADITIONAL] if both of the following are true:
+- The story is [TOPIC-THE-ARTS]
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+
+[NOSTALGIC-ARTS]
+A story is [NOSTALGIC-ARTS] if all of the following are true:
+- The story is [ARTS-TRADITIONAL]
+- The story is [USES-PERFECT-ASPECT]
+- The story is not [STYLE-LIGHTHEARTED]
+
+[LIGHT-ARTS-TRADITION]
+A story is [LIGHT-ARTS-TRADITION] if both of the following are true:
+- The story is [ARTS-TRADITIONAL]
+- The story is [STYLE-LIGHTHEARTED]

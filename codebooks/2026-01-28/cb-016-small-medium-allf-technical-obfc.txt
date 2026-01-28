@@ -1,0 +1,20 @@
+[attr-5]
+Specification: A narrative instance receives the label [attr-5] when its primary thematic content corresponds to "Helping Others".
+
+[attr-2]
+Specification: A narrative instance receives the label [attr-2] if at least one of the following predicates holds:
+- The protagonist’s central action ∈ {aid, rescue}
+- The protagonist’s central action ∈ {donate, teach}
+
+[attr-3]
+Specification: A narrative instance receives the label [attr-3] when the protagonist’s motive is exactly "personal gain".
+
+[attr-4]
+Specification: A narrative instance receives the label [attr-4] if and only if both of the following conditions are satisfied:
+- The instance is labeled [attr-2]
+- The instance is not labeled [attr-3]
+
+[attr-1]
+Specification: A narrative instance receives the label [attr-1] if and only if exactly one of the following holds:
+- The instance is labeled [attr-5]
+- The instance is labeled [attr-4]

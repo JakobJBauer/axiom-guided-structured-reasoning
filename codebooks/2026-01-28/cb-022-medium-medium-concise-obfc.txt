@@ -1,0 +1,49 @@
+[attr-2]
+A story is [attr-2] if it uses a circular narrative structure.
+
+[attr-11]
+A story is [attr-11] if its theme is kindness.
+
+[attr-3]
+A story is [attr-3] if it includes juxtaposition.
+
+[attr-12]
+A story is [attr-12] if it’s about hidden treasures.
+
+[attr-5]
+A story is [attr-5] if its readability score is below 86.4.
+
+[attr-9]
+A story is [attr-9] if it’s philosophical.
+
+[attr-8]
+A story is [attr-8] if it’s modern.
+
+[attr-10]
+A story is [attr-10] if its theme is deception.
+
+[attr-4]
+A story is [attr-4] if its readability score is above 96.1.
+
+[attr-6]
+A story is [attr-6] if all of the following are true:
+- The story is [attr-8]
+- Either of the following is true:
+  - The story is [attr-9]
+  - The story is [attr-3]
+- The story is not [attr-2]
+
+[attr-7]
+A story is [attr-7] if all of the following are true:
+- The story is [attr-11]
+- The story is [attr-10]
+- The story is [attr-6]
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - Exactly one of the following is true:
+    - The story is [attr-5]
+    - The story is [attr-4]
+  - The story is [attr-12]

@@ -1,0 +1,143 @@
+{
+  "nodes": [
+    {
+      "id": "attr-10",
+      "label": "philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "about the arts",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "has a flashback",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "has a story within a story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "theme deception",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "red herring",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "moral lesson",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "reflective arts",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-10",
+        "attr-12"
+      ]
+    },
+    {
+      "id": "attr-7",
+      "label": "meta-structure",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-3",
+        "attr-6"
+      ]
+    },
+    {
+      "id": "attr-8",
+      "label": "deception with red herring",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-11",
+        "attr-5"
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "didactic misdirective",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-8",
+        "attr-4",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-9"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "complex parable",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-2",
+        "attr-7"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-10",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-1"
+    }
+  ]
+}

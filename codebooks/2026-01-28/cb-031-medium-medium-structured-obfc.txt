@@ -1,0 +1,75 @@
+Codebook — Structured Reference for Annotation
+Purpose
+- Provide a clear, organized set of labels and their exact logical definitions to guide consistent story annotation.
+- Preserve the original logic: do not change node IDs, logical operators (Not, And, Or, exactly one, all), or formula structure.
+
+How to use this document
+- Evaluate the simple (atomic) labels first, then use those results to evaluate composite labels.
+- When a composite label requires "exactly one" or "all," apply the literal interpretation:
+  - "Exactly one of the following is true" means count exactly one true item from the listed options.
+  - "All of the following are true" means every listed item must be true.
+  - "Not" indicates the negation of the given label.
+
+Atomic labels (single-condition definitions)
+- [attr-4]
+  - Definition: A story is [attr-4] if the story has readability score below 86.4
+
+- [attr-6]
+  - Definition: A story is [attr-6] if the story is philosophical
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story is modern
+
+- [attr-12]
+  - Definition: A story is [attr-12] if the story uses superlative forms
+
+- [attr-10]
+  - Definition: A story is [attr-10] if the story is about bygone eras
+
+- [attr-7]
+  - Definition: A story is [attr-7] if the story has the theme Magic
+
+- [attr-11]
+  - Definition: A story is [attr-11] if the story is about time travel
+
+- [attr-3]
+  - Definition: A story is [attr-3] if the story has a moral lesson
+
+- [attr-8]
+  - Definition: A story is [attr-8] if the story has the theme Problem-Solving
+
+Composite labels (logical combinations)
+- [attr-9]
+  - Definition: A story is [attr-9] if exactly one of the following is true:
+    - The story is [attr-11]
+    - The story is [attr-7]
+
+- [attr-2]
+  - Definition: A story is [attr-2] if all of the following are true:
+    - The story is [attr-10]
+    - The story is [attr-3]
+    - The story is not [attr-12]
+
+- [attr-1]
+  - Definition: A story is [attr-1] if all of the following are true:
+    - The story is [attr-9]
+    - The story is [attr-8]
+    - The story is not [attr-4]
+
+Quick annotation checklist (recommended order)
+1. Compute and record readability score; mark [attr-4] accordingly.
+2. Label topical and stylistic atoms:
+   - [attr-11], [attr-7], [attr-10]
+   - [attr-6], [attr-5], [attr-8]
+   - [attr-3], [attr-12]
+3. Evaluate composite labels using the exact logical rules above:
+   - For [attr-9], ensure exactly one of the two listed atoms is true.
+   - For [attr-2] and [attr-1], ensure every listed condition holds (and the negated items are indeed false).
+
+Notes and tips for consistent judgments
+- Binary decisions: Treat each label as true or false; avoid partial assignments.
+- Negations: When a composite requires "not [attr-13]," explicitly confirm that [attr-13] has been judged false.
+- "Exactly one" requires careful counting; if both or neither of the options are true, [attr-9] is false.
+- Keep records of which atomic labels led to each composite label — this improves traceability and dispute resolution.
+
+End of codebook — all node IDs and logical relationships preserved exactly as required.

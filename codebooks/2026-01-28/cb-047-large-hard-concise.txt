@@ -1,0 +1,103 @@
+[HIGH-READABILITY]
+A story is HIGH-READABILITY if its readability score is above 96.1
+
+[LOW-READABILITY]
+A story is LOW-READABILITY if its readability score is below 86.4
+
+[STARTS-WITH-NOUN]
+A story is STARTS-WITH-NOUN if it begins with a noun
+
+[STARTS-WITH-ADVERB]
+A story is STARTS-WITH-ADVERB if it begins with an adverb
+
+[USES-PERFECT-ASPECT]
+A story is USES-PERFECT-ASPECT if it uses the perfect aspect
+
+[USES-DISCOURSE-MARKERS]
+A story is USES-DISCOURSE-MARKERS if it includes discourse markers
+
+[HAS-A-CLIFFHANGER]
+A story is HAS-A-CLIFFHANGER if it ends with a cliffhanger
+
+[HAS-JUXTAPOSITION]
+A story is HAS-JUXTAPOSITION if it contains juxtaposition
+
+[HAS-A-RED-HERRING]
+A story is HAS-A-RED-HERRING if it contains a red herring
+
+[SHORT-STORY]
+A story is SHORT-STORY if it has fewer than 160 words
+
+[STYLE-PHILOSOPHICAL]
+A story is STYLE-PHILOSOPHICAL if its style is philosophical
+
+[STYLE-PLAYFUL]
+A story is STYLE-PLAYFUL if its style is playful
+
+[STYLE-HUMOROUS]
+A story is STYLE-HUMOROUS if its style is humorous
+
+[THEME-AGENCY]
+A story is THEME-AGENCY if its theme is Agency
+
+[OPENING-TONE]
+A story is OPENING-TONE if both of the following are true:
+- Either of the following is true:
+  - The story is [STARTS-WITH-NOUN]
+  - The story is [STARTS-WITH-ADVERB]
+- Either of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [STYLE-PLAYFUL]
+
+[NARRATIVE-PACE]
+A story is NARRATIVE-PACE if either of the following is true:
+- Both of the following are true:
+  - The story is [SHORT-STORY]
+  - The story is [HIGH-READABILITY]
+- Both of the following are true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is not [LOW-READABILITY]
+
+[COMEDIC-STRUCTURE]
+A story is COMEDIC-STRUCTURE if both of the following are true:
+- Either of the following is true:
+  - The story is [STYLE-PLAYFUL]
+  - The story is [STYLE-HUMOROUS]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [SHORT-STORY]
+    - The story is [USES-DISCOURSE-MARKERS]
+  - Either of the following is true:
+    - The story is [HAS-A-RED-HERRING]
+    - The story is [HAS-JUXTAPOSITION]
+
+[THEMATIC-FUSION]
+A story is THEMATIC-FUSION if both of the following are true:
+- The story is [THEME-AGENCY]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [STYLE-PHILOSOPHICAL]
+    - The story is [OPENING-TONE]
+  - Exactly one of the following is true:
+    - The story is [HAS-JUXTAPOSITION]
+    - The story is [HAS-A-RED-HERRING]
+
+[RAPTURE-ENDING]
+A story is RAPTURE-ENDING if either of the following is true:
+- Both of the following are true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is not [SHORT-STORY]
+- Exactly one of the following is true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is [HAS-A-RED-HERRING]
+
+[COMPLEX-STORY]
+A story is COMPLEX-STORY if both of the following are true:
+- All of the following are true:
+  - The story is [THEMATIC-FUSION]
+  - The story is [COMEDIC-STRUCTURE]
+- Either of the following is true:
+  - The story is [NARRATIVE-PACE]
+  - Both of the following are true:
+    - The story is [RAPTURE-ENDING]
+    - The story is not [HIGH-READABILITY]

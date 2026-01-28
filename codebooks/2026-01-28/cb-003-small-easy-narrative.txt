@@ -1,0 +1,34 @@
+Think of this codebook as a map through a forest of stories, where signposts mark the qualities that matter to an annotator. Each signpost wears a name in brackets — these are our nodes — and beneath each name a simple rule tells you when to hang that label on a tale. Read it like a storyteller whispering secrets: vivid, memorable, but always precise.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+Imagine a tale that opens with “Under,” “Before,” or “Beyond.” That opening word is a small spell: if the very first word is a preposition, the tale earns the [STARTS-WITH-PREPOSITION] tag.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers.
+Some narrators pepper their speech with guideposts like “however,” “then,” or “meanwhile.” When those discourse markers appear and shape the flow, the story carries the [USES-DISCOURSE-MARKERS] banner.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if the story has the theme Deception.
+If deceit, trickery, or hidden motives run at the heart of the tale, the theme in play is deception — and so the story qualifies as [THEME-DECEPTION].
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] if the story is about magical lands.
+When the setting itself is enchanted — a realm where maps bend and rules shift — the story belongs to the domain of [TOPIC-MAGICAL-LANDS].
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+If the narrative centers on rituals, customs, festivals, or the practices that bind a community, it bears the mark [TOPIC-CULTURAL-TRADITIONS].
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if the story is about the arts.
+When music, painting, theatre, or other creative practices are central to the plot or theme, the story is labeled [TOPIC-THE-ARTS].
+
+[ARTFUL-DECEPTION-IN-FANTASY]
+A story is [ARTFUL-DECEPTION-IN-FANTASY] if all of the following are true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- The story is [THEME-DECEPTION]
+- The story is [TOPIC-THE-ARTS]
+Picture a cunning gallery in a city of floating islands, where artists craft illusions that twist belief — only when a tale simultaneously lives in magical lands, centers on the arts, and explores deception does it qualify as [ARTFUL-DECEPTION-IN-FANTASY]. The three conditions must all be met; together they define this particular corner of the map.
+
+Keep this map close when you annotate: each bracketed name is a clear rule for classification, and the relationships between them are the paths you must follow.

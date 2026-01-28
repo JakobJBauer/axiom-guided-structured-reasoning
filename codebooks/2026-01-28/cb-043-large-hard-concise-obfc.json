@@ -1,0 +1,371 @@
+{
+  "nodes": [
+    {
+      "id": "attr-1",
+      "label": "attr-1 (composite)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-15",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-12",
+                {
+                  "formula_type": "Or",
+                  "formula_args": [
+                    {
+                      "formula_type": "And",
+                      "formula_args": [
+                        "attr-8",
+                        "attr-9"
+                      ]
+                    },
+                    "attr-7"
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-8",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-13"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "has a cliffhanger",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "contains a story within a story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "has Checkhov's gun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "has more than 6 paragraphs",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "attr-6 (help/agency composite)",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-18",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "attr-17",
+                "attr-16"
+              ]
+            },
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-13"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-7",
+      "label": "attr-7 (treasure/season/mystical combo)",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-21",
+            "attr-22"
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-21",
+            "attr-23"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-8",
+      "label": "attr-8 (Chekhov/cliffhanger + nested story)",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-4",
+            "attr-2"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-3",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-4"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-9",
+      "label": "equals attr-5 true",
+      "formula_type": "Equal",
+      "formula_args": [
+        "attr-5",
+        true
+      ]
+    },
+    {
+      "id": "attr-10",
+      "label": "starts with an adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "starts with a noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "attr-12 (exclusive start + style)",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-10",
+            "attr-11"
+          ]
+        },
+        {
+          "formula_type": "In",
+          "formula_args": [
+            "story-style",
+            [
+              "STYLE-PHILOSOPHICAL",
+              "STYLE-MINIMALIST"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-13",
+      "label": "minimalist",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-14",
+      "label": "philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-15",
+      "label": "attr-15 (innovation + either help or magic+conditional)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-19",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-6",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-20",
+                "attr-24"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-16",
+      "label": "theme Agency",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-17",
+      "label": "theme Growth",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-18",
+      "label": "theme Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-19",
+      "label": "theme Innovation",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-20",
+      "label": "theme Magic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-21",
+      "label": "about hidden treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-22",
+      "label": "about mystical creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-23",
+      "label": "about seasonal changes",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-24",
+      "label": "uses conditional mood",
+      "formula_type": null,
+      "formula_args": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-5",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-21",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-22",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-18",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-17",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-16",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-20",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-15",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-1"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+Interviewer: Let's walk through this codebook step by step. First, what does [STYLE-CLASSIC] mean?
+
+Expert: Formally:
+- A story is [STYLE-CLASSIC] if The story is classic
+
+Expert (clarifying): That line is the exact rule: if a story is described as "classic," we tag it [STYLE-CLASSIC]. It's short and literal — the codebook ties the label to that single condition.
+
+Interviewer: And [STYLE-MODERN]?
+
+Expert: Formally:
+- A story is [STYLE-MODERN] if The story is modern
+
+Expert (clarifying): Same pattern as the classic case. If the story is modern in style, it gets the [STYLE-MODERN] label.
+
+Interviewer: How about cliffhangers?
+
+Expert: Formally:
+- A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+
+Expert (clarifying): This simply marks whether a story contains a cliffhanger.
+
+Interviewer: What counts as a long story here?
+
+Expert: Formally:
+- A story is [LONG-STORY] if The story has more than 375 words
+
+Expert (clarifying): The threshold is explicit: over 375 words triggers [LONG-STORY].
+
+Interviewer: What does [TOPIC-BYGONE-ERAS] indicate?
+
+Expert: Formally:
+- A story is [TOPIC-BYGONE-ERAS] if The story is about bygone eras
+
+Expert (clarifying): Use this when the subject matter centers on historical, past, or bygone eras.
+
+Interviewer: Now, the compound nodes — let's start with [CLASSIC-HISTORICAL-LONG]. What's the formal rule?
+
+Expert: Formally:
+- A story is [CLASSIC-HISTORICAL-LONG] if all of the following are true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [LONG-STORY]
+  - The story is [TOPIC-BYGONE-ERAS]
+
+Expert (clarifying): So [CLASSIC-HISTORICAL-LONG] requires three conditions at once: the story must be classic in style, longer than 375 words, and about bygone eras. All three must hold for the label to apply.
+
+Interviewer: The last node looks more complex: [DYNAMIC-STYLE-CLIFF]. Can you read the exact rule?
+
+Expert: Formally:
+- A story is [DYNAMIC-STYLE-CLIFF] if either of the following is true:
+  - Exactly one of the following is true:
+    - The story is [STYLE-MODERN]
+    - The story is [STYLE-CLASSIC]
+  - All of the following are true:
+    - The story is not [STYLE-CLASSIC]
+    - The story's style is equal to [STYLE-MODERN]
+    - The story is [HAS-A-CLIFFHANGER]
+    - The story's topic is in [TOPIC-BYGONE-ERAS]
+
+Expert (clarifying): Let's unpack that carefully, because the logic is precise.
+
+- First alternative (the "Exactly one" branch): If exactly one of [STYLE-MODERN] or [STYLE-CLASSIC] holds — that is, the story must be either modern or classic, but not both — then [DYNAMIC-STYLE-CLIFF] applies.
+
+- Second alternative (the "All of the following" branch): If all four listed conditions hold simultaneously — the story is not [STYLE-CLASSIC], the story's style equals [STYLE-MODERN], the story has a cliffhanger ([HAS-A-CLIFFHANGER]), and its topic is in [TOPIC-BYGONE-ERAS] — then [DYNAMIC-STYLE-CLIFF] also applies.
+
+Expert (example to illustrate): Imagine a story labeled [STYLE-MODERN] but not [STYLE-CLASSIC]; if that exclusivity is true (modern XOR classic), the first branch is satisfied. Alternatively, if the story is explicitly not classic, explicitly equal to [STYLE-MODERN], has a cliffhanger, and is about bygone eras, that satisfies the second branch. Either route makes the story [DYNAMIC-STYLE-CLIFF].
+
+Interviewer: So the node accepts two different logical routes — one based on a simple exclusive choice between styles, and another stricter conjunction that also requires a cliffhanger and a historical topic.
+
+Expert: Exactly. The wording "either of the following is true" preserves that OR between the two alternatives; the nested "Exactly one..." enforces exclusive-or in the first alternative, and the "All of the following are true" enforces conjunction in the second. The codebook's logic is preserved precisely as written.
+
+Interviewer: Anything else we should keep in mind while annotating?
+
+Expert: Keep the node IDs exact and apply the rules verbatim. Wherever a rule says "if The story is X" or uses logical constructs like "Exactly one" or "All of the following are true," treat those as the authoritative criteria. The transcript-style explanations help interpret intent, but the formal lines I read are the actual conditions to implement.

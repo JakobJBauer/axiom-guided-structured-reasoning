@@ -1,0 +1,181 @@
+{
+  "nodes": [
+    {
+      "id": "low-readability",
+      "label": "LOW-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-time-travel",
+      "label": "TOPIC-TIME-TRAVEL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-seasonal-changes",
+      "label": "TOPIC-SEASONAL-CHANGES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-discourse-markers",
+      "label": "USES-DISCOURSE-MARKERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adjective",
+      "label": "STARTS-WITH-ADJECTIVE",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-hidden-treasures",
+      "label": "TOPIC-HIDDEN-TREASURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "THEME-DECEPTION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-helping-others",
+      "label": "THEME-HELPING-OTHERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-preposition",
+      "label": "STARTS-WITH-PREPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "STARTS-WITH-ADVERB",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "narrative-surface",
+      "label": "NARRATIVE-SURFACE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "starts-with-adjective",
+            "starts-with-adverb"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "uses-discourse-markers",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "low-readability",
+                "starts-with-preposition"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inscrutable-theme-structure",
+      "label": "INSCRUTABLE-THEME-STRUCTURE",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "topic-time-travel",
+                {
+                  "formula_type": "Xor",
+                  "formula_args": [
+                    "theme-deception",
+                    "theme-helping-others"
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "topic-seasonal-changes",
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "topic-hidden-treasures",
+                    {
+                      "formula_type": "Not",
+                      "formula_args": [
+                        "topic-time-travel"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "narrative-surface"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "starts-with-adjective",
+      "target": "narrative-surface"
+    },
+    {
+      "source": "starts-with-adverb",
+      "target": "narrative-surface"
+    },
+    {
+      "source": "uses-discourse-markers",
+      "target": "narrative-surface"
+    },
+    {
+      "source": "low-readability",
+      "target": "narrative-surface"
+    },
+    {
+      "source": "starts-with-preposition",
+      "target": "narrative-surface"
+    },
+    {
+      "source": "topic-time-travel",
+      "target": "inscrutable-theme-structure"
+    },
+    {
+      "source": "theme-deception",
+      "target": "inscrutable-theme-structure"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "inscrutable-theme-structure"
+    },
+    {
+      "source": "topic-seasonal-changes",
+      "target": "inscrutable-theme-structure"
+    },
+    {
+      "source": "topic-hidden-treasures",
+      "target": "inscrutable-theme-structure"
+    },
+    {
+      "source": "narrative-surface",
+      "target": "inscrutable-theme-structure"
+    }
+  ]
+}

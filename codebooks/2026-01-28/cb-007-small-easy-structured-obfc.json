@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "id": "attr-4",
+      "label": "Tone is lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "First word is an adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "> 375 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Theme = Humor",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Topic = bygone eras",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "WHIMSY-RETRO-COMEDY",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-4",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-5",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-6",
+                "attr-3"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-4",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-7"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+**Transcript: Codebook Walkthrough (Interview Style)**
+
+**Interviewer:** We’re going to annotate stories using a few nodes. Can you start by telling me what **[THEME-HELPING-OTHERS]** means?
+
+**Annotator:** Sure. A story is **[THEME-HELPING-OTHERS]** if the story has the theme *Helping Others*.
+
+---
+
+**Interviewer:** Got it. What about **[TOPIC-MYSTICAL-CREATURES]**—when do we apply that?
+
+**Annotator:** A story is **[TOPIC-MYSTICAL-CREATURES]** if the story is about mystical creatures.
+
+---
+
+**Interviewer:** And there’s one about how the story begins, right? **[STARTS-WITH-PREPOSITION]**?
+
+**Annotator:** Exactly. A story is **[STARTS-WITH-PREPOSITION]** if the story starts with a preposition.
+
+---
+
+**Interviewer:** Now it looks like we start combining things. Can you explain **[MYTHIC-BUT-NOT-ALTRUISTIC]**?
+
+**Annotator:** Yes—this one is a two-part test, and **both** parts have to be true. A story is **[MYTHIC-BUT-NOT-ALTRUISTIC]** if both of the following are true:  
+- The story is **[TOPIC-MYSTICAL-CREATURES]**  
+- The story is **not [THEME-HELPING-OTHERS]**
+
+**Interviewer:** So it’s mystical creatures *and* explicitly not a helping-others theme.
+
+**Annotator:** Right—**And** plus a **Not**.
+
+---
+
+**Interviewer:** Last one: **[INVITING-OPENING]**. This sounds like it’s also built from other nodes?
+
+**Annotator:** It is. A story is **[INVITING-OPENING]** if both of the following are true:  
+- The story is **[STARTS-WITH-PREPOSITION]**  
+- The story is **not [MYTHIC-BUT-NOT-ALTRUISTIC]**
+
+**Interviewer:** So it starts with a preposition, and it must *not* fall into that “mystical but not helping others” category.
+
+**Annotator:** Exactly—again, **both** conditions must hold: **And** with a **Not** applied to **[MYTHIC-BUT-NOT-ALTRUISTIC]**.

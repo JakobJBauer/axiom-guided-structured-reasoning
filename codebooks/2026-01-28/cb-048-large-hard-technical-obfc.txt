@@ -1,0 +1,111 @@
+[attr-20]
+Definition: A story is [attr-20] if the narrative concerns time travel.
+
+[attr-8]
+Definition: A story is [attr-8] if the story begins with an adjective.
+
+[attr-21]
+Definition: A story is [attr-21] if the text employs the perfect aspect.
+
+[attr-13]
+Definition: A story is [attr-13] if the story is modern in style or setting.
+
+[attr-6]
+Definition: A story is [attr-6] if the story’s readability score is below 86.4.
+
+[attr-19]
+Definition: A story is [attr-19] if the narrative is about the arts.
+
+[attr-5]
+Definition: A story is [attr-5] if the story exhibits a circular narrative structure.
+
+[attr-16]
+Definition: A story is [attr-16] if the subject matter concerns cultural traditions.
+
+[attr-4]
+Definition: A story is [attr-4] if the narrative contains a flashback.
+
+[attr-11]
+Definition: A story is [attr-11] if the story’s tone is humorous.
+
+[attr-17]
+Definition: A story is [attr-17] if the narrative is set in or about magical lands.
+
+[attr-12]
+Definition: A story is [attr-12] if the story’s tone is lighthearted.
+
+[attr-18]
+Definition: A story is [attr-18] if the narrative concerns mystical creatures.
+
+[attr-15]
+Definition: A story is [attr-15] if the thematic focus is problem-solving.
+
+[attr-7]
+Definition: A story is [attr-7] if both of the following are true:
+- The story is [attr-5]
+- Either of the following is true:
+  - The story is [attr-4]
+  - The story is not [attr-8]
+
+[attr-10]
+Definition: A story is [attr-10] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-12]
+- Either of the following is true:
+  - The story is [attr-13]
+  - The story is not [attr-6]
+
+[attr-1]
+Definition: A story is [attr-1] if either of the following conditions holds:
+- All of the following are true:
+  - The story is [attr-19]
+  - The story is [attr-16]
+  - The story is [attr-15]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [attr-19]
+    - The story is [attr-15]
+  - The story is [attr-16]
+
+[attr-3]
+Definition: A story is [attr-3] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [attr-17]
+  - The story is [attr-18]
+- Either of the following is true:
+  - The story is [attr-20]
+  - The story is not [attr-13]
+
+[attr-2]
+Definition: A story is [attr-2] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-10]
+    - The story is not [attr-3]
+  - Both of the following are true:
+    - The story is [attr-1]
+    - The story is [attr-3]
+
+[attr-14]
+Definition: A story is [attr-14] if all of the following are true:
+- The story is [attr-2]
+- The story is [attr-1] or the story is [attr-3]
+- The story is [attr-10] equals [attr-11]
+
+[attr-9]
+Definition: A story is [attr-9] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-14]
+  - The story is [attr-2] in [COMPLEX-PATTERN, SYNDIC-CONJUNCTION, FANTASY-CORE]
+- Either of the following is true:
+  - The story is [attr-3] and the story is not [attr-1]
+  - The story is [attr-1] and exactly one of the following is true:
+    - The story is [attr-10]
+    - The story is [attr-7]
+
+Notes for annotators and reasoners:
+- Each node is a predicate evaluated on a story instance; composite nodes combine predicates using the explicit logical constructs shown above (Exactly one, Either, Both, All, Not, Or, And).
+- Numeric thresholds (e.g., readability score 86.4) are concrete and must be applied as specified.
+- Maintain these definitions as formal constraints when classifying or inferring node membership.

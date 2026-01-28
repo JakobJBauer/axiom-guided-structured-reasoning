@@ -1,0 +1,30 @@
+## Codebook (Structured)
+
+### 1) Core Labels (Atomic Nodes)
+
+#### [attr-4]
+- **Use this label when:** the story has the theme **Helping Others**.
+
+#### [attr-5]
+- **Use this label when:** the story is about **mystical creatures**.
+
+#### [attr-3]
+- **Use this label when:** the story **starts with a preposition**.
+
+---
+
+### 2) Composite Labels (Built from Other Nodes)
+
+#### [attr-2]
+- **Assign [attr-2] if and only if** *both* conditions below are true (**And**):
+  - The story is **[attr-5]**
+  - The story is **not [attr-4]** (**Not**)
+
+---
+
+### 3) Higher-Level Composite Label
+
+#### [attr-1]
+- **Assign [attr-1] if and only if** *both* conditions below are true (**And**):
+  - The story is **[attr-3]**
+  - The story is **not [attr-2]** (**Not**)

@@ -1,0 +1,80 @@
+Structured Codebook — concise, clear, and ready for annotation
+
+Overview
+- Purpose: Provide a clear, hierarchical reference for annotators. Each node is defined precisely. Logical relationships (And, Or, Exactly one, Both, equality, Not) are preserved exactly as in the original codebook.
+- Usage: For each story, evaluate the atomic properties first, then evaluate composite nodes using the stated logical criteria.
+
+Atomic (basic) labels
+- [STARTS-WITH-ADJECTIVE]
+  - Definition: A story is [STARTS-WITH-ADJECTIVE] if the story starts with an adjective.
+
+- [STARTS-WITH-NOUN]
+  - Definition: A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+- [STYLE-LIGHTHEARTED]
+  - Definition: A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+- [STYLE-SURREAL]
+  - Definition: A story is [STYLE-SURREAL] if the story is surreal.
+
+- [STYLE-HUMOROUS]
+  - Definition: A story is [STYLE-HUMOROUS] if the story is humorous.
+
+- [THEME-PROBLEM-SOLVING]
+  - Definition: A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+- [THEME-DECEPTION]
+  - Definition: A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+Composite (derived) labels — logical constructions
+- [START-TYPE-XOR]
+  - Meaning: Exclusive start-type.
+  - Rule: A story is [START-TYPE-XOR] if exactly one of the following is true:
+    - The story is [STARTS-WITH-ADJECTIVE]
+    - The story is [STARTS-WITH-NOUN]
+
+- [TONE-PLAYFUL]
+  - Meaning: Playful tone (derived from style or combination of style + theme absence).
+  - Rule: A story is [TONE-PLAYFUL] if either of the following is true:
+    - The story's style is in the set { [STYLE-LIGHTHEARTED], [STYLE-HUMOROUS] }
+    - Both of the following are true:
+      - The story is [STYLE-SURREAL]
+      - The story is not [THEME-DECEPTION]
+
+- [DECEPTION-OR-PROBLEM]
+  - Meaning: Presence of either deception or problem-solving theme.
+  - Rule: A story is [DECEPTION-OR-PROBLEM] if either of the following is true:
+    - The story is [THEME-DECEPTION]
+    - The story is [THEME-PROBLEM-SOLVING]
+
+- [STYLE-EQUALITY]
+  - Meaning: Style equality constraint.
+  - Rule: A story is [STYLE-EQUALITY] if the following equality holds:
+    - [STYLE-LIGHTHEARTED] = [STYLE-HUMOROUS]
+
+- [COMPLEX-STORY]
+  - Meaning: Complex story indicator combining start-type exclusivity with a single tonal/theme condition.
+  - Rule: A story is [COMPLEX-STORY] if both of the following are true:
+    - The story is [START-TYPE-XOR]
+    - Exactly one of the following is true:
+      - The story is [TONE-PLAYFUL]
+      - The story is [DECEPTION-OR-PROBLEM]
+
+Quick annotator checklist (practical ordering)
+1. Determine atomic labels first:
+   - Check start token: assign [STARTS-WITH-ADJECTIVE] or [STARTS-WITH-NOUN] as applicable.
+   - Assign style labels: [STYLE-LIGHTHEARTED], [STYLE-SURREAL], [STYLE-HUMOROUS] as appropriate.
+   - Assign theme labels: [THEME-PROBLEM-SOLVING], [THEME-DECEPTION] if present.
+2. Evaluate composite labels in the given sequence:
+   - [START-TYPE-XOR] (check exclusive-start condition)
+   - [TONE-PLAYFUL] (use style set membership or the SURR real + not DECEPTION branch)
+   - [DECEPTION-OR-PROBLEM] (either theme)
+   - [STYLE-EQUALITY] (verify equality)
+   - [COMPLEX-STORY] (requires both [START-TYPE-XOR] and exactly-one of [TONE-PLAYFUL] / [DECEPTION-OR-PROBLEM])
+
+Notes and tips
+- Preserve exact logical operators when reasoning: "exactly one" implies exclusivity; "either" allows one or the other (or both) only when explicitly used; "Both" requires both subconditions to be true.
+- When a composite condition references an atomic node (e.g., [STYLE-SURREAL]), use your atomic annotations as the source of truth.
+- Do not add or remove nodes; use these definitions strictly to maintain consistency across annotations.
+
+End of structured codebook.

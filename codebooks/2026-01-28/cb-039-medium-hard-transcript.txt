@@ -1,0 +1,82 @@
+Interviewer: Let’s go through this codebook one item at a time. First, what does [THEME-DECEPTION] mean?
+
+Expert: [THEME-DECEPTION] — A story is [THEME-DECEPTION] if The story has the theme Deception.
+
+Interviewer: And [THEME-HELPING-OTHERS]?
+
+Expert: [THEME-HELPING-OTHERS] — A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others.
+
+Interviewer: How about [STYLE-PHILOSOPHICAL]?
+
+Expert: [STYLE-PHILOSOPHICAL] — A story is [STYLE-PHILOSOPHICAL] if The story is philosophical.
+
+Interviewer: [HAS-CHECKHOVS-GUN] — what’s the definition there?
+
+Expert: [HAS-CHECKHOVS-GUN] — A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun.
+
+Interviewer: Simple enough. Next, [STARTS-WITH-NOUN]?
+
+Expert: [STARTS-WITH-NOUN] — A story is [STARTS-WITH-NOUN] if The story starts with a noun.
+
+Interviewer: And [TOPIC-HIDDEN-TREASURES]?
+
+Expert: [TOPIC-HIDDEN-TREASURES] — A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures.
+
+Interviewer: [THEME-AGENCY]?
+
+Expert: [THEME-AGENCY] — A story is [THEME-AGENCY] if The story has the theme Agency.
+
+Interviewer: There’s also [STARTS-WITH-ADJECTIVE]. What does that say?
+
+Expert: [STARTS-WITH-ADJECTIVE] — A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective.
+
+Interviewer: [HAS-JUXTAPOSITION]?
+
+Expert: [HAS-JUXTAPOSITION] — A story is [HAS-JUXTAPOSITION] if The story has juxtaposition.
+
+Interviewer: Now we reach a compound one: [OPENING-PRIMACY]. How is that determined?
+
+Expert: [OPENING-PRIMACY] — A story is [OPENING-PRIMACY] if either of the following is true:
+- The story is [STARTS-WITH-NOUN]
+- The story is [STARTS-WITH-ADJECTIVE] xor [STARTS-WITH-NOUN]
+
+Interviewer: Quick clarification — when you say "xor" here, you mean exactly one of those two holds, correct?
+
+Expert: Correct. "xor" means exclusive or: only one of [STARTS-WITH-ADJECTIVE] or [STARTS-WITH-NOUN] is true in that clause.
+
+Interviewer: Good. Next up: [STRUCTURED-DECEPTION]. This looks more complex — can you walk me through it?
+
+Expert: Sure. [STRUCTURED-DECEPTION] — A story is [STRUCTURED-DECEPTION] if both of the following are true:
+- The story is [OPENING-PRIMACY]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [THEME-DECEPTION]
+    - The story is [TOPIC-HIDDEN-TREASURES]
+  - Either of the following is true:
+    - The story is [HAS-CHECKHOVS-GUN] xor [THEME-AGENCY]
+    - The story is [THEME-DECEPTION] and not [THEME-AGENCY]
+
+Interviewer: So for [STRUCTURED-DECEPTION], first we require [OPENING-PRIMACY]. Then we need either the deception+hidden-treasures pair, or one of those two alternatives — the xor between Checkhov’s gun and Agency, or Deception with not Agency. Right?
+
+Expert: Exactly. The logic is preserved as written: [OPENING-PRIMACY] must be true, and then one of the two branches must hold — either the conjunction of [THEME-DECEPTION] and [TOPIC-HIDDEN-TREASURES], or the inner "either" branch that itself contains an xor and a conjunction-with-not.
+
+Interviewer: Excellent. Now the most layered: [COMPLEX-NARRATIVE]. What are the exact conditions?
+
+Expert: [COMPLEX-NARRATIVE] — A story is [COMPLEX-NARRATIVE] if all of the following are true:
+- The story is [STRUCTURED-DECEPTION]
+- Not both of the following are true:
+  - The story is [THEME-HELPING-OTHERS]
+  - The story is [STYLE-PHILOSOPHICAL]
+- Either of the following is true:
+  - The story is [HAS-JUXTAPOSITION]
+  - Both of the following are true:
+    - The story is [STARTS-WITH-NOUN] equals true
+    - The story is [STARTS-WITH-ADJECTIVE] equals false
+
+Interviewer: Let me restate that to ensure I’ve got it: To qualify as [COMPLEX-NARRATIVE] you must have [STRUCTURED-DECEPTION]; you must not have both [THEME-HELPING-OTHERS] and [STYLE-PHILOSOPHICAL] simultaneously; and finally, you must either have [HAS-JUXTAPOSITION] or meet the starts-with condition where [STARTS-WITH-NOUN] is true and [STARTS-WITH-ADJECTIVE] is false. Correct?
+
+Expert: Correct. That restatement matches the original logical structure exactly — no nodes, operators, or relationships have been changed.
+
+Interviewer: Thanks. One last check — throughout, you kept each node ID the same, and preserved all logical words like "xor", "not", "Either", "Both", "Not both", and the "equals true/false" clauses, right?
+
+Expert: Yes. Every node ID remains in [BRACKET] format exactly as they appear. All logical operations and relationships are preserved verbatim in their intended places. The transcript simply frames the same logic in a conversational, explanatory style for readability.

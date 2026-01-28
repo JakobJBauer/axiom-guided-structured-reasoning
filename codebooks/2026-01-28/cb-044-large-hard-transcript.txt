@@ -1,0 +1,149 @@
+Interviewer: Let's go through this codebook step by step. First, what is [HAS-JUXTAPOSITION]?
+
+Expert: A story is [HAS-JUXTAPOSITION] if the story has juxtaposition.
+
+Interviewer: And [STYLE-PHILOSOPHICAL]?
+
+Expert: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+Interviewer: How about [THEME-HARDSHIP]?
+
+Expert: A story is [THEME-HARDSHIP] if the story has the theme Hardship.
+
+Interviewer: [THEME-HUMOR]?
+
+Expert: A story is [THEME-HUMOR] if the story has the theme Humor.
+
+Interviewer: [TOPIC-THE-ARTS] — what's that?
+
+Expert: A story is [TOPIC-THE-ARTS] if the story is about the arts.
+
+Interviewer: [HAS-CIRCULAR-NARRATIVE-STRUCT]?
+
+Expert: A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+Interviewer: [THEME-DECEPTION]?
+
+Expert: A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+Interviewer: [THEME-HELPING-OTHERS]?
+
+Expert: A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others.
+
+Interviewer: [HAS-A-MORAL-LESSON]?
+
+Expert: A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+Interviewer: [STYLE-HUMOROUS]?
+
+Expert: A story is [STYLE-HUMOROUS] if the story is humorous.
+
+Interviewer: [STYLE-MINIMALIST]?
+
+Expert: A story is [STYLE-MINIMALIST] if the story is minimalist.
+
+Interviewer: [TOPIC-GIANT-CREATURES]?
+
+Expert: A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures.
+
+Interviewer: [STYLE-LIGHTHEARTED]?
+
+Expert: A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+Interviewer: [TOPIC-TIME-TRAVEL]?
+
+Expert: A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+Interviewer: [STARTS-WITH-PREPOSITION]?
+
+Expert: A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+
+Interviewer: [SHORT-STORY]?
+
+Expert: A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+Interviewer: [USES-SUPERLATIVE-FORMS]?
+
+Expert: A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+Interviewer: [THEME-KINDNESS]?
+
+Expert: A story is [THEME-KINDNESS] if the story has the theme Kindness.
+
+Interviewer: [HIGH-READABILITY]?
+
+Expert: A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+Interviewer: Now let's move to compound definitions. Start with [JUX-PREP-CLASH]. How is that defined?
+
+Expert: A story is [JUX-PREP-CLASH] if both of the following are true:
+- The story is [HAS-JUXTAPOSITION]
+- Either of the following is true:
+  - The story is [STARTS-WITH-PREPOSITION]
+  - The story is [SHORT-STORY]
+
+Interviewer: So it needs juxtaposition plus either a preposition start or short length. Clear. What about [JUXTAPOSED-SUPERLATIVE]?
+
+Expert: A story is [JUXTAPOSED-SUPERLATIVE] if both of the following are true:
+- The story is [JUX-PREP-CLASH]
+- Exactly one of the following is true:
+  - The story is [USES-SUPERLATIVE-FORMS]
+  - The story is [STYLE-MINIMALIST]
+
+Interviewer: That "exactly one" is important — it rules out both or neither. Next, [ARTISTIC-PHILOSOPHY]?
+
+Expert: A story is [ARTISTIC-PHILOSOPHY] if both of the following are true:
+- The story is [TOPIC-THE-ARTS]
+- Either of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [JUXTAPOSED-SUPERLATIVE]
+
+Interviewer: So it's arts plus either philosophical style or that specific juxtapositional/superlative condition. Got it. Now [HUMOROUS-HYBRID] — this one looks more layered.
+
+Expert: A story is [HUMOROUS-HYBRID] if both of the following are true:
+- Either of the following is true:
+  - The story is [THEME-HUMOR]
+  - The story is [STYLE-HUMOROUS]
+- All of the following are true:
+  - The story is not [STYLE-MINIMALIST]
+  - Exactly one of the following is true:
+    - The story is [STYLE-LIGHTHEARTED]
+    - The story is [USES-SUPERLATIVE-FORMS]
+
+Interviewer: To paraphrase: it must be humorous by theme or style, must not be minimalist, and must have exactly one of lighthearted style or superlatives. Correct. Let's continue: [ALTRUISTIC-CONTRACTION]?
+
+Expert: A story is [ALTRUISTIC-CONTRACTION] if either of the following is true:
+- Both of the following are true:
+  - The story is [HAS-A-MORAL-LESSON]
+  - Either of the following is true:
+    - The story is [THEME-HELPING-OTHERS]
+    - The story is [THEME-KINDNESS]
+- Exactly one of the following is true:
+  - The story is [THEME-DECEPTION]
+  - The story is [THEME-HARDSHIP]
+
+Interviewer: So it can be a moral lesson tied to helping or kindness, or exactly one of deception or hardship. The name hints at tension between altruism and contraction. Good. Finally, [COMPLEX-ARTFUL-STORY] — the big one.
+
+Expert: A story is [COMPLEX-ARTFUL-STORY] if both of the following are true:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [ARTISTIC-PHILOSOPHY]
+    - The story is [ALTRUISTIC-CONTRACTION]
+  - Exactly one of the following is true:
+    - The story is [HUMOROUS-HYBRID]
+    - The story is [TOPIC-GIANT-CREATURES]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [TOPIC-TIME-TRAVEL]
+    - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - Both of the following are true:
+    - The story is [SHORT-STORY]
+    - The story is [HIGH-READABILITY]
+
+Interviewer: Let me restate that to ensure I have the logic right. For [COMPLEX-ARTFUL-STORY], you need one of two higher-level clusters on the first axis: either both [ARTISTIC-PHILOSOPHY] and [ALTRUISTIC-CONTRACTION], or exactly one of [HUMOROUS-HYBRID] or [TOPIC-GIANT-CREATURES]. And on the second axis, you need either time-travel with circular narrative, or a short story with very high readability. Is that accurate?
+
+Expert: Exactly. You captured the logical structure precisely.
+
+Interviewer: Thanks — that walkthrough makes the codebook much easier to follow. Any final tips for annotators using these definitions?
+
+Expert: Yes — always check each atomic node first (the simple labels like [THEME-HUMOR] or [SHORT-STORY]) and then apply the compound rules exactly as written: pay careful attention to "Either," "Both," "All," "Exactly one," and negations like "The story is not [STYLE-MINIMALIST]." Those words determine the logical flow and must be treated literally when annotating.

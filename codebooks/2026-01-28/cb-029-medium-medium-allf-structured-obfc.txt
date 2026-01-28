@@ -1,0 +1,75 @@
+Overview
+- Purpose: Provide a clear, structured reference for annotators. Each entry defines when a story satisfies a given label (node). Atomic labels describe single observable features. Composite labels combine atomic labels using explicit logical operations (And, Or, Not, Exactly one, equality of truth values).
+- Notation: Node identifiers are shown in [attr-1] form and must remain exactly as written. Logical relationships (both/either/not/exactly one/truth equality) are preserved verbatim.
+
+Atomic (single-feature) nodes
+- [attr-9]
+  - Definition: A story is [attr-9] if the story is philosophical.
+
+- [attr-3]
+  - Definition: A story is [attr-3] if the story has a story within a story.
+
+- [attr-13]
+  - Definition: A story is [attr-13] if the story uses conditional mood.
+
+- [attr-4]
+  - Definition: A story is [attr-4] if the story has circular narrative structure.
+
+- [attr-11]
+  - Definition: A story is [attr-11] if the story is about cultural traditions.
+
+- [attr-8]
+  - Definition: A story is [attr-8] if the story has fewer than 160 words.
+
+- [attr-12]
+  - Definition: A story is [attr-12] if the story is about seasonal changes.
+
+- [attr-6]
+  - Definition: A story is [attr-6] if the story has readability score below 86.4.
+
+Composite nodes (logical combinations)
+- [attr-5]
+  - Summary: Conjunction (AND) of two atomic features.
+  - A story is [attr-5] if both of the following are true:
+    - The story is [attr-3]
+    - The story is [attr-13]
+
+- [attr-7]
+  - Summary: Exclusive condition plus a parity constraint between two other labels.
+  - A story is [attr-7] if both of the following are true:
+    - Exactly one of the following is true:
+      - The story is [attr-9]
+      - The story is [attr-4]
+    - The truth value of the following are equal:
+      - [attr-8]
+      - [attr-6]
+
+- [attr-10]
+  - Summary: Membership in a small topic set.
+  - A story is [attr-10] if the story's topic is in the set:
+    - [attr-11]
+    - [attr-12]
+
+- [attr-2]
+  - Summary: Conjunction of an either/or condition and two additional constraints.
+  - A story is [attr-2] if all of the following are true:
+    - Either of the following is true:
+      - The story is [attr-5]
+      - The story is [attr-7]
+    - Both of the following are true:
+      - The story is [attr-10]
+      - The story is not [attr-8]
+
+Quick annotator guidance (structured thinking)
+- Check atomic labels first (e.g., style, structure, topic, length, readability).
+- Use atomic results to evaluate composite nodes in the order presented:
+  1. Evaluate [attr-5] (AND of two atomics).
+  2. Evaluate [attr-7]:
+     - Determine whether exactly one of [attr-9] and [attr-4] holds.
+     - Confirm whether [attr-8] and [attr-6] share the same truth value (both true or both false).
+     - Both conditions must hold for [attr-7] to be true.
+  3. Evaluate [attr-10] by checking whether topic matches either topical node.
+  4. Evaluate [attr-2]:
+     - Ensure at least one of [attr-5] or [attr-7] is true.
+     - Also ensure [attr-10] is true and [attr-8] is false (i.e., story is not [attr-8]).
+- Remember: Do not alter node IDs, logical operators, or the specified relationships. Use the definitions above as precise criteria for labeling.

@@ -1,0 +1,82 @@
+Overview
+- Purpose: This codebook defines annotation labels (nodes) for stories and the exact logical conditions that make each label true.
+- Format: Each node is presented with:
+  - Node ID (in brackets)
+  - Plain-language definition
+  - Precise logical criteria (kept identical in structure to the original)
+- Note: All node IDs, logical operations, and relationships are preserved exactly as required.
+
+Atomic (base) labels
+- [attr-9]
+  - Definition: The story uses conditional mood.
+  - Criterion: A story is [attr-9] if the story uses conditional mood.
+
+- [attr-6]
+  - Definition: The story begins with an adverb.
+  - Criterion: A story is [attr-6] if the story starts with a adverb.
+
+- [attr-8]
+  - Definition: The story contains the theme of Agency.
+  - Criterion: A story is [attr-8] if the story has the theme Agency.
+
+- [attr-5]
+  - Definition: The story is brief.
+  - Criterion: A story is [attr-5] if the story has fewer than 160 words.
+
+- [attr-7]
+  - Definition: The story has a lighthearted tone.
+  - Criterion: A story is [attr-7] if the story is lighthearted.
+
+- [attr-10]
+  - Definition: The story uses perfect aspect verbs (e.g., has/had done).
+  - Criterion: A story is [attr-10] if the story uses perfect aspect.
+
+Composite labels (built from atomic labels)
+- [attr-3]
+  - Definition: A conditional mood appears without perfect aspect.
+  - Logical structure: Both of the following are true:
+    - The story is [attr-9]
+    - The story is Not [attr-10]
+  - Interpretation: [attr-3] = [attr-9] AND (Not [attr-10]).
+
+- [attr-4]
+  - Definition: The story is short and lighthearted.
+  - Logical structure: Both of the following are true:
+    - The story is [attr-5]
+    - The story is [attr-7]
+  - Interpretation: [attr-4] = [attr-5] AND [attr-7].
+
+- [attr-1]
+  - Definition: The story expresses Agency and begins either with an adverb or is short — but not both.
+  - Logical structure: Both of the following are true:
+    - The story is [attr-8]
+    - Exactly one of the following is true:
+      - The story is [attr-6]
+      - The story is [attr-5]
+  - Interpretation: [attr-1] = [attr-8] AND (exactly one of {[attr-6], [attr-5]}).
+
+- [attr-2]
+  - Definition: A short, lighthearted story that additionally meets either the mood/tense mix rule or the agency-start condition.
+  - Logical structure: Both of the following are true:
+    - The story is [attr-4]
+    - Either of the following are true:
+      - The story is [attr-3]
+      - The story is [attr-1]
+  - Interpretation: [attr-2] = [attr-4] AND ([attr-3] OR [attr-1]).
+
+Quick reference (logical formulas)
+- [attr-3] = [attr-9] AND Not [attr-10]
+- [attr-4] = [attr-5] AND [attr-7]
+- [attr-1] = [attr-8] AND (Exactly one of {[attr-6], [attr-5]})
+- [attr-2] = [attr-4] AND (Either {[attr-3], [attr-1]})
+
+Annotator guidance (practical tips)
+- Evaluate atomic labels first (e.g., does the story use conditional mood? Is it under 160 words?).
+- Then apply composite rules exactly as written — pay special attention to:
+  - Not: negation must be checked explicitly (e.g., Not [attr-10]).
+  - Exactly one: treat this as exclusive OR — true only if one of the options is true and the other is false.
+  - Either / And: preserve their intended logical meaning when combining conditions.
+- Use the Quick reference formulas to speed up decisions once atomic labels are assigned.
+
+End note
+- All node IDs and logical relationships above are preserved from the original codebook. Follow this structured checklist when annotating to ensure consistent, reliable labeling.

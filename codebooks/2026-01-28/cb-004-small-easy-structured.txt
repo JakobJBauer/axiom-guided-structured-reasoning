@@ -1,0 +1,38 @@
+## Codebook (Structured)
+
+### 1) Topic Codes (What the story is about)
+
+- **[TOPIC-SEASONAL-CHANGES]**
+  - **Apply when:** The story is about **seasonal changes**.
+
+- **[TOPIC-CULTURAL-TRADITIONS]**
+  - **Apply when:** The story is about **cultural traditions**.
+
+- **[TOPIC-TIME-TRAVEL]**
+  - **Apply when:** The story is about **time travel**.
+
+
+---
+
+### 2) Form / Language Feature Codes (How the story is written)
+
+- **[USES-WH-QUESTIONS]**
+  - **Apply when:** The story uses **wh-questions** (e.g., who/what/when/where/why/how questions).
+
+- **[STARTS-WITH-NOUN]**
+  - **Apply when:** The story **starts with a noun**.
+
+
+---
+
+### 3) Composite (Logic-Based) Codes (Built from other codes)
+
+- **[SEASONAL-QUESTION-STORY]**
+  - **Apply when:** **Both** conditions below are true:
+    - The story is **[TOPIC-SEASONAL-CHANGES]**
+    - The story is **[USES-WH-QUESTIONS]**
+
+- **[TRADITION-OR-TIME-STORY]**
+  - **Apply when:** **Either** condition below is true:
+    - The story is **[TOPIC-CULTURAL-TRADITIONS]**
+    - The story is **[TOPIC-TIME-TRAVEL]**

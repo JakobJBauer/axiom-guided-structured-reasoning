@@ -1,0 +1,84 @@
+{
+  "nodes": [
+    {
+      "id": "uses-superlative-forms",
+      "label": "Uses Superlative Forms",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-lost-civilizations",
+      "label": "Topic Lost Civilizations",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-noun",
+      "label": "Starts With Noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-humor",
+      "label": "Theme Humor",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "lighthearted-intro",
+      "label": "Lighthearted Intro",
+      "formula_type": "And",
+      "formula_args": [
+        "starts-with-noun",
+        "theme-humor",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "uses-superlative-forms"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mythic-satire",
+      "label": "Mythic Satire",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-lost-civilizations",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "lighthearted-intro",
+            "uses-superlative-forms"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "starts-with-noun",
+      "target": "lighthearted-intro"
+    },
+    {
+      "source": "theme-humor",
+      "target": "lighthearted-intro"
+    },
+    {
+      "source": "uses-superlative-forms",
+      "target": "lighthearted-intro"
+    },
+    {
+      "source": "topic-lost-civilizations",
+      "target": "mythic-satire"
+    },
+    {
+      "source": "lighthearted-intro",
+      "target": "mythic-satire"
+    },
+    {
+      "source": "uses-superlative-forms",
+      "target": "mythic-satire"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+Interviewer: Okay, let's walk through this codebook together. First, what does [attr-4] mean?
+
+Annotator: Simple definition:
+- A story is [attr-4] if the story starts with a adjective
+
+Interviewer: Got it. And what about [attr-5]?
+
+Annotator: Also straightforward:
+- A story is [attr-5] if the story is about giant creatures
+
+Interviewer: Now we get into combinations. What is [attr-3]?
+
+Annotator: This one combines two conditions. The rule states:
+- A story is [attr-3] if both of the following are true:
+  - The story is [attr-5]
+  - The story is not [attr-4]
+
+Interviewer: So it must be about giant creatures and must not start with an adjective. Clear. Next: [attr-1] — what does that capture?
+
+Annotator: [attr-1] describes an exclusive alternative between two possibilities. The exact wording is important:
+- A story is [attr-1] if exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+
+Interviewer: So for [attr-1], either it starts with an adjective or it’s about giant creatures — but not both. Right?
+
+Annotator: Exactly.
+
+Interviewer: Finally, tell me about [attr-2]. That sounds like a compound rule.
+
+Annotator: It is compound and layered. Here’s the precise definition:
+- A story is [attr-2] if both of the following are true:
+  - The story is [attr-3]
+  - Either of the following is true:
+    - The story is [attr-1]
+    - The story is not [attr-4]
+
+Interviewer: So to be an [attr-2], the story must first be [attr-3] (which we already know requires [attr-5] and not [attr-4]). Then, additionally, either it has a [attr-1] or it is not [attr-4]. Understood.
+
+Annotator: Right — all the logical relationships (Not, both/and, exactly one, either/or) are kept exactly as written. If you want, I can run through a couple of quick examples to see how a story would be labeled under these rules.

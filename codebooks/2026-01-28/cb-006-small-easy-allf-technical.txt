@@ -1,0 +1,29 @@
+[HAS-A-FLASHBACK]
+Definition: The predicate [HAS-A-FLASHBACK] holds for a story if the story contains a flashback sequence.
+Annotation criterion: Mark [HAS-A-FLASHBACK] = true when at least one portion of the narrative explicitly represents past events relocated from the primary timeline (i.e., a flashback).
+
+[USES-WH-QUESTIONS]
+Definition: The predicate [USES-WH-QUESTIONS] holds for a story if the story employs one or more wh-questions in its text.
+Annotation criterion: Mark [USES-WH-QUESTIONS] = true when the narrative includes question forms beginning with wh-words (for example: who, what, when, where, why, how).
+
+[USES-DISCOURSE-MARKERS]
+Definition: The predicate [USES-DISCOURSE-MARKERS] holds for a story if the story makes use of discourse markers.
+Annotation criterion: Mark [USES-DISCOURSE-MARKERS] = true when the text contains explicit discourse markers (connectives or pragmatic particles that structure discourse).
+
+[INTERACTIVE]
+Definition: The predicate [INTERACTIVE] holds for a story if exactly one of the following is true:
+- The story is [USES-WH-QUESTIONS]
+- The story is [USES-DISCOURSE-MARKERS]
+Specification: This is an exclusive condition — [INTERACTIVE] is true when precisely one of the two predicates above holds; it is false if neither or both hold.
+
+[COMPLEX-NARRATIVE]
+Definition: The predicate [COMPLEX-NARRATIVE] holds for a story if both of the following are true:
+- The story is [HAS-A-FLASHBACK]
+- The story is not [INTERACTIVE]
+Specification: Both conditions must be satisfied simultaneously for [COMPLEX-NARRATIVE] to be true. Note that the second condition is the logical negation of [INTERACTIVE].
+
+[SPECIAL-CASE]
+Definition: The predicate [SPECIAL-CASE] holds for a story if either of the following is true:
+- The story is in the set { [INTERACTIVE], [COMPLEX-NARRATIVE] }
+- The story is equal to [HAS-A-FLASHBACK]
+Specification: [SPECIAL-CASE] is true when the story satisfies membership in the specified set or when it is exactly [HAS-A-FLASHBACK]. This is a logical disjunction: if any listed condition holds, mark [SPECIAL-CASE] = true.

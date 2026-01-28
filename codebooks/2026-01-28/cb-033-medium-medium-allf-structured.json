@@ -1,0 +1,167 @@
+{
+  "nodes": [
+    {
+      "id": "theme-humor",
+      "label": "THEME-HUMOR",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-lost-civilizations",
+      "label": "TOPIC-LOST-CIVILIZATIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-playful",
+      "label": "STYLE-PLAYFUL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-surreal",
+      "label": "STYLE-SURREAL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-discourse-markers",
+      "label": "USES-DISCOURSE-MARKERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "low-readability",
+      "label": "LOW-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-classic",
+      "label": "STYLE-CLASSIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "STYLE-PHILOSOPHICAL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-cliffhanger",
+      "label": "HAS-A-CLIFFHANGER",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-preposition",
+      "label": "STARTS-WITH-PREPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "tone-mix",
+      "label": "TONE-MIX",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "style-playful",
+            "style-philosophical"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "style-surreal",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "style-classic"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "presentation-criteria",
+      "label": "PRESENTATION-CRITERIA",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "In",
+          "formula_args": [
+            "theme-humor",
+            "topic-lost-civilizations"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "has-a-cliffhanger",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                {
+                  "formula_type": "Equal",
+                  "formula_args": [
+                    "theme-humor",
+                    "theme-humor"
+                  ]
+                },
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "low-readability"
+                  ]
+                }
+              ]
+            },
+            "tone-mix"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "style-playful",
+      "target": "tone-mix"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "tone-mix"
+    },
+    {
+      "source": "style-surreal",
+      "target": "tone-mix"
+    },
+    {
+      "source": "style-classic",
+      "target": "tone-mix"
+    },
+    {
+      "source": "theme-humor",
+      "target": "presentation-criteria"
+    },
+    {
+      "source": "topic-lost-civilizations",
+      "target": "presentation-criteria"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "presentation-criteria"
+    },
+    {
+      "source": "low-readability",
+      "target": "presentation-criteria"
+    },
+    {
+      "source": "tone-mix",
+      "target": "presentation-criteria"
+    }
+  ]
+}

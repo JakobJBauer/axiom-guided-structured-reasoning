@@ -1,0 +1,59 @@
+In the hushed alcoves of an old, whispering library — where the dust motes dance like tiny stars and the spines of books hum with remembered tales — there exists a little codex of judgments: a map that helps readers and chroniclers decide what a story is, in precise and careful terms. Below you will find that codex, rendered in embroidered language for delight, but never altered in its rules. Each entry keeps its exact label and the exact logical phrasing required for annotation; around that core I have woven gilded explanation and gentle examples to make the decisions feel like the turning of pages beneath a warm lamp.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if the story has readability score below 86.4
+- Plainly stated: if the measured readability number slips below 86.4, we mark the tale with [LOW-READABILITY]. Imagine a path that grows thorny and dense when the score falls beneath that bright marker — the codex asks only for this single, numeric threshold to decide.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical
+- This stamp is given when a story leans into reflection, inquiry, and questions of existence or meaning. If the narrative invites thought and rumination, then it bears the [STYLE-PHILOSOPHICAL] sigil.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if the story is modern
+- When a tale carries contemporary sensibilities, settings, diction, or concerns — when it feels of the present age — we label it [STYLE-MODERN]. The tag captures that sense of currentness.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms
+- This marker is applied when language within the story employs superlatives (the tallest, the most brilliant, the least expected). Where superlative forms appear, the story is noted as [USES-SUPERLATIVE-FORMS].
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras
+- If the narrative takes its subject from times long past — empires, eras, or epochs that are gone — then it qualifies as [TOPIC-BYGONE-ERAS]. Think sepia-toned memories and histories retold.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if the story has the theme Magic
+- When enchantment, spells, or the presence of supernatural artifice are central to the tale’s thematic heart, the story bears the [THEME-MAGIC] hallmark. Magic here is not merely ornament; it is a theme that courses through the narrative.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel
+- If the plot turns upon journeys through time, paradoxes, or temporal displacement, then the story is labeled [TOPIC-TIME-TRAVEL]. The codex records that clocks and corridors of time are part of the tale’s fabric.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson
+- This designation is for tales that intentionally teach, exemplify, or conclude with a moral lesson. When the narrative’s purpose includes a lesson to be learned, it receives [HAS-A-MORAL-LESSON].
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving
+- Stories that center around puzzles, challenges, and the labor of resolving difficulties are marked [THEME-PROBLEM-SOLVING]. The theme celebrates ingenuity and the arc of overcoming obstacles.
+
+[TIME-MAGIC-NEXUS]
+A story is [TIME-MAGIC-NEXUS] if exactly one of the following is true:
+- The story is [TOPIC-TIME-TRAVEL]
+- The story is [THEME-MAGIC]
+- Here the codex sets a fine balance: [TIME-MAGIC-NEXUS] is true only when the tale is one or the other, but not both. Picture a fork in a moonlit road where the tale must choose between time’s tumblers or the glitter of magic — exactly one path must be followed for the nexus to hold.
+
+[DIDACTIC-BYGONE]
+A story is [DIDACTIC-BYGONE] if all of the following are true:
+- The story is [TOPIC-BYGONE-ERAS]
+- The story is [HAS-A-MORAL-LESSON]
+- The story is not [USES-SUPERLATIVE-FORMS]
+- This category requires a trio of conditions to stand together: the tale must be about bygone eras, it must teach a moral lesson, and it must avoid the rhetoric of superlatives. Only when these three truths align does the story earn the [DIDACTIC-BYGONE] mantle — a thoughtful relic that instructs without hyperbole.
+
+[COMPLEX-ARC]
+A story is [COMPLEX-ARC] if all of the following are true:
+- The story is [TIME-MAGIC-NEXUS]
+- The story is [THEME-PROBLEM-SOLVING]
+- The story is not [LOW-READABILITY]
+- To claim [COMPLEX-ARC], a narrative must inhabit the precise single-attribute world of the TIME-MAGIC-NEXUS, embrace problem-solving as a central theme, and remain above the readability threshold (not [LOW-READABILITY]). Think of a finely woven tapestry: the plot’s cleverness and thematic depth combine with clarity of expression to form a truly complex arc.
+
+So reads the little codex: exact in its measurements, yet dressed in finery — intended to guide annotators and readers with both precision and a whisper of wonder. Each line above preserves the strict logical conditions needed for annotation, wrapped in a garden of words to make the task more pleasant to the human heart.

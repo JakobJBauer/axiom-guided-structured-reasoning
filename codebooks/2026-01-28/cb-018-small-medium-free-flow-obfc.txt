@@ -1,0 +1,37 @@
+Think of this as a short, friendly guide to how we label stories — using the exact node names in brackets so nothing gets lost in translation.
+
+[attr-7]
+If a story’s central thread is about helping others, you’d tag it [attr-7]. In plain terms: when the theme is Helping Others, that label applies.
+
+[attr-6]
+When a story leans into ideas, reflection, or philosophical inquiry, mark it as [attr-6]. If it’s philosophical, that’s the tag.
+
+[attr-4]
+If a story feels classic in style — the traditional rhythms, structures, or sensibilities — it gets [attr-4]. In short: classic stories = [attr-4].
+
+[attr-1]
+When a story sets contrasting elements side-by-side — striking contrasts or comparisons — label it [attr-1]. If it has juxtaposition, that’s the identifier.
+
+[attr-2]
+Use [attr-2] when two conditions are both true:
+- The story is [attr-1]
+- Exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+So this tag is for stories that pair juxtaposition with either classic or modern style — but not both; exactly one of those styles must be present.
+
+[attr-5]
+If the story reads with modern sensibilities — contemporary voice, techniques, or pacing — it’s [attr-5]. In other words, modern stories = [attr-5].
+
+[attr-3]
+This one is a little layered. A story is [attr-3] if either of the following is true:
+- All of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-7]
+  - The story is not [attr-2]
+- Both of the following are true:
+  - The story is [attr-2]
+  - The story is not [attr-7]
+So, to wear the [attr-3] label a story must either be philosophical and about helping others while not being a mixed-style juxtaposition, or it must be a mixed-style juxtaposition that is explicitly not about helping others.
+
+That’s everything — same logic, same exact node names and relationships, just laid out in a smoother, conversational flow to make the rules easier to follow when you’re annotating.

@@ -1,0 +1,24 @@
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if the story exhibits a playful tone or manner.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if the story conforms to contemporary or modern stylistic conventions.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if the story begins with an initial token that is an adjective.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if the story employs discourse markers (e.g., transitional or connective lexical items) to structure exposition or dialogue.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if the narrative contains an instance of Chekhov’s gun (an introduced element that later becomes narratively relevant).
+
+[MODERN-OPENING]
+A story is [MODERN-OPENING] if both of the following are true:
+- The story is [STYLE-MODERN]
+- The story is [STARTS-WITH-ADJECTIVE]
+
+[ENGAGING-STRUCTURE]
+A story is [ENGAGING-STRUCTURE] if both of the following are true:
+- The story is either [STYLE-PLAYFUL] or [USES-DISCOURSE-MARKERS]
+- The story is [HAS-CHECKHOVS-GUN]

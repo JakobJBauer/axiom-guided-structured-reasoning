@@ -1,0 +1,130 @@
+[HAS-A-CLIFFHANGER]
+Definition: A story is [HAS-A-CLIFFHANGER] if the narrative contains a cliffhanger.
+
+[STYLE-MODERN]
+Definition: A story is [STYLE-MODERN] if the narrative exhibits a modern stylistic register.
+
+[USES-DISCOURSE-MARKERS]
+Definition: A story is [USES-DISCOURSE-MARKERS] if the text employs discourse markers.
+
+[HAS-A-FLASHBACK]
+Definition: A story is [HAS-A-FLASHBACK] if the narrative includes a flashback sequence.
+
+[THEME-PROBLEM-SOLVING]
+Definition: A story is [THEME-PROBLEM-SOLVING] if the core thematic element is Problem-Solving.
+
+[STARTS-WITH-ADJECTIVE]
+Definition: A story is [STARTS-WITH-ADJECTIVE] if the opening token of the text is an adjective.
+
+[USES-WH-QUESTIONS]
+Definition: A story is [USES-WH-QUESTIONS] if the text contains wh-questions (who, what, when, where, why, how).
+
+[HAS-JUXTAPOSITION]
+Definition: A story is [HAS-JUXTAPOSITION] if the narrative contains juxtaposition.
+
+[STARTS-WITH-ADVERB]
+Definition: A story is [STARTS-WITH-ADVERB] if the opening token of the text is an adverb.
+
+[THEME-HUMOR]
+Definition: A story is [THEME-HUMOR] if the primary thematic element is Humor.
+
+[LOW-READABILITY]
+Definition: A story is [LOW-READABILITY] if the measured readability score is below 86.4.
+
+[STYLE-HUMOROUS]
+Definition: A story is [STYLE-HUMOROUS] if the narrative style is humorous.
+
+[STYLE-MINIMALIST]
+Definition: A story is [STYLE-MINIMALIST] if the narrative style is minimalist.
+
+[STYLE-LIGHTHEARTED]
+Definition: A story is [STYLE-LIGHTHEARTED] if the narrative style is lighthearted.
+
+[HIGH-READABILITY]
+Definition: A story is [HIGH-READABILITY] if the measured readability score is above 96.1.
+
+[THEME-DECEPTION]
+Definition: A story is [THEME-DECEPTION] if the core thematic element is Deception.
+
+[STYLE-PHILOSOPHICAL]
+Definition: A story is [STYLE-PHILOSOPHICAL] if the narrative style is philosophical.
+
+[STRUCTURAL-DEVICES]
+Definition: A story is [STRUCTURAL-DEVICES] if either of the following holds:
+- The story is [HAS-A-CLIFFHANGER]
+- exactly one of the following is true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is [HAS-JUXTAPOSITION]
+- both of the following are true:
+  - The story is [USES-DISCOURSE-MARKERS]
+  - The story is not [HAS-A-CLIFFHANGER]
+
+[OPENING-PATTERN]
+Definition: A story is [OPENING-PATTERN] if both of the following hold:
+- either of the following is true:
+  - The story is [STARTS-WITH-ADJECTIVE]
+  - The story is [STARTS-WITH-ADVERB]
+- exactly one of the following is true:
+  - The story is [USES-WH-QUESTIONS]
+  - The story is [USES-DISCOURSE-MARKERS]
+
+[STYLE-TONE]
+Definition: A story is [STYLE-TONE] if either of the following holds:
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-LIGHTHEARTED]
+  - The story is not [STYLE-MINIMALIST]
+- both of the following are true:
+  - The story is [STYLE-HUMOROUS]
+  - The story is not [STYLE-PHILOSOPHICAL]
+
+[THEMATIC-CORE]
+Definition: A story is [THEMATIC-CORE] if either of the following holds:
+- both of the following are true:
+  - The story is [THEME-PROBLEM-SOLVING]
+  - The story is [THEME-HUMOR]
+- exactly one of the following is true:
+  - The story is [THEME-DECEPTION]
+  - The story is [THEME-PROBLEM-SOLVING]
+
+[READABILITY-CLASS]
+Definition: A story is [READABILITY-CLASS] if exactly one of the following is true:
+- The story is [LOW-READABILITY]
+- The story is [HIGH-READABILITY]
+
+[READABILITY-IMPACT]
+Definition: A story is [READABILITY-IMPACT] if both of the following are true:
+- The story is [READABILITY-CLASS]
+- either of the following is true:
+  - The story is [STYLE-LIGHTHEARTED]
+  - The story is not [LOW-READABILITY]
+
+[ENGAGEMENT-PATTERN]
+Definition: A story is [ENGAGEMENT-PATTERN] if both of the following are true:
+- either of the following is true:
+  - The story is [STRUCTURAL-DEVICES]
+  - both of the following are true:
+    - The story is [OPENING-PATTERN]
+    - The story is not [HAS-A-CLIFFHANGER]
+- either of the following is true:
+  - The story is [STYLE-TONE]
+  - both of the following are true:
+    - The story is [THEMATIC-CORE]
+    - The story is not [STYLE-PHILOSOPHICAL]
+
+[AUDIENCE-READY]
+Definition: A story is [AUDIENCE-READY] if either of the following holds:
+- both of the following are true:
+  - The story is [READABILITY-IMPACT]
+  - The story is [STYLE-TONE]
+- exactly one of the following is true:
+  - The story is [STYLE-HUMOROUS]
+  - The story is [STYLE-MINIMALIST]
+
+[OPTIMAL-ARC]
+Definition: A story is [OPTIMAL-ARC] if both of the following are true:
+- The story is [ENGAGEMENT-PATTERN]
+- either of the following is true:
+  - The story is [AUDIENCE-READY]
+  - both of the following are true:
+    - The story is [THEMATIC-CORE]
+    - The story is not [READABILITY-CLASS]

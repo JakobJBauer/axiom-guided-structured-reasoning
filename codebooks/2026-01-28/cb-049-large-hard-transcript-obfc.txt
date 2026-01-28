@@ -1,0 +1,198 @@
+Interviewer: Let's go through this codebook together. First, can you define the simple labels—those that state a single property?
+
+Expert: Sure. I'll read each one and then give a short conversational clarification.
+
+Interviewer: What is [attr-3]?
+
+Expert: A story is [attr-3] if The story has a cliffhanger.
+Interviewer: So that tag is applied when the story literally ends on a cliffhanger. Got it.
+
+Interviewer: What about [attr-19]?
+
+Expert: A story is [attr-19] if The story is modern.
+
+Interviewer: And [attr-27]?
+
+Expert: A story is [attr-27] if The story uses discourse markers.
+
+Interviewer: [attr-4]?
+
+Expert: A story is [attr-4] if The story has a flashback.
+
+Interviewer: [attr-25]?
+
+Expert: A story is [attr-25] if The story has the theme Problem-Solving.
+
+Interviewer: [attr-13]?
+
+Expert: A story is [attr-13] if The story starts with a adjective.
+
+Interviewer: [attr-28]?
+
+Expert: A story is [attr-28] if The story uses wh-questions.
+
+Interviewer: [attr-5]?
+
+Expert: A story is [attr-5] if The story has juxtaposition.
+
+Interviewer: [attr-14]?
+
+Expert: A story is [attr-14] if The story starts with a adverb.
+
+Interviewer: [attr-24]?
+
+Expert: A story is [attr-24] if The story has the theme Humor.
+
+Interviewer: [attr-7]?
+
+Expert: A story is [attr-7] if The story has readability score below 86.4.
+
+Interviewer: [attr-16]?
+
+Expert: A story is [attr-16] if The story is humorous.
+
+Interviewer: [attr-18]?
+
+Expert: A story is [attr-18] if The story is minimalist.
+
+Interviewer: [attr-17]?
+
+Expert: A story is [attr-17] if The story is lighthearted.
+
+Interviewer: [attr-6]?
+
+Expert: A story is [attr-6] if The story has readability score above 96.1.
+
+Interviewer: [attr-23]?
+
+Expert: A story is [attr-23] if The story has the theme Deception.
+
+Interviewer: [attr-20]?
+
+Expert: A story is [attr-20] if The story is philosophical.
+
+Interviewer: Great. Now let's move to the composite, logical definitions. Start with [attr-15].
+
+Expert: Okay. Here’s the formal definition and how to read it.
+
+A story is [attr-15] if either of the following is true:
+- The story is [attr-3]
+- exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+- both of the following are true:
+  - The story is [attr-27]
+  - The story is not [attr-3]
+
+Interviewer: Let me clarify—so [attr-15] holds if any one of those three high-level cases is satisfied: it has a cliffhanger; exactly one of flashback or juxtaposition; or it uses discourse markers but does not have a cliffhanger. Right?
+
+Expert: Exactly. The logical structure—either / exactly one / both with a negation—stays as written.
+
+Interviewer: Next: [attr-9].
+
+Expert: A story is [attr-9] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-13]
+  - The story is [attr-14]
+- exactly one of the following is true:
+  - The story is [attr-28]
+  - The story is [attr-27]
+
+Interviewer: So to tag [attr-9], the story must start with an adjective or an adverb, and then exactly one of wh-questions or discourse markers must appear. Understood.
+
+Interviewer: Now [attr-21].
+
+Expert: A story is [attr-21] if either of the following is true:
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-LIGHTHEARTED]
+  - The story is not [attr-18]
+- both of the following are true:
+  - The story is [attr-16]
+  - The story is not [attr-20]
+
+Interviewer: Note the first conjunction: it requires "in [STYLE-MODERN, STYLE-LIGHTHEARTED]" and not minimalist. The second option is humorous but not philosophical. Clear.
+
+Interviewer: [attr-22]?
+
+Expert: A story is [attr-22] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-25]
+  - The story is [attr-24]
+- exactly one of the following is true:
+  - The story is [attr-23]
+  - The story is [attr-25]
+
+Interviewer: So [attr-22] either requires both Problem-Solving and Humor, or exactly one of Deception or Problem-Solving. Got it.
+
+Interviewer: [attr-11]?
+
+Expert: A story is [attr-11] if exactly one of the following is true:
+- The story is [attr-7]
+- The story is [attr-6]
+
+Interviewer: That enforces a mutually exclusive classification between low and high readability. Clear.
+
+Interviewer: [attr-12]?
+
+Expert: A story is [attr-12] if both of the following are true:
+- The story is [attr-11]
+- either of the following is true:
+  - The story is [attr-17]
+  - The story is not [attr-7]
+
+Interviewer: So for READABILITY-IMPACT, you first must be in the readability class, and then either the story is lighthearted or it is not low-readability. Understood.
+
+Interviewer: [attr-2]?
+
+Expert: A story is [attr-2] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-15]
+  - both of the following are true:
+    - The story is [attr-9]
+    - The story is not [attr-3]
+- either of the following is true:
+  - The story is [attr-21]
+  - both of the following are true:
+    - The story is [attr-22]
+    - The story is not [attr-20]
+
+Interviewer: That's a two-part conjunction. The first part accepts either STRUCTURAL-DEVICES or a specific OPENING-PATTERN without cliffhanger. The second part accepts STYLE-TONE or THEMATIC-CORE provided it's not philosophical. Correct.
+
+Expert: Correct. The "both of the following are true" at the top level requires one condition from each of those two big choices.
+
+Interviewer: Now [attr-1]?
+
+Expert: A story is [attr-1] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-12]
+  - The story is [attr-21]
+- exactly one of the following is true:
+  - The story is [attr-16]
+  - The story is [attr-18]
+
+Interviewer: So to be audience-ready, either it meets both readability impact and style tone, or it is exactly one of humorous or minimalist. Clear.
+
+Interviewer: Finally, [attr-10].
+
+Expert: A story is [attr-10] if both of the following are true:
+- The story is [attr-2]
+- either of the following is true:
+  - The story is [attr-1]
+  - both of the following are true:
+    - The story is [attr-22]
+    - The story is not [attr-11]
+
+Interviewer: So OPTIMAL-ARC requires an engagement pattern, plus either the story is audience-ready, or it has thematic core but lacks a readability class. That preserves the intended trade-off between engagement, audience fit, and thematic strength. Perfect.
+
+Interviewer: Anything else we should note about reading and using this transcript-style codebook?
+
+Expert: A couple of practical notes:
+- Whenever you see "either of the following is true", treat that as logical OR.
+- "Both of the following are true" is logical AND.
+- "Exactly one of the following is true" is exclusive OR: one true, the other false.
+- "The story is not [attr-8]" is logical negation.
+- All node IDs appear exactly as [attr-26], and their relationships and formulas are unchanged from the original spec.
+
+Interviewer: Thanks—that keeps the formal logic intact while making the definitions easy to talk through.
+
+Expert: You're welcome. If you want, we can walk through an example story and annotate which nodes apply, step by step.

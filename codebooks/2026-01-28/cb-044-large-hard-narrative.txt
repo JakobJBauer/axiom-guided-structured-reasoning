@@ -1,0 +1,127 @@
+Imagine a quiet archive where each tale is a living thing, labeled carefully so we can whisper its secrets back into the world. In this little book of rules, each label is a name in square brackets — exact and sacred — and each rule is a path that tells us how a story earns that name. Walk with me through that archive; I will tell you how each name is given, and I will speak in the rhythm of the rules themselves so nothing gets lost.
+
+[HAS-JUXTAPOSITION]
+In the archive’s catalog, we call a story [HAS-JUXTAPOSITION] when, like two contrasting portraits hung side by side, the tale contains juxtaposition.
+
+[STYLE-PHILOSOPHICAL]
+A story is crowned [STYLE-PHILOSOPHICAL] if it leans into thought — if it feels like a meditation, a question posed in sentences.
+
+[THEME-HARDSHIP]
+When hardship threads through the plot, shaping choices and scars, the story earns the tag [THEME-HARDSHIP].
+
+[THEME-HUMOR]
+If the tale carries laughter, wit, or playful irony as a theme, we call it [THEME-HUMOR].
+
+[TOPIC-THE-ARTS]
+A story focused on painters, musicians, performers, or the life of art itself is assigned [TOPIC-THE-ARTS].
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A plot that loops back to its own beginning — a circle traced in time — is marked [HAS-CIRCULAR-NARRATIVE-STRUCT].
+
+[THEME-DECEPTION]
+When deceit, tricks, or hidden motives drive the narrative, the story becomes [THEME-DECEPTION].
+
+[THEME-HELPING-OTHERS]
+A tale where helping others is a central thread receives the label [THEME-HELPING-OTHERS].
+
+[HAS-A-MORAL-LESSON]
+If the story stops to fold a moral into its last lines, we mark it [HAS-A-MORAL-LESSON].
+
+[STYLE-HUMOROUS]
+A story that is written to amuse — that carries a humorous style — is noted as [STYLE-HUMOROUS].
+
+[STYLE-MINIMALIST]
+When prose pares itself down to essentials and an economy of language defines the work, the story is [STYLE-MINIMALIST].
+
+[TOPIC-GIANT-CREATURES]
+If giants, titans, or enormous creatures roam the plot, the tale is filed under [TOPIC-GIANT-CREATURES].
+
+[STYLE-LIGHTHEARTED]
+A story with a buoyant, easy tone — where worry is brief and warmth prevails — wears the tag [STYLE-LIGHTHEARTED].
+
+[TOPIC-TIME-TRAVEL]
+Stories that step through hours, years, or eras into different times are labeled [TOPIC-TIME-TRAVEL].
+
+[STARTS-WITH-PREPOSITION]
+If the very first word of the story is a preposition — a small pivot like “In,” “On,” or “Before” — then the story is [STARTS-WITH-PREPOSITION].
+
+[SHORT-STORY]
+The archive’s short shelf holds tales under 160 words; those stories are [SHORT-STORY].
+
+[USES-SUPERLATIVE-FORMS]
+When language reaches for the extremes — “best,” “largest,” “most”— the story is noted as [USES-SUPERLATIVE-FORMS].
+
+[THEME-KINDNESS]
+A prevailing theme of kindness in acts and choices earns the label [THEME-KINDNESS].
+
+[HIGH-READABILITY]
+If a story’s clarity is so bright that it scores above 96.1 on the readability scale, it is called [HIGH-READABILITY].
+
+[JUX-PREP-CLASH]
+Here the archive’s curators lean in and say: A story is [JUX-PREP-CLASH] if both of the following are true:
+- The story is [HAS-JUXTAPOSITION]
+- Either of the following is true:
+  - The story is [STARTS-WITH-PREPOSITION]
+  - The story is [SHORT-STORY]
+Think of JUX-PREP-CLASH as a meeting where contrast meets a specific start or a very short form.
+
+[JUXTAPOSED-SUPERLATIVE]
+There is another, rarer classification: A story is [JUXTAPOSED-SUPERLATIVE] if both of the following are true:
+- The story is [JUX-PREP-CLASH]
+- Exactly one of the following is true:
+  - The story is [USES-SUPERLATIVE-FORMS]
+  - The story is [STYLE-MINIMALIST]
+It’s a delicate balance — juxtaposition and that clash, plus either bold extremes of language or a minimalist restraint, but never both.
+
+[ARTISTIC-PHILOSOPHY]
+When art and thought entwine, we award the name [ARTISTIC-PHILOSOPHY] if both of the following are true:
+- The story is [TOPIC-THE-ARTS]
+- Either of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [JUXTAPOSED-SUPERLATIVE]
+Picture an artist who asks the big questions: that’s ARTISTIC-PHILOSOPHY, born from topic plus either philosophical depth or a striking juxtaposed superlative.
+
+[HUMOROUS-HYBRID]
+The archive loves hybrids. A story is [HUMOROUS-HYBRID] if both of the following are true:
+- Either of the following is true:
+  - The story is [THEME-HUMOR]
+  - The story is [STYLE-HUMOROUS]
+- All of the following are true:
+  - The story is not [STYLE-MINIMALIST]
+  - Exactly one of the following is true:
+    - The story is [STYLE-LIGHTHEARTED]
+    - The story is [USES-SUPERLATIVE-FORMS]
+So humor is present by theme or style, the prose is not minimalist, and the tone is either light or exaggerated — but not both.
+
+[ALTRUISTIC-CONTRACTION]
+Some stories wear a compassionate contradiction. A story is [ALTRUISTIC-CONTRACTION] if either of the following is true:
+- Both of the following are true:
+  - The story is [HAS-A-MORAL-LESSON]
+  - Either of the following is true:
+    - The story is [THEME-HELPING-OTHERS]
+    - The story is [THEME-KINDNESS]
+- Exactly one of the following is true:
+  - The story is [THEME-DECEPTION]
+  - The story is [THEME-HARDSHIP]
+In plain terms: altruistic lessons paired with helping or kindness, or a solitary presence of deception or hardship — that tension gives rise to ALTRUISTIC-CONTRACTION.
+
+[COMPLEX-ARTFUL-STORY]
+At the top shelf sits [COMPLEX-ARTFUL-STORY]. A story is [COMPLEX-ARTFUL-STORY] if both of the following are true:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [ARTISTIC-PHILOSOPHY]
+    - The story is [ALTRUISTIC-CONTRACTION]
+  - Exactly one of the following is true:
+    - The story is [HUMOROUS-HYBRID]
+    - The story is [TOPIC-GIANT-CREATURES]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [TOPIC-TIME-TRAVEL]
+    - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - Both of the following are true:
+    - The story is [SHORT-STORY]
+    - The story is [HIGH-READABILITY]
+
+Here, the archive binds complexity and art: the first pillar demands either an artistic, altruistic fusion or one exclusive choice between a humorous hybrid and giant creatures; the second pillar requires either time-travel woven into a circular structure, or the compact clarity of a short story with very high readability. Only when one block from the first pillar and one block from the second pillar stand together does the story ascend to [COMPLEX-ARTFUL-STORY].
+
+And so each tale finds its place, labeled by careful, sometimes surprising rules. The archive keeps nothing arbitrary: every bracketed name, every connective phrase — both, either, exactly one, not — is a guidepost so readers, writers, and annotators can trace the logic back through the story’s bones.

@@ -1,0 +1,64 @@
+Interviewer: Let's walk through this codebook together. First up — what does [STARTS-WITH-ADVERB] mean?
+
+Expert: A story is [STARTS-WITH-ADVERB] if The story starts with a adverb.
+
+Interviewer: Simple enough. How about [STYLE-CLASSIC]?
+
+Expert: A story is [STYLE-CLASSIC] if The story is classic.
+
+Interviewer: And [LONG-STORY]?
+
+Expert: A story is [LONG-STORY] if The story has more than 375 words.
+
+Interviewer: Got it. Now the topical nodes — what about [TOPIC-GIANT-CREATURES]?
+
+Expert: A story is [TOPIC-GIANT-CREATURES] if The story is about giant creatures.
+
+Interviewer: And [THEME-DECEPTION]?
+
+Expert: A story is [THEME-DECEPTION] if The story has the theme Deception.
+
+Interviewer: One more basic topic: [TOPIC-HIDDEN-TREASURES]?
+
+Expert: A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures.
+
+Interviewer: Okay, moving to the compound categories. Explain [AMPHIBIOUS-EPIC] for me.
+
+Expert: A story is [AMPHIBIOUS-EPIC] if all of the following are true:
+- The story is [LONG-STORY]
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is not [STYLE-CLASSIC]
+
+Interviewer: So [AMPHIBIOUS-EPIC] requires all three conditions, including that it must not be classic. Clear. Next: [MISLEADING-QUEST]. That one looked a bit nested — can you unpack it?
+
+Expert: Sure. A story is [MISLEADING-QUEST] if both of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is [TOPIC-HIDDEN-TREASURES]
+- Either of the following is true:
+  - The story is [STARTS-WITH-ADVERB]
+  - The story is not [STYLE-CLASSIC]
+
+Interviewer: I notice you said "both of the following are true" and then listed three top-level items, where the third is an Either. That's intentional — it means the two required truths include that the story fits both THEME-DECEPTION and TOPIC-HIDDEN-TREASURES, and additionally one of those two sub-conditions under the Either must hold. Right?
+
+Expert: Correct. The structure is preserved exactly: the node requires the first two listed conditions and also that one of the two alternatives under the Either holds.
+
+Interviewer: Thanks — that helps. Now [HYBRID-TALE]?
+
+Expert: A story is [HYBRID-TALE] if exactly one of the following is true:
+- The story is [AMPHIBIOUS-EPIC]
+- The story is [MISLEADING-QUEST]
+
+Interviewer: So [HYBRID-TALE] is exclusive OR between those two. Clear. Finally, explain [COMPLEX-ARTIFACT].
+
+Expert: A story is [COMPLEX-ARTIFACT] if all of the following are true:
+- The story is [HYBRID-TALE]
+- Either of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [LONG-STORY]
+- The story is not [STARTS-WITH-ADVERB]
+
+Interviewer: So to be a [COMPLEX-ARTIFACT], a story must be a [HYBRID-TALE], must either be classic or long, and must not start with an adverb. Makes sense.
+
+Expert: Exactly — and throughout, all node IDs and logical relationships remain as specified: the atomic definitions, the And/All constructs, the Either/Or choices, the Not conditions, and the exclusive condition for [HYBRID-TALE] are preserved in their original form.
+
+Interviewer: Great — thanks for walking through each node. That transcript keeps the logic intact and makes the codebook easier to follow.

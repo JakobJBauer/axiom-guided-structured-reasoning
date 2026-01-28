@@ -1,0 +1,49 @@
+[attr-7]
+Definition: The predicate [attr-7] holds for a story if the narrative includes a nested or embedded story (i.e., the story contains a story within a story).
+
+[attr-11]
+Definition: The predicate [attr-11] holds for a story if the story’s thematic content is Magic.
+
+[attr-6]
+Definition: The predicate [attr-6] holds for a story if the narrative contains a flashback sequence.
+
+[attr-12]
+Definition: The predicate [attr-12] holds for a story if the story’s subject matter pertains to the arts.
+
+[attr-10]
+Definition: The predicate [attr-10] holds for a story if the story is written in a minimalist style.
+
+[attr-8]
+Definition: The predicate [attr-8] holds for a story if the narrative follows a circular structure.
+
+[attr-5]
+Definition: The predicate [attr-5] holds for a story if exactly one of the following conditions is true:
+- The story is [attr-7]
+- The story is [attr-6]
+
+[attr-4]
+Definition: The predicate [attr-4] holds for a story if the truth value of [attr-7] is equal to the truth value of [attr-8].
+
+[attr-9]
+Definition: The predicate [attr-9] holds for a story if the story’s primary theme or topic is a member of the set {[attr-11], [attr-12]}.
+
+[attr-3]
+Definition: The predicate [attr-3] holds for a story if both of the following conditions are satisfied:
+- Either of the following is true:
+  - The story is [attr-5]
+  - The story is [attr-4]
+- The story is not [attr-10] and (the story is [attr-8] or the story is [attr-6])
+
+[attr-1]
+Definition: The predicate [attr-1] holds for a story if both of the following conditions are satisfied:
+- The story is [attr-9]
+- Either of the following is true:
+  - The story is [attr-3]
+  - The story is [attr-10]
+
+[attr-2]
+Definition: The predicate [attr-2] holds for a story if both of the following conditions are satisfied:
+- The story is [attr-1]
+- Exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is not [attr-6]

@@ -1,0 +1,18 @@
+[attr-4]  
+A story is classified as [attr-4] iff the narrative’s primary thematic content is **Helping Others** (i.e., altruism-oriented assistance or support is a central theme).
+
+[attr-5]  
+A story is classified as [attr-5] iff the narrative content is **about mystical creatures** (i.e., supernatural, legendary, or fantastical beings constitute a primary subject).
+
+[attr-3]  
+A story is classified as [attr-3] iff the first lexical token of the story is a **preposition** (e.g., “in,” “on,” “under,” “through,” etc.).
+
+[attr-2]  
+A story is classified as [attr-2] iff **both** of the following constraints are satisfied (logical AND):
+- The story is [attr-5]
+- The story is not [attr-4]
+
+[attr-1]  
+A story is classified as [attr-1] iff **both** of the following constraints are satisfied (logical AND):
+- The story is [attr-3]
+- The story is not [attr-2]

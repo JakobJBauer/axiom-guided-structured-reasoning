@@ -1,0 +1,156 @@
+{
+  "nodes": [
+    {
+      "id": "has-circular-narrative-struct",
+      "label": "HAS-CIRCULAR-NARRATIVE-STRUCT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-kindness",
+      "label": "THEME-KINDNESS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-juxtaposition",
+      "label": "HAS-JUXTAPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-hidden-treasures",
+      "label": "TOPIC-HIDDEN-TREASURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "low-readability",
+      "label": "LOW-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "STYLE-PHILOSOPHICAL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "STYLE-MODERN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "THEME-DECEPTION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "high-readability",
+      "label": "HIGH-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "modern-philo-juxta",
+      "label": "MODERN-PHILO-JUXTA",
+      "formula_type": "And",
+      "formula_args": [
+        "style-modern",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-philosophical",
+            "has-juxtaposition"
+          ]
+        },
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "has-circular-narrative-struct"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moral-ambivalence",
+      "label": "MORAL-AMBIVALENCE",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-kindness",
+        "theme-deception",
+        "modern-philo-juxta"
+      ]
+    },
+    {
+      "id": "complex-narrative",
+      "label": "COMPLEX-NARRATIVE",
+      "formula_type": "And",
+      "formula_args": [
+        "moral-ambivalence",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "low-readability",
+                "high-readability"
+              ]
+            },
+            "topic-hidden-treasures"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "style-modern",
+      "target": "modern-philo-juxta"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "modern-philo-juxta"
+    },
+    {
+      "source": "has-juxtaposition",
+      "target": "modern-philo-juxta"
+    },
+    {
+      "source": "has-circular-narrative-struct",
+      "target": "modern-philo-juxta"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "moral-ambivalence"
+    },
+    {
+      "source": "theme-deception",
+      "target": "moral-ambivalence"
+    },
+    {
+      "source": "modern-philo-juxta",
+      "target": "moral-ambivalence"
+    },
+    {
+      "source": "moral-ambivalence",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "low-readability",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "high-readability",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "topic-hidden-treasures",
+      "target": "complex-narrative"
+    }
+  ]
+}

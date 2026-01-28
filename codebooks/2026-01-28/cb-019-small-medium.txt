@@ -1,0 +1,24 @@
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if the story is about lost civilizations.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+[THEME-HUMOR]
+A story is [THEME-HUMOR] if the story has the theme Humor.
+
+[LIGHTHEARTED-INTRO]
+A story is [LIGHTHEARTED-INTRO] if all of the following are true:
+- The story is [STARTS-WITH-NOUN]
+- The story is [THEME-HUMOR]
+- The story is not [USES-SUPERLATIVE-FORMS]
+
+[MYTHIC-SATIRE]
+A story is [MYTHIC-SATIRE] if both of the following are true:
+- The story is [TOPIC-LOST-CIVILIZATIONS]
+- Exactly one of the following is true:
+  - The story is [LIGHTHEARTED-INTRO]
+  - The story is [USES-SUPERLATIVE-FORMS]

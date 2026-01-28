@@ -1,0 +1,71 @@
+In a little atelier where logic and lyricism hold hands, this codebook sits like an illuminated manuscript—each node a sigil, each rule a stanza. Below, the formal bones of annotation remain intact and unaltered; around them I have woven a garland of descriptive flourish to help guide the eye and steady the mind. The relationships between the nodes, the exact bracketed identifiers, and the logical connectors are preserved precisely as required.
+
+[attr-2]
+A story is [attr-2] if the story has readability score below 86.4
+- In simpler, worldly terms: when the measured clarity of a tale dips under the luminous threshold of 86.4, we label it with this badge. Think of it as a soft fog over prose—legible, yet dimmer than the chosen horizon.
+
+[attr-11]
+A story is [attr-11] if the story is about time travel
+- This token is bestowed upon narratives that fold and unfurl the fabric of time—stories of clocks, wormholes, ancestors and futures colliding—where the forward march of seconds becomes a plotful dance.
+
+[attr-10]
+A story is [attr-10] if the story is about seasonal changes
+- Use this marker for tales that trace the earth’s slow turning: blossoms and frost, the choreography of seasons as they paint and erase the world.
+
+[attr-12]
+A story is [attr-12] if the story uses discourse markers
+- This label glows where a narrator threads the narrative with signposts—however, moreover, therefore—those little words that shepherd readers through the meadows of argument and scene.
+
+[attr-4]
+A story is [attr-4] if the story starts with a adjective
+- Apply this when the very first step of the sentence is an adjective—an immediate hue or texture cast at the opening: "Golden," "Lonely," "Fractured."
+
+[attr-9]
+A story is [attr-9] if the story is about hidden treasures
+- Bestowed upon narratives where secrets sleep beneath soil or sea, where maps and whispers converge on gleaming caches of wonder and regret.
+
+[attr-7]
+A story is [attr-7] if the story has the theme Deception
+- Affix this when the heart of the tale is deceit—mirrors, masquerades, falsehoods that move the plot like a shadow puppet.
+
+[attr-8]
+A story is [attr-8] if the story has the theme Helping Others
+- Use this sigil when kindness, aid, or sacrifice forms the moral spine of the tale—when characters reach out and lift others from the mire.
+
+[attr-6]
+A story is [attr-6] if the story starts with a preposition
+- This applies when the story’s first breath is a preposition: "In," "On," "Under"—those small portals that place us immediately in relation to space or time.
+
+[attr-5]
+A story is [attr-5] if the story starts with a adverb
+- Use this when the opening word shapes manner or tempo—"Gently," "Suddenly," "Quietly"—the adverb that sets the initial cadence.
+
+[attr-3]
+A story is [attr-3] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+- Both of the following are true:
+  - The story is [attr-12]
+  - Either of the following is true:
+    - The story is [attr-2]
+    - The story is [attr-6]
+- Imagine [attr-3] as a decorative veneer on the tale: it obtains either when the opening word commits to a single stylistic choice—adjective or adverb—or when the narrative is stitched with discourse markers and either drifts into lower measured clarity or opens with a preposition. The formal logic above stands as the exact map to determine this surface trait.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-11]
+    - Exactly one of the following is true:
+      - The story is [attr-7]
+      - The story is [attr-8]
+  - Both of the following are true:
+    - The story is [attr-10]
+    - Both of the following are true:
+      - The story is [attr-9]
+      - The story is not [attr-11]
+- The story is [attr-3]
+- This final, slightly mysterious emblem—[attr-1]—is reserved for narratives whose thematic architecture is delightfully puzzling. It requires two gates to open: firstly, either a time-travel tale that pairs with exactly one moral bent (deception or helping others), or a story of seasonal change that simultaneously treasures hidden hoards but is emphatically not a time-travel yarn. Secondly, that tale must satisfy the conditions of [attr-3]. Only when both the thematic constellation and the narrative surface align does this inscrutable structure reveal itself.
+
+Thus the tapestry is complete: each node a named blossom, each connective a vine, in exactly the logical arrangement that we began with. Use this embellished guide as you annotate and reason—the meanings remain precise; the language only adds a lantern to the path.

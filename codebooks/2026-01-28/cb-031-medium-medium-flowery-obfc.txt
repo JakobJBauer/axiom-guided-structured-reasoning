@@ -1,0 +1,59 @@
+In the hushed alcoves of an old, whispering library — where the dust motes dance like tiny stars and the spines of books hum with remembered tales — there exists a little codex of judgments: a map that helps readers and chroniclers decide what a story is, in precise and careful terms. Below you will find that codex, rendered in embroidered language for delight, but never altered in its rules. Each entry keeps its exact label and the exact logical phrasing required for annotation; around that core I have woven gilded explanation and gentle examples to make the decisions feel like the turning of pages beneath a warm lamp.
+
+[attr-4]
+A story is [attr-4] if the story has readability score below 86.4
+- Plainly stated: if the measured readability number slips below 86.4, we mark the tale with [attr-4]. Imagine a path that grows thorny and dense when the score falls beneath that bright marker — the codex asks only for this single, numeric threshold to decide.
+
+[attr-6]
+A story is [attr-6] if the story is philosophical
+- This stamp is given when a story leans into reflection, inquiry, and questions of existence or meaning. If the narrative invites thought and rumination, then it bears the [attr-6] sigil.
+
+[attr-5]
+A story is [attr-5] if the story is modern
+- When a tale carries contemporary sensibilities, settings, diction, or concerns — when it feels of the present age — we label it [attr-5]. The tag captures that sense of currentness.
+
+[attr-12]
+A story is [attr-12] if the story uses superlative forms
+- This marker is applied when language within the story employs superlatives (the tallest, the most brilliant, the least expected). Where superlative forms appear, the story is noted as [attr-12].
+
+[attr-10]
+A story is [attr-10] if the story is about bygone eras
+- If the narrative takes its subject from times long past — empires, eras, or epochs that are gone — then it qualifies as [attr-10]. Think sepia-toned memories and histories retold.
+
+[attr-7]
+A story is [attr-7] if the story has the theme Magic
+- When enchantment, spells, or the presence of supernatural artifice are central to the tale’s thematic heart, the story bears the [attr-7] hallmark. Magic here is not merely ornament; it is a theme that courses through the narrative.
+
+[attr-11]
+A story is [attr-11] if the story is about time travel
+- If the plot turns upon journeys through time, paradoxes, or temporal displacement, then the story is labeled [attr-11]. The codex records that clocks and corridors of time are part of the tale’s fabric.
+
+[attr-3]
+A story is [attr-3] if the story has a moral lesson
+- This designation is for tales that intentionally teach, exemplify, or conclude with a moral lesson. When the narrative’s purpose includes a lesson to be learned, it receives [attr-3].
+
+[attr-8]
+A story is [attr-8] if the story has the theme Problem-Solving
+- Stories that center around puzzles, challenges, and the labor of resolving difficulties are marked [attr-8]. The theme celebrates ingenuity and the arc of overcoming obstacles.
+
+[attr-9]
+A story is [attr-9] if exactly one of the following is true:
+- The story is [attr-11]
+- The story is [attr-7]
+- Here the codex sets a fine balance: [attr-9] is true only when the tale is one or the other, but not both. Picture a fork in a moonlit road where the tale must choose between time’s tumblers or the glitter of magic — exactly one path must be followed for the nexus to hold.
+
+[attr-2]
+A story is [attr-2] if all of the following are true:
+- The story is [attr-10]
+- The story is [attr-3]
+- The story is not [attr-12]
+- This category requires a trio of conditions to stand together: the tale must be about bygone eras, it must teach a moral lesson, and it must avoid the rhetoric of superlatives. Only when these three truths align does the story earn the [attr-2] mantle — a thoughtful relic that instructs without hyperbole.
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-9]
+- The story is [attr-8]
+- The story is not [attr-4]
+- To claim [attr-1], a narrative must inhabit the precise single-attribute world of the TIME-MAGIC-NEXUS, embrace problem-solving as a central theme, and remain above the readability threshold (not [attr-4]). Think of a finely woven tapestry: the plot’s cleverness and thematic depth combine with clarity of expression to form a truly complex arc.
+
+So reads the little codex: exact in its measurements, yet dressed in finery — intended to guide annotators and readers with both precision and a whisper of wonder. Each line above preserves the strict logical conditions needed for annotation, wrapped in a garden of words to make the task more pleasant to the human heart.

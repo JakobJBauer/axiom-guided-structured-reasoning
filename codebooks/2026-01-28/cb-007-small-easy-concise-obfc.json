@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "id": "attr-3",
+      "label": "Lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "Begins with an adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "Exceeds 375 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Theme is Humor",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "About bygone eras",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Composite: lighthearted and (humor and (bygone eras or begins with an adverb))",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-3",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-4",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-5",
+                "attr-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-3",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-6"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "nodes": [
+    {
+      "id": "attr-11",
+      "label": "Narrative foregrounds philosophical inquiry, reflection, or argumentation",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-13",
+      "label": "Primary subject matter concerns the arts (visual art, music, theatre, literature, or other artistic practice)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Narrative includes at least one flashback sequence",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Narrative contains an embedded diegetic narrative",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "Deception functions as an explicit thematic element (deceit, concealment, misrepresentation)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Narrative deliberately introduces misleading information or distractors (a red herring)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Narrative conveys an explicit or clearly inferable moral lesson or didactic point",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Both philosophical foregrounding and arts subject matter",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-11",
+        "attr-13"
+      ]
+    },
+    {
+      "id": "attr-7",
+      "label": "Either includes a flashback sequence or contains an embedded diegetic narrative",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-3",
+        "attr-6"
+      ]
+    },
+    {
+      "id": "attr-8",
+      "label": "Both deception as a theme and deliberate misleading information (red herring)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-12",
+        "attr-5"
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "All of: attr-8, attr-4, and not attr-10",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-8",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-4",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-10"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Both attr-2 and attr-7",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-2",
+        "attr-7"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-11",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-1"
+    }
+  ]
+}

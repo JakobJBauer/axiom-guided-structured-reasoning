@@ -1,0 +1,52 @@
+Think of this as a gentle guide you can read like a conversation about how we tag stories. I’ll walk through each label, keeping every ID exactly as it appears and leaving all logical connections untouched — just making the wording smoother and easier to follow.
+
+[STYLE-PLAYFUL]
+If a story feels light, whimsical, and playful in tone, then it gets the [STYLE-PLAYFUL] label. In short: a story is [STYLE-PLAYFUL] if the story is playful.
+
+[STYLE-MINIMALIST]
+When a story strips away the excess and prefers spare language and simplicity, we call it [STYLE-MINIMALIST]. Concretely: a story is [STYLE-MINIMALIST] if the story is minimalist.
+
+[HAS-A-MORAL-LESSON]
+If a story communicates a clear moral or lesson—something meant to teach or guide—mark it as [HAS-A-MORAL-LESSON]. Formally: a story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+[TOPIC-TIME-TRAVEL]
+Stories that center on journeys through time, paradoxes, or time machines are labeled [TOPIC-TIME-TRAVEL]. Precisely: a story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+[STARTS-WITH-NOUN]
+If the very first word of the story is a noun, then it qualifies as [STARTS-WITH-NOUN]. In exact terms: a story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+[MANY-PARAGRAPHS]
+For stories that are broken into more than six paragraphs, use [MANY-PARAGRAPHS]. To be exact: a story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+
+[USES-CONDITIONAL-MOOD]
+If a story regularly employs the conditional mood—phrases like “would,” “could,” or “if”—tag it [USES-CONDITIONAL-MOOD]. Formally: a story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+[THEME-HARDSHIP]
+When hardship is a central theme—struggles, suffering, or hardship features heavily—label the story [THEME-HARDSHIP]. Precisely: a story is [THEME-HARDSHIP] if the story has the theme Hardship.
+
+[COMPOUND-STYLE]
+This one is a simple conjunction: a story is [COMPOUND-STYLE] if both of the following are true:
+- The story is [STYLE-PLAYFUL]
+- The story is [STYLE-MINIMALIST]
+
+[COMPLEX-NARRATIVE]
+Here we require a trio of traits together. A story is [COMPLEX-NARRATIVE] if all of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is [STARTS-WITH-NOUN]
+
+[TIME-MORAL]
+When time travel and a lesson come together, we use this label. A story is [TIME-MORAL] if both of the following are true:
+- The story is [TOPIC-TIME-TRAVEL]
+- The story is [HAS-A-MORAL-LESSON]
+
+[RICH-STYLE-NARRATIVE]
+This final label blends structural complexity with stylistic richness. A story is [RICH-STYLE-NARRATIVE] if both of the following are true:
+- The story is [COMPLEX-NARRATIVE]
+- Either of the following is true:
+  - The story is [COMPOUND-STYLE]
+  - Both of the following are true:
+    - The story is [STYLE-PLAYFUL]
+    - The story is not [THEME-HARDSHIP]
+
+That’s everything. Each label above keeps its original ID and logical rules intact — just explained in a more natural, friendly way so you can apply them easily while annotating or reasoning.

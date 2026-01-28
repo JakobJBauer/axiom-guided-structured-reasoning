@@ -1,0 +1,148 @@
+[attr-27]
+A story is [attr-27] if The story has the theme Innovation
+
+[attr-17]
+A story is [attr-17] if The story is classic
+
+[attr-31]
+A story is [attr-31] if The story is about hidden treasures
+
+[attr-13]
+A story is [attr-13] if The story has fewer than 160 words
+
+[attr-14]
+A story is [attr-14] if The story starts with a adjective
+
+[attr-26]
+A story is [attr-26] if The story has the theme Humor
+
+[attr-9]
+A story is [attr-9] if The story has readability score below 86.4
+
+[attr-19]
+A story is [attr-19] if The story is modern
+
+[attr-34]
+A story is [attr-34] if The story is about mystical creatures
+
+[attr-23]
+A story is [attr-23] if The story has the theme Growth
+
+[attr-8]
+A story is [attr-8] if The story has more than 375 words
+
+[attr-4]
+A story is [attr-4] if The story has a moral lesson
+
+[attr-6]
+A story is [attr-6] if The story has circular narrative structure
+
+[attr-24]
+A story is [attr-24] if The story has the theme Hardship
+
+[attr-37]
+A story is [attr-37] if The story uses conditional mood
+
+[attr-38]
+A story is [attr-38] if The story uses superlative forms
+
+[attr-25]
+A story is [attr-25] if The story has the theme Helping Others
+
+[attr-21]
+A story is [attr-21] if The story is playful
+
+[attr-7]
+A story is [attr-7] if The story has juxtaposition
+
+[attr-28]
+A story is [attr-28] if The story has the theme Kindness
+
+[attr-29]
+A story is [attr-29] if The story has the theme Magic
+
+[attr-5]
+A story is [attr-5] if The story has a story within a story
+
+[attr-36]
+A story is [attr-36] if The story is about time travel
+
+[attr-39]
+A story is [attr-39] if The story uses wh-questions
+
+[attr-18]
+A story is [attr-18] if The story is humorous
+
+[attr-32]
+A story is [attr-32] if The story is about lost civilizations
+
+[attr-33]
+A story is [attr-33] if The story is about magical lands
+
+[attr-20]
+A story is [attr-20] if The story is philosophical
+
+[attr-16]
+A story is [attr-16] if the story's style is In the set { [attr-17], [attr-19], [attr-21], [attr-18], [attr-20] }
+
+[attr-35]
+A story is [attr-35] if the story's topic is In the set { [attr-34], [attr-33], [attr-31], [attr-32], [attr-36] }
+
+[attr-22]
+A story is [attr-22] if either of the following are true (Or):
+- The story is [attr-27]
+- The story is [attr-23]
+- The story is [attr-24]
+- The story is [attr-25]
+- The story is [attr-28]
+- The story is [attr-29]
+- The story is [attr-26]
+
+[attr-11]
+A story is [attr-11] if exactly one (Xor) of the following is true:
+- The story is [attr-13]
+- The story is [attr-8]
+
+[attr-12]
+A story is [attr-12] if both of the following are true (And):
+- The story is [attr-9]
+- The story is [attr-14]
+
+[attr-15]
+A story is [attr-15] if either of the following are true (Or):
+- The story is [attr-5]
+- The story is [attr-6]
+- The story is [attr-7]
+
+[attr-10]
+A story is [attr-10] if either of the following are true (Or):
+- The story is [attr-4]
+- The story is [attr-23]
+
+[attr-3]
+A story is [attr-3] if Equal(the truth of [attr-23], the truth of [attr-24])
+
+[attr-1]
+A story is [attr-1] if both of the following are true (And):
+- The story is [attr-3]
+- Either of the following are true (Or):
+  - The story is [attr-28]
+  - The story is [attr-25]
+
+[attr-30]
+A story is [attr-30] if both of the following are true (And):
+- The story is [attr-22]
+- Either of the following are true (Or):
+  - The story is [attr-1]
+  - The story is [attr-27]
+
+[attr-2]
+A story is [attr-2] if all of the following are true:
+- The story is [attr-30]
+- The story is [attr-16]
+- The story is [attr-35]
+- The story is [attr-15]
+- Not the story is [attr-17]
+- The story is [attr-11]
+- The story is [attr-12]
+- The story is [attr-10]

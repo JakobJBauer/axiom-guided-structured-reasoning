@@ -1,0 +1,51 @@
+[THEME-AGENCY]
+A story is [THEME-AGENCY] if The story has the theme Agency
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if The story starts with a noun
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if The story is about giant creatures
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if The story has the theme Kindness
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if The story has readability score above 96.1
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if The story has the theme Problem-Solving
+
+[MYSTICAL-GIANTS]
+A story is [MYSTICAL-GIANTS] if both of the following are true:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is [TOPIC-MYSTICAL-CREATURES]
+
+[SOLVER-OR-AGENCY]
+A story is [SOLVER-OR-AGENCY] if exactly one of the following is true:
+- The story is [THEME-PROBLEM-SOLVING]
+- The story is [THEME-AGENCY]
+
+[ALTRUISM-SOLVER]
+A story is [ALTRUISM-SOLVER] if both of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [SOLVER-OR-AGENCY]
+
+[OPENING-ASSERTIVE]
+A story is [OPENING-ASSERTIVE] if both of the following are true:
+- [STARTS-WITH-NOUN] equals true
+- The story is not [THEME-AGENCY]
+
+[FEATURED-STORY]
+A story is [FEATURED-STORY] if both of the following are true:
+- The story is [MYSTICAL-GIANTS]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [ALTRUISM-SOLVER]
+    - [HIGH-READABILITY] equals true
+  - both of the following are true:
+    - The story is [OPENING-ASSERTIVE]
+    - [TOPIC-GIANT-CREATURES] is in [TOPIC-GIANT-CREATURES, TOPIC-MYSTICAL-CREATURES]

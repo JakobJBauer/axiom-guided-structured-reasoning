@@ -1,0 +1,179 @@
+{
+  "nodes": [
+    {
+      "id": "attr-13",
+      "label": "Story about time travel",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "Story about hidden treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "Philosophical story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "More than 6 paragraphs",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Readability score above 96.1",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "Humorous",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "Story about mystical creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Attribute 10",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-9",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-6",
+      "label": "Attribute 6",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-4",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-7",
+            "attr-8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Attribute 1",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-11",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-13",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-9"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Attribute 2",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-10",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-1",
+            "attr-12"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "Attribute 3",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-2",
+        "attr-5"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-9",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-3"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+[A brief prologue]
+Before we enter the formal garden of labels below, imagine a meticulous librarian of stories—one who arranges tales by scent, by seed, and by the quiet logic of their hearts. Each entry that follows keeps its logical bones intact; think of the flowery prose as a delicate ribbon tied around the same unaltered ledger. The definitions remain exact and operational; the embellishments that follow are gentle guides for the human eye.
+
+[attr-18]
+A story is [attr-18] if The story has the theme Problem-Solving.
+In more ornate language: this label crowns any narrative whose central pulse is the artful unraveling of puzzles and dilemmas—the tale where minds and hearts conspire to mend what was tangled, and solutions bloom like midnight flowers.
+
+[attr-21]
+A story is [attr-21] if The story is about hidden treasures.
+Picture a map inked in moonlight: this marker belongs to stories that whisper of buried gold, secret caches, or metaphorical troves—narratives that invite the reader to dig beneath ordinary soil to find dazzling surprises.
+
+[attr-11]
+A story is [attr-11] if The story is lighthearted.
+Affix this gentle banner to narratives that skip and dance—stories imbued with buoyant warmth, where troubles are folded into jokes and the tone breezes like a sunny afternoon.
+
+[attr-3]
+A story is [attr-3] if The story has a Red Herring.
+This tag settles over tales that mischievously mislead: an alluring false trail, a glittering distraction meant to confound the seeker before truth is gracefully revealed.
+
+[attr-8]
+A story is [attr-8] if The story starts with a preposition.
+A small, formal mark for an opening flourish—when the very first word leans into a relationship (“In,” “Under,” “Beyond”), this label is applied.
+
+[attr-20]
+A story is [attr-20] if The story is about giant creatures.
+Use this to classify epics and fables where colossi roam—beings of towering scale that reshape landscapes or the imagination itself.
+
+[attr-25]
+A story is [attr-25] if The story uses superlative forms.
+This notation captures prose that favors the utmost, the final, the best—sentences that crown something “greatest,” “most wondrous,” or otherwise absolute.
+
+[attr-17]
+A story is [attr-17] if The story has the theme Magic.
+Adorn stories where enchantment is not mere ornament but a guiding principle—tales where spells, unseen laws, and wonder steer the narrative.
+
+[attr-12]
+A story is [attr-12] if The story is modern.
+Attach this label to narratives shaped by contemporary rhythms, vernacular, or sensibilities—stories whose dress is unmistakably of the present age.
+
+[attr-7]
+A story is [attr-7] if The story starts with a adverb.
+A tiny technical flag for openings that begin with an adverbial cadence—“Suddenly,” “Quietly,” or the like—setting immediate tone and pace.
+
+[attr-22]
+A story is [attr-22] if The story is about magical lands.
+This tag belongs to worlds stitched from wonder: realms where geography bends to imagination and entire landscapes are themselves a kind of spell.
+
+[attr-4]
+A story is [attr-4] if The story has readability score below 86.4.
+A pragmatic marker for dense or challenging prose—the sort that asks more of the reader’s attention, measured against the numerical threshold of 86.4.
+
+[attr-10]
+A story is [attr-10] if The story is humorous.
+A ribbon for wit: apply it to narratives whose primary craft is to amuse, to provoke chuckles, or to reveal truth by laughter.
+
+[attr-15]
+A story is [attr-15] if The story has the theme Innovation.
+This emblem is for tales that celebrate invention—new solutions, clever contrivances, or imaginative leaps that alter the course of events.
+
+[attr-9]
+A story is [attr-9] if The story is classic.
+Label stories that hum with timeless cadence: those that wear traditional structures or venerable tones like a well-lived garment.
+
+[attr-23]
+A story is [attr-23] if The story is about mystical creatures.
+For narratives peopled by beings suffused with otherworldly traits—sprites, wraiths, and familiars that carry symbolic or supernatural weight.
+
+[attr-16]
+A story is [attr-16] if The story has the theme Kindness.
+This badge marks tales that center on compassion, generosity, and the gentle acts that stitch community together.
+
+[attr-14]
+A story is [attr-14] if The story has the theme Humor.
+Use this where humor is not merely stylistic but thematic: laughter itself is a core concern or lesson of the narrative.
+
+[attr-6]
+A story is [attr-6] if The story has fewer than 160 words.
+A precise, numerical clasp for brevity—tiny narratives that still gleam, each compact sentence a polished seed.
+
+[attr-24]
+A story is [attr-24] if The story is about the arts.
+Tag works that meditate on creation—paint, music, theater, and all manners of craft—where artistic practice forms the narrative’s core.
+
+[attr-5]
+A story is [attr-5] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - The story is [attr-21]
+    - The story is [attr-22]
+  - either of the following is true:
+    - The story is [attr-23]
+    - The story is [attr-20] xor The story is [attr-24]
+- both of the following are true:
+  - The story is [attr-3]
+  - The story is [attr-6]
+Here, in formal garden terms: a narrative earns the [attr-5] mantle if it either pairs a sense of hidden or enchanted geography with extraordinary inhabitants (or with a tasteful interplay between giants and artistic themes), or if it is a compact tale that delights with a deliberate red herring. The precise logical bones above remain unchanged.
+
+[attr-19]
+A story is [attr-19] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-10] xor The story is [attr-9]
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-CLASSIC]
+  - not both of the following are true:
+    - The story is [attr-4]
+    - The story starts with a preposition: The story is [attr-8]
+In human terms: this label rests on a twin requirement—a tonal choice (lightness, or a playful tension between humor and classical poise) and a stylistic standing that straddles modernity and classicism—while carefully excluding the simultaneous presence of stilted readability and certain prepositional openings. The logical criteria above are preserved exactly.
+
+[attr-13]
+A story is [attr-13] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-18]
+  - either of the following is true:
+    - The story is [attr-15]
+    - The story is [attr-17]
+- exactly one of the following is true:
+  - The story is [attr-16]
+  - The story is [attr-14]
+- both of the following are true:
+  - The story is in [THEME-MAGIC, THEME-INNOVATION, THEME-PROBLEM-SOLVING]
+  - The story is [attr-16] equals false
+Think of [attr-13] as the creed of central values: it embraces stories where problem-solving is married to invention or enchantment; or where either kindness or humor alone shines; or where the triumvirate of magic, innovation, and problem-solving stands tall without kindness in the mix. The conditions above remain faithfully as stated.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-5]
+- either of the following is true:
+  - The story is [attr-19]
+  - both of the following are true:
+    - The story is [attr-25]
+    - The story is not [attr-3]
+This compound badge crowns stories that possess the designated plot architecture and either the specified tonal profile, or a florid superlative tenor provided they are not led astray by a red herring. The logical scaffolding is unchanged.
+
+[attr-2]
+A story is [attr-2] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-13]
+  - exactly one of the following is true:
+    - The story is [attr-1]
+    - both of the following are true:
+      - The story is [attr-6]
+      - either of the following is true:
+        - The story is [attr-24]
+        - The story is [attr-21]
+- not both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-14]
+At last, the highest wreath: [attr-2] embraces narratives that couple core thematic depth with either a matching plot-tone fusion or the compact elegance of a short piece about the arts or secret troves; alternatively, it simply excludes tales that are both humorous in style and hymn-like in theme. The exact logical clauses above persist unchanged.
+
+[An epilogue]
+May these labels, now trimmed in lyrical language, be both beautiful to read and perfectly serviceable for careful annotation. Every bracket, every connective, and every logical turn remains as true as a cartographer’s compass—the ornamentation only invites the eye to linger.

@@ -1,0 +1,70 @@
+Think of this as a friendly guide to the tags and how they relate — written to flow like conversation, but keeping every rule and relationship exactly as written. I’ll introduce each label with a short, plain-English note and then show the precise logical definition that you’ll use for annotation or reasoning. All node IDs, logical operators, and formula structures are preserved exactly.
+
+- [attr-10]
+  - In plain terms: this label marks stories where deception is a central theme.
+  - Formal definition: A story is [attr-10] if The story has the theme Deception.
+
+- [attr-11]
+  - This one flags stories about helping others — where assistance or altruism is thematically important.
+  - Formal definition: A story is [attr-11] if The story has the theme Helping Others.
+
+- [attr-8]
+  - Use this when a story reads as philosophical, leaning into big ideas and reflection.
+  - Formal definition: A story is [attr-8] if The story is philosophical.
+
+- [attr-2]
+  - A handy tag for the narrative device where a seemingly minor detail later matters — Chekhov’s gun.
+  - Formal definition: A story is [attr-2] if The story has Checkhov's gun.
+
+- [attr-6]
+  - Simple and literal: the story’s very first word is a noun.
+  - Formal definition: A story is [attr-6] if The story starts with a noun.
+
+- [attr-12]
+  - This flags stories about hidden treasures — literal or figurative buried riches, secrets, and findable fortune.
+  - Formal definition: A story is [attr-12] if The story is about hidden treasures.
+
+- [attr-9]
+  - For stories that emphasize agency — characters making choices and affecting their world.
+  - Formal definition: A story is [attr-9] if The story has the theme Agency.
+
+- [attr-5]
+  - Like [attr-6], but for when the opening word is an adjective.
+  - Formal definition: A story is [attr-5] if The story starts with a adjective.
+
+- [attr-3]
+  - Use this for stories that place contrasting elements side-by-side to create meaning.
+  - Formal definition: A story is [attr-3] if The story has juxtaposition.
+
+- [attr-4]
+  - This one captures a specific opening pattern. Think of it as saying: the opening matters if either the piece starts with a noun, or there’s an exclusive relationship between adjective and noun openings.
+  - Formal definition: A story is [attr-4] if either of the following is true:
+    - The story is [attr-6]
+    - The story is [attr-5] xor [attr-6]
+
+- [attr-7]
+  - This label groups a few things that, together, indicate a tightly organized deceptive structure: an emphasis on the opening plus certain thematic or device-driven combinations. Read it as “opening primacy plus one of these deception-related conditions.”
+  - Formal definition: A story is [attr-7] if both of the following are true:
+    - The story is [attr-4]
+    - Either of the following is true:
+      - Both of the following are true:
+        - The story is [attr-10]
+        - The story is [attr-12]
+      - Either of the following is true:
+        - The story is [attr-2] xor [attr-9]
+        - The story is [attr-10] and not [attr-9]
+
+- [attr-1]
+  - This final tag marks narratives that are built from the structured-deception pattern but avoid being simply altruistic or purely philosophical — and then add a specific surface or opening condition. In short: it requires [attr-7], forbids the simultaneous presence of helping-others and philosophical style, and then accepts either juxtaposition or a particular starts-with rule (explicitly expressed with equals true/false).
+  - Formal definition: A story is [attr-1] if all of the following are true:
+    - The story is [attr-7]
+    - Not both of the following are true:
+      - The story is [attr-11]
+      - The story is [attr-8]
+    - Either of the following is true:
+      - The story is [attr-3]
+      - Both of the following are true:
+        - The story is [attr-6] equals true
+        - The story is [attr-5] equals false
+
+That’s it — the same logic, the same nodes, and the exact operators, but written to feel more conversational and easy to follow while remaining precise for annotation and reasoning.

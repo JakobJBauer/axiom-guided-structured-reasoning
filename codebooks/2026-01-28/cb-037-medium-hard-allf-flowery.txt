@@ -1,0 +1,65 @@
+A prefatory whisper before the catalogue: imagine, if you will, a dusty salon of lantern light where scholars and storytellers have gathered to catalogue the secret taxonomy of tales. Each entry below is a labeled strand of that living tapestry. I shall dress the definitions in floral language and conjure a little myth behind the codex, but rest assured—the logical bones, the nodes in their exact [BRACKET] forms, and the precise relations between them are untouched and intact. Read as both guide and incantation.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if The story has a story within a story.
+- In plain terms and in poetic echo: the tale cradles another tale within its heart — a narrative like a song within a song, a smaller world tucked into the folds of the larger one.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if The story has the theme Magic.
+- Rendered in richer language: the narrative’s dominant pulse is the wondrous and the uncanny; sorcery, enchantment, or the marvelous form its central theme.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if The story has a flashback.
+- Said with color: the plot bends backward through memory — scenes that turn their gaze to earlier moments, summoning the past into the present action.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if The story is about the arts.
+- Ornamented explanation: the tale’s subject is the realm of art — painters, musicians, sculptors, performance — the craft and culture of artistic creation.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if The story is minimalist.
+- Flowery restatement: the voice favors deliberate simplicity and restraint, a pared-down aesthetic where every word is counted and nothing extraneous intrudes.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if The story has circular narrative structure.
+- In lyrical terms: the plot comes full circle, orbiting back to its beginning in a ringlike motion, forming a structural helix that returns the reader to the start.
+
+[DEVICE-XOR]
+A story is [DEVICE-XOR] if exactly one of the following is true:
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [HAS-A-FLASHBACK]
+- Interpretation embroidered: [DEVICE-XOR] marks the exquisite exclusivity of devices — either an inner tale blooms within the main tale, or the narrative reveries of a flashback visit, but never both at once; precisely one of those devices holds true.
+
+[DEVICE-EQUAL]
+A story is [DEVICE-EQUAL] if the truth value of [HAS-A-STORY-WITHIN-A-STORY] equals the truth value of [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- In poetic clarity: [DEVICE-EQUAL] denotes a parity of form — either both the nested-story device and the ringed circular structure are present together, or neither is; their truth values march in step, equal as twin stars.
+
+[MAGIC-ART-MEMBER]
+A story is [MAGIC-ART-MEMBER] if the story's primary theme or topic is in the set {[THEME-MAGIC], [TOPIC-THE-ARTS]}
+- Flowery explication: this membership invites tales whose core belongs to the fellowship of the magical and the artistic — if its principal identity is either enchantment or artistry, it joins this set.
+
+[COMPLEX-NARRATIVE-CORE]
+A story is [COMPLEX-NARRATIVE-CORE] if both of the following are true:
+- Either of the following are true:
+  - The story is [DEVICE-XOR]
+  - The story is [DEVICE-EQUAL]
+- The story is not [STYLE-MINIMALIST] and (the story is [HAS-CIRCULAR-NARRATIVE-STRUCT] or the story is [HAS-A-FLASHBACK])
+- Blossomed reading: to be in the [COMPLEX-NARRATIVE-CORE] is to be a richly woven specimen — first, it must satisfy one of the device conditions (either the exclusive device choice of [DEVICE-XOR] or the parity condition [DEVICE-EQUAL]); and second, it must refuse the austerity of minimalism while embracing cyclical architecture or the backward-turning echo of a flashback. Both of these broad requirements must hold.
+
+[ART-MAGIC-NARRATIVE]
+A story is [ART-MAGIC-NARRATIVE] if both of the following are true:
+- The story is [MAGIC-ART-MEMBER]
+- Either of the following are true:
+  - The story is [COMPLEX-NARRATIVE-CORE]
+  - The story is [STYLE-MINIMALIST]
+- Enchanted elucidation: an [ART-MAGIC-NARRATIVE] lives where motif and method meet — its soul is magical or artistic, and it is either elaborately complex by structural measures or deliberately spare in style. Either condition suffices in concert with the membership.
+
+[COMPLEX-ARTISTIC-NARRATIVE]
+A story is [COMPLEX-ARTISTIC-NARRATIVE] if both of the following are true:
+- The story is [ART-MAGIC-NARRATIVE]
+- Exactly one of the following is true:
+  - The story is [DEVICE-EQUAL]
+  - The story is not [HAS-A-FLASHBACK]
+- Final poetic note: to be crowned a [COMPLEX-ARTISTIC-NARRATIVE] the tale must first be an [ART-MAGIC-NARRATIVE], and then it must satisfy an exclusive choice: either it stands in the mirrored relation of [DEVICE-EQUAL], or alternatively it stands free of flashback; precisely one of these holds, no more, no less.
+
+Thus ends the codex’s garden-walk: each entry retains its logical scaffolding, but now blooms with description and story. Use these definitions as you would botanical keys — to identify, to classify, and to celebrate the many forms a story may take.

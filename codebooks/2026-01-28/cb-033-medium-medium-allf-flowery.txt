@@ -1,0 +1,52 @@
+[THEME-HUMOR]
+A story is [THEME-HUMOR] if The story has the theme Humor — that bright, mischievous thread that makes the narrative wink, waltz, and tumble into laughter.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations — tales that drift like dust over ruined marble, singing of vanished empires, forgotten cities, and the ghosts of bygone grandeur.
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if The story is playful — light-footed and sprightly in tone, teasing conventions with a delighted grin.
+
+[STYLE-SURREAL]
+A story is [STYLE-SURREAL] if The story is surreal — dream-woven, where cause and consequence unfold in strange, incandescent patterns.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if The story uses discourse markers — the linguistic signposts and soft bridges that guide the reader through thought and turn.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if The story has readability score below 86.4 — where sentences tangle and the prose requires extra effort to unpick.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic — composed with the measured cadence and venerable restraint of timeless craft.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if The story is philosophical — a contemplative lantern that probes meaning, essence, and the quiet questions beneath action.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger — that deliciously cruel pause at the edge of fate, leaving the reader suspended between breaths.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if The story starts with a preposition — the sentence opening like a doorway led in by a small, humble word.
+
+[TONE-MIX]
+A story is [TONE-MIX] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [STYLE-PLAYFUL]
+  - The story is [STYLE-PHILOSOPHICAL]
+- Both of the following are true:
+  - The story is [STYLE-SURREAL]
+  - The story is not [STYLE-CLASSIC]
+
+[PRESENTATION-CRITERIA]
+A story is [PRESENTATION-CRITERIA] if both of the following are true:
+- The story is in the following set:
+  - [THEME-HUMOR]
+  - [TOPIC-LOST-CIVILIZATIONS]
+- Either of the following is true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - Both of the following are true:
+    - The story is equal to [THEME-HUMOR]
+    - The story is not [LOW-READABILITY]
+- Or the story is [TONE-MIX]
+
+(Thus, like a rose pressed between pages of a grimoire, these labels and their relations remain intact: every bracketed sigil, every logical hinge, preserved so that annotators may read and reason with both precision and pleasure.)

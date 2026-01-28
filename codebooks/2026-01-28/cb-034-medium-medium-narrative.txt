@@ -1,0 +1,57 @@
+Imagine a library where each label is a little flag waving over a tale — each tells you exactly what to expect. I’ll walk you through those flags like characters in a story, keeping every rule of their relationships intact so you can use them to annotate and reason with confidence.
+
+- [THEME-GROWTH]
+  In this catalog, a story earns the flag [THEME-GROWTH] whenever it carries the theme Growth.
+
+- [THEME-HELPING-OTHERS]
+  A tale bears the banner [THEME-HELPING-OTHERS] if its heart is about Helping Others.
+
+- [STARTS-WITH-ADVERB]
+  The label [STARTS-WITH-ADVERB] is given to any story that opens with an adverb — that first word sets the scene and takes the lead.
+
+- [STYLE-MODERN]
+  When a story feels contemporary in voice or form, we mark it as [STYLE-MODERN].
+
+- [TOPIC-SEASONAL-CHANGES]
+  If a story is about seasonal changes, it receives the tag [TOPIC-SEASONAL-CHANGES].
+
+- [USES-PERFECT-ASPECT]
+  The label [USES-PERFECT-ASPECT] belongs to stories that use the perfect aspect in their verb forms.
+
+- [LOW-READABILITY]
+  We call a story [LOW-READABILITY] when its readability score falls below 86.4.
+
+- [STYLE-CLASSIC]
+  A story is [STYLE-CLASSIC] if it aligns with a classic style.
+
+- [TOPIC-MYSTICAL-CREATURES]
+  The tag [TOPIC-MYSTICAL-CREATURES] is reserved for stories about mystical creatures.
+
+- [HIGH-READABILITY]
+  A story is [HIGH-READABILITY] when its readability score rises above 96.1.
+
+Now meet the composite characters — labels that are born from combinations of those simpler traits. Their identities are strict; they follow precise rules. I’ll tell you the rules like plot twists, but I won’t change the logic.
+
+- [SEASONAL-GROWTH]
+  A story is [SEASONAL-GROWTH] if all of the following are true:
+  - The story is [TOPIC-SEASONAL-CHANGES]
+  - The story is [THEME-GROWTH]
+  - The story is not [TOPIC-MYSTICAL-CREATURES]
+  Think of [SEASONAL-GROWTH] as a tale rooted in the rhythms of the seasons and centered on personal or natural growth — but explicitly excluding anything about mystical creatures.
+
+- [COMPOSED-STORY]
+  A story is [COMPOSED-STORY] if either of the following is true:
+  - both of the following are true:
+    - The story is [SEASONAL-GROWTH]
+    - The story is [THEME-HELPING-OTHERS]
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [STYLE-MODERN]
+      - The story is not [LOW-READABILITY]
+    - both of the following are true:
+      - The story is [STYLE-CLASSIC]
+      - both of the following are true:
+        - The story is [USES-PERFECT-ASPECT]
+        - The story is [HIGH-READABILITY]
+
+Read this like a set of storytelling laws: a [COMPOSED-STORY] can arrive in one of three main ways — as a seasonal-growth tale that also helps others, or as a modern piece that remains readable, or as a classic whose perfected verbs and high readability make it shine. Each path follows the exact logical structure above; the relationships and node IDs remain unchanged so you can apply them directly in annotation and reasoning.

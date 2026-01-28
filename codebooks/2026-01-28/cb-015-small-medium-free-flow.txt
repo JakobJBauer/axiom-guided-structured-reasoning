@@ -1,0 +1,32 @@
+Think of this as a little glossary for tagging stories — short, plain, and a bit conversational so it's easier to remember what each label really means.
+
+[SHORT-STORY]
+Call a piece [SHORT-STORY] when it’s under 160 words. Simple as that: fewer than 160 words makes it a short story.
+
+[THEME-MAGIC]
+If the story centers on magic, give it the [THEME-MAGIC] label — the theme is Magic.
+
+[USES-WH-QUESTIONS]
+If the story contains wh-questions — who, what, when, where, why, how — mark it as [USES-WH-QUESTIONS].
+
+[HAS-CHECKHOVS-GUN]
+When some element set up early plays a required role later (Chekhov’s gun), the story is [HAS-CHECKHOVS-GUN].
+
+[HIGH-READABILITY]
+A story earns [HIGH-READABILITY] when its readability score is above 96.1.
+
+[MYSTERIOUS-MAGIC]
+A story is [MYSTERIOUS-MAGIC] if both of the following are true:
+- The story is [THEME-MAGIC]
+- The story is not [HAS-CHECKHOVS-GUN]
+
+[TIGHT-MAGIC-CRAFT]
+A story is [TIGHT-MAGIC-CRAFT] if both of the following are true:
+- The story is [SHORT-STORY]
+- Either of the following is true:
+  - The story is [MYSTERIOUS-MAGIC]
+  - Exactly one of the following is true:
+    - The story is not [HIGH-READABILITY]
+    - The story is [USES-WH-QUESTIONS]
+
+That’s it — the labels stay the same, the logical relationships are preserved, and you can use this wording as a friendly checklist while annotating and reasoning about stories.

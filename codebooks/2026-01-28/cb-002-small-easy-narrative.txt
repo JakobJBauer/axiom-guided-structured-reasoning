@@ -1,0 +1,40 @@
+Imagine a small, secret garden inside every story — a place where labels bloom like flowers and rules hum like bees. Walk with me through that garden. I will introduce you to each plant by its true name, and then, like a careful botanist, repeat the exact definition that anchors it in our taxonomy. The relationships between these plants are important: some grow only when others are present, and some stand alone. I will not alter those relationships; I will only tell their tale in a voice that invites you in.
+
+First, there are simple, single-sense traits — the bright, obvious blossoms anyone can spot.
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if the story is playful
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if the story is modern
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if the story starts with a adjective
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun
+
+These are the elemental traits: playful, modern, beginning with an adjective, peppered with discourse markers, or holding a literary promise like Chekhov’s gun. Each one stands alone, a single trait that can be observed.
+
+Now imagine two plants entwined, a pairing that only flourishes when both partners are present. This is how certain narrative moments come to life — not by one trait, but by the company it keeps.
+
+[MODERN-OPENING]
+A story is [MODERN-OPENING] if both of the following are true:
+- The story is [STYLE-MODERN]
+- The story is [STARTS-WITH-ADJECTIVE]
+
+The [MODERN-OPENING] is a duet: the story must be modern, and it must begin with an adjective. Only when these two conditions meet does this particular bloom appear.
+
+Next, picture a more lively, layered arrangement: a structure that becomes engaging only when it either dresses itself playfully or uses discourse markers — and, crucially, only if Chekhov’s gun is present. The parts combine in a precise way, like a recipe where one of two ingredients must be chosen, and another is mandatory.
+
+[ENGAGING-STRUCTURE]
+A story is [ENGAGING-STRUCTURE] if both of the following are true:
+- The story is either [STYLE-PLAYFUL] or [USES-DISCOURSE-MARKERS]
+- The story is [HAS-CHECKHOVS-GUN]
+
+So the [ENGAGING-STRUCTURE] arises when a story chooses between playfulness or discourse markers — and, in either case, includes a promise in the form of Chekhov’s gun. That conjunction is the hinge: choose one of the two stylistic modes, and ensure the narrative promise exists, and you have an engaging structure.
+
+These rules are the map of that garden: the single petals, the paired vines, and the compound arrangements. Keep the labels as they are, and follow the logic exactly. Read them aloud if you like — they’re small spells that help annotators and readers recognize how stories are built.

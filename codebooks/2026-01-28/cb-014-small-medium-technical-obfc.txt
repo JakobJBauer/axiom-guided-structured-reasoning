@@ -1,0 +1,38 @@
+Purpose
+This codebook defines binary annotation labels for short stories. Each label applies when the specified logical condition(s) are satisfied. Node identifiers are shown in bracketed form and must be preserved exactly. Logical relationships use standard Boolean operators: AND (conjunction), OR (disjunction), NOT (negation), and XOR (exclusive OR — “exactly one true”).
+
+Definitions
+
+[attr-4]
+Definition: The label [attr-4] is true for a story if the story’s opening token is an adjective.
+Specification: Apply this label when the first lexical token of the story is an adjective (grammatical category: ADJ).
+
+[attr-5]
+Definition: The label [attr-5] is true for a story that semantically concerns giant creatures.
+Specification: Apply this label when the primary topic or subject matter of the story is giant creatures (e.g., giant animals, kaiju, enormous monsters).
+
+[attr-3]
+Definition: The label [attr-3] is true iff both of the following conditions hold:
+- The story is [attr-5]
+- The story is NOT [attr-4]
+Formal expression: [attr-3] = [attr-5] AND NOT [attr-4]
+
+[attr-1]
+Definition: The label [attr-1] is true when exactly one of the following conditions is true (exclusive OR):
+- The story is [attr-4]
+- The story is [attr-5]
+Specification: This is an exclusive disjunction: the label holds if either the story starts with an adjective or the story is about giant creatures, but not both.
+Formal expression: [attr-1] = XOR([attr-4], [attr-5]) — exactly one true
+
+[attr-2]
+Definition: The label [attr-2] is true when both of the following are satisfied:
+- The story is [attr-3]
+- Either of the following is true:
+  - The story is [attr-1]
+  - The story is NOT [attr-4]
+Formal expression: [attr-2] = [attr-3] AND ( [attr-1] OR NOT [attr-4] )
+
+Notes on application
+- All conditions are binary (true/false). Annotators should evaluate each base predicate ([attr-4], [attr-5]) before deriving composite labels.
+- Preserve the exact bracketed node identifiers when recording annotations.
+- Logical operators must be applied as specified (AND, OR, NOT, XOR). Do not alter the relationships or add intermediary nodes.

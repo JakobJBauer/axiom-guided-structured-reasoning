@@ -1,0 +1,80 @@
+Codebook — Structured View
+Purpose: Present each node clearly and hierarchically so annotators can follow the logical requirements for labeling. All node IDs and logical relationships are preserved exactly as written.
+
+1) Atomic (single-condition) nodes
+- [attr-4]
+  - Definition: A story is [attr-4] if The story has a moral lesson.
+
+- [attr-12]
+  - Definition: A story is [attr-12] if The story uses perfect aspect.
+
+- [attr-2]
+  - Definition: A story is [attr-2] if The story has a cliffhanger.
+
+- [attr-11]
+  - Definition: A story is [attr-11] if The story has the theme Kindness.
+
+- [attr-10]
+  - Definition: A story is [attr-10] if The story is modern.
+
+- [attr-3]
+  - Definition: A story is [attr-3] if The story has a flashback.
+
+- [attr-8]
+  - Definition: A story is [attr-8] if The story is classic.
+
+- [attr-6]
+  - Definition: A story is [attr-6] if The story has more than 375 words.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if The story has juxtaposition.
+
+- [attr-9]
+  - Definition: A story is [attr-9] if The story is lighthearted.
+
+2) Composite nodes (multiple logical conditions)
+- [attr-7]
+  - Summary: Use this label when all listed conditions below hold simultaneously.
+  - Formal condition: A story is [attr-7] if all of the following are true:
+    - Either of the following is true:
+      - The story is [attr-2]
+      - The story is [attr-3]
+    - Exactly one of the following is true:
+      - The story is [attr-5]
+      - The story is [attr-12]
+    - The story is not [attr-9]
+    - At least one of the story's structural features is in the set { [attr-2], [attr-3], [attr-5] }
+
+  - Notes for annotation:
+    - “Either … is true” means at least one of the two listed structural features must be present.
+    - “Exactly one … is true” requires an exclusive choice between the two listed features (one present, the other absent).
+    - The final set membership requirement must hold even if it overlaps with earlier conditions.
+
+- [attr-1]
+  - Summary: This label requires that the story be both narratively rich and satisfy two style/theme relationships simultaneously.
+  - Formal condition: A story is [attr-1] if both of the following are true:
+    - The story is [attr-7]
+    - Both of the following are true:
+      - Either of the following is true:
+        - The story is [attr-11]
+        - The story is [attr-4]
+      - The presence of [attr-10] equals the presence of [attr-8]
+
+  - Notes for annotation:
+    - “Either … is true” in the nested condition: at least one of [attr-11] or [attr-4] must be present.
+    - “The presence of [attr-10] equals the presence of [attr-8]” means these two style labels must match in presence — either both are present or both are absent.
+    - All conditions above must be satisfied together for [attr-1] to apply.
+
+3) Quick checklist (for annotators)
+- To mark [attr-7], verify:
+  - At least one of [attr-2] or [attr-3] is true.
+  - Exactly one of [attr-5] or [attr-12] is true.
+  - [attr-9] is false.
+  - At least one of { [attr-2], [attr-3], [attr-5] } is true.
+
+- To mark [attr-1], verify:
+  - The story already meets all requirements for [attr-7].
+  - At least one of [attr-11] or [attr-4] is true.
+  - [attr-10] and [attr-8] either both appear or both do not appear.
+
+End of codebook.

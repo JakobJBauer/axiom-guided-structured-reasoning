@@ -1,0 +1,135 @@
+I’ll walk you through this codebook in a relaxed, conversational way while keeping every rule, identifier, and logical relationship exactly where they belong. The labels in brackets are unchanged, and the logical structure—every “either,” “both,” “exactly one,” “not both,” and “xor”—remains untouched. Think of this as a guided tour through the rules you’ll use for annotating and reasoning.
+
+[attr-18]
+If a story carries the theme of problem-solving, we tag it as [attr-18]. It’s that clear and direct.
+
+[attr-21]
+When the story centers on hidden treasures, give it the label [attr-21].
+
+[attr-11]
+If the feel of the story is breezy and carefree, it gets [attr-11].
+
+[attr-3]
+If there’s a deliberate red herring in the plot—a distraction meant to mislead—mark the story as [attr-3].
+
+[attr-8]
+If the very first word of the story is a preposition, note it as [attr-8]. (Yes, we capture openings like that.)
+
+[attr-20]
+Stories about enormous beasts, oversized fauna, or giant creatures belong under [attr-20].
+
+[attr-25]
+If the language leans into extremes—“best,” “biggest,” “most”—label it [attr-25].
+
+[attr-17]
+If magic is a core theme, tag the story as [attr-17].
+
+[attr-12]
+If the style reads contemporary, fresh, and modern, use [attr-12].
+
+[attr-7]
+When the story opens with an adverb, indicate that with [attr-7].
+
+[attr-22]
+If the setting or focus is on enchanted realms or magical lands, that’s [attr-22].
+
+[attr-4]
+When the readability score falls below 86.4, mark the story as [attr-4].
+
+[attr-10]
+If its voice is jokey or comedic, choose [attr-10].
+
+[attr-15]
+If the theme revolves around innovation—new ideas or inventive solutions—label it [attr-15].
+
+[attr-9]
+If the story reads with a timeless, classic tone, that’s [attr-9].
+
+[attr-23]
+Stories focused on mystical, otherworldly creatures get [attr-23].
+
+[attr-16]
+If kindness is a driving theme, use [attr-16].
+
+[attr-14]
+If humor itself is a central theme (not just the style), assign [attr-14].
+
+[attr-6]
+Anything under 160 words is captured by [attr-6].
+
+[attr-24]
+When the arts—painting, music, theater, dance—are the subject, that’s [attr-24].
+
+[attr-5]
+Now for a slightly more complex rule. A story is [attr-5] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - The story is [attr-21]
+    - The story is [attr-22]
+  - either of the following is true:
+    - The story is [attr-23]
+    - The story is [attr-20] xor The story is [attr-24]
+- both of the following are true:
+  - The story is [attr-3]
+  - The story is [attr-6]
+
+So, in plain terms: either it pairs a hidden-treasure or magical-land focus with mystical creatures or a mutual exclusivity between giant creatures and the arts, or it’s a short piece that includes a red herring. The structure stays exactly like that.
+
+[attr-19]
+A story qualifies as [attr-19] when both of these conditions hold:
+- either of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-10] xor The story is [attr-9]
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-CLASSIC]
+  - not both of the following are true:
+    - The story is [attr-4]
+    - The story starts with a preposition: The story is [attr-8]
+
+So the tone-and-style label combines a light, humorous, or classically tinged feel with the story being modern or classic in form, and it excludes the case where low readability coincides with an opening preposition.
+
+[attr-13]
+The label [attr-13] applies if any one of these three paths is satisfied:
+- both of the following are true:
+  - The story is [attr-18]
+  - either of the following is true:
+    - The story is [attr-15]
+    - The story is [attr-17]
+- exactly one of the following is true:
+  - The story is [attr-16]
+  - The story is [attr-14]
+- both of the following are true:
+  - The story is in [THEME-MAGIC, THEME-INNOVATION, THEME-PROBLEM-SOLVING]
+  - The story is [attr-16] equals false
+
+In short: thematic core can come from a blend of problem-solving with innovation or magic, an exclusive choice between kindness and humor as theme, or being squarely in the set of magic/innovation/problem-solving while explicitly not being kindness.
+
+[attr-1]
+We call a story [attr-1] when both of these hold:
+- The story is [attr-5]
+- either of the following is true:
+  - The story is [attr-19]
+  - both of the following are true:
+    - The story is [attr-25]
+    - The story is not [attr-3]
+
+So it’s a plot-structured piece that either fits the tone-and-style pattern or uses superlatives and lacks a red herring.
+
+[attr-2]
+Finally, a story becomes [attr-2] under either of these two options:
+- both of the following are true:
+  - The story is [attr-13]
+  - exactly one of the following is true:
+    - The story is [attr-1]
+    - both of the following are true:
+      - The story is [attr-6]
+      - either of the following is true:
+        - The story is [attr-24]
+        - The story is [attr-21]
+- not both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-14]
+
+So a complex story type either combines a thematic core with a unique choice between combined plot/tone or being a short arts- or treasure-focused story, or it avoids the simultaneous presence of humorous style and a humor theme.
+
+That’s the whole codebook, restated in a more natural, conversational voice. Every node ID, every logical operator, and every relationship has been kept intact—just presented in a way that’s easier to read and think with. If you’d like, I can also produce a compact checklist version for annotators or an annotated example to show these rules in action.

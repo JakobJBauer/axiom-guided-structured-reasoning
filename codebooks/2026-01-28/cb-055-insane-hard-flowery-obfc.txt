@@ -1,0 +1,157 @@
+[A shimmering preface]
+
+A story is [attr-36] if the tale bears the luminous theme Problem-Solving, as though it were a puzzle box coaxing the reader to pry it open.
+
+A story is [attr-41] if the narrative wanders among mystical creatures, populated by beings that breathe starlight and whisper secrets of old.
+
+A story is [attr-24] if the composition contains fewer than 160 words, a brief blossom that opens and closes within a single breath.
+
+A story is [attr-42] if the tale turns upon the gears of time travel, where moments fold like origami and yesterday converses with tomorrow.
+
+A story is [attr-44] if the prose adorns itself with discourse markers, the small signposts that guide the reader along the byways of thought.
+
+A story is [attr-38] if the narrative centers on cultural traditions, honoring rituals and customs passed down like heirloom seeds.
+
+A story is [attr-34] if the story shines with the theme Innovation, celebrating fresh ideas and the courage to reshape the known.
+
+A story is [attr-25] if the opening word is an adverb, the sentence beginning with a swash of manner that sets the cadence.
+
+A story is [attr-32] if its heart belongs to the theme Helping Others, where compassion moves the plot like a steadfast compass.
+
+A story is [attr-12] if it presents juxtaposition—contrasts placed side by side to make meanings sing.
+
+A story is [attr-27] if it wears a playful style, fluttering with lightheartedness and mischievous grace.
+
+A story is [attr-11] if it contains a Red Herring: a deliberate false trail that teases and deceives before the truth is revealed.
+
+A story is [attr-31] if the narrative includes the theme Hardship, where trials shape the soul like weathered stone.
+
+A story is [attr-33] if the piece carries the theme Humor, lending laughter as a salve to the scenes.
+
+A story is [attr-29] if it embodies the theme Agency, celebrating characters who act and shape their destinies.
+
+A story is [attr-9] if the tale contains a flashback, a window through which past events illuminate the present.
+
+A story is [attr-45] if the prose employs perfect aspect, verbs that trace actions completed, with echoes that reach across time.
+
+A story is [attr-43] if it uses conditional mood, phrasing possibility and hypothesis like fragile glass of “if” and “would.”
+
+A story is [attr-46] if it asks wh-questions, those curious queries—who, what, when, where, why, how—that pry open meaning.
+
+A story is [attr-35] if it is woven with the theme Kindness, kindness spilling from character to character like warm light.
+
+A story is [attr-10] if it carries a moral lesson, an explicit shard of wisdom meant to linger after the last line.
+
+A story is [attr-26] if it adopts a humorous style, crafting wit and comic timing as its cloth.
+
+A story is [attr-16] if the piece has a readability score below 86.4, a density that might resist the casual reader’s stride.
+
+A story is [attr-18] if it is arranged in more than 6 paragraphs, a multi-chambered tale with several breaths.
+
+A story is [attr-8] if it ends upon a cliffhanger, leaving the future suspended like a bird paused mid-flight.
+
+A story is [attr-40] if it explores magical lands—realms where maps are drawn from moonbeams and valleys hum with enchantment.
+
+A story is [attr-39] if it concerns giant creatures, behemoths that make mountains seem like pebbles by comparison.
+
+A story is [attr-30] if it is threaded with the theme Growth, depicting characters who stretch and deepen as seasons pass.
+
+A story is [attr-15] if its length exceeds 375 words, a sprawling tapestry long enough to wander.
+
+A story is [attr-6] if the story is in [TOPIC-MYSTICAL-CREATURES, TOPIC-MAGICAL-LANDS, TOPIC-GIANT-CREATURES], a triad of fantastical territories under the same banner.
+
+A story is [attr-17] if either of the following is true:
+- The story is [attr-40]
+- The story is [attr-41]
+
+A story is [attr-5] if all of the following are true:
+- The story is [attr-15]
+- The story is either [attr-39] or [attr-40]
+- The story is [attr-30]
+
+A story is [attr-23] if both of the following are true:
+- The story is [attr-24]
+- The story is [attr-17]
+
+A story is [attr-37] if both of the following are true:
+- The story is [attr-42]
+- Either of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-9]
+
+A story is [attr-3] if both of the following are true:
+- The story is [attr-18]
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-8]
+
+A story is [attr-20] if either of the following is true:
+- The story is [attr-25]
+- The story is [attr-44]
+- The story is [attr-46]
+
+A story is [attr-14] if exactly one of the following is true:
+- The story is [attr-26]
+- The story is [attr-27]
+
+A story is [attr-19] if both of the following are true:
+- The story is [attr-35]
+- The story is [attr-10]
+
+A story is [attr-13] if all of the following are true:
+- The story is [attr-34]
+- The story is [attr-32]
+- Either of the following is true:
+  - The story is [attr-29]
+  - The story is [attr-36]
+
+A story is [attr-7] if both of the following are true:
+- The story is [attr-30]
+- The story is [attr-31]
+
+A story is [attr-4] if both of the following are true:
+- The story is not [attr-16]
+- Either of the following is true:
+  - The story is [attr-24]
+  - The story is [attr-15]
+
+A story is [attr-1] if both of the following are true:
+- The story is [attr-24]
+- Exactly one of the following is true:
+  - The story is [attr-33]
+  - The story is [attr-31]
+
+A story is [attr-22] if both of the following are true:
+- The story is [attr-46]
+- The story is [attr-44]
+
+A story is [attr-2] if all of the following are true:
+- Either of the following is true:
+  - The story is [attr-37]
+  - The story is [attr-17]
+- Both of the following are true:
+  - The story is [attr-3]
+  - Either of the following is true:
+    - The story is [attr-20]
+    - The story is [attr-4]
+- Either of the following is true:
+  - The story uses [attr-43]
+  - The story uses [attr-45]
+
+A story is [attr-28] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-13]
+  - The story is [attr-19]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-36]
+
+A story is [attr-21] if all of the following are true:
+- The story is [attr-20]
+- The story is not [attr-27]
+- Either of the following is true:
+  - The story is [attr-45]
+  - The story is [attr-43]
+
+[An earnest coda]
+This lovingly rephrased codebook keeps every logical hinge and bracketed sigil exactly where they belong, like constellations unchanged in a newly embroidered sky. Use it as your map: the relationships stand firm even as the language blooms.

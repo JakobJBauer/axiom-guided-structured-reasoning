@@ -1,0 +1,42 @@
+Picture a small, precise catalog kept by a careful archivist: each label is a signpost pointing to a property a story may wear. I’ll walk you through those labels, one by one, like rooms in a house, and tell you how the rooms connect — truthfully, logically, and with a flicker of storytelling warmth. The labels themselves remain unchanged: the bracketed node IDs are the pillars that hold the whole map together.
+
+[attr-6]
+In the first room sits the mood of possibility. A story is [attr-6] if the narrative leans on conditional language — the soft architecture of “would,” “could,” “if only.” If that language threads through the tale, the story bears this label.
+
+[attr-7]
+Next, there’s the room of completed time. A story is [attr-7] if it uses the perfect aspect — those constructions that speak of actions completed with a present effect, like “has done” or “had been.” When a tale signals completed actions in this way, it earns this name.
+
+[attr-5]
+Down the corridor is the motif room. A story is [attr-5] if the theme of deception is at its heart — if trickery, misleading appearances, or deliberate concealment drive the plot or the message.
+
+[attr-4]
+Near the windows is a perch for suspense. A story is [attr-4] if it ends on an unresolved edge — a hanging question, a sudden halt, or a breathless pause that leaves the outcome unknown.
+
+[attr-3]
+Now we arrive at a doorway that requires three locks to open. A story is [attr-3] if all of the following are true:
+- The story is [attr-5]
+- The story is not [attr-4]
+- Either of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-7]
+Only when the tale centers on deception, does not leave us dangling on a cliffhanger, and also uses either conditional mood or perfect aspect, does it step into the room called [attr-3].
+
+[attr-2]
+This next chamber holds a double-turned key. A story is [attr-2] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-6]
+- The story is not both of the following:
+  - The story is [attr-7]
+  - The story is [attr-6]
+In plain terms: the story uses one of those temporal moods (perfect aspect or conditional mood), but it does not use both at once. It sits ambivalently between aspectual choices.
+
+[attr-1]
+Finally, we reach the attic where ambiguity and artful deceit mingle. A story is [attr-1] if both of the following are true:
+- The story is [attr-3]
+- Either of the following is true:
+  - The story is [attr-2]
+  - The story is not [attr-4]
+So to enter this attic, the tale must already qualify as [attr-3], and then it must either wear the ambivalent timing of [attr-2] or be free of a cliffhanger. When those conditions align, the narrative earns the final, intriguingly named label.
+
+That is the map: each bracketed signpost is fixed, every logical hinge preserved. Walk through it when you annotate a tale, and you’ll know precisely which rooms it inhabits.

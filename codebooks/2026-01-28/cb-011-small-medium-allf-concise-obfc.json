@@ -1,0 +1,119 @@
+{
+  "nodes": [
+    {
+      "id": "attr-6",
+      "label": "About the arts",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Uses the conditional mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Starts with an adjective",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Is philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Attr-3: attr-7 and not attr-4",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-7",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Attr-1: exactly one of attr-6 or attr-5",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-6",
+        "attr-5"
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Attr-2: attr-3 or (in topic-set-with attr-6 and attr-5 equals not attr-7)",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-3",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "In",
+              "formula_args": [
+                "attr-6",
+                [
+                  "topic-set-including-attr-6"
+                ]
+              ]
+            },
+            {
+              "formula_type": "Equal",
+              "formula_args": [
+                "attr-5",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-7"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-7",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-2"
+    }
+  ]
+}

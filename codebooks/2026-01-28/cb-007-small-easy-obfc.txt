@@ -1,0 +1,21 @@
+[attr-3]
+A story is STYLE-LIGHTHEARTED if the story is lighthearted.
+
+[attr-2]
+A story is STARTS-WITH-ADVERB if the story starts with a adverb.
+
+[attr-1]
+A story is LONG-STORY if the story has more than 375 words.
+
+[attr-4]
+A story is THEME-HUMOR if the story has the theme Humor.
+
+[attr-5]
+A story is TOPIC-BYGONE-ERAS if the story is about bygone eras.
+
+[attr-6]
+A story is WHIMSY-RETRO-COMEDY if both of the following are true:
+- The story is [attr-3]
+- The story is [attr-4] and either of the following is true:
+  - The story is [attr-5]
+  - The story is [attr-2]

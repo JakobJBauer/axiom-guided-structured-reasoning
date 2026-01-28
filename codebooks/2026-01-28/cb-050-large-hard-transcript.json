@@ -1,0 +1,395 @@
+{
+  "nodes": [
+    {
+      "id": "has-a-red-herring",
+      "label": "[HAS-A-RED-HERRING]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "many-paragraphs",
+      "label": "[MANY-PARAGRAPHS]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-lighthearted",
+      "label": "[STYLE-LIGHTHEARTED]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-checkhovs-gun",
+      "label": "[HAS-CHECKHOVS-GUN]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-magic",
+      "label": "[THEME-MAGIC]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-the-arts",
+      "label": "[TOPIC-THE-ARTS]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-perfect-aspect",
+      "label": "[USES-PERFECT-ASPECT]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-innovation",
+      "label": "[THEME-INNOVATION]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-growth",
+      "label": "[THEME-GROWTH]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-classic",
+      "label": "[STYLE-CLASSIC]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-preposition",
+      "label": "[STARTS-WITH-PREPOSITION]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adjective",
+      "label": "[STARTS-WITH-ADJECTIVE]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "[STYLE-MODERN]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-cultural-traditions",
+      "label": "[TOPIC-CULTURAL-TRADITIONS]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-lost-civilizations",
+      "label": "[TOPIC-LOST-CIVILIZATIONS]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-bygone-eras",
+      "label": "[TOPIC-BYGONE-ERAS]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "[THEME-DECEPTION]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "[USES-WH-QUESTIONS]",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "narrative-surprise",
+      "label": "[NARRATIVE-SURPRISE]",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "has-a-red-herring",
+            "has-checkhovs-gun"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "theme-deception",
+                "uses-wh-questions"
+              ]
+            },
+            "many-paragraphs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rich-length",
+      "label": "[RICH-LENGTH]",
+      "formula_type": "And",
+      "formula_args": [
+        "many-paragraphs",
+        "uses-perfect-aspect"
+      ]
+    },
+    {
+      "id": "classic-vs-modern",
+      "label": "[CLASSIC-VS-MODERN]",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "style-classic",
+            "style-modern"
+          ]
+        },
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "style-lighthearted"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "starts-with-preposition",
+            "starts-with-adjective"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cultural-past-theme",
+      "label": "[CULTURAL-PAST-THEME]",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "topic-cultural-traditions",
+            "topic-bygone-eras"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "topic-lost-civilizations",
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "theme-growth",
+                "theme-deception"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "innovation-growth-mix",
+      "label": "[INNOVATION-GROWTH-MIX]",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "theme-innovation",
+            "theme-growth"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "theme-innovation",
+            "topic-the-arts",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "theme-growth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arts-root",
+      "label": "[ARTS-ROOT]",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-the-arts",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "innovation-growth-mix",
+            "cultural-past-theme"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epic-arts-mystery",
+      "label": "[EPIC-ARTS-MYSTERY]",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "arts-root",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "narrative-surprise",
+                "rich-length"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "classic-vs-modern",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "cultural-past-theme",
+                "innovation-growth-mix"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "has-a-red-herring",
+      "target": "narrative-surprise"
+    },
+    {
+      "source": "has-checkhovs-gun",
+      "target": "narrative-surprise"
+    },
+    {
+      "source": "theme-deception",
+      "target": "narrative-surprise"
+    },
+    {
+      "source": "uses-wh-questions",
+      "target": "narrative-surprise"
+    },
+    {
+      "source": "many-paragraphs",
+      "target": "narrative-surprise"
+    },
+    {
+      "source": "many-paragraphs",
+      "target": "rich-length"
+    },
+    {
+      "source": "uses-perfect-aspect",
+      "target": "rich-length"
+    },
+    {
+      "source": "style-classic",
+      "target": "classic-vs-modern"
+    },
+    {
+      "source": "style-modern",
+      "target": "classic-vs-modern"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "classic-vs-modern"
+    },
+    {
+      "source": "starts-with-preposition",
+      "target": "classic-vs-modern"
+    },
+    {
+      "source": "starts-with-adjective",
+      "target": "classic-vs-modern"
+    },
+    {
+      "source": "topic-cultural-traditions",
+      "target": "cultural-past-theme"
+    },
+    {
+      "source": "topic-bygone-eras",
+      "target": "cultural-past-theme"
+    },
+    {
+      "source": "topic-lost-civilizations",
+      "target": "cultural-past-theme"
+    },
+    {
+      "source": "theme-growth",
+      "target": "cultural-past-theme"
+    },
+    {
+      "source": "theme-deception",
+      "target": "cultural-past-theme"
+    },
+    {
+      "source": "theme-innovation",
+      "target": "innovation-growth-mix"
+    },
+    {
+      "source": "theme-growth",
+      "target": "innovation-growth-mix"
+    },
+    {
+      "source": "topic-the-arts",
+      "target": "innovation-growth-mix"
+    },
+    {
+      "source": "topic-the-arts",
+      "target": "arts-root"
+    },
+    {
+      "source": "innovation-growth-mix",
+      "target": "arts-root"
+    },
+    {
+      "source": "cultural-past-theme",
+      "target": "arts-root"
+    },
+    {
+      "source": "arts-root",
+      "target": "epic-arts-mystery"
+    },
+    {
+      "source": "narrative-surprise",
+      "target": "epic-arts-mystery"
+    },
+    {
+      "source": "rich-length",
+      "target": "epic-arts-mystery"
+    },
+    {
+      "source": "classic-vs-modern",
+      "target": "epic-arts-mystery"
+    },
+    {
+      "source": "cultural-past-theme",
+      "target": "epic-arts-mystery"
+    },
+    {
+      "source": "innovation-growth-mix",
+      "target": "epic-arts-mystery"
+    }
+  ]
+}

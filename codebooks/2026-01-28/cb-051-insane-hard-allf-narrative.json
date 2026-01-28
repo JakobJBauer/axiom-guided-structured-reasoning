@@ -1,0 +1,482 @@
+{
+  "nodes": [
+    {
+      "id": "theme-innovation",
+      "label": "THEME-INNOVATION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-classic",
+      "label": "STYLE-CLASSIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-hidden-treasures",
+      "label": "TOPIC-HIDDEN-TREASURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "short-story",
+      "label": "SHORT-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adjective",
+      "label": "STARTS-WITH-ADJECTIVE",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-humor",
+      "label": "THEME-HUMOR",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "low-readability",
+      "label": "LOW-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "STYLE-MODERN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-mystical-creatures",
+      "label": "TOPIC-MYSTICAL-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-growth",
+      "label": "THEME-GROWTH",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "long-story",
+      "label": "LONG-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-moral-lesson",
+      "label": "HAS-A-MORAL-LESSON",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-circular-narrative-struct",
+      "label": "HAS-CIRCULAR-NARRATIVE-STRUCT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-hardship",
+      "label": "THEME-HARDSHIP",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-conditional-mood",
+      "label": "USES-CONDITIONAL-MOOD",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-superlative-forms",
+      "label": "USES-SUPERLATIVE-FORMS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-helping-others",
+      "label": "THEME-HELPING-OTHERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-playful",
+      "label": "STYLE-PLAYFUL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-juxtaposition",
+      "label": "HAS-JUXTAPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-kindness",
+      "label": "THEME-KINDNESS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-magic",
+      "label": "THEME-MAGIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-story-within-a-story",
+      "label": "HAS-A-STORY-WITHIN-A-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-time-travel",
+      "label": "TOPIC-TIME-TRAVEL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "USES-WH-QUESTIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-humorous",
+      "label": "STYLE-HUMOROUS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-lost-civilizations",
+      "label": "TOPIC-LOST-CIVILIZATIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-magical-lands",
+      "label": "TOPIC-MAGICAL-LANDS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "STYLE-PHILOSOPHICAL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-category",
+      "label": "STYLE-CATEGORY",
+      "formula_type": "In",
+      "formula_args": [
+        "story-style",
+        [
+          "style-classic",
+          "style-modern",
+          "style-playful",
+          "style-humorous",
+          "style-philosophical"
+        ]
+      ]
+    },
+    {
+      "id": "topic-mystical-set",
+      "label": "TOPIC-MYSTICAL-SET",
+      "formula_type": "In",
+      "formula_args": [
+        "story-topic",
+        [
+          "topic-mystical-creatures",
+          "topic-magical-lands",
+          "topic-hidden-treasures",
+          "topic-lost-civilizations",
+          "topic-time-travel"
+        ]
+      ]
+    },
+    {
+      "id": "theme-cluster",
+      "label": "THEME-CLUSTER",
+      "formula_type": "Or",
+      "formula_args": [
+        "theme-innovation",
+        "theme-growth",
+        "theme-hardship",
+        "theme-helping-others",
+        "theme-kindness",
+        "theme-magic",
+        "theme-humor"
+      ]
+    },
+    {
+      "id": "narrative-length-xor",
+      "label": "NARRATIVE-LENGTH-XOR",
+      "formula_type": "Xor",
+      "formula_args": [
+        "short-story",
+        "long-story"
+      ]
+    },
+    {
+      "id": "readability-and-start",
+      "label": "READABILITY-AND-START",
+      "formula_type": "And",
+      "formula_args": [
+        "low-readability",
+        "starts-with-adjective"
+      ]
+    },
+    {
+      "id": "structural-device",
+      "label": "STRUCTURAL-DEVICE",
+      "formula_type": "Or",
+      "formula_args": [
+        "has-a-story-within-a-story",
+        "has-circular-narrative-struct",
+        "has-juxtaposition"
+      ]
+    },
+    {
+      "id": "moral-or-growth",
+      "label": "MORAL-OR-GROWTH",
+      "formula_type": "Or",
+      "formula_args": [
+        "has-a-moral-lesson",
+        "theme-growth"
+      ]
+    },
+    {
+      "id": "equal-theme-presence",
+      "label": "EQUAL-THEME-PRESENCE",
+      "formula_type": "Equal",
+      "formula_args": [
+        "theme-growth",
+        "theme-hardship"
+      ]
+    },
+    {
+      "id": "balanced-theme",
+      "label": "BALANCED-THEME",
+      "formula_type": "And",
+      "formula_args": [
+        "equal-theme-presence",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "theme-kindness",
+            "theme-helping-others"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "theme-syndrome",
+      "label": "THEME-SYNDROME",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-cluster",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "balanced-theme",
+            "theme-innovation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-story-type",
+      "label": "COMPLEX-STORY-TYPE",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-syndrome",
+        "style-category",
+        "topic-mystical-set",
+        "structural-device",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "style-classic"
+          ]
+        },
+        "narrative-length-xor",
+        "readability-and-start",
+        "moral-or-growth"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "style-classic",
+      "target": "style-category"
+    },
+    {
+      "source": "style-modern",
+      "target": "style-category"
+    },
+    {
+      "source": "style-playful",
+      "target": "style-category"
+    },
+    {
+      "source": "style-humorous",
+      "target": "style-category"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "style-category"
+    },
+    {
+      "source": "topic-mystical-creatures",
+      "target": "topic-mystical-set"
+    },
+    {
+      "source": "topic-magical-lands",
+      "target": "topic-mystical-set"
+    },
+    {
+      "source": "topic-hidden-treasures",
+      "target": "topic-mystical-set"
+    },
+    {
+      "source": "topic-lost-civilizations",
+      "target": "topic-mystical-set"
+    },
+    {
+      "source": "topic-time-travel",
+      "target": "topic-mystical-set"
+    },
+    {
+      "source": "theme-innovation",
+      "target": "theme-cluster"
+    },
+    {
+      "source": "theme-growth",
+      "target": "theme-cluster"
+    },
+    {
+      "source": "theme-hardship",
+      "target": "theme-cluster"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "theme-cluster"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "theme-cluster"
+    },
+    {
+      "source": "theme-magic",
+      "target": "theme-cluster"
+    },
+    {
+      "source": "theme-humor",
+      "target": "theme-cluster"
+    },
+    {
+      "source": "short-story",
+      "target": "narrative-length-xor"
+    },
+    {
+      "source": "long-story",
+      "target": "narrative-length-xor"
+    },
+    {
+      "source": "low-readability",
+      "target": "readability-and-start"
+    },
+    {
+      "source": "starts-with-adjective",
+      "target": "readability-and-start"
+    },
+    {
+      "source": "has-a-story-within-a-story",
+      "target": "structural-device"
+    },
+    {
+      "source": "has-circular-narrative-struct",
+      "target": "structural-device"
+    },
+    {
+      "source": "has-juxtaposition",
+      "target": "structural-device"
+    },
+    {
+      "source": "has-a-moral-lesson",
+      "target": "moral-or-growth"
+    },
+    {
+      "source": "theme-growth",
+      "target": "moral-or-growth"
+    },
+    {
+      "source": "theme-growth",
+      "target": "equal-theme-presence"
+    },
+    {
+      "source": "theme-hardship",
+      "target": "equal-theme-presence"
+    },
+    {
+      "source": "equal-theme-presence",
+      "target": "balanced-theme"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "balanced-theme"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "balanced-theme"
+    },
+    {
+      "source": "theme-cluster",
+      "target": "theme-syndrome"
+    },
+    {
+      "source": "balanced-theme",
+      "target": "theme-syndrome"
+    },
+    {
+      "source": "theme-innovation",
+      "target": "theme-syndrome"
+    },
+    {
+      "source": "theme-syndrome",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "style-category",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "topic-mystical-set",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "structural-device",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "style-classic",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "narrative-length-xor",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "readability-and-start",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "moral-or-growth",
+      "target": "complex-story-type"
+    }
+  ]
+}

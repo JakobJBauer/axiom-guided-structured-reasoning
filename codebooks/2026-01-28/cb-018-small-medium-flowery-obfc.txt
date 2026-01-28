@@ -1,0 +1,42 @@
+In a quiet archive tucked between the pages of a thousand imagined worlds, a gentle librarian—part poet, part logician—tends to a small, luminous codebook. Each entry is a lantern, its glow both precise and lyrical, guiding annotators through the terrain of stories. Below, the librarian offers each rule with a flourish of language, while keeping the scaffolding of truth unchanged: the exact node names, the logical scaffolding, and the formal statements remain intact, ready for careful use.
+
+[attr-7]
+Like a warm hand extended across a dark room, this lantern bears the scent of compassion. It marks those tales in which giving, supporting, or rescuing another is not merely an action but a theme that sings through the narrative.
+A story is [attr-7] if The story has the theme Helping Others.
+
+[attr-6]
+This lamp holds the stillness of a study at dawn, where questions float like dust motes. It visits works that turn inward and outward in equal measure, seeking meaning, ethics, and the marrow beneath appearances.
+A story is [attr-6] if The story is philosophical.
+
+[attr-4]
+Imagine a book with the kindly weight of tradition, its lines balanced and its forms time-honored. This pointer marks tales that wear the cloak of classical sensibility—measured, enduring, and resonant with the echoes of earlier ages.
+A story is [attr-4] if The story is classic.
+
+[attr-1]
+Here is a lens for contrasts: where two elements stand side by side and illuminate each other by their differences. This flag flutters on stories that deliberately set opposites near enough to be in conversation.
+A story is [attr-1] if The story has juxtaposition.
+
+[attr-5]
+Picture a brisk wind that rearranges the furniture of convention: fragmented forms, novel angles, a pulse attuned to the now. This label marks those narratives that belong to the modern spirit—innovative, immediate, and often boundary-pushing.
+A story is [attr-5] if The story is modern.
+
+[attr-2]
+In an elegant dance of contrasts, this designation captures the special case where juxtaposition meets one, and only one, stylistic ancestor—the classical or the modern—so that the result is a deliberate blend rather than an ambiguous fusion.
+A story is [attr-2] if both of the following are true:
+- The story is [attr-1]
+- Exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+
+[attr-3]
+At the center of this constellation lies a more ornate star: a story that carries both the contemplative light of philosophy and the warm gravity of helping others—unless the tale belongs to certain mixed stylistic territories, or unless a contrary path brings a striking inversion. This node collects those narratives whose moral reflection and benevolence unite to create a dramatic charge, or whose mixed stylistic contrast stands alone but without the theme of helping.
+A story is [attr-3] if either of the following is true:
+- All of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-7]
+  - The story is not [attr-2]
+- Both of the following are true:
+  - The story is [attr-2]
+  - The story is not [attr-7]
+
+Thus the codebook stands: an assembly of succinct, formal beacons nested within a gentle narrative voice—each definition precisely stated for rigorous annotation, yet dressed in language that invites the reader to linger and feel the logic as well as read it.

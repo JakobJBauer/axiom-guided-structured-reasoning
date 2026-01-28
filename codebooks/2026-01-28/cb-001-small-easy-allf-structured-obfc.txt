@@ -1,0 +1,60 @@
+Overview
+- Purpose: Provide a compact, structured reference for annotators. Each entry below defines when a story should be labeled with a given node (the node ID is shown in brackets).
+- Read this as: “A story is [attr-5] if <condition(s)>.”
+- Logical constructs (And, Or, Not, Exactly one of, All of the following, Either of the following) are preserved exactly as written and indicate how conditions combine.
+
+Node definitions (explicit, atomic)
+- [attr-6]
+  - Definition: A story is [attr-6] if The story is classic
+
+- [attr-7]
+  - Definition: A story is [attr-7] if The story is modern
+
+- [attr-3]
+  - Definition: A story is [attr-3] if The story has a cliffhanger
+
+- [attr-4]
+  - Definition: A story is [attr-4] if The story has more than 375 words
+
+- [attr-8]
+  - Definition: A story is [attr-8] if The story is about bygone eras
+
+Composite nodes (rules combining atomic conditions)
+- [attr-1]
+  - Summary: Use this when a story is classic, long, and about bygone eras.
+  - Rule form: A story is [attr-1] if all of the following are true:
+    - The story is [attr-6]
+    - The story is [attr-4]
+    - The story is [attr-8]
+
+- [attr-2]
+  - Summary: This label applies when the story has a dynamic relationship between style and cliffhanger presence. The rule is satisfied if either of two alternative condition-sets holds.
+  - Rule form: A story is [attr-2] if either of the following is true:
+    - Exactly one of the following is true:
+      - The story is [attr-7]
+      - The story is [attr-6]
+    - All of the following are true:
+      - The story is not [attr-6]
+      - The story's style is equal to [attr-7]
+      - The story is [attr-3]
+      - The story's topic is in [attr-8]
+
+Annotation guidance (how to apply these rules)
+- Atomic nodes:
+  - Evaluate each atomic condition directly from the story text or metadata (e.g., count words for [attr-4], identify explicit style or topic signals for style/topic nodes).
+- Composite nodes:
+  - For “all of the following are true”: require every listed bullet to hold before applying the composite label.
+  - For “Exactly one of the following is true”: label the story only if precisely one of the listed conditions holds (i.e., XOR).
+  - For “Either of the following is true”: apply the composite label if at least one of the two main branches is satisfied; each branch itself may contain its own logical structure (Exactly one, All of the following, Not, etc.).
+- Notes:
+  - Do not alter node IDs or the logical operators when performing annotation decisions.
+  - When a branch contains “The story is not [attr-6]” plus “The story's style is equal to [attr-7],” both must be read together (they are part of an “All of the following are true” block).
+
+Quick examples (illustrative)
+- A long (400+ words) classic story about a historical period → satisfies:
+  - [attr-6], [attr-4], [attr-8] → therefore [attr-1]
+- A short modern story with a cliffhanger about bygone eras → satisfies:
+  - For [attr-2], check first branch (Exactly one of [attr-7], [attr-6]): true if it’s modern and not classic → satisfies [attr-2]
+  - Second branch also possible if all four conditions align (style modern, not classic, cliffhanger, topic bygone eras).
+
+Keep this sheet handy while annotating: it preserves the exact logical relationships and node IDs you need to apply labels consistently and accurately.

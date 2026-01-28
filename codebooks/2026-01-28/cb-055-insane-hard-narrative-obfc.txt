@@ -1,0 +1,200 @@
+[attr-36]
+Think of this as a little emblem the tale can earn: a story is [attr-36] if The story has the theme Problem-Solving.
+
+[attr-41]
+In the catalog of wonders, a story is [attr-41] if The story is about mystical creatures.
+
+[attr-24]
+Some stories are brief sparks. A story is [attr-24] if The story has fewer than 160 words.
+
+[attr-42]
+When clocks and causality take center stage, a story is [attr-42] if The story is about time travel.
+
+[attr-44]
+A narrator’s rhythm matters: a story is [attr-44] if The story uses discourse markers.
+
+[attr-38]
+A story is [attr-38] if The story is about cultural traditions.
+
+[attr-34]
+A story is [attr-34] if The story has the theme Innovation.
+
+[attr-25]
+The opening word can be a clue: a story is [attr-25] if The story starts with a adverb.
+
+[attr-32]
+A story is [attr-32] if The story has the theme Helping Others.
+
+[attr-12]
+A story is [attr-12] if The story has juxtaposition.
+
+[attr-27]
+A story is [attr-27] if The story is playful.
+
+[attr-11]
+A story is [attr-11] if The story has a Red Herring.
+
+[attr-31]
+A story is [attr-31] if The story has the theme Hardship.
+
+[attr-33]
+A story is [attr-33] if The story has the theme Humor.
+
+[attr-29]
+A story is [attr-29] if The story has the theme Agency.
+
+[attr-9]
+A story is [attr-9] if The story has a flashback.
+
+[attr-45]
+A story is [attr-45] if The story uses perfect aspect.
+
+[attr-43]
+A story is [attr-43] if The story uses conditional mood.
+
+[attr-46]
+A story is [attr-46] if The story uses wh-questions.
+
+[attr-35]
+A story is [attr-35] if The story has the theme Kindness.
+
+[attr-10]
+A story is [attr-10] if The story has a moral lesson.
+
+[attr-26]
+A story is [attr-26] if The story is humorous.
+
+[attr-16]
+A story is [attr-16] if The story has readability score below 86.4.
+
+[attr-18]
+A story is [attr-18] if The story has more than 6 paragraphs.
+
+[attr-8]
+A story is [attr-8] if The story has a cliffhanger.
+
+[attr-40]
+A story is [attr-40] if The story is about magical lands.
+
+[attr-39]
+A story is [attr-39] if The story is about giant creatures.
+
+[attr-30]
+A story is [attr-30] if The story has the theme Growth.
+
+[attr-15]
+A story is [attr-15] if The story has more than 375 words.
+
+[attr-6]
+Some labels gather like tribes: a story is [attr-6] if the story is in [TOPIC-MYSTICAL-CREATURES, TOPIC-MAGICAL-LANDS, TOPIC-GIANT-CREATURES].
+
+[attr-17]
+A story is [attr-17] if either of the following is true:
+- The story is [attr-40]
+- The story is [attr-41]
+
+[attr-5]
+An epic is stitched from three threads. A story is [attr-5] if all of the following are true:
+- The story is [attr-15]
+- The story is either [attr-39] or [attr-40]
+- The story is [attr-30]
+
+[attr-23]
+A story is [attr-23] if both of the following are true:
+- The story is [attr-24]
+- The story is [attr-17]
+
+[attr-37]
+Paradox blooms where time loops and misdirection meet. A story is [attr-37] if both of the following are true:
+- The story is [attr-42]
+- Either of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-9]
+
+[attr-3]
+Some narratives are architectural feats. A story is [attr-3] if both of the following are true:
+- The story is [attr-18]
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-8]
+
+[attr-20]
+Voice can be recognized by an opening, a cadence, or the questions it asks. A story is [attr-20] if either of the following is true:
+- The story is [attr-25]
+- The story is [attr-44]
+- The story is [attr-46]
+
+[attr-14]
+A delicate balance decides this label: a story is [attr-14] if exactly one of the following is true:
+- The story is [attr-26]
+- The story is [attr-27]
+
+[attr-19]
+When kindness carries a lesson, it becomes a hallmark. A story is [attr-19] if both of the following are true:
+- The story is [attr-35]
+- The story is [attr-10]
+
+[attr-13]
+Imagine a protagonist who invents to aid others. A story is [attr-13] if all of the following are true:
+- The story is [attr-34]
+- The story is [attr-32]
+- Either of the following is true:
+  - The story is [attr-29]
+  - The story is [attr-36]
+
+[attr-7]
+Growth often follows struggle. A story is [attr-7] if both of the following are true:
+- The story is [attr-30]
+- The story is [attr-31]
+
+[attr-4]
+Readability can be inviting or dense; this label rewards clarity and scope. A story is [attr-4] if both of the following are true:
+- The story is not [attr-16]
+- Either of the following is true:
+  - The story is [attr-24]
+  - The story is [attr-15]
+
+[attr-1]
+A brief tale that chooses a tone earns this badge. A story is [attr-1] if both of the following are true:
+- The story is [attr-24]
+- Exactly one of the following is true:
+  - The story is [attr-33]
+  - The story is [attr-31]
+
+[attr-22]
+When questions and discourse markers dance together, the narrative keeps the reader asking. A story is [attr-22] if both of the following are true:
+- The story is [attr-46]
+- The story is [attr-44]
+
+[attr-2]
+This is the cathedral of intricate tales. A story is [attr-2] if all of the following are true:
+- Either of the following is true:
+  - The story is [attr-37]
+  - The story is [attr-17]
+- Both of the following are true:
+  - The story is [attr-3]
+  - Either of the following is true:
+    - The story is [attr-20]
+    - The story is [attr-4]
+- Either of the following is true:
+  - The story uses [attr-43]
+  - The story uses [attr-45]
+
+[attr-28]
+Sometimes themes entwine into something greater. A story is [attr-28] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-13]
+  - The story is [attr-19]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-36]
+
+[attr-21]
+Finally, a voice that speaks clearly and purposefully: a story is [attr-21] if all of the following are true:
+- The story is [attr-20]
+- The story is not [attr-27]
+- Either of the following is true:
+  - The story is [attr-45]
+  - The story is [attr-43]
+
+End of the atlas — each label a rule, each rule a thread. Use them to annotate, to reason, to recognize the shapes of stories as they arrive.

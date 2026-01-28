@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "id": "attr-2",
+      "label": "story contains a flashback sequence",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "story employs wh-questions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "story makes use of discourse markers",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "exactly one of attr-6 or attr-5 (exclusive)",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-6",
+        "attr-5"
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "story is attr-2 and not attr-3",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-2",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-4",
+      "label": "story is in {attr-3, attr-1} or equals attr-2",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-3",
+        "attr-1",
+        "attr-2"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-2",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-4"
+    }
+  ]
+}

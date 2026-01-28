@@ -1,0 +1,146 @@
+Codebook — Structured Reference for Annotation
+
+Overview
+- Purpose: Provide a clear, hierarchical presentation of each node and its logical conditions so annotators can reason consistently.
+- Format: Each node ID is shown in [BRACKET] form (unchanged). Atomic nodes are listed first; composite nodes follow with their logical structure preserved (Either / Both / Exactly one / Not).
+
+Atomic (single-condition) nodes
+- [HAS-A-CLIFFHANGER]
+  - Definition: A story is [HAS-A-CLIFFHANGER] if the story has a cliffhanger.
+
+- [STYLE-MODERN]
+  - Definition: A story is [STYLE-MODERN] if the story is modern.
+
+- [USES-DISCOURSE-MARKERS]
+  - Definition: A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers.
+
+- [HAS-A-FLASHBACK]
+  - Definition: A story is [HAS-A-FLASHBACK] if the story has a flashback.
+
+- [THEME-PROBLEM-SOLVING]
+  - Definition: A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+- [STARTS-WITH-ADJECTIVE]
+  - Definition: A story is [STARTS-WITH-ADJECTIVE] if the story starts with an adjective.
+
+- [USES-WH-QUESTIONS]
+  - Definition: A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+- [HAS-JUXTAPOSITION]
+  - Definition: A story is [HAS-JUXTAPOSITION] if the story has juxtaposition.
+
+- [STARTS-WITH-ADVERB]
+  - Definition: A story is [STARTS-WITH-ADVERB] if the story starts with an adverb.
+
+- [THEME-HUMOR]
+  - Definition: A story is [THEME-HUMOR] if the story has the theme Humor.
+
+- [LOW-READABILITY]
+  - Definition: A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+- [STYLE-HUMOROUS]
+  - Definition: A story is [STYLE-HUMOROUS] if the story is humorous.
+
+- [STYLE-MINIMALIST]
+  - Definition: A story is [STYLE-MINIMALIST] if the story is minimalist.
+
+- [STYLE-LIGHTHEARTED]
+  - Definition: A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+- [HIGH-READABILITY]
+  - Definition: A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+- [THEME-DECEPTION]
+  - Definition: A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+- [STYLE-PHILOSOPHICAL]
+  - Definition: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+Composite (logical) nodes
+- [STRUCTURAL-DEVICES]
+  - Condition: A story is [STRUCTURAL-DEVICES] if either of the following is true:
+    1. The story is [HAS-A-CLIFFHANGER]
+    2. Exactly one of the following is true:
+       - The story is [HAS-A-FLASHBACK]
+       - The story is [HAS-JUXTAPOSITION]
+    3. Both of the following are true:
+       - The story is [USES-DISCOURSE-MARKERS]
+       - The story is not [HAS-A-CLIFFHANGER]
+
+- [OPENING-PATTERN]
+  - Condition: A story is [OPENING-PATTERN] if both of the following are true:
+    - Either of the following is true:
+      - The story is [STARTS-WITH-ADJECTIVE]
+      - The story is [STARTS-WITH-ADVERB]
+    - Exactly one of the following is true:
+      - The story is [USES-WH-QUESTIONS]
+      - The story is [USES-DISCOURSE-MARKERS]
+
+- [STYLE-TONE]
+  - Condition: A story is [STYLE-TONE] if either of the following is true:
+    1. Both of the following are true:
+       - The story is in [STYLE-MODERN, STYLE-LIGHTHEARTED]
+       - The story is not [STYLE-MINIMALIST]
+    2. Both of the following are true:
+       - The story is [STYLE-HUMOROUS]
+       - The story is not [STYLE-PHILOSOPHICAL]
+
+- [THEMATIC-CORE]
+  - Condition: A story is [THEMATIC-CORE] if either of the following is true:
+    1. Both of the following are true:
+       - The story is [THEME-PROBLEM-SOLVING]
+       - The story is [THEME-HUMOR]
+    2. Exactly one of the following is true:
+       - The story is [THEME-DECEPTION]
+       - The story is [THEME-PROBLEM-SOLVING]
+
+- [READABILITY-CLASS]
+  - Condition: A story is [READABILITY-CLASS] if exactly one of the following is true:
+    - The story is [LOW-READABILITY]
+    - The story is [HIGH-READABILITY]
+
+- [READABILITY-IMPACT]
+  - Condition: A story is [READABILITY-IMPACT] if both of the following are true:
+    - The story is [READABILITY-CLASS]
+    - Either of the following is true:
+      - The story is [STYLE-LIGHTHEARTED]
+      - The story is not [LOW-READABILITY]
+
+- [ENGAGEMENT-PATTERN]
+  - Condition: A story is [ENGAGEMENT-PATTERN] if both of the following are true:
+    - Either of the following is true:
+      1. The story is [STRUCTURAL-DEVICES]
+      2. Both of the following are true:
+         - The story is [OPENING-PATTERN]
+         - The story is not [HAS-A-CLIFFHANGER]
+    - Either of the following is true:
+      1. The story is [STYLE-TONE]
+      2. Both of the following are true:
+         - The story is [THEMATIC-CORE]
+         - The story is not [STYLE-PHILOSOPHICAL]
+
+- [AUDIENCE-READY]
+  - Condition: A story is [AUDIENCE-READY] if either of the following is true:
+    1. Both of the following are true:
+       - The story is [READABILITY-IMPACT]
+       - The story is [STYLE-TONE]
+    2. Exactly one of the following is true:
+       - The story is [STYLE-HUMOROUS]
+       - The story is [STYLE-MINIMALIST]
+
+- [OPTIMAL-ARC]
+  - Condition: A story is [OPTIMAL-ARC] if both of the following are true:
+    - The story is [ENGAGEMENT-PATTERN]
+    - Either of the following is true:
+      1. The story is [AUDIENCE-READY]
+      2. Both of the following are true:
+         - The story is [THEMATIC-CORE]
+         - The story is not [READABILITY-CLASS]
+
+Quick annotation tips (how to use this codebook)
+- Read atomic nodes first; mark them as true/false for the text.
+- Evaluate composite nodes by following the preserved logical structure exactly: respect "either", "both", and "exactly one".
+- Use the indentation to track nesting: inner bullets represent sub-conditions that affect the parent node.
+- When you see "not", negate only the referenced node as shown.
+
+End — All node IDs, logical relationships, and formulas are preserved.

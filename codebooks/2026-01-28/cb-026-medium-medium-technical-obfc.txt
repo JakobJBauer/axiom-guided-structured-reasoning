@@ -1,0 +1,58 @@
+[attr-13]
+Specification: The predicate [attr-13] evaluates to true if and only if the story’s central subject matter is time travel.
+
+[attr-11]
+Specification: The predicate [attr-11] evaluates to true if and only if the story’s central subject matter is hidden treasures.
+
+[attr-9]
+Specification: The predicate [attr-9] evaluates to true if and only if the story exhibits a philosophical style.
+
+[attr-5]
+Specification: The predicate [attr-5] evaluates to true if and only if the story contains more than 6 paragraphs.
+
+[attr-4]
+Specification: The predicate [attr-4] evaluates to true if and only if the story attains a readability score strictly greater than 96.1.
+
+[attr-7]
+Specification: The predicate [attr-7] evaluates to true if and only if the story conforms to a classic style.
+
+[attr-8]
+Specification: The predicate [attr-8] evaluates to true if and only if the story is humorous in style.
+
+[attr-12]
+Specification: The predicate [attr-12] evaluates to true if and only if the story’s subject matter concerns mystical creatures.
+
+[attr-10]
+Specification: The predicate [attr-10] evaluates to true when both of the following conditions hold:
+- The predicate [attr-9] is true.
+- The predicate [attr-8] is not true.
+
+[attr-6]
+Specification: The predicate [attr-6] evaluates to true when both of the following conditions hold:
+- The predicate [attr-4] is true.
+- Either of the following is true:
+  - The predicate [attr-7] is true.
+  - The predicate [attr-8] is true.
+
+[attr-1]
+Specification: The predicate [attr-1] evaluates to true if either of the following conditions holds:
+- The predicate [attr-11] is true.
+- Both of the following are true:
+  - The predicate [attr-13] is true.
+  - The predicate [attr-9] is not true.
+
+[attr-2]
+Specification: The predicate [attr-2] evaluates to true when both of the following conditions hold:
+- The predicate [attr-10] is true.
+- Either of the following is true:
+  - The predicate [attr-1] is true.
+  - The predicate [attr-12] is true.
+
+[attr-3]
+Specification: The predicate [attr-3] evaluates to true when both of the following conditions hold:
+- The predicate [attr-2] is true.
+- The predicate [attr-5] is true.
+
+Notes:
+- Logical operators used above: "both of the following are true" denotes logical conjunction (AND); "either of the following is true" denotes logical disjunction (OR); "is not" denotes logical negation (NOT).
+- All predicates are binary: true if the specified condition holds for the story, otherwise false.

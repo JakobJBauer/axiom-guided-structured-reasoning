@@ -1,0 +1,45 @@
+[attr-9]
+A story is [attr-9] if the story uses conditional mood — those soft, speculative constructions that conjure possibility, longing, and the graceful dance of "would," "could," and "might" in the heart of a sentence.
+
+[attr-6]
+A story is [attr-6] if the story starts with a adverb — the opening adverb that sets the pace and mood, a single seed-word that colors the very first breath of the tale.
+
+[attr-8]
+A story is [attr-8] if the story has the theme Agency — when characters steer their fates, when choices and actions are the engines of the narrative, and the story’s current flows from will and cause.
+
+[attr-5]
+A story is [attr-5] if the story has fewer than 160 words — a compact bloom of narrative, brief enough to be read in a single, satisfied sitting.
+
+[attr-7]
+A story is [attr-7] if the story is lighthearted — buoyant in tone, playful or gently amusing, carrying an overall spirit that is bright rather than grave.
+
+[attr-10]
+A story is [attr-10] if the story uses perfect aspect — employing verb forms that fold time inward (has done, had been), marking actions as completed in relation to some reference point.
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-9]
+- The story is not [attr-10]
+In other words, it wears the shawl of conditional possibility but does not cloak itself in the completed-time of the perfect aspect.
+
+[attr-4]
+A story is [attr-4] if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-7]
+This denotes a brief, sprightly composition where compact length and a light touch walk hand in hand.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-8]
+- Exactly one of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+Here we meet a tale of agency that is further distinguished by a single exclusive condition: it either opens with an adverbial flourish or exists as a concise vignette, but not both at once.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-4]
+- Either of the following are true:
+  - The story is [attr-3]
+  - The story is [attr-1]
+Thus an elegant story is a short, lighthearted gem that attains additional refinement by either blending conditional mood without perfect aspect or by coupling its agency theme with the exclusive starting condition described above.

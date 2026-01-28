@@ -1,0 +1,53 @@
+Codebook — structured edition
+
+Notes for annotators
+- The logical structure and node identifiers are unchanged; every node ID appears exactly as in the original (e.g., [THEME-HELPING-OTHERS]).
+- Logical operators and relationships are preserved verbatim: "either ...", "both ...", "exactly one ...", and explicit negation ("not").
+- Use this document as a clear checklist when deciding whether a story meets a node’s criteria.
+
+Nodes (organized, with concise checks)
+
+1) [THEME-HELPING-OTHERS]
+- Definition:
+  - A story is [THEME-HELPING-OTHERS] if:
+    - The story has the theme Helping Others.
+
+2) [HELPFUL-ACTION]
+- Definition:
+  - A story is [HELPFUL-ACTION] if either of the following is true:
+    - The protagonist's central action is in the set {aid, rescue}
+    - The protagonist's central action is in the set {donate, teach}
+- Practical interpretation:
+  - Treat this node as an OR between two action-sets. If the protagonist’s main action matches any item in either set, mark [HELPFUL-ACTION].
+
+3) [MOTIVE-SELFISH]
+- Definition:
+  - A story is [MOTIVE-SELFISH] if:
+    - The protagonist's motive is equal to "personal gain"
+- Practical interpretation:
+  - This node flags explicit, stated motives of personal benefit.
+
+4) [SELFLESS-ARC]
+- Definition:
+  - A story is [SELFLESS-ARC] if both of the following are true:
+    - The story is [HELPFUL-ACTION]
+    - The story is not [MOTIVE-SELFISH]
+- Logical structure:
+  - This is a logical AND combined with a negation: it requires a helpful action and the absence of a selfish motive.
+
+5) [ALTRUISTIC-HELP]
+- Definition:
+  - A story is [ALTRUISTIC-HELP] if exactly one of the following is true:
+    - The story is [THEME-HELPING-OTHERS]
+    - The story is [SELFLESS-ARC]
+- Logical structure:
+  - This node represents an exclusive OR (XOR) between theme-level helping and a selfless action arc: mark [ALTRUISTIC-HELP] only when exactly one of those nodes applies.
+
+Quick decision checklist (compact)
+- Is the theme Helping Others? → [THEME-HELPING-OTHERS]
+- Is the protagonist’s central action aid/rescue/donate/teach? → [HELPFUL-ACTION]
+- Is the motive explicitly "personal gain"? → [MOTIVE-SELFISH]
+- If [HELPFUL-ACTION] is true AND [MOTIVE-SELFISH] is false → [SELFLESS-ARC]
+- If exactly one of [THEME-HELPING-OTHERS] or [SELFLESS-ARC] is true → [ALTRUISTIC-HELP]
+
+End — Use this structured checklist to make consistent, logic-preserving annotations.

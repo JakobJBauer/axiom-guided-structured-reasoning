@@ -1,0 +1,30 @@
+Think of this as a little map for deciding how to tag a story. I’ll walk you through each label and what it means, in plain language, while keeping the exact logical rules intact.
+
+[LONG-STORY]
+Call a story [LONG-STORY] whenever it stretches beyond 375 words. If it’s longer than that threshold, the label applies.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if it actually uses wh-questions — those who/what/when/where/why/how openings that signal curiosity or interrogation.
+
+[NOT-LONG]
+If a story is not [LONG-STORY], then it gets the [NOT-LONG] tag. In other words, [NOT-LONG] simply means the story does not meet the >375-word requirement.
+
+[INTERROGATIVE-STYLE]
+You can treat a story as [INTERROGATIVE-STYLE] when either of the following is true:
+- The story is [USES-WH-QUESTIONS]
+- The story is [NOT-LONG]
+So if it asks wh-questions or it’s short, it fits this “interrogative-style” bucket.
+
+[STYLE-POLARITY]
+Label a story [STYLE-POLARITY] only when exactly one of these two possibilities holds:
+- The story is [LONG-STORY]
+- The story is [INTERROGATIVE-STYLE]
+That “exactly one” is important — this label marks a clear choice between being long and being interrogative/short.
+
+[FORMAL-CLASSIFICATION]
+A story is [FORMAL-CLASSIFICATION] if all of the following are true:
+- The story is [STYLE-POLARITY]
+- The value of [LONG-STORY] is equal to the value of ([USES-WH-QUESTIONS] and not [NOT-LONG])
+- The number of true conditions among {[LONG-STORY], [USES-WH-QUESTIONS], [NOT-LONG]} is in {1, 3}
+
+So, to award [FORMAL-CLASSIFICATION], the story must satisfy the [STYLE-POLARITY] criterion, match the precise equivalence between [LONG-STORY] and the conjunction ([USES-WH-QUESTIONS] and not [NOT-LONG]), and place the count of true items among those three nodes at either exactly 1 or exactly 3. Keep those three checks in mind as a small checklist you must pass to use this final, formal label.

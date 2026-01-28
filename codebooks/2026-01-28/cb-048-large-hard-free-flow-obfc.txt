@@ -1,0 +1,124 @@
+[attr-20]
+Call a story [attr-20] when it’s about time travel — plain and simple. If the plot centers on moving through time, the tag fits.
+
+[attr-8]
+If the very first word or opening of the tale is an adjective, the story is [attr-8].
+
+[attr-21]
+When the narrative uses the perfect aspect (those have/had/has done constructions), mark the story as [attr-21].
+
+[attr-13]
+If the story feels modern in style, it’s labeled [attr-13].
+
+[attr-6]
+A story is [attr-6] when its readability score falls below 86.4 — that threshold determines the tag.
+
+[attr-19]
+If the story’s subject is the arts, assign [attr-19].
+
+[attr-5]
+When the narrative loops back on itself — a circular narrative structure — call it [attr-5].
+
+[attr-16]
+If the story is about cultural traditions, it should be marked [attr-16].
+
+[attr-4]
+A story gets [attr-4] if it includes a flashback.
+
+[attr-11]
+If the story’s tone is humorous, label it [attr-11].
+
+[attr-17]
+Stories about magical lands receive the [attr-17] tag.
+
+[attr-12]
+When a story has a breezy, lighthearted tone, call it [attr-12].
+
+[attr-18]
+If the focus is mystical creatures, the story is [attr-18].
+
+[attr-15]
+When problem-solving is a central theme, the story is [attr-15].
+
+[attr-7]
+A story qualifies as [attr-7] only when both of the following are true:
+- The story is [attr-5]
+- Either of the following is true:
+  - The story is [attr-4]
+  - The story is not [attr-8]
+
+So, to be [attr-7], the tale must loop structurally, and then either include a flashback or it must not begin with an adjective.
+
+[attr-10]
+Label a story [attr-10] when both of these conditions hold:
+- Exactly one of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-12]
+- Either of the following is true:
+  - The story is [attr-13]
+  - The story is not [attr-6]
+
+In other words: pick a single tone — humorous or lighthearted, but not both — and then the story should be modern, or at least not score as low readability.
+
+[attr-1]
+A story is [attr-1] if either of these broader possibilities holds:
+- All of the following are true:
+  - The story is [attr-19]
+  - The story is [attr-16]
+  - The story is [attr-15]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [attr-19]
+    - The story is [attr-15]
+  - The story is [attr-16]
+
+So it’s either a full match of arts + cultural traditions + problem-solving, or it’s about cultural traditions plus exactly one of (the arts or problem-solving).
+
+[attr-3]
+A story is [attr-3] when both of these conditions are met:
+- Exactly one of the following is true:
+  - The story is [attr-17]
+  - The story is [attr-18]
+- Either of the following is true:
+  - The story is [attr-20]
+  - The story is not [attr-13]
+
+So, [attr-3] needs a single core fantasy element — magical lands or mystical creatures — and then either time travel is present or the style isn’t modern.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-10]
+    - The story is not [attr-3]
+  - Both of the following are true:
+    - The story is [attr-1]
+    - The story is [attr-3]
+
+So it must be narratively structural, and then either have a single, non-fantastical style-and-tone, or combine arts/tradition/problem themes with a fantasy core.
+
+[attr-14]
+A story is [attr-14] if all of the following are true:
+- The story is [attr-2]
+- The story is [attr-1] or the story is [attr-3]
+- The story is [attr-10] equals [attr-11]
+
+This one is strict: you need the complex pattern, either the arts-tradition-problem axis or a fantasy core, and the style-and-tone must equal humorous (expressed with that exact equality).
+
+[attr-9]
+A story is [attr-9] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-14]
+  - The story is [attr-2] in [COMPLEX-PATTERN, SYNDIC-CONJUNCTION, FANTASY-CORE]
+- Either of the following is true:
+  - The story is [attr-3] and the story is not [attr-1]
+  - The story is [attr-1] and exactly one of the following is true:
+    - The story is [attr-10]
+    - The story is [attr-7]
+
+So the archetype can come from a tight conjunction of syndicate and complexity (with that membership check), or from a fantasy core that’s not arts-tradition-problem, or from arts-tradition-problem paired with exactly one of style-and-tone or narrative-structural.
+
+---
+
+That’s the full codebook in plain, conversational terms — the logical skeleton hasn’t changed: every bracketed node, every “both/either/exactly one/not/or” relationship, and every phrase you rely on for annotation remains intact. I’ve just smoothed the language so it reads more naturally while preserving the exact logic you use to reason and label.

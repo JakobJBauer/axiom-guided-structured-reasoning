@@ -1,0 +1,26 @@
+[TOPIC-SEASONAL-CHANGES]
+Definition: The binary annotation [TOPIC-SEASONAL-CHANGES] holds for a story if and only if the narrative content concerns seasonal changes (e.g., transitions between seasons, effects of seasons on environment or behavior). Use this label to mark stories whose primary topical focus is seasonal variation.
+
+[USES-WH-QUESTIONS]
+Definition: The binary annotation [USES-WH-QUESTIONS] holds for a story if and only if the story contains one or more WH-questions (interrogative forms beginning with who, what, when, where, why, how, etc.). Apply this label when such interrogative constructions are present.
+
+[STARTS-WITH-NOUN]
+Definition: The binary annotation [STARTS-WITH-NOUN] holds for a story if and only if the first lexical token of the story is a noun (including proper nouns and common nouns). Annotate with this label when the story’s initial token is nominal.
+
+[TOPIC-CULTURAL-TRADITIONS]
+Definition: The binary annotation [TOPIC-CULTURAL-TRADITIONS] holds for a story if and only if the narrative is about cultural traditions (rituals, customs, heritage practices, festivals, or socially transmitted cultural behaviors). Use this label for stories whose primary topical domain is cultural tradition.
+
+[TOPIC-TIME-TRAVEL]
+Definition: The binary annotation [TOPIC-TIME-TRAVEL] holds for a story if and only if the narrative involves time travel (temporal displacement, travel across time periods, or causally relevant interactions across time). Apply this label when time travel is a central thematic or plot element.
+
+[SEASONAL-QUESTION-STORY]
+Definition: The binary annotation [SEASONAL-QUESTION-STORY] holds for a story if and only if both of the following conditions are satisfied (logical AND):
+- The story is annotated as [TOPIC-SEASONAL-CHANGES]
+- The story is annotated as [USES-WH-QUESTIONS]
+Use this composite label to denote stories that simultaneously address seasonal changes and employ WH-style interrogatives.
+
+[TRADITION-OR-TIME-STORY]
+Definition: The binary annotation [TRADITION-OR-TIME-STORY] holds for a story if and only if at least one of the following conditions is satisfied (logical OR):
+- The story is annotated as [TOPIC-CULTURAL-TRADITIONS]
+- The story is annotated as [TOPIC-TIME-TRAVEL]
+Use this composite label to denote stories that belong to either the cultural traditions domain or the time-travel domain (or both).

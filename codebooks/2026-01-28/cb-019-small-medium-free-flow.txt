@@ -1,0 +1,30 @@
+A quick note before we dive in: the bracketed IDs like [USES-SUPERLATIVE-FORMS] are the exact labels you'll use when annotating, and the logical links between them must stay just as they are. I'm just making the descriptions easier to read and a bit more conversational — nothing about the logic or the node names has been changed.
+
+[USES-SUPERLATIVE-FORMS]
+Use this tag when a story actually uses superlatives — words like “biggest,” “best,” or “most legendary.” If those kinds of highest-degree expressions appear, mark the story with [USES-SUPERLATIVE-FORMS].
+
+[TOPIC-LOST-CIVILIZATIONS]
+Tag a story with [TOPIC-LOST-CIVILIZATIONS] when its subject matter is lost civilizations — think sunken cities, vanished empires, or forgotten cultures at the center of the plot.
+
+[STARTS-WITH-NOUN]
+If the very first word of the story is a noun, apply [STARTS-WITH-NOUN]. It’s simply a check on how the story begins.
+
+[THEME-HUMOR]
+When the story’s tone or theme is comedic — when humor is a defining organizing element — use [THEME-HUMOR].
+
+[LIGHTHEARTED-INTRO]
+A story counts as [LIGHTHEARTED-INTRO] when all of these things hold true:
+- The story is [STARTS-WITH-NOUN]
+- The story is [THEME-HUMOR]
+- The story is not [USES-SUPERLATIVE-FORMS]
+
+In plain words: a lighthearted intro needs a noun-start, a humorous theme, and no superlatives.
+
+[MYTHIC-SATIRE]
+Call a story [MYTHIC-SATIRE] when both of the following are true:
+- The story is [TOPIC-LOST-CIVILIZATIONS]
+- Exactly one of the following is true:
+  - The story is [LIGHTHEARTED-INTRO]
+  - The story is [USES-SUPERLATIVE-FORMS]
+
+So, for mythic satire you need the lost-civilizations topic, and then either a lighthearted intro or the presence of superlative language — but not both.

@@ -1,0 +1,133 @@
+{
+  "nodes": [
+    {
+      "id": "uses-conditional-mood",
+      "label": "Uses Conditional Mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-perfect-aspect",
+      "label": "Uses Perfect Aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "Theme: Deception",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-cliffhanger",
+      "label": "Has a Cliffhanger",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "complex-deception",
+      "label": "Complex Deception",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-deception",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "has-a-cliffhanger"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "uses-conditional-mood",
+            "uses-perfect-aspect"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aspectual-ambivalence",
+      "label": "Aspectual Ambivalence",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "uses-perfect-aspect",
+            "uses-conditional-mood"
+          ]
+        },
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "uses-perfect-aspect",
+                "uses-conditional-mood"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ambiguous-deception-narrative",
+      "label": "Ambiguous Deception Narrative",
+      "formula_type": "And",
+      "formula_args": [
+        "complex-deception",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "aspectual-ambivalence",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "has-a-cliffhanger"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "theme-deception",
+      "target": "complex-deception"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "complex-deception"
+    },
+    {
+      "source": "uses-conditional-mood",
+      "target": "complex-deception"
+    },
+    {
+      "source": "uses-perfect-aspect",
+      "target": "complex-deception"
+    },
+    {
+      "source": "uses-perfect-aspect",
+      "target": "aspectual-ambivalence"
+    },
+    {
+      "source": "uses-conditional-mood",
+      "target": "aspectual-ambivalence"
+    },
+    {
+      "source": "complex-deception",
+      "target": "ambiguous-deception-narrative"
+    },
+    {
+      "source": "aspectual-ambivalence",
+      "target": "ambiguous-deception-narrative"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "ambiguous-deception-narrative"
+    }
+  ]
+}

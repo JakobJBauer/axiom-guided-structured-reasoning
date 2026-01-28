@@ -1,0 +1,73 @@
+Interviewer: Let’s go through this codebook together. First, can you define the basic surface-level labels?
+
+Expert: Sure.
+
+- Question: What does [attr-4] mean?
+  - Answer: A story is [attr-4] if the story starts with a adjective.
+
+- Question: And what about [attr-5]?
+  - Answer: A story is [attr-5] if the story starts with a noun.
+
+- Question: How do you label tone or style at a simple level?
+  - Answer: 
+    - A story is [attr-8] if the story is lighthearted.
+    - A story is [attr-9] if the story is surreal.
+    - A story is [attr-7] if the story is humorous.
+
+Interviewer: Good. What about thematic labels?
+
+Expert:
+- Question: What does [attr-11] mean?
+  - Answer: A story is [attr-11] if the story has the theme Problem-Solving.
+
+- Question: And [attr-10]?
+  - Answer: A story is [attr-10] if the story has the theme Deception.
+
+Interviewer: Now for the composite or logical nodes — how are those specified?
+
+Expert:
+- Question: How is [attr-3] defined?
+  - Answer: A story is [attr-3] if exactly one of the following is true:
+    - The story is [attr-4]
+    - The story is [attr-5]
+
+- Question: How is [attr-12] determined?
+  - Answer: A story is [attr-12] if either of the following is true:
+    - The story's style is in the set { [attr-8], [attr-7] }
+    - Both of the following are true:
+      - The story is [attr-9]
+      - The story is not [attr-10]
+
+Interviewer: That “not” is important — it's part of the logical structure.
+
+Expert: Exactly. It’s an explicit negation in the second branch.
+
+Interviewer: Continue—what’s next?
+
+Expert:
+- Question: What is [attr-2]?
+  - Answer: A story is [attr-2] if either of the following is true:
+    - The story is [attr-10]
+    - The story is [attr-11]
+
+- Question: There’s an equality test too. What does [attr-6] mean?
+  - Answer: A story is [attr-6] if the following equality holds:
+    - [attr-8] = [attr-7]
+
+Interviewer: So that last one checks whether those two style labels are equivalent for the story.
+
+Expert: Correct.
+
+Interviewer: And finally, the most complex node?
+
+Expert:
+- Question: How is [attr-1] defined?
+  - Answer: A story is [attr-1] if both of the following are true:
+    - The story is [attr-3]
+    - Exactly one of the following is true:
+      - The story is [attr-12]
+      - The story is [attr-2]
+
+Interviewer: To confirm — that means [attr-1] requires the XOR start-type and then it requires that exactly one of the two higher-level conditions (playful tone vs deception-or-problem theme) holds.
+
+Expert: Yes. The logical relationships and operators (Exactly one, either, both, and the negation) are all preserved as written. Each node and its ID remain unchanged; we’re just restating the same conditions in a conversational, question-and-answer format for clarity.

@@ -1,0 +1,25 @@
+[attr-4]
+A story is [attr-4] if it has the theme Innovation.
+
+[attr-6]
+A story is [attr-6] if it’s about cultural traditions.
+
+[attr-5]
+A story is [attr-5] if it’s about bygone eras.
+
+[attr-7]
+A story is [attr-7] if it uses wh-questions.
+
+[attr-2]
+A story is [attr-2] if it starts with a noun.
+
+[attr-3]
+A story is [attr-3] if it starts with a preposition.
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-4]
+- Either of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- The story is [attr-7]

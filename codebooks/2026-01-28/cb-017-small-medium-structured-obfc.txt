@@ -1,0 +1,46 @@
+[attr-3]
+- Short label: STYLE-HUMOROUS
+- Definition / rule:
+  - A story is STYLE-HUMOROUS if:
+    - The story is humorous
+
+[attr-4]
+- Short label: STYLE-LIGHTHEARTED
+- Definition / rule:
+  - A story is STYLE-LIGHTHEARTED if:
+    - The story is lighthearted
+
+[attr-5]
+- Short label: THEME-KINDNESS
+- Definition / rule:
+  - A story is THEME-KINDNESS if:
+    - The story has the theme Kindness
+
+[attr-2]
+- Short label: STYLE-EXCLUSIVE
+- Logical operator: exactly one of the following is true (exclusive OR)
+- Definition / rule:
+  - A story is STYLE-EXCLUSIVE if exactly one of the following is true:
+    - The story is [attr-3]
+    - The story is [attr-4]
+
+[attr-1]
+- Short label: GENRE-GENTLE
+- Logical operator: both of the following are true (AND) with a nested OR
+- Definition / rule:
+  - A story is GENRE-GENTLE if both of the following are true:
+    1. The story is [attr-5]
+    2. Either of the following are true:
+       - The story is [attr-2]
+       - Both of the following are true:
+         - The story is [attr-4]
+         - The story is not [attr-3]
+
+Notes for annotators (kept concise and structural)
+- Preserve the exact node IDs in brackets when marking labels.
+- Follow the logical operators as written:
+  - "exactly one of the following is true" = exclusive OR between listed items.
+  - "both of the following are true" = logical AND of listed items.
+  - "Either of the following are true" = logical OR of listed items.
+  - "not" negates the condition that follows.
+- When evaluating [attr-1], apply the outer AND first, then evaluate the nested OR/AND structure exactly as presented.

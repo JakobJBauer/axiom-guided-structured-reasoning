@@ -1,0 +1,83 @@
+{
+  "nodes": [
+    {
+      "id": "style-humorous",
+      "label": "Style Humorous",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-lighthearted",
+      "label": "Style Lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-kindness",
+      "label": "Theme Kindness",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-exclusive",
+      "label": "Style Exclusive",
+      "formula_type": "Xor",
+      "formula_args": [
+        "style-humorous",
+        "style-lighthearted"
+      ]
+    },
+    {
+      "id": "genre-gentle",
+      "label": "Genre Gentle",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-kindness",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-exclusive",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "style-lighthearted",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "style-humorous"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "style-humorous",
+      "target": "style-exclusive"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "style-exclusive"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "genre-gentle"
+    },
+    {
+      "source": "style-exclusive",
+      "target": "genre-gentle"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "genre-gentle"
+    },
+    {
+      "source": "style-humorous",
+      "target": "genre-gentle"
+    }
+  ]
+}

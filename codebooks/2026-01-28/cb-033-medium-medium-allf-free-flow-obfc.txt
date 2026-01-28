@@ -1,0 +1,54 @@
+I’ll smooth this codebook into a natural, free-flow voice while keeping every logical link exactly as it is and leaving all node IDs in their original [attr-1] form.
+
+[attr-10]
+We call a story [attr-10] if the story has the theme Humor.
+
+[attr-12]
+A story is [attr-12] when it’s about lost civilizations.
+
+[attr-8]
+Label a story [attr-8] if the story is playful.
+
+[attr-9]
+A story is [attr-9] if the story is surreal.
+
+[attr-13]
+Tag a story [attr-13] when it uses discourse markers.
+
+[attr-3]
+A story is [attr-3] if the story has readability score below 86.4.
+
+[attr-6]
+Mark a story [attr-6] if the story is classic.
+
+[attr-7]
+A story is [attr-7] if the story is philosophical.
+
+[attr-2]
+A story is [attr-2] if the story has a cliffhanger.
+
+[attr-5]
+A story is [attr-5] if the story starts with a preposition.
+
+[attr-11]
+A story is [attr-11] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-8]
+  - The story is [attr-7]
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is not [attr-6]
+
+[attr-4]
+A story is [attr-4] if both of the following are true:
+- The story is in the following set:
+  - [attr-10]
+  - [attr-12]
+- Either of the following is true:
+  - The story is [attr-2]
+  - Both of the following are true:
+    - The story is equal to [attr-10]
+    - The story is not [attr-3]
+- Or the story is [attr-11]
+
+That’s it — the same logical anatomy, simply spoken: each node remains intact, every logical operator and nesting preserved, and all IDs exactly as originally written.

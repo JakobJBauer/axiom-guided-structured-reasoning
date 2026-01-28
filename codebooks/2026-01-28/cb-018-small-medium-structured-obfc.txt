@@ -1,0 +1,65 @@
+Codebook — Structured Reference for Annotation
+(Each entry shows the node ID in brackets, the concise definition, and the exact logical conditions you must check. Logical operators and node IDs are preserved exactly.)
+
+1) Core / Simple labels
+- [attr-7]
+  - Definition: Marks stories whose central theme is helping others.
+  - Rule: A story is [attr-7] if The story has the theme Helping Others.
+
+- [attr-6]
+  - Definition: Marks stories written in a philosophical style or that emphasize philosophical reflection.
+  - Rule: A story is [attr-6] if The story is philosophical.
+
+- [attr-4]
+  - Definition: Marks stories that present a classic style (traditional conventions, period cadence, or classic storytelling approach).
+  - Rule: A story is [attr-4] if The story is classic.
+
+- [attr-1]
+  - Definition: Marks stories that explicitly use juxtaposition (contrasting elements placed together for effect).
+  - Rule: A story is [attr-1] if The story has juxtaposition.
+
+- [attr-5]
+  - Definition: Marks stories that present a modern style (contemporary techniques, modern voice, or modernist sensibilities).
+  - Rule: A story is [attr-5] if The story is modern.
+
+2) Composite label: mixed-style with juxtaposition
+- [attr-2]
+  - Purpose: Identifies stories that combine juxtaposition with exactly one of the classic/modern styles (but not both).
+  - Rule: A story is [attr-2] if both of the following are true:
+    - The story is [attr-1]
+    - Exactly one of the following is true:
+      - The story is [attr-4]
+      - The story is [attr-5]
+  - Annotator checklist:
+    - Confirm presence of juxtaposition.
+    - Confirm the story is either classic or modern, but not both.
+    - If both classic and modern apply, do NOT assign [attr-2].
+
+3) Higher-level composite: philosophical + helping-others with dramatic condition
+- [attr-3]
+  - Purpose: Flags stories with a philosophical treatment and a helping-others theme, with special handling when mixed-style juxtaposition is present.
+  - Rule: A story is [attr-3] if either of the following is true:
+    - All of the following are true:
+      - The story is [attr-6]
+      - The story is [attr-7]
+      - The story is not [attr-2]
+    - Both of the following are true:
+      - The story is [attr-2]
+      - The story is not [attr-7]
+  - Annotator checklist (step-by-step):
+    1. Option A (primary path):
+       - Is the story philosophical? (assign [attr-6])
+       - Does it have the Helping Others theme? (assign [attr-7])
+       - Is it NOT a [attr-2] story? If all three answers are true → assign [attr-3].
+    2. Option B (alternate path):
+       - Is the story a [attr-2]? If yes, then check:
+       - Is the story NOT [attr-7]? If both are true → assign [attr-3].
+    3. If neither option A nor option B is satisfied → do NOT assign [attr-3].
+
+Quick practical notes (keeps the pragmatic logic intact)
+- Always evaluate simple labels ([STYLE-...], [THEME-...], [attr-1]) first. Composite nodes depend on those.
+- For "Exactly one of the following is true", treat this as exclusive-or: only assign that branch if exactly one of the listed sublabels is present.
+- For "All of the following are true" and "Both of the following are true", require every listed condition to hold.
+- Do not change node IDs or the logical operators when annotating. Use the exact relationships above to determine each composite label.
+
+End of codebook.

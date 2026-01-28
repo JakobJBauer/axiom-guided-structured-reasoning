@@ -1,0 +1,110 @@
+Codebook — Structured version
+Purpose
+- Provide a clear, checklist-friendly reference for annotators.
+- Preserve the exact logical relationships between labels while making the rules easier to follow.
+- Keep all node IDs exactly as written (in [attr-1] form) and preserve all logical operators (Not, And, Or, etc.).
+
+I. Atomic (single-condition) labels
+- [attr-9]
+  - Definition: A story is [attr-9] if the story is playful.
+  - Quick check: Is the tone light, whimsical, or deliberately fun?
+
+- [attr-8]
+  - Definition: A story is [attr-8] if the story is minimalist.
+  - Quick check: Is the prose spare, focused, and economical?
+
+- [attr-4]
+  - Definition: A story is [attr-4] if the story has a moral lesson.
+  - Quick check: Does the narrative convey an explicit or implicit moral?
+
+- [attr-12]
+  - Definition: A story is [attr-12] if the story is about time travel.
+  - Quick check: Are time travel elements central to the plot or setting?
+
+- [attr-7]
+  - Definition: A story is [attr-7] if the story starts with a noun.
+  - Quick check: Does the very first token/word read as a noun?
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story has more than 6 paragraphs.
+  - Quick check: Count paragraphs; more than six → label true.
+
+- [attr-13]
+  - Definition: A story is [attr-13] if the story uses conditional mood.
+  - Quick check: Look for conditional constructions (would, could, might, if…).
+
+- [attr-10]
+  - Definition: A story is [attr-10] if the story has the theme Hardship.
+  - Quick check: Does the story center on struggle, adversity, or hardship?
+
+II. Composite labels — structure and checklist
+- [attr-3]
+  - Rule header: A story is [attr-3] if both of the following are true:
+  - Components:
+    - The story is [attr-9]
+    - The story is [attr-8]
+  - Annotator checklist:
+    1. Confirm [attr-9].
+    2. Confirm [attr-8].
+    3. If both confirmed → apply [attr-3].
+
+- [attr-2]
+  - Rule header: A story is [attr-2] if all of the following are true:
+  - Components:
+    - The story is [attr-5]
+    - The story is [attr-13]
+    - The story is [attr-7]
+  - Annotator checklist:
+    1. Verify >6 paragraphs → [attr-5].
+    2. Verify presence of conditional mood → [attr-13].
+    3. Verify first word is a noun → [attr-7].
+    4. If all three hold → apply [attr-2].
+
+- [attr-11]
+  - Rule header: A story is [attr-11] if both of the following are true:
+  - Components:
+    - The story is [attr-12]
+    - The story is [attr-4]
+  - Annotator checklist:
+    1. Confirm time-travel topic → [attr-12].
+    2. Confirm a moral lesson → [attr-4].
+    3. If both confirmed → apply [attr-11].
+
+- [attr-6]
+  - Rule header: A story is [attr-6] if both of the following are true:
+  - Primary requirement:
+    - The story is [attr-2]
+  - Secondary (either/or) requirement:
+    - Either of the following is true:
+      - The story is [attr-3]
+      - Both of the following are true:
+        - The story is [attr-9]
+        - The story is not [attr-10]
+  - Annotator checklist (stepwise):
+    1. Confirm [attr-2]. If not confirmed → do not apply [attr-6].
+    2. If [attr-2] is true, evaluate the secondary condition:
+       - Option A: Check [attr-3]. If true → apply [attr-6].
+       - Option B: If [attr-3] is false, check both:
+         a. [attr-9] is true, and
+         b. [attr-10] is false (i.e., the story is not [attr-10]).
+         - If both (a) and (b) hold → apply [attr-6].
+    3. If none of the secondary options hold → do not apply [attr-6].
+
+III. Practical annotation tips (keeps logic intact)
+- Work top-down for composites:
+  - First evaluate atomic labels.
+  - Then evaluate composites by following their explicit logical connectors.
+- For “not” conditions:
+  - “The story is not [attr-10]” means absence of the hardship theme (do not invert other conditions).
+- When in doubt:
+  - Use the explicit checklist for each composite node; do not infer extra conditions beyond those listed.
+
+IV. Summary reference (quick map)
+- Atomic nodes: [attr-9], [attr-8], [attr-4], [attr-12], [attr-7], [attr-5], [attr-13], [attr-10]
+- Composite nodes and their direct structures:
+  - [attr-3] = both of: [attr-9] AND [attr-8]
+  - [attr-2] = all of: [attr-5], [attr-13], [attr-7]
+  - [attr-11] = both of: [attr-12] AND [attr-4]
+  - [attr-6] = both of: [attr-2] AND (Either: [attr-3] OR (both: [attr-9] AND the story is not [attr-10]))
+
+End — Follow these structured checks to apply labels consistently while preserving the exact logical relationships from the original codebook.

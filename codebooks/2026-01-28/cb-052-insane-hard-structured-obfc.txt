@@ -1,0 +1,174 @@
+Overview
+- Purpose: This codebook defines annotation labels (nodes) for stories. Each node is written as [attr-19].
+- How to read rules:
+  - Simple definitions: “A story is [attr-18] if …” gives the direct criterion.
+  - Composite rules use precise logical phrases:
+    - “both of the following are true” = logical AND of all listed items.
+    - “either of the following is true” = logical OR of listed items.
+    - “all of the following are true” = logical AND across the group.
+    - “exactly one of the following is true” = exclusive OR (XOR).
+    - “not” = logical negation; written as “The story is not [attr-18]”.
+- Node IDs are preserved exactly in [attr-1] form. Logical structure and relationships are unchanged.
+
+Atomic (single-condition) nodes
+- Themes
+  - A story is [attr-33] if:
+    - The story has the theme Growth.
+  - A story is [attr-35] if:
+    - The story has the theme Helping Others.
+  - A story is [attr-32] if:
+    - The story has the theme Deception.
+  - A story is [attr-38] if:
+    - The story has the theme Kindness.
+  - A story is [attr-34] if:
+    - The story has the theme Hardship.
+  - A story is [attr-40] if:
+    - The story has the theme Problem-Solving.
+  - A story is [attr-37] if:
+    - The story has the theme Innovation.
+  - A story is [attr-39] if:
+    - The story has the theme Magic.
+  - A story is [attr-36] if:
+    - The story has the theme Humor.
+
+- Styles
+  - A story is [attr-25] if:
+    - The story is humorous.
+  - A story is [attr-28] if:
+    - The story is modern.
+  - A story is [attr-26] if:
+    - The story is lighthearted.
+  - A story is [attr-29] if:
+    - The story is philosophical.
+  - A story is [attr-27] if:
+    - The story is minimalist.
+  - A story is [attr-30] if:
+    - The story is surreal.
+
+- Topics
+  - A story is [attr-45] if:
+    - The story is about lost civilizations.
+  - A story is [attr-49] if:
+    - The story is about time travel.
+  - A story is [attr-48] if:
+    - The story is about seasonal changes.
+  - A story is [attr-44] if:
+    - The story is about giant creatures.
+  - A story is [attr-43] if:
+    - The story is about cultural traditions.
+  - A story is [attr-46] if:
+    - The story is about magical lands.
+  - A story is [attr-42] if:
+    - The story is about bygone eras.
+  - A story is [attr-47] if:
+    - The story is about mystical creatures.
+
+- Structural / Syntactic markers
+  - A story is [attr-24] if:
+    - The story starts with a preposition.
+  - A story is [attr-22] if:
+    - The story starts with an adverb.
+  - A story is [attr-23] if:
+    - The story starts with a noun.
+  - A story is [attr-51] if:
+    - The story uses perfect aspect.
+  - A story is [attr-53] if:
+    - The story uses wh-questions.
+  - A story is [attr-50] if:
+    - The story uses discourse markers.
+  - A story is [attr-52] if:
+    - The story uses superlative forms.
+
+- Narrative devices and devices
+  - A story is [attr-7] if:
+    - The story has Checkhov's gun.
+  - A story is [attr-5] if:
+    - The story has a moral lesson.
+  - A story is [attr-3] if:
+    - The story has a cliffhanger.
+  - A story is [attr-8] if:
+    - The story has circular narrative structure.
+  - A story is [attr-4] if:
+    - The story has a flashback.
+  - A story is [attr-6] if:
+    - The story has a story within a story.
+
+- Readability and length
+  - A story is [attr-9] if:
+    - The story has readability score above 96.1.
+  - A story is [attr-13] if:
+    - The story has readability score below 86.4.
+  - A story is [attr-12] if:
+    - The story has more than 375 words.
+
+Composite (multi-condition) nodes
+- Simple combinations
+  - A story is [attr-10] if both of the following are true:
+    - The story is [attr-25]
+    - The story is [attr-26]
+
+  - A story is [attr-14] if both of the following are true:
+    - The story is [attr-46]
+    - either of the following is true:
+      - The story is [attr-47]
+      - The story is [attr-44]
+
+  - A story is [attr-11] if both of the following are true:
+    - The story is [attr-37]
+    - The story is [attr-40]
+
+  - A story is [attr-20] if both of the following are true:
+    - The story is [attr-12]
+    - The story is [attr-3]
+
+- OR / Either combinations
+  - A story is [attr-15] if either of the following is true:
+    - The story is [attr-28]
+    - both of the following are true:
+      - The story is [attr-29]
+      - The story is [attr-30]
+
+  - A story is [attr-41] if either of the following is true:
+    - both of the following are true:
+      - The story is [attr-49]
+      - The story is [attr-45]
+    - The story is [attr-42]
+
+- ALL / AND combinations
+  - A story is [attr-17] if all of the following are true:
+    - The story is [attr-6]
+    - The story is [attr-4]
+    - The story is [attr-8]
+
+  - A story is [attr-16] if all of the following are true:
+    - The story is [attr-5]
+    - The story is [attr-38]
+    - The story is not [attr-32]
+
+  - A story is [attr-31] if both of the following are true:
+    - The story is [attr-35]
+    - The story is [attr-38]
+
+- EXACTLY ONE (exclusive) conditions
+  - A story is [attr-21] if exactly one of the following is true:
+    - The story is [attr-9]
+    - The story is [attr-13]
+
+- Multi-level composite: [attr-2]
+  - A story is [attr-2] if either of the following is true:
+    1) All of the following are true:
+      - The story is [attr-10]
+      - The story is [attr-16]
+      - either of the following is true:
+        - The story is [attr-17]
+        - The story is [attr-20]
+    2) Exactly one of the following is true:
+      - both of the following are true:
+        - The story is [attr-14]
+        - The story is not [attr-27]
+      - The story is [attr-41]
+
+Final notes for annotators
+- Follow the exact logical phrasing provided when deciding whether a label applies.
+- For composite nodes, evaluate the inner nodes first (atomic definitions and intermediate composites) and then apply the outer logical operator.
+- Do not alter node IDs or logical operators; use them exactly as shown above.

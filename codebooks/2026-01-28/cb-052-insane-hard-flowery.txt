@@ -1,0 +1,244 @@
+Prelude — an enchanted prologue:
+In a sun-dappled library where labels bloom like flowers upon the shelves of countless tales, this codebook lives as a gardener of categories. Each bracketed sigil is a petal or a thorn: precise in its place, exact in its meaning, yet whispered about in lyrical, curious prose so that annotators may both reason with rigor and delight in the language as they read. Below, every pact of logic is preserved; the formal conditions stand firm, and around them I have woven gentle, flowery commentary to illuminate their purpose.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if The story has the theme Growth.
+In other words, affix this badge when a tale charts transformation, when characters unfurl like spring leaves and the narrative breathes a lesson of becoming.
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if The story is humorous.
+Bestow this label on stories that wear laughter like a cloak — those that wink, stumble, and make the reader smile.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others.
+This emblem belongs to narratives where reaching a hand to another is the central refrain, where compassion and assistance drive the plot.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if The story starts with a preposition.
+Apply this marker when the very first word of the tale is a preposition — a tiny grammatical doorway that opens the scene.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if The story is modern.
+This tag glints like chrome: for stories steeped in contemporary sensibilities, present-day voice, or a now-ish setting.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+Mark this when the narrative employs the perfect tenses — those delicate time-weavers that link past achievements to present vantage points.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if The story is lighthearted.
+Reserve this for stories that float, breezy and unburdened, where tone is gentle and worries are few.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if The story has the theme Deception.
+Pin this label on tales where misdirection, secrets, or deliberate untruths form a thematic thread.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if The story has the theme Kindness.
+Use this when benevolence is woven into the fabric of the story — kindness is not merely an act but a theme.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if The story uses wh-questions.
+This is for narratives that invoke curiosity in interrogative form — who, what, where, when, why, how — to steer inquiry or suspense.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations.
+Award this when ruins, vanished empires, or the echoes of bygone societies take center stage.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if The story is about time travel.
+Affix this to adventures that fold time — journeys forward, backward, or kaleidoscopic loops through eras.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun.
+Label any tale that plants an apparently minor element which later unfolds into essential significance — the promise of narrative economy fulfilled.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if The story has a moral lesson.
+Use this for tales that consciously teach or conclude with an explicit moral or ethical takeaway.
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if The story has the theme Hardship.
+Choose this marker when struggle, adversity, and trials form an essential thematic core.
+
+[LONG-STORY]
+A story is [LONG-STORY] if The story has more than 375 words.
+This practical tag distinguishes length: any narrative whose word-count blooms beyond 375 earns this label.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if The story is about seasonal changes.
+Assign this to works that turn on the wheel of the year — the shifting hues and rhythms of seasons.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger.
+This is for endings that leave the reader hanging, breathless at an unresolved precipice.
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if The story has the theme Problem-Solving.
+Attach this when the arc revolves around puzzles, obstacles, and the crafted intellect of resolution.
+
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if The story has the theme Innovation.
+Bestowed upon tales that celebrate invention, novelty, or creative breakthroughs.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if The story has the theme Magic.
+Affix this when the narrative’s heart is touched by the supernatural, the wondrous, or arcane forces.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if The story has circular narrative structure.
+Use this for stories that loop back upon themselves in structure, returning to an origin or reframing the opening.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if The story is about giant creatures.
+Label stories where titanic beasts stride across the stage, their size a dramatic presence.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if The story uses discourse markers.
+Apply this when the narrative makes liberal use of connectives and signposts — words that guide the reader through argument or flow.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if The story is philosophical.
+Grant this to works that muse, argue, or ponder big ideas with contemplative tone.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if The story starts with a adverb.
+This is the tag for openings whose first breath is an adverbial word, setting manner or intensity at once.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if The story is about cultural traditions.
+Use this for narratives rooted in ritual, custom, or inherited communal practices.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if The story has a flashback.
+Attach this when the narrative slips backward in time to reveal antecedent events.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if The story has readability score above 96.1.
+Formally mark works whose measured readability soars above 96.1, indicating exceptionally smooth clarity.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if The story is minimalist.
+Award this to stories pared down to essentials, where restraint and simplicity define style.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if The story uses superlative forms.
+This is for texts that employ words like “best,” “most,” or other superlatives to convey extremes.
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] if The story is about magical lands.
+Attach this label to journeys through enchanted geographies, where maps shimmer and rules bend.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if The story has a story within a story.
+Use this when narratives nest other narratives inside themselves, like dolls within dolls.
+
+[STYLE-SURREAL]
+A story is [STYLE-SURREAL] if The story is surreal.
+Tag works that delight in dreamlogic, uncanny imagery, and the illogical made luminous.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if The story starts with a noun.
+This simple yet telling marker applies when a noun stands as the tale’s first breath.
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] if The story is about bygone eras.
+Use this for works that wander through old times, evoking epochs past and their atmospheres.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if The story has readability score below 86.4.
+Formally mark works whose readability measure falls below 86.4, signaling denser or more complex prose.
+
+[THEME-HUMOR]
+A story is [THEME-HUMOR] if The story has the theme Humor.
+Apply this to stories where humor is not merely tone but a guiding thematic element.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures.
+Affix this when spectral, fey, or other-worldly beings populate the tale.
+
+[HUMOROUS-LIGHTHEARTED]
+A story is [HUMOROUS-LIGHTHEARTED] if both of the following are true:
+- The story is [STYLE-HUMOROUS]
+- The story is [STYLE-LIGHTHEARTED]
+This compound label blooms only when mirth and buoyancy coexist — a duet of comedic spirit and gentle mood.
+
+[MODERN-PHILOSOPHICAL-SURREAL]
+A story is [MODERN-PHILOSOPHICAL-SURREAL] if either of the following is true:
+- The story is [STYLE-MODERN]
+- both of the following are true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [STYLE-SURREAL]
+This constellation groups together modern sensibility or the rarer fusion of contemplative and dreamlike qualities.
+
+[READABILITY-EXTREMES]
+A story is [READABILITY-EXTREMES] if exactly one of the following is true:
+- The story is [HIGH-READABILITY]
+- The story is [LOW-READABILITY]
+This tag captures exclusivity: either the prose is unusually breezy, or it tilts toward density, but not both.
+
+[NARRATIVE-COMPLEXITY]
+A story is [NARRATIVE-COMPLEXITY] if all of the following are true:
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [HAS-A-FLASHBACK]
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+When these three narrative devices entwine — nesting, temporal backsliding, and circular form — the story earns this badge of structural intricacy.
+
+[THEMATIC-HELP-KIND]
+A story is [THEMATIC-HELP-KIND] if both of the following are true:
+- The story is [THEME-HELPING-OTHERS]
+- The story is [THEME-KINDNESS]
+This junction honors tales where assistance and kindness are twin pillars of the theme.
+
+[MAGIC-LANDS-CREATURES]
+A story is [MAGIC-LANDS-CREATURES] if both of the following are true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- either of the following is true:
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+  - The story is [TOPIC-GIANT-CREATURES]
+Use this when enchanted realms and extraordinary beings — whether mystical sprites or colossal beasts — share the stage.
+
+[TIME-LOST-BYGONE]
+A story is [TIME-LOST-BYGONE] if either of the following is true:
+- both of the following are true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+- The story is [TOPIC-BYGONE-ERAS]
+This category gathers tales that travel in time to vanished worlds, or otherwise dwell in the landscapes of long-ago eras.
+
+[MORALITY-FILTER]
+A story is [MORALITY-FILTER] if all of the following are true:
+- The story is [HAS-A-MORAL-LESSON]
+- The story is [THEME-KINDNESS]
+- The story is not [THEME-DECEPTION]
+This filter selects narratives that teach a moral anchored in kindness and explicitly avoids those that rely on deception.
+
+[INNOVATION-PROBLEM-SOLVE]
+A story is [INNOVATION-PROBLEM-SOLVE] if both of the following are true:
+- The story is [THEME-INNOVATION]
+- The story is [THEME-PROBLEM-SOLVING]
+Affix this when invention and the art of solving problems are inextricably intertwined within the theme.
+
+[PACING-LONG-CLIFF]
+A story is [PACING-LONG-CLIFF] if both of the following are true:
+- The story is [LONG-STORY]
+- The story is [HAS-A-CLIFFHANGER]
+This marker flags lengthy narratives that conclude on a suspenseful precipice.
+
+[COMPLEX-ARCHETYPE]
+A story is [COMPLEX-ARCHETYPE] if either of the following is true:
+- all of the following are true:
+  - The story is [HUMOROUS-LIGHTHEARTED]
+  - The story is [MORALITY-FILTER]
+  - either of the following is true:
+    - The story is [NARRATIVE-COMPLEXITY]
+    - The story is [PACING-LONG-CLIFF]
+- exactly one of the following is true:
+  - both of the following are true:
+    - The story is [MAGIC-LANDS-CREATURES]
+    - The story is not [STYLE-MINIMALIST]
+  - The story is [TIME-LOST-BYGONE]
+This final, ornate archetype crowns stories that satisfy a rich blend of qualities: comedic lightness coupled with moral clarity and either structural complexity or a dramatic pause; or alternately, enchanted realms with creatures (so long as the story is not minimalist), or tales folded in time and history. It is, appropriately, a complex bouquet of features.
+
+Epilogue — a gentle reminder:
+Each bracketed title above is both a rule and a lantern: the formal condition is written plainly to guide annotation, and the flowery commentary is meant to illuminate purpose and help readers remember. The logical bones remain unaltered; only the surrounding language has been gilded so that this codebook can be both exact and delightful to read.

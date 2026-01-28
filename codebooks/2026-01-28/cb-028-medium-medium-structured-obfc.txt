@@ -1,0 +1,65 @@
+Codebook — structured reference
+
+Purpose: Provide a clear, hierarchical description of each annotation node and the exact logical conditions that determine when a story satisfies that node. All node IDs, logical operators, and relationships are preserved exactly as in the original codebook.
+
+1) Atomic (base) properties
+- [attr-2]
+  - Definition: A story is [attr-2] if the story has a moral lesson.
+- [attr-4]
+  - Definition: A story is [attr-4] if the story has more than 6 paragraphs.
+- [attr-7]
+  - Definition: A story is [attr-7] if the story starts with a adverb.
+- [attr-3]
+  - Definition: A story is [attr-3] if the story has circular narrative structure.
+- [attr-9]
+  - Definition: A story is [attr-9] if the story uses perfect aspect.
+- [attr-10]
+  - Definition: A story is [attr-10] if the story uses superlative forms.
+
+2) Derived (composite) nodes — logical structure and conditions
+- [attr-8]
+  - Summary: Requires that the story starts with an adverb AND exactly one of two stylistic markers holds.
+  - Formal conditions:
+    - A story is [attr-8] if both of the following are true:
+      - The story is [attr-7]
+      - Exactly one of the following is true:
+        - The story is [attr-9]
+        - The story is [attr-10]
+
+- [attr-6]
+  - Summary: True when the story either has a circular narrative, or — if it does not have a circular structure — it has many paragraphs.
+  - Formal conditions:
+    - A story is [attr-6] if either of the following is true:
+      - The story is [attr-3]
+      - Both of the following are true:
+        - The story is not [attr-3]
+        - The story is [attr-4]
+
+- [attr-5]
+  - Summary: True when exactly one of the two length/moral properties holds: either a moral lesson or many paragraphs, but not both.
+  - Formal conditions:
+    - A story is [attr-5] if exactly one of the following is true:
+      - The story is [attr-2]
+      - The story is [attr-4]
+
+- [attr-1]
+  - Summary: Indicates a high complexity story when it meets narrative-type requirements, and additionally either shows a specific stylistic choice or does not satisfy MORAL-OR-LONG.
+  - Formal conditions:
+    - A story is [attr-1] if both of the following are true:
+      - Either of the following is true:
+        - The story is [attr-8]
+        - The story is not [attr-5]
+      - The story is [attr-6]
+
+3) Quick logical maps (for reference)
+- [attr-8] = [attr-7] AND exactly-one([attr-9], [attr-10])
+- [attr-6] = [attr-3] OR (NOT [attr-3] AND [attr-4])
+- [attr-5] = exactly-one([attr-2], [attr-4])
+- [attr-1] = [attr-6] AND ( [attr-8] OR NOT [attr-5] )
+
+Usage notes (annotator guidance)
+- Evaluate atomic properties first (Section 1). These are the inputs used by the composite rules.
+- Apply composite rules exactly as written—observe "both", "either", and "exactly one" carefully.
+- The logical structure is intentional: do not simplify or alter the relationships when reasoning or implementing these conditions.
+
+End of codebook.

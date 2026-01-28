@@ -1,0 +1,146 @@
+Interviewer: Let's go through this codebook together. I'll ask about each label and you explain exactly what it means — including the formal rule. Ready?
+
+Expert: Ready. I'll present the official definition first, then give a short, plain-English clarification. I'll never change the node IDs or the logical structure — I’ll only make the wording easier to follow.
+
+Interviewer: Great. Start with the basics.
+
+Expert: Sure.
+
+Interviewer: What does [STYLE-LIGHTHEARTED] mean?
+
+Expert: Official definition:
+- A story is [STYLE-LIGHTHEARTED] if The story is lighthearted
+
+Clarification: This is a simple, single-condition tag. If the story feels lighthearted, tag it [STYLE-LIGHTHEARTED].
+
+Interviewer: Next?
+
+Expert: [HAS-CHECKHOVS-GUN]
+
+Official definition:
+- A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun
+
+Clarification: If the story includes Chekhov’s gun (an element introduced early that later becomes important), mark this node.
+
+Interviewer: And [HAS-A-CLIFFHANGER]?
+
+Expert: Official definition:
+- A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+
+Clarification: Tag this when the story ends (or pauses) on a suspenseful unresolved moment.
+
+Interviewer: Now the theme nodes. What about [THEME-HARDSHIP]?
+
+Expert: Official definition:
+- A story is [THEME-HARDSHIP] if The story has the theme Hardship
+
+Clarification: Use this when Hardship is a central theme.
+
+Interviewer: [THEME-HELPING-OTHERS]?
+
+Expert: Official definition:
+- A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others
+
+Clarification: Use this when the story emphasizes helping or altruism.
+
+Interviewer: [THEME-DECEPTION]?
+
+Expert: Official definition:
+- A story is [THEME-DECEPTION] if The story has the theme Deception
+
+Clarification: Use this when deception, lies, or trickery are a main theme.
+
+Interviewer: [THEME-PROBLEM-SOLVING]?
+
+Expert: Official definition:
+- A story is [THEME-PROBLEM-SOLVING] if The story has the theme Problem-Solving
+
+Clarification: Use this when figuring out solutions, puzzles, or overcoming obstacles is a thematic focus.
+
+Interviewer: Now onto a composite node: [THEMATIC-CONFLICT]. How is that defined?
+
+Expert: Official definition:
+- A story is [THEMATIC-CONFLICT] if exactly one of the following is true:
+  - The story is [THEME-HARDSHIP]
+  - The story is [THEME-DECEPTION]
+
+Clarification: This is an exclusive-or between [THEME-HARDSHIP] and [THEME-DECEPTION]. The story must have one of those themes, but not both. If it has neither, or if it has both, it does not satisfy [THEMATIC-CONFLICT].
+
+Interviewer: [TONE-CONFLICTED] looks nested. Explain it.
+
+Expert: Official definition:
+- A story is [TONE-CONFLICTED] if both of the following are true:
+  - The story is [STYLE-LIGHTHEARTED]
+  - Either of the following is true:
+    - The story is [THEMATIC-CONFLICT]
+    - The story is [THEME-PROBLEM-SOLVING]
+
+Clarification: Two things must hold:
+1) The story must be lighthearted; and
+2) It must either have that exclusive thematic conflict ([THEMATIC-CONFLICT]) or be focused on problem-solving ([THEME-PROBLEM-SOLVING]). Think of a story that’s cheerful in tone but has themes that conflict, or is cheerfully solving problems — that’s [TONE-CONFLICTED].
+
+Interviewer: What about [PLOT-DRIVEN]?
+
+Expert: Official definition:
+- A story is [PLOT-DRIVEN] if both of the following are true:
+  - The story is [HAS-CHECKHOVS-GUN]
+  - Exactly one of the following is true:
+    - The story is [THEME-PROBLEM-SOLVING]
+    - The story is [HAS-A-CLIFFHANGER]
+
+Clarification: For [PLOT-DRIVEN], the story must contain Checkhov’s gun, and then it must have either Problem-Solving or a Cliffhanger — but not both. So it’s Checkhov’s gun plus an exclusive choice between those two narrative aspects.
+
+Interviewer: Next: [MORAL-ARC]. That one looks like an OR of two ANDs.
+
+Expert: Official definition:
+- A story is [MORAL-ARC] if either of the following is true:
+  - Both of the following are true:
+    - The story is [THEME-HELPING-OTHERS]
+    - The story is not [THEME-DECEPTION]
+  - Both of the following are true:
+    - The story is [THEME-PROBLEM-SOLVING]
+    - The story is [THEME-HELPING-OTHERS]
+
+Clarification: There are two routes to [MORAL-ARC]:
+- Route A: The story is about helping others and does not involve deception.
+- Route B: The story combines problem-solving with helping others.
+If either route applies, mark [MORAL-ARC].
+
+Interviewer: Finally, the big one: [COMPLEX-NARRATIVE]. Walk me through it slowly.
+
+Expert: Official definition:
+- A story is [COMPLEX-NARRATIVE] if either of the following is true:
+  - Both of the following are true:
+    - The story is [TONE-CONFLICTED]
+    - Both of the following are true:
+      - The story is [PLOT-DRIVEN]
+      - The story is [MORAL-ARC]
+  - All of the following are true:
+    - The story is not [TONE-CONFLICTED]
+    - Either of the following is true:
+      - The story is [PLOT-DRIVEN]
+      - The story is [HAS-A-CLIFFHANGER]
+    - The story is not both of the following:
+      - The story is [THEME-HARDSHIP]
+      - The story is [THEME-DECEPTION]
+
+Clarification: There are two ways a story can be [COMPLEX-NARRATIVE]:
+
+Route 1 (the first bullet): The story is [TONE-CONFLICTED], and it also satisfies both [PLOT-DRIVEN] and [MORAL-ARC]. In other words: a lighthearted-but-thematically-conflicted (or problem-solving) story that also has Checkhov’s gun + exclusive plot element and meets the moral-arc criteria.
+
+Route 2 (the second bullet): The story is not [TONE-CONFLICTED], but it still meets these three conditions together:
+  - It must be either [PLOT-DRIVEN] or have a cliffhanger ([HAS-A-CLIFFHANGER]).
+  - It must not have both [THEME-HARDSHIP] and [THEME-DECEPTION] at the same time (i.e., it cannot contain that pair of themes together).
+So Route 2 captures non-tone-conflicted stories that are plot-forward or cliffhanger-driven, provided they aren’t simultaneously about Hardship and Deception.
+
+Interviewer: That's a lot of nested logic. Any final tips for annotators?
+
+Expert: A few quick pointers:
+- Always check the simple theme/style tags first ([STYLE-LIGHTHEARTED], theme tags, and the two plot/feature tags). They’re the building blocks.
+- For “exactly one” rules, remember they’re exclusive-or: one and only one must be true.
+- For “not both” constraints, a story fails that check only if both listed conditions hold; having zero or one of them is fine.
+- When applying [COMPLEX-NARRATIVE] or [TONE-CONFLICTED], follow the nesting exactly: some branches require multiple conditions together (both/and), others allow alternatives (either/or).
+
+Interviewer: Thanks — that makes the structure much clearer while keeping the formal rules intact.
+
+Expert: You're welcome. If you want, I can read back any specific node’s official definition again verbatim while we annotate a real story.

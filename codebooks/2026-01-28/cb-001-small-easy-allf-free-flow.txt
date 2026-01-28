@@ -1,0 +1,33 @@
+[STYLE-CLASSIC]
+Think of this as the simple label for an old-fashioned feel: a story is [STYLE-CLASSIC] if The story is classic.
+
+[STYLE-MODERN]
+On the flip side, when a story has a contemporary vibe, it earns the tag [STYLE-MODERN] — a story is [STYLE-MODERN] if The story is modern.
+
+[HAS-A-CLIFFHANGER]
+If the plot leaves you hanging at the end, that’s when the [HAS-A-CLIFFHANGER] marker applies: a story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger.
+
+[LONG-STORY]
+Length matters here — anything over the threshold gets a label. A story is [LONG-STORY] if The story has more than 375 words.
+
+[TOPIC-BYGONE-ERAS]
+When the subject turns toward histories and eras gone by, we mark it as [TOPIC-BYGONE-ERAS]: a story is [TOPIC-BYGONE-ERAS] if The story is about bygone eras.
+
+[CLASSIC-HISTORICAL-LONG]
+When a tale checks all three boxes — classic in style, lengthy, and about bygone times — we give it the combined label [CLASSIC-HISTORICAL-LONG]. Formally:
+A story is [CLASSIC-HISTORICAL-LONG] if all of the following are true:
+- The story is [STYLE-CLASSIC]
+- The story is [LONG-STORY]
+- The story is [TOPIC-BYGONE-ERAS]
+
+[DYNAMIC-STYLE-CLIFF]
+This one’s a little more nuanced: [DYNAMIC-STYLE-CLIFF] catches stories that either sit in a single clear style or combine a modern style with a dramatic cliff. In precise terms:
+A story is [DYNAMIC-STYLE-CLIFF] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [STYLE-MODERN]
+  - The story is [STYLE-CLASSIC]
+- All of the following are true:
+  - The story is not [STYLE-CLASSIC]
+  - The story's style is equal to [STYLE-MODERN]
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story's topic is in [TOPIC-BYGONE-ERAS]

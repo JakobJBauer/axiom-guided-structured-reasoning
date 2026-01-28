@@ -1,0 +1,20 @@
+Think of this as a short, friendly guide to the tags you’ll use while annotating stories. I’ll describe each label in plain, conversational language so it’s easier to remember — but I won’t change any of the logic or the exact node names you need to use.
+
+A story is [attr-2] if the story starts with a preposition. In other words, if the very first word that opens the piece is a preposition (like "In," "On," "At," "Between," etc.), that’s the cue to mark it with [attr-2].
+
+A story is [attr-7] if the story uses discourse markers. If the narrator or characters rely on words and phrases that structure the flow of conversation or argument — things like "however," "so," "well," "then," "on the other hand," and similar signposts — then apply [attr-7].
+
+A story is [attr-3] if the story has the theme Deception. Whenever trickery, lies, concealment, or intentional misleading is a central part of the narrative or its message, tag the story as [attr-3].
+
+A story is [attr-5] if the story is about magical lands. Use [attr-5] when the setting or subject matter centers on fantastical realms — enchanted kingdoms, otherworldly territories, or places where the rules of our world don’t apply.
+
+A story is [attr-4] if the story is about cultural traditions. When a piece focuses on rituals, customs, community practices, or heritage that define a culture, label it [attr-4].
+
+A story is [attr-6] if the story is about the arts. If the narrative deals with painting, music, theater, dance, literature, or other creative practices and their worlds, mark it [attr-6].
+
+A story is [attr-1] if all of the following are true:
+- The story is [attr-5]
+- The story is [attr-3]
+- The story is [attr-6]
+
+That last tag, [attr-1], is reserved for pieces that sit at the intersection of enchanted settings, artistic subject matter, and deception as a core theme — all three conditions must hold true to apply it.

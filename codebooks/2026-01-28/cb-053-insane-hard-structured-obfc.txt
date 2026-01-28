@@ -1,0 +1,204 @@
+Overview
+- Purpose: Provide clear, concise definitions for each annotation label (node) and a structured, hierarchical presentation of the complex composite node [attr-1].
+- How to use: For each story, mark the applicable simple labels. Then evaluate [attr-1] by following the nested logical rules exactly as shown.
+- Note: All node IDs are preserved exactly as written. Logical operators and their relationships are kept intact.
+
+Simple label definitions
+- [attr-16]
+  - Definition: A story is [attr-16] if the story starts with a adverb.
+
+- [attr-37]
+  - Definition: A story is [attr-37] if the story is about cultural traditions.
+
+- [attr-32]
+  - Definition: A story is [attr-32] if the story has the theme Innovation.
+
+- [attr-31]
+  - Definition: A story is [attr-31] if the story has the theme Humor.
+
+- [attr-39]
+  - Definition: A story is [attr-39] if the story is about hidden treasures.
+
+- [attr-19]
+  - Definition: A story is [attr-19] if the story is classic.
+
+- [attr-20]
+  - Definition: A story is [attr-20] if the story is humorous.
+
+- [attr-23]
+  - Definition: A story is [attr-23] if the story is modern.
+
+- [attr-38]
+  - Definition: A story is [attr-38] if the story is about giant creatures.
+
+- [attr-48]
+  - Definition: A story is [attr-48] if the story uses perfect aspect.
+
+- [attr-3]
+  - Definition: A story is [attr-3] if the story has a flashback.
+
+- [attr-29]
+  - Definition: A story is [attr-29] if the story has the theme Hardship.
+
+- [attr-2]
+  - Definition: A story is [attr-2] if the story has a cliffhanger.
+
+- [attr-4]
+  - Definition: A story is [attr-4] if the story has a moral lesson.
+
+- [attr-40]
+  - Definition: A story is [attr-40] if the story is about lost civilizations.
+
+- [attr-25]
+  - Definition: A story is [attr-25] if the story is playful.
+
+- [attr-43]
+  - Definition: A story is [attr-43] if the story is about seasonal changes.
+
+- [attr-18]
+  - Definition: A story is [attr-18] if the story starts with a preposition.
+
+- [attr-9]
+  - Definition: A story is [attr-9] if the story has juxtaposition.
+
+- [attr-35]
+  - Definition: A story is [attr-35] if the story has the theme Problem-Solving.
+
+- [attr-45]
+  - Definition: A story is [attr-45] if the story is about time travel.
+
+- [attr-36]
+  - Definition: A story is [attr-36] if the story is about bygone eras.
+
+- [attr-8]
+  - Definition: A story is [attr-8] if the story has circular narrative structure.
+
+- [attr-47]
+  - Definition: A story is [attr-47] if the story uses discourse markers.
+
+- [attr-50]
+  - Definition: A story is [attr-50] if the story uses wh-questions.
+
+- [attr-44]
+  - Definition: A story is [attr-44] if the story is about the arts.
+
+- [attr-34]
+  - Definition: A story is [attr-34] if the story has the theme Magic.
+
+- [attr-24]
+  - Definition: A story is [attr-24] if the story is philosophical.
+
+- [attr-22]
+  - Definition: A story is [attr-22] if the story is minimalist.
+
+- [attr-6]
+  - Definition: A story is [attr-6] if the story has a story within a story.
+
+- [attr-11]
+  - Definition: A story is [attr-11] if the story has more than 375 words.
+
+- [attr-42]
+  - Definition: A story is [attr-42] if the story is about mystical creatures.
+
+- [attr-12]
+  - Definition: A story is [attr-12] if the story has readability score below 86.4.
+
+- [attr-7]
+  - Definition: A story is [attr-7] if the story has Checkhov's gun.
+
+- [attr-13]
+  - Definition: A story is [attr-13] if the story has more than 6 paragraphs.
+
+- [attr-28]
+  - Definition: A story is [attr-28] if the story has the theme Deception.
+
+- [attr-27]
+  - Definition: A story is [attr-27] if the story has the theme Agency.
+
+- [attr-41]
+  - Definition: A story is [attr-41] if the story is about magical lands.
+
+- [attr-49]
+  - Definition: A story is [attr-49] if the story uses superlative forms.
+
+- [attr-15]
+  - Definition: A story is [attr-15] if the story starts with a adjective.
+
+- [attr-33]
+  - Definition: A story is [attr-33] if the story has the theme Kindness.
+
+- [attr-10]
+  - Definition: A story is [attr-10] if the story has readability score above 96.1.
+
+- [attr-17]
+  - Definition: A story is [attr-17] if the story starts with a noun.
+
+- [attr-46]
+  - Definition: A story is [attr-46] if the story uses conditional mood.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story has a Red Herring.
+
+- [attr-14]
+  - Definition: A story is [attr-14] if the story has fewer than 160 words.
+
+- [attr-26]
+  - Definition: A story is [attr-26] if the story is surreal.
+
+- [attr-30]
+  - Definition: A story is [attr-30] if the story has the theme Helping Others.
+
+- [attr-21]
+  - Definition: A story is [attr-21] if the story is lighthearted.
+
+Composite node: [attr-1]
+- Purpose: Decide whether a story qualifies as [attr-1] by evaluating two main top-level conjunctions (both must be true). The exact nested logical structure is presented below; follow it step by step.
+
+- [attr-1]
+  - A story is [attr-1] if either of the following is true:
+    - both of the following are true:
+      - either of the following is true:
+        - both of the following are true:
+          - The story is in [attr-40], [attr-36], [attr-45]
+          - The story is [attr-8]
+        - either of the following is true:
+          - The story is [attr-6]
+          - both of the following are true:
+            - The story is [attr-3]
+            - It is not the case that both of the following are true:
+              - The story is [attr-5]
+              - The story is [attr-7]
+      - both of the following are true:
+        - exactly one of the following is true:
+          - The story is [attr-19]
+          - The story is [attr-23]
+        - either of the following is true:
+          - both of the following are true:
+            - The story is [attr-34]
+            - It is not the case that the story is [attr-42]
+          - both of the following are true:
+            - The story is [attr-35]
+            - The story is [attr-47]
+    - both of the following are true:
+      - either of the following is true:
+        - both of the following are true:
+          - The story is [attr-28]
+          - It is not both of the following are true:
+            - The story is [attr-33]
+            - The story is [attr-30]
+        - The story is [attr-5]
+      - either of the following is true:
+        - exactly one of the following is true:
+          - The story is [attr-11]
+          - The story is [attr-14]
+        - both of the following are true:
+          - The story is [attr-7]
+          - It is not the case that the story is [attr-2]
+
+Quick annotator checklist (practical steps)
+- Step 1: Mark all simple labels that apply to the story from the Simple label definitions section.
+- Step 2: For [attr-1], evaluate each nested clause in order. Treat “either”, “both”, and “exactly one” with their usual logical meanings. Pay special attention to the negations: phrases beginning with “It is not the case that” or “It is not both of the following are true” reverse the enclosed condition(s).
+- Step 3: A story is [attr-1] only if the full top-level condition (the two main "both of the following are true" branches) is satisfied according to the nested structure shown above.
+
+End notes
+- This rewrite keeps every node ID and the full logical structure intact. Use the hierarchical layout to follow the logic stepwise when annotating.

@@ -1,0 +1,134 @@
+Codebook — Formal definitions for annotation labels
+
+Each entry below specifies the precise criterion under which a narrative (hereafter "story") is assigned the corresponding Boolean label. Use these definitions to determine label truth values for annotation and reasoning tasks. Logical connectives are expressed in plain English but retain their standard Boolean semantics: "Both of the following are true" = logical AND; "Either of the following is true" = logical OR; "Exactly one of the following is true" = exclusive OR; "All of the following are true" = conjunction over listed items; negation is indicated by "not".
+
+Atomic label definitions
+- [HAS-JUXTAPOSITION]
+  - A story is [HAS-JUXTAPOSITION] iff the story exhibits juxtaposition.
+
+- [STYLE-PHILOSOPHICAL]
+  - A story is [STYLE-PHILOSOPHICAL] iff the story is philosophical in style or content.
+
+- [THEME-HARDSHIP]
+  - A story is [THEME-HARDSHIP] iff the theme of the story includes hardship.
+
+- [THEME-HUMOR]
+  - A story is [THEME-HUMOR] iff the story contains humor as a thematic element.
+
+- [TOPIC-THE-ARTS]
+  - A story is [TOPIC-THE-ARTS] iff the subject matter of the story concerns the arts.
+
+- [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] iff the narrative structure is circular.
+
+- [THEME-DECEPTION]
+  - A story is [THEME-DECEPTION] iff deception is a theme of the story.
+
+- [THEME-HELPING-OTHERS]
+  - A story is [THEME-HELPING-OTHERS] iff helping others is a theme of the story.
+
+- [HAS-A-MORAL-LESSON]
+  - A story is [HAS-A-MORAL-LESSON] iff the story contains an explicit or implicit moral lesson.
+
+- [STYLE-HUMOROUS]
+  - A story is [STYLE-HUMOROUS] iff the story’s style is humorous.
+
+- [STYLE-MINIMALIST]
+  - A story is [STYLE-MINIMALIST] iff the story exhibits a minimalist style.
+
+- [TOPIC-GIANT-CREATURES]
+  - A story is [TOPIC-GIANT-CREATURES] iff the story’s subject includes giant creatures.
+
+- [STYLE-LIGHTHEARTED]
+  - A story is [STYLE-LIGHTHEARTED] iff the story’s tone is lighthearted.
+
+- [TOPIC-TIME-TRAVEL]
+  - A story is [TOPIC-TIME-TRAVEL] iff the story’s subject includes time travel.
+
+- [STARTS-WITH-PREPOSITION]
+  - A story is [STARTS-WITH-PREPOSITION] iff the first lexeme or token of the story is a preposition.
+
+- [SHORT-STORY]
+  - A story is [SHORT-STORY] iff the story’s length is fewer than 160 words.
+
+- [USES-SUPERLATIVE-FORMS]
+  - A story is [USES-SUPERLATIVE-FORMS] iff the text uses superlative morphological forms (e.g., "best", "least", "most").
+
+- [THEME-KINDNESS]
+  - A story is [THEME-KINDNESS] iff kindness is a thematic element of the story.
+
+- [HIGH-READABILITY]
+  - A story is [HIGH-READABILITY] iff the story’s readability score is strictly greater than 96.1.
+
+Composite label definitions
+- [JUX-PREP-CLASH]
+  - A story is [JUX-PREP-CLASH] iff the following conditions hold:
+    - The story is [HAS-JUXTAPOSITION]; and
+    - Either:
+      - The story is [STARTS-WITH-PREPOSITION]; or
+      - The story is [SHORT-STORY].
+
+- [JUXTAPOSED-SUPERLATIVE]
+  - A story is [JUXTAPOSED-SUPERLATIVE] iff the following conditions hold:
+    - The story is [JUX-PREP-CLASH]; and
+    - Exactly one of:
+      - The story is [USES-SUPERLATIVE-FORMS]; or
+      - The story is [STYLE-MINIMALIST].
+
+- [ARTISTIC-PHILOSOPHY]
+  - A story is [ARTISTIC-PHILOSOPHY] iff the following conditions hold:
+    - The story is [TOPIC-THE-ARTS]; and
+    - Either:
+      - The story is [STYLE-PHILOSOPHICAL]; or
+      - The story is [JUXTAPOSED-SUPERLATIVE].
+
+- [HUMOROUS-HYBRID]
+  - A story is [HUMOROUS-HYBRID] iff the following conditions hold:
+    - Either:
+      - The story is [THEME-HUMOR]; or
+      - The story is [STYLE-HUMOROUS]; and
+    - All of the following:
+      - The story is not [STYLE-MINIMALIST]; and
+      - Exactly one of:
+        - The story is [STYLE-LIGHTHEARTED]; or
+        - The story is [USES-SUPERLATIVE-FORMS].
+
+  - Note: the first clause is a disjunction; the second clause is a conjunction that includes a non-minimalist constraint and an exclusive choice between lighthearted style and use of superlatives.
+
+- [ALTRUISTIC-CONTRACTION]
+  - A story is [ALTRUISTIC-CONTRACTION] iff either:
+    - Both:
+      - The story is [HAS-A-MORAL-LESSON]; and
+      - Either:
+        - The story is [THEME-HELPING-OTHERS]; or
+        - The story is [THEME-KINDNESS]; or
+    - Exactly one of:
+      - The story is [THEME-DECEPTION]; or
+      - The story is [THEME-HARDSHIP].
+
+  - Clarification: the label is true when either (a) a moral lesson is present together with altruistic thematic content (helping others or kindness), or (b) exactly one of deception or hardship is present.
+
+- [COMPLEX-ARTFUL-STORY]
+  - A story is [COMPLEX-ARTFUL-STORY] iff both of the following hold:
+    - Either:
+      - Both:
+        - The story is [ARTISTIC-PHILOSOPHY]; and
+        - The story is [ALTRUISTIC-CONTRACTION]; or
+      - Exactly one of:
+        - The story is [HUMOROUS-HYBRID]; or
+        - The story is [TOPIC-GIANT-CREATURES]; and
+    - Either:
+      - Both:
+        - The story is [TOPIC-TIME-TRAVEL]; and
+        - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]; or
+      - Both:
+        - The story is [SHORT-STORY]; and
+        - The story is [HIGH-READABILITY].
+
+  - Interpretation: [COMPLEX-ARTFUL-STORY] requires satisfaction of one of two high-level content/style alternatives (either an artful/philosophical + altruistic conjunction, or an exclusive choice between a humorous hybrid and giant-creature topic), combined with one of two structural/readability alternatives (either time-travel with circular narrative, or a short story with high readability).
+
+Usage notes
+- "iff" in atomic definitions denotes biconditional: the label is true exactly when the condition holds.
+- Maintain exact node identifiers in annotations; do not rename or alter bracketed IDs.
+- Preserve the logical structure when implementing these criteria in code: use AND, OR, XOR, and NOT as specified.
+- For composite labels, evaluate sub-label truth values prior to evaluating higher-level labels to ensure deterministic annotation.

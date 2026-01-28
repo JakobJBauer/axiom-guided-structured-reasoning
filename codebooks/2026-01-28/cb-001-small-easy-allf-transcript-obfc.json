@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "attr-5",
+      "label": "Attr 5 (classic)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Attr 6 (modern)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Attr 3 (cliffhanger)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Attr 4 (long: >375 words)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Attr 7 (bygone eras / historical topic)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "Attr 1 (classic, long, historical)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        "attr-4",
+        "attr-7"
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Attr 2 (exclusive style OR strict conjunction)",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-6",
+            "attr-5"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-5"
+              ]
+            },
+            "attr-6",
+            "attr-3",
+            "attr-7"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-2"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+Imagine a dim, book-lined room where a single cataloger — equal parts librarian and storyteller — sorts tales not by author or era, but by the small sparks that decide how a reader will lean in. Each rule in this room is a lantern, and each lantern has a label. Below, the cataloger speaks the labels aloud as if reciting the choreography of a parade: the lanterns are named exactly, their conditions held steady, and the relationships between them are spelled out like steps in a dance.
+
+[STARTS-WITH-ADJECTIVE]
+A story is STARTS-WITH-ADJECTIVE if the story starts with a adjective
+
+The cataloger taps the first lantern: a sentence opening that itself is a costume. If the very first word dressing the tale is an adjective — the adjective appears as the opener — the lantern [STARTS-WITH-ADJECTIVE] glows.
+
+[TOPIC-GIANT-CREATURES]
+A story is TOPIC-GIANT-CREATURES if the story is about giant creatures
+
+The second lantern flickers with size and shadow. When a tale’s center stage is occupied by towering beasts — creatures so large they change horizons — the lantern labeled [TOPIC-GIANT-CREATURES] is lit.
+
+[GIANT-FOCUSED]
+A story is GIANT-FOCUSED if both of the following are true:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is not [STARTS-WITH-ADJECTIVE]
+
+When the cataloger decides whether a narrative is concentrated on those colossal beings, two steps must be satisfied together — a duet. The tale must belong to the realm of giants ([TOPIC-GIANT-CREATURES]) and, at the same time, it must not open by wearing an adjective at the front ([STARTS-WITH-ADJECTIVE]). Only when both of these are true does the [GIANT-FOCUSED] lantern burn steady.
+
+[DYNAMIC-OPENING]
+A story is DYNAMIC-OPENING if exactly one of the following is true:
+- The story is [STARTS-WITH-ADJECTIVE]
+- The story is [TOPIC-GIANT-CREATURES]
+
+Some openings are decisive, a single bold move that sets tone and momentum. The [DYNAMIC-OPENING] lantern demands exclusivity: exactly one of its conditions must hold. The tale either begins with an adjective ([STARTS-WITH-ADJECTIVE]) or it centers on gigantic creatures ([TOPIC-GIANT-CREATURES]) — but not both. If only one of those is true, the opening is dynamic; if neither or both are true, the lantern stays unlit.
+
+[ENGAGING-GIANT-STORY]
+A story is ENGAGING-GIANT-STORY if both of the following are true:
+- The story is [GIANT-FOCUSED]
+- Either of the following is true:
+  - The story is [DYNAMIC-OPENING]
+  - The story is not [STARTS-WITH-ADJECTIVE]
+
+Finally, the cataloger seeks tales that grip the reader and keep the giants at the heart of the stage. To earn the title [ENGAGING-GIANT-STORY], a tale must first be firmly [GIANT-FOCUSED]. On top of that, one of two doors must be open: either the tale’s entrance is a single decisive signal ([DYNAMIC-OPENING]), or it specifically does not start with an adjective (the tale is not [STARTS-WITH-ADJECTIVE]). When both parts of this two-part test are met, the story is crowned engaging in its giant-ness.
+
+In this room of lanterns and labels, each rule stands clear and exact. The cataloger reads them in order, knowing the lamps will reveal how to tag a tale: whether it starts with an adjective, whether it roams with giant creatures, whether it is focused on those giants, whether its opening is a solitary bold beat, and when those conditions combine to form an engaging giant story. The logic is preserved, the sequence intact — a little taxonomy told as a small, deliberate tale.

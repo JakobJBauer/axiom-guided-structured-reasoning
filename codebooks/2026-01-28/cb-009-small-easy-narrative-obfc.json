@@ -1,0 +1,86 @@
+{
+  "nodes": [
+    {
+      "id": "attr-7",
+      "label": "The story uses superlative forms",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "The story uses perfect aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "The story is about lost civilizations",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "The story has juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "The story has fewer than 160 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "The story is both attr-5 and attr-4",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        "attr-4"
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "Either (attr-7 and attr-6) or (attr-6 and attr-2)",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-7",
+            "attr-6"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-6",
+            "attr-2"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-3"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+Think of this as a friendly guide to the tags we use — each label is short, but its meaning is precise. Below you'll find each node and a smooth explanation of when to apply it, written in a natural voice while keeping all the logical rules exactly as they are.
+
+[attr-8]
+A story is [attr-8] if the story is philosophical.
+
+[attr-2]
+A story is [attr-2] if the story has a story within a story.
+
+[attr-12]
+A story is [attr-12] if the story uses conditional mood.
+
+[attr-3]
+A story is [attr-3] if the story has circular narrative structure.
+
+[attr-10]
+A story is [attr-10] if the story is about cultural traditions.
+
+[attr-7]
+A story is [attr-7] if the story has fewer than 160 words.
+
+[attr-11]
+A story is [attr-11] if the story is about seasonal changes.
+
+[attr-5]
+A story is [attr-5] if the story has readability score below 86.4.
+
+[attr-4]
+When a piece contains a nested tale and that inner tale speaks in hypotheticals, we give it this label. Formally:
+A story is [attr-4] if both of the following are true:
+- The story is [attr-2]
+- The story is [attr-12]
+
+[attr-6]
+This tag catches a precise intersection: it wants either the philosophical tone or the circular shape — but not both — and it also insists that shortness and low readability line up. In plain terms:
+A story is [attr-6] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [attr-8]
+  - The story is [attr-3]
+- The truth value of the following are equal:
+  - [attr-7]
+  - [attr-5]
+
+[attr-9]
+We group stories under this tag when their subject fits one of a couple of related themes. Precisely:
+A story is [attr-9] if the story's topic is in the set:
+- [attr-10]
+- [attr-11]
+
+[attr-1]
+This is the label for pieces that combine structural complexity with a clear topical focus and enough length to matter. In other words:
+A story is [attr-1] if all of the following are true:
+- Either of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is not [attr-7]
+
+That’s the full set — same logical relationships, just laid out in an easier-to-read, conversational way so you can apply the tags confidently.

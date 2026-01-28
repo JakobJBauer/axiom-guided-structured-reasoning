@@ -1,0 +1,127 @@
+Interviewer: Let's walk through this codebook as a conversation. I'll ask the kind of questions an annotator might have, and you answer clearly. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: First, what does [attr-10] mean?
+
+Expert: A story is [attr-10] if the story has fewer than 160 words.
+
+Interviewer: Simple enough. Next: what's [attr-17]?
+
+Expert: A story is [attr-17] if the story has the theme Kindness.
+
+Interviewer: And [attr-14]?
+
+Expert: A story is [attr-14] if the story has the theme Helping Others.
+
+Interviewer: What about [attr-18]?
+
+Expert: A story is [attr-18] if the story has the theme Problem-Solving.
+
+Interviewer: How do you define [attr-12]?
+
+Expert: A story is [attr-12] if the story is philosophical.
+
+Interviewer: What does [attr-5] capture?
+
+Expert: A story is [attr-5] if the story has readability score above 96.1.
+
+Interviewer: And [attr-13]?
+
+Expert: A story is [attr-13] if the story is playful.
+
+Interviewer: [attr-15]?
+
+Expert: A story is [attr-15] if the story has the theme Humor.
+
+Interviewer: [attr-11]?
+
+Expert: A story is [attr-11] if the story is humorous.
+
+Interviewer: What is [attr-4]?
+
+Expert: A story is [attr-4] if the story has a story within a story.
+
+Interviewer: And [attr-19]?
+
+Expert: A story is [attr-19] if the story is about mystical creatures.
+
+Interviewer: [attr-3] — what counts?
+
+Expert: A story is [attr-3] if the story has a Red Herring.
+
+Interviewer: Now we get to nodes that combine others. Explain [attr-6].
+
+Expert: A story is [attr-6] if both of the following are true:
+- The story is [attr-17]
+- The story is [attr-14]
+(And both must hold simultaneously.)
+
+Interviewer: So both themes must be present. Got it. Next, [attr-7] — that looked like an exclusive condition?
+
+Expert: Correct. A story is [attr-7] if exactly one of the following is true (Xor):
+- The story is [attr-13]
+- The story is [attr-11]
+
+Interviewer: Good. How do you check membership for [attr-16]?
+
+Expert: A story is [attr-16] if the story's dominant theme is In the following set:
+- [attr-17], [attr-14], [attr-18]
+(Use In to check membership among those theme nodes.)
+
+Interviewer: There's a tonal balance node. Explain [attr-1].
+
+Expert: A story is [attr-1] if the following Equal relationship holds:
+- The presence of [attr-12] Equal the presence of [attr-11]
+(They are Equal when either both are present or both are absent.)
+
+Interviewer: That equality ensures philosophical and humorous either co-occur or both are missing. Now, [attr-8] looked nested.
+
+Expert: A story is [attr-8] if both of the following are true:
+- The story is [attr-19]
+- The story is [attr-4] And the story is [attr-12]
+(This nests an And inside an And to form an allegorical structure.)
+
+Interviewer: So it needs mystical creatures and a nested, philosophical story-within-a-story. Clear. [attr-2] is more elaborate — can you walk me through it slowly?
+
+Expert: Sure. A story is [attr-2] if all of the following are true:
+- Either of the following is true (Or):
+  - The story is [attr-6]
+  - The story is [attr-18]
+- Exactly one of the following is true (Xor):
+  - The story is [attr-3]
+  - The story is [attr-4]
+- The story is Not [attr-10] Or the story is [attr-5]
+(Uses Not to exclude short stories unless they also meet HIGH-READABILITY; combines Or and Xor for nuanced arc structure.)
+
+Interviewer: Let me restate that to be sure I got it: first, the narrative core must be either KINDNESS-HELPING or PROBLEM-SOLVING. Second, it must have exactly one of a red herring or a story-within-a-story. Third, it must either not be a short story or must have high readability. Right?
+
+Expert: Correct. That's the exact logical structure.
+
+Interviewer: Finally, how does [attr-9] build on all of this?
+
+Expert: A story is [attr-9] if both of the following are true:
+- The story is [attr-2] And the story is [attr-1]
+- The story is [attr-16] And either of the following is true (Or):
+  - The story is [attr-7]
+  - The story is [attr-8]
+(This node nests multiple logical operators to form a deep, recommendable composition: And at the top level, Or inside a branch, and references In, Equal, Not, and Xor through its subordinate nodes.)
+
+Interviewer: So to be recommendable, a story needs a complex arc plus balanced tone, and its dominant theme must sit in the core set while also being either light-hearted or a mystical allegory.
+
+Expert: Exactly. The transcript preserves each node ID and every logical operator as specified, so annotators can map these conditions directly to labels and reasoning steps.
+
+Interviewer: Perfect. If someone asks for a quick checklist for tagging, what are the essential steps?
+
+Expert: Brief checklist (in conversation form):
+- Is the story fewer than 160 words? If yes, mark [attr-10].
+- Which primary themes appear? Tag [attr-17], [attr-14], [attr-18], [attr-15] as appropriate.
+- Which styles appear? Tag [attr-12], [attr-13], [attr-11].
+- Is there a story within a story? Mark [attr-4].
+- Is the topic mystical creatures? Mark [attr-19].
+- Is there a red herring? Mark [attr-3].
+- Compute combined nodes using the exact logical rules above: [attr-6], [attr-7], [attr-16], [attr-1], [attr-8], [attr-2], then [attr-9].
+
+Interviewer: Thanks — this Q&A format makes the logical layout easier to follow while keeping every condition intact.
+
+Expert: You're welcome. If you want, we can run through examples and apply these labels step by step.

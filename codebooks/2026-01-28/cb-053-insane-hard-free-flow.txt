@@ -1,0 +1,191 @@
+[STARTS-WITH-ADVERB]
+When we tag a story as [STARTS-WITH-ADVERB], it simply means the opening word is an adverb — the story begins with an adverb.
+
+[TOPIC-CULTURAL-TRADITIONS]
+Call a story [TOPIC-CULTURAL-TRADITIONS] when its subject is cultural traditions.
+
+[THEME-INNOVATION]
+A story earns the label [THEME-INNOVATION] when Innovation is a clear theme.
+
+[THEME-HUMOR]
+Use [THEME-HUMOR] for stories whose central thread is Humor.
+
+[TOPIC-HIDDEN-TREASURES]
+If the tale revolves around hidden treasure, it’s [TOPIC-HIDDEN-TREASURES].
+
+[STYLE-CLASSIC]
+Label a piece [STYLE-CLASSIC] when it reads as classic in style.
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if its tone or style is humorous.
+
+[STYLE-MODERN]
+When a story feels contemporary in voice or technique, mark it [STYLE-MODERN].
+
+[TOPIC-GIANT-CREATURES]
+Stories about giant creatures get the tag [TOPIC-GIANT-CREATURES].
+
+[USES-PERFECT-ASPECT]
+If the narrative makes use of the perfect aspect in its verb forms, it’s [USES-PERFECT-ASPECT].
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] when it contains a flashback sequence.
+
+[THEME-HARDSHIP]
+If hardship is a central theme, label the story [THEME-HARDSHIP].
+
+[HAS-A-CLIFFHANGER]
+When a story ends on a suspenseful unresolved note, mark it [HAS-A-CLIFFHANGER].
+
+[HAS-A-MORAL-LESSON]
+A story that teaches or illustrates a moral lesson is [HAS-A-MORAL-LESSON].
+
+[TOPIC-LOST-CIVILIZATIONS]
+If the plot concerns lost civilizations, use [TOPIC-LOST-CIVILIZATIONS].
+
+[STYLE-PLAYFUL]
+Tag a story [STYLE-PLAYFUL] when it conveys a playful tone.
+
+[TOPIC-SEASONAL-CHANGES]
+Stories about seasonal change get [TOPIC-SEASONAL-CHANGES].
+
+[STARTS-WITH-PREPOSITION]
+If the very first word is a preposition, the story is [STARTS-WITH-PREPOSITION].
+
+[HAS-JUXTAPOSITION]
+Use [HAS-JUXTAPOSITION] when the piece deliberately places contrasting elements side by side.
+
+[THEME-PROBLEM-SOLVING]
+When problem-solving drives the narrative, label it [THEME-PROBLEM-SOLVING].
+
+[TOPIC-TIME-TRAVEL]
+Stories about time travel are [TOPIC-TIME-TRAVEL].
+
+[TOPIC-BYGONE-ERAS]
+If the focus is on bygone eras, tag the story [TOPIC-BYGONE-ERAS].
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A tale that loops back to its starting point is [HAS-CIRCULAR-NARRATIVE-STRUCT].
+
+[USES-DISCOURSE-MARKERS]
+When the writing uses discourse markers (those signposting words and phrases), it’s [USES-DISCOURSE-MARKERS].
+
+[USES-WH-QUESTIONS]
+If wh-questions (who, what, where, when, why, how) play a part in the text, mark it [USES-WH-QUESTIONS].
+
+[TOPIC-THE-ARTS]
+Stories centered on the arts get the label [TOPIC-THE-ARTS].
+
+[THEME-MAGIC]
+When Magic is a central theme, it’s [THEME-MAGIC].
+
+[STYLE-PHILOSOPHICAL]
+If the story reads like it’s pondering big ideas, tag it [STYLE-PHILOSOPHICAL].
+
+[STYLE-MINIMALIST]
+A spare, minimalist style earns the [STYLE-MINIMALIST] label.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+Use [HAS-A-STORY-WITHIN-A-STORY] when a narrative contains another story embedded inside it.
+
+[LONG-STORY]
+A piece longer than 375 words is [LONG-STORY].
+
+[TOPIC-MYSTICAL-CREATURES]
+Stories about mystical creatures are [TOPIC-MYSTICAL-CREATURES].
+
+[LOW-READABILITY]
+Mark a story [LOW-READABILITY] when its readability score falls below 86.4.
+
+[HAS-CHECKHOVS-GUN]
+If the story includes Chekhov’s gun — an introduced element that later becomes significant — label it [HAS-CHECKHOVS-GUN].
+
+[MANY-PARAGRAPHS]
+When a story has more than six paragraphs, it’s [MANY-PARAGRAPHS].
+
+[THEME-DECEPTION]
+If deception is a theme, tag it [THEME-DECEPTION].
+
+[THEME-AGENCY]
+When agency (characters making meaningful choices) is central, mark the story [THEME-AGENCY].
+
+[TOPIC-MAGICAL-LANDS]
+If the setting is a magical land, label it [TOPIC-MAGICAL-LANDS].
+
+[USES-SUPERLATIVE-FORMS]
+Stories that use superlative forms (the best, the worst, the largest, etc.) get [USES-SUPERLATIVE-FORMS].
+
+[STARTS-WITH-ADJECTIVE]
+If the opening word is an adjective, the story is [STARTS-WITH-ADJECTIVE].
+
+[THEME-KINDNESS]
+When kindness is a central theme, tag it [THEME-KINDNESS].
+
+[HIGH-READABILITY]
+A story with a readability score above 96.1 is [HIGH-READABILITY].
+
+[STARTS-WITH-NOUN]
+If the first word is a noun, the story is [STARTS-WITH-NOUN].
+
+[USES-CONDITIONAL-MOOD]
+Use [USES-CONDITIONAL-MOOD] for stories that employ conditional verb moods.
+
+[HAS-A-RED-HERRING]
+When the narrative includes a red herring — a misleading clue — label it [HAS-A-RED-HERRING].
+
+[SHORT-STORY]
+A story under 160 words is [SHORT-STORY].
+
+[STYLE-SURREAL]
+If the story reads surreal, mark it [STYLE-SURREAL].
+
+[THEME-HELPING-OTHERS]
+When helping others is a theme, use [THEME-HELPING-OTHERS].
+
+[STYLE-LIGHTHEARTED]
+Tag a lightly playful, carefree piece [STYLE-LIGHTHEARTED].
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is in [TOPIC-LOST-CIVILIZATIONS], [TOPIC-BYGONE-ERAS], [TOPIC-TIME-TRAVEL]
+      - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+    - either of the following is true:
+      - The story is [HAS-A-STORY-WITHIN-A-STORY]
+      - both of the following are true:
+        - The story is [HAS-A-FLASHBACK]
+        - It is not the case that both of the following are true:
+          - The story is [HAS-A-RED-HERRING]
+          - The story is [HAS-CHECKHOVS-GUN]
+  - both of the following are true:
+    - exactly one of the following is true:
+      - The story is [STYLE-CLASSIC]
+      - The story is [STYLE-MODERN]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [THEME-MAGIC]
+        - It is not the case that the story is [TOPIC-MYSTICAL-CREATURES]
+      - both of the following are true:
+        - The story is [THEME-PROBLEM-SOLVING]
+        - The story is [USES-DISCOURSE-MARKERS]
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [THEME-DECEPTION]
+      - It is not both of the following are true:
+        - The story is [THEME-KINDNESS]
+        - The story is [THEME-HELPING-OTHERS]
+    - The story is [HAS-A-RED-HERRING]
+  - either of the following is true:
+    - exactly one of the following is true:
+      - The story is [LONG-STORY]
+      - The story is [SHORT-STORY]
+    - both of the following are true:
+      - The story is [HAS-CHECKHOVS-GUN]
+      - It is not the case that the story is [HAS-A-CLIFFHANGER]
+
+--- 
+
+That’s the guide. Each bracketed label is a concise tag you attach when the described condition holds — straightforward definitions up top, and the full formal rule for [COMPLEX-NARRATIVE] beneath, preserved exactly so you can apply it mechanically when deciding whether a story fits that complex classification.

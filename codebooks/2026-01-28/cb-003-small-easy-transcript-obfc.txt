@@ -1,0 +1,34 @@
+Interviewer: Let's walk through this codebook together. First, what does [attr-2] mean?
+
+Expert: Good question. [attr-2] applies when a story starts with a preposition. In other words: a story is [attr-2] if the story starts with a preposition.
+
+Interviewer: Clear. How about [attr-7] — what should an annotator look for?
+
+Expert: [attr-7] is used when the story employs discourse markers. Concretely: a story is [attr-7] if the story uses discourse markers.
+
+Interviewer: And [attr-3] — that sounds thematic. What does it label?
+
+Expert: Right. [attr-3] marks the presence of deception as a theme. Precisely: a story is [attr-3] if the story has the theme Deception.
+
+Interviewer: There are a few topic labels too. Explain [attr-5].
+
+Expert: Sure. [attr-5] is assigned when the story concerns magical lands. To be exact: a story is [attr-5] if the story is about magical lands.
+
+Interviewer: What about [attr-4]?
+
+Expert: [attr-4] flags stories focused on cultural traditions. Formally: a story is [attr-4] if the story is about cultural traditions.
+
+Interviewer: And [attr-6]?
+
+Expert: [attr-6] covers stories about the arts. Specifically: a story is [attr-6] if the story is about the arts.
+
+Interviewer: Now there's a composite label, [attr-1]. How do we determine that?
+
+Expert: Good catch — this one combines conditions. [attr-1] applies when all of the following are true:
+- The story is [attr-5]
+- The story is [attr-3]
+- The story is [attr-6]
+
+Interviewer: So to summarize, each bracketed label corresponds to a single, checkable property, and [attr-1] requires all three of those properties simultaneously.
+
+Expert: Exactly. Keep the node IDs and those relationships intact when annotating: each label is evaluated as stated, and the composite label requires the conjunction of the three specified labels.

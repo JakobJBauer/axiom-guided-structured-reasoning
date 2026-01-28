@@ -1,0 +1,69 @@
+Overview
+- Purpose: This codebook defines labels (nodes) used to classify stories.  
+- How to read each entry:
+  - Simple nodes state a single observable property.
+  - Composite nodes list logical conditions that must hold (using "both", "either", and explicit negation).
+- Note: All node IDs are shown in [attr-2] format and must be preserved exactly.
+
+Atomic (single-condition) nodes
+- [attr-14]
+  - A story is [attr-14] if: The story is about time travel.
+
+- [attr-12]
+  - A story is [attr-12] if: The story is about hidden treasures.
+
+- [attr-10]
+  - A story is [attr-10] if: The story is philosophical.
+
+- [attr-6]
+  - A story is [attr-6] if: The story has more than 6 paragraphs.
+
+- [attr-5]
+  - A story is [attr-5] if: The story has readability score above 96.1.
+
+- [attr-8]
+  - A story is [attr-8] if: The story is classic.
+
+- [attr-9]
+  - A story is [attr-9] if: The story is humorous.
+
+- [attr-13]
+  - A story is [attr-13] if: The story is about mystical creatures.
+
+Composite nodes (logical combinations)
+- [attr-11]
+  - A story is [attr-11] if both of the following are true:
+    - The story is [attr-10]
+    - The story is not [attr-9]
+
+- [attr-7]
+  - A story is [attr-7] if both of the following are true:
+    - The story is [attr-5]
+    - Either of the following is true:
+      - The story is [attr-8]
+      - The story is [attr-9]
+
+- [attr-1]
+  - A story is [attr-1] if either of the following is true:
+    - The story is [attr-12]
+    - Both of the following are true:
+      - The story is [attr-14]
+      - The story is not [attr-10]
+
+- [attr-3]
+  - A story is [attr-3] if both of the following are true:
+    - The story is [attr-11]
+    - Either of the following is true:
+      - The story is [attr-1]
+      - The story is [attr-13]
+
+- [attr-4]
+  - A story is [attr-4] if both of the following are true:
+    - The story is [attr-3]
+    - The story is [attr-6]
+
+Quick annotator checklist
+- Verify atomic labels first (topics, styles, counts, readability).
+- Evaluate composite labels only after confirming their component nodes.
+- For “not” conditions, ensure the negated node does not apply before assigning the composite label.
+- Preserve the exact node IDs when recording labels.

@@ -1,0 +1,40 @@
+Interviewer: Let’s go through this codebook together. First up — what does [attr-7] mean?
+
+Expert: A story is [attr-7] if The story uses perfect aspect.
+
+Interviewer: Clear. And the topical categories?
+
+Expert: Sure.
+- A story is [attr-5] if The story is about cultural traditions.
+- A story is [attr-6] if The story is about the arts.
+
+Interviewer: How about tone or style?
+
+Expert: A story is [attr-4] if The story is lighthearted.
+
+Interviewer: Now I see some nodes that combine these. How is [attr-1] defined?
+
+Expert: A story is [attr-1] if both of the following are true:
+- The story is [attr-6]
+- The story is [attr-5]
+
+Interviewer: So it must be both about the arts and about cultural traditions — got it. What about [attr-3]? That sounds more specific.
+
+Expert: Right. A story is [attr-3] if all of the following are true:
+- The story is [attr-1]
+- The story is [attr-7]
+- The story is not [attr-4]
+
+Interviewer: Let me paraphrase to check I’ve got it: [attr-3] requires being an arts/cultural traditions story, using the perfect aspect, and explicitly not being lighthearted. Is that accurate?
+
+Expert: Exactly.
+
+Interviewer: And finally, is there a lighthearted counterpart to [attr-3]?
+
+Expert: Yes. A story is [attr-2] if both of the following are true:
+- The story is [attr-1]
+- The story is [attr-4]
+
+Interviewer: Great — that keeps the logical structure tidy: basic labels, an intersection for traditional arts, then two branches that depend on aspect and tone. Anything else to note?
+
+Expert: Nothing changes in the logic or IDs. Each definition is precise: simple predicates for single labels, "both of the following are true" for two-way And, and "all of the following are true" when three conditions (including a Not) must hold. All node IDs remain as shown.

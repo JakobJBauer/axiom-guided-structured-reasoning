@@ -1,0 +1,111 @@
+[attr-19]
+Definition: The predicate [attr-19] is true for a story if the story contains the thematic element denoted as Innovation.
+
+[attr-20]
+Definition: The predicate [attr-20] is true for a story if the story contains the thematic element denoted as Magic.
+
+[attr-4]
+Definition: The predicate [attr-4] is true for a story if the narrative includes an instance of Chekhov's gun (a foreshadowed, later-significant object or detail).
+
+[attr-10]
+Definition: The predicate [attr-10] is true for a story if the first lexical token of the text is an adverb.
+
+[attr-18]
+Definition: The predicate [attr-18] is true for a story if the narrative expresses the theme Helping Others.
+
+[attr-14]
+Definition: The predicate [attr-14] is true for a story if the story's stylistic register aligns with a philosophical mode.
+
+[attr-11]
+Definition: The predicate [attr-11] is true for a story if the first lexical token of the text is a noun.
+
+[attr-21]
+Definition: The predicate [attr-21] is true for a story if the story's subject matter concerns hidden treasures.
+
+[attr-17]
+Definition: The predicate [attr-17] is true for a story if the narrative communicates the theme Growth.
+
+[attr-2]
+Definition: The predicate [attr-2] is true for a story if the narrative ends or pauses with an unresolved, suspenseful situation (a cliffhanger).
+
+[attr-13]
+Definition: The predicate [attr-13] is true for a story if the story's stylistic register aligns with minimalism.
+
+[attr-24]
+Definition: The predicate [attr-24] is true for a story if the text makes regular use of the conditional verbal mood.
+
+[attr-23]
+Definition: The predicate [attr-23] is true for a story if the subject matter addresses seasonal changes.
+
+[attr-22]
+Definition: The predicate [attr-22] is true for a story if the subject matter involves mystical creatures.
+
+[attr-3]
+Definition: The predicate [attr-3] is true for a story if the narrative contains an embedded secondary narrative (a story-within-a-story).
+
+[attr-5]
+Definition: The predicate [attr-5] is true for a story if the document contains more than six paragraphs.
+
+[attr-16]
+Definition: The predicate [attr-16] is true for a story if the narrative foregrounds the theme Agency.
+
+[attr-9]
+Definition: The predicate [attr-9] is true for a story if [attr-5] equals true.
+
+[attr-12]
+Definition: The predicate [attr-12] is true for a story if both of the following are true:
+- exactly one of the following is true:
+  - The story is [attr-10]
+  - The story is [attr-11]
+- The story is in [STYLE-PHILOSOPHICAL, STYLE-MINIMALIST]
+
+[attr-7]
+Definition: The predicate [attr-7] is true for a story if either of the following is true:
+- both of the following are true:
+  - The story is [attr-21]
+  - The story is [attr-22]
+- exactly one of the following is true:
+  - The story is [attr-21]
+  - The story is [attr-23]
+
+[attr-6]
+Definition: The predicate [attr-6] is true for a story if either of the following is true:
+- The story is [attr-18]
+- both of the following are true:
+  - exactly one of the following is true:
+    - The story is [attr-17]
+    - The story is [attr-16]
+  - The story is not [attr-13]
+
+[attr-15]
+Definition: The predicate [attr-15] is true for a story if both of the following are true:
+- The story is [attr-19]
+- either of the following is true:
+  - The story is [attr-6]
+  - both of the following are true:
+    - The story is [attr-20]
+    - The story is [attr-24]
+
+[attr-8]
+Definition: The predicate [attr-8] is true for a story if both of the following are true:
+- either of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-2]
+- either of the following is true:
+  - The story is [attr-3]
+  - The story is not [attr-4]
+
+[attr-1]
+Definition: The predicate [attr-1] is true for a story if both of the following are true:
+- The story is [attr-15]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [attr-12]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [attr-8]
+        - The story is [attr-9]
+      - The story is [attr-7]
+  - both of the following are true:
+    - The story is [attr-8]
+    - The story is not [attr-13]

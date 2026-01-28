@@ -1,0 +1,45 @@
+Think of this as a quick, friendly guide to the tags we use when reading a story. I’ll keep the logic exactly as it is — the relationships, the little AND/OR/NOT rules — but say it in a more natural, easy-to-read way. Every tag appears with its original bracketed ID so you can match things up without any guesswork.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if the story starts with a adverb.
+
+[THEME-AGENCY]
+A story is [THEME-AGENCY] if the story has the theme Agency.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect.
+
+[MOOD-MIX]
+A story is [MOOD-MIX] if both of the following are true:
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is not [USES-PERFECT-ASPECT]
+
+[PACING-AND-TONE]
+A story is [PACING-AND-TONE] if both of the following are true:
+- The story is [SHORT-STORY]
+- The story is [STYLE-LIGHTHEARTED]
+
+[AGENCY-START]
+A story is [AGENCY-START] if both of the following are true:
+- The story is [THEME-AGENCY]
+- Exactly one of the following is true:
+  - The story is [STARTS-WITH-ADVERB]
+  - The story is [SHORT-STORY]
+
+[ELEGANT-STORY]
+A story is [ELEGANT-STORY] if both of the following are true:
+- The story is [PACING-AND-TONE]
+- Either of the following are true:
+  - The story is [MOOD-MIX]
+  - The story is [AGENCY-START]
+
+That’s it — the same rules you already use, just laid out in a conversational flow so they’re quicker to read and easier to apply when you’re tagging and reasoning about stories.

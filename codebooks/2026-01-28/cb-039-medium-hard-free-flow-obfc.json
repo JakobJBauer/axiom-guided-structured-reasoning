@@ -1,0 +1,216 @@
+{
+  "nodes": [
+    {
+      "id": "attr-10",
+      "label": "Deception (theme)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "Helping Others (theme)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "Philosophical (style)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "Checkhov's gun (device)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Starts with a noun (opening)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "Hidden treasures (theme)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "Agency (theme)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Starts with an adjective (opening)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Juxtaposition (device)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Opening pattern (noun or exclusive adjective/noun openings)",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-6",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-5",
+            "attr-6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-7",
+      "label": "Opening primacy plus deception-related conditions",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-4",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-10",
+                "attr-12"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                {
+                  "formula_type": "Xor",
+                  "formula_args": [
+                    "attr-2",
+                    "attr-9"
+                  ]
+                },
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "attr-10",
+                    {
+                      "formula_type": "Not",
+                      "formula_args": [
+                        "attr-9"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Structured-deception minus altruistic/philosophical, plus surface/opening condition",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-7",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-11",
+                "attr-8"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-3",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                {
+                  "formula_type": "Equal",
+                  "formula_args": [
+                    "attr-6",
+                    true
+                  ]
+                },
+                {
+                  "formula_type": "Equal",
+                  "formula_args": [
+                    "attr-5",
+                    false
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-6",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    }
+  ]
+}

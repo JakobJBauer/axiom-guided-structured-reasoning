@@ -1,0 +1,25 @@
+[attr-6]
+Like a herald trumpeting at the summit of language, this marker catches the story when it reaches for the highest degree — the peak of comparison where adjectives and adverbs vie to be unrivaled. A story is [attr-6] if the story uses superlative forms.
+
+[attr-5]
+Envision marble ruins and sun-baked maps; this sigil gathers tales that wander among forgotten empires and buried lore. A story is [attr-5] if the story is about lost civilizations.
+
+[attr-3]
+At the very doorstep of the narrative, the first word stands like an opening monument. This token denotes those tales whose inaugural utterance is a noun. A story is [attr-3] if the story starts with a noun.
+
+[attr-4]
+Bright as a wink in shadowed halls, this label attends to stories that wear amusement as their garment, whose central temper is laughter, irony, or play. A story is [attr-4] if the story has the theme Humor.
+
+[attr-1]
+Conjure an introduction that skips in with the buoyancy of a feather and the clarity of a bell; this composite mark is granted only when a triumvirate of conditions is met, each one a necessary petal in the blossom of a jaunty opening:
+A story is [attr-1] if all of the following are true:
+- The story is [attr-3]
+- The story is [attr-4]
+- The story is not [attr-6]
+
+[attr-2]
+In the shadowed confluence of antiquity and mockery, where ruins whisper and wit sharpens its blade, this crown is set upon tales that both evoke vanished worlds and choose precisely one of two tonal paths — either a light, noun-begun jesting preface, or the lofty clang of superlatives. A story is [attr-2] if both of the following are true:
+- The story is [attr-5]
+- Exactly one of the following is true:
+  - The story is [attr-1]
+  - The story is [attr-6]

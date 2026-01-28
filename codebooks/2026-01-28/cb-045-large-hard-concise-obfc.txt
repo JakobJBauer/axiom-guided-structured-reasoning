@@ -1,0 +1,133 @@
+[attr-9]  
+A story is [attr-9] if it has more than 6 paragraphs.
+
+[attr-4]  
+A story is [attr-4] if it contains a story within the story.
+
+[attr-16]  
+A story is [attr-16] if it begins with a noun.
+
+[attr-29]  
+A story is [attr-29] if it uses superlatives.
+
+[attr-5]  
+A story is [attr-5] if it includes Chekhov’s gun.
+
+[attr-21]  
+A story is [attr-21] if its theme is Magic.
+
+[attr-28]  
+A story is [attr-28] if it uses the conditional mood.
+
+[attr-30]  
+A story is [attr-30] if it asks wh-questions.
+
+[attr-22]  
+A story is [attr-22] if it’s about hidden treasures.
+
+[attr-20]  
+A story is [attr-20] if its theme is Innovation.
+
+[attr-24]  
+A story is [attr-24] if it’s about seasonal changes.
+
+[attr-25]  
+A story is [attr-25] if it’s about the arts.
+
+[attr-7]  
+A story is [attr-7] if it has more than 375 words.
+
+[attr-18]  
+A story is [attr-18] if its theme is Growth.
+
+[attr-23]  
+A story is [attr-23] if it’s about magical lands.
+
+[attr-26]  
+A story is [attr-26] if it’s about time travel.
+
+[attr-19]  
+A story is [attr-19] if its theme is Hardship.
+
+[attr-14]  
+A story is [attr-14] if it begins with an adverb.
+
+[attr-3]  
+A story is [attr-3] if it includes a moral lesson.
+
+[attr-8]  
+A story is [attr-8] if its readability score is below 86.4.
+
+[attr-13]  
+A story is [attr-13] if it begins with an adjective.
+
+[attr-15]  
+A story is [attr-15] if it is not [attr-16].
+
+[attr-17]  
+A story is [attr-17] if both are true:  
+- The story is [attr-7]  
+- The story is [attr-9]
+
+[attr-2]  
+A story is [attr-2] if either is true:  
+- Exactly one is true: the story is [attr-14] or the story is [attr-13]  
+- Both are true:  
+  - The story is [attr-15]  
+  - The story is [attr-30]
+
+[attr-11]  
+A story is [attr-11] if both are true:  
+- Either is true:  
+  - The story is [attr-21]  
+  - The story is [attr-23]  
+- Either is true:  
+  - The story is [attr-20]  
+  - The story is [attr-26]
+
+[attr-6]  
+A story is [attr-6] if both are true:  
+- The story is [attr-28]  
+- Either is true:  
+  - The story is [attr-30]  
+  - The story is [attr-8]
+
+[attr-1]  
+A story is [attr-1] if both are true:  
+- The story is [attr-4]  
+- Either is true:  
+  - The story is [attr-5]  
+  - Both are true:  
+    - The story is [attr-29]  
+    - It is not [attr-28]
+
+[attr-27]  
+A story is [attr-27] if both are true:  
+- The story is [attr-22]  
+- Either is true:  
+  - Both are true:  
+    - The story is [attr-18]  
+    - The story is [attr-3]  
+  - Both are true:  
+    - The story is [attr-19]  
+    - It is not [attr-3]
+
+[attr-12]  
+A story is [attr-12] if both are true:  
+- The story is [attr-24]  
+- Either is true:  
+  - The story is [attr-25]  
+  - Both are true:  
+    - The story is [attr-29]  
+    - It is not [attr-8]
+
+[attr-10]  
+A story is [attr-10] if both are true:  
+- Either is true:  
+  - The story is [attr-1]  
+  - Both are true:  
+    - The story is [attr-17]  
+    - The story is [attr-6]  
+- Exactly one is true:  
+  - The story is [attr-27]  
+  - The story is [attr-12]

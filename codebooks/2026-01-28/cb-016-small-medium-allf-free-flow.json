@@ -1,0 +1,119 @@
+{
+  "nodes": [
+    {
+      "id": "long-story",
+      "label": "LONG-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "USES-WH-QUESTIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "not-long",
+      "label": "NOT-LONG",
+      "formula_type": "Not",
+      "formula_args": [
+        "long-story"
+      ]
+    },
+    {
+      "id": "interrogative-style",
+      "label": "INTERROGATIVE-STYLE",
+      "formula_type": "Or",
+      "formula_args": [
+        "uses-wh-questions",
+        "not-long"
+      ]
+    },
+    {
+      "id": "style-polarity",
+      "label": "STYLE-POLARITY",
+      "formula_type": "Xor",
+      "formula_args": [
+        "long-story",
+        "interrogative-style"
+      ]
+    },
+    {
+      "id": "formal-classification",
+      "label": "FORMAL-CLASSIFICATION",
+      "formula_type": "And",
+      "formula_args": [
+        "style-polarity",
+        {
+          "formula_type": "Equal",
+          "formula_args": [
+            "long-story",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "uses-wh-questions",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "not-long"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "long-story",
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "uses-wh-questions",
+                "not-long"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "long-story",
+      "target": "not-long"
+    },
+    {
+      "source": "uses-wh-questions",
+      "target": "interrogative-style"
+    },
+    {
+      "source": "not-long",
+      "target": "interrogative-style"
+    },
+    {
+      "source": "long-story",
+      "target": "style-polarity"
+    },
+    {
+      "source": "interrogative-style",
+      "target": "style-polarity"
+    },
+    {
+      "source": "style-polarity",
+      "target": "formal-classification"
+    },
+    {
+      "source": "long-story",
+      "target": "formal-classification"
+    },
+    {
+      "source": "uses-wh-questions",
+      "target": "formal-classification"
+    },
+    {
+      "source": "not-long",
+      "target": "formal-classification"
+    }
+  ]
+}

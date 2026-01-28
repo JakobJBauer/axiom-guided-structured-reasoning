@@ -1,0 +1,61 @@
+Technical Codebook — Formal Definitions
+
+Each entry below specifies a predicate over a story. Use the identifier in brackets as the canonical node label. The predicate is true for a given story if and only if the stated condition(s) hold.
+
+[LOW-READABILITY]
+Definition: A story satisfies [LOW-READABILITY] when its automated readability metric yields a score strictly below 86.4.
+Notes: The threshold value is fixed at 86.4; implementers should apply the same readability algorithm used to define the dataset’s baseline scoring.
+
+[STYLE-PHILOSOPHICAL]
+Definition: A story satisfies [STYLE-PHILOSOPHICAL] when the narrative exhibits a philosophical style.
+Specification: Classify as true if the story’s primary stylistic register is philosophical (e.g., reflective argumentation, exploration of metaphysical or ethical concepts).
+
+[STYLE-MODERN]
+Definition: A story satisfies [STYLE-MODERN] when the narrative style is modern.
+Specification: True when the style conforms to contemporary conventions (e.g., present-day diction, modernist sensibilities) as established by the annotation guidelines.
+
+[USES-SUPERLATIVE-FORMS]
+Definition: A story satisfies [USES-SUPERLATIVE-FORMS] when it employs grammatical superlative constructions (e.g., “best,” “most,” “greatest”).
+Specification: Mark true if one or more superlative forms appear in contexts that function as superlative modifiers.
+
+[TOPIC-BYGONE-ERAS]
+Definition: A story satisfies [TOPIC-BYGONE-ERAS] when its subject matter concerns bygone eras.
+Specification: True when the narrative explicitly addresses historical periods, antiquated settings, or themes centered on earlier epochs.
+
+[THEME-MAGIC]
+Definition: A story satisfies [THEME-MAGIC] when Magic is a central theme.
+Specification: Mark true if magical phenomena, systems, or the concept of magic are integral to the story’s theme or plot.
+
+[TOPIC-TIME-TRAVEL]
+Definition: A story satisfies [TOPIC-TIME-TRAVEL] when the narrative involves time travel as a subject.
+Specification: True when time travel (temporal displacement, time loops, chronological traversal) is a plot element or topical focus.
+
+[HAS-A-MORAL-LESSON]
+Definition: A story satisfies [HAS-A-MORAL-LESSON] when the narrative conveys an explicit moral lesson.
+Specification: True when the story culminates in or explicitly communicates an ethical or instructional takeaway.
+
+[THEME-PROBLEM-SOLVING]
+Definition: A story satisfies [THEME-PROBLEM-SOLVING] when problem solving is a core thematic element.
+Specification: True when the plot centrally involves identifying, analyzing, or resolving a problem through reasoning, strategy, or methodical action.
+
+[TIME-MAGIC-NEXUS]
+Definition: A story satisfies [TIME-MAGIC-NEXUS] if exactly one of the following is true:
+- The story is [TOPIC-TIME-TRAVEL]
+- The story is [THEME-MAGIC]
+Specification: This node enforces an exclusive-or (XOR) relationship between [TOPIC-TIME-TRAVEL] and [THEME-MAGIC]. Mark [TIME-MAGIC-NEXUS] true only when one of those two predicates is true and the other is false.
+
+[DIDACTIC-BYGONE]
+Definition: A story satisfies [DIDACTIC-BYGONE] if all of the following are true:
+- The story is [TOPIC-BYGONE-ERAS]
+- The story is [HAS-A-MORAL-LESSON]
+- The story is not [USES-SUPERLATIVE-FORMS]
+Specification: This node is the conjunction of three conditions: topical focus on bygone eras, presence of a moral lesson, and absence of superlative forms.
+
+[COMPLEX-ARC]
+Definition: A story satisfies [COMPLEX-ARC] if all of the following are true:
+- The story is [TIME-MAGIC-NEXUS]
+- The story is [THEME-PROBLEM-SOLVING]
+- The story is not [LOW-READABILITY]
+Specification: This node requires that the story occupies the time-or-magic exclusive category, includes problem-solving as a theme, and does not meet the low-readability criterion.
+
+Usage note: Maintain the logical relationships as specified (exclusive-or for [TIME-MAGIC-NEXUS]; conjunctions and negations for composite nodes). Do not alter node identifiers or add additional conditions.

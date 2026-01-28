@@ -1,0 +1,40 @@
+A whisper before the ledger: imagine an old librarian of stories, who sorts tales not by dust or date but by the secret tremors of their souls. She pens a small codex — precise as a map, ornate as a tapestry — so those who come after may recognize at a glance whether a tale walks in the manners of antiquity, speaks with the voice of today, or leaves the reader dangling at a precipice. Below you will find that codex: each rule preserved like a charter, its logic unchanged, but embroidered with the language of gardens and lanterns to make the work a pleasure to read.
+
+[attr-5]
+A story is [attr-5] if The story is classic
+- In gentler terms: when a tale wears the familiar garments of long-standing tradition — measured rhythm, venerable tropes, and an air of time-honored form — we bestow upon it the token [attr-5].
+
+[attr-6]
+A story is [attr-6] if The story is modern
+- Whispered in the margins: when a narrative pulses with contemporary cadence, fresh innovations, or sensibilities of the present day, it earns the badge [attr-6].
+
+[attr-3]
+A story is [attr-3] if The story has a cliffhanger
+- Imagine the final line that hangs like a bird on a wire: the story possesses a cliffhanger when it intentionally leaves the reader suspended, and thus it qualifies as [attr-3].
+
+[attr-4]
+A story is [attr-4] if The story has more than 375 words
+- Measured by length as by heartbeat: if the tale stretches beyond 375 words, unfolding pages and petals, it is considered a [attr-4].
+
+[attr-7]
+A story is [attr-7] if The story is about bygone eras
+- If the narrative’s breath smells of dusted maps, ancient fashions, or histories turned to sepia, and it concerns epochs past, then it belongs to [attr-7].
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+- The story is [attr-7]
+- Picture, if you will, a long, classic chronicle of olden days: only when all three jewels — classic style, sufficient length, and a setting in bygone eras — shine together does the tale receive the name [attr-1].
+
+[attr-2]
+A story is [attr-2] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- All of the following are true:
+  - The story is not [attr-5]
+  - The story's style is equal to [attr-6]
+  - The story is [attr-3]
+  - The story's topic is in [attr-7]
+- In the lexicon of moods: a tale becomes [attr-2] either when it decisively leans into exactly one clear temporal voice (modern or classic), or when it meets the richer conjunctive test — not classic, explicitly modern in style, bearing a cliffhanger, and concerned with bygone eras. Think of this node as the lantern that glows only when the specified combination of traits is present; the logic — exclusive choice or a strict conjunction — stands firm as a compass.

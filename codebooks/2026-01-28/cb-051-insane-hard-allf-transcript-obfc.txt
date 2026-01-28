@@ -1,0 +1,291 @@
+Interviewer: Let's go through this codebook together. I'll ask about each label, and you explain. Sound good?
+
+Expert: Sounds great. Ask away.
+
+Interviewer: What does [attr-27] mean?
+
+Expert: Formally: "A story is [attr-27] if The story has the theme Innovation"
+
+In conversational terms: If a story’s central theme is Innovation, we tag it as [attr-27]. Think of inventions, creative breakthroughs, or an emphasis on new ideas.
+
+Interviewer: And [attr-17]?
+
+Expert: Formally: "A story is [attr-17] if The story is classic"
+
+Plainly: Use [attr-17] when the story reads like a classic — traditional structure, timeless tone, familiar conventions.
+
+Interviewer: [attr-31]?
+
+Expert: Formally: "A story is [attr-31] if The story is about hidden treasures"
+
+Simply: This tag is for stories centered on secret hoards, buried riches, or quests that uncover treasure.
+
+Interviewer: [attr-13]?
+
+Expert: Formally: "A story is [attr-13] if The story has fewer than 160 words"
+
+Translation: If the whole piece is under 160 words, it qualifies as [attr-13].
+
+Interviewer: [attr-14]?
+
+Expert: Formally: "A story is [attr-14] if The story starts with a adjective"
+
+Explanation: If the very first word of the story is an adjective, mark [attr-14]. (Yes, that includes words like "Quiet", "Ancient", "Brave".)
+
+Interviewer: [attr-26]?
+
+Expert: Formally: "A story is [attr-26] if The story has the theme Humor"
+
+Plain: Tag stories whose theme centers on humor, comedy, or making the reader laugh.
+
+Interviewer: [attr-9]?
+
+Expert: Formally: "A story is [attr-9] if The story has readability score below 86.4"
+
+Clarified: If the readability metric used falls below 86.4, assign [attr-9]. This is a numeric threshold.
+
+Interviewer: [attr-19]?
+
+Expert: Formally: "A story is [attr-19] if The story is modern"
+
+Plain: Use [attr-19] when the story has a contemporary voice, references, or sensibilities.
+
+Interviewer: [attr-34]?
+
+Expert: Formally: "A story is [attr-34] if The story is about mystical creatures"
+
+Plain language: Stories focused on dragons, fae, unicorns, or other mythical beings get this tag.
+
+Interviewer: [attr-23]?
+
+Expert: Formally: "A story is [attr-23] if The story has the theme Growth"
+
+Explanation: When growth (personal, emotional, skill-based) is the story’s theme, it’s [attr-23].
+
+Interviewer: [attr-8]?
+
+Expert: Formally: "A story is [attr-8] if The story has more than 375 words"
+
+So: Anything exceeding 375 words is a [attr-8].
+
+Interviewer: [attr-4]?
+
+Expert: Formally: "A story is [attr-4] if The story has a moral lesson"
+
+In plain terms: If the story explicitly or implicitly teaches a moral, tag it [attr-4].
+
+Interviewer: [attr-6]?
+
+Expert: Formally: "A story is [attr-6] if The story has circular narrative structure"
+
+Meaning: The narrative loops back to its starting point or uses repetition that closes the story in a circle.
+
+Interviewer: [attr-24]?
+
+Expert: Formally: "A story is [attr-24] if The story has the theme Hardship"
+
+Plain: Stories centered on struggle, suffering, or significant obstacles get this label.
+
+Interviewer: [attr-37]?
+
+Expert: Formally: "A story is [attr-37] if The story uses conditional mood"
+
+Translation: If the text contains conditional constructions (would, could, should in conditional contexts), mark [attr-37].
+
+Interviewer: [attr-38]?
+
+Expert: Formally: "A story is [attr-38] if The story uses superlative forms"
+
+Simple: When the language includes superlatives (best, worst, tallest), the tag applies.
+
+Interviewer: [attr-25]?
+
+Expert: Formally: "A story is [attr-25] if The story has the theme Helping Others"
+
+So: Stories that emphasize aid, altruism, or characters helping one another are [attr-25].
+
+Interviewer: [attr-21]?
+
+Expert: Formally: "A story is [attr-21] if The story is playful"
+
+In plain words: A light, whimsical, or mischievous tone — that’s [attr-21].
+
+Interviewer: [attr-7]?
+
+Expert: Formally: "A story is [attr-7] if The story has juxtaposition"
+
+Meaning: If contrasting elements are placed side by side for effect, tag [attr-7].
+
+Interviewer: [attr-28]?
+
+Expert: Formally: "A story is [attr-28] if The story has the theme Kindness"
+
+Plain: Stories with kindness as a central theme get this label.
+
+Interviewer: [attr-29]?
+
+Expert: Formally: "A story is [attr-29] if The story has the theme Magic"
+
+Simple: If magic is a thematic element, use [attr-29].
+
+Interviewer: [attr-5]?
+
+Expert: Formally: "A story is [attr-5] if The story has a story within a story"
+
+Explanation: When characters tell a separate story inside the main narrative, mark this node.
+
+Interviewer: [attr-36]?
+
+Expert: Formally: "A story is [attr-36] if The story is about time travel"
+
+Plain: Time machines, timelines, temporal jumps — tag [attr-36].
+
+Interviewer: [attr-39]?
+
+Expert: Formally: "A story is [attr-39] if The story uses wh-questions"
+
+Clarified: If the text includes who/what/when/where/why/how questions, mark [attr-39].
+
+Interviewer: [attr-18]?
+
+Expert: Formally: "A story is [attr-18] if The story is humorous"
+
+Plain: Tone that aims at humor — [attr-18].
+
+Interviewer: [attr-32]?
+
+Expert: Formally: "A story is [attr-32] if The story is about lost civilizations"
+
+Meaning: Stories focusing on ancient, vanished societies are in this category.
+
+Interviewer: [attr-33]?
+
+Expert: Formally: "A story is [attr-33] if The story is about magical lands"
+
+Plain: Whole worlds that are magical or enchanted — tag these stories accordingly.
+
+Interviewer: [attr-20]?
+
+Expert: Formally: "A story is [attr-20] if The story is philosophical"
+
+So: If the story is reflective, deals with big ideas, or has a philosophical bent, use this label.
+
+Interviewer: Now for some of the composite labels. What is [attr-16]?
+
+Expert: Formally: "A story is [attr-16] if the story's style is In the set { [attr-17], [attr-19], [attr-21], [attr-18], [attr-20] }"
+
+Interpretation: [attr-16] holds when the story’s style matches any one of those five listed style nodes. It's a membership test — if the style is one of that set, [attr-16] is true.
+
+Interviewer: Explain [attr-35].
+
+Expert: Formally: "A story is [attr-35] if the story's topic is In the set { [attr-34], [attr-33], [attr-31], [attr-32], [attr-36] }"
+
+Translation: This groups mystical or speculative topics. If the story’s topic is any of the listed ones, [attr-35] applies.
+
+Interviewer: What about [attr-22]?
+
+Expert: Formally: "A story is [attr-22] if either of the following are true (Or):
+- The story is [attr-27]
+- The story is [attr-23]
+- The story is [attr-24]
+- The story is [attr-25]
+- The story is [attr-28]
+- The story is [attr-29]
+- The story is [attr-26]"
+
+Explanation: [attr-22] is true if the story has any one of those themes. It’s inclusive — any match activates the cluster.
+
+Interviewer: [attr-11]? That sounds specific.
+
+Expert: Formally: "A story is [attr-11] if exactly one (Xor) of the following is true:
+- The story is [attr-13]
+- The story is [attr-8]"
+
+Clarified: Use [attr-11] when the story is either short or long, but not both. It enforces exclusivity: precisely one of those length categories must hold.
+
+Interviewer: [attr-12]?
+
+Expert: Formally: "A story is [attr-12] if both of the following are true (And):
+- The story is [attr-9]
+- The story is [attr-14]"
+
+Plain: This composite requires both conditions: low readability and that the story begins with an adjective.
+
+Interviewer: [attr-15]?
+
+Expert: Formally: "A story is [attr-15] if either of the following are true (Or):
+- The story is [attr-5]
+- The story is [attr-6]
+- The story is [attr-7]"
+
+Explanation: If the story uses any of those structural devices (a nested story, circular structure, or juxtaposition), then [attr-15] applies.
+
+Interviewer: [attr-10]?
+
+Expert: Formally: "A story is [attr-10] if either of the following are true (Or):
+- The story is [attr-4]
+- The story is [attr-23]"
+
+In everyday terms: This marker is true when the story has a moral lesson or centers on growth.
+
+Interviewer: [attr-3] — what's that formal part mean?
+
+Expert: Formally: "A story is [attr-3] if Equal(the truth of [attr-23], the truth of [attr-24])"
+
+Translation: This uses the Equal operator: [attr-3] is true when [attr-23] and [attr-24] are either both true or both false — i.e., they have equal truth values.
+
+Interviewer: [attr-1]?
+
+Expert: Formally: "A story is [attr-1] if both of the following are true (And):
+- The story is [attr-3]
+- Either of the following are true (Or):
+  - The story is [attr-28]
+  - The story is [attr-25]"
+
+Explanation: For [attr-1] you need equality between growth and hardship (per [attr-3]) and also at least one of kindness or helping-others themes.
+
+Interviewer: [attr-30]?
+
+Expert: Formally: "A story is [attr-30] if both of the following are true (And):
+- The story is [attr-22]
+- Either of the following are true (Or):
+  - The story is [attr-1]
+  - The story is [attr-27]"
+
+Plain: [attr-30] requires the story to match the theme cluster (one of the listed themes) and also either be balanced between growth/hardship plus kindness/helping-others, or specifically have the innovation theme.
+
+Interviewer: And finally, the big one: [attr-2]?
+
+Expert: Formally: "A story is [attr-2] if all of the following are true:
+- The story is [attr-30]
+- The story is [attr-16]
+- The story is [attr-35]
+- The story is [attr-15]
+- Not the story is [attr-17]
+- The story is [attr-11]
+- The story is [attr-12]
+- The story is [attr-10]"
+
+Translation and checklist: This label is strict — all those conditions must hold simultaneously.
+- The story must satisfy [attr-30] (thematic requirements we discussed).
+- Its style must be one of the styles in [attr-16].
+- Its topic must be in [attr-35].
+- It must use at least one structural device from [attr-15].
+- It must NOT be [attr-17] (explicit negation).
+- It must be either short or long, exclusively ([attr-11]).
+- It must have low readability and start with an adjective ([attr-12]).
+- And it must have a moral lesson or be about growth ([attr-10]).
+
+Interviewer: That helps a lot. A couple quick clarifying questions: when you recite the formal lines you’re keeping the exact wording, right?
+
+Expert: Yes. Each formal definition I quoted is verbatim from the codebook. Those lines are the authoritative logical formulas. My plain-language explanations are just to make them easier to apply, but they do not alter any of the logical structure or node IDs.
+
+Interviewer: Great. Anything else the annotators should keep in mind?
+
+Expert: Two practical tips:
+1. Always check the atomic tags first (those single-condition nodes like [attr-29], [attr-13], etc.). They feed into composites.
+2. When you evaluate composite nodes, match the logical operators exactly — Or means inclusive OR, And requires both, Xor requires exclusivity, Not negates, and Equal compares truth values. The composite definitions are deterministic if you compute them from the atomic truths.
+
+Interviewer: Thanks — this transcript style makes the rules much more approachable while keeping the logic solid.
+
+Expert: My pleasure. If you want, we can walk through an example story and apply the tags step by step.

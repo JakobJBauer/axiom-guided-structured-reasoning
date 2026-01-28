@@ -1,0 +1,441 @@
+{
+  "nodes": [
+    {
+      "id": "many-paragraphs",
+      "label": "MANY-PARAGRAPHS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "long-story",
+      "label": "LONG-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "low-readability",
+      "label": "LOW-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-story-within-a-story",
+      "label": "HAS-A-STORY-WITHIN-A-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-checkhovs-gun",
+      "label": "HAS-CHECKHOVS-GUN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-moral-lesson",
+      "label": "HAS-A-MORAL-LESSON",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-noun",
+      "label": "STARTS-WITH-NOUN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "STARTS-WITH-ADVERB",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adjective",
+      "label": "STARTS-WITH-ADJECTIVE",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-nonnoun",
+      "label": "STARTS-WITH-NONNOUN",
+      "formula_type": "Not",
+      "formula_args": [
+        "starts-with-noun"
+      ]
+    },
+    {
+      "id": "uses-conditional-mood",
+      "label": "USES-CONDITIONAL-MOOD",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "USES-WH-QUESTIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-superlative-forms",
+      "label": "USES-SUPERLATIVE-FORMS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-magic",
+      "label": "THEME-MAGIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-innovation",
+      "label": "THEME-INNOVATION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-growth",
+      "label": "THEME-GROWTH",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-hardship",
+      "label": "THEME-HARDSHIP",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-hidden-treasures",
+      "label": "TOPIC-HIDDEN-TREASURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-seasonal-changes",
+      "label": "TOPIC-SEASONAL-CHANGES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-the-arts",
+      "label": "TOPIC-THE-ARTS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-magical-lands",
+      "label": "TOPIC-MAGICAL-LANDS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-time-travel",
+      "label": "TOPIC-TIME-TRAVEL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "structural-epic",
+      "label": "STRUCTURAL-EPIC",
+      "formula_type": "And",
+      "formula_args": [
+        "long-story",
+        "many-paragraphs"
+      ]
+    },
+    {
+      "id": "experimental-voice",
+      "label": "EXPERIMENTAL-VOICE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "starts-with-adverb",
+            "starts-with-adjective"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "starts-with-nonnoun",
+            "uses-wh-questions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mythic-engineering",
+      "label": "MYTHIC-ENGINEERING",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "theme-magic",
+            "topic-magical-lands"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "theme-innovation",
+            "topic-time-travel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interrogative-conditionality",
+      "label": "INTERROGATIVE-CONDITIONALITY",
+      "formula_type": "And",
+      "formula_args": [
+        "uses-conditional-mood",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "uses-wh-questions",
+            "low-readability"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "embedded-foreshadowing",
+      "label": "EMBEDDED-FORESHADOWING",
+      "formula_type": "And",
+      "formula_args": [
+        "has-a-story-within-a-story",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "has-checkhovs-gun",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "uses-superlative-forms",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "uses-conditional-mood"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "treasured-transformation",
+      "label": "TREASURED-TRANSFORMATION",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-hidden-treasures",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "theme-growth",
+                "has-a-moral-lesson"
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "theme-hardship",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "has-a-moral-lesson"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasonal-aesthetic",
+      "label": "SEASONAL-AESTHETIC",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-seasonal-changes",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "topic-the-arts",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "uses-superlative-forms",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "low-readability"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "master-class-plot",
+      "label": "MASTER-CLASS-PLOT",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "embedded-foreshadowing",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "structural-epic",
+                "interrogative-conditionality"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "treasured-transformation",
+            "seasonal-aesthetic"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "long-story",
+      "target": "structural-epic"
+    },
+    {
+      "source": "many-paragraphs",
+      "target": "structural-epic"
+    },
+    {
+      "source": "starts-with-adverb",
+      "target": "experimental-voice"
+    },
+    {
+      "source": "starts-with-adjective",
+      "target": "experimental-voice"
+    },
+    {
+      "source": "starts-with-nonnoun",
+      "target": "experimental-voice"
+    },
+    {
+      "source": "uses-wh-questions",
+      "target": "experimental-voice"
+    },
+    {
+      "source": "starts-with-noun",
+      "target": "starts-with-nonnoun"
+    },
+    {
+      "source": "theme-magic",
+      "target": "mythic-engineering"
+    },
+    {
+      "source": "topic-magical-lands",
+      "target": "mythic-engineering"
+    },
+    {
+      "source": "theme-innovation",
+      "target": "mythic-engineering"
+    },
+    {
+      "source": "topic-time-travel",
+      "target": "mythic-engineering"
+    },
+    {
+      "source": "uses-conditional-mood",
+      "target": "interrogative-conditionality"
+    },
+    {
+      "source": "uses-wh-questions",
+      "target": "interrogative-conditionality"
+    },
+    {
+      "source": "low-readability",
+      "target": "interrogative-conditionality"
+    },
+    {
+      "source": "has-a-story-within-a-story",
+      "target": "embedded-foreshadowing"
+    },
+    {
+      "source": "has-checkhovs-gun",
+      "target": "embedded-foreshadowing"
+    },
+    {
+      "source": "uses-superlative-forms",
+      "target": "embedded-foreshadowing"
+    },
+    {
+      "source": "uses-conditional-mood",
+      "target": "embedded-foreshadowing"
+    },
+    {
+      "source": "topic-hidden-treasures",
+      "target": "treasured-transformation"
+    },
+    {
+      "source": "theme-growth",
+      "target": "treasured-transformation"
+    },
+    {
+      "source": "has-a-moral-lesson",
+      "target": "treasured-transformation"
+    },
+    {
+      "source": "theme-hardship",
+      "target": "treasured-transformation"
+    },
+    {
+      "source": "topic-seasonal-changes",
+      "target": "seasonal-aesthetic"
+    },
+    {
+      "source": "topic-the-arts",
+      "target": "seasonal-aesthetic"
+    },
+    {
+      "source": "uses-superlative-forms",
+      "target": "seasonal-aesthetic"
+    },
+    {
+      "source": "low-readability",
+      "target": "seasonal-aesthetic"
+    },
+    {
+      "source": "embedded-foreshadowing",
+      "target": "master-class-plot"
+    },
+    {
+      "source": "structural-epic",
+      "target": "master-class-plot"
+    },
+    {
+      "source": "interrogative-conditionality",
+      "target": "master-class-plot"
+    },
+    {
+      "source": "treasured-transformation",
+      "target": "master-class-plot"
+    },
+    {
+      "source": "seasonal-aesthetic",
+      "target": "master-class-plot"
+    }
+  ]
+}

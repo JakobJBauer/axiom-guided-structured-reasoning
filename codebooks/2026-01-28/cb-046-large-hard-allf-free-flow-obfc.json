@@ -1,0 +1,410 @@
+{
+  "nodes": [
+    {
+      "id": "attr-15",
+      "label": "lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-17",
+      "label": "philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-25",
+      "label": "magical-lands",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-27",
+      "label": "wh-question-device",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "concise-under-160-words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-19",
+      "label": "kindness-theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "more-than-six-paragraphs",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-26",
+      "label": "conditional-mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-21",
+      "label": "problem-solving-theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-18",
+      "label": "growth-theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-13",
+      "label": "starts-with-preposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-22",
+      "label": "giant-creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-16",
+      "label": "modern-style",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-14",
+      "label": "classic-style",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-20",
+      "label": "magic-theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-24",
+      "label": "lost-civilizations",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "flashback",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-23",
+      "label": "hidden-treasure",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "not-lighthearted",
+      "formula_type": "Not",
+      "formula_args": [
+        "attr-15"
+      ]
+    },
+    {
+      "id": "attr-9",
+      "label": "exactly-one-modern-or-classic",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-16",
+        "attr-14"
+      ]
+    },
+    {
+      "id": "attr-7",
+      "label": "special-kind-of-adventure",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-25",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-20",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-22",
+                "attr-21"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-6",
+      "label": "treasure-or-lost-civilization-condition",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-23",
+            "attr-24"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-23",
+            "attr-24"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-11",
+      "label": "wh-question-with-conditional-or-prep",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-27",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-26",
+            "attr-13"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-4",
+      "label": "tightly-specified-growth-story",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Equal",
+          "formula_args": [
+            "themes",
+            [
+              "attr-19",
+              "attr-18"
+            ]
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-21",
+                "attr-5"
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-8",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-12"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "attr-1-combination",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-7",
+            "attr-6"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-22",
+            "attr-24"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "layered-combination",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-1",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-9",
+                {
+                  "formula_type": "Or",
+                  "formula_args": [
+                    "attr-19",
+                    "attr-20"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-4",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-10"
+                  ]
+                },
+                "attr-11"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-15",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-16",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-14",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-25",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-20",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-22",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-21",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-27",
+      "target": "attr-11"
+    },
+    {
+      "source": "attr-26",
+      "target": "attr-11"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-11"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-18",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-21",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-22",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-20",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-2"
+    }
+  ]
+}

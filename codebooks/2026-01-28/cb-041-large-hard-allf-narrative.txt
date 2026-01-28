@@ -1,0 +1,87 @@
+Imagine a curious librarian who catalogs stories not by shelf number but by the qualities that make each tale sparkle. She whispers each label like a charm, and the labels — our nodes — stick to a story when it meets the precise criteria below. Read them as signposts in a living map; the logic is strict, but the path is meant to be read like a tale.
+
+[SHORT-STORY]
+Think of a tiny fable told over a single breath: a story becomes [SHORT-STORY] when it fits into fewer than 160 words.
+
+[THEME-KINDNESS]
+When kindness is the heart beating beneath the plot, the tale wears the badge [THEME-KINDNESS].
+
+[THEME-HELPING-OTHERS]
+If the plot or characters turn their hands toward aiding another, the tale is called [THEME-HELPING-OTHERS].
+
+[THEME-PROBLEM-SOLVING]
+When the story revolves around puzzles, obstacles, and the clever means to overcome them, it is labeled [THEME-PROBLEM-SOLVING].
+
+[STYLE-PHILOSOPHICAL]
+A tale that leans into big questions, reflection, and contemplative tones earns the title [STYLE-PHILOSOPHICAL].
+
+[HIGH-READABILITY]
+Some stories glide effortlessly off the page; those with a readability score above 96.1 are marked [HIGH-READABILITY].
+
+[STYLE-PLAYFUL]
+If the narrative skips along with a light, mischievous step, it is [STYLE-PLAYFUL].
+
+[THEME-HUMOR]
+When humor threads the theme and drives the story’s meaning, the label is [THEME-HUMOR].
+
+[STYLE-HUMOROUS]
+A story that uses wit and comedic style to shape its voice is [STYLE-HUMOROUS].
+
+[HAS-A-STORY-WITHIN-A-STORY]
+Sometimes a tale tells another tale inside it; when it does, it is [HAS-A-STORY-WITHIN-A-STORY].
+
+[TOPIC-MYSTICAL-CREATURES]
+If mystical creatures populate the narrative — dragons, fae, or other enchanted beings — the story falls under [TOPIC-MYSTICAL-CREATURES].
+
+[HAS-A-RED-HERRING]
+When the tale plants a misleading clue to divert the reader, it carries the mark [HAS-A-RED-HERRING].
+
+Now the librarian points to combinations where labels must occur together, like constellations aligning.
+
+[KINDNESS-HELPING]
+A story is [KINDNESS-HELPING] if both of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [THEME-HELPING-OTHERS]
+(And both must hold simultaneously.)
+
+[LIGHT-HEARTED]
+A story is [LIGHT-HEARTED] if exactly one of the following is true (Xor):
+- The story is [STYLE-PLAYFUL]
+- The story is [STYLE-HUMOROUS]
+
+[THEME-IN-CORE-SET]
+The librarian keeps a core set of three themes. A story is [THEME-IN-CORE-SET] if the story's dominant theme is In the following set:
+- [THEME-KINDNESS], [THEME-HELPING-OTHERS], [THEME-PROBLEM-SOLVING]
+(Use In to check membership among those theme nodes.)
+
+[BALANCED-TONE]
+She loves balance. A story is [BALANCED-TONE] if the following Equal relationship holds:
+- The presence of [STYLE-PHILOSOPHICAL] Equal the presence of [STYLE-HUMOROUS]
+(They are Equal when either both are present or both are absent.)
+
+[MYSTICAL-ALLEGORY]
+Some tales are layered like a painted shell. A story is [MYSTICAL-ALLEGORY] if both of the following are true:
+- The story is [TOPIC-MYSTICAL-CREATURES]
+- The story is [HAS-A-STORY-WITHIN-A-STORY] And the story is [STYLE-PHILOSOPHICAL]
+(This nests an And inside an And to form an allegorical structure.)
+
+[COMPLEX-ARC]
+Here the librarian’s rulebook gets intricate. A story is [COMPLEX-ARC] if all of the following are true:
+- Either of the following is true (Or):
+  - The story is [KINDNESS-HELPING]
+  - The story is [THEME-PROBLEM-SOLVING]
+- Exactly one of the following is true (Xor):
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is Not [SHORT-STORY] Or the story is [HIGH-READABILITY]
+(Uses Not to exclude short stories unless they also meet HIGH-READABILITY; combines Or and Xor for nuanced arc structure.)
+
+[RECOMMENDABLE-COMPOSITION]
+Finally, the librarian sets aside the rarest scrolls as truly recommendable. A story is [RECOMMENDABLE-COMPOSITION] if both of the following are true:
+- The story is [COMPLEX-ARC] And the story is [BALANCED-TONE]
+- The story is [THEME-IN-CORE-SET] And either of the following is true (Or):
+  - The story is [LIGHT-HEARTED]
+  - The story is [MYSTICAL-ALLEGORY]
+(This node nests multiple logical operators to form a deep, recommendable composition: And at the top level, Or inside a branch, and references In, Equal, Not, and Xor through its subordinate nodes.)
+
+Read these labels as the librarian does: as both rules and invitations. Each node is a description and a doorway — strict in logic, generous in storytelling — guiding annotators and thinkers through a world where meaning is precise and every story can be placed on the map.

@@ -1,0 +1,80 @@
+Codebook — Structured View
+Purpose: Present each node clearly and hierarchically so annotators can follow the logical requirements for labeling. All node IDs and logical relationships are preserved exactly as written.
+
+1) Atomic (single-condition) nodes
+- [HAS-A-MORAL-LESSON]
+  - Definition: A story is [HAS-A-MORAL-LESSON] if The story has a moral lesson.
+
+- [USES-PERFECT-ASPECT]
+  - Definition: A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+
+- [HAS-A-CLIFFHANGER]
+  - Definition: A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger.
+
+- [THEME-KINDNESS]
+  - Definition: A story is [THEME-KINDNESS] if The story has the theme Kindness.
+
+- [STYLE-MODERN]
+  - Definition: A story is [STYLE-MODERN] if The story is modern.
+
+- [HAS-A-FLASHBACK]
+  - Definition: A story is [HAS-A-FLASHBACK] if The story has a flashback.
+
+- [STYLE-CLASSIC]
+  - Definition: A story is [STYLE-CLASSIC] if The story is classic.
+
+- [LONG-STORY]
+  - Definition: A story is [LONG-STORY] if The story has more than 375 words.
+
+- [HAS-JUXTAPOSITION]
+  - Definition: A story is [HAS-JUXTAPOSITION] if The story has juxtaposition.
+
+- [STYLE-LIGHTHEARTED]
+  - Definition: A story is [STYLE-LIGHTHEARTED] if The story is lighthearted.
+
+2) Composite nodes (multiple logical conditions)
+- [RICH-NARRATIVE]
+  - Summary: Use this label when all listed conditions below hold simultaneously.
+  - Formal condition: A story is [RICH-NARRATIVE] if all of the following are true:
+    - Either of the following is true:
+      - The story is [HAS-A-CLIFFHANGER]
+      - The story is [HAS-A-FLASHBACK]
+    - Exactly one of the following is true:
+      - The story is [HAS-JUXTAPOSITION]
+      - The story is [USES-PERFECT-ASPECT]
+    - The story is not [STYLE-LIGHTHEARTED]
+    - At least one of the story's structural features is in the set { [HAS-A-CLIFFHANGER], [HAS-A-FLASHBACK], [HAS-JUXTAPOSITION] }
+
+  - Notes for annotation:
+    - “Either … is true” means at least one of the two listed structural features must be present.
+    - “Exactly one … is true” requires an exclusive choice between the two listed features (one present, the other absent).
+    - The final set membership requirement must hold even if it overlaps with earlier conditions.
+
+- [COMPLEX-STORY]
+  - Summary: This label requires that the story be both narratively rich and satisfy two style/theme relationships simultaneously.
+  - Formal condition: A story is [COMPLEX-STORY] if both of the following are true:
+    - The story is [RICH-NARRATIVE]
+    - Both of the following are true:
+      - Either of the following is true:
+        - The story is [THEME-KINDNESS]
+        - The story is [HAS-A-MORAL-LESSON]
+      - The presence of [STYLE-MODERN] equals the presence of [STYLE-CLASSIC]
+
+  - Notes for annotation:
+    - “Either … is true” in the nested condition: at least one of [THEME-KINDNESS] or [HAS-A-MORAL-LESSON] must be present.
+    - “The presence of [STYLE-MODERN] equals the presence of [STYLE-CLASSIC]” means these two style labels must match in presence — either both are present or both are absent.
+    - All conditions above must be satisfied together for [COMPLEX-STORY] to apply.
+
+3) Quick checklist (for annotators)
+- To mark [RICH-NARRATIVE], verify:
+  - At least one of [HAS-A-CLIFFHANGER] or [HAS-A-FLASHBACK] is true.
+  - Exactly one of [HAS-JUXTAPOSITION] or [USES-PERFECT-ASPECT] is true.
+  - [STYLE-LIGHTHEARTED] is false.
+  - At least one of { [HAS-A-CLIFFHANGER], [HAS-A-FLASHBACK], [HAS-JUXTAPOSITION] } is true.
+
+- To mark [COMPLEX-STORY], verify:
+  - The story already meets all requirements for [RICH-NARRATIVE].
+  - At least one of [THEME-KINDNESS] or [HAS-A-MORAL-LESSON] is true.
+  - [STYLE-MODERN] and [STYLE-CLASSIC] either both appear or both do not appear.
+
+End of codebook.

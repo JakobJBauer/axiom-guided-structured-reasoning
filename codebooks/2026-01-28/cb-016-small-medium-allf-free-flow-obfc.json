@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "id": "attr-5",
+      "label": "attr-5",
+      "formula_type": "In",
+      "formula_args": [
+        "theme",
+        [
+          "helping-others"
+        ]
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "attr-2",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "In",
+          "formula_args": [
+            "protagonist-action",
+            [
+              "aid",
+              "rescue"
+            ]
+          ]
+        },
+        {
+          "formula_type": "In",
+          "formula_args": [
+            "protagonist-action",
+            [
+              "donate",
+              "teach"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "attr-3",
+      "formula_type": "Equal",
+      "formula_args": [
+        "protagonist-motive",
+        "personal-gain"
+      ]
+    },
+    {
+      "id": "attr-4",
+      "label": "attr-4",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-2",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "attr-1",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-5",
+        "attr-4"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-2",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    }
+  ]
+}

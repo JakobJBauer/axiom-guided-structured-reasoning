@@ -1,0 +1,444 @@
+{
+  "nodes": [
+    {
+      "id": "attr-18",
+      "label": "Theme: Problem-Solving",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-21",
+      "label": "About hidden treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "Lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Has Red Herring",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "Starts with a preposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-20",
+      "label": "About giant creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-25",
+      "label": "Uses superlative forms",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-17",
+      "label": "Theme: Magic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "Modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Starts with an adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-22",
+      "label": "About magical lands",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Readability below 86.4",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Humorous",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-15",
+      "label": "Theme: Innovation",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "Classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-23",
+      "label": "About mystical creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-16",
+      "label": "Theme: Kindness",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-14",
+      "label": "Theme: Humor",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Fewer than 160 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-24",
+      "label": "About the arts",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Attr-5 (geography/inhabitants OR compact red-herring)",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-21",
+                "attr-22"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-23",
+                {
+                  "formula_type": "Xor",
+                  "formula_args": [
+                    "attr-20",
+                    "attr-24"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-3",
+            "attr-6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-19",
+      "label": "Attr-19 (tonal and stylistic constraints)",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-11",
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "attr-10",
+                "attr-9"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "In",
+              "formula_args": [
+                "story-style",
+                [
+                  "STYLE-MODERN",
+                  "STYLE-CLASSIC"
+                ]
+              ]
+            },
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "attr-4",
+                    "attr-8"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-13",
+      "label": "Attr-13 (values/themes composite)",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-18",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-15",
+                "attr-17"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-16",
+            "attr-14"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "In",
+              "formula_args": [
+                "story-theme",
+                [
+                  "THEME-MAGIC",
+                  "THEME-INNOVATION",
+                  "THEME-PROBLEM-SOLVING"
+                ]
+              ]
+            },
+            {
+              "formula_type": "Equal",
+              "formula_args": [
+                "attr-16",
+                false
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Attr-1 (compound badge)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-19",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-25",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-3"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Attr-2 (highest wreath composite)",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-13",
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "attr-1",
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "attr-6",
+                    {
+                      "formula_type": "Or",
+                      "formula_args": [
+                        "attr-24",
+                        "attr-21"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-10",
+                "attr-14"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-21",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-22",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-20",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-19"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-19"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-19"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-19"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-19"
+    },
+    {
+      "source": "attr-18",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-15",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-17",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-16",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-14",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-25",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-21",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-14",
+      "target": "attr-2"
+    }
+  ]
+}

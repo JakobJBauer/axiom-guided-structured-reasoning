@@ -1,0 +1,38 @@
+In the hushed library of classification, where each label is a polished talisman and every rule a gentle compass, this little codebook unfurls like a gilded map. Imagine an archivist who loves metaphor and meaning, cataloguing tales by their heartbeat and grammar. Below you will find the exact logical landmarks — unchanged in structure, exact in identification — presented with a flourish of description to guide annotators with both precision and delight.
+
+[attr-7]
+A story is [attr-7] if The story uses perfect aspect
+- Practical note: mark this when a tale draws on the perfect aspect — those lyrical threads of have/has/had + past participle — stitching past events to present reflection. Think of it as a narrator who tends a garden of completed deeds and watches their flowers still scent the air.
+
+[attr-5]
+A story is [attr-5] if The story is about cultural traditions
+- Practical note: apply this label when a story dwells on rituals, customs, inherited practices, or communal rites — the woven patterns of society that pass from hand to hand like heirloom cloth.
+
+[attr-6]
+A story is [attr-6] if The story is about the arts
+- Practical note: use this when a tale centers on artistic expression — music, painting, dance, theater, craftsmanship — the tender ateliers of human imagination and skill.
+
+[attr-4]
+A story is [attr-4] if The story is lighthearted
+- Practical note: affix this to stories that float on a buoyant breeze — playful, cheerful, gentle in tone, where amusement or easy warmth is the prevailing mood.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-6]
+- The story is [attr-5]
+- Practical note: this is the elegant overlap where artistic practice and age-old custom meet — imagine traditional dances performed to ancestral tunes, or craftsmen preserving a lineage of technique. Both elements must be present for this label to bloom.
+
+[attr-3]
+A story is [attr-3] if all of the following are true:
+- The story is [attr-1]
+- The story is [attr-7]
+- The story is not [attr-4]
+- Practical note: assign this when a tale inhabits the reverent hush of memory. It treats traditional arts, uses the perfect aspect to look back upon completed moments, and carries a tone that is wistful or solemn rather than breezy. The combination evokes echoes of what once was, treasured and tinged with longing.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-1]
+- The story is [attr-4]
+- Practical note: this label fits those delightful narratives where heritage and artistry are celebrated with a playful smile — festivals, communal dances, or age-old songs told with warmth and levity.
+
+May this annotated atlas, embroidered with metaphors yet faithful to its logical bones, help you classify with both rigor and a little poetic pleasure. The relationships between these nodes remain exactly as they must: unchanged, reliable, and ready to guide your reasoning.

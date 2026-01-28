@@ -1,0 +1,184 @@
+Interviewer: Let's go through this codebook together. I'll ask about each label and you explain exactly what it means. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What does [THEME-PROBLEM-SOLVING] mean?
+
+Expert: A story is [THEME-PROBLEM-SOLVING] if The story has the theme Problem-Solving.
+
+Interviewer: And [TOPIC-HIDDEN-TREASURES]?
+
+Expert: A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures.
+
+Interviewer: [STYLE-LIGHTHEARTED]?
+
+Expert: A story is [STYLE-LIGHTHEARTED] if The story is lighthearted.
+
+Interviewer: What about [HAS-A-RED-HERRING]?
+
+Expert: A story is [HAS-A-RED-HERRING] if The story has a Red Herring.
+
+Interviewer: [STARTS-WITH-PREPOSITION]?
+
+Expert: A story is [STARTS-WITH-PREPOSITION] if The story starts with a preposition.
+
+Interviewer: [TOPIC-GIANT-CREATURES]?
+
+Expert: A story is [TOPIC-GIANT-CREATURES] if The story is about giant creatures.
+
+Interviewer: [USES-SUPERLATIVE-FORMS]—what triggers that?
+
+Expert: A story is [USES-SUPERLATIVE-FORMS] if The story uses superlative forms.
+
+Interviewer: [THEME-MAGIC]?
+
+Expert: A story is [THEME-MAGIC] if The story has the theme Magic.
+
+Interviewer: [STYLE-MODERN]?
+
+Expert: A story is [STYLE-MODERN] if The story is modern.
+
+Interviewer: [STARTS-WITH-ADVERB]?
+
+Expert: A story is [STARTS-WITH-ADVERB] if The story starts with a adverb.
+
+Interviewer: [TOPIC-MAGICAL-LANDS]?
+
+Expert: A story is [TOPIC-MAGICAL-LANDS] if The story is about magical lands.
+
+Interviewer: [LOW-READABILITY]—how's that determined?
+
+Expert: A story is [LOW-READABILITY] if The story has readability score below 86.4.
+
+Interviewer: [STYLE-HUMOROUS]?
+
+Expert: A story is [STYLE-HUMOROUS] if The story is humorous.
+
+Interviewer: [THEME-INNOVATION]?
+
+Expert: A story is [THEME-INNOVATION] if The story has the theme Innovation.
+
+Interviewer: [STYLE-CLASSIC]?
+
+Expert: A story is [STYLE-CLASSIC] if The story is classic.
+
+Interviewer: [TOPIC-MYSTICAL-CREATURES]?
+
+Expert: A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures.
+
+Interviewer: [THEME-KINDNESS]?
+
+Expert: A story is [THEME-KINDNESS] if The story has the theme Kindness.
+
+Interviewer: [THEME-HUMOR]?
+
+Expert: A story is [THEME-HUMOR] if The story has the theme Humor.
+
+Interviewer: [SHORT-STORY]?
+
+Expert: A story is [SHORT-STORY] if The story has fewer than 160 words.
+
+Interviewer: [TOPIC-THE-ARTS]?
+
+Expert: A story is [TOPIC-THE-ARTS] if The story is about the arts.
+
+Interviewer: Now the definitions get more complex. Explain [PLOT-STRUCTURE].
+
+Expert: Sure. A story is [PLOT-STRUCTURE] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - The story is [TOPIC-HIDDEN-TREASURES]
+    - The story is [TOPIC-MAGICAL-LANDS]
+  - either of the following is true:
+    - The story is [TOPIC-MYSTICAL-CREATURES]
+    - The story is [TOPIC-GIANT-CREATURES] xor The story is [TOPIC-THE-ARTS]
+- both of the following are true:
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [SHORT-STORY]
+
+Interviewer: Let me check I understand. So one pathway to [PLOT-STRUCTURE] requires two grouped conditions: first, either hidden treasures or magical lands; second, either mystical creatures or an exclusive choice between giant creatures xor the arts. The alternative pathway is simply: it has a red herring and is a short story. Correct?
+
+Expert: Correct. That restates the same logical structure.
+
+Interviewer: Explain [TONE-AND-STYLE].
+
+Expert: A story is [TONE-AND-STYLE] if both of the following are true:
+- either of the following is true:
+  - The story is [STYLE-LIGHTHEARTED]
+  - The story is [STYLE-HUMOROUS] xor The story is [STYLE-CLASSIC]
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-CLASSIC]
+  - not both of the following are true:
+    - The story is [LOW-READABILITY]
+    - The story starts with a preposition: The story is [STARTS-WITH-PREPOSITION]
+
+Interviewer: A quick clarification: "The story is in [STYLE-MODERN, STYLE-CLASSIC]"—that means the story must be both STYLE-MODERN and STYLE-CLASSIC, right?
+
+Expert: Yes: the phrase "The story is in [STYLE-MODERN, STYLE-CLASSIC]" requires both listed styles to be true.
+
+Interviewer: And "not both of the following are true" means at least one of those (LOW-READABILITY or STARTS-WITH-PREPOSITION) must be false.
+
+Expert: Exactly.
+
+Interviewer: Moving to [THEMATIC-CORE]: how's that defined?
+
+Expert: A story is [THEMATIC-CORE] if either of the following is true:
+- both of the following are true:
+  - The story is [THEME-PROBLEM-SOLVING]
+  - either of the following is true:
+    - The story is [THEME-INNOVATION]
+    - The story is [THEME-MAGIC]
+- exactly one of the following is true:
+  - The story is [THEME-KINDNESS]
+  - The story is [THEME-HUMOR]
+- both of the following are true:
+  - The story is in [THEME-MAGIC, THEME-INNOVATION, THEME-PROBLEM-SOLVING]
+  - The story is [THEME-KINDNESS] equals false
+
+Interviewer: So there are three alternative ways to qualify for [THEMATIC-CORE]: (1) problem-solving plus either innovation or magic; (2) exactly one of kindness or humor; (3) the story must be in the set [THEME-MAGIC, THEME-INNOVATION, THEME-PROBLEM-SOLVING] (i.e., all three), and additionally THEME-KINDNESS must be false. Right?
+
+Expert: That's an accurate interpretation of those clauses.
+
+Interviewer: Next, [COMBINED-PLOT-TONE]?
+
+Expert: A story is [COMBINED-PLOT-TONE] if both of the following are true:
+- The story is [PLOT-STRUCTURE]
+- either of the following is true:
+  - The story is [TONE-AND-STYLE]
+  - both of the following are true:
+    - The story is [USES-SUPERLATIVE-FORMS]
+    - The story is not [HAS-A-RED-HERRING]
+
+Interviewer: So to meet [COMBINED-PLOT-TONE], you must satisfy [PLOT-STRUCTURE], and either satisfy [TONE-AND-STYLE] or have superlatives and no red herring.
+
+Expert: Correct.
+
+Interviewer: Finally, [COMPLEX-STORY-TYPE]?
+
+Expert: A story is [COMPLEX-STORY-TYPE] if either of the following is true:
+- both of the following are true:
+  - The story is [THEMATIC-CORE]
+  - exactly one of the following is true:
+    - The story is [COMBINED-PLOT-TONE]
+    - both of the following are true:
+      - The story is [SHORT-STORY]
+      - either of the following is true:
+        - The story is [TOPIC-THE-ARTS]
+        - The story is [TOPIC-HIDDEN-TREASURES]
+- not both of the following are true:
+  - The story is [STYLE-HUMOROUS]
+  - The story is [THEME-HUMOR]
+
+Interviewer: Let me paraphrase: One way into [COMPLEX-STORY-TYPE] is to be in the thematic core and, additionally, satisfy exactly one of these two options: either be [COMBINED-PLOT-TONE], or be a short story that is about the arts or hidden treasures. The other way in is simply that it's not the case that both STYLE-HUMOROUS and THEME-HUMOR are true simultaneously.
+
+Expert: That's exactly what the definition states.
+
+Interviewer: Great. Any final notes for annotators using this transcript-style codebook?
+
+Expert: Two quick reminders:
+- All node IDs like [THEME-PROBLEM-SOLVING] must be used exactly as written when annotating.
+- The logical operators—either, both, xor, exactly one, not both, equals false—are precise; preserve them when mapping story features to nodes.
+
+Interviewer: Thanks — that keeps the logic intact and the structure clear.
+
+Expert: Glad to help.

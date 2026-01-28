@@ -1,0 +1,22 @@
+[attr-4]
+A story is [attr-4] if the story is about cultural traditions.
+Think of this tag as the home for stories that explore rituals, customs, festivals, or practices rooted in a community’s shared history—anything where culture and tradition are central to the narrative.
+
+[attr-1]
+A story is [attr-1] if the story has a moral lesson.
+Use this when the tale clearly teaches or implies a lesson—an ethical takeaway or guiding principle the reader is meant to notice.
+
+[attr-2]
+A story is [attr-2] if the story starts with a adverb.
+This flags openings that begin with an adverbial word (for example, “Quietly,” “Suddenly,” or “Unfortunately,”) setting tone or pace right from the first word.
+
+[attr-3]
+A story is [attr-3] if the story has the theme Magic.
+Tag stories where magic—wonder, supernatural forces, spells, or mystical elements—is a clear thematic thread.
+
+[attr-5]
+A story is [attr-5] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-3]
+- The story is [attr-1]
+When all three of those conditions line up—cultural tradition at the center, magic woven into the theme, and a moral lesson to take away—you’ve got a [attr-5] story: a folk or culturally rooted tale that uses the magical to teach something meaningful.

@@ -1,0 +1,130 @@
+[attr-3]
+Definition: A story is [attr-3] if the narrative contains a cliffhanger.
+
+[attr-18]
+Definition: A story is [attr-18] if the narrative exhibits a modern stylistic register.
+
+[attr-25]
+Definition: A story is [attr-25] if the text employs discourse markers.
+
+[attr-4]
+Definition: A story is [attr-4] if the narrative includes a flashback sequence.
+
+[attr-24]
+Definition: A story is [attr-24] if the core thematic element is Problem-Solving.
+
+[attr-12]
+Definition: A story is [attr-12] if the opening token of the text is an adjective.
+
+[attr-26]
+Definition: A story is [attr-26] if the text contains wh-questions (who, what, when, where, why, how).
+
+[attr-5]
+Definition: A story is [attr-5] if the narrative contains juxtaposition.
+
+[attr-13]
+Definition: A story is [attr-13] if the opening token of the text is an adverb.
+
+[attr-23]
+Definition: A story is [attr-23] if the primary thematic element is Humor.
+
+[attr-7]
+Definition: A story is [attr-7] if the measured readability score is below 86.4.
+
+[attr-15]
+Definition: A story is [attr-15] if the narrative style is humorous.
+
+[attr-17]
+Definition: A story is [attr-17] if the narrative style is minimalist.
+
+[attr-16]
+Definition: A story is [attr-16] if the narrative style is lighthearted.
+
+[attr-6]
+Definition: A story is [attr-6] if the measured readability score is above 96.1.
+
+[attr-22]
+Definition: A story is [attr-22] if the core thematic element is Deception.
+
+[attr-19]
+Definition: A story is [attr-19] if the narrative style is philosophical.
+
+[attr-14]
+Definition: A story is [attr-14] if either of the following holds:
+- The story is [attr-3]
+- exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+- both of the following are true:
+  - The story is [attr-25]
+  - The story is not [attr-3]
+
+[attr-8]
+Definition: A story is [attr-8] if both of the following hold:
+- either of the following is true:
+  - The story is [attr-12]
+  - The story is [attr-13]
+- exactly one of the following is true:
+  - The story is [attr-26]
+  - The story is [attr-25]
+
+[attr-20]
+Definition: A story is [attr-20] if either of the following holds:
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-LIGHTHEARTED]
+  - The story is not [attr-17]
+- both of the following are true:
+  - The story is [attr-15]
+  - The story is not [attr-19]
+
+[attr-21]
+Definition: A story is [attr-21] if either of the following holds:
+- both of the following are true:
+  - The story is [attr-24]
+  - The story is [attr-23]
+- exactly one of the following is true:
+  - The story is [attr-22]
+  - The story is [attr-24]
+
+[attr-10]
+Definition: A story is [attr-10] if exactly one of the following is true:
+- The story is [attr-7]
+- The story is [attr-6]
+
+[attr-11]
+Definition: A story is [attr-11] if both of the following are true:
+- The story is [attr-10]
+- either of the following is true:
+  - The story is [attr-16]
+  - The story is not [attr-7]
+
+[attr-2]
+Definition: A story is [attr-2] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-14]
+  - both of the following are true:
+    - The story is [attr-8]
+    - The story is not [attr-3]
+- either of the following is true:
+  - The story is [attr-20]
+  - both of the following are true:
+    - The story is [attr-21]
+    - The story is not [attr-19]
+
+[attr-1]
+Definition: A story is [attr-1] if either of the following holds:
+- both of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-20]
+- exactly one of the following is true:
+  - The story is [attr-15]
+  - The story is [attr-17]
+
+[attr-9]
+Definition: A story is [attr-9] if both of the following are true:
+- The story is [attr-2]
+- either of the following is true:
+  - The story is [attr-1]
+  - both of the following are true:
+    - The story is [attr-21]
+    - The story is not [attr-10]

@@ -1,0 +1,24 @@
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+[SEASONAL-QUESTION-STORY]
+A story is [SEASONAL-QUESTION-STORY] if both of the following are true:
+- The story is [TOPIC-SEASONAL-CHANGES]
+- The story is [USES-WH-QUESTIONS]
+
+[TRADITION-OR-TIME-STORY]
+A story is [TRADITION-OR-TIME-STORY] if either of the following is true:
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+- The story is [TOPIC-TIME-TRAVEL]

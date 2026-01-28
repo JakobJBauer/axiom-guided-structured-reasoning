@@ -1,0 +1,41 @@
+Codebook — Formal annotation specifications
+
+Purpose: Precise definitions for story-level annotation nodes. Each node below specifies the criterion required to assign the corresponding label to a story. Logical operators used: Not (logical negation), And (conjunction / all must hold), Or (inclusive disjunction), and "Exactly one" (exclusive disjunction / XOR). Node identifiers are preserved verbatim in [BRACKET] format.
+
+Atomic labels (single-condition predicates)
+
+[USES-SUPERLATIVE-FORMS]
+Definition: A story is annotated with [USES-SUPERLATIVE-FORMS] if the narrative text employs superlative grammatical forms (e.g., "best", "most", "largest") in its expression.
+
+[TOPIC-LOST-CIVILIZATIONS]
+Definition: A story is annotated with [TOPIC-LOST-CIVILIZATIONS] if the subject matter of the story concerns lost, extinct, or otherwise historically vanished civilizations.
+
+[STARTS-WITH-NOUN]
+Definition: A story is annotated with [STARTS-WITH-NOUN] if the first token of the story is a noun (lexical category: noun).
+
+[THEME-HUMOR]
+Definition: A story is annotated with [THEME-HUMOR] if the principal theme of the narrative is humor (the story is intended to be humorous or comedic in tone).
+
+Composite labels (logical combinations)
+
+[LIGHTHEARTED-INTRO]
+Specification: Assign [LIGHTHEARTED-INTRO] when all of the following conditions are simultaneously satisfied:
+- The story is [STARTS-WITH-NOUN] (conjunction).
+- The story is [THEME-HUMOR] (conjunction).
+- The story is not [USES-SUPERLATIVE-FORMS] (logical negation: the story must not satisfy [USES-SUPERLATIVE-FORMS]).
+
+Formal interpretation: [LIGHTHEARTED-INTRO] = [STARTS-WITH-NOUN] AND [THEME-HUMOR] AND NOT [USES-SUPERLATIVE-FORMS].
+
+[MYTHIC-SATIRE]
+Specification: Assign [MYTHIC-SATIRE] when both of the following hold:
+- The story is [TOPIC-LOST-CIVILIZATIONS].
+- Exactly one of the following is true (exclusive disjunction):
+  - The story is [LIGHTHEARTED-INTRO].
+  - The story is [USES-SUPERLATIVE-FORMS].
+
+Formal interpretation: [MYTHIC-SATIRE] = [TOPIC-LOST-CIVILIZATIONS] AND ( [LIGHTHEARTED-INTRO] XOR [USES-SUPERLATIVE-FORMS] ).
+
+Notes on application
+- These definitions are intended as deterministic annotation rules: labels should be applied only when the specified logical condition is satisfied.
+- "Exactly one" denotes exclusive OR: if both subconditions are true or both false, the exclusive condition fails.
+- The composite-node formal interpretations above preserve the original logical structure and operators; do not alter the underlying relationships when applying labels.

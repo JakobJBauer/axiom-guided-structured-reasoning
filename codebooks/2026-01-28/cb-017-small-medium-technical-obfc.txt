@@ -1,0 +1,26 @@
+[attr-3]
+Specification: A story is classified as [attr-3] if the story is humorous.
+
+[attr-4]
+Specification: A story is classified as [attr-4] if the story is lighthearted.
+
+[attr-5]
+Specification: A story is classified as [attr-5] if the story embodies the theme of kindness.
+
+[attr-2]
+Specification: A story is classified as [attr-2] if exactly one of the following conditions holds:
+- The story is [attr-3]
+- The story is [attr-4]
+
+Notes: This node implements an exclusive-or constraint between [attr-3] and [attr-4]; membership in [attr-2] requires that precisely one of those style predicates evaluate to true.
+
+[attr-1]
+Specification: A story is classified as [attr-1] if both of the following conditions are satisfied:
+- The story is [attr-5]
+- Either of the following conditions hold:
+  - The story is [attr-2]
+  - Both of the following conditions hold:
+    - The story is [attr-4]
+    - The story is not [attr-3]
+
+Notes: [attr-1] requires thematic alignment with [attr-5] and a style constraint that is either the exclusive style option ([attr-2]) or a conjunctive requirement of being lighthearted without being humorous.

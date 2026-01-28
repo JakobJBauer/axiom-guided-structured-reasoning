@@ -1,0 +1,99 @@
+Codebook — Structured Reference for Annotators
+
+Purpose
+- Provide a clear, actionable reference for labeling stories using the defined nodes.
+- Keep logical relationships explicit and easy to follow when deciding which labels apply.
+- Read each node carefully; use the checklists to make consistent, defensible annotations.
+
+Notation and quick rules
+- Node IDs appear exactly in brackets, e.g., [attr-4]. Do not change them.
+- Follow the stated logical relationships exactly (e.g., “both of the following,” “exactly one,” “not,” “Either of the following”).
+- Use the checklists below in order: determine simple properties first, then evaluate composite nodes that depend on them.
+
+Nodes (in logical order)
+
+1) [attr-4]
+- Plain definition:
+  - A story is [attr-4] if the story begins with an adjective.
+- Decision checklist:
+  - Look at the very first word of the story.
+  - Is that first word an adjective (descriptive word like "Lonely", "Enormous", "Silent")?
+    - Yes → mark [attr-4].
+    - No → do not mark [attr-4].
+- Annotation tip:
+  - Ignore articles (a/an/the) or leading quotes; evaluate the first actual token/word that functions grammatically as the opening word.
+
+2) [attr-5]
+- Plain definition:
+  - A story is [attr-5] if the story is about giant creatures.
+- Decision checklist:
+  - Does the core subject matter center on creatures of unusually large size (giants, colossal monsters, huge animals, etc.)?
+    - Yes → mark [attr-5].
+    - No → do not mark [attr-5].
+- Annotation tip:
+  - Focus on the main topic or recurring focus of the narrative, not a single passing metaphor or brief mention.
+
+3) [attr-3]
+- Logical definition (preserved exactly):
+  - A story is GIANT-FOCUSED if both of the following are true:
+    - The story is [attr-5]
+    - The story is not [attr-4]
+- Plain explanation:
+  - Mark [attr-3] only when the story is about giant creatures and its opening does not start with an adjective.
+- Decision checklist:
+  - Is the story about giant creatures? (Check [attr-5].)
+  - Does the story NOT start with an adjective? (Check that [attr-4] is false.)
+  - If both answers are true → mark [attr-3].
+- Annotation tip:
+  - This node combines topical focus and a property of the opening. Confirm both items independently before assigning.
+
+4) [attr-1]
+- Logical definition (preserved exactly):
+  - A story is DYNAMIC-OPENING if exactly one of the following is true:
+    - The story is [attr-4]
+    - The story is [attr-5]
+- Plain explanation:
+  - [attr-1] is an exclusive-or (XOR) relationship: mark it when either the story starts with an adjective or it is about giant creatures — but not both.
+- Decision checklist:
+  - Check [attr-4].
+  - Check [attr-5].
+  - Count how many of those are true:
+    - If exactly one is true → mark [attr-1].
+    - If zero or both are true → do not mark [attr-1].
+- Annotation tip:
+  - Use this node to flag openings that convey energy by either striking language at the start or an immediate giant-creature topic — choose only when the two do not coincide.
+
+5) [attr-2]
+- Logical definition (preserved exactly):
+  - A story is ENGAGING-GIANT-STORY if both of the following are true:
+    - The story is [attr-3]
+    - Either of the following is true:
+      - The story is [attr-1]
+      - The story is not [attr-4]
+- Plain explanation:
+  - This label applies to stories that are focused on giant creatures and also meet an additional opening-related condition: either they have a dynamic opening (as defined above) or they simply do not start with an adjective.
+- Decision checklist (stepwise):
+  1. Confirm the story is [attr-3] (see node 3).
+     - If NO → do not mark [attr-2].
+     - If YES → continue.
+  2. Evaluate the second clause:
+     - Is the story [attr-1]? If yes → mark [attr-2].
+     - If not, is the story not [attr-4]? If yes → mark [attr-2].
+     - If neither subcondition holds → do not mark [attr-2].
+- Annotation tip:
+  - Because [attr-3] already includes “not [attr-4],” this node effectively requires a giant-focused story and then checks for either a dynamic opening or that same non-adjective start — follow the checklist literally to preserve correctness.
+
+Quick decision workflow (recommended)
+1. Determine atomic properties:
+   - Decide [attr-4].
+   - Decide [attr-5].
+2. Compute composite nodes in this order:
+   - [attr-3] (needs the two atomic decisions)
+   - [attr-1] (depends on the two atomic decisions)
+3. Finally decide:
+   - [attr-2] (requires [attr-3] and one of the opening conditions)
+
+Final annotation advice
+- Work top-down for clarity: label the simple properties first, then the composite ones.
+- When in doubt about grammatical categories (e.g., whether a word is an adjective) or topical focus, annotate conservatively and add a short note if allowed by your annotation interface.
+- Preserve the logical definitions exactly as given when making decisions—these are the normative rules for assignment.

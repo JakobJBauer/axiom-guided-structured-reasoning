@@ -1,0 +1,26 @@
+[attr-2]
+A story is [attr-2] if The story has a flashback. In plain terms: tag a story with [attr-2] any time it literally contains a flashback sequence.
+
+[attr-6]
+A story is [attr-6] if The story uses wh-questions. That means the narrative actually employs who/what/where/when/why/how questions.
+
+[attr-5]
+A story is [attr-5] if The story uses discourse markers. Use this label when the text relies on connectors and signposting (words or phrases that guide the reader through the discourse).
+
+[attr-3]
+A story is [attr-3] if exactly one of the following is true:
+- The story is [attr-6]
+- The story is [attr-5]
+So mark [attr-3] only when the story meets exactly one of those two conditions — not both, and not neither.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-2]
+- The story is not [attr-3]
+That is, a complex narrative has a flashback and, at the same time, does not qualify as interactive under the rule above.
+
+[attr-4]
+A story is [attr-4] if either of the following is true:
+- The story is in the set { [attr-3], [attr-1] }
+- The story is equal to [attr-2]
+In other words, a special-case story is one that’s either interactive or a complex narrative, or it simply equals the [attr-2] category.

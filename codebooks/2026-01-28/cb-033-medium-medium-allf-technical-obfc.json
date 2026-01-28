@@ -1,0 +1,166 @@
+{
+  "nodes": [
+    {
+      "id": "attr-9",
+      "label": "Humor",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "Lost civilizations",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Playful style",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "Surreal style",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "Employs discourse markers",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "Readability below 86.4",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Classic style",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Philosophical style",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "Cliffhanger ending",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "First token is a preposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Exclusive/or or (surreal and not classic)",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-7",
+            "attr-6"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-8",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-5"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "Combined attr-3 condition",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-9",
+                "attr-11"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-1",
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "attr-9",
+                    {
+                      "formula_type": "Not",
+                      "formula_args": [
+                        "attr-2"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "attr-10"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-7",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-3"
+    }
+  ]
+}

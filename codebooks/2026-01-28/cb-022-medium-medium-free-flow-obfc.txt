@@ -1,0 +1,52 @@
+[attr-2]
+When we tag a story with [attr-2], we mean it: the narrative loops back on itself in a circular way. The plot, structure, or timeline returns to its starting point, creating that distinct roundabout feeling.
+
+[attr-11]
+A story gets the [attr-11] label when kindness is a central theme—when acts of generosity, compassion, or benevolence drive meaning or character choices.
+
+[attr-3]
+Use [attr-3] when a story places contrasting elements side by side—ideas, images, tones, or scenes that highlight each other through contrast.
+
+[attr-12]
+If the story revolves around secret caches, lost riches, or buried meanings—literal or metaphorical—mark it as [attr-12].
+
+[attr-5]
+We call a story [attr-5] when its readability score falls below 86.4. It implies denser, more complex prose or structure.
+
+[attr-9]
+Label a work [attr-9] when it leans into ideas and reflections, posing big questions or exploring concepts in a contemplative way.
+
+[attr-8]
+A story is [attr-8] if its style feels contemporary—in voice, themes, or technique—reflecting modern sensibilities.
+
+[attr-10]
+Tag [attr-10] when deception is a core theme—lies, trickery, misdirection, or duplicity shape the narrative or character dynamics.
+
+[attr-4]
+A story is [attr-4] if its readability score is above 96.1, suggesting clear, accessible prose.
+
+[attr-6]
+A story is [attr-6] if all of the following are true:
+- The story is [attr-8]
+- Either of the following is true:
+  - The story is [attr-9]
+  - The story is [attr-3]
+- The story is not [attr-2]
+In other words, it’s a modern piece that either thinks philosophically or plays with juxtaposition, but it doesn’t loop back into a circular narrative.
+
+[attr-7]
+A story is [attr-7] if all of the following are true:
+- The story is [attr-11]
+- The story is [attr-10]
+- The story is [attr-6]
+This captures those morally mixed stories where kindness and deception coexist within a modern, philosophical or juxtaposing framework.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - Exactly one of the following is true:
+    - The story is [attr-5]
+    - The story is [attr-4]
+  - The story is [attr-12]
+So a [attr-1] combines moral ambiguity (kindness tangled with deception inside that modern-philosophical/juxtaposed form) with either a precise readability condition—one score category but not both—or with a focus on hidden treasures.

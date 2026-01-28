@@ -1,0 +1,71 @@
+Codebook — Structured Reference for Annotation
+
+Purpose
+- Provide a clear, organized set of definitions and decision checks for annotators.
+- Preserve the exact logical relationships between nodes so reasoning remains consistent and reliable.
+
+Atomic (single-condition) nodes
+- [USES-PERFECT-ASPECT]
+  - Definition: A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+  - Annotation guidance:
+    - Look for verb forms that indicate the perfect aspect (e.g., has/have + past participle; had + past participle; has been + past participle).
+    - Mark this node true when the story’s narration or description explicitly employs perfect aspect.
+- [TOPIC-CULTURAL-TRADITIONS]
+  - Definition: A story is [TOPIC-CULTURAL-TRADITIONS] if The story is about cultural traditions.
+  - Annotation guidance:
+    - Identify content centered on rituals, customs, heritage practices, ceremonies, or community traditions.
+    - Mark true when the primary subject matter concerns cultural traditions.
+- [TOPIC-THE-ARTS]
+  - Definition: A story is [TOPIC-THE-ARTS] if The story is about the arts.
+  - Annotation guidance:
+    - Identify narratives focused on music, visual art, dance, theater, literature, crafts, or artistic practice and appreciation.
+    - Mark true when the arts are a main topic.
+- [STYLE-LIGHTHEARTED]
+  - Definition: A story is [STYLE-LIGHTHEARTED] if The story is lighthearted.
+  - Annotation guidance:
+    - Look for tone that is playful, cheerful, whimsical, or otherwise not serious or somber.
+    - Mark true when tone and style convey lightness rather than gravity.
+
+Composite (combined-condition) nodes
+- [ARTS-TRADITIONAL]
+  - Definition: A story is [ARTS-TRADITIONAL] if both of the following are true:
+    - The story is [TOPIC-THE-ARTS]
+    - The story is [TOPIC-CULTURAL-TRADITIONS]
+  - How to decide:
+    - Confirm the story is about the arts AND that it specifically ties those arts to cultural traditions.
+    - Use both bullets as a checklist — both must hold to mark [ARTS-TRADITIONAL] true.
+- [NOSTALGIC-ARTS]
+  - Definition: A story is [NOSTALGIC-ARTS] if all of the following are true:
+    - The story is [ARTS-TRADITIONAL]
+    - The story is [USES-PERFECT-ASPECT]
+    - The story is not [STYLE-LIGHTHEARTED]
+  - How to decide:
+    - First verify [ARTS-TRADITIONAL] is true (arts connected with cultural traditions).
+    - Then confirm the narrative uses perfect aspect.
+    - Finally confirm the story does not have a lighthearted style (i.e., STYLE-LIGHTHEARTED is false).
+    - All three conditions must be satisfied to mark [NOSTALGIC-ARTS] true.
+- [LIGHT-ARTS-TRADITION]
+  - Definition: A story is [LIGHT-ARTS-TRADITION] if both of the following are true:
+    - The story is [ARTS-TRADITIONAL]
+    - The story is [STYLE-LIGHTHEARTED]
+  - How to decide:
+    - Confirm the arts are connected to cultural traditions (ARTS-TRADITIONAL) AND the tone is lighthearted.
+    - Both bullets must hold to mark [LIGHT-ARTS-TRADITION] true.
+
+Quick annotation checklist (for each story)
+- Step 1: Evaluate atomic nodes
+  - Is the story about the arts? → [TOPIC-THE-ARTS]
+  - Is the story about cultural traditions? → [TOPIC-CULTURAL-TRADITIONS]
+  - Does the story use perfect aspect? → [USES-PERFECT-ASPECT]
+  - Is the story lighthearted in style? → [STYLE-LIGHTHEARTED]
+- Step 2: Apply composite rules
+  - If both [TOPIC-THE-ARTS] and [TOPIC-CULTURAL-TRADITIONS] are true → mark [ARTS-TRADITIONAL] true.
+  - If [ARTS-TRADITIONAL] AND [USES-PERFECT-ASPECT] AND NOT [STYLE-LIGHTHEARTED] → mark [NOSTALGIC-ARTS] true.
+  - If [ARTS-TRADITIONAL] AND [STYLE-LIGHTHEARTED] → mark [LIGHT-ARTS-TRADITION] true.
+
+Notes on logical relations (preserved semantics)
+- “Both of the following are true” indicates a logical AND between exactly the listed conditions.
+- “All of the following are true” indicates a logical AND across the listed conditions; presence of “not” indicates negation of that condition.
+- Composite nodes depend only on the specified child nodes; no other attributes should be inferred as required.
+
+Use this structured guide to ensure consistent, accurate annotations while keeping the original logical structure and node identifiers intact.

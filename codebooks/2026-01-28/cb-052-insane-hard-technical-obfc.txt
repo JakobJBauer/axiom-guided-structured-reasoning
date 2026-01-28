@@ -1,0 +1,190 @@
+[attr-30]
+Definition: The predicate [attr-30] evaluates to true for a story if and only if the story’s thematic content includes Growth.
+
+[attr-22]
+Definition: The predicate [attr-22] evaluates to true for a story if and only if the story is humorous in style.
+
+[attr-32]
+Definition: The predicate [attr-32] evaluates to true for a story if and only if the story’s theme concerns Helping Others.
+
+[attr-21]
+Definition: The predicate [attr-21] evaluates to true for a story if and only if the story begins with a preposition.
+
+[attr-25]
+Definition: The predicate [attr-25] evaluates to true for a story if and only if the story is modern in style.
+
+[attr-48]
+Definition: The predicate [attr-48] evaluates to true for a story if and only if the story employs the perfect grammatical aspect.
+
+[attr-23]
+Definition: The predicate [attr-23] evaluates to true for a story if and only if the story is lighthearted in tone.
+
+[attr-29]
+Definition: The predicate [attr-29] evaluates to true for a story if and only if the story’s theme includes Deception.
+
+[attr-35]
+Definition: The predicate [attr-35] evaluates to true for a story if and only if the story’s theme includes Kindness.
+
+[attr-50]
+Definition: The predicate [attr-50] evaluates to true for a story if and only if the story contains WH-questions (who, what, when, where, why, how).
+
+[attr-42]
+Definition: The predicate [attr-42] evaluates to true for a story if and only if the story’s subject matter concerns lost civilizations.
+
+[attr-46]
+Definition: The predicate [attr-46] evaluates to true for a story if and only if the story’s subject matter concerns time travel.
+
+[attr-6]
+Definition: The predicate [attr-6] evaluates to true for a story if and only if the story contains an instance of Chekhov's gun (an initially-presented element that becomes significant later).
+
+[attr-4]
+Definition: The predicate [attr-4] evaluates to true for a story if and only if the story conveys an explicit moral lesson.
+
+[attr-31]
+Definition: The predicate [attr-31] evaluates to true for a story if and only if the story’s theme includes Hardship.
+
+[attr-11]
+Definition: The predicate [attr-11] evaluates to true for a story if and only if the story contains more than 375 words.
+
+[attr-45]
+Definition: The predicate [attr-45] evaluates to true for a story if and only if the story’s subject matter concerns seasonal changes.
+
+[attr-2]
+Definition: The predicate [attr-2] evaluates to true for a story if and only if the story ends with a cliffhanger.
+
+[attr-37]
+Definition: The predicate [attr-37] evaluates to true for a story if and only if the story’s theme includes Problem-Solving.
+
+[attr-34]
+Definition: The predicate [attr-34] evaluates to true for a story if and only if the story’s theme includes Innovation.
+
+[attr-36]
+Definition: The predicate [attr-36] evaluates to true for a story if and only if the story’s theme includes Magic.
+
+[attr-7]
+Definition: The predicate [attr-7] evaluates to true for a story if and only if the story’s narrative structure is circular.
+
+[attr-41]
+Definition: The predicate [attr-41] evaluates to true for a story if and only if the story’s subject matter concerns giant creatures.
+
+[attr-47]
+Definition: The predicate [attr-47] evaluates to true for a story if and only if the story employs discourse markers (e.g., however, therefore, meanwhile).
+
+[attr-26]
+Definition: The predicate [attr-26] evaluates to true for a story if and only if the story is philosophical in style.
+
+[attr-19]
+Definition: The predicate [attr-19] evaluates to true for a story if and only if the story begins with an adverb.
+
+[attr-40]
+Definition: The predicate [attr-40] evaluates to true for a story if and only if the story’s subject matter concerns cultural traditions.
+
+[attr-3]
+Definition: The predicate [attr-3] evaluates to true for a story if and only if the story includes at least one flashback.
+
+[attr-8]
+Definition: The predicate [attr-8] evaluates to true for a story if and only if the story’s readability score is greater than 96.1.
+
+[attr-24]
+Definition: The predicate [attr-24] evaluates to true for a story if and only if the story exhibits a minimalist style.
+
+[attr-49]
+Definition: The predicate [attr-49] evaluates to true for a story if and only if the story uses superlative adjective/adverb forms (e.g., best, most).
+
+[attr-43]
+Definition: The predicate [attr-43] evaluates to true for a story if and only if the story’s subject matter concerns magical lands.
+
+[attr-5]
+Definition: The predicate [attr-5] evaluates to true for a story if and only if the narrative contains an embedded story (a story within the story).
+
+[attr-27]
+Definition: The predicate [attr-27] evaluates to true for a story if and only if the story is surreal in style.
+
+[attr-20]
+Definition: The predicate [attr-20] evaluates to true for a story if and only if the story begins with a noun.
+
+[attr-39]
+Definition: The predicate [attr-39] evaluates to true for a story if and only if the story’s subject matter concerns bygone eras.
+
+[attr-12]
+Definition: The predicate [attr-12] evaluates to true for a story if and only if the story’s readability score is less than 86.4.
+
+[attr-33]
+Definition: The predicate [attr-33] evaluates to true for a story if and only if the story’s thematic content includes Humor.
+
+[attr-44]
+Definition: The predicate [attr-44] evaluates to true for a story if and only if the story’s subject matter concerns mystical creatures.
+
+[attr-9]
+Definition: The predicate [attr-9] evaluates to true for a story if both of the following are true:
+- The story is [attr-22]
+- The story is [attr-23]
+
+[attr-14]
+Definition: The predicate [attr-14] evaluates to true for a story if either of the following is true:
+- The story is [attr-25]
+- both of the following are true:
+  - The story is [attr-26]
+  - The story is [attr-27]
+
+[attr-18]
+Definition: The predicate [attr-18] evaluates to true for a story if exactly one of the following is true:
+- The story is [attr-8]
+- The story is [attr-12]
+
+[attr-16]
+Definition: The predicate [attr-16] evaluates to true for a story if all of the following are true:
+- The story is [attr-5]
+- The story is [attr-3]
+- The story is [attr-7]
+
+[attr-28]
+Definition: The predicate [attr-28] evaluates to true for a story if both of the following are true:
+- The story is [attr-32]
+- The story is [attr-35]
+
+[attr-13]
+Definition: The predicate [attr-13] evaluates to true for a story if both of the following are true:
+- The story is [attr-43]
+- either of the following is true:
+  - The story is [attr-44]
+  - The story is [attr-41]
+
+[attr-38]
+Definition: The predicate [attr-38] evaluates to true for a story if either of the following is true:
+- both of the following are true:
+  - The story is [attr-46]
+  - The story is [attr-42]
+- The story is [attr-39]
+
+[attr-15]
+Definition: The predicate [attr-15] evaluates to true for a story if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-35]
+- The story is not [attr-29]
+
+[attr-10]
+Definition: The predicate [attr-10] evaluates to true for a story if both of the following are true:
+- The story is [attr-34]
+- The story is [attr-37]
+
+[attr-17]
+Definition: The predicate [attr-17] evaluates to true for a story if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-2]
+
+[attr-1]
+Definition: The predicate [attr-1] evaluates to true for a story if either of the following is true:
+- all of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-15]
+  - either of the following is true:
+    - The story is [attr-16]
+    - The story is [attr-17]
+- exactly one of the following is true:
+  - both of the following are true:
+    - The story is [attr-13]
+    - The story is not [attr-24]
+  - The story is [attr-38]
+
+Notes on usage: Each bracketed identifier denotes a boolean predicate over story instances. Composite predicates are specified using standard logical composition: conjunctions ("both"/"all of the following are true"), disjunctions ("either of the following is true"), negation ("not"), and exclusive disjunction ("exactly one of the following is true"). Apply these rules deterministically during annotation and automated reasoning.

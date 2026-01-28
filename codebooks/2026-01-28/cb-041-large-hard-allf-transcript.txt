@@ -1,0 +1,127 @@
+Interviewer: Let's walk through this codebook as a conversation. I'll ask the kind of questions an annotator might have, and you answer clearly. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: First, what does [SHORT-STORY] mean?
+
+Expert: A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+Interviewer: Simple enough. Next: what's [THEME-KINDNESS]?
+
+Expert: A story is [THEME-KINDNESS] if the story has the theme Kindness.
+
+Interviewer: And [THEME-HELPING-OTHERS]?
+
+Expert: A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others.
+
+Interviewer: What about [THEME-PROBLEM-SOLVING]?
+
+Expert: A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+Interviewer: How do you define [STYLE-PHILOSOPHICAL]?
+
+Expert: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+Interviewer: What does [HIGH-READABILITY] capture?
+
+Expert: A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+Interviewer: And [STYLE-PLAYFUL]?
+
+Expert: A story is [STYLE-PLAYFUL] if the story is playful.
+
+Interviewer: [THEME-HUMOR]?
+
+Expert: A story is [THEME-HUMOR] if the story has the theme Humor.
+
+Interviewer: [STYLE-HUMOROUS]?
+
+Expert: A story is [STYLE-HUMOROUS] if the story is humorous.
+
+Interviewer: What is [HAS-A-STORY-WITHIN-A-STORY]?
+
+Expert: A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+Interviewer: And [TOPIC-MYSTICAL-CREATURES]?
+
+Expert: A story is [TOPIC-MYSTICAL-CREATURES] if the story is about mystical creatures.
+
+Interviewer: [HAS-A-RED-HERRING] — what counts?
+
+Expert: A story is [HAS-A-RED-HERRING] if the story has a Red Herring.
+
+Interviewer: Now we get to nodes that combine others. Explain [KINDNESS-HELPING].
+
+Expert: A story is [KINDNESS-HELPING] if both of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [THEME-HELPING-OTHERS]
+(And both must hold simultaneously.)
+
+Interviewer: So both themes must be present. Got it. Next, [LIGHT-HEARTED] — that looked like an exclusive condition?
+
+Expert: Correct. A story is [LIGHT-HEARTED] if exactly one of the following is true (Xor):
+- The story is [STYLE-PLAYFUL]
+- The story is [STYLE-HUMOROUS]
+
+Interviewer: Good. How do you check membership for [THEME-IN-CORE-SET]?
+
+Expert: A story is [THEME-IN-CORE-SET] if the story's dominant theme is In the following set:
+- [THEME-KINDNESS], [THEME-HELPING-OTHERS], [THEME-PROBLEM-SOLVING]
+(Use In to check membership among those theme nodes.)
+
+Interviewer: There's a tonal balance node. Explain [BALANCED-TONE].
+
+Expert: A story is [BALANCED-TONE] if the following Equal relationship holds:
+- The presence of [STYLE-PHILOSOPHICAL] Equal the presence of [STYLE-HUMOROUS]
+(They are Equal when either both are present or both are absent.)
+
+Interviewer: That equality ensures philosophical and humorous either co-occur or both are missing. Now, [MYSTICAL-ALLEGORY] looked nested.
+
+Expert: A story is [MYSTICAL-ALLEGORY] if both of the following are true:
+- The story is [TOPIC-MYSTICAL-CREATURES]
+- The story is [HAS-A-STORY-WITHIN-A-STORY] And the story is [STYLE-PHILOSOPHICAL]
+(This nests an And inside an And to form an allegorical structure.)
+
+Interviewer: So it needs mystical creatures and a nested, philosophical story-within-a-story. Clear. [COMPLEX-ARC] is more elaborate — can you walk me through it slowly?
+
+Expert: Sure. A story is [COMPLEX-ARC] if all of the following are true:
+- Either of the following is true (Or):
+  - The story is [KINDNESS-HELPING]
+  - The story is [THEME-PROBLEM-SOLVING]
+- Exactly one of the following is true (Xor):
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is Not [SHORT-STORY] Or the story is [HIGH-READABILITY]
+(Uses Not to exclude short stories unless they also meet HIGH-READABILITY; combines Or and Xor for nuanced arc structure.)
+
+Interviewer: Let me restate that to be sure I got it: first, the narrative core must be either KINDNESS-HELPING or PROBLEM-SOLVING. Second, it must have exactly one of a red herring or a story-within-a-story. Third, it must either not be a short story or must have high readability. Right?
+
+Expert: Correct. That's the exact logical structure.
+
+Interviewer: Finally, how does [RECOMMENDABLE-COMPOSITION] build on all of this?
+
+Expert: A story is [RECOMMENDABLE-COMPOSITION] if both of the following are true:
+- The story is [COMPLEX-ARC] And the story is [BALANCED-TONE]
+- The story is [THEME-IN-CORE-SET] And either of the following is true (Or):
+  - The story is [LIGHT-HEARTED]
+  - The story is [MYSTICAL-ALLEGORY]
+(This node nests multiple logical operators to form a deep, recommendable composition: And at the top level, Or inside a branch, and references In, Equal, Not, and Xor through its subordinate nodes.)
+
+Interviewer: So to be recommendable, a story needs a complex arc plus balanced tone, and its dominant theme must sit in the core set while also being either light-hearted or a mystical allegory.
+
+Expert: Exactly. The transcript preserves each node ID and every logical operator as specified, so annotators can map these conditions directly to labels and reasoning steps.
+
+Interviewer: Perfect. If someone asks for a quick checklist for tagging, what are the essential steps?
+
+Expert: Brief checklist (in conversation form):
+- Is the story fewer than 160 words? If yes, mark [SHORT-STORY].
+- Which primary themes appear? Tag [THEME-KINDNESS], [THEME-HELPING-OTHERS], [THEME-PROBLEM-SOLVING], [THEME-HUMOR] as appropriate.
+- Which styles appear? Tag [STYLE-PHILOSOPHICAL], [STYLE-PLAYFUL], [STYLE-HUMOROUS].
+- Is there a story within a story? Mark [HAS-A-STORY-WITHIN-A-STORY].
+- Is the topic mystical creatures? Mark [TOPIC-MYSTICAL-CREATURES].
+- Is there a red herring? Mark [HAS-A-RED-HERRING].
+- Compute combined nodes using the exact logical rules above: [KINDNESS-HELPING], [LIGHT-HEARTED], [THEME-IN-CORE-SET], [BALANCED-TONE], [MYSTICAL-ALLEGORY], [COMPLEX-ARC], then [RECOMMENDABLE-COMPOSITION].
+
+Interviewer: Thanks — this Q&A format makes the logical layout easier to follow while keeping every condition intact.
+
+Expert: You're welcome. If you want, we can run through examples and apply these labels step by step.

@@ -1,0 +1,61 @@
+Codebook — Formal Definitions for Story Annotation
+
+This document specifies the atomic and compound annotation labels used for classifying short stories. Each label is defined as a predicate that evaluates to true for a given story when the stated conditions are satisfied. Logical compositions preserve the original Boolean structure (AND, OR, NOT, exclusive OR). Node identifiers are preserved exactly as given.
+
+Atomic predicates
+
+- [USES-CONDITIONAL-MOOD]
+  - Definition: The predicate [USES-CONDITIONAL-MOOD] is true if and only if the story employs the conditional mood in its verbal morphology or modal construction (e.g., “would,” conditional verb forms).
+
+- [STARTS-WITH-ADVERB]
+  - Definition: The predicate [STARTS-WITH-ADVERB] is true if and only if the first lexical token of the story is an adverb.
+
+- [THEME-AGENCY]
+  - Definition: The predicate [THEME-AGENCY] is true if and only if the story contains the thematic element of agency (e.g., emphasis on volition, intentional action, autonomy).
+
+- [SHORT-STORY]
+  - Definition: The predicate [SHORT-STORY] is true if and only if the story contains fewer than 160 words.
+
+- [STYLE-LIGHTHEARTED]
+  - Definition: The predicate [STYLE-LIGHTHEARTED] is true if and only if the story’s tone is lighthearted.
+
+- [USES-PERFECT-ASPECT]
+  - Definition: The predicate [USES-PERFECT-ASPECT] is true if and only if the story employs perfect aspect constructions (e.g., “has eaten,” “had gone”).
+
+Compound predicates (logical compositions)
+
+- [MOOD-MIX]
+  - Logical specification: [MOOD-MIX] is true iff both of the following hold:
+    - The story is [USES-CONDITIONAL-MOOD]
+    - The story is not [USES-PERFECT-ASPECT]
+  - Formal: [MOOD-MIX] = [USES-CONDITIONAL-MOOD] AND (NOT [USES-PERFECT-ASPECT])
+
+- [PACING-AND-TONE]
+  - Logical specification: [PACING-AND-TONE] is true iff both of the following hold:
+    - The story is [SHORT-STORY]
+    - The story is [STYLE-LIGHTHEARTED]
+  - Formal: [PACING-AND-TONE] = [SHORT-STORY] AND [STYLE-LIGHTHEARTED]
+
+- [AGENCY-START]
+  - Logical specification: [AGENCY-START] is true iff both of the following hold:
+    - The story is [THEME-AGENCY]
+    - Exactly one of the following is true (exclusive OR):
+      - The story is [STARTS-WITH-ADVERB]
+      - The story is [SHORT-STORY]
+  - Formal: [AGENCY-START] = [THEME-AGENCY] AND XOR([STARTS-WITH-ADVERB], [SHORT-STORY])
+
+- [ELEGANT-STORY]
+  - Logical specification: [ELEGANT-STORY] is true iff both of the following hold:
+    - The story is [PACING-AND-TONE]
+    - At least one of the following is true:
+      - The story is [MOOD-MIX]
+      - The story is [AGENCY-START]
+  - Formal: [ELEGANT-STORY] = [PACING-AND-TONE] AND ([MOOD-MIX] OR [AGENCY-START])
+
+Notes on interpretation
+- “Both of the following are true” specifies a logical AND of the enumerated conditions.
+- “Exactly one of the following is true” specifies an exclusive OR (XOR): precisely one operand must be true.
+- “Either/At least one of the following are true” specifies an inclusive OR: one or more operands may be true.
+- Atomic predicates are evaluated with reference to the story text and linguistic/semantic criteria as defined above.
+
+Use these definitions as authoritative for annotation and automated rule-based reasoning.

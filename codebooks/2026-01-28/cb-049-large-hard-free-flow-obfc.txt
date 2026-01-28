@@ -1,0 +1,154 @@
+Here’s the same codebook, rewritten to read like a friendly guide rather than a dry list — but don’t worry: every single node ID, logical test, and relationship stays exactly as it was. I’ve kept the logical connectors (either / both / exactly one / not) intact so you can use this for annotation and reasoning without ambiguity.
+
+[attr-3]
+We mark a story [attr-3] when it contains a cliffhanger — plain and simple: the story has a cliffhanger.
+
+[attr-18]
+Use the label [attr-18] when the story feels modern. If the story is modern, it gets [attr-18].
+
+[attr-25]
+A story earns [attr-25] if it uses discourse markers — those little words and phrases that stitch sentences and thoughts together.
+
+[attr-4]
+Tag a story [attr-4] when it includes a flashback. If it has a flashback, it is [attr-4].
+
+[attr-24]
+If the story’s theme centers on problem-solving, then it’s [attr-24]. That’s the criterion.
+
+[attr-12]
+When the very beginning of the story opens with an adjective, label it [attr-12]. In short: the story starts with an adjective → [attr-12].
+
+[attr-26]
+If the story uses wh-questions (who, what, where, when, why, how), it qualifies as [attr-26].
+
+[attr-5]
+A story is [attr-5] if it contains juxtaposition — contrasting elements placed side by side.
+
+[attr-13]
+If the story opens with an adverb, it should be tagged [attr-13].
+
+[attr-23]
+When humor is a central theme, the story is [attr-23].
+
+[attr-7]
+We call a story [attr-7] when its readability score falls below 86.4.
+
+[attr-15]
+If the story’s style is humorous, tag it [attr-15].
+
+[attr-17]
+Label a story [attr-17] when it follows a minimalist style.
+
+[attr-16]
+A story is [attr-16] when its tone is lighthearted.
+
+[attr-6]
+If the story’s readability score is above 96.1, it’s [attr-6].
+
+[attr-22]
+Tag [attr-22] when deception is a theme of the story.
+
+[attr-19]
+If the story’s style is philosophical, use [attr-19].
+
+[attr-14]
+A story is [attr-14] if either of the following is true:
+- The story is [attr-3]
+- exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+- both of the following are true:
+  - The story is [attr-25]
+  - The story is not [attr-3]
+
+Think of [attr-14] as a catch-all for certain structural tricks: a cliffhanger qualifies outright; alternatively, a single occurrence of flashback or juxtaposition qualifies; and if discourse markers are present but there’s no cliffhanger, that combination also counts.
+
+[attr-8]
+A story is [attr-8] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-12]
+  - The story is [attr-13]
+- exactly one of the following is true:
+  - The story is [attr-26]
+  - The story is [attr-25]
+
+So for an [attr-8] you need an opening word that’s an adjective or adverb, and then exactly one of two conversational choices in the opening: wh-questions or discourse markers — but not both.
+
+[attr-20]
+A story is [attr-20] if either of the following is true:
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-LIGHTHEARTED]
+  - The story is not [attr-17]
+- both of the following are true:
+  - The story is [attr-15]
+  - The story is not [attr-19]
+
+In other words, [attr-20] captures two modes: a modern, lighthearted story that isn’t minimalist, or a humorous story that isn’t philosophical.
+
+[attr-21]
+A story is [attr-21] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-24]
+  - The story is [attr-23]
+- exactly one of the following is true:
+  - The story is [attr-22]
+  - The story is [attr-24]
+
+So [attr-21] is either the combination of problem-solving plus humor, or exactly one of deception vs. problem-solving — but not both.
+
+[attr-10]
+A story is [attr-10] if exactly one of the following is true:
+- The story is [attr-7]
+- The story is [attr-6]
+
+Pick one: low or high readability — exactly one must hold for [attr-10].
+
+[attr-11]
+A story is [attr-11] if both of the following are true:
+- The story is [attr-10]
+- either of the following is true:
+  - The story is [attr-16]
+  - The story is not [attr-7]
+
+So [attr-11] needs the story to be classified into a readability class, and then either it’s lighthearted or it simply isn’t low readability.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-14]
+  - both of the following are true:
+    - The story is [attr-8]
+    - The story is not [attr-3]
+- either of the following is true:
+  - The story is [attr-20]
+  - both of the following are true:
+    - The story is [attr-21]
+    - The story is not [attr-19]
+
+Picture [attr-2] as the intersection of structure/opening choices and tone/themes: structurally interesting or a specific opening pattern (without a cliffhanger), combined with either the right style tone or a thematic core that isn’t philosophical.
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-20]
+- exactly one of the following is true:
+  - The story is [attr-15]
+  - The story is [attr-17]
+
+[attr-1] signals a story that’s suitable for audiences either because it pairs readability impact with the right tone or because it’s uniquely one of humorous or minimalist in style (but not both).
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- The story is [attr-2]
+- either of the following is true:
+  - The story is [attr-1]
+  - both of the following are true:
+    - The story is [attr-21]
+    - The story is not [attr-10]
+
+Finally, [attr-9] is the sweet spot: the story shows an [attr-2] and is either [attr-1] or carries a thematic core while lacking a fixed readability classification.
+
+---
+
+That’s it — same logic, same node IDs, laid out in a calmer, more conversational tone so you can read and apply it easily. If you’d like, I can also produce a compact checklist or a flowchart-style view that follows the exact same logic for quick annotation.

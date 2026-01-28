@@ -1,0 +1,120 @@
+Codebook — Structured Edition
+
+Instructions:
+- Each entry below defines one node (kept exactly as shown in [BRACKETS]).
+- Logical operators and relationships are preserved verbatim (Either, Both, All, Exactly one, not).
+- Read each compound node by following the nested bullets; the outer bullet specifies the top-level logical connective.
+
+Atomic criteria
+- [HIGH-READABILITY]
+  - Definition: A story is HIGH-READABILITY if the story has readability score above 96.1.
+
+- [LOW-READABILITY]
+  - Definition: A story is LOW-READABILITY if the story has readability score below 86.4.
+
+- [STARTS-WITH-NOUN]
+  - Definition: A story is STARTS-WITH-NOUN if the story starts with a noun.
+
+- [STARTS-WITH-ADVERB]
+  - Definition: A story is STARTS-WITH-ADVERB if the story starts with an adverb.
+
+- [USES-PERFECT-ASPECT]
+  - Definition: A story is USES-PERFECT-ASPECT if the story uses perfect aspect.
+
+- [USES-DISCOURSE-MARKERS]
+  - Definition: A story is USES-DISCOURSE-MARKERS if the story uses discourse markers.
+
+- [HAS-A-CLIFFHANGER]
+  - Definition: A story is HAS-A-CLIFFHANGER if the story has a cliffhanger.
+
+- [HAS-JUXTAPOSITION]
+  - Definition: A story is HAS-JUXTAPOSITION if the story has juxtaposition.
+
+- [HAS-A-RED-HERRING]
+  - Definition: A story is HAS-A-RED-HERRING if the story has a Red Herring.
+
+- [SHORT-STORY]
+  - Definition: A story is SHORT-STORY if the story has fewer than 160 words.
+
+- [STYLE-PHILOSOPHICAL]
+  - Definition: A story is STYLE-PHILOSOPHICAL if the story is philosophical.
+
+- [STYLE-PLAYFUL]
+  - Definition: A story is STYLE-PLAYFUL if the story is playful.
+
+- [STYLE-HUMOROUS]
+  - Definition: A story is STYLE-HUMOROUS if the story is humorous.
+
+- [THEME-AGENCY]
+  - Definition: A story is THEME-AGENCY if the story has the theme Agency.
+
+Compound criteria (structured logic)
+- [OPENING-TONE]
+  - Definition: A story is OPENING-TONE if both of the following are true:
+    - Either of the following is true:
+      - The story is [STARTS-WITH-NOUN]
+      - The story is [STARTS-WITH-ADVERB]
+    - Either of the following is true:
+      - The story is [STYLE-PHILOSOPHICAL]
+      - The story is [STYLE-PLAYFUL]
+
+- [NARRATIVE-PACE]
+  - Definition: A story is NARRATIVE-PACE if either of the following is true:
+    - Both of the following are true:
+      - The story is [SHORT-STORY]
+      - The story is [HIGH-READABILITY]
+    - Both of the following are true:
+      - The story is [USES-PERFECT-ASPECT]
+      - The story is not [LOW-READABILITY]
+
+- [COMEDIC-STRUCTURE]
+  - Definition: A story is COMEDIC-STRUCTURE if both of the following are true:
+    - Either of the following is true:
+      - The story is [STYLE-PLAYFUL]
+      - The story is [STYLE-HUMOROUS]
+    - Both of the following are true:
+      - Exactly one of the following is true:
+        - The story is [SHORT-STORY]
+        - The story is [USES-DISCOURSE-MARKERS]
+      - Either of the following is true:
+        - The story is [HAS-A-RED-HERRING]
+        - The story is [HAS-JUXTAPOSITION]
+
+- [THEMATIC-FUSION]
+  - Definition: A story is THEMATIC-FUSION if both of the following are true:
+    - The story is [THEME-AGENCY]
+    - Either of the following is true:
+      - Both of the following are true:
+        - The story is [STYLE-PHILOSOPHICAL]
+        - The story is [OPENING-TONE]
+      - Exactly one of the following is true:
+        - The story is [HAS-JUXTAPOSITION]
+        - The story is [HAS-A-RED-HERRING]
+
+- [RAPTURE-ENDING]
+  - Definition: A story is RAPTURE-ENDING if either of the following is true:
+    - Both of the following are true:
+      - The story is [HAS-A-CLIFFHANGER]
+      - The story is not [SHORT-STORY]
+    - Exactly one of the following is true:
+      - The story is [HAS-A-CLIFFHANGER]
+      - The story is [HAS-A-RED-HERRING]
+
+- [COMPLEX-STORY]
+  - Definition: A story is COMPLEX-STORY if both of the following are true:
+    - All of the following are true:
+      - The story is [THEMATIC-FUSION]
+      - The story is [COMEDIC-STRUCTURE]
+    - Either of the following is true:
+      - The story is [NARRATIVE-PACE]
+      - Both of the following are true:
+        - The story is [RAPTURE-ENDING]
+        - The story is not [HIGH-READABILITY]
+
+Notes for annotators (brief, to aid structured thinking)
+- Treat atomic nodes as measurable facts (readability thresholds, word count, grammatical starts, stylistic tags).
+- Evaluate compound nodes by following the exact nested logical bullets — do not shortcut or assume.
+- When a condition says "Exactly one of the following is true," ensure mutual exclusivity: mark true only if exactly one child node is present.
+- When a condition uses "not," interpret as the strict negation of that child node.
+
+End of codebook.

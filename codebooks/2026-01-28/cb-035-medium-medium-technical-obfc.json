@@ -1,0 +1,135 @@
+{
+  "nodes": [
+    {
+      "id": "attr-5",
+      "label": "Minimalist style (economy of language, sparse detail, restrained narrative)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "High readability (readability metric > 96.1)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Uses superlative grammatical forms",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Dominant theme: Growth",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "Time travel content",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "Hidden treasures content",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "Both minimalist style and high readability",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        "attr-4"
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "Uses superlatives and is not minimalist",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-10",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-6",
+      "label": "Growth theme and (time travel or hidden treasures)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-7",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-9",
+            "attr-8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Attr-1 and (Attr-3 or Attr-6)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-1",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-3",
+            "attr-6"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-2"
+    }
+  ]
+}

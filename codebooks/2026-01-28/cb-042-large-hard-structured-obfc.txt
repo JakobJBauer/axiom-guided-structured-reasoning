@@ -1,0 +1,122 @@
+Codebook — Structured Reference for Annotation
+
+Purpose
+- This document defines the node labels and their logical composition for story annotation.
+- Each entry states the precise condition under which a story should be considered as having a given node.
+- All node IDs are preserved exactly in [attr-1] format and all logical relationships (both/and, either/or, xor, not, exactly one, etc.) are preserved as written.
+
+Atomic (single-condition) Nodes
+- [attr-19]
+  - Definition: A story is [attr-19] if The story has the theme Problem-Solving.
+- [attr-22]
+  - Definition: A story is [attr-22] if The story is about hidden treasures.
+- [attr-12]
+  - Definition: A story is [attr-12] if The story is lighthearted.
+- [attr-4]
+  - Definition: A story is [attr-4] if The story has a Red Herring.
+- [attr-9]
+  - Definition: A story is [attr-9] if The story starts with a preposition.
+- [attr-21]
+  - Definition: A story is [attr-21] if The story is about giant creatures.
+- [attr-26]
+  - Definition: A story is [attr-26] if The story uses superlative forms.
+- [attr-18]
+  - Definition: A story is [attr-18] if The story has the theme Magic.
+- [attr-13]
+  - Definition: A story is [attr-13] if The story is modern.
+- [attr-8]
+  - Definition: A story is [attr-8] if The story starts with a adverb.
+- [attr-23]
+  - Definition: A story is [attr-23] if The story is about magical lands.
+- [attr-5]
+  - Definition: A story is [attr-5] if The story has readability score below 86.4.
+- [attr-11]
+  - Definition: A story is [attr-11] if The story is humorous.
+- [attr-16]
+  - Definition: A story is [attr-16] if The story has the theme Innovation.
+- [attr-10]
+  - Definition: A story is [attr-10] if The story is classic.
+- [attr-24]
+  - Definition: A story is [attr-24] if The story is about mystical creatures.
+- [attr-17]
+  - Definition: A story is [attr-17] if The story has the theme Kindness.
+- [attr-15]
+  - Definition: A story is [attr-15] if The story has the theme Humor.
+- [attr-7]
+  - Definition: A story is [attr-7] if The story has fewer than 160 words.
+- [attr-25]
+  - Definition: A story is [attr-25] if The story is about the arts.
+
+Composite Nodes (preserved logical structure)
+- [attr-6]
+  - A story is [attr-6] if either of the following is true:
+    1. Both of the following are true:
+       - either of the following is true:
+         - The story is [attr-22]
+         - The story is [attr-23]
+       - either of the following is true:
+         - The story is [attr-24]
+         - The story is [attr-21] xor The story is [attr-25]
+    2. Both of the following are true:
+       - The story is [attr-4]
+       - The story is [attr-7]
+
+- [attr-20]
+  - A story is [attr-20] if both of the following are true:
+    1. either of the following is true:
+       - The story is [attr-12]
+       - The story is [attr-11] xor The story is [attr-10]
+    2. both of the following are true:
+       - The story is in [STYLE-MODERN, STYLE-CLASSIC]
+       - not both of the following are true:
+         - The story is [attr-5]
+         - The story starts with a preposition: The story is [attr-9]
+
+- [attr-14]
+  - A story is [attr-14] if either of the following is true:
+    1. Both of the following are true:
+       - The story is [attr-19]
+       - either of the following is true:
+         - The story is [attr-16]
+         - The story is [attr-18]
+    2. exactly one of the following is true:
+       - The story is [attr-17]
+       - The story is [attr-15]
+    3. Both of the following are true:
+       - The story is in [THEME-MAGIC, THEME-INNOVATION, THEME-PROBLEM-SOLVING]
+       - The story is [attr-17] equals false
+
+- [attr-2]
+  - A story is [attr-2] if both of the following are true:
+    1. The story is [attr-6]
+    2. either of the following is true:
+       - The story is [attr-20]
+       - both of the following are true:
+         - The story is [attr-26]
+         - The story is not [attr-4]
+
+- [attr-3]
+  - A story is [attr-3] if either of the following is true:
+    1. Both of the following are true:
+       - The story is [attr-14]
+       - exactly one of the following is true:
+         - The story is [attr-2]
+         - both of the following are true:
+           - The story is [attr-7]
+           - either of the following is true:
+             - The story is [attr-25]
+             - The story is [attr-22]
+    2. not both of the following are true:
+       - The story is [attr-11]
+       - The story is [attr-15]
+
+Usage notes (how to read this structure)
+- "either of the following is true" denotes logical OR.
+- "both of the following are true" denotes logical AND.
+- "exactly one of the following is true" denotes exclusive OR (one true, one false).
+- "xor" explicitly marks exclusive-or between two listed nodes.
+- "not both of the following are true" forbids the simultaneous truth of both listed conditions.
+- Preserve the literal phrasing where present (e.g., "The story is [attr-17] equals false") — these are intentional logical tests.
+
+End of codebook
+- All node IDs, logical operators, and hierarchical relationships remain unchanged from the original specification; the content above reorganizes and clarifies presentation only.

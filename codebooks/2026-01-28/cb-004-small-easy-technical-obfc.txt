@@ -1,0 +1,26 @@
+[attr-4]
+Definition: The binary annotation [attr-4] holds for a story if and only if the narrative content concerns seasonal changes (e.g., transitions between seasons, effects of seasons on environment or behavior). Use this label to mark stories whose primary topical focus is seasonal variation.
+
+[attr-7]
+Definition: The binary annotation [attr-7] holds for a story if and only if the story contains one or more WH-questions (interrogative forms beginning with who, what, when, where, why, how, etc.). Apply this label when such interrogative constructions are present.
+
+[attr-2]
+Definition: The binary annotation [attr-2] holds for a story if and only if the first lexical token of the story is a noun (including proper nouns and common nouns). Annotate with this label when the story’s initial token is nominal.
+
+[attr-3]
+Definition: The binary annotation [attr-3] holds for a story if and only if the narrative is about cultural traditions (rituals, customs, heritage practices, festivals, or socially transmitted cultural behaviors). Use this label for stories whose primary topical domain is cultural tradition.
+
+[attr-5]
+Definition: The binary annotation [attr-5] holds for a story if and only if the narrative involves time travel (temporal displacement, travel across time periods, or causally relevant interactions across time). Apply this label when time travel is a central thematic or plot element.
+
+[attr-1]
+Definition: The binary annotation [attr-1] holds for a story if and only if both of the following conditions are satisfied (logical AND):
+- The story is annotated as [attr-4]
+- The story is annotated as [attr-7]
+Use this composite label to denote stories that simultaneously address seasonal changes and employ WH-style interrogatives.
+
+[attr-6]
+Definition: The binary annotation [attr-6] holds for a story if and only if at least one of the following conditions is satisfied (logical OR):
+- The story is annotated as [attr-3]
+- The story is annotated as [attr-5]
+Use this composite label to denote stories that belong to either the cultural traditions domain or the time-travel domain (or both).

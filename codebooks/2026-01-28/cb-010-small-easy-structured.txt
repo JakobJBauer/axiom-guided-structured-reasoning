@@ -1,0 +1,57 @@
+Codebook — Structured Reference for Annotators
+
+Purpose
+- Provide clear, action-oriented definitions for each node.
+- Keep logical relationships explicit and easy to follow so annotators can reason consistently.
+
+Nodes (each node ID must be kept exactly as shown)
+
+1) [THEME-INNOVATION]
+- Definition:
+  - A story is [THEME-INNOVATION] if the story has the theme Innovation.
+- Annotation cue:
+  - Mark this when the central theme or focus of the story is innovation (new ideas, inventions, novel approaches).
+
+2) [TOPIC-CULTURAL-TRADITIONS]
+- Definition:
+  - A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+- Annotation cue:
+  - Mark this when the story discusses practices, rituals, customs, or cultural habits tied to a community or group.
+
+3) [TOPIC-BYGONE-ERAS]
+- Definition:
+  - A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras.
+- Annotation cue:
+  - Mark this when the story centers on historical periods, past times, or things belonging to earlier eras.
+
+4) [USES-WH-QUESTIONS]
+- Definition:
+  - A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+- Annotation cue:
+  - Mark this when the text contains wh-questions (who, what, where, when, why, how, etc.) used in the story.
+
+Composite node — logical rule
+
+5) [CULTURAL-INNOVATION-QUESTIONS]
+- Definition (composite rule):
+  - A story is [CULTURAL-INNOVATION-QUESTIONS] if all of the following are true:
+    - The story is [THEME-INNOVATION]
+    - Either of the following is true:
+      - The story is [TOPIC-CULTURAL-TRADITIONS]
+      - The story is [TOPIC-BYGONE-ERAS]
+    - The story is [USES-WH-QUESTIONS]
+- Annotation checklist (apply all steps in order):
+  1. Confirm the story meets [THEME-INNOVATION].
+  2. Confirm that at least one of these topics applies:
+     - [TOPIC-CULTURAL-TRADITIONS], OR
+     - [TOPIC-BYGONE-ERAS]
+  3. Confirm the story contains [USES-WH-QUESTIONS].
+  4. If 1, 2, and 3 are all true, then mark [CULTURAL-INNOVATION-QUESTIONS].
+
+Logical form (preserved for clarity)
+- [CULTURAL-INNOVATION-QUESTIONS] = [THEME-INNOVATION] AND ([TOPIC-CULTURAL-TRADITIONS] OR [TOPIC-BYGONE-ERAS]) AND [USES-WH-QUESTIONS]
+
+Notes for annotators
+- Preserve the exact node IDs when labeling.
+- Apply the composite rule only when every required condition is met (the OR condition requires at least one of its options).
+- Do not add or remove nodes; use the checklist to keep decisions consistent.

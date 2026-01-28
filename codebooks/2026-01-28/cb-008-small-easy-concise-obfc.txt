@@ -1,0 +1,17 @@
+[attr-4]
+True when the story focuses on cultural traditions.
+
+[attr-1]
+True when the story contains a moral lesson.
+
+[attr-2]
+True when the story begins with an adverb.
+
+[attr-3]
+True when the story’s theme is Magic.
+
+[attr-5]
+True when all of the following are true:
+- The story is [attr-4]
+- The story is [attr-3]
+- The story is [attr-1]

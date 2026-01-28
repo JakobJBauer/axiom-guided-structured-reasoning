@@ -1,0 +1,23 @@
+[attr-3]
+Definition: The label [attr-3] applies to a story whose overall affective tone is lighthearted. Operational criterion: the narrative conveys a playful, untroubled, or buoyant mood as judged by the annotator or an automated classifier.
+
+[attr-2]
+Definition: The label [attr-2] applies to a story whose first lexical token is an adverb. Operational criterion: when tokenizing the story text, the initial token must be classified morpho-syntactically as an adverb.
+
+[attr-1]
+Definition: The label [attr-1] applies to a story whose length exceeds a specified threshold. Operational criterion: the story contains more than 375 words (i.e., word_count > 375).
+
+[attr-4]
+Definition: The label [attr-4] applies to a story whose primary or dominant thematic element is humor. Operational criterion: the narrative’s central theme or intent is comedic or aims to produce amusement.
+
+[attr-5]
+Definition: The label [attr-5] applies to a story that concerns historical or past eras. Operational criterion: the subject matter explicitly focuses on bygone periods, historical settings, or antiquated contexts.
+
+[attr-6]
+Definition: The label [attr-6] applies when the following logical conditions are satisfied:
+- The story is [attr-3]
+- The story is [attr-4] and either of the following is true:
+  - The story is [attr-5]
+  - The story is [attr-2]
+
+Interpretation: [attr-6] is a conjunction of a lighthearted style with a humor theme, combined with an additional disjunctive condition referencing either a historical topic or a syntactic starting feature (adverb). Use this composite label only when all specified constituent labels evaluate as true according to their operational criteria.

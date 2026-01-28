@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "id": "topic-the-arts",
+      "label": "Topic: The Arts",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-conditional-mood",
+      "label": "Uses Conditional Mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adjective",
+      "label": "Starts With Adjective",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "Style: Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "conditional-and-not-start",
+      "label": "Conditional and Not Start",
+      "formula_type": "And",
+      "formula_args": [
+        "uses-conditional-mood",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "starts-with-adjective"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arts-xor-philosophical",
+      "label": "Arts XOR Philosophical",
+      "formula_type": "Xor",
+      "formula_args": [
+        "topic-the-arts",
+        "style-philosophical"
+      ]
+    },
+    {
+      "id": "complex-criterion",
+      "label": "Complex Criterion",
+      "formula_type": "Or",
+      "formula_args": [
+        "conditional-and-not-start",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "topic-the-arts",
+            {
+              "formula_type": "Equal",
+              "formula_args": [
+                "style-philosophical",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "uses-conditional-mood"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "uses-conditional-mood",
+      "target": "conditional-and-not-start"
+    },
+    {
+      "source": "starts-with-adjective",
+      "target": "conditional-and-not-start"
+    },
+    {
+      "source": "topic-the-arts",
+      "target": "arts-xor-philosophical"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "arts-xor-philosophical"
+    },
+    {
+      "source": "conditional-and-not-start",
+      "target": "complex-criterion"
+    },
+    {
+      "source": "topic-the-arts",
+      "target": "complex-criterion"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "complex-criterion"
+    },
+    {
+      "source": "uses-conditional-mood",
+      "target": "complex-criterion"
+    }
+  ]
+}

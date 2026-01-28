@@ -1,0 +1,45 @@
+Think of this as a friendly guide to the labels you’ll use when annotating stories. I’ll describe each tag in plain conversational language, but I’ll keep every logical link exactly as it is — all node IDs stay in [BRACKET] form and every Not/And/Or relationship is preserved.
+
+[USES-CONDITIONAL-MOOD]
+If a story uses the conditional mood anywhere — that “would,” “could,” or “might” kind of phrasing that imagines possibilities — you mark it [USES-CONDITIONAL-MOOD].
+
+[USES-PERFECT-ASPECT]
+If a story makes use of the perfect aspect — verbs like “had eaten,” “has gone,” or “have seen” that point to completed actions relative to another time — then it’s labeled [USES-PERFECT-ASPECT].
+
+[THEME-DECEPTION]
+When deception is a theme in the story — trickery, hidden motives, lies, or deliberate misdirection at the heart of the plot — that story is [THEME-DECEPTION].
+
+[HAS-A-CLIFFHANGER]
+If the story ends on a cliffhanger — leaving the reader hanging, with major questions unresolved — tag it [HAS-A-CLIFFHANGER].
+
+[COMPLEX-DECEPTION]
+A story counts as [COMPLEX-DECEPTION] only when all of these are true together:
+- The story is [THEME-DECEPTION]
+- The story is not [HAS-A-CLIFFHANGER]
+- Either of the following is true:
+  - The story is [USES-CONDITIONAL-MOOD]
+  - The story is [USES-PERFECT-ASPECT]
+
+So, put simply: it’s deception-focused, it doesn’t finish on a cliffhanger, and it uses either conditional mood or perfect aspect.
+
+[ASPECTUAL-AMBIVALENCE]
+Call a story [ASPECTUAL-AMBIVALENCE] when both parts below hold:
+- Either of the following is true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-CONDITIONAL-MOOD]
+- The story is not both of the following:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-CONDITIONAL-MOOD]
+
+In other words, the story shows one of those grammatical behaviors (perfect aspect or conditional mood), but it doesn’t show both at once.
+
+[AMBIGUOUS-DECEPTION-NARRATIVE]
+A story qualifies as [AMBIGUOUS-DECEPTION-NARRATIVE] when these two conditions are both satisfied:
+- The story is [COMPLEX-DECEPTION]
+- Either of the following is true:
+  - The story is [ASPECTUAL-AMBIVALENCE]
+  - The story is not [HAS-A-CLIFFHANGER]
+
+So this label captures complex deception that’s paired either with that aspectual ambivalence (one grammatical feature but not both) or simply with the absence of a cliffhanger.
+
+That’s the full set — the labels and the exact logical relationships between them, explained in a natural, easy-to-follow way.

@@ -1,0 +1,111 @@
+Interviewer: Let's walk through this codebook together. First, can you tell me what [HAS-A-STORY-WITHIN-A-STORY] means?
+
+Expert: Sure. The formal definition is:
+- "A story is [HAS-A-STORY-WITHIN-A-STORY] if The story has a story within a story."
+
+In plain terms: mark [HAS-A-STORY-WITHIN-A-STORY] true when the narrative contains an embedded tale — a story told inside the main story.
+
+Interviewer: And [THEME-MAGIC]?
+
+Expert: The formal line is:
+- "A story is [THEME-MAGIC] if The story has the theme Magic."
+
+So, tag [THEME-MAGIC] when magic is a theme in the story.
+
+Interviewer: How about [HAS-A-FLASHBACK]?
+
+Expert: Formally:
+- "A story is [HAS-A-FLASHBACK] if The story has a flashback."
+
+In practice: flag [HAS-A-FLASHBACK] when a portion of the narrative moves back in time to earlier events.
+
+Interviewer: What's [TOPIC-THE-ARTS]?
+
+Expert: Formally:
+- "A story is [TOPIC-THE-ARTS] if The story is about the arts."
+
+So use [TOPIC-THE-ARTS] for stories focused on artistic subjects (painting, music, dance, etc.).
+
+Interviewer: And [STYLE-MINIMALIST]?
+
+Expert: Formally:
+- "A story is [STYLE-MINIMALIST] if The story is minimalist."
+
+Use [STYLE-MINIMALIST] for narratives that are stylistically spare or minimal.
+
+Interviewer: What does [HAS-CIRCULAR-NARRATIVE-STRUCT] represent?
+
+Expert: The formal definition:
+- "A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if The story has circular narrative structure."
+
+That means the plot or sequence loops back to where it began — mark [HAS-CIRCULAR-NARRATIVE-STRUCT] when that structure is present.
+
+Interviewer: Now we get to some compound definitions. Explain [DEVICE-XOR].
+
+Expert: The exact definition is:
+- "A story is [DEVICE-XOR] if exactly one of the following is true:
+  - The story is [HAS-A-STORY-WITHIN-A-STORY]
+  - The story is [HAS-A-FLASHBACK]"
+
+So [DEVICE-XOR] is true when exactly one of those two devices appears — either an embedded story or a flashback, but not both.
+
+Interviewer: And [DEVICE-EQUAL]?
+
+Expert: The formal statement:
+- "A story is [DEVICE-EQUAL] if the truth value of [HAS-A-STORY-WITHIN-A-STORY] equals the truth value of [HAS-CIRCULAR-NARRATIVE-STRUCT]"
+
+In other words, [DEVICE-EQUAL] is true when those two nodes share the same truth value — both present or both absent.
+
+Interviewer: What's [MAGIC-ART-MEMBER]?
+
+Expert: Formally:
+- "A story is [MAGIC-ART-MEMBER] if the story's primary theme or topic is in the set {[THEME-MAGIC], [TOPIC-THE-ARTS]}"
+
+That means mark [MAGIC-ART-MEMBER] when the story's primary classification is either magic-themed or about the arts.
+
+Interviewer: The next one looks more complex: [COMPLEX-NARRATIVE-CORE]. Can you break it down exactly as defined?
+
+Expert: Absolutely. The node is defined verbatim as:
+- "A story is [COMPLEX-NARRATIVE-CORE] if both of the following are true:
+  - Either of the following are true:
+    - The story is [DEVICE-XOR]
+    - The story is [DEVICE-EQUAL]
+  - The story is not [STYLE-MINIMALIST] and (the story is [HAS-CIRCULAR-NARRATIVE-STRUCT] or the story is [HAS-A-FLASHBACK])"
+
+So to mark [COMPLEX-NARRATIVE-CORE] true, two things must hold:
+1. At least one of the device conditions holds: either [DEVICE-XOR] is true or [DEVICE-EQUAL] is true.
+2. Additionally, the story must not be minimalist (i.e., not [STYLE-MINIMALIST]) and must have either a circular structure or a flashback (i.e., [HAS-CIRCULAR-NARRATIVE-STRUCT] or [HAS-A-FLASHBACK] is true).
+
+Interviewer: Got it. What about [ART-MAGIC-NARRATIVE]?
+
+Expert: The codebook states:
+- "A story is [ART-MAGIC-NARRATIVE] if both of the following are true:
+  - The story is [MAGIC-ART-MEMBER]
+  - Either of the following are true:
+    - The story is [COMPLEX-NARRATIVE-CORE]
+    - The story is [STYLE-MINIMALIST]"
+
+So [ART-MAGIC-NARRATIVE] is true when the story belongs to the magic-or-arts set ([MAGIC-ART-MEMBER]) and, in addition, is either a complex-narrative-core or is minimalist in style.
+
+Interviewer: Last one — [COMPLEX-ARTISTIC-NARRATIVE]. This looks like a final filter.
+
+Expert: The precise definition:
+- "A story is [COMPLEX-ARTISTIC-NARRATIVE] if both of the following are true:
+  - The story is [ART-MAGIC-NARRATIVE]
+  - Exactly one of the following is true:
+    - The story is [DEVICE-EQUAL]
+    - The story is not [HAS-A-FLASHBACK]"
+
+So to set [COMPLEX-ARTISTIC-NARRATIVE] true you need:
+1. The story must already satisfy [ART-MAGIC-NARRATIVE].
+2. Exactly one of the two conditions must hold: either [DEVICE-EQUAL] is true, or the story does not have a flashback ([HAS-A-FLASHBACK] is false). That "exactly one" means these two conditions cannot both be true or both false — precisely one must be true.
+
+Interviewer: Thanks — that's a helpful walkthrough. Any final tips for annotators using this transcript-style codebook?
+
+Expert: Keep these points in mind:
+- Use the bracketed node IDs exactly as written when you annotate.
+- Follow the logical relationships as stated: whenever a compound node refers to other nodes, evaluate those other nodes first.
+- Remember the exact-mode operators: "exactly one" means XOR (exclusive or); "equals the truth value of" means strict equivalence.
+- If you’re unsure about a node like [COMPLEX-NARRATIVE-CORE] or [COMPLEX-ARTISTIC-NARRATIVE], check each subcondition step by step: evaluate the inner nodes, then apply the outer combination.
+
+Interviewer: Excellent. That keeps the logical structure intact and makes the rules easier to follow.

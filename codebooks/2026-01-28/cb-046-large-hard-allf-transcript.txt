@@ -1,0 +1,148 @@
+Interviewer: Let’s go through this codebook like an interview. First, what does [STYLE-LIGHTHEARTED] mean?
+
+Expert: Simple. A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+Interviewer: And [STYLE-PHILOSOPHICAL]?
+
+Expert: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+Interviewer: What about topics like magical places?
+
+Expert: A story is [TOPIC-MAGICAL-LANDS] if the story is about magical lands.
+
+Interviewer: How do you recognize device usage like wh-questions?
+
+Expert: A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+Interviewer: What makes something a [SHORT-STORY]?
+
+Expert: A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+Interviewer: Themes now — what is [THEME-KINDNESS]?
+
+Expert: A story is [THEME-KINDNESS] if the story has the theme Kindness.
+
+Interviewer: And paragraph length?
+
+Expert: A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+
+Interviewer: Grammatical mood?
+
+Expert: A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+Interviewer: Another theme — [THEME-PROBLEM-SOLVING]?
+
+Expert: A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+Interviewer: [THEME-GROWTH]?
+
+Expert: A story is [THEME-GROWTH] if the story has the theme Growth.
+
+Interviewer: What does [STARTS-WITH-PREPOSITION] indicate?
+
+Expert: A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+
+Interviewer: Giant creatures?
+
+Expert: A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures.
+
+Interviewer: Style labels again — [STYLE-MODERN] and [STYLE-CLASSIC]?
+
+Expert: A story is [STYLE-MODERN] if the story is modern.
+A story is [STYLE-CLASSIC] if the story is classic.
+
+Interviewer: Magical theme?
+
+Expert: A story is [THEME-MAGIC] if the story has the theme Magic.
+
+Interviewer: Lost civilizations?
+
+Expert: A story is [TOPIC-LOST-CIVILIZATIONS] if the story is about lost civilizations.
+
+Interviewer: Any structural device like flashbacks?
+
+Expert: A story is [HAS-A-FLASHBACK] if the story has a flashback.
+
+Interviewer: Hidden treasures?
+
+Expert: A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+Interviewer: Negative style label — [NON-LIGHTHEARTED]?
+
+Expert: A story is [NON-LIGHTHEARTED] if the story is not [STYLE-LIGHTHEARTED].
+
+Interviewer: Now let’s look at some logical combinations. What is [MODERN-XOR-CLASSIC]?
+
+Expert: A story is [MODERN-XOR-CLASSIC] if exactly one of the following is true:
+- The story is [STYLE-MODERN]
+- The story is [STYLE-CLASSIC]
+
+Interviewer: How about [MAGICAL-ADVENTURE]? That sounds compound.
+
+Expert: A story is [MAGICAL-ADVENTURE] if both of the following are true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- Either of the following is true:
+  - The story is [THEME-MAGIC]
+  - Both of the following are true:
+    - The story is [TOPIC-GIANT-CREATURES]
+    - The story is [THEME-PROBLEM-SOLVING]
+
+Interviewer: Tell me about [HIDDEN-LOST-ADVENTURE].
+
+Expert: A story is [HIDDEN-LOST-ADVENTURE] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+- Both of the following are true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+
+Interviewer: What defines [QUEST-STYLE]?
+
+Expert: A story is [QUEST-STYLE] if both of the following are true:
+- [USES-WH-QUESTIONS] is in the set of devices the story uses (it explicitly uses wh-questions)
+- Either of the following is true:
+  - The story is [USES-CONDITIONAL-MOOD]
+  - The story is [STARTS-WITH-PREPOSITION]
+
+Interviewer: The [EPIC-GROWTH-ARC] sounds specific. How is that formed?
+
+Expert: A story is [EPIC-GROWTH-ARC] if both of the following are true:
+- The set of themes in the story is equal to the set containing [THEME-KINDNESS] and [THEME-GROWTH]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [THEME-PROBLEM-SOLVING]
+    - The story is [HAS-A-FLASHBACK]
+  - Both of the following are true:
+    - The story is [MANY-PARAGRAPHS]
+    - The story is not [SHORT-STORY]
+
+Interviewer: What about [AMALGAM-OF-ADVENTURE]?
+
+Expert: A story is [AMALGAM-OF-ADVENTURE] if either of the following is true:
+- Both of the following are true:
+  - The story is [MAGICAL-ADVENTURE]
+  - The story is [HIDDEN-LOST-ADVENTURE]
+- Both of the following are true:
+  - The story is [TOPIC-GIANT-CREATURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+
+Interviewer: And finally, the big one — [AMBIGUOUS-MAGICAL-TALE]?
+
+Expert: A story is [AMBIGUOUS-MAGICAL-TALE] if either of the following is true:
+- Both of the following are true:
+  - The story is [AMALGAM-OF-ADVENTURE]
+  - Both of the following are true:
+    - The story is [MODERN-XOR-CLASSIC]
+    - Either of the following is true:
+      - The story is [THEME-KINDNESS]
+      - The story is [THEME-MAGIC]
+- Both of the following are true:
+  - The story is [EPIC-GROWTH-ARC]
+  - Both of the following are true:
+    - The story is not [NON-LIGHTHEARTED]
+    - The story is [QUEST-STYLE]
+
+Interviewer: That was thorough. Any final tip for annotators using this codebook?
+
+Expert: Treat each bracketed node as a precise criterion. When a node lists "either," "both," or "exactly one," follow those logical constraints exactly. The transcript form here is just to make the relationships easier to read; the logical structure and node IDs remain unchanged.

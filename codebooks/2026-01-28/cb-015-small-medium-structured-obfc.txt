@@ -1,0 +1,73 @@
+Codebook — structured and actionable
+(Keep node IDs and logical structure exactly as shown. Use this as a checklist when annotating.)
+
+1) Simple (atomic) nodes — direct criteria
+- [attr-4]
+  - Definition: A story is [attr-4] if the story has fewer than 160 words.
+  - What to check: Count words; label true if word count < 160.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story has the theme Magic.
+  - What to check: Identify whether the central theme involves Magic.
+
+- [attr-7]
+  - Definition: A story is [attr-7] if the story uses wh-questions.
+  - What to check: Look for wh-words (who, what, when, where, why, how) used as questions.
+
+- [attr-1]
+  - Definition: A story is [attr-1] if the story has Checkhov's gun.
+  - What to check: Does the story introduce a seemingly minor element that later becomes important?
+
+- [attr-2]
+  - Definition: A story is [attr-2] if the story has readability score above 96.1.
+  - What to check: Compute readability; label true if score > 96.1.
+
+2) Composite nodes — composed using logical operators
+- [attr-3]
+  - Summary: Combines theme and absence of a revealed device.
+  - Rule (logical form: AND / Not):
+    - A story is [attr-3] if both of the following are true:
+      - The story is [attr-5]
+      - The story is not [attr-1]
+    - Informal equivalent: [attr-5] AND NOT [attr-1]
+  - Annotator checklist:
+    - Confirm the story’s theme is Magic.
+    - Confirm it does not contain Checkhov's gun.
+
+- [attr-6]
+  - Summary: A short story that pairs a magical theme or a precisely balanced readability/question structure.
+  - Rule (nested logical structure):
+    - A story is [attr-6] if both of the following are true:
+      - The story is [attr-4]
+      - Either of the following is true:
+        - The story is [attr-3]
+        - Exactly one of the following is true:
+          - The story is not [attr-2]
+          - The story is [attr-7]
+    - Logical interpretation:
+      - [attr-6] = [attr-4] AND ( [attr-3] OR (EXACTLY ONE of { NOT [attr-2], [attr-7] } ) )
+  - Annotator checklist (step-by-step):
+    1. Verify the story is [attr-4] (word count < 160).
+    2. Then evaluate the second part:
+       - If [attr-3] is true, mark [attr-6] true.
+       - Otherwise, check the pair:
+         - Is NOT [attr-2] true? (i.e., readability ≤ 96.1)
+         - Is [attr-7] true?
+         - If exactly one of those two is true, mark [attr-6] true.
+         - If both are true or both are false, do not mark [attr-6] true (unless [attr-3] was true).
+  - Notes on “Exactly one”:
+    - Exactly one = exclusive OR: only one of the listed conditions must hold, not both.
+
+3) Quick reference — logical operator meanings (for consistency)
+- AND / “both of the following are true”: all listed conditions must hold.
+- NOT / “is not”: the listed condition must be false.
+- OR / “Either of the following is true”: at least one listed option must hold.
+- EXACTLY ONE / “Exactly one of the following is true”: precisely one option holds (exclusive OR).
+
+4) Practical annotation flow (recommended)
+- Step 1: Evaluate atomic nodes ([attr-4], [attr-5], [attr-7], [attr-1], [attr-2]).
+- Step 2: Derive [attr-3] using its two conditions (use AND + NOT).
+- Step 3: Derive [attr-6] using [attr-4] and the nested Either/Exactly-one structure.
+- Step 4: Double-check exclusivity when “Exactly one” appears.
+
+Keep this structure while annotating: evaluate simple nodes first, then build composite labels by applying the exact logical combinations shown above.

@@ -1,0 +1,170 @@
+{
+  "nodes": [
+    {
+      "id": "theme-deception",
+      "label": "THEME-DECEPTION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-story-within-a-story",
+      "label": "HAS-A-STORY-WITHIN-A-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-surreal",
+      "label": "STYLE-SURREAL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-helping-others",
+      "label": "THEME-HELPING-OTHERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-minimalist",
+      "label": "STYLE-MINIMALIST",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-growth",
+      "label": "THEME-GROWTH",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-humorous",
+      "label": "STYLE-HUMOROUS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-discourse-markers",
+      "label": "USES-DISCOURSE-MARKERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-noun",
+      "label": "STARTS-WITH-NOUN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-circular-narrative-struct",
+      "label": "HAS-CIRCULAR-NARRATIVE-STRUCT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "narrative-complexity",
+      "label": "NARRATIVE-COMPLEXITY",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "has-a-story-within-a-story",
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "theme-deception",
+                "theme-growth"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "has-circular-narrative-struct",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "starts-with-noun"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engaging-story",
+      "label": "ENGAGING-STORY",
+      "formula_type": "And",
+      "formula_args": [
+        "narrative-complexity",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "Equal",
+              "formula_args": [
+                "uses-discourse-markers",
+                "starts-with-noun"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "style-surreal",
+                "style-humorous",
+                "style-minimalist"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "has-a-story-within-a-story",
+      "target": "narrative-complexity"
+    },
+    {
+      "source": "theme-deception",
+      "target": "narrative-complexity"
+    },
+    {
+      "source": "theme-growth",
+      "target": "narrative-complexity"
+    },
+    {
+      "source": "has-circular-narrative-struct",
+      "target": "narrative-complexity"
+    },
+    {
+      "source": "starts-with-noun",
+      "target": "narrative-complexity"
+    },
+    {
+      "source": "narrative-complexity",
+      "target": "engaging-story"
+    },
+    {
+      "source": "uses-discourse-markers",
+      "target": "engaging-story"
+    },
+    {
+      "source": "starts-with-noun",
+      "target": "engaging-story"
+    },
+    {
+      "source": "style-surreal",
+      "target": "engaging-story"
+    },
+    {
+      "source": "style-humorous",
+      "target": "engaging-story"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "engaging-story"
+    }
+  ]
+}

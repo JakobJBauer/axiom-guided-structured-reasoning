@@ -1,0 +1,55 @@
+Interviewer: Let's go through this codebook node by node. First, what is [attr-9]?
+
+Expert: A story is [attr-9] if the story uses conditional mood.
+
+Interviewer: Simple enough. Next, what about [attr-6]?
+
+Expert: A story is [attr-6] if the story starts with a adverb.
+
+Interviewer: And [attr-8]?
+
+Expert: A story is [attr-8] if the story has the theme Agency.
+
+Interviewer: How do we define [attr-5]?
+
+Expert: A story is [attr-5] if the story has fewer than 160 words.
+
+Interviewer: What about tone — [attr-7]?
+
+Expert: A story is [attr-7] if the story is lighthearted.
+
+Interviewer: There's also an aspectual tag, right? [attr-10]?
+
+Expert: Correct. A story is [attr-10] if the story uses perfect aspect.
+
+Interviewer: Now the first composite node: [attr-3]. How do we identify that?
+
+Expert: A story is [attr-3] if both of the following are true:
+- The story is [attr-9]
+- The story is not [attr-10]
+
+Interviewer: So [attr-3] requires conditional mood and explicitly excludes perfect aspect. Clear. Next composite: [attr-4]?
+
+Expert: A story is [attr-4] if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-7]
+
+Interviewer: That ties length and tone together. Now [attr-1] — that one looks a bit more specific.
+
+Expert: A story is [attr-1] if both of the following are true:
+- The story is [attr-8]
+- Exactly one of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+
+Interviewer: So to qualify as [attr-1], the story must have the Agency theme, and either it starts with an adverb or it's a short story — but not both. Understood. Finally, what makes an [attr-2]?
+
+Expert: A story is [attr-2] if both of the following are true:
+- The story is [attr-4]
+- Either of the following are true:
+  - The story is [attr-3]
+  - The story is [attr-1]
+
+Interviewer: To summarize: [attr-2] requires the short, lighthearted combination (that is, [attr-4]) and then at least one of the higher-level conditions — either the mood combination without perfect aspect ([attr-3]) or the Agency-start condition ([attr-1]). Is that correct?
+
+Expert: Exactly. All node IDs, logical operators, and relationships remain as stated; this transcript simply walks through each rule as a Q&A to make the conditions clearer for annotators.

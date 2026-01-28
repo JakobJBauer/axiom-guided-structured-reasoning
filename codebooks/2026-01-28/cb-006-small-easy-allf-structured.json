@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "id": "has-a-flashback",
+      "label": "HAS-A-FLASHBACK",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "USES-WH-QUESTIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-discourse-markers",
+      "label": "USES-DISCOURSE-MARKERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "interactive",
+      "label": "INTERACTIVE",
+      "formula_type": "Xor",
+      "formula_args": [
+        "uses-wh-questions",
+        "uses-discourse-markers"
+      ]
+    },
+    {
+      "id": "complex-narrative",
+      "label": "COMPLEX-NARRATIVE",
+      "formula_type": "And",
+      "formula_args": [
+        "has-a-flashback",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "interactive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "special-case",
+      "label": "SPECIAL-CASE",
+      "formula_type": "Or",
+      "formula_args": [
+        "interactive",
+        "complex-narrative",
+        "has-a-flashback"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "uses-wh-questions",
+      "target": "interactive"
+    },
+    {
+      "source": "uses-discourse-markers",
+      "target": "interactive"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "interactive",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "interactive",
+      "target": "special-case"
+    },
+    {
+      "source": "complex-narrative",
+      "target": "special-case"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "special-case"
+    }
+  ]
+}

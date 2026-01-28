@@ -1,0 +1,51 @@
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+[INNER-CONDITIONAL]
+A story is [INNER-CONDITIONAL] if both of the following are true:
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [USES-CONDITIONAL-MOOD]
+
+[PHILOS-CIRCULAR-XOR]
+A story is [PHILOS-CIRCULAR-XOR] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- The truth value of the following are equal:
+  - [SHORT-STORY]
+  - [LOW-READABILITY]
+
+[THEMATIC-IN]
+A story is [THEMATIC-IN] if the story's topic is in the set:
+- [TOPIC-CULTURAL-TRADITIONS]
+- [TOPIC-SEASONAL-CHANGES]
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if all of the following are true:
+- Either of the following is true:
+  - The story is [INNER-CONDITIONAL]
+  - The story is [PHILOS-CIRCULAR-XOR]
+- Both of the following are true:
+  - The story is [THEMATIC-IN]
+  - The story is not [SHORT-STORY]

@@ -1,0 +1,35 @@
+In a small compendium of labels, woven like ribbons through a garden of tales, each tag is defined with gentle precision so that readers and annotators may stroll the paths of meaning with clarity and delight. Below, the nodes stand like signposts beneath flowering boughs—each definition is embroidered with imagery, yet preserves the exact logical bearings needed for faithful annotation.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+- This tag blooms for narratives whose heart is the turning of seasons: the subtle exchange of light and shadow, the march from spring’s first green to winter’s hush, the patterns of weather and time that mark the year.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+- Use this label when a tale is threaded with inquisitive wh-words—who, what, when, where, why, how—those bright, prying petals that invite curiosity and prompt answers.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+- Apply this marker when the very opening word of the story is a noun, a sturdy seed from which the sentence grows.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+- This category embraces stories steeped in custom and ritual: the ceremonies, celebrations, and inherited practices that bind people across generations.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+- Affix this label to narratives that voyage through time—journeys that fold the present into the past or fling characters forward into futures unknown.
+
+[SEASONAL-QUESTION-STORY]
+A story is [SEASONAL-QUESTION-STORY] if both of the following are true:
+- The story is [TOPIC-SEASONAL-CHANGES]
+- The story is [USES-WH-QUESTIONS]
+- In other words, this special classification is reserved for those tales that both dwell on the cycle of seasons and are woven with wh-questions, combining theme and interrogative form like a duet.
+
+[TRADITION-OR-TIME-STORY]
+A story is [TRADITION-OR-TIME-STORY] if either of the following is true:
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+- The story is [TOPIC-TIME-TRAVEL]
+- This label kindly collects stories that belong to one of two domains: those that celebrate cultural traditions, or those that traverse the tapestry of time.
+
+May this ornate yet exact codebook guide your annotations as surely as a lantern guides a night stroll—rich in language, steadfast in logic.

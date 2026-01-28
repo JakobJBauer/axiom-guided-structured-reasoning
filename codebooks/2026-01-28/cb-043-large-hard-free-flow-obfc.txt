@@ -1,0 +1,115 @@
+Here’s the same codebook rewritten in a relaxed, conversational voice—smooth and readable, but with every logical connection preserved exactly as before. I’ve kept all node IDs in [attr-1] form, retained the logical operators and structures (both/either/exactly one/not), and left every relationship and formula untouched. Read through at your own pace; each entry explains the condition in a human-friendly way while keeping the formal logic intact.
+
+[attr-20]
+A story is [attr-20] if the story has the theme Innovation.
+
+[attr-21]
+A story is [attr-21] if the story has the theme Magic.
+
+[attr-5]
+A story is [attr-5] if the story has Checkhov's gun.
+
+[attr-11]
+A story is [attr-11] if the story starts with a adverb.
+
+[attr-19]
+A story is [attr-19] if the story has the theme Helping Others.
+
+[attr-15]
+A story is [attr-15] if the story is philosophical.
+
+[attr-12]
+A story is [attr-12] if the story starts with a noun.
+
+[attr-22]
+A story is [attr-22] if the story is about hidden treasures.
+
+[attr-18]
+A story is [attr-18] if the story has the theme Growth.
+
+[attr-3]
+A story is [attr-3] if the story has a cliffhanger.
+
+[attr-14]
+A story is [attr-14] if the story is minimalist.
+
+[attr-25]
+A story is [attr-25] if the story uses conditional mood.
+
+[attr-24]
+A story is [attr-24] if the story is about seasonal changes.
+
+[attr-23]
+A story is [attr-23] if the story is about mystical creatures.
+
+[attr-4]
+A story is [attr-4] if the story has a story within a story.
+
+[attr-6]
+A story is [attr-6] if the story has more than 6 paragraphs.
+
+[attr-17]
+A story is [attr-17] if the story has the theme Agency.
+
+[attr-10]
+A story is [attr-10] if [attr-6] equals true.
+
+[attr-13]
+A story is [attr-13] if both of the following are true:
+- exactly one of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-12]
+- The story is in [STYLE-PHILOSOPHICAL, STYLE-MINIMALIST]
+
+[attr-8]
+A story is [attr-8] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-22]
+  - The story is [attr-23]
+- exactly one of the following is true:
+  - The story is [attr-22]
+  - The story is [attr-24]
+
+[attr-7]
+A story is [attr-7] if either of the following is true:
+- The story is [attr-19]
+- both of the following are true:
+  - exactly one of the following is true:
+    - The story is [attr-18]
+    - The story is [attr-17]
+  - The story is not [attr-14]
+
+[attr-16]
+A story is [attr-16] if both of the following are true:
+- The story is [attr-20]
+- either of the following is true:
+  - The story is [attr-7]
+  - both of the following are true:
+    - The story is [attr-21]
+    - The story is [attr-25]
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-5]
+  - The story is [attr-3]
+- either of the following is true:
+  - The story is [attr-4]
+  - The story is not [attr-5]
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-16]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [attr-13]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [attr-9]
+        - The story is [attr-10]
+      - The story is [attr-8]
+  - both of the following are true:
+    - The story is [attr-9]
+    - The story is not [attr-14]
+
+If you want this in a different tone (even more casual, or more formal), or formatted as a checklist or decision tree for annotators, I can reshape it further while keeping every logical relationship exactly as written.

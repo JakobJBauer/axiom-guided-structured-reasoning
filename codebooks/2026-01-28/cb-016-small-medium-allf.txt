@@ -1,0 +1,24 @@
+[LONG-STORY]
+A story is [LONG-STORY] if the story has more than 375 words.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+[NOT-LONG]
+A story is [NOT-LONG] if it is not [LONG-STORY].
+
+[INTERROGATIVE-STYLE]
+A story is [INTERROGATIVE-STYLE] if either of the following is true:
+- The story is [USES-WH-QUESTIONS]
+- The story is [NOT-LONG]
+
+[STYLE-POLARITY]
+A story is [STYLE-POLARITY] if exactly one of the following is true:
+- The story is [LONG-STORY]
+- The story is [INTERROGATIVE-STYLE]
+
+[FORMAL-CLASSIFICATION]
+A story is [FORMAL-CLASSIFICATION] if all of the following are true:
+- The story is [STYLE-POLARITY]
+- The value of [LONG-STORY] is equal to the value of ([USES-WH-QUESTIONS] and not [NOT-LONG])
+- The number of true conditions among {[LONG-STORY], [USES-WH-QUESTIONS], [NOT-LONG]} is in {1, 3}

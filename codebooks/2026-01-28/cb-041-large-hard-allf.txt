@@ -1,0 +1,81 @@
+[SHORT-STORY]
+A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if the story has the theme Kindness.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others.
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if the story is playful.
+
+[THEME-HUMOR]
+A story is [THEME-HUMOR] if the story has the theme Humor.
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if the story is humorous.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if the story is about mystical creatures.
+
+[HAS-A-RED-HERRING]
+A story is [HAS-A-RED-HERRING] if the story has a Red Herring.
+
+[KINDNESS-HELPING]
+A story is [KINDNESS-HELPING] if both of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [THEME-HELPING-OTHERS]
+(And both must hold simultaneously.)
+
+[LIGHT-HEARTED]
+A story is [LIGHT-HEARTED] if exactly one of the following is true (Xor):
+- The story is [STYLE-PLAYFUL]
+- The story is [STYLE-HUMOROUS]
+
+[THEME-IN-CORE-SET]
+A story is [THEME-IN-CORE-SET] if the story's dominant theme is In the following set:
+- [THEME-KINDNESS], [THEME-HELPING-OTHERS], [THEME-PROBLEM-SOLVING]
+(Use In to check membership among those theme nodes.)
+
+[BALANCED-TONE]
+A story is [BALANCED-TONE] if the following Equal relationship holds:
+- The presence of [STYLE-PHILOSOPHICAL] Equal the presence of [STYLE-HUMOROUS]
+(They are Equal when either both are present or both are absent.)
+
+[MYSTICAL-ALLEGORY]
+A story is [MYSTICAL-ALLEGORY] if both of the following are true:
+- The story is [TOPIC-MYSTICAL-CREATURES]
+- The story is [HAS-A-STORY-WITHIN-A-STORY] And the story is [STYLE-PHILOSOPHICAL]
+(This nests an And inside an And to form an allegorical structure.)
+
+[COMPLEX-ARC]
+A story is [COMPLEX-ARC] if all of the following are true:
+- Either of the following is true (Or):
+  - The story is [KINDNESS-HELPING]
+  - The story is [THEME-PROBLEM-SOLVING]
+- Exactly one of the following is true (Xor):
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is Not [SHORT-STORY] Or the story is [HIGH-READABILITY]
+(Uses Not to exclude short stories unless they also meet HIGH-READABILITY; combines Or and Xor for nuanced arc structure.)
+
+[RECOMMENDABLE-COMPOSITION]
+A story is [RECOMMENDABLE-COMPOSITION] if both of the following are true:
+- The story is [COMPLEX-ARC] And the story is [BALANCED-TONE]
+- The story is [THEME-IN-CORE-SET] And either of the following is true (Or):
+  - The story is [LIGHT-HEARTED]
+  - The story is [MYSTICAL-ALLEGORY]
+(This node nests multiple logical operators to form a deep, recommendable composition: And at the top level, Or inside a branch, and references In, Equal, Not, and Xor through its subordinate nodes.)

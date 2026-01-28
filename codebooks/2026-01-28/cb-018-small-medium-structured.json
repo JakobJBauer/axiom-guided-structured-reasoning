@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "id": "theme-helping-others",
+      "label": "Theme: Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "Style: Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-classic",
+      "label": "Style: Classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "Style: Modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-juxtaposition",
+      "label": "Has Juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "mixed-style-juxtapose",
+      "label": "Mixed Style Juxtapose",
+      "formula_type": "And",
+      "formula_args": [
+        "has-juxtaposition",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "style-classic",
+            "style-modern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "philosophical-helping-others-dramatic",
+      "label": "Philosophical Helping Others Dramatic",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "style-philosophical",
+            "theme-helping-others",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "mixed-style-juxtapose"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "mixed-style-juxtapose",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "theme-helping-others"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "has-juxtaposition",
+      "target": "mixed-style-juxtapose"
+    },
+    {
+      "source": "style-classic",
+      "target": "mixed-style-juxtapose"
+    },
+    {
+      "source": "style-modern",
+      "target": "mixed-style-juxtapose"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "philosophical-helping-others-dramatic"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "philosophical-helping-others-dramatic"
+    },
+    {
+      "source": "mixed-style-juxtapose",
+      "target": "philosophical-helping-others-dramatic"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+Imagine a quiet archive where every tale is a little traveler arriving with a name-tag. The archivist, fond of clarity, writes a short key for each tag so future readers know exactly why a story earned it. Here are those keys — each one kept precise like an inscription on a wooden label, but told as if the archive itself were whispering the story of how we mark each tale.
+
+[A small label is pinned to a story when it moves through this gate:]
+
+[attr-4]
+A story is [attr-4] if the story is about seasonal changes.
+
+The label for [attr-4] is for tales that follow the world as it turns — spring’s first green, summer’s heat, autumn’s falling leaves, winter’s hush.
+
+[attr-7]
+A story is [attr-7] if the story uses wh-questions.
+
+This tag, [attr-7], is for stories that ask — who, what, when, where, why, how — using those curious question-words to open doors and chase mysteries.
+
+[attr-2]
+A story is [attr-2] if the story starts with a noun.
+
+Some stories announce themselves plainly. When the first word that greets the reader is a noun, the tale wears the [attr-2] badge.
+
+[attr-3]
+A story is [attr-3] if the story is about cultural traditions.
+
+Stories with the [attr-3] tag carry the rituals and practices of communities — the songs, festivals, and handed-down ways that bind people to meaning.
+
+[attr-5]
+A story is [attr-5] if the story is about time travel.
+
+When a tale folds time — sending characters backward or forward, or collapsing eras into one another — it earns the [attr-5] mark.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-4]
+- The story is [attr-7]
+
+There are moments when two traits meet: a story that follows the turning seasons and does so by asking wh-questions receives a double seal, [attr-1]. Picture a narrator asking “Why does autumn come?” as the leaves begin to fall — that precise conjunction is what this tag captures.
+
+[attr-6]
+A story is [attr-6] if either of the following is true:
+- The story is [attr-3]
+- The story is [attr-5]
+
+Finally, some tales qualify if they hold either of two vivid possibilities: they are rooted in customs passed through generations, or they bend the river of time. If a story has either quality, it receives the [attr-6] label — a banner that tells the reader, “This tale walks in ritual or steps through eras.”
+
+In this little archive, each tag is a careful decision — crisp, reliable, and written so that anyone who reads the labels will know exactly which gate the story walked through. The nodes and their links remain unchanged; the labels simply help us tell the stories in an orderly, human way.

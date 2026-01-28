@@ -1,0 +1,255 @@
+**Interviewer:** We’re going to walk through a story-annotation codebook. I’ll ask the kinds of questions annotators usually ask, and you’ll answer with the exact criteria. Ready?
+
+**Annotator:** Ready. I’ll keep the node IDs and logic exactly as defined.
+
+---
+
+## Basic single-condition nodes
+
+**Interviewer:** First one: what does it mean when a story is tagged as [MANY-PARAGRAPHS]?
+
+**Annotator:** A story is [MANY-PARAGRAPHS] **if the story has more than 6 paragraphs**.
+
+---
+
+**Interviewer:** What qualifies as [HAS-A-STORY-WITHIN-A-STORY]?
+
+**Annotator:** A story is [HAS-A-STORY-WITHIN-A-STORY] **if the story has a story within a story**.
+
+---
+
+**Interviewer:** How do we decide [STARTS-WITH-NOUN]?
+
+**Annotator:** A story is [STARTS-WITH-NOUN] **if the story starts with a noun**.
+
+---
+
+**Interviewer:** And [USES-SUPERLATIVE-FORMS]—what are we looking for?
+
+**Annotator:** A story is [USES-SUPERLATIVE-FORMS] **if the story uses superlative forms**.
+
+---
+
+**Interviewer:** What about [HAS-CHECKHOVS-GUN]?
+
+**Annotator:** A story is [HAS-CHECKHOVS-GUN] **if the story has Checkhov's gun**.
+
+---
+
+**Interviewer:** If a story feels “magical,” is there a specific tag?
+
+**Annotator:** Yes. A story is [THEME-MAGIC] **if the story has the theme Magic**.
+
+---
+
+**Interviewer:** How do we tag conditional phrasing?
+
+**Annotator:** A story is [USES-CONDITIONAL-MOOD] **if the story uses conditional mood**.
+
+---
+
+**Interviewer:** And question-heavy stories—specifically wh-questions?
+
+**Annotator:** A story is [USES-WH-QUESTIONS] **if the story uses wh-questions**.
+
+---
+
+**Interviewer:** How do we tag a “treasure hunt” kind of topic?
+
+**Annotator:** A story is [TOPIC-HIDDEN-TREASURES] **if the story is about hidden treasures**.
+
+---
+
+**Interviewer:** Innovation as a theme—what’s the rule?
+
+**Annotator:** A story is [THEME-INNOVATION] **if the story has the theme Innovation**.
+
+---
+
+**Interviewer:** Seasonal changes—what defines [TOPIC-SEASONAL-CHANGES]?
+
+**Annotator:** A story is [TOPIC-SEASONAL-CHANGES] **if the story is about seasonal changes**.
+
+---
+
+**Interviewer:** Stories centered on art?
+
+**Annotator:** A story is [TOPIC-THE-ARTS] **if the story is about the arts**.
+
+---
+
+**Interviewer:** What counts as [LONG-STORY]?
+
+**Annotator:** A story is [LONG-STORY] **if the story has more than 375 words**.
+
+---
+
+**Interviewer:** If the theme is personal development?
+
+**Annotator:** A story is [THEME-GROWTH] **if the story has the theme Growth**.
+
+---
+
+**Interviewer:** What about settings like enchanted kingdoms?
+
+**Annotator:** A story is [TOPIC-MAGICAL-LANDS] **if the story is about magical lands**.
+
+---
+
+**Interviewer:** Time travel?
+
+**Annotator:** A story is [TOPIC-TIME-TRAVEL] **if the story is about time travel**.
+
+---
+
+**Interviewer:** Hardship as a theme?
+
+**Annotator:** A story is [THEME-HARDSHIP] **if the story has the theme Hardship**.
+
+---
+
+**Interviewer:** How do we tag stories that begin with an adverb?
+
+**Annotator:** A story is [STARTS-WITH-ADVERB] **if the story starts with a adverb**.
+
+---
+
+**Interviewer:** And moral lessons?
+
+**Annotator:** A story is [HAS-A-MORAL-LESSON] **if the story has a moral lesson**.
+
+---
+
+**Interviewer:** Readability—how is [LOW-READABILITY] defined?
+
+**Annotator:** A story is [LOW-READABILITY] **if the story has readability score below 86.4**.
+
+---
+
+**Interviewer:** And a story that begins with an adjective?
+
+**Annotator:** A story is [STARTS-WITH-ADJECTIVE] **if the story starts with a adjective**.
+
+---
+
+**Interviewer:** Now a tricky one: what is [STARTS-WITH-NONNOUN]?
+
+**Annotator:** A story is [STARTS-WITH-NONNOUN] **if it is not [STARTS-WITH-NOUN]**.
+
+---
+
+## Multi-condition / logical-combination nodes
+
+### [STRUCTURAL-EPIC]
+
+**Interviewer:** Let’s move to combined tags. What makes a story a [STRUCTURAL-EPIC]?
+
+**Annotator:** A story is [STRUCTURAL-EPIC] **if both of the following are true**:  
+- The story is [LONG-STORY]  
+- The story is [MANY-PARAGRAPHS]
+
+---
+
+### [EXPERIMENTAL-VOICE]
+
+**Interviewer:** Okay, [EXPERIMENTAL-VOICE] sounds nuanced. What’s the exact logic?
+
+**Annotator:** A story is [EXPERIMENTAL-VOICE] **if either of the following is true**:  
+- **Exactly one of the following is true**: the story is [STARTS-WITH-ADVERB] **or** the story is [STARTS-WITH-ADJECTIVE]  
+- **Both of the following are true**:  
+  - The story is [STARTS-WITH-NONNOUN]  
+  - The story is [USES-WH-QUESTIONS]
+
+---
+
+### [MYTHIC-ENGINEERING]
+
+**Interviewer:** How do we decide [MYTHIC-ENGINEERING]?
+
+**Annotator:** A story is [MYTHIC-ENGINEERING] **if both of the following are true**:  
+- **Either of the following is true**:  
+  - The story is [THEME-MAGIC]  
+  - The story is [TOPIC-MAGICAL-LANDS]  
+- **Either of the following is true**:  
+  - The story is [THEME-INNOVATION]  
+  - The story is [TOPIC-TIME-TRAVEL]
+
+---
+
+### [INTERROGATIVE-CONDITIONALITY]
+
+**Interviewer:** And [INTERROGATIVE-CONDITIONALITY]—what’s the structure there?
+
+**Annotator:** A story is [INTERROGATIVE-CONDITIONALITY] **if both of the following are true**:  
+- The story is [USES-CONDITIONAL-MOOD]  
+- **Either of the following is true**:  
+  - The story is [USES-WH-QUESTIONS]  
+  - The story is [LOW-READABILITY]
+
+---
+
+### [EMBEDDED-FORESHADOWING]
+
+**Interviewer:** Now for [EMBEDDED-FORESHADOWING]. What exactly has to happen?
+
+**Annotator:** A story is [EMBEDDED-FORESHADOWING] **if both of the following are true**:  
+- The story is [HAS-A-STORY-WITHIN-A-STORY]  
+- **Either of the following is true**:  
+  - The story is [HAS-CHECKHOVS-GUN]  
+  - **Both of the following are true**:  
+    - The story is [USES-SUPERLATIVE-FORMS]  
+    - It is not [USES-CONDITIONAL-MOOD]
+
+---
+
+### [TREASURED-TRANSFORMATION]
+
+**Interviewer:** What about [TREASURED-TRANSFORMATION]? How do we apply it correctly?
+
+**Annotator:** A story is [TREASURED-TRANSFORMATION] **if both of the following are true**:  
+- The story is [TOPIC-HIDDEN-TREASURES]  
+- **Either of the following is true**:  
+  - **Both of the following are true**:  
+    - The story is [THEME-GROWTH]  
+    - The story is [HAS-A-MORAL-LESSON]  
+  - **Both of the following are true**:  
+    - The story is [THEME-HARDSHIP]  
+    - It is not [HAS-A-MORAL-LESSON]
+
+---
+
+### [SEASONAL-AESTHETIC]
+
+**Interviewer:** How do we tag [SEASONAL-AESTHETIC]?
+
+**Annotator:** A story is [SEASONAL-AESTHETIC] **if both of the following are true**:  
+- The story is [TOPIC-SEASONAL-CHANGES]  
+- **Either of the following is true**:  
+  - The story is [TOPIC-THE-ARTS]  
+  - **Both of the following are true**:  
+    - The story is [USES-SUPERLATIVE-FORMS]  
+    - It is not [LOW-READABILITY]
+
+---
+
+### [MASTER-CLASS-PLOT]
+
+**Interviewer:** Finally, the big one: [MASTER-CLASS-PLOT]. Walk me through it carefully.
+
+**Annotator:** A story is [MASTER-CLASS-PLOT] **if both of the following are true**:  
+
+- **Either of the following is true**:  
+  - The story is [EMBEDDED-FORESHADOWING]  
+  - **Both of the following are true**:  
+    - The story is [STRUCTURAL-EPIC]  
+    - The story is [INTERROGATIVE-CONDITIONALITY]  
+
+- **Exactly one of the following is true**:  
+  - The story is [TREASURED-TRANSFORMATION]  
+  - The story is [SEASONAL-AESTHETIC]
+
+---
+
+**Interviewer:** Perfect—same logic, but much easier to “hear” as you annotate.
+
+**Annotator:** Exactly. The IDs, negations, AND/OR structure, and “exactly one” constraints are all preserved as written.

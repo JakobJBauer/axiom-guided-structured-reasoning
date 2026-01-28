@@ -1,0 +1,39 @@
+Think of this codebook as an old map kept by a librarian of tales — each label is a lantern, and each lantern only lights up when a story meets the exact signposts written beneath it. I will walk you through these lanterns one by one, keeping every label, every rule, and every logical stitch exactly as it appears on the map.
+
+[attr-7]
+A story is [attr-7] if The story uses superlative forms
+- Here the librarian pins a simple ribbon: whenever a tale reaches for the extremes — the tallest mountain, the bravest hero, the most terrible storm — the lantern [attr-7] glows. The rule is plain and direct.
+
+[attr-6]
+A story is [attr-6] if The story uses perfect aspect
+- Another lantern waits for grammar’s echo: if a story speaks in the perfect aspect (things that have happened, have been done, have left traces), then [attr-6] is lit. It’s a grammatical fingerprint, kept neat and unambiguous.
+
+[attr-5]
+A story is [attr-5] if The story is about lost civilizations
+- This label marks the territory of content: whenever the narrative wanders among ruins, forgotten cities, or cultures that vanished beneath sand and sea, the map declares it [attr-5].
+
+[attr-2]
+A story is [attr-2] if The story has juxtaposition
+- When the tale places two images, ideas, or moments side by side to create contrast or resonance, the [attr-2] lantern flickers — a sign that comparison is in play.
+
+[attr-4]
+A story is [attr-4] if The story has fewer than 160 words
+- The librarian keeps a strict measure: if a narrative fits in under 160 words, it is tagged [attr-4]. Small packages, precise judgments.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+- Now two lanterns must shine together. Only when a tale is both about lost civilizations and compact enough to be under 160 words does the compound lantern [attr-1] ignite. It’s the meeting of subject and brevity — a tiny epic.
+
+[attr-3]
+A story is [attr-3] if either of the following are true:
+- Both of the following are true:
+  - The story is [attr-7]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-2]
+- The final lantern is a little more nuanced, like a crossroads with two paths. [attr-3] lights when either of two paired conditions occurs: either the tale combines lofty, superlative language with the perfect aspect, or it pairs the perfect aspect with deliberate juxtaposition. In both cases the perfect aspect is central, but it shares the stage with different companions to create that ornate, reflective quality.
+
+That is the whole map — each bracketed name, each conditional line, every “both” and “either” preserved exactly as the librarian wrote them. Read it as a set of precise rules and also as a cast of lanterns: each one waits, quietly, for the story to meet the exact combination of signs and step into its light.

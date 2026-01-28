@@ -1,0 +1,154 @@
+Here’s the same codebook, rewritten to read like a friendly guide rather than a dry list — but don’t worry: every single node ID, logical test, and relationship stays exactly as it was. I’ve kept the logical connectors (either / both / exactly one / not) intact so you can use this for annotation and reasoning without ambiguity.
+
+[HAS-A-CLIFFHANGER]
+We mark a story [HAS-A-CLIFFHANGER] when it contains a cliffhanger — plain and simple: the story has a cliffhanger.
+
+[STYLE-MODERN]
+Use the label [STYLE-MODERN] when the story feels modern. If the story is modern, it gets [STYLE-MODERN].
+
+[USES-DISCOURSE-MARKERS]
+A story earns [USES-DISCOURSE-MARKERS] if it uses discourse markers — those little words and phrases that stitch sentences and thoughts together.
+
+[HAS-A-FLASHBACK]
+Tag a story [HAS-A-FLASHBACK] when it includes a flashback. If it has a flashback, it is [HAS-A-FLASHBACK].
+
+[THEME-PROBLEM-SOLVING]
+If the story’s theme centers on problem-solving, then it’s [THEME-PROBLEM-SOLVING]. That’s the criterion.
+
+[STARTS-WITH-ADJECTIVE]
+When the very beginning of the story opens with an adjective, label it [STARTS-WITH-ADJECTIVE]. In short: the story starts with an adjective → [STARTS-WITH-ADJECTIVE].
+
+[USES-WH-QUESTIONS]
+If the story uses wh-questions (who, what, where, when, why, how), it qualifies as [USES-WH-QUESTIONS].
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if it contains juxtaposition — contrasting elements placed side by side.
+
+[STARTS-WITH-ADVERB]
+If the story opens with an adverb, it should be tagged [STARTS-WITH-ADVERB].
+
+[THEME-HUMOR]
+When humor is a central theme, the story is [THEME-HUMOR].
+
+[LOW-READABILITY]
+We call a story [LOW-READABILITY] when its readability score falls below 86.4.
+
+[STYLE-HUMOROUS]
+If the story’s style is humorous, tag it [STYLE-HUMOROUS].
+
+[STYLE-MINIMALIST]
+Label a story [STYLE-MINIMALIST] when it follows a minimalist style.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] when its tone is lighthearted.
+
+[HIGH-READABILITY]
+If the story’s readability score is above 96.1, it’s [HIGH-READABILITY].
+
+[THEME-DECEPTION]
+Tag [THEME-DECEPTION] when deception is a theme of the story.
+
+[STYLE-PHILOSOPHICAL]
+If the story’s style is philosophical, use [STYLE-PHILOSOPHICAL].
+
+[STRUCTURAL-DEVICES]
+A story is [STRUCTURAL-DEVICES] if either of the following is true:
+- The story is [HAS-A-CLIFFHANGER]
+- exactly one of the following is true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is [HAS-JUXTAPOSITION]
+- both of the following are true:
+  - The story is [USES-DISCOURSE-MARKERS]
+  - The story is not [HAS-A-CLIFFHANGER]
+
+Think of [STRUCTURAL-DEVICES] as a catch-all for certain structural tricks: a cliffhanger qualifies outright; alternatively, a single occurrence of flashback or juxtaposition qualifies; and if discourse markers are present but there’s no cliffhanger, that combination also counts.
+
+[OPENING-PATTERN]
+A story is [OPENING-PATTERN] if both of the following are true:
+- either of the following is true:
+  - The story is [STARTS-WITH-ADJECTIVE]
+  - The story is [STARTS-WITH-ADVERB]
+- exactly one of the following is true:
+  - The story is [USES-WH-QUESTIONS]
+  - The story is [USES-DISCOURSE-MARKERS]
+
+So for an [OPENING-PATTERN] you need an opening word that’s an adjective or adverb, and then exactly one of two conversational choices in the opening: wh-questions or discourse markers — but not both.
+
+[STYLE-TONE]
+A story is [STYLE-TONE] if either of the following is true:
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-LIGHTHEARTED]
+  - The story is not [STYLE-MINIMALIST]
+- both of the following are true:
+  - The story is [STYLE-HUMOROUS]
+  - The story is not [STYLE-PHILOSOPHICAL]
+
+In other words, [STYLE-TONE] captures two modes: a modern, lighthearted story that isn’t minimalist, or a humorous story that isn’t philosophical.
+
+[THEMATIC-CORE]
+A story is [THEMATIC-CORE] if either of the following is true:
+- both of the following are true:
+  - The story is [THEME-PROBLEM-SOLVING]
+  - The story is [THEME-HUMOR]
+- exactly one of the following is true:
+  - The story is [THEME-DECEPTION]
+  - The story is [THEME-PROBLEM-SOLVING]
+
+So [THEMATIC-CORE] is either the combination of problem-solving plus humor, or exactly one of deception vs. problem-solving — but not both.
+
+[READABILITY-CLASS]
+A story is [READABILITY-CLASS] if exactly one of the following is true:
+- The story is [LOW-READABILITY]
+- The story is [HIGH-READABILITY]
+
+Pick one: low or high readability — exactly one must hold for [READABILITY-CLASS].
+
+[READABILITY-IMPACT]
+A story is [READABILITY-IMPACT] if both of the following are true:
+- The story is [READABILITY-CLASS]
+- either of the following is true:
+  - The story is [STYLE-LIGHTHEARTED]
+  - The story is not [LOW-READABILITY]
+
+So [READABILITY-IMPACT] needs the story to be classified into a readability class, and then either it’s lighthearted or it simply isn’t low readability.
+
+[ENGAGEMENT-PATTERN]
+A story is [ENGAGEMENT-PATTERN] if both of the following are true:
+- either of the following is true:
+  - The story is [STRUCTURAL-DEVICES]
+  - both of the following are true:
+    - The story is [OPENING-PATTERN]
+    - The story is not [HAS-A-CLIFFHANGER]
+- either of the following is true:
+  - The story is [STYLE-TONE]
+  - both of the following are true:
+    - The story is [THEMATIC-CORE]
+    - The story is not [STYLE-PHILOSOPHICAL]
+
+Picture [ENGAGEMENT-PATTERN] as the intersection of structure/opening choices and tone/themes: structurally interesting or a specific opening pattern (without a cliffhanger), combined with either the right style tone or a thematic core that isn’t philosophical.
+
+[AUDIENCE-READY]
+A story is [AUDIENCE-READY] if either of the following is true:
+- both of the following are true:
+  - The story is [READABILITY-IMPACT]
+  - The story is [STYLE-TONE]
+- exactly one of the following is true:
+  - The story is [STYLE-HUMOROUS]
+  - The story is [STYLE-MINIMALIST]
+
+[AUDIENCE-READY] signals a story that’s suitable for audiences either because it pairs readability impact with the right tone or because it’s uniquely one of humorous or minimalist in style (but not both).
+
+[OPTIMAL-ARC]
+A story is [OPTIMAL-ARC] if both of the following are true:
+- The story is [ENGAGEMENT-PATTERN]
+- either of the following is true:
+  - The story is [AUDIENCE-READY]
+  - both of the following are true:
+    - The story is [THEMATIC-CORE]
+    - The story is not [READABILITY-CLASS]
+
+Finally, [OPTIMAL-ARC] is the sweet spot: the story shows an [ENGAGEMENT-PATTERN] and is either [AUDIENCE-READY] or carries a thematic core while lacking a fixed readability classification.
+
+---
+
+That’s it — same logic, same node IDs, laid out in a calmer, more conversational tone so you can read and apply it easily. If you’d like, I can also produce a compact checklist or a flowchart-style view that follows the exact same logic for quick annotation.

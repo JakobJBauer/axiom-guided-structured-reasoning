@@ -1,0 +1,168 @@
+{
+  "nodes": [
+    {
+      "id": "starts-with-adjective",
+      "label": "Starts With Adjective",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-noun",
+      "label": "Starts With Noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-lighthearted",
+      "label": "Style Lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-surreal",
+      "label": "Style Surreal",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-humorous",
+      "label": "Style Humorous",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-problem-solving",
+      "label": "Theme Problem-Solving",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "Theme Deception",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "start-type-xor",
+      "label": "Start Type XOR",
+      "formula_type": "Xor",
+      "formula_args": [
+        "starts-with-adjective",
+        "starts-with-noun"
+      ]
+    },
+    {
+      "id": "tone-playful",
+      "label": "Tone Playful",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-lighthearted",
+            "style-humorous"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "style-surreal",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "theme-deception"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deception-or-problem",
+      "label": "Deception Or Problem",
+      "formula_type": "Or",
+      "formula_args": [
+        "theme-deception",
+        "theme-problem-solving"
+      ]
+    },
+    {
+      "id": "style-equality",
+      "label": "Style Equality",
+      "formula_type": "Equal",
+      "formula_args": [
+        "style-lighthearted",
+        "style-humorous"
+      ]
+    },
+    {
+      "id": "complex-story",
+      "label": "Complex Story",
+      "formula_type": "And",
+      "formula_args": [
+        "start-type-xor",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "tone-playful",
+            "deception-or-problem"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "starts-with-adjective",
+      "target": "start-type-xor"
+    },
+    {
+      "source": "starts-with-noun",
+      "target": "start-type-xor"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "tone-playful"
+    },
+    {
+      "source": "style-humorous",
+      "target": "tone-playful"
+    },
+    {
+      "source": "style-surreal",
+      "target": "tone-playful"
+    },
+    {
+      "source": "theme-deception",
+      "target": "tone-playful"
+    },
+    {
+      "source": "theme-deception",
+      "target": "deception-or-problem"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "deception-or-problem"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "style-equality"
+    },
+    {
+      "source": "style-humorous",
+      "target": "style-equality"
+    },
+    {
+      "source": "start-type-xor",
+      "target": "complex-story"
+    },
+    {
+      "source": "tone-playful",
+      "target": "complex-story"
+    },
+    {
+      "source": "deception-or-problem",
+      "target": "complex-story"
+    }
+  ]
+}

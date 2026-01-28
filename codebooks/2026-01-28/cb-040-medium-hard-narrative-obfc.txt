@@ -1,0 +1,67 @@
+Imagine an old curator in a great library of tales, walking the aisles and whispering rules into the spine of every story. Each rule is a little lantern that lights what a tale truly is. Below, the curator speaks plainly — part poetry, part law — but never changes the lanterns themselves. Each bracketed name is one of those lanterns, and each rule that follows is exact: the way the curator ties a lantern to a story.
+
+[attr-8]
+The curator taps a lantern labeled [attr-8] when a tale pulses with characters choosing, acting, and shaping their fate. The rule is simple and exact:
+A story is [attr-8] if The story has the theme Agency
+
+[attr-7]
+Some tales begin with a single sturdy word that sets the scene — a noun that stands at the gate. The curator notes such openings with this lantern:
+A story is [attr-7] if The story starts with a noun
+
+[attr-11]
+When a story’s horizon is filled with enormous forms — beasts and behemoths that dwarf the ordinary — the giant-creature lantern is lit:
+A story is [attr-11] if The story is about giant creatures
+
+[attr-9]
+There are tales that breathe gentleness, gestures of care and generosity. For those, the kindness lantern glows:
+A story is [attr-9] if The story has the theme Kindness
+
+[attr-3]
+Some stories are so clear and smooth to read they practically sing; the curator marks the clearest with a numerical standard:
+A story is [attr-3] if The story has readability score above 96.1
+
+[attr-12]
+Other stories carry a shimmer — creatures of mystery, spirits and beings of otherness. Those tales receive their own lantern:
+A story is [attr-12] if The story is about mystical creatures
+
+[attr-10]
+Some narratives are puzzles and journeys of cunning, where minds untangle knots and repair wrongs. The curator assigns them this mark:
+A story is [attr-10] if The story has the theme Problem-Solving
+
+[attr-4]
+Sometimes two lanterns merge into a single, rarer light: giant creatures that are also mystical. For that special fusion, the curator requires both conditions at once:
+A story is [attr-4] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-12]
+
+[attr-6]
+There are tales that wear either a problem-solver’s hat or an agent’s cloak — but not both. The curator insists on exclusivity for this marker:
+A story is [attr-6] if exactly one of the following is true:
+- The story is [attr-10]
+- The story is [attr-8]
+
+[attr-1]
+When a story combines a gentle heart with the single-mindedness of a solver-or-agent — kindness plus that exclusive quality — the curator crowns it with a special name:
+A story is [attr-1] if both of the following are true:
+- The story is [attr-9]
+- The story is [attr-6]
+
+[attr-5]
+Some tales begin boldly and not with a character-driven mandate of agency. If a story opens with a noun and does not carry agency as its theme, it earns an assertive opening mark:
+A story is [attr-5] if both of the following are true:
+- [attr-7] equals true
+- The story is not [attr-8]
+
+[attr-2]
+Finally, the curator’s most prized banner — the [attr-2] — is reserved for narratives that sparkle in a very particular constellation. A tale must first be one of the mystical giants; then it must satisfy one of two precise pathways. The rules read like strict lore:
+A story is [attr-2] if both of the following are true:
+- The story is [attr-4]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [attr-1]
+    - [attr-3] equals true
+  - both of the following are true:
+    - The story is [attr-5]
+    - [attr-11] is in [TOPIC-GIANT-CREATURES, TOPIC-MYSTICAL-CREATURES]
+
+So the curator walks on, lanterns clinking softly: each bracketed name exact, each condition preserved, each junction of logic untouched — a storytelling map that is both precise and, if you listen, quietly magical.

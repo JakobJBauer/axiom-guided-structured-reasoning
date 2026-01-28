@@ -1,0 +1,71 @@
+Codebook — Structured Reference for Annotation
+
+Purpose
+- Provide a clear, organized set of definitions and decision checks for annotators.
+- Preserve the exact logical relationships between nodes so reasoning remains consistent and reliable.
+
+Atomic (single-condition) nodes
+- [attr-7]
+  - Definition: A story is [attr-7] if The story uses perfect aspect.
+  - Annotation guidance:
+    - Look for verb forms that indicate the perfect aspect (e.g., has/have + past participle; had + past participle; has been + past participle).
+    - Mark this node true when the story’s narration or description explicitly employs perfect aspect.
+- [attr-5]
+  - Definition: A story is [attr-5] if The story is about cultural traditions.
+  - Annotation guidance:
+    - Identify content centered on rituals, customs, heritage practices, ceremonies, or community traditions.
+    - Mark true when the primary subject matter concerns cultural traditions.
+- [attr-6]
+  - Definition: A story is [attr-6] if The story is about the arts.
+  - Annotation guidance:
+    - Identify narratives focused on music, visual art, dance, theater, literature, crafts, or artistic practice and appreciation.
+    - Mark true when the arts are a main topic.
+- [attr-4]
+  - Definition: A story is [attr-4] if The story is lighthearted.
+  - Annotation guidance:
+    - Look for tone that is playful, cheerful, whimsical, or otherwise not serious or somber.
+    - Mark true when tone and style convey lightness rather than gravity.
+
+Composite (combined-condition) nodes
+- [attr-1]
+  - Definition: A story is [attr-1] if both of the following are true:
+    - The story is [attr-6]
+    - The story is [attr-5]
+  - How to decide:
+    - Confirm the story is about the arts AND that it specifically ties those arts to cultural traditions.
+    - Use both bullets as a checklist — both must hold to mark [attr-1] true.
+- [attr-3]
+  - Definition: A story is [attr-3] if all of the following are true:
+    - The story is [attr-1]
+    - The story is [attr-7]
+    - The story is not [attr-4]
+  - How to decide:
+    - First verify [attr-1] is true (arts connected with cultural traditions).
+    - Then confirm the narrative uses perfect aspect.
+    - Finally confirm the story does not have a lighthearted style (i.e., STYLE-LIGHTHEARTED is false).
+    - All three conditions must be satisfied to mark [attr-3] true.
+- [attr-2]
+  - Definition: A story is [attr-2] if both of the following are true:
+    - The story is [attr-1]
+    - The story is [attr-4]
+  - How to decide:
+    - Confirm the arts are connected to cultural traditions (ARTS-TRADITIONAL) AND the tone is lighthearted.
+    - Both bullets must hold to mark [attr-2] true.
+
+Quick annotation checklist (for each story)
+- Step 1: Evaluate atomic nodes
+  - Is the story about the arts? → [attr-6]
+  - Is the story about cultural traditions? → [attr-5]
+  - Does the story use perfect aspect? → [attr-7]
+  - Is the story lighthearted in style? → [attr-4]
+- Step 2: Apply composite rules
+  - If both [attr-6] and [attr-5] are true → mark [attr-1] true.
+  - If [attr-1] AND [attr-7] AND NOT [attr-4] → mark [attr-3] true.
+  - If [attr-1] AND [attr-4] → mark [attr-2] true.
+
+Notes on logical relations (preserved semantics)
+- “Both of the following are true” indicates a logical AND between exactly the listed conditions.
+- “All of the following are true” indicates a logical AND across the listed conditions; presence of “not” indicates negation of that condition.
+- Composite nodes depend only on the specified child nodes; no other attributes should be inferred as required.
+
+Use this structured guide to ensure consistent, accurate annotations while keeping the original logical structure and node identifiers intact.

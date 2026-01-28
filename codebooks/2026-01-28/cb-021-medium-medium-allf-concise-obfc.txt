@@ -1,0 +1,48 @@
+[attr-4]
+A story is [attr-4] if it begins with an adjective.
+
+[attr-5]
+A story is [attr-5] if it begins with a noun.
+
+[attr-8]
+A story is [attr-8] if its style is lighthearted.
+
+[attr-9]
+A story is [attr-9] if its style is surreal.
+
+[attr-7]
+A story is [attr-7] if its style is humorous.
+
+[attr-11]
+A story is [attr-11] if its theme is Problem-Solving.
+
+[attr-10]
+A story is [attr-10] if its theme is Deception.
+
+[attr-3]
+A story is [attr-3] if exactly one of the following is true:
+- The story is [attr-4]
+- The story is [attr-5]
+
+[attr-12]
+A story is [attr-12] if either of the following is true:
+- The story's style is in the set { [attr-8], [attr-7] }
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is not [attr-10]
+
+[attr-2]
+A story is [attr-2] if either of the following is true:
+- The story is [attr-10]
+- The story is [attr-11]
+
+[attr-6]
+A story is [attr-6] if the following equality holds:
+- [attr-8] = [attr-7]
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-3]
+- Exactly one of the following is true:
+  - The story is [attr-12]
+  - The story is [attr-2]

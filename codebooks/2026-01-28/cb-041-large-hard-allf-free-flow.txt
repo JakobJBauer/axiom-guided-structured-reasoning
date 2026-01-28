@@ -1,0 +1,85 @@
+Think of this as a friendly guide you can read like a conversation about how we label stories — but rest assured, every logical link, every [BRACKETED] ID, and every operator stays exactly as it was. I’ll walk you through each label in plain, flowing language while keeping the original structure intact.
+
+[SHORT-STORY]
+Call a piece a [SHORT-STORY] when it’s very brief: the whole story totals fewer than 160 words.
+
+[THEME-KINDNESS]
+If a story centers on Kindness as its theme, we mark it [THEME-KINDNESS].
+
+[THEME-HELPING-OTHERS]
+When the theme is Helping Others, the story gets the label [THEME-HELPING-OTHERS].
+
+[THEME-PROBLEM-SOLVING]
+If the story is about Problem-Solving, it’s tagged [THEME-PROBLEM-SOLVING].
+
+[STYLE-PHILOSOPHICAL]
+When a story takes on a reflective, philosophical tone, call it [STYLE-PHILOSOPHICAL].
+
+[HIGH-READABILITY]
+A story earns [HIGH-READABILITY] when its readability score is above 96.1.
+
+[STYLE-PLAYFUL]
+If the story feels bright and playful, it’s [STYLE-PLAYFUL].
+
+[THEME-HUMOR]
+When Humor is the theme, the story is [THEME-HUMOR].
+
+[STYLE-HUMOROUS]
+If the storytelling itself is humorous, mark it [STYLE-HUMOROUS].
+
+[HAS-A-STORY-WITHIN-A-STORY]
+When a tale includes another tale inside it — a story within the story — we use [HAS-A-STORY-WITHIN-A-STORY].
+
+[TOPIC-MYSTICAL-CREATURES]
+If the subject matter is mystical creatures, label the story [TOPIC-MYSTICAL-CREATURES].
+
+[HAS-A-RED-HERRING]
+When the narrative deliberately plants a misleading clue — a red herring — tag it [HAS-A-RED-HERRING].
+
+[KINDNESS-HELPING]
+A story is [KINDNESS-HELPING] if both of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [THEME-HELPING-OTHERS]
+(And both must hold simultaneously.)
+
+[LIGHT-HEARTED]
+A story is [LIGHT-HEARTED] if exactly one of the following is true (Xor):
+- The story is [STYLE-PLAYFUL]
+- The story is [STYLE-HUMOROUS]
+
+[THEME-IN-CORE-SET]
+A story is [THEME-IN-CORE-SET] if the story's dominant theme is In the following set:
+- [THEME-KINDNESS], [THEME-HELPING-OTHERS], [THEME-PROBLEM-SOLVING]
+(Use In to check membership among those theme nodes.)
+
+[BALANCED-TONE]
+A story is [BALANCED-TONE] if the following Equal relationship holds:
+- The presence of [STYLE-PHILOSOPHICAL] Equal the presence of [STYLE-HUMOROUS]
+(They are Equal when either both are present or both are absent.)
+
+[MYSTICAL-ALLEGORY]
+A story is [MYSTICAL-ALLEGORY] if both of the following are true:
+- The story is [TOPIC-MYSTICAL-CREATURES]
+- The story is [HAS-A-STORY-WITHIN-A-STORY] And the story is [STYLE-PHILOSOPHICAL]
+(This nests an And inside an And to form an allegorical structure.)
+
+[COMPLEX-ARC]
+A story is [COMPLEX-ARC] if all of the following are true:
+- Either of the following is true (Or):
+  - The story is [KINDNESS-HELPING]
+  - The story is [THEME-PROBLEM-SOLVING]
+- Exactly one of the following is true (Xor):
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is Not [SHORT-STORY] Or the story is [HIGH-READABILITY]
+(Uses Not to exclude short stories unless they also meet HIGH-READABILITY; combines Or and Xor for nuanced arc structure.)
+
+[RECOMMENDABLE-COMPOSITION]
+A story is [RECOMMENDABLE-COMPOSITION] if both of the following are true:
+- The story is [COMPLEX-ARC] And the story is [BALANCED-TONE]
+- The story is [THEME-IN-CORE-SET] And either of the following is true (Or):
+  - The story is [LIGHT-HEARTED]
+  - The story is [MYSTICAL-ALLEGORY]
+(This node nests multiple logical operators to form a deep, recommendable composition: And at the top level, Or inside a branch, and references In, Equal, Not, and Xor through its subordinate nodes.)
+
+That’s the whole set, rewritten to read more like a conversation while keeping every ID, every logical connection, and every operator exactly as in the original. Use these labels and relationships just as you would before — only now they might be a little easier to talk about.

@@ -1,0 +1,111 @@
+Interviewer: Let's walk through this codebook together. First, can you tell me what [attr-7] means?
+
+Expert: Sure. The formal definition is:
+- "A story is [attr-7] if The story has a story within a story."
+
+In plain terms: mark [attr-7] true when the narrative contains an embedded tale — a story told inside the main story.
+
+Interviewer: And [attr-11]?
+
+Expert: The formal line is:
+- "A story is [attr-11] if The story has the theme Magic."
+
+So, tag [attr-11] when magic is a theme in the story.
+
+Interviewer: How about [attr-6]?
+
+Expert: Formally:
+- "A story is [attr-6] if The story has a flashback."
+
+In practice: flag [attr-6] when a portion of the narrative moves back in time to earlier events.
+
+Interviewer: What's [attr-12]?
+
+Expert: Formally:
+- "A story is [attr-12] if The story is about the arts."
+
+So use [attr-12] for stories focused on artistic subjects (painting, music, dance, etc.).
+
+Interviewer: And [attr-10]?
+
+Expert: Formally:
+- "A story is [attr-10] if The story is minimalist."
+
+Use [attr-10] for narratives that are stylistically spare or minimal.
+
+Interviewer: What does [attr-8] represent?
+
+Expert: The formal definition:
+- "A story is [attr-8] if The story has circular narrative structure."
+
+That means the plot or sequence loops back to where it began — mark [attr-8] when that structure is present.
+
+Interviewer: Now we get to some compound definitions. Explain [attr-5].
+
+Expert: The exact definition is:
+- "A story is [attr-5] if exactly one of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-6]"
+
+So [attr-5] is true when exactly one of those two devices appears — either an embedded story or a flashback, but not both.
+
+Interviewer: And [attr-4]?
+
+Expert: The formal statement:
+- "A story is [attr-4] if the truth value of [attr-7] equals the truth value of [attr-8]"
+
+In other words, [attr-4] is true when those two nodes share the same truth value — both present or both absent.
+
+Interviewer: What's [attr-9]?
+
+Expert: Formally:
+- "A story is [attr-9] if the story's primary theme or topic is in the set {[attr-11], [attr-12]}"
+
+That means mark [attr-9] when the story's primary classification is either magic-themed or about the arts.
+
+Interviewer: The next one looks more complex: [attr-3]. Can you break it down exactly as defined?
+
+Expert: Absolutely. The node is defined verbatim as:
+- "A story is [attr-3] if both of the following are true:
+  - Either of the following are true:
+    - The story is [attr-5]
+    - The story is [attr-4]
+  - The story is not [attr-10] and (the story is [attr-8] or the story is [attr-6])"
+
+So to mark [attr-3] true, two things must hold:
+1. At least one of the device conditions holds: either [attr-5] is true or [attr-4] is true.
+2. Additionally, the story must not be minimalist (i.e., not [attr-10]) and must have either a circular structure or a flashback (i.e., [attr-8] or [attr-6] is true).
+
+Interviewer: Got it. What about [attr-1]?
+
+Expert: The codebook states:
+- "A story is [attr-1] if both of the following are true:
+  - The story is [attr-9]
+  - Either of the following are true:
+    - The story is [attr-3]
+    - The story is [attr-10]"
+
+So [attr-1] is true when the story belongs to the magic-or-arts set ([attr-9]) and, in addition, is either a complex-narrative-core or is minimalist in style.
+
+Interviewer: Last one — [attr-2]. This looks like a final filter.
+
+Expert: The precise definition:
+- "A story is [attr-2] if both of the following are true:
+  - The story is [attr-1]
+  - Exactly one of the following is true:
+    - The story is [attr-4]
+    - The story is not [attr-6]"
+
+So to set [attr-2] true you need:
+1. The story must already satisfy [attr-1].
+2. Exactly one of the two conditions must hold: either [attr-4] is true, or the story does not have a flashback ([attr-6] is false). That "exactly one" means these two conditions cannot both be true or both false — precisely one must be true.
+
+Interviewer: Thanks — that's a helpful walkthrough. Any final tips for annotators using this transcript-style codebook?
+
+Expert: Keep these points in mind:
+- Use the bracketed node IDs exactly as written when you annotate.
+- Follow the logical relationships as stated: whenever a compound node refers to other nodes, evaluate those other nodes first.
+- Remember the exact-mode operators: "exactly one" means XOR (exclusive or); "equals the truth value of" means strict equivalence.
+- If you’re unsure about a node like [attr-3] or [attr-2], check each subcondition step by step: evaluate the inner nodes, then apply the outer combination.
+
+Interviewer: Excellent. That keeps the logical structure intact and makes the rules easier to follow.

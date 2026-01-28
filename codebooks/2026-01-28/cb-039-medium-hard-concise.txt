@@ -1,0 +1,54 @@
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+[THEME-AGENCY]
+A story is [THEME-AGENCY] if the story has the theme Agency.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if the story starts with an adjective.
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if the story has juxtaposition.
+
+[OPENING-PRIMACY]
+A story is [OPENING-PRIMACY] if either of the following is true:
+- The story is [STARTS-WITH-NOUN]
+- The story is [STARTS-WITH-ADJECTIVE] xor [STARTS-WITH-NOUN]
+
+[STRUCTURED-DECEPTION]
+A story is [STRUCTURED-DECEPTION] if both of the following are true:
+- The story is [OPENING-PRIMACY]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [THEME-DECEPTION]
+    - The story is [TOPIC-HIDDEN-TREASURES]
+  - Either of the following is true:
+    - The story is [HAS-CHECKHOVS-GUN] xor [THEME-AGENCY]
+    - The story is [THEME-DECEPTION] and not [THEME-AGENCY]
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if all of the following are true:
+- The story is [STRUCTURED-DECEPTION]
+- Not both of the following are true:
+  - The story is [THEME-HELPING-OTHERS]
+  - The story is [STYLE-PHILOSOPHICAL]
+- Either of the following is true:
+  - The story is [HAS-JUXTAPOSITION]
+  - Both of the following are true:
+    - The story is [STARTS-WITH-NOUN] equals true
+    - The story is [STARTS-WITH-ADJECTIVE] equals false

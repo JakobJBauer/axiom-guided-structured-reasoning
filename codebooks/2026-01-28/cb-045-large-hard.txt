@@ -1,0 +1,133 @@
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if the story has the theme Magic.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if the story has the theme Innovation.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if the story is about the arts.
+
+[LONG-STORY]
+A story is [LONG-STORY] if the story has more than 375 words.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if the story has the theme Growth.
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] if the story is about magical lands.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if the story has the theme Hardship.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if the story starts with a adverb.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if the story starts with a adjective.
+
+[STARTS-WITH-NONNOUN]
+A story is [STARTS-WITH-NONNOUN] if it is not [STARTS-WITH-NOUN].
+
+[STRUCTURAL-EPIC]
+A story is [STRUCTURAL-EPIC] if both of the following are true:
+- The story is [LONG-STORY]
+- The story is [MANY-PARAGRAPHS]
+
+[EXPERIMENTAL-VOICE]
+A story is [EXPERIMENTAL-VOICE] if either of the following is true:
+- Exactly one of the following is true: the story is [STARTS-WITH-ADVERB] or the story is [STARTS-WITH-ADJECTIVE]
+- Both of the following are true:
+  - The story is [STARTS-WITH-NONNOUN]
+  - The story is [USES-WH-QUESTIONS]
+
+[MYTHIC-ENGINEERING]
+A story is [MYTHIC-ENGINEERING] if both of the following are true:
+- Either of the following is true:
+  - The story is [THEME-MAGIC]
+  - The story is [TOPIC-MAGICAL-LANDS]
+- Either of the following is true:
+  - The story is [THEME-INNOVATION]
+  - The story is [TOPIC-TIME-TRAVEL]
+
+[INTERROGATIVE-CONDITIONALITY]
+A story is [INTERROGATIVE-CONDITIONALITY] if both of the following are true:
+- The story is [USES-CONDITIONAL-MOOD]
+- Either of the following is true:
+  - The story is [USES-WH-QUESTIONS]
+  - The story is [LOW-READABILITY]
+
+[EMBEDDED-FORESHADOWING]
+A story is [EMBEDDED-FORESHADOWING] if both of the following are true:
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- Either of the following is true:
+  - The story is [HAS-CHECKHOVS-GUN]
+  - Both of the following are true:
+    - The story is [USES-SUPERLATIVE-FORMS]
+    - It is not [USES-CONDITIONAL-MOOD]
+
+[TREASURED-TRANSFORMATION]
+A story is [TREASURED-TRANSFORMATION] if both of the following are true:
+- The story is [TOPIC-HIDDEN-TREASURES]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [THEME-GROWTH]
+    - The story is [HAS-A-MORAL-LESSON]
+  - Both of the following are true:
+    - The story is [THEME-HARDSHIP]
+    - It is not [HAS-A-MORAL-LESSON]
+
+[SEASONAL-AESTHETIC]
+A story is [SEASONAL-AESTHETIC] if both of the following are true:
+- The story is [TOPIC-SEASONAL-CHANGES]
+- Either of the following is true:
+  - The story is [TOPIC-THE-ARTS]
+  - Both of the following are true:
+    - The story is [USES-SUPERLATIVE-FORMS]
+    - It is not [LOW-READABILITY]
+
+[MASTER-CLASS-PLOT]
+A story is [MASTER-CLASS-PLOT] if both of the following are true:
+- Either of the following is true:
+  - The story is [EMBEDDED-FORESHADOWING]
+  - Both of the following are true:
+    - The story is [STRUCTURAL-EPIC]
+    - The story is [INTERROGATIVE-CONDITIONALITY]
+- Exactly one of the following is true:
+  - The story is [TREASURED-TRANSFORMATION]
+  - The story is [SEASONAL-AESTHETIC]

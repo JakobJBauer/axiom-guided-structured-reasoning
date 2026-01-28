@@ -1,0 +1,53 @@
+Interviewer: Let's go through this codebook line by line. First, what is [USES-SUPERLATIVE-FORMS]?
+
+Expert: 
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if The story uses superlative forms.
+
+Interviewer: Clear. And what about [USES-PERFECT-ASPECT]?
+
+Expert:
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+
+Interviewer: Good. Now, what does [TOPIC-LOST-CIVILIZATIONS] mean?
+
+Expert:
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations.
+
+Interviewer: Got it. How about [HAS-JUXTAPOSITION]?
+
+Expert:
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if The story has juxtaposition.
+
+Interviewer: And the length-based tag [SHORT-STORY]?
+
+Expert:
+[SHORT-STORY]
+A story is [SHORT-STORY] if The story has fewer than 160 words.
+
+Interviewer: Now for the composed nodes. Walk me through [EPICALLY-CONCISE-LOST].
+
+Expert:
+[EPICALLY-CONCISE-LOST]
+A story is [EPICALLY-CONCISE-LOST] if both of the following are true:
+- The story is [TOPIC-LOST-CIVILIZATIONS]
+- The story is [SHORT-STORY]
+
+Interviewer: So to label something [EPICALLY-CONCISE-LOST], both conditions must hold at once. Understood. Lastly, explain [ORNATE-REFLECTIVE].
+
+Expert:
+[ORNATE-REFLECTIVE]
+A story is [ORNATE-REFLECTIVE] if either of the following are true:
+- Both of the following are true:
+  - The story is [USES-SUPERLATIVE-FORMS]
+  - The story is [USES-PERFECT-ASPECT]
+- Both of the following are true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [HAS-JUXTAPOSITION]
+
+Interviewer: So for [ORNATE-REFLECTIVE], we accept either of two conjunctions: (1) superlatives plus perfect aspect, or (2) perfect aspect plus juxtaposition.
+
+Expert: Exactly. That keeps the logical structure intact: the node requires one of the listed options, and each option itself requires both of its subconditions.

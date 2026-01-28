@@ -1,0 +1,40 @@
+Overview
+- Purpose: Define annotation labels (node IDs in brackets) and clear criteria for when a story should be assigned each label.
+- Format: Each node is listed with a concise condition to guide annotators. Composite nodes explicitly state the logical relationship between component nodes.
+
+Node definitions
+- [TOPIC-CULTURAL-TRADITIONS]
+  - Condition: Assign this label if the story is about cultural traditions.
+  - Guidance: Use when traditions, rituals, customs, or culturally-specific practices are a primary topic or focus of the story.
+
+- [HAS-A-MORAL-LESSON]
+  - Condition: Assign this label if the story contains a moral lesson.
+  - Guidance: Use when the narrative communicates an explicit or implicit lesson about right/wrong, values, or expected behavior.
+
+- [STARTS-WITH-ADVERB]
+  - Condition: Assign this label if the story begins with an adverb (for example: "Suddenly," "Quickly," "Silently").
+  - Guidance: Only consider the very first word/token of the story; if that first unit is an adverb, label accordingly.
+
+- [THEME-MAGIC]
+  - Condition: Assign this label if the story has the theme "Magic."
+  - Guidance: Use when magical elements, supernatural abilities, spells, enchanted objects, or the concept of magic is a primary theme.
+
+Composite node (logical rule)
+- [TRADITIONAL-MAGIC-TEACHING]
+  - Rule: This label applies only when all of the following are true:
+    - The story is [TOPIC-CULTURAL-TRADITIONS]
+    - The story is [THEME-MAGIC]
+    - The story is [HAS-A-MORAL-LESSON]
+  - Logical operation: AND (all listed component nodes must be present for [TRADITIONAL-MAGIC-TEACHING] to hold).
+
+Quick annotation checklist
+- To decide [TRADITIONAL-MAGIC-TEACHING], confirm:
+  1. Is the story about cultural traditions? → [TOPIC-CULTURAL-TRADITIONS]
+  2. Does the story center on magic as a theme? → [THEME-MAGIC]
+  3. Does the story include a moral lesson? → [HAS-A-MORAL-LESSON]
+- If and only if all three answers are yes, assign [TRADITIONAL-MAGIC-TEACHING].
+
+Notes for annotators
+- Do not change node IDs; use the exact bracketed labels when tagging.
+- Preserve the logical relationships: composite nodes require the specified component nodes exactly as listed.
+- Apply each node independently unless a composite node explicitly combines them (as above).

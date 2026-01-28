@@ -1,0 +1,141 @@
+Interviewer: Let's go through this codebook node by node. First: what does [HAS-A-RED-HERRING] mean?
+
+Expert: A story is [HAS-A-RED-HERRING] if The story has a Red Herring.
+
+Interviewer: Clear. And [MANY-PARAGRAPHS]?
+
+Expert: A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs.
+
+Interviewer: What about tone — [STYLE-LIGHTHEARTED]?
+
+Expert: A story is [STYLE-LIGHTHEARTED] if The story is lighthearted.
+
+Interviewer: Any nodes for plot devices?
+
+Expert: Yes. A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun.
+
+Interviewer: Themes? Start with [THEME-MAGIC].
+
+Expert: A story is [THEME-MAGIC] if The story has the theme Magic.
+
+Interviewer: And topics like the arts?
+
+Expert: A story is [TOPIC-THE-ARTS] if The story is about the arts.
+
+Interviewer: Grammatical features?
+
+Expert: A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+
+Interviewer: More themes?
+
+Expert: A story is [THEME-INNOVATION] if The story has the theme Innovation.
+A story is [THEME-GROWTH] if The story has the theme Growth.
+
+Interviewer: Styles again?
+
+Expert: A story is [STYLE-CLASSIC] if The story is classic.
+A story is [STARTS-WITH-PREPOSITION] if The story starts with a preposition.
+A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective.
+A story is [STYLE-MODERN] if The story is modern.
+
+Interviewer: Topics related to culture and history?
+
+Expert: A story is [TOPIC-CULTURAL-TRADITIONS] if The story is about cultural traditions.
+A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations.
+A story is [TOPIC-BYGONE-ERAS] if The story is about bygone eras.
+
+Interviewer: Any theme for deception?
+
+Expert: A story is [THEME-DECEPTION] if The story has the theme Deception.
+
+Interviewer: Questions used in the story?
+
+Expert: A story is [USES-WH-QUESTIONS] if The story uses wh-questions.
+
+Interviewer: Okay, now for the compound nodes. How is [NARRATIVE-SURPRISE] defined? This one looked nested.
+
+Expert: Right, [NARRATIVE-SURPRISE] requires that both of the following are true:
+- Either of the following is true:
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [HAS-CHECKHOVS-GUN]
+- Either of the following is true:
+  - Exactly one of [THEME-DECEPTION] and [USES-WH-QUESTIONS] is true
+  - The story is [MANY-PARAGRAPHS]
+
+Interviewer: So it needs a plot device (red herring or Chekhov's gun) and either a specific exclusivity between deception and wh-questions or lots of paragraphs. Got it.
+
+Interviewer: Next composite: [RICH-LENGTH].
+
+Expert: A story is [RICH-LENGTH] if both of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- The story is [USES-PERFECT-ASPECT]
+
+Interviewer: And [CLASSIC-VS-MODERN]? That had a negation in it.
+
+Expert: Yes. [CLASSIC-VS-MODERN] is true if all of these hold:
+- Exactly one of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [STYLE-MODERN]
+- The story is not [STYLE-LIGHTHEARTED]
+- Either of the following is true:
+  - The story is [STARTS-WITH-PREPOSITION]
+  - The story is [STARTS-WITH-ADJECTIVE]
+
+Interviewer: So it's exclusively classic or modern, not lighthearted, and begins with either a preposition or an adjective.
+
+Interviewer: What about [CULTURAL-PAST-THEME]?
+
+Expert: [CULTURAL-PAST-THEME] is true if either of the following is true:
+- Both of the following are true:
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+  - The story is [TOPIC-BYGONE-ERAS]
+- Both of the following are true:
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+  - Exactly one of [THEME-GROWTH] and [THEME-DECEPTION] is true
+
+Interviewer: So it can be about cultural traditions and bygone eras together, or about lost civilizations with an exclusive choice between growth and deception.
+
+Interviewer: Explain [INNOVATION-GROWTH-MIX].
+
+Expert: [INNOVATION-GROWTH-MIX] is true if either of the following is true:
+- Both of the following are true:
+  - The story is [THEME-INNOVATION]
+  - The story is [THEME-GROWTH]
+- All of the following are true:
+  - The story is [THEME-INNOVATION]
+  - The story is [TOPIC-THE-ARTS]
+  - The story is not [THEME-GROWTH]
+
+Interviewer: So either innovation and growth appear together, or innovation with the arts but explicitly not growth.
+
+Interviewer: And [ARTS-ROOT]?
+
+Expert: [ARTS-ROOT] is true if both of the following are true:
+- The story is [TOPIC-THE-ARTS]
+- Either of the following is true:
+  - The story is [INNOVATION-GROWTH-MIX]
+  - The story is [CULTURAL-PAST-THEME]
+
+Interviewer: That links the arts topic to either innovation-growth mixing or cultural past themes.
+
+Interviewer: Finally, the big one: [EPIC-ARTS-MYSTERY]. How is that assembled?
+
+Expert: [EPIC-ARTS-MYSTERY] is true if both of the following are true:
+- Either of the following is true:
+  - The story is [ARTS-ROOT]
+  - Both of the following are true:
+    - The story is [NARRATIVE-SURPRISE]
+    - The story is [RICH-LENGTH]
+- Either of the following is true:
+  - The story is [CLASSIC-VS-MODERN]
+  - Both of the following are true:
+    - The story is [CULTURAL-PAST-THEME]
+    - The story is [INNOVATION-GROWTH-MIX]
+
+Interviewer: So to get [EPIC-ARTS-MYSTERY], you need either an arts root or a surprise-rich narrative, and then either classic-vs-modern or a pairing of cultural-past-theme with innovation-growth-mix.
+
+Expert: Exactly — the logical structure is preserved: the top-level requirement is two conjunctive branches, and each branch is an either/or of the specified conditions.
+
+Interviewer: Great. That wraps up the nodes. One last check: you didn't change any node IDs, logical operators, or the underlying relationships, right?
+
+Expert: Correct. Every node ID remains in [BRACKET] format exactly as provided, all logical operations (Either, Both, Exactly one, All, not) and their relationships are preserved, and no nodes were added or removed. This transcript simply puts the same codebook into a conversational question-and-answer form for readability and ease of use.

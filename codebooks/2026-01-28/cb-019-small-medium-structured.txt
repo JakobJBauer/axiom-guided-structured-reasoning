@@ -1,0 +1,73 @@
+Codebook — structured view for annotation
+
+Purpose
+- Provide concise, unambiguous rules for assigning the labels below.
+- Each label is defined by a logical rule that must be followed exactly.
+- Keep the node IDs in [BRACKET] format and keep all logical operators and relationships unchanged.
+
+Nodes (definitions and annotation checks)
+
+1) [USES-SUPERLATIVE-FORMS]
+- Definition:
+  - A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+- Annotator check:
+  - Look for superlative adjectives/adverbs (e.g., words that mark highest degree such as “biggest,” “most,” “least,” “best,” “worst”).
+
+2) [TOPIC-LOST-CIVILIZATIONS]
+- Definition:
+  - A story is [TOPIC-LOST-CIVILIZATIONS] if the story is about lost civilizations.
+- Annotator check:
+  - The main subject or theme concerns ancient or vanished societies, ruins, or civilizations that have been lost.
+
+3) [STARTS-WITH-NOUN]
+- Definition:
+  - A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+- Annotator check:
+  - The very first token of the story is a noun (proper or common). Verify initial word class.
+
+4) [THEME-HUMOR]
+- Definition:
+  - A story is [THEME-HUMOR] if the story has the theme Humor.
+- Annotator check:
+  - The story’s tone, intent, or primary theme is comedic, satirical, or meant to elicit amusement.
+
+5) [LIGHTHEARTED-INTRO]
+- Logical rule:
+  - A story is [LIGHTHEARTED-INTRO] if all of the following are true:
+    - The story is [STARTS-WITH-NOUN]
+    - The story is [THEME-HUMOR]
+    - The story is not [USES-SUPERLATIVE-FORMS]
+- Notes for annotators:
+  - This label requires all three conditions to hold simultaneously (logical AND of the three bullets).
+  - Pay attention to the “not” condition: the absence of superlative forms is required.
+
+6) [MYTHIC-SATIRE]
+- Logical rule:
+  - A story is [MYTHIC-SATIRE] if both of the following are true:
+    - The story is [TOPIC-LOST-CIVILIZATIONS]
+    - Exactly one of the following is true:
+      - The story is [LIGHTHEARTED-INTRO]
+      - The story is [USES-SUPERLATIVE-FORMS]
+- Notes for annotators:
+  - This label requires two things:
+    1) The story must be about lost civilizations.
+    2) Between [LIGHTHEARTED-INTRO] and [USES-SUPERLATIVE-FORMS], exactly one must hold (exclusive OR).
+  - If neither or both of those two are true, do not assign [MYTHIC-SATIRE].
+
+Quick logical cheat-sheet (for clarity)
+- [LIGHTHEARTED-INTRO] = [STARTS-WITH-NOUN] AND [THEME-HUMOR] AND NOT [USES-SUPERLATIVE-FORMS]
+- [MYTHIC-SATIRE] = [TOPIC-LOST-CIVILIZATIONS] AND (exactly one of ([LIGHTHEARTED-INTRO], [USES-SUPERLATIVE-FORMS]))
+
+Annotation procedure (recommended)
+- Step 1: Identify basic properties:
+  - Does the story start with a noun? → mark [STARTS-WITH-NOUN] if yes.
+  - Is the theme humor? → mark [THEME-HUMOR] if yes.
+  - Does the story use superlative forms? → mark [USES-SUPERLATIVE-FORMS] if yes.
+  - Is it about lost civilizations? → mark [TOPIC-LOST-CIVILIZATIONS] if yes.
+- Step 2: Derive composed labels:
+  - Assign [LIGHTHEARTED-INTRO] only if all three constituent conditions (including NOT) hold.
+  - Assign [MYTHIC-SATIRE] only if [TOPIC-LOST-CIVILIZATIONS] holds AND exactly one of ([LIGHTHEARTED-INTRO], [USES-SUPERLATIVE-FORMS]) holds.
+
+End note
+- Do not alter node IDs or the logical relationships when applying labels.
+- Follow the exact logical operators as stated (AND, NOT, Exactly one).

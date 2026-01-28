@@ -1,0 +1,90 @@
+{
+  "nodes": [
+    {
+      "id": "attr-2",
+      "label": "Story has a flashback",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Story uses wh-questions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Story uses discourse markers",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Exactly one of attr-6 and attr-5",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-6",
+        "attr-5"
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "attr-2 and not attr-3",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-2",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-4",
+      "label": "In {attr-3, attr-1} or equal to attr-2",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-3",
+            "attr-1"
+          ]
+        },
+        "attr-2"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-6",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-4"
+    }
+  ]
+}

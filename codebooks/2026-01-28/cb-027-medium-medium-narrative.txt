@@ -1,0 +1,58 @@
+Imagine a small taxonomy of tales—an atlas of labels that whet the imagination and, at the same time, demand precision. Each label in this atlas is a lantern: it lights up only when a story walks into its circle of definition. Below, each lantern is introduced with a little flourish, then shown exactly how it decides whether a tale belongs under its glow.
+
+[STARTS-WITH-ADVERB]
+There is a quicksilver badge for openings that leap into motion: a single word that sets the scene by describing how something happens.  
+A story is [STARTS-WITH-ADVERB] if The story starts with a adverb.
+
+[STYLE-CLASSIC]
+Some tales wear the patina of tradition — rhythms, voice, and structure that feel timeless. That is the home of the classic.  
+A story is [STYLE-CLASSIC] if The story is classic.
+
+[LONG-STORY]
+Other tales stretch wide across pages, building scenes and patience in equal measure. The guard here measures length.  
+A story is [LONG-STORY] if The story has more than 375 words.
+
+[TOPIC-GIANT-CREATURES]
+There is a label for stories whose horizons are populated by massive beings — the stomp and shadow of creatures that dwarf towns and tempers.  
+A story is [TOPIC-GIANT-CREATURES] if The story is about giant creatures.
+
+[THEME-DECEPTION]
+Some narratives are woven around trickery, concealment, and misdirection; this theme marks that strand.  
+A story is [THEME-DECEPTION] if The story has the theme Deception.
+
+[TOPIC-HIDDEN-TREASURES]
+There is also a compass for tales driven by buried maps, secret chests, and the hidden promise of riches.  
+A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures.
+
+[AMPHIBIOUS-EPIC]
+Picture an epic that moves between domain and domain—long enough to be an odyssey, populated by towering beasts, and wearing a modern coat instead of a classical one. This badge lights up only when every part of that picture is true.  
+A story is [AMPHIBIOUS-EPIC] if all of the following are true:
+- The story is [LONG-STORY]
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is not [STYLE-CLASSIC]
+
+[MISLEADING-QUEST]
+Some quests promise treasure but hide their true aim behind guile. This label collects tales where deception and hidden spoils walk together — and either the opening leaps with an adverb or the tale refuses the classic mold.  
+A story is [MISLEADING-QUEST] if both of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is [TOPIC-HIDDEN-TREASURES]
+- Either of the following is true:
+  - The story is [STARTS-WITH-ADVERB]
+  - The story is not [STYLE-CLASSIC]
+
+[HYBRID-TALE]
+Sometimes two distinct ideas cross paths, but the label calls for exclusivity: exactly one of the two flags must be raised. It celebrates the stories that are one kind of hybrid or the other — but not both.  
+A story is [HYBRID-TALE] if exactly one of the following is true:
+- The story is [AMPHIBIOUS-EPIC]
+- The story is [MISLEADING-QUEST]
+
+[COMPLEX-ARTIFACT]
+Finally, imagine a carefully engineered artifact of storytelling: it bears the mark of being a single-type hybrid, it must either have the timeless cadence of the classic or the breadth of a long story, and it refuses to begin with an adverb. Only when all these gates open together does this label apply.  
+A story is [COMPLEX-ARTIFACT] if all of the following are true:
+- The story is [HYBRID-TALE]
+- Either of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [LONG-STORY]
+- The story is not [STARTS-WITH-ADVERB]
+
+Read these lantern-labels as both map and rulebook: each bracketed name is exact, each logical gate is preserved, and the relationships between them form the pathways by which a tale earns its place.

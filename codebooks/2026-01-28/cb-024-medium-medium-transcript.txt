@@ -1,0 +1,68 @@
+Interviewer: Let's walk through this codebook together. I'll ask about each entry, and you answer with the exact condition it encodes. Ready?
+
+Responder: Ready.
+
+Interviewer: What does [STYLE-PLAYFUL] mean?
+
+Responder: A story is [STYLE-PLAYFUL] if the story is playful.
+
+Interviewer: And [STYLE-MINIMALIST]?
+
+Responder: A story is [STYLE-MINIMALIST] if the story is minimalist.
+
+Interviewer: How about [HAS-A-MORAL-LESSON]?
+
+Responder: A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+Interviewer: [TOPIC-TIME-TRAVEL]?
+
+Responder: A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+Interviewer: What does [STARTS-WITH-NOUN] indicate?
+
+Responder: A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+Interviewer: [MANY-PARAGRAPHS] — what's the cutoff?
+
+Responder: A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+
+Interviewer: And [USES-CONDITIONAL-MOOD]?
+
+Responder: A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+Interviewer: What about [THEME-HARDSHIP]?
+
+Responder: A story is [THEME-HARDSHIP] if the story has the theme Hardship.
+
+Interviewer: Now for a composite: what defines [COMPOUND-STYLE]?
+
+Responder: A story is [COMPOUND-STYLE] if both of the following are true:
+- The story is [STYLE-PLAYFUL]
+- The story is [STYLE-MINIMALIST]
+
+Interviewer: Clear. And [COMPLEX-NARRATIVE]?
+
+Responder: A story is [COMPLEX-NARRATIVE] if all of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is [STARTS-WITH-NOUN]
+
+Interviewer: How is [TIME-MORAL] defined?
+
+Responder: A story is [TIME-MORAL] if both of the following are true:
+- The story is [TOPIC-TIME-TRAVEL]
+- The story is [HAS-A-MORAL-LESSON]
+
+Interviewer: The last one looks nested. Explain [RICH-STYLE-NARRATIVE].
+
+Responder: A story is [RICH-STYLE-NARRATIVE] if both of the following are true:
+- The story is [COMPLEX-NARRATIVE]
+- Either of the following is true:
+  - The story is [COMPOUND-STYLE]
+  - Both of the following are true:
+    - The story is [STYLE-PLAYFUL]
+    - The story is not [THEME-HARDSHIP]
+
+Interviewer: Thanks — that preserves the logical structure clearly. Anything else you want to add for someone annotating with this codebook?
+
+Responder: Just a quick note: treat each bracketed label as a strict tag. For composite nodes like [COMPOUND-STYLE], [COMPLEX-NARRATIVE], [TIME-MORAL], and [RICH-STYLE-NARRATIVE], evaluate their listed conditions exactly as written — the logical connectors (both/and/all/either/not) determine whether the composite tag applies.

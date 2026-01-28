@@ -1,0 +1,55 @@
+Interviewer: Let's go through this codebook node by node. First, what is [USES-CONDITIONAL-MOOD]?
+
+Expert: A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+Interviewer: Simple enough. Next, what about [STARTS-WITH-ADVERB]?
+
+Expert: A story is [STARTS-WITH-ADVERB] if the story starts with a adverb.
+
+Interviewer: And [THEME-AGENCY]?
+
+Expert: A story is [THEME-AGENCY] if the story has the theme Agency.
+
+Interviewer: How do we define [SHORT-STORY]?
+
+Expert: A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+Interviewer: What about tone — [STYLE-LIGHTHEARTED]?
+
+Expert: A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+Interviewer: There's also an aspectual tag, right? [USES-PERFECT-ASPECT]?
+
+Expert: Correct. A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect.
+
+Interviewer: Now the first composite node: [MOOD-MIX]. How do we identify that?
+
+Expert: A story is [MOOD-MIX] if both of the following are true:
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is not [USES-PERFECT-ASPECT]
+
+Interviewer: So [MOOD-MIX] requires conditional mood and explicitly excludes perfect aspect. Clear. Next composite: [PACING-AND-TONE]?
+
+Expert: A story is [PACING-AND-TONE] if both of the following are true:
+- The story is [SHORT-STORY]
+- The story is [STYLE-LIGHTHEARTED]
+
+Interviewer: That ties length and tone together. Now [AGENCY-START] — that one looks a bit more specific.
+
+Expert: A story is [AGENCY-START] if both of the following are true:
+- The story is [THEME-AGENCY]
+- Exactly one of the following is true:
+  - The story is [STARTS-WITH-ADVERB]
+  - The story is [SHORT-STORY]
+
+Interviewer: So to qualify as [AGENCY-START], the story must have the Agency theme, and either it starts with an adverb or it's a short story — but not both. Understood. Finally, what makes an [ELEGANT-STORY]?
+
+Expert: A story is [ELEGANT-STORY] if both of the following are true:
+- The story is [PACING-AND-TONE]
+- Either of the following are true:
+  - The story is [MOOD-MIX]
+  - The story is [AGENCY-START]
+
+Interviewer: To summarize: [ELEGANT-STORY] requires the short, lighthearted combination (that is, [PACING-AND-TONE]) and then at least one of the higher-level conditions — either the mood combination without perfect aspect ([MOOD-MIX]) or the Agency-start condition ([AGENCY-START]). Is that correct?
+
+Expert: Exactly. All node IDs, logical operators, and relationships remain as stated; this transcript simply walks through each rule as a Q&A to make the conditions clearer for annotators.

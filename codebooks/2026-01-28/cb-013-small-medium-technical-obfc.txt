@@ -1,0 +1,43 @@
+Codebook — Formal definitions and annotation criteria
+
+Below are the formal predicate definitions used for annotation. Each entry specifies the precise condition(s) under which a story should be assigned the corresponding label. Logical connective phrases ("both of the following are true", "Either of the following is true", "not") are used verbatim to preserve the intended logical structure.
+
+[attr-6]
+Definition: A story is [attr-6] if the narrative employs the conditional grammatical mood. Annotators should mark this predicate when the text contains constructions that express hypotheticality, contingency, or conditions (for example, modal conditional verb forms).
+
+[attr-7]
+Definition: A story is [attr-7] if the narrative employs the perfect aspect. Annotators should mark this predicate when the text contains perfect-aspect verbal constructions that indicate completed or resultant states.
+
+[attr-5]
+Definition: A story is [attr-5] if the narrative contains the theme of deception. Annotators should mark this predicate when deception is a central thematic element (e.g., lying, deliberate misleading, concealment of truth).
+
+[attr-4]
+Definition: A story is [attr-4] if the narrative ends, or is structured to end, on an unresolved situation that creates suspense (i.e., a cliffhanger).
+
+[attr-3]
+Definition: A story is [attr-3] if all of the following are true:
+- The story is [attr-5]
+- The story is not [attr-4]
+- Either of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-7]
+
+[attr-2]
+Definition: A story is [attr-2] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-6]
+- The story is not both of the following:
+  - The story is [attr-7]
+  - The story is [attr-6]
+
+[attr-1]
+Definition: A story is [attr-1] if both of the following are true:
+- The story is [attr-3]
+- Either of the following is true:
+  - The story is [attr-2]
+  - The story is not [attr-4]
+
+Annotation notes
+- Apply each predicate independently according to the definitions above.
+- Composite predicates ([attr-3], [attr-2], [attr-1]) require checking the specified atomic predicates and logical conditions exactly as written.

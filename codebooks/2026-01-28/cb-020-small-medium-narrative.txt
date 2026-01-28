@@ -1,0 +1,38 @@
+Imagine you are walking through an old library of stories — each spine labeled with a single, telling tag. These tags are the anchors of our codebook: short, precise identifiers in brackets that guide how we annotate and reason about a tale. Below, each tag is introduced as if discovered on a shelf, followed by the exact rule that explains when that tag applies. The logical bones remain untouched; the prose around them simply helps you see how the pieces fit together.
+
+You pull out the first volume and find a quiet grammatical clue on its cover: the way the narrator frames time.
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect
+
+Nearby, a richly decorated folio captures customs, rituals and seasonal gatherings — the thread of heritage running through a plot.
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if The story is about cultural traditions
+
+Another spine glints with brushstrokes and stage lights — the domain of creativity and practice.
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if The story is about the arts
+
+Some stories have a spring in their step, the kind that leaves you smiling. This tag belongs to them.
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if The story is lighthearted
+
+As you arrange these books on the table, two particular labels combine into a recognizable collection: when a story is about both art and tradition, it becomes its own shelf.
+[ARTS-TRADITIONAL]
+A story is [ARTS-TRADITIONAL] if both of the following are true:
+- The story is [TOPIC-THE-ARTS]
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+
+On the next shelf you find a volume that tugs gently at memory — it names works that honor old artistic practices and reflect on them with a retrospective voice. That tag is more selective: it requires the arts-and-traditions pairing, plus a particular tense, and it excludes breezy cheerfulness.
+[NOSTALGIC-ARTS]
+A story is [NOSTALGIC-ARTS] if all of the following are true:
+- The story is [ARTS-TRADITIONAL]
+- The story is [USES-PERFECT-ASPECT]
+- The story is not [STYLE-LIGHTHEARTED]
+
+Finally, tucked beside the nostalgic books, there’s a brighter subset: stories that celebrate traditional arts but do so with lightness and warmth.
+[LIGHT-ARTS-TRADITION]
+A story is [LIGHT-ARTS-TRADITION] if both of the following are true:
+- The story is [ARTS-TRADITIONAL]
+- The story is [STYLE-LIGHTHEARTED]
+
+Read these tags as companions on your annotation journey: each bracketed name is exact, each logical connector remains the same, and together they form a small taxonomy — a shelf-by-shelf story of how topics, style, and grammar map onto one another.

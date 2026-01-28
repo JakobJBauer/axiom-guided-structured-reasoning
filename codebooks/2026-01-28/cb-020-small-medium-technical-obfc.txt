@@ -1,0 +1,33 @@
+Codebook — Technical specification (rewritten)
+
+[attr-7]
+Definition: A story is [attr-7] if the story uses the perfect aspect (i.e., employs verb forms that express completed action or state relative to a reference time).
+
+[attr-5]
+Definition: A story is [attr-5] if the story is about cultural traditions.
+
+[attr-6]
+Definition: A story is [attr-6] if the story is about the arts.
+
+[attr-4]
+Definition: A story is [attr-4] if the story is lighthearted in tone or presentation.
+
+[attr-1]
+Definition: A story is [attr-1] if both of the following are true:
+- The story is [attr-6]
+- The story is [attr-5]
+
+[attr-3]
+Definition: A story is [attr-3] if all of the following are true:
+- The story is [attr-1]
+- The story is [attr-7]
+- The story is not [attr-4]
+
+[attr-2]
+Definition: A story is [attr-2] if both of the following are true:
+- The story is [attr-1]
+- The story is [attr-4]
+
+Notes (operational guidance):
+- Each node defines a unary predicate over stories; composite nodes specify conjunctions and negation exactly as stated.
+- Maintain these predicates when annotating or reasoning; do not modify node identifiers or logical connections.

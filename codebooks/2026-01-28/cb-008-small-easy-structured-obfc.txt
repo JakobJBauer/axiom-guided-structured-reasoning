@@ -1,0 +1,38 @@
+Overview
+- Purpose: Provide a concise, structured reference for annotators to decide which label(s) apply to a story.
+- How to use: Read each node definition and apply the corresponding label when the story meets the stated condition. Logical combinations are preserved exactly as written.
+
+Node definitions (clear, one-per-node)
+- [attr-4]
+  - Definition: A story is [attr-4] if the story is about cultural traditions.
+  - Guidance: Apply this label when the central subject or significant content of the story involves customs, rituals, festivals, or shared cultural practices.
+
+- [attr-1]
+  - Definition: A story is [attr-1] if the story has a moral lesson.
+  - Guidance: Use this label when the narrative explicitly or implicitly conveys a lesson, ethical point, or stated moral conclusion.
+
+- [attr-2]
+  - Definition: A story is [attr-2] if the story starts with an adverb.
+  - Guidance: Mark this when the very first word of the story is an adverb (for example: "Quickly," "Suddenly," "Happily," etc.).
+
+- [attr-3]
+  - Definition: A story is [attr-3] if the story has the theme Magic.
+  - Guidance: Apply when magical elements (spells, supernatural powers, enchanted objects, explicit magic systems) are a thematic element of the story.
+
+Composite node (logical combination)
+- [attr-5]
+  - Definition: A story is [attr-5] if all of the following are true:
+    - The story is [attr-4]
+    - The story is [attr-3]
+    - The story is [attr-1]
+  - Logical note: This node is true only when all three component labels apply simultaneously (logical AND of the three listed nodes).
+  - Guidance: Use this composite label when a story combines cultural-tradition subject matter with magical themes and also communicates a moral lesson.
+
+Quick checklist for annotators
+- Is the story about cultural traditions? If yes, mark [attr-4].
+- Does it feature magic as a theme? If yes, mark [attr-3].
+- Does it teach or state a moral? If yes, mark [attr-1].
+- If all three are marked, then the story qualifies as [attr-5].
+
+End note
+- All node IDs, logical relationships, and formula structure are preserved exactly as given. Use the guidance above to apply labels consistently and accurately.

@@ -1,0 +1,78 @@
+Codebook — Structured View
+
+Overview
+- Purpose: Present each labeling rule clearly and hierarchically so annotators can reason about labels step by step.
+- Note: All node IDs are shown exactly in [BRACKET] format and logical constructions (Not, And, Or, Exactly one, Both, Either) are preserved verbatim.
+
+Atomic (single-condition) labels
+- [THEME-HUMOR]
+  - Definition: A story is [THEME-HUMOR] if The story has the theme Humor
+
+- [TOPIC-LOST-CIVILIZATIONS]
+  - Definition: A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations
+
+- [STYLE-PLAYFUL]
+  - Definition: A story is [STYLE-PLAYFUL] if The story is playful
+
+- [STYLE-SURREAL]
+  - Definition: A story is [STYLE-SURREAL] if The story is surreal
+
+- [USES-DISCOURSE-MARKERS]
+  - Definition: A story is [USES-DISCOURSE-MARKERS] if The story uses discourse markers
+
+- [LOW-READABILITY]
+  - Definition: A story is [LOW-READABILITY] if The story has readability score below 86.4
+
+- [STYLE-CLASSIC]
+  - Definition: A story is [STYLE-CLASSIC] if The story is classic
+
+- [STYLE-PHILOSOPHICAL]
+  - Definition: A story is [STYLE-PHILOSOPHICAL] if The story is philosophical
+
+- [HAS-A-CLIFFHANGER]
+  - Definition: A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+
+- [STARTS-WITH-PREPOSITION]
+  - Definition: A story is [STARTS-WITH-PREPOSITION] if The story starts with a preposition
+
+Composite labels (logical combinations)
+- [TONE-MIX]
+  - Primary statement: A story is [TONE-MIX] if either of the following is true:
+    - Exactly one of the following is true:
+      - The story is [STYLE-PLAYFUL]
+      - The story is [STYLE-PHILOSOPHICAL]
+    - Both of the following are true:
+      - The story is [STYLE-SURREAL]
+      - The story is not [STYLE-CLASSIC]
+  - How to evaluate:
+    - First check exclusive choice: is exactly one of [STYLE-PLAYFUL] or [STYLE-PHILOSOPHICAL] present?
+    - If not, check the conjunction: is the story [STYLE-SURREAL] and at the same time not [STYLE-CLASSIC]?
+    - If either block is satisfied, label [TONE-MIX].
+
+- [PRESENTATION-CRITERIA]
+  - Primary statement: A story is [PRESENTATION-CRITERIA] if both of the following are true:
+    - The story is in the following set:
+      - [THEME-HUMOR]
+      - [TOPIC-LOST-CIVILIZATIONS]
+    - Either of the following is true:
+      - The story is [HAS-A-CLIFFHANGER]
+      - Both of the following are true:
+        - The story is equal to [THEME-HUMOR]
+        - The story is not [LOW-READABILITY]
+    - Or the story is [TONE-MIX]
+  - How to evaluate (stepwise):
+    - Step 1 (required): Confirm the story belongs to the set listed (either [THEME-HUMOR] or [TOPIC-LOST-CIVILIZATIONS]).
+    - Step 2 (required): Verify that at least one of the following holds:
+      - The story is [HAS-A-CLIFFHANGER], or
+      - Both of: the story is equal to [THEME-HUMOR] and the story is not [LOW-READABILITY], or
+      - The story is [TONE-MIX].
+    - If both Step 1 and Step 2 are true, assign [PRESENTATION-CRITERIA].
+
+Quick reference / decision hints
+- Treat each atomic label as a single, directly observable property.
+- For [TONE-MIX], remember the “either” structure: it accepts either an exclusive playful/philosophical signal, or a surreal-but-not-classic combination.
+- For [PRESENTATION-CRITERIA], both the set-membership condition and the secondary condition must hold; the secondary condition itself allows multiple alternative paths (cliffhanger; humor with acceptable readability; or tone mix).
+
+End notes
+- No node IDs or logical relationships have been changed.
+- The structure is intended to guide annotators through a clear evaluation order: check atomic labels first, then composite rules using the preserved logical operators.

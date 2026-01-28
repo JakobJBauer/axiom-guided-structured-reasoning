@@ -1,0 +1,251 @@
+Codebook — Structured Reference
+Purpose: A compact, hierarchical presentation of the annotation rules. Each node is listed with its exact logical test. Node IDs are preserved in [attr-1] form. Logical operators (Not, And, Or, Either, Both, Exactly one, All) and relationships are unchanged; they are shown as clear, indented conditions so annotators can reason step-by-step.
+
+1) Atomic/Surface Labels
+- [attr-37]
+  - A story is [attr-37] if:
+    - The story has the theme Problem-Solving
+
+- [attr-42]
+  - A story is [attr-42] if:
+    - The story is about mystical creatures
+
+- [attr-25]
+  - A story is [attr-25] if:
+    - The story has fewer than 160 words
+
+- [attr-43]
+  - A story is [attr-43] if:
+    - The story is about time travel
+
+- [attr-45]
+  - A story is [attr-45] if:
+    - The story uses discourse markers
+
+- [attr-39]
+  - A story is [attr-39] if:
+    - The story is about cultural traditions
+
+- [attr-35]
+  - A story is [attr-35] if:
+    - The story has the theme Innovation
+
+- [attr-26]
+  - A story is [attr-26] if:
+    - The story starts with an adverb
+
+- [attr-33]
+  - A story is [attr-33] if:
+    - The story has the theme Helping Others
+
+- [attr-13]
+  - A story is [attr-13] if:
+    - The story has juxtaposition
+
+- [attr-28]
+  - A story is [attr-28] if:
+    - The story is playful
+
+- [attr-12]
+  - A story is [attr-12] if:
+    - The story has a Red Herring
+
+- [attr-32]
+  - A story is [attr-32] if:
+    - The story has the theme Hardship
+
+- [attr-34]
+  - A story is [attr-34] if:
+    - The story has the theme Humor
+
+- [attr-30]
+  - A story is [attr-30] if:
+    - The story has the theme Agency
+
+- [attr-10]
+  - A story is [attr-10] if:
+    - The story has a flashback
+
+- [attr-46]
+  - A story is [attr-46] if:
+    - The story uses perfect aspect
+
+- [attr-44]
+  - A story is [attr-44] if:
+    - The story uses conditional mood
+
+- [attr-47]
+  - A story is [attr-47] if:
+    - The story uses wh-questions
+
+- [attr-36]
+  - A story is [attr-36] if:
+    - The story has the theme Kindness
+
+- [attr-11]
+  - A story is [attr-11] if:
+    - The story has a moral lesson
+
+- [attr-27]
+  - A story is [attr-27] if:
+    - The story is humorous
+
+- [attr-17]
+  - A story is [attr-17] if:
+    - The story has readability score below 86.4
+
+- [attr-19]
+  - A story is [attr-19] if:
+    - The story has more than 6 paragraphs
+
+- [attr-9]
+  - A story is [attr-9] if:
+    - The story has a cliffhanger
+
+- [attr-41]
+  - A story is [attr-41] if:
+    - The story is about magical lands
+
+- [attr-40]
+  - A story is [attr-40] if:
+    - The story is about giant creatures
+
+- [attr-31]
+  - A story is [attr-31] if:
+    - The story has the theme Growth
+
+- [attr-16]
+  - A story is [attr-16] if:
+    - The story has more than 375 words
+
+2) Small Compound / Set Membership
+- [attr-7]
+  - A story is [attr-7] if:
+    - The story is in [TOPIC-MYSTICAL-CREATURES, TOPIC-MAGICAL-LANDS, TOPIC-GIANT-CREATURES]
+
+3) Simple Or / Either Compositions
+- [attr-18]
+  - A story is [attr-18] if either of the following is true:
+    - The story is [attr-41]
+    - The story is [attr-42]
+
+4) Conjunctions (All / Both)
+- [attr-6]
+  - A story is [attr-6] if all of the following are true:
+    - The story is [attr-16]
+    - The story is either [attr-40] or [attr-41]
+    - The story is [attr-31]
+
+- [attr-24]
+  - A story is [attr-24] if both of the following are true:
+    - The story is [attr-25]
+    - The story is [attr-18]
+
+5) Nested Either/Or Structures
+- [attr-38]
+  - A story is [attr-38] if both of the following are true:
+    - The story is [attr-43]
+    - Either of the following is true:
+      - The story is [attr-12]
+      - The story is [attr-10]
+
+- [attr-4]
+  - A story is [attr-4] if both of the following are true:
+    - The story is [attr-19]
+    - Both of the following are true:
+      - The story is [attr-10]
+      - The story is [attr-9]
+
+6) Voice & Narrative Indicators
+- [attr-21]
+  - A story is [attr-21] if either of the following is true:
+    - The story is [attr-26]
+    - The story is [attr-45]
+    - The story is [attr-47]
+
+7) Exclusive (Exactly One)
+- [attr-15]
+  - A story is [attr-15] if exactly one of the following is true:
+    - The story is [attr-27]
+    - The story is [attr-28]
+
+8) Thematic Conjunctions
+- [attr-20]
+  - A story is [attr-20] if both of the following are true:
+    - The story is [attr-36]
+    - The story is [attr-11]
+
+- [attr-14]
+  - A story is [attr-14] if all of the following are true:
+    - The story is [attr-35]
+    - The story is [attr-33]
+    - Either of the following is true:
+      - The story is [attr-30]
+      - The story is [attr-37]
+
+- [attr-8]
+  - A story is [attr-8] if both of the following are true:
+    - The story is [attr-31]
+    - The story is [attr-32]
+
+9) Readability & Length Interplay
+- [attr-5]
+  - A story is [attr-5] if both of the following are true:
+    - The story is not [attr-17]
+    - Either of the following is true:
+      - The story is [attr-25]
+      - The story is [attr-16]
+
+- [attr-2]
+  - A story is [attr-2] if both of the following are true:
+    - The story is [attr-25]
+    - Exactly one of the following is true:
+      - The story is [attr-34]
+      - The story is [attr-32]
+
+10) Interaction of Discourse Features
+- [attr-23]
+  - A story is [attr-23] if both of the following are true:
+    - The story is [attr-47]
+    - The story is [attr-45]
+
+11) Higher-Order Composites & Complex Logic
+- [attr-3]
+  - A story is [attr-3] if all of the following are true:
+    - Either of the following is true:
+      - The story is [attr-38]
+      - The story is [attr-18]
+    - Both of the following are true:
+      - The story is [attr-4]
+      - Either of the following is true:
+        - The story is [attr-21]
+        - The story is [attr-5]
+    - Either of the following is true:
+      - The story uses [attr-44]
+      - The story uses [attr-46]
+
+- [attr-29]
+  - A story is [attr-29] if both of the following are true:
+    - Either of the following is true:
+      - The story is [attr-14]
+      - The story is [attr-20]
+    - Either of the following is true:
+      - The story is [attr-8]
+      - The story is [attr-37]
+
+12) Pragmatic / Stylistic Filter
+- [attr-22]
+  - A story is [attr-22] if all of the following are true:
+    - The story is [attr-21]
+    - The story is not [attr-28]
+    - Either of the following is true:
+      - The story is [attr-46]
+      - The story is [attr-44]
+
+Usage Notes (for annotators)
+- Read each node’s conditions top-to-bottom and evaluate the required subnodes exactly as written.
+- Preserve logical operators when combining labels: “either” = inclusive OR, “both/all” = AND, “exactly one” = XOR, “not” = negation.
+- Multi-level nodes reference other node IDs; determine those referenced nodes before concluding the parent node’s value.
+- The structure above mirrors the original logical intent; use this as a stepwise checklist during annotation.
+
+If you want, I can also produce a compact decision flow (tree) per high-level composite node to guide step-by-step annotation decisions.

@@ -1,0 +1,71 @@
+Imagine a small catalog where every story wears a set of labels — little badges that tell you, at a glance, what the tale contains. Walk with me through that catalog. For each badge I describe, I’ll also give the exact rule that pins it onto a story, so nothing important is lost in the telling.
+
+- [attr-4]
+  In this library, a story earns the badge [attr-4] whenever it carries a moral lesson — a guiding truth tucked into its scenes and lines.
+  A story is [attr-4] if The story has a moral lesson
+
+- [attr-12]
+  Some stories keep time in a certain way; when they use the perfect aspect to show actions already completed or consequences that linger, they receive the label [attr-12].
+  A story is [attr-12] if The story uses perfect aspect
+
+- [attr-2]
+  When a tale cuts off with breath held and questions unanswered, that suspenseful snap earns it [attr-2].
+  A story is [attr-2] if The story has a cliffhanger
+
+- [attr-11]
+  Stories that weave kindness into their heart — where compassion shapes choices and outcomes — are given the [attr-11] tag.
+  A story is [attr-11] if The story has the theme Kindness
+
+- [attr-10]
+  If the story’s voice or setting feels of the present, contemporary and tuned to modern sensibilities, it is marked [attr-10].
+  A story is [attr-10] if The story is modern
+
+- [attr-3]
+  Some narratives fold their timeline back on itself with memories or past events laid bare; such stories are marked [attr-3].
+  A story is [attr-3] if The story has a flashback
+
+- [attr-8]
+  Others wear a more timeless or traditional style, and those are cataloged as [attr-8].
+  A story is [attr-8] if The story is classic
+
+- [attr-6]
+  The badge [attr-6] is simple and literal: it belongs to anything over 375 words — a tale long enough to wander and settle.
+  A story is [attr-6] if The story has more than 375 words
+
+- [attr-5]
+  When a narrative places contrasting ideas, scenes, or images side by side to make meaning through contrast, it receives [attr-5].
+  A story is [attr-5] if The story has juxtaposition
+
+- [attr-9]
+  Finally among the single-feature tags, a story that keeps things buoyant, playful, or cheerfully untroubled is labeled [attr-9].
+  A story is [attr-9] if The story is lighthearted
+
+Now, some badges are stitched from combinations of these simple threads. They come with precise rules — like recipes — and I’ll tell them in full so the catalog remains exact.
+
+- [attr-7]
+  Picture a story considered “rich” because it layers structure and technique in a way that rewards attention. The catalog says:
+  A story is [attr-7] if all of the following are true:
+  - Either of the following is true:
+    - The story is [attr-2]
+    - The story is [attr-3]
+  - Exactly one of the following is true:
+    - The story is [attr-5]
+    - The story is [attr-12]
+  - The story is not [attr-9]
+  - At least one of the story's structural features is in the set { [attr-2], [attr-3], [attr-5] }
+
+  In other words: a rich narrative must present either a cliffhanger or a flashback; it must choose exactly one between juxtaposition and perfect aspect; it must not be lighthearted; and it must include at least one of those named structural features. These conditions stack like chapters that together define a particular depth.
+
+- [attr-1]
+  Now imagine an even more exacting badge: [attr-1]. It’s reserved for stories that not only meet the richness test but also satisfy thematic or stylistic balances. The rule reads:
+  A story is [attr-1] if both of the following are true:
+  - The story is [attr-7]
+  - Both of the following are true:
+    - Either of the following is true:
+      - The story is [attr-11]
+      - The story is [attr-4]
+    - The presence of [attr-10] equals the presence of [attr-8]
+
+  So a complex story is a rich one that either carries kindness as a theme or contains a moral lesson, and it must maintain an exact parity between modern and classic style — the presence of one must equal the presence of the other.
+
+That is the full map: each tag a clear condition, each compound label a small architecture of features. Read this catalogue like a map of DNA for stories — each badge tells you what elements are present and how they combine, while the narrative around them helps you remember why those combinations matter.

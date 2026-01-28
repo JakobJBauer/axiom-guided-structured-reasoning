@@ -1,0 +1,141 @@
+Codebook — Structured Edition
+Purpose: Present each label (node) clearly and hierarchically so annotators can reason about relationships and make consistent judgments. All node IDs, logical operators, and formula structures are preserved exactly as in the original. Read each label as: "A story is [attr-10] if ..." Follow the nested conditions literally when deciding whether a label applies.
+
+1) Base (atomic) labels
+- [attr-5]
+  - A story is [attr-5] if The story has a Red Herring.
+
+- [attr-8]
+  - A story is [attr-8] if The story has more than 6 paragraphs.
+
+- [attr-15]
+  - A story is [attr-15] if The story is lighthearted.
+
+- [attr-6]
+  - A story is [attr-6] if The story has Checkhov's gun.
+
+- [attr-20]
+  - A story is [attr-20] if The story has the theme Magic.
+
+- [attr-24]
+  - A story is [attr-24] if The story is about the arts.
+
+- [attr-25]
+  - A story is [attr-25] if The story uses perfect aspect.
+
+- [attr-19]
+  - A story is [attr-19] if The story has the theme Innovation.
+
+- [attr-18]
+  - A story is [attr-18] if The story has the theme Growth.
+
+- [attr-14]
+  - A story is [attr-14] if The story is classic.
+
+- [attr-13]
+  - A story is [attr-13] if The story starts with a preposition.
+
+- [attr-22]
+  - A story is [attr-22] if The story is about cultural traditions.
+
+- [attr-23]
+  - A story is [attr-23] if The story is about lost civilizations.
+
+- [attr-17]
+  - A story is [attr-17] if The story has the theme Deception.
+
+- [attr-26]
+  - A story is [attr-26] if The story uses wh-questions.
+
+- [attr-21]
+  - A story is [attr-21] if The story is about bygone eras.
+
+- [attr-12]
+  - A story is [attr-12] if The story starts with a adjective.
+
+- [attr-16]
+  - A story is [attr-16] if The story is modern.
+
+2) Composite labels — preserve logical structure exactly
+- [attr-9]
+  - A story is [attr-9] if both of the following are true:
+    1. Either of the following is true:
+       - The story is [attr-5]
+       - The story is [attr-6]
+    2. Either of the following is true:
+       - Exactly one of [attr-17] and [attr-26] is true
+       - The story is [attr-8]
+
+- [attr-11]
+  - A story is [attr-11] if both of the following are true:
+    - The story is [attr-8]
+    - The story is [attr-25]
+
+- [attr-2]
+  - A story is [attr-2] if both of the following are true:
+    1. Exactly one of the following is true:
+       - The story is [attr-14]
+       - The story is [attr-16]
+    2. The story is not [attr-15]
+    3. Either of the following is true:
+       - The story is [attr-13]
+       - The story is [attr-12]
+
+- [attr-3]
+  - A story is [attr-3] if either of the following is true:
+    - Both of the following are true:
+      - The story is [attr-22]
+      - The story is [attr-21]
+    - Both of the following are true:
+      - The story is [attr-23]
+      - Exactly one of [attr-18] and [attr-17] is true
+
+- [attr-7]
+  - A story is [attr-7] if either of the following is true:
+    - Both of the following are true:
+      - The story is [attr-19]
+      - The story is [attr-18]
+    - All of the following are true:
+      - The story is [attr-19]
+      - The story is [attr-24]
+      - The story is not [attr-18]
+
+- [attr-1]
+  - A story is [attr-1] if both of the following are true:
+    - The story is [attr-24]
+    - Either of the following is true:
+      - The story is [attr-7]
+      - The story is [attr-3]
+
+- [attr-4]
+  - A story is [attr-4] if both of the following are true:
+    1. Either of the following is true:
+       - The story is [attr-1]
+       - Both of the following are true:
+         - The story is [attr-9]
+         - The story is [attr-11]
+    2. Either of the following is true:
+       - The story is [attr-2]
+       - Both of the following are true:
+         - The story is [attr-3]
+         - The story is [attr-7]
+
+3) How to use this structured codebook (annotator guidance)
+- Read atomic labels first (Section 1) and decide whether each base condition holds for the story.
+- Apply composite labels (Section 2) only after you have settled the relevant base labels that feed into them.
+- When you see:
+  - "Both of the following are true:" — treat this as logical AND: every listed subcondition must hold.
+  - "Either of the following is true:" — treat this as logical OR: at least one listed subcondition must hold.
+  - "Exactly one of ..." — treat this as exclusive OR: precisely one of the listed labels must be true, not both.
+  - "The story is not ..." — treat this as logical NOT: the specified label must be false.
+  - "All of the following are true:" — equivalent to multiple ANDs; every item listed must hold.
+- Keep the original semantics: do not add or remove labels when determining whether a composite applies.
+
+4) Quick check-list (practical shortcut)
+- Verify paragraph count to determine [attr-8].
+- Scan for stylistic cues to set [attr-14], [attr-16], [attr-15].
+- Identify explicit themes/topics: [attr-19], [attr-18], [attr-17], [attr-20], [attr-24], [attr-23], [attr-22], [attr-21].
+- Detect devices and forms: [attr-5], [attr-6], [attr-25], [attr-26], [attr-13], [attr-12].
+- Combine these determinations to evaluate the composite labels exactly as specified.
+
+End note: This structured layout preserves all original node IDs and logical relationships. Use it as a decision tree: confirm base labels first, then evaluate composites by following their precise logical structure.

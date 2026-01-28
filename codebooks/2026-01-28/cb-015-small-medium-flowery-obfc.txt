@@ -1,0 +1,42 @@
+Preface — The Codex of Tiny Enchantments
+
+In a little library where dusk settles like a shawl and the paper breathes faintly of ink and moonlight, a careful archivist fashioned a codebook to name the secret qualities of short tales. Think of this as a delicate keyring of labels—each tag a glinting rune that helps readers and annotators sort stories by their shape, theme, and craft. Below you will find those runes written out like brief spell inscriptions. The relationships between them remain steadfast and logical, as the archivist intended, but the language grows fragrant and ornate to guide your eye and imagination.
+
+[attr-4]
+A story is [attr-4] if the story has fewer than 160 words.
+- In plain terms: this label embraces only those tales that are small and swift, fewer than 160 words in length—little birds of narrative that land and take off again.
+
+[attr-5]
+A story is [attr-5] if the story has the theme Magic.
+- This rune marks tales whose central motif is Magic: where the impossible threads through the ordinary like silver through velvet.
+
+[attr-7]
+A story is [attr-7] if the story uses wh-questions.
+- This tag is for narratives that ask with open mouths—who, what, where, when, why, how—inviting curiosity to wind through their pages.
+
+[attr-1]
+A story is [attr-1] if the story has Checkhov's gun.
+- A practical, almost austere label: it signifies the presence of an element placed earlier that proves crucial later, the narrative promise that must be fulfilled.
+
+[attr-2]
+A story is [attr-2] if the story has readability score above 96.1
+- A numeric seal of clarity: when a tale’s measured readability rises above 96.1, it carries this banner—smooth, accessible prose that invites any reader to follow without stumbling.
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-5]
+- The story is not [attr-1]
+- Imagine a moonlit clearing where spells are whispered but no mechanical device clicks toward resolution: MYSTERIOUS-MAGIC is the aura of magic left unbeaten by the tidy obligation of a planted prop. To qualify, the tale must indeed be about Magic, and yet must avoid the deterministic certainty of Checkhov’s instrument.
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- The story is [attr-4]
+- Either of the following is true:
+  - The story is [attr-3]
+  - Exactly one of the following is true:
+    - The story is not [attr-2]
+    - The story is [attr-7]
+- This final badge, TIGHT-MAGIC-CRAFT, names the compact, artful pieces where brevity and magical thematics meet disciplined choice. First, the tale must be a [attr-4]. Then it must either carry the shadowy charm of [attr-3], or satisfy a precise alternation: exactly one of two conditions must hold—either the prose deliberately falls short of the high-readability threshold (not [attr-2]), or the story deliberately threads in wh-questions ([attr-7]). That exclusivity—exactly one—keeps the designation sharp, like a jeweler’s facet catching just one beam.
+
+Epilogue — How to Use These Names
+Treat these lines as both lantern and ledger. Each bracketed name is a signal that can be applied to stories as you read, annotate, and reason about them. The relationships are preserved: the little logical scaffolding that binds labels to stories remains intact, even as the language swells into metaphor. Use them well, storyteller, keeper, and reader—these are the soft rules that help small tales reveal their true forms.

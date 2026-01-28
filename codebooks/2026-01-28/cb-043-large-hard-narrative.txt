@@ -1,0 +1,115 @@
+Imagine a catalog of tales where every label tells a small truth about the story it marks. In this book of signs, each tag is a lantern, and its flame lights up when a story meets the conditions written beside it.
+
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if The story has the theme Innovation.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if The story has the theme Magic.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if The story starts with a adverb.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if The story is philosophical.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if The story starts with a noun.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if The story has the theme Growth.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if The story is minimalist.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if The story uses conditional mood.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if The story is about seasonal changes.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if The story has a story within a story.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs.
+
+[THEME-AGENCY]
+A story is [THEME-AGENCY] if The story has the theme Agency.
+
+[PARAGRAPH-DENSITY]
+A story is [PARAGRAPH-DENSITY] if [MANY-PARAGRAPHS] equals true.
+
+[STRUCTURAL-START]
+Like a doorway that requires two locks, a story becomes [STRUCTURAL-START] only when both precautions are met:
+- exactly one of the following is true:
+  - The story is [STARTS-WITH-ADVERB]
+  - The story is [STARTS-WITH-NOUN]
+- The story is in [STYLE-PHILOSOPHICAL, STYLE-MINIMALIST]
+
+[MOTIF-MYSTERY]
+Think of [MOTIF-MYSTERY] as the fog that gathers when certain echoes align. The tale is so labeled if either path appears:
+- both of the following are true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+- exactly one of the following is true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-SEASONAL-CHANGES]
+
+[MORAL-TENSION]
+[MORAL-TENSION] is the tightrope a reader walks when ethics tug at plot. A story wears this tag if either of these situations holds:
+- The story is [THEME-HELPING-OTHERS]
+- both of the following are true:
+  - exactly one of the following is true:
+    - The story is [THEME-GROWTH]
+    - The story is [THEME-AGENCY]
+  - The story is not [STYLE-MINIMALIST]
+
+[THEMATIC-CORE]
+At the heart of our map is [THEMATIC-CORE]. A story claims this center when both conditions align:
+- The story is [THEME-INNOVATION]
+- either of the following is true:
+  - The story is [MORAL-TENSION]
+  - both of the following are true:
+    - The story is [THEME-MAGIC]
+    - The story is [USES-CONDITIONAL-MOOD]
+
+[NARRATIVE-DEVICES]
+Narrative gears and tricks are gathered under [NARRATIVE-DEVICES]. A story is so named if both teeth mesh:
+- either of the following is true:
+  - The story is [HAS-CHECKHOVS-GUN]
+  - The story is [HAS-A-CLIFFHANGER]
+- either of the following is true:
+  - The story is [HAS-A-STORY-WITHIN-A-STORY]
+  - The story is not [HAS-CHECKHOVS-GUN]
+
+[COMPLEX-STORY-TYPE]
+Finally, the rare [COMPLEX-STORY-TYPE] is a constellation formed only when its stars are in precise alignment. A story is [COMPLEX-STORY-TYPE] if both of the following are true:
+- The story is [THEMATIC-CORE]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [STRUCTURAL-START]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [NARRATIVE-DEVICES]
+        - The story is [PARAGRAPH-DENSITY]
+      - The story is [MOTIF-MYSTERY]
+  - both of the following are true:
+    - The story is [NARRATIVE-DEVICES]
+    - The story is not [STYLE-MINIMALIST]
+
+Read this as a map where every node is a checkpoint and every condition a checkpoint’s key. Keep the keys and locks unchanged; follow them, and the classification will reveal the story’s true shape.

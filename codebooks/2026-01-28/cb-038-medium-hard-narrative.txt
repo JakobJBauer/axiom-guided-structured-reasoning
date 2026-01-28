@@ -1,0 +1,80 @@
+Imagine this codebook as a small, precise atlas of stories — each entry a signpost that tells you how to classify a tale. Below, the formal rules stand exactly as they must, and beside each rule I’ll walk you through a quick, story-like explanation so the logic sings as well as it instructs.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if The story is lighthearted
+Narrative: Picture a tale that moves with a spring in its step, one that prefers laughter and levity over gloom. When a story wears that bright, buoyant mood, it earns the [STYLE-LIGHTHEARTED] label.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun
+Narrative: Think of the small detail introduced early that later becomes crucial — the shiny pistol on the mantel, the seemingly throwaway line that returns with weight. When a story includes that deliberately placed element, it qualifies as [HAS-CHECKHOVS-GUN].
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+Narrative: Imagine the heartbeat-stopping pause at the end of a chapter, the unanswered question that leaves readers suspended. That unresolved snap becomes the mark [HAS-A-CLIFFHANGER].
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if The story has the theme Hardship
+Narrative: When a story centers on struggle — scarcity, loss, endurance — it carries the theme labeled [THEME-HARDSHIP].
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others
+Narrative: If the plot highlights acts of aid, sacrifice, or community care, it belongs to the clan of [THEME-HELPING-OTHERS].
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if The story has the theme Deception
+Narrative: Tales that pivot on lies, masks, betrayal, or hidden truths are marked with [THEME-DECEPTION].
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if The story has the theme Problem-Solving
+Narrative: When a story’s engine is puzzles, plans, or clever fixes — characters confronting obstacles with ingenuity — it earns [THEME-PROBLEM-SOLVING].
+
+[THEMATIC-CONFLICT]
+A story is [THEMATIC-CONFLICT] if exactly one of the following is true:
+- The story is [THEME-HARDSHIP]
+- The story is [THEME-DECEPTION]
+Narrative: Imagine a balance with two weights. [THEMATIC-CONFLICT] is true when exactly one weight tips the scale: either hardship or deception, but not both. It’s the exclusive choice between those two thematic paths.
+
+[TONE-CONFLICTED]
+A story is [TONE-CONFLICTED] if both of the following are true:
+- The story is [STYLE-LIGHTHEARTED]
+- Either of the following is true:
+  - The story is [THEMATIC-CONFLICT]
+  - The story is [THEME-PROBLEM-SOLVING]
+Narrative: This is the delightful dissonance where a story’s jaunty voice coexists with more serious structural tension. To be [TONE-CONFLICTED], a tale must sound light and, at the same time, either carry the exclusive hardship-or-deception tension ([THEMATIC-CONFLICT]) or center on problem-solving. Think of a cheerful storyteller whose plot insists on sharper stakes.
+
+[PLOT-DRIVEN]
+A story is [PLOT-DRIVEN] if both of the following are true:
+- The story is [HAS-CHECKHOVS-GUN]
+- Exactly one of the following is true:
+  - The story is [THEME-PROBLEM-SOLVING]
+  - The story is [HAS-A-CLIFFHANGER]
+Narrative: The engine of a [PLOT-DRIVEN] tale is events and their consequences. It needs a planted element that pays off ([HAS-CHECKHOVS-GUN]) and then one — and only one — of two engines: either a problem-solving theme or a cliffhanger. This combination keeps the plot moving like clockwork.
+
+[MORAL-ARC]
+A story is [MORAL-ARC] if either of the following is true:
+- Both of the following are true:
+  - The story is [THEME-HELPING-OTHERS]
+  - The story is not [THEME-DECEPTION]
+- Both of the following are true:
+  - The story is [THEME-PROBLEM-SOLVING]
+  - The story is [THEME-HELPING-OTHERS]
+Narrative: [MORAL-ARC] signals an ethical or redemptive journey. It appears either when helping others is central and deception is absent — a clear-hearted generosity — or when helping others is paired with problem-solving, where compassion and cleverness walk together toward a moral growth.
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if either of the following is true:
+- Both of the following are true:
+  - The story is [TONE-CONFLICTED]
+  - Both of the following are true:
+    - The story is [PLOT-DRIVEN]
+    - The story is [MORAL-ARC]
+- All of the following are true:
+  - The story is not [TONE-CONFLICTED]
+  - Either of the following is true:
+    - The story is [PLOT-DRIVEN]
+    - The story is [HAS-A-CLIFFHANGER]
+  - The story is not both of the following:
+    - The story is [THEME-HARDSHIP]
+    - The story is [THEME-DECEPTION]
+Narrative: Here is the crown jewel: [COMPLEX-NARRATIVE]. A tale earns it in one of two ways. First, if it juggles tonal dissonance ([TONE-CONFLICTED]) while also being plot-driven and carrying a moral arc — a knot of voice, action, and ethics. Or second, if it avoids that tonal dissonance but still drives the plot or hooks you with a cliffhanger, while not simultaneously dwelling in both hardship and deception. In short, complexity comes from layered tone plus plot plus moral depth, or from tightly balanced plot mechanics that steer clear of overlapping harsh themes.
+
+Endnote: Each line above keeps the exact logical rules in place; the little stories beside them are just the storytelling that helps you feel the rule as much as read it. Use the formal statements to annotate and the narrative notes to guide your intuition.

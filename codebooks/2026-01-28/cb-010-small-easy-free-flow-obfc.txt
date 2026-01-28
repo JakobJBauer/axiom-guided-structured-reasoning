@@ -1,0 +1,29 @@
+Here’s a more natural, free-flow rendering of the codebook — same logic, same node IDs, just easier to read and a bit more conversational.
+
+[attr-4]
+A story is [attr-4] if the story has the theme Innovation. In other words, tag a story with [attr-4] when the central idea or driving concept in the piece is about innovation — new methods, inventions, creative change, or forward-looking thinking.
+
+[attr-6]
+A story is [attr-6] if the story is about cultural traditions. Use this label when the narrative focuses on rituals, customs, ceremonies, or long-standing cultural practices.
+
+[attr-5]
+A story is [attr-5] if the story is about bygone eras. Apply this tag when the subject matter centers on historical periods, the past, or ways of life that belong to earlier times.
+
+[attr-7]
+A story is [attr-7] if the story uses wh-questions. That means the text contains questions starting with who, what, where, when, why, or how.
+
+[attr-2]
+A story is [attr-2] if the story starts with a noun. Mark this when the very first word of the story is a noun.
+
+[attr-3]
+A story is [attr-3] if the story starts with a preposition. Use this when the opening word is a preposition (for example: in, on, at, under, etc.).
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-4]
+- Either of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- The story is [attr-7]
+
+So, to qualify as [attr-1], a story must be about innovation, it must also be about either cultural traditions or bygone eras, and it must make use of wh-questions. All three conditions together define this combined label.

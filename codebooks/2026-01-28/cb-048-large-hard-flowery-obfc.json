@@ -1,0 +1,414 @@
+{
+  "nodes": [
+    {
+      "id": "attr-20",
+      "label": "Time travel",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "Starts with adjective",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-21",
+      "label": "Uses perfect aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-13",
+      "label": "Modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Readability below 86.4",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-19",
+      "label": "About the arts",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Circular narrative structure",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-16",
+      "label": "About cultural traditions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Has a flashback",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "Humorous",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-17",
+      "label": "About magical lands",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "Lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-18",
+      "label": "About mystical creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-15",
+      "label": "Theme: Problem-Solving",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Circular threads and certain beginnings",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-4",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-8"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-10",
+      "label": "Balances humor/lightness with modernity/clarity",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-11",
+            "attr-12"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-13",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-6"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Arts + traditions + problem-solving compound",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-19",
+            "attr-16",
+            "attr-15"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "attr-19",
+                "attr-15"
+              ]
+            },
+            "attr-16"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "Mythic core with time-travel or non-modern",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-17",
+            "attr-18"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-20",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-13"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Tight narrative-structural weave",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-7",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-10",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-3"
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-1",
+                "attr-3"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-14",
+      "label": "Council of petals (complex-pattern with humor alignment)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-2",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-1",
+            "attr-3"
+          ]
+        },
+        {
+          "formula_type": "Equal",
+          "formula_args": [
+            "attr-10",
+            "attr-11"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-9",
+      "label": "Archetype (complex combinations and cores)",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-14",
+            {
+              "formula_type": "In",
+              "formula_args": [
+                "attr-2",
+                [
+                  "COMPLEX-PATTERN",
+                  "SYNDIC-CONJUNCTION",
+                  "FANTASY-CORE"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-3",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-1"
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-1",
+                {
+                  "formula_type": "Xor",
+                  "formula_args": [
+                    "attr-10",
+                    "attr-7"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-5",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-16",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-15",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-17",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-18",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-20",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-14",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-9"
+    }
+  ]
+}

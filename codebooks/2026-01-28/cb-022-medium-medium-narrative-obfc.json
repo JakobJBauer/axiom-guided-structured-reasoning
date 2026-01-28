@@ -1,0 +1,156 @@
+{
+  "nodes": [
+    {
+      "id": "attr-2",
+      "label": "Circular narrative structure",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "Kindness (theme)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "Hidden treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Low readability (below 86.4)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "Modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Deception (theme)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "High readability (above 96.1)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Modern and (philosophical or juxtaposition) and not circular",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-8",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-9",
+            "attr-3"
+          ]
+        },
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-7",
+      "label": "Kindness and deception and attr-6",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-11",
+        "attr-10",
+        "attr-6"
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Morally ambivalent plus (exclusive readability classification or hidden treasures)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-7",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "attr-5",
+                "attr-4"
+              ]
+            },
+            "attr-12"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-8",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-1"
+    }
+  ]
+}

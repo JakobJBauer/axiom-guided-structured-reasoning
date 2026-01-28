@@ -1,0 +1,121 @@
+[attr-14]
+Definition: Assign the label [attr-14] to a story when the story exhibits a lighthearted tone.
+
+[attr-16]
+Definition: Assign the label [attr-16] to a story when the story presents philosophical themes or reasoning.
+
+[attr-24]
+Definition: Assign the label [attr-24] to a story when its subject matter concerns magical lands.
+
+[attr-26]
+Definition: Assign the label [attr-26] to a story when the narrative explicitly employs wh-questions (who, what, where, when, why, how).
+
+[attr-11]
+Definition: Assign the label [attr-11] to a story when the story’s length is fewer than 160 words.
+
+[attr-18]
+Definition: Assign the label [attr-18] to a story when the central theme is kindness.
+
+[attr-7]
+Definition: Assign the label [attr-7] to a story when the story contains more than 6 paragraphs.
+
+[attr-25]
+Definition: Assign the label [attr-25] to a story when the narrative employs conditional mood constructions.
+
+[attr-20]
+Definition: Assign the label [attr-20] to a story when problem-solving is a thematic element.
+
+[attr-17]
+Definition: Assign the label [attr-17] to a story when growth (personal, skill, or situational development) is a theme.
+
+[attr-12]
+Definition: Assign the label [attr-12] to a story when the first token/word of the story is a preposition.
+
+[attr-21]
+Definition: Assign the label [attr-21] to a story when the subject matter includes giant creatures.
+
+[attr-15]
+Definition: Assign the label [attr-15] to a story when the stylistic register is modern.
+
+[attr-13]
+Definition: Assign the label [attr-13] to a story when the stylistic register is classic.
+
+[attr-19]
+Definition: Assign the label [attr-19] to a story when magic is a theme.
+
+[attr-23]
+Definition: Assign the label [attr-23] to a story when it concerns lost civilizations.
+
+[attr-4]
+Definition: Assign the label [attr-4] to a story when the narrative contains a flashback sequence.
+
+[attr-22]
+Definition: Assign the label [attr-22] to a story when it concerns hidden treasures.
+
+[attr-9]
+Definition: Assign the label [attr-9] to a story when the story is not [attr-14].
+
+[attr-8]
+Definition: Assign the label [attr-8] to a story if exactly one of the following is true:
+- The story is [attr-15]
+- The story is [attr-13]
+
+[attr-6]
+Definition: Assign the label [attr-6] to a story if both of the following conditions hold:
+- The story is [attr-24]
+- Either of the following is true:
+  - The story is [attr-19]
+  - Both of the following are true:
+    - The story is [attr-21]
+    - The story is [attr-20]
+
+[attr-5]
+Definition: Assign the label [attr-5] to a story if either of the following conditions holds:
+- Exactly one of the following is true:
+  - The story is [attr-22]
+  - The story is [attr-23]
+- Both of the following are true:
+  - The story is [attr-22]
+  - The story is [attr-23]
+
+[attr-10]
+Definition: Assign the label [attr-10] to a story if both of the following conditions hold:
+- The set of narrative devices used by the story includes [attr-26] (i.e., the story explicitly uses wh-questions).
+- Either of the following is true:
+  - The story is [attr-25]
+  - The story is [attr-12]
+
+[attr-3]
+Definition: Assign the label [attr-3] to a story if both of the following conditions hold:
+- The set of themes present in the story is equal to the set containing [attr-18] and [attr-17].
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-20]
+    - The story is [attr-4]
+  - Both of the following are true:
+    - The story is [attr-7]
+    - The story is not [attr-11]
+
+[attr-1]
+Definition: Assign the label [attr-1] to a story if either of the following conditions holds:
+- Both of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- Both of the following are true:
+  - The story is [attr-21]
+  - The story is [attr-23]
+
+[attr-2]
+Definition: Assign the label [attr-2] to a story if either of the following conditions holds:
+- Both of the following are true:
+  - The story is [attr-1]
+  - Both of the following are true:
+    - The story is [attr-8]
+    - Either of the following is true:
+      - The story is [attr-18]
+      - The story is [attr-19]
+- Both of the following are true:
+  - The story is [attr-3]
+  - Both of the following are true:
+    - The story is not [attr-9]
+    - The story is [attr-10]

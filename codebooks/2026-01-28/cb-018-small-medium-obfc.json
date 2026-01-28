@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "id": "attr-7",
+      "label": "Helping Others (theme)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "Juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "Juxtaposition AND exactly-one(Classic, Modern)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-1",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-4",
+            "attr-5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "Either (Philosophical AND Helping Others AND not Attr-2) OR (Attr-2 AND not Helping Others)",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-6",
+            "attr-7",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-2"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-2",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-7"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-1",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-3"
+    }
+  ]
+}

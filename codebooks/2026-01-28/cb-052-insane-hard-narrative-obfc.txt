@@ -1,0 +1,199 @@
+[attr-30]
+A story is [attr-30] if the story has the theme Growth — imagine a tale whose heartbeat is transformation, where characters or circumstances ripen into something new.
+
+[attr-22]
+A story is [attr-22] if the story is humorous — it leans into laughter, punchlines, and the light wobble of wit.
+
+[attr-32]
+A story is [attr-32] if the story has the theme Helping Others — scenes where hands reach out, aid is given, and compassion shapes the plot.
+
+[attr-21]
+A story is [attr-21] if the story starts with a preposition — the first word sets a grammatical scene like "In," "On," or "After."
+
+[attr-25]
+A story is [attr-25] if the story is modern — it carries contemporary tones, references, or sensibilities.
+
+[attr-48]
+A story is [attr-48] if the story uses perfect aspect — the narrative speaks of actions completed before other moments in time.
+
+[attr-23]
+A story is [attr-23] if the story is lighthearted — it floats, breezy and unburdened by heavy gloom.
+
+[attr-29]
+A story is [attr-29] if the story has the theme Deception — false faces, hidden motives, and clever misdirection thread through its events.
+
+[attr-35]
+A story is [attr-35] if the story has the theme Kindness — scenes where generosity alters outcomes, small mercies shifting fates.
+
+[attr-50]
+A story is [attr-50] if the story uses wh-questions — the narrator or characters ask who, what, when, where, why, or how.
+
+[attr-42]
+A story is [attr-42] if the story is about lost civilizations — ruins, vanished empires, and the echoes of once-great societies.
+
+[attr-46]
+A story is [attr-46] if the story is about time travel — clocks bend, timelines tangle, and travelers cross eras.
+
+[attr-6]
+A story is [attr-6] if the story has Checkhov's gun — an introduced element destined to matter later, promised and fulfilled.
+
+[attr-4]
+A story is [attr-4] if the story has a moral lesson — the narrative leaves the reader with an explicit or clearly implied ethical takeaway.
+
+[attr-31]
+A story is [attr-31] if the story has the theme Hardship — endurance, struggle, and adversity form the spine of the tale.
+
+[attr-11]
+A story is [attr-11] if the story has more than 375 words — its length lets scenes breathe and arcs unfold.
+
+[attr-45]
+A story is [attr-45] if the story is about seasonal changes — the turning of seasons plays a deliberate role in the narrative.
+
+[attr-2]
+A story is [attr-2] if the story has a cliffhanger — it halts with tension, leaving outcomes suspended until revelation.
+
+[attr-37]
+A story is [attr-37] if the story has the theme Problem-Solving — puzzles are posed and cleverness prevails.
+
+[attr-34]
+A story is [attr-34] if the story has the theme Innovation — new ideas, inventions, or creative breakthroughs drive the plot.
+
+[attr-36]
+A story is [attr-36] if the story has the theme Magic — wonder, spells, and the supernatural are woven into the fabric of the tale.
+
+[attr-7]
+A story is [attr-7] if the story has circular narrative structure — the ending loops back to the beginning, creating a ring of meaning.
+
+[attr-41]
+A story is [attr-41] if the story is about giant creatures — colossal beings dominate scenes, literal or metaphorical.
+
+[attr-47]
+A story is [attr-47] if the story uses discourse markers — words like "however," "therefore," or "meanwhile" guide the reader through shifts and pauses.
+
+[attr-26]
+A story is [attr-26] if the story is philosophical — it lingers on big questions, ideas, and reflections about existence.
+
+[attr-19]
+A story is [attr-19] if the story starts with a adverb — that opening word sets tone: "Suddenly," "Quietly," "Happily."
+
+[attr-40]
+A story is [attr-40] if the story is about cultural traditions — rituals, customs, and inherited practices shape scenes.
+
+[attr-3]
+A story is [attr-3] if the story has a flashback — memories break the present to reveal past moments.
+
+[attr-8]
+A story is [attr-8] if the story has readability score above 96.1 — the prose is exceptionally clear and easy to scan.
+
+[attr-24]
+A story is [attr-24] if the story is minimalist — it pares language and detail down to essentials.
+
+[attr-49]
+A story is [attr-49] if the story uses superlative forms — words like "best," "biggest," or "most" crop up to emphasize extremes.
+
+[attr-43]
+A story is [attr-43] if the story is about magical lands — realms where geography itself hums with enchantment.
+
+[attr-5]
+A story is [attr-5] if the story has a story within a story — nested narratives unfold like Russian dolls.
+
+[attr-27]
+A story is [attr-27] if the story is surreal — logic bends and strange juxtapositions create dreamlike effects.
+
+[attr-20]
+A story is [attr-20] if the story starts with a noun — the first word names an object, person, or place that anchors the opening.
+
+[attr-39]
+A story is [attr-39] if the story is about bygone eras — the past looms large, with historical atmospheres and vanished ways of life.
+
+[attr-12]
+A story is [attr-12] if the story has readability score below 86.4 — denser prose or complexity makes it harder to read quickly.
+
+[attr-33]
+A story is [attr-33] if the story has the theme Humor — laughter and comedic intent are central.
+
+[attr-44]
+A story is [attr-44] if the story is about mystical creatures — fae, dragons, and beings that defy natural law appear.
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- The story is [attr-22]
+- The story is [attr-23]
+Here a duet of tones: humor paired with a gentle, carefree spirit — both conditions must hold.
+
+[attr-14]
+A story is [attr-14] if either of the following is true:
+- The story is [attr-25]
+- both of the following are true:
+  - The story is [attr-26]
+  - The story is [attr-27]
+This node admits a modern pulse, or alternatively a pairing of thoughtfulness and dream-logic — one path or the other suffices.
+
+[attr-18]
+A story is [attr-18] if exactly one of the following is true:
+- The story is [attr-8]
+- The story is [attr-12]
+It marks the extremes: the story sits at one endpoint of clarity or complexity — but not both.
+
+[attr-16]
+A story is [attr-16] if all of the following are true:
+- The story is [attr-5]
+- The story is [attr-3]
+- The story is [attr-7]
+This label demands layered structure: nesting, memory, and a circular arc all present together.
+
+[attr-28]
+A story is [attr-28] if both of the following are true:
+- The story is [attr-32]
+- The story is [attr-35]
+Two compassionate themes entwine — helping and kindness must co-occur.
+
+[attr-13]
+A story is [attr-13] if both of the following are true:
+- The story is [attr-43]
+- either of the following is true:
+  - The story is [attr-44]
+  - The story is [attr-41]
+A realm of magic coupled with extraordinary inhabitants: to qualify, the tale must be set in enchanted lands and feature either mystical beings or towering creatures.
+
+[attr-38]
+A story is [attr-38] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-46]
+  - The story is [attr-42]
+- The story is [attr-39]
+This label captures temporal dislocation: either time travel entwined with lost civilizations, or simply a focus on bygone eras.
+
+[attr-15]
+A story is [attr-15] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-35]
+- The story is not [attr-29]
+A moral filter that insists on kindness and an explicit lesson, while excluding deception — all three constraints must be satisfied.
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- The story is [attr-34]
+- The story is [attr-37]
+When invention meets the act of solving, the tale earns this dual descriptor.
+
+[attr-17]
+A story is [attr-17] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-2]
+A long-form narrative that leaves its audience hanging — length combined with suspense defines this node.
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- all of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-15]
+  - either of the following is true:
+    - The story is [attr-16]
+    - The story is [attr-17]
+- exactly one of the following is true:
+  - both of the following are true:
+    - The story is [attr-13]
+    - The story is not [attr-24]
+  - The story is [attr-38]
+Here the archetype blooms in one of two grand ways: either a humorous, lighthearted tale that also passes the morality filter and then deepens into narrative complexity or long suspense, or alternatively a magical-lands story (not minimalist) or a time/lost-era tale — but when the second branch lists two options, precisely one of those options must hold.

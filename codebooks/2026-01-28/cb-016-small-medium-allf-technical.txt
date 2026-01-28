@@ -1,0 +1,20 @@
+[THEME-HELPING-OTHERS]
+Specification: A narrative instance receives the label [THEME-HELPING-OTHERS] when its primary thematic content corresponds to "Helping Others".
+
+[HELPFUL-ACTION]
+Specification: A narrative instance receives the label [HELPFUL-ACTION] if at least one of the following predicates holds:
+- The protagonist’s central action ∈ {aid, rescue}
+- The protagonist’s central action ∈ {donate, teach}
+
+[MOTIVE-SELFISH]
+Specification: A narrative instance receives the label [MOTIVE-SELFISH] when the protagonist’s motive is exactly "personal gain".
+
+[SELFLESS-ARC]
+Specification: A narrative instance receives the label [SELFLESS-ARC] if and only if both of the following conditions are satisfied:
+- The instance is labeled [HELPFUL-ACTION]
+- The instance is not labeled [MOTIVE-SELFISH]
+
+[ALTRUISTIC-HELP]
+Specification: A narrative instance receives the label [ALTRUISTIC-HELP] if and only if exactly one of the following holds:
+- The instance is labeled [THEME-HELPING-OTHERS]
+- The instance is labeled [SELFLESS-ARC]

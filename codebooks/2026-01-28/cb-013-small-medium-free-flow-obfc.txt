@@ -1,0 +1,45 @@
+Think of this as a friendly guide to the labels you’ll use when annotating stories. I’ll describe each tag in plain conversational language, but I’ll keep every logical link exactly as it is — all node IDs stay in [attr-3] form and every Not/And/Or relationship is preserved.
+
+[attr-7]
+If a story uses the conditional mood anywhere — that “would,” “could,” or “might” kind of phrasing that imagines possibilities — you mark it [attr-7].
+
+[attr-8]
+If a story makes use of the perfect aspect — verbs like “had eaten,” “has gone,” or “have seen” that point to completed actions relative to another time — then it’s labeled [attr-8].
+
+[attr-6]
+When deception is a theme in the story — trickery, hidden motives, lies, or deliberate misdirection at the heart of the plot — that story is [attr-6].
+
+[attr-5]
+If the story ends on a cliffhanger — leaving the reader hanging, with major questions unresolved — tag it [attr-5].
+
+[attr-4]
+A story counts as [attr-4] only when all of these are true together:
+- The story is [attr-6]
+- The story is not [attr-5]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-8]
+
+So, put simply: it’s deception-focused, it doesn’t finish on a cliffhanger, and it uses either conditional mood or perfect aspect.
+
+[attr-2]
+Call a story [attr-2] when both parts below hold:
+- Either of the following is true:
+  - The story is [attr-8]
+  - The story is [attr-7]
+- The story is not both of the following:
+  - The story is [attr-8]
+  - The story is [attr-7]
+
+In other words, the story shows one of those grammatical behaviors (perfect aspect or conditional mood), but it doesn’t show both at once.
+
+[attr-1]
+A story qualifies as [attr-1] when these two conditions are both satisfied:
+- The story is [attr-4]
+- Either of the following is true:
+  - The story is [attr-2]
+  - The story is not [attr-5]
+
+So this label captures complex deception that’s paired either with that aspectual ambivalence (one grammatical feature but not both) or simply with the absence of a cliffhanger.
+
+That’s the full set — the labels and the exact logical relationships between them, explained in a natural, easy-to-follow way.

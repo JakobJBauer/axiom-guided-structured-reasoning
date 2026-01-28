@@ -1,0 +1,31 @@
+Interviewer: Let’s go through this codebook together. Can you start with the first entry?
+
+Expert: Sure. [TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+Interviewer: And the next one?
+
+Expert: [HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+Interviewer: What about sentences that begin in a certain way — is that captured?
+
+Expert: Yes. [STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if the story starts with an adverb.
+
+Interviewer: Is there a node for the magic theme?
+
+Expert: There is. [THEME-MAGIC]
+A story is [THEME-MAGIC] if the story has the theme Magic.
+
+Interviewer: Now, how do these pieces combine? Is there a composite label that requires more than one condition?
+
+Expert: Yes — here's the combined rule. [TRADITIONAL-MAGIC-TEACHING]
+A story is [TRADITIONAL-MAGIC-TEACHING] if all of the following are true:
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+- The story is [THEME-MAGIC]
+- The story is [HAS-A-MORAL-LESSON]
+
+Interviewer: So to be clear, a story must satisfy all three of those subconditions to be marked [TRADITIONAL-MAGIC-TEACHING], right?
+
+Expert: Exactly. All three must hold together for [TRADITIONAL-MAGIC-TEACHING] to apply.

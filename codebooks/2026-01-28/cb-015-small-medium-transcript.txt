@@ -1,0 +1,47 @@
+Interviewer: Let’s walk through this codebook together. I’ll ask about each label and you answer. Sound good?
+
+Expert: Sounds great. I’ll keep the exact definitions and logical structure as written.
+
+Interviewer: First up, what is [SHORT-STORY]?
+
+Expert: A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+Interviewer: Clear. And [THEME-MAGIC]?
+
+Expert: A story is [THEME-MAGIC] if the story has the theme Magic.
+
+Interviewer: What about [USES-WH-QUESTIONS]?
+
+Expert: A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+Interviewer: I see. Explain [HAS-CHECKHOVS-GUN], please.
+
+Expert: A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun.
+
+Interviewer: And [HIGH-READABILITY]?
+
+Expert: A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+Interviewer: Now we get to the composite labels. How is [MYSTERIOUS-MAGIC] defined?
+
+Expert: [MYSTERIOUS-MAGIC] is true when both of the following are true:
+- The story is [THEME-MAGIC]
+- The story is not [HAS-CHECKHOVS-GUN]
+
+Interviewer: So it requires the Magic theme and the absence of Checkhov’s gun. Got it. Next: [TIGHT-MAGIC-CRAFT] — that sounds more complex.
+
+Expert: It is a bit layered. A story is [TIGHT-MAGIC-CRAFT] if both of the following are true:
+- The story is [SHORT-STORY]
+- Either of the following is true:
+  - The story is [MYSTERIOUS-MAGIC]
+  - Exactly one of the following is true:
+    - The story is not [HIGH-READABILITY]
+    - The story is [USES-WH-QUESTIONS]
+
+Interviewer: Let me check I’ve got that right. For [TIGHT-MAGIC-CRAFT], first it must be a short story. Then either it qualifies as [MYSTERIOUS-MAGIC], or, if it doesn’t, exactly one of those two alternatives must hold: either it lacks [HIGH-READABILITY], or it uses [USES-WH-QUESTIONS]. Correct?
+
+Expert: Exactly. The logical relationships — both, either, and exactly one — are preserved just as in the original definitions.
+
+Interviewer: Great. That covers every node, and the logical structure is intact. Anything else to note?
+
+Expert: Just that every node ID — like [SHORT-STORY], [THEME-MAGIC], [MYSTERIOUS-MAGIC], etc. — is used exactly as given, and no nodes or logical operators were added, removed, or changed. This transcript simply explains the same logic in a conversational Q&A format to make it easier to read and apply during annotation.

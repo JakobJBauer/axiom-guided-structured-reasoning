@@ -1,0 +1,43 @@
+Interviewer: Let's go through this codebook together. First off, what does [STYLE-PLAYFUL] mean?
+
+Expert: Simple. A story is [STYLE-PLAYFUL] if the story is playful.
+
+Interviewer: And [STYLE-MODERN]?
+
+Expert: A story is [STYLE-MODERN] if the story is modern.
+
+Interviewer: How about [STARTS-WITH-ADJECTIVE] — what does that label capture?
+
+Expert: A story is [STARTS-WITH-ADJECTIVE] if the story starts with a adjective.
+
+Interviewer: There's also [USES-DISCOURSE-MARKERS]. What's the criterion there?
+
+Expert: A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers.
+
+Interviewer: I see a node called [HAS-CHECKHOVS-GUN]. What does that encode?
+
+Expert: A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun.
+
+Interviewer: Now the codebook defines some compound nodes. Tell me about [MODERN-OPENING].
+
+Expert: Sure. A story is [MODERN-OPENING] if both of the following are true:
+- The story is [STYLE-MODERN]
+- The story is [STARTS-WITH-ADJECTIVE]
+
+Interviewer: So to mark [MODERN-OPENING], both conditions must hold — it's an AND, right?
+
+Expert: Correct. Both must be true for [MODERN-OPENING] to apply.
+
+Interviewer: And finally, what's the rule for [ENGAGING-STRUCTURE]?
+
+Expert: A story is [ENGAGING-STRUCTURE] if both of the following are true:
+- The story is either [STYLE-PLAYFUL] or [USES-DISCOURSE-MARKERS]
+- The story is [HAS-CHECKHOVS-GUN]
+
+Interviewer: Let me restate that to be clear: [ENGAGING-STRUCTURE] requires two things — first, the story must satisfy at least one of [STYLE-PLAYFUL] or [USES-DISCOURSE-MARKERS] (an OR), and second, it must satisfy [HAS-CHECKHOVS-GUN]. Is that accurate?
+
+Expert: Exactly. The first bullet is an either/or condition; the second is required as well. Both bullets together must be true for [ENGAGING-STRUCTURE].
+
+Interviewer: Thanks — that keeps the logical relationships precise and easy to follow. Anything else I should note while annotating?
+
+Expert: Just remember: all node IDs—like [STYLE-PLAYFUL], [MODERN-OPENING], [ENGAGING-STRUCTURE]—are the anchors. Apply the simple definitions for the atomic nodes, and then use the compound rules exactly as stated: "both of the following are true" indicates conjunction, and "either ... or" indicates disjunction in the listed compound nodes.

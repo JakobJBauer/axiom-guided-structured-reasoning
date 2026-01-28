@@ -1,0 +1,61 @@
+Technical Codebook — Formal Definitions
+
+Each entry below specifies a predicate over a story. Use the identifier in brackets as the canonical node label. The predicate is true for a given story if and only if the stated condition(s) hold.
+
+[attr-4]
+Definition: A story satisfies [attr-4] when its automated readability metric yields a score strictly below 86.4.
+Notes: The threshold value is fixed at 86.4; implementers should apply the same readability algorithm used to define the dataset’s baseline scoring.
+
+[attr-6]
+Definition: A story satisfies [attr-6] when the narrative exhibits a philosophical style.
+Specification: Classify as true if the story’s primary stylistic register is philosophical (e.g., reflective argumentation, exploration of metaphysical or ethical concepts).
+
+[attr-5]
+Definition: A story satisfies [attr-5] when the narrative style is modern.
+Specification: True when the style conforms to contemporary conventions (e.g., present-day diction, modernist sensibilities) as established by the annotation guidelines.
+
+[attr-12]
+Definition: A story satisfies [attr-12] when it employs grammatical superlative constructions (e.g., “best,” “most,” “greatest”).
+Specification: Mark true if one or more superlative forms appear in contexts that function as superlative modifiers.
+
+[attr-10]
+Definition: A story satisfies [attr-10] when its subject matter concerns bygone eras.
+Specification: True when the narrative explicitly addresses historical periods, antiquated settings, or themes centered on earlier epochs.
+
+[attr-7]
+Definition: A story satisfies [attr-7] when Magic is a central theme.
+Specification: Mark true if magical phenomena, systems, or the concept of magic are integral to the story’s theme or plot.
+
+[attr-11]
+Definition: A story satisfies [attr-11] when the narrative involves time travel as a subject.
+Specification: True when time travel (temporal displacement, time loops, chronological traversal) is a plot element or topical focus.
+
+[attr-3]
+Definition: A story satisfies [attr-3] when the narrative conveys an explicit moral lesson.
+Specification: True when the story culminates in or explicitly communicates an ethical or instructional takeaway.
+
+[attr-8]
+Definition: A story satisfies [attr-8] when problem solving is a core thematic element.
+Specification: True when the plot centrally involves identifying, analyzing, or resolving a problem through reasoning, strategy, or methodical action.
+
+[attr-9]
+Definition: A story satisfies [attr-9] if exactly one of the following is true:
+- The story is [attr-11]
+- The story is [attr-7]
+Specification: This node enforces an exclusive-or (XOR) relationship between [attr-11] and [attr-7]. Mark [attr-9] true only when one of those two predicates is true and the other is false.
+
+[attr-2]
+Definition: A story satisfies [attr-2] if all of the following are true:
+- The story is [attr-10]
+- The story is [attr-3]
+- The story is not [attr-12]
+Specification: This node is the conjunction of three conditions: topical focus on bygone eras, presence of a moral lesson, and absence of superlative forms.
+
+[attr-1]
+Definition: A story satisfies [attr-1] if all of the following are true:
+- The story is [attr-9]
+- The story is [attr-8]
+- The story is not [attr-4]
+Specification: This node requires that the story occupies the time-or-magic exclusive category, includes problem-solving as a theme, and does not meet the low-readability criterion.
+
+Usage note: Maintain the logical relationships as specified (exclusive-or for [attr-9]; conjunctions and negations for composite nodes). Do not alter node identifiers or add additional conditions.

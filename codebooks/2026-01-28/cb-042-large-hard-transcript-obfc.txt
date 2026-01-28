@@ -1,0 +1,184 @@
+Interviewer: Let's go through this codebook together. I'll ask about each label and you explain exactly what it means. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What does [attr-18] mean?
+
+Expert: A story is [attr-18] if The story has the theme Problem-Solving.
+
+Interviewer: And [attr-21]?
+
+Expert: A story is [attr-21] if The story is about hidden treasures.
+
+Interviewer: [attr-11]?
+
+Expert: A story is [attr-11] if The story is lighthearted.
+
+Interviewer: What about [attr-3]?
+
+Expert: A story is [attr-3] if The story has a Red Herring.
+
+Interviewer: [attr-8]?
+
+Expert: A story is [attr-8] if The story starts with a preposition.
+
+Interviewer: [attr-20]?
+
+Expert: A story is [attr-20] if The story is about giant creatures.
+
+Interviewer: [attr-25]—what triggers that?
+
+Expert: A story is [attr-25] if The story uses superlative forms.
+
+Interviewer: [attr-17]?
+
+Expert: A story is [attr-17] if The story has the theme Magic.
+
+Interviewer: [attr-12]?
+
+Expert: A story is [attr-12] if The story is modern.
+
+Interviewer: [attr-7]?
+
+Expert: A story is [attr-7] if The story starts with a adverb.
+
+Interviewer: [attr-22]?
+
+Expert: A story is [attr-22] if The story is about magical lands.
+
+Interviewer: [attr-4]—how's that determined?
+
+Expert: A story is [attr-4] if The story has readability score below 86.4.
+
+Interviewer: [attr-10]?
+
+Expert: A story is [attr-10] if The story is humorous.
+
+Interviewer: [attr-15]?
+
+Expert: A story is [attr-15] if The story has the theme Innovation.
+
+Interviewer: [attr-9]?
+
+Expert: A story is [attr-9] if The story is classic.
+
+Interviewer: [attr-23]?
+
+Expert: A story is [attr-23] if The story is about mystical creatures.
+
+Interviewer: [attr-16]?
+
+Expert: A story is [attr-16] if The story has the theme Kindness.
+
+Interviewer: [attr-14]?
+
+Expert: A story is [attr-14] if The story has the theme Humor.
+
+Interviewer: [attr-6]?
+
+Expert: A story is [attr-6] if The story has fewer than 160 words.
+
+Interviewer: [attr-24]?
+
+Expert: A story is [attr-24] if The story is about the arts.
+
+Interviewer: Now the definitions get more complex. Explain [attr-5].
+
+Expert: Sure. A story is [attr-5] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - The story is [attr-21]
+    - The story is [attr-22]
+  - either of the following is true:
+    - The story is [attr-23]
+    - The story is [attr-20] xor The story is [attr-24]
+- both of the following are true:
+  - The story is [attr-3]
+  - The story is [attr-6]
+
+Interviewer: Let me check I understand. So one pathway to [attr-5] requires two grouped conditions: first, either hidden treasures or magical lands; second, either mystical creatures or an exclusive choice between giant creatures xor the arts. The alternative pathway is simply: it has a red herring and is a short story. Correct?
+
+Expert: Correct. That restates the same logical structure.
+
+Interviewer: Explain [attr-19].
+
+Expert: A story is [attr-19] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-10] xor The story is [attr-9]
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-CLASSIC]
+  - not both of the following are true:
+    - The story is [attr-4]
+    - The story starts with a preposition: The story is [attr-8]
+
+Interviewer: A quick clarification: "The story is in [STYLE-MODERN, STYLE-CLASSIC]"—that means the story must be both STYLE-MODERN and STYLE-CLASSIC, right?
+
+Expert: Yes: the phrase "The story is in [STYLE-MODERN, STYLE-CLASSIC]" requires both listed styles to be true.
+
+Interviewer: And "not both of the following are true" means at least one of those (LOW-READABILITY or STARTS-WITH-PREPOSITION) must be false.
+
+Expert: Exactly.
+
+Interviewer: Moving to [attr-13]: how's that defined?
+
+Expert: A story is [attr-13] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-18]
+  - either of the following is true:
+    - The story is [attr-15]
+    - The story is [attr-17]
+- exactly one of the following is true:
+  - The story is [attr-16]
+  - The story is [attr-14]
+- both of the following are true:
+  - The story is in [THEME-MAGIC, THEME-INNOVATION, THEME-PROBLEM-SOLVING]
+  - The story is [attr-16] equals false
+
+Interviewer: So there are three alternative ways to qualify for [attr-13]: (1) problem-solving plus either innovation or magic; (2) exactly one of kindness or humor; (3) the story must be in the set [THEME-MAGIC, THEME-INNOVATION, THEME-PROBLEM-SOLVING] (i.e., all three), and additionally THEME-KINDNESS must be false. Right?
+
+Expert: That's an accurate interpretation of those clauses.
+
+Interviewer: Next, [attr-1]?
+
+Expert: A story is [attr-1] if both of the following are true:
+- The story is [attr-5]
+- either of the following is true:
+  - The story is [attr-19]
+  - both of the following are true:
+    - The story is [attr-25]
+    - The story is not [attr-3]
+
+Interviewer: So to meet [attr-1], you must satisfy [attr-5], and either satisfy [attr-19] or have superlatives and no red herring.
+
+Expert: Correct.
+
+Interviewer: Finally, [attr-2]?
+
+Expert: A story is [attr-2] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-13]
+  - exactly one of the following is true:
+    - The story is [attr-1]
+    - both of the following are true:
+      - The story is [attr-6]
+      - either of the following is true:
+        - The story is [attr-24]
+        - The story is [attr-21]
+- not both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-14]
+
+Interviewer: Let me paraphrase: One way into [attr-2] is to be in the thematic core and, additionally, satisfy exactly one of these two options: either be [attr-1], or be a short story that is about the arts or hidden treasures. The other way in is simply that it's not the case that both STYLE-HUMOROUS and THEME-HUMOR are true simultaneously.
+
+Expert: That's exactly what the definition states.
+
+Interviewer: Great. Any final notes for annotators using this transcript-style codebook?
+
+Expert: Two quick reminders:
+- All node IDs like [attr-18] must be used exactly as written when annotating.
+- The logical operators—either, both, xor, exactly one, not both, equals false—are precise; preserve them when mapping story features to nodes.
+
+Interviewer: Thanks — that keeps the logic intact and the structure clear.
+
+Expert: Glad to help.

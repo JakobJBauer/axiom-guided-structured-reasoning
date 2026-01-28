@@ -1,0 +1,49 @@
+[HAS-A-STORY-WITHIN-A-STORY]
+True if the story contains a story within a story.
+
+[THEME-MAGIC]
+True if the story's theme is Magic.
+
+[HAS-A-FLASHBACK]
+True if the story includes a flashback.
+
+[TOPIC-THE-ARTS]
+True if the story is about the arts.
+
+[STYLE-MINIMALIST]
+True if the story is minimalist.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+True if the story uses a circular narrative structure.
+
+[DEVICE-XOR]
+True if exactly one of the following is true:
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [HAS-A-FLASHBACK]
+
+[DEVICE-EQUAL]
+True if the truth value of [HAS-A-STORY-WITHIN-A-STORY] equals the truth value of [HAS-CIRCULAR-NARRATIVE-STRUCT].
+
+[MAGIC-ART-MEMBER]
+True if the story's primary theme or topic is in the set {[THEME-MAGIC], [TOPIC-THE-ARTS]}.
+
+[COMPLEX-NARRATIVE-CORE]
+True if both of the following are true:
+- Either of the following:
+  - The story is [DEVICE-XOR]
+  - The story is [DEVICE-EQUAL]
+- The story is not [STYLE-MINIMALIST] and (the story is [HAS-CIRCULAR-NARRATIVE-STRUCT] or the story is [HAS-A-FLASHBACK])
+
+[ART-MAGIC-NARRATIVE]
+True if both of the following are true:
+- The story is [MAGIC-ART-MEMBER]
+- Either of the following:
+  - The story is [COMPLEX-NARRATIVE-CORE]
+  - The story is [STYLE-MINIMALIST]
+
+[COMPLEX-ARTISTIC-NARRATIVE]
+True if both of the following are true:
+- The story is [ART-MAGIC-NARRATIVE]
+- Exactly one of the following is true:
+  - The story is [DEVICE-EQUAL]
+  - The story is not [HAS-A-FLASHBACK]

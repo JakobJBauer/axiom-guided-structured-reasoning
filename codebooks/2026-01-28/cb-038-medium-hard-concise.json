@@ -1,0 +1,231 @@
+{
+  "nodes": [
+    {
+      "id": "style-lighthearted",
+      "label": "Style Lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-checkhovs-gun",
+      "label": "Has Chekhovs Gun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-cliffhanger",
+      "label": "Has a Cliffhanger",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-hardship",
+      "label": "Theme Hardship",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-helping-others",
+      "label": "Theme Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "Theme Deception",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-problem-solving",
+      "label": "Theme Problem Solving",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "thematic-conflict",
+      "label": "Thematic Conflict",
+      "formula_type": "Xor",
+      "formula_args": [
+        "theme-hardship",
+        "theme-deception"
+      ]
+    },
+    {
+      "id": "tone-conflicted",
+      "label": "Tone Conflicted",
+      "formula_type": "And",
+      "formula_args": [
+        "style-lighthearted",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "thematic-conflict",
+            "theme-problem-solving"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plot-driven",
+      "label": "Plot Driven",
+      "formula_type": "And",
+      "formula_args": [
+        "has-checkhovs-gun",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "theme-problem-solving",
+            "has-a-cliffhanger"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moral-arc",
+      "label": "Moral Arc",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "theme-helping-others",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "theme-deception"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "theme-problem-solving",
+            "theme-helping-others"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-narrative",
+      "label": "Complex Narrative",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "tone-conflicted",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "plot-driven",
+                "moral-arc"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "tone-conflicted"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "plot-driven",
+                "has-a-cliffhanger"
+              ]
+            },
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "theme-hardship",
+                    "theme-deception"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "theme-hardship",
+      "target": "thematic-conflict"
+    },
+    {
+      "source": "theme-deception",
+      "target": "thematic-conflict"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "tone-conflicted"
+    },
+    {
+      "source": "thematic-conflict",
+      "target": "tone-conflicted"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "tone-conflicted"
+    },
+    {
+      "source": "has-checkhovs-gun",
+      "target": "plot-driven"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "plot-driven"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "plot-driven"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "moral-arc"
+    },
+    {
+      "source": "theme-deception",
+      "target": "moral-arc"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "moral-arc"
+    },
+    {
+      "source": "tone-conflicted",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "plot-driven",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "moral-arc",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "theme-hardship",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "theme-deception",
+      "target": "complex-narrative"
+    }
+  ]
+}

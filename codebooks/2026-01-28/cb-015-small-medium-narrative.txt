@@ -1,0 +1,39 @@
+Imagine an annotator wandering through a gallery of short tales, labeling each piece like a curator who knows the rules by heart. As they move from frame to frame, the definitions below are their map — a set of compact, clear rules presented as if each one were a little story itself.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if the story has fewer than 160 words.
+- Think of this as the doorway that separates flash fictions from longer yarns: if the text slips under the 160-word line, it gets the [SHORT-STORY] tag.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if the story has the theme Magic.
+- Whenever a tale’s core revolves around spells, wonder, or the supernatural thread we call magic, the tag [THEME-MAGIC] is pinned to it.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+- This captures the curious voice in a piece — who, what, where, when, why, how — whenever those wh-questions appear, the story earns [USES-WH-QUESTIONS].
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun.
+- If the tale places an element early that must later play a role — the classic narrative promise known as Checkhov's gun — then mark it as [HAS-CHECKHOVS-GUN].
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if the story has readability score above 96.1
+- This is the clarity meter: when the readability score rises above 96.1, the story receives the [HIGH-READABILITY] label.
+
+[MYSTERIOUS-MAGIC]
+A story is [MYSTERIOUS-MAGIC] if both of the following are true:
+- The story is [THEME-MAGIC]
+- The story is not [HAS-CHECKHOVS-GUN]
+- Imagine a magic that never promises payoffs — the kind that lingers like fog. If the tale’s heart is magic but it lacks Checkhov’s gun, then it settles into the [MYSTERIOUS-MAGIC] category.
+
+[TIGHT-MAGIC-CRAFT]
+A story is [TIGHT-MAGIC-CRAFT] if both of the following are true:
+- The story is [SHORT-STORY]
+- Either of the following is true:
+  - The story is [MYSTERIOUS-MAGIC]
+  - Exactly one of the following is true:
+    - The story is not [HIGH-READABILITY]
+    - The story is [USES-WH-QUESTIONS]
+- Picture a compact gem of a tale. To be crowned [TIGHT-MAGIC-CRAFT], a story must be short, and then either it must be that mysterious, promise-free magic, or it must fall into a precise stylistic split: exactly one of unreadably raw clarity (not [HIGH-READABILITY]) or an inquisitive voice ([USES-WH-QUESTIONS]) — but not both. That exactness preserves the balance that makes the label meaningful.
+
+Keep this map in hand as you read and tag: each bracketed label is a lighthouse, and the logical threads between them are the steady ropes that hold the whole system together.

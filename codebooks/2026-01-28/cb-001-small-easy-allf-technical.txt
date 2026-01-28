@@ -1,0 +1,31 @@
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story conforms to a classic style.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if The story conforms to a modern style.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story contains a cliffhanger element.
+
+[LONG-STORY]
+A story is [LONG-STORY] if The story length exceeds 375 words.
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] if The story's primary topic concerns bygone eras.
+
+[CLASSIC-HISTORICAL-LONG]
+A story is [CLASSIC-HISTORICAL-LONG] if all of the following are true:
+- The story is [STYLE-CLASSIC]
+- The story is [LONG-STORY]
+- The story is [TOPIC-BYGONE-ERAS]
+
+[DYNAMIC-STYLE-CLIFF]
+A story is [DYNAMIC-STYLE-CLIFF] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [STYLE-MODERN]
+  - The story is [STYLE-CLASSIC]
+- All of the following are true:
+  - The story is not [STYLE-CLASSIC]
+  - The story's style is equal to [STYLE-MODERN]
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story's topic is in [TOPIC-BYGONE-ERAS]

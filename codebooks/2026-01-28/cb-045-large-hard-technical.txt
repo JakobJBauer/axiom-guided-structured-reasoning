@@ -1,0 +1,133 @@
+[MANY-PARAGRAPHS]  
+A story is [MANY-PARAGRAPHS] iff it contains strictly more than 6 paragraphs (i.e., paragraph count > 6).
+
+[HAS-A-STORY-WITHIN-A-STORY]  
+A story is [HAS-A-STORY-WITHIN-A-STORY] iff it includes an embedded narrative (i.e., a story-within-the-story).
+
+[STARTS-WITH-NOUN]  
+A story is [STARTS-WITH-NOUN] iff its initial token is a noun (opening word is tagged as NOUN).
+
+[USES-SUPERLATIVE-FORMS]  
+A story is [USES-SUPERLATIVE-FORMS] iff it contains one or more superlative morphological forms (e.g., “-est”, “most + adjective”).
+
+[HAS-CHECKHOVS-GUN]  
+A story is [HAS-CHECKHOVS-GUN] iff it exhibits Chekhov’s gun: an element introduced earlier that is later used with clear narrative payoff.
+
+[THEME-MAGIC]  
+A story is [THEME-MAGIC] iff “Magic” is a central thematic axis of the narrative.
+
+[USES-CONDITIONAL-MOOD]  
+A story is [USES-CONDITIONAL-MOOD] iff it uses conditional mood constructions (e.g., “would”, “could”, “if … then …”).
+
+[USES-WH-QUESTIONS]  
+A story is [USES-WH-QUESTIONS] iff it contains wh-interrogatives (e.g., who/what/when/where/why/how questions).
+
+[TOPIC-HIDDEN-TREASURES]  
+A story is [TOPIC-HIDDEN-TREASURES] iff its primary topic concerns hidden treasures.
+
+[THEME-INNOVATION]  
+A story is [THEME-INNOVATION] iff “Innovation” is a central thematic axis of the narrative.
+
+[TOPIC-SEASONAL-CHANGES]  
+A story is [TOPIC-SEASONAL-CHANGES] iff its primary topic concerns seasonal changes.
+
+[TOPIC-THE-ARTS]  
+A story is [TOPIC-THE-ARTS] iff its primary topic concerns the arts (e.g., music, painting, literature, performance).
+
+[LONG-STORY]  
+A story is [LONG-STORY] iff its length is strictly greater than 375 words (word count > 375).
+
+[THEME-GROWTH]  
+A story is [THEME-GROWTH] iff “Growth” is a central thematic axis of the narrative.
+
+[TOPIC-MAGICAL-LANDS]  
+A story is [TOPIC-MAGICAL-LANDS] iff its primary topic concerns magical lands/settings.
+
+[TOPIC-TIME-TRAVEL]  
+A story is [TOPIC-TIME-TRAVEL] iff its primary topic concerns time travel.
+
+[THEME-HARDSHIP]  
+A story is [THEME-HARDSHIP] iff “Hardship” is a central thematic axis of the narrative.
+
+[STARTS-WITH-ADVERB]  
+A story is [STARTS-WITH-ADVERB] iff its initial token is an adverb (opening word is tagged as ADV).
+
+[HAS-A-MORAL-LESSON]  
+A story is [HAS-A-MORAL-LESSON] iff it explicitly or implicitly communicates a moral lesson (normative takeaway).
+
+[LOW-READABILITY]  
+A story is [LOW-READABILITY] iff its readability score is strictly below 86.4 (score < 86.4).
+
+[STARTS-WITH-ADJECTIVE]  
+A story is [STARTS-WITH-ADJECTIVE] iff its initial token is an adjective (opening word is tagged as ADJ).
+
+[STARTS-WITH-NONNOUN]  
+A story is [STARTS-WITH-NONNOUN] iff it is not [STARTS-WITH-NOUN].
+
+[STRUCTURAL-EPIC]  
+A story is [STRUCTURAL-EPIC] iff both of the following are true:  
+- The story is [LONG-STORY]  
+- The story is [MANY-PARAGRAPHS]
+
+[EXPERIMENTAL-VOICE]  
+A story is [EXPERIMENTAL-VOICE] iff either of the following is true:  
+- Exactly one of the following is true: the story is [STARTS-WITH-ADVERB] or the story is [STARTS-WITH-ADJECTIVE]  
+- Both of the following are true:  
+  - The story is [STARTS-WITH-NONNOUN]  
+  - The story is [USES-WH-QUESTIONS]
+
+[MYTHIC-ENGINEERING]  
+A story is [MYTHIC-ENGINEERING] iff both of the following are true:  
+- Either of the following is true:  
+  - The story is [THEME-MAGIC]  
+  - The story is [TOPIC-MAGICAL-LANDS]  
+- Either of the following is true:  
+  - The story is [THEME-INNOVATION]  
+  - The story is [TOPIC-TIME-TRAVEL]
+
+[INTERROGATIVE-CONDITIONALITY]  
+A story is [INTERROGATIVE-CONDITIONALITY] iff both of the following are true:  
+- The story is [USES-CONDITIONAL-MOOD]  
+- Either of the following is true:  
+  - The story is [USES-WH-QUESTIONS]  
+  - The story is [LOW-READABILITY]
+
+[EMBEDDED-FORESHADOWING]  
+A story is [EMBEDDED-FORESHADOWING] iff both of the following are true:  
+- The story is [HAS-A-STORY-WITHIN-A-STORY]  
+- Either of the following is true:  
+  - The story is [HAS-CHECKHOVS-GUN]  
+  - Both of the following are true:  
+    - The story is [USES-SUPERLATIVE-FORMS]  
+    - It is not [USES-CONDITIONAL-MOOD]
+
+[TREASURED-TRANSFORMATION]  
+A story is [TREASURED-TRANSFORMATION] iff both of the following are true:  
+- The story is [TOPIC-HIDDEN-TREASURES]  
+- Either of the following is true:  
+  - Both of the following are true:  
+    - The story is [THEME-GROWTH]  
+    - The story is [HAS-A-MORAL-LESSON]  
+  - Both of the following are true:  
+    - The story is [THEME-HARDSHIP]  
+    - It is not [HAS-A-MORAL-LESSON]
+
+[SEASONAL-AESTHETIC]  
+A story is [SEASONAL-AESTHETIC] iff both of the following are true:  
+- The story is [TOPIC-SEASONAL-CHANGES]  
+- Either of the following is true:  
+  - The story is [TOPIC-THE-ARTS]  
+  - Both of the following are true:  
+    - The story is [USES-SUPERLATIVE-FORMS]  
+    - It is not [LOW-READABILITY]
+
+[MASTER-CLASS-PLOT]  
+A story is [MASTER-CLASS-PLOT] iff both of the following are true:  
+- Either of the following is true:  
+  - The story is [EMBEDDED-FORESHADOWING]  
+  - Both of the following are true:  
+    - The story is [STRUCTURAL-EPIC]  
+    - The story is [INTERROGATIVE-CONDITIONALITY]  
+- Exactly one of the following is true:  
+  - The story is [TREASURED-TRANSFORMATION]  
+  - The story is [SEASONAL-AESTHETIC]

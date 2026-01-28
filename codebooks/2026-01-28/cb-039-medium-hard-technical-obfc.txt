@@ -1,0 +1,65 @@
+Codebook — formal node definitions and logical specifications
+
+Definitions below specify predicate conditions for story-level annotation. Each entry defines the predicate [attr-4] such that: a story satisfies [attr-4] if and only if the listed conditions hold. All node identifiers are preserved verbatim. Logical operators (Not, And, Or, xor, equals, and not) and the original compositional structure are retained.
+
+[attr-11]
+Definition: A story is [attr-11] if the story exhibits the theme “Deception.”
+
+[attr-12]
+Definition: A story is [attr-12] if the story exhibits the theme “Helping Others.”
+
+[attr-9]
+Definition: A story is [attr-9] if the story is philosophical in style.
+
+[attr-2]
+Definition: A story is [attr-2] if the story contains Checkhov's gun.
+
+[attr-7]
+Definition: A story is [attr-7] if the story’s opening token is a noun.
+
+[attr-13]
+Definition: A story is [attr-13] if the story’s subject matter concerns hidden treasures.
+
+[attr-10]
+Definition: A story is [attr-10] if the story exhibits the theme “Agency.”
+
+[attr-6]
+Definition: A story is [attr-6] if the story’s opening token is an adjective.
+
+[attr-3]
+Definition: A story is [attr-3] if the story employs juxtaposition.
+
+[attr-5]
+Definition: A story is [attr-5] if either of the following is true:
+- The story is [attr-7]
+- The story is [attr-6] xor [attr-7]
+
+[attr-8]
+Definition: A story is [attr-8] if both of the following are true:
+- The story is [attr-5]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-11]
+    - The story is [attr-13]
+  - Either of the following is true:
+    - The story is [attr-2] xor [attr-10]
+    - The story is [attr-11] and not [attr-10]
+
+[attr-1]
+Definition: A story is [attr-1] if all of the following are true:
+- The story is [attr-8]
+- Not both of the following are true:
+  - The story is [attr-12]
+  - The story is [attr-9]
+- Either of the following is true:
+  - The story is [attr-3]
+  - Both of the following are true:
+    - The story is [attr-7] equals true
+    - The story is [attr-6] equals false
+
+Notes for annotators and automated systems:
+- Treat each line as a logical predicate: evaluate atomic predicates first (e.g., [attr-7], [attr-11]), then apply the specified boolean composition.
+- The operator “xor” denotes exclusive-or (true when exactly one operand is true).
+- The phrase “and not” denotes conjunction with logical negation of the second operand.
+- The phrases “equals true” and “equals false” are explicit equality checks and must be evaluated as written.
+- Maintain the nesting and ordering of conditions when implementing these predicates to preserve intended semantics.

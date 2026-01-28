@@ -1,0 +1,104 @@
+Overview
+- Purpose: A compact, structured codebook for annotators. Each entry names a node (ID in [attr-2] form) and explains the exact condition(s) under which a story should be labeled with that node.
+- Read this as a checklist: atomic nodes are single properties; composite nodes combine those properties with logical operators (And, Or, Xor, Not, Equal, In). The logical structure and all node IDs are preserved exactly.
+
+Atomic (single-condition) nodes
+- [attr-11]
+  - Definition: A story is [attr-11] if the story has fewer than 160 words.
+  - How to check: Count words; label if count < 160.
+
+- [attr-18]
+  - Definition: A story is [attr-18] if the story has the theme Kindness.
+
+- [attr-15]
+  - Definition: A story is [attr-15] if the story has the theme Helping Others.
+
+- [attr-19]
+  - Definition: A story is [attr-19] if the story has the theme Problem-Solving.
+
+- [attr-13]
+  - Definition: A story is [attr-13] if the story is philosophical.
+
+- [attr-6]
+  - Definition: A story is [attr-6] if the story has readability score above 96.1.
+  - How to check: Use the specified readability metric; label when score > 96.1.
+
+- [attr-14]
+  - Definition: A story is [attr-14] if the story is playful.
+
+- [attr-16]
+  - Definition: A story is [attr-16] if the story has the theme Humor.
+
+- [attr-12]
+  - Definition: A story is [attr-12] if the story is humorous.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story has a story within a story.
+
+- [attr-20]
+  - Definition: A story is [attr-20] if the story is about mystical creatures.
+
+- [attr-4]
+  - Definition: A story is [attr-4] if the story has a Red Herring.
+
+Composite (multi-condition) nodes
+- [attr-7]
+  - Logical structure: both of the following are true:
+    - The story is [attr-18]
+    - The story is [attr-15]
+  - Interpretation: Use And — label only when both theme nodes apply simultaneously.
+
+- [attr-8]
+  - Logical structure: a story is [attr-8] if exactly one of the following is true (Xor):
+    - The story is [attr-14]
+    - The story is [attr-12]
+  - Interpretation: Use Xor — label when one style is present and the other is absent.
+
+- [attr-17]
+  - Logical structure: A story is [attr-17] if the story's dominant theme is In the following set:
+    - [attr-18], [attr-15], [attr-19]
+  - Interpretation: Use In — membership among these three theme nodes determines the label (dominant theme must be one of them).
+
+- [attr-1]
+  - Logical structure: A story is [attr-1] if the following Equal relationship holds:
+    - The presence of [attr-13] Equal the presence of [attr-12]
+  - Interpretation: Use Equal — label when both are present or both are absent (parity of presence).
+
+- [attr-9]
+  - Logical structure: A story is [attr-9] if both of the following are true:
+    - The story is [attr-20]
+    - The story is [attr-5] And the story is [attr-13]
+  - Interpretation: This nests an And inside an And (topic AND (story-within-a-story AND philosophical)) to capture allegorical structure.
+
+- [attr-3]
+  - Logical structure: A story is [attr-3] if all of the following are true:
+    1. Either of the following is true (Or):
+       - The story is [attr-7]
+       - The story is [attr-19]
+    2. Exactly one of the following is true (Xor):
+       - The story is [attr-4]
+       - The story is [attr-5]
+    3. The story is Not [attr-11] Or the story is [attr-6]
+  - Interpretation: Combine Or and Xor to shape arc complexity. The Not in clause excludes very short works unless they meet [attr-6]; all three conditions must hold.
+
+- [attr-10]
+  - Logical structure: A story is [attr-10] if both of the following are true:
+    1. The story is [attr-3] And the story is [attr-1]
+    2. The story is [attr-17] And either of the following is true (Or):
+       - The story is [attr-8]
+       - The story is [attr-9]
+  - Interpretation: Top-level And combines two branches:
+    - Branch A: quality-of-arc (COMPLEX-ARC) plus tonal parity (BALANCED-TONE)
+    - Branch B: thematic core membership (THEME-IN-CORE-SET) plus one of (LIGHT-HEARTED or MYSTICAL-ALLEGORY)
+  - Note: This node intentionally references multiple logical operators (And, Or, Xor, Not, Equal, In) through its subordinate nodes.
+
+Quick annotator checklist (how to apply labels in practice)
+- Evaluate atomic properties first (themes, styles, topics, structural features, length, readability).
+- Use those atomic labels as inputs to composite nodes, following the exact logical operators shown (And, Or, Xor, Not, Equal, In).
+- For Xor: label only when exactly one operand is present.
+- For Equal: label when both operands share presence/absence (both present or both absent).
+- For In: check dominance/membership among listed theme nodes.
+- Preserve nesting: when a composite node references another composite (e.g., [attr-7] inside [attr-3]), apply the inner logic first.
+
+End note
+- The logical relationships, node IDs, and operators are preserved exactly as specified. Use this structured layout to make annotation consistent, fast, and logically transparent.

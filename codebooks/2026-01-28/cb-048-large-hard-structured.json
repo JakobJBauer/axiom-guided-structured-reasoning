@@ -1,0 +1,414 @@
+{
+  "nodes": [
+    {
+      "id": "topic-time-travel",
+      "label": "TOPIC-TIME-TRAVEL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adjective",
+      "label": "STARTS-WITH-ADJECTIVE",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-perfect-aspect",
+      "label": "USES-PERFECT-ASPECT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "STYLE-MODERN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "low-readability",
+      "label": "LOW-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-the-arts",
+      "label": "TOPIC-THE-ARTS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-circular-narrative-struct",
+      "label": "HAS-CIRCULAR-NARRATIVE-STRUCT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-cultural-traditions",
+      "label": "TOPIC-CULTURAL-TRADITIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-flashback",
+      "label": "HAS-A-FLASHBACK",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-humorous",
+      "label": "STYLE-HUMOROUS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-magical-lands",
+      "label": "TOPIC-MAGICAL-LANDS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-lighthearted",
+      "label": "STYLE-LIGHTHEARTED",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-mystical-creatures",
+      "label": "TOPIC-MYSTICAL-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-problem-solving",
+      "label": "THEME-PROBLEM-SOLVING",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "narrative-structural",
+      "label": "NARRATIVE-STRUCTURAL",
+      "formula_type": "And",
+      "formula_args": [
+        "has-circular-narrative-struct",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "has-a-flashback",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "starts-with-adjective"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-and-tone",
+      "label": "STYLE-AND-TONE",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "style-humorous",
+            "style-lighthearted"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-modern",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "low-readability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arts-traditional-problem",
+      "label": "ARTS-TRADITIONAL-PROBLEM",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "topic-the-arts",
+            "topic-cultural-traditions",
+            "theme-problem-solving"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "topic-the-arts",
+                "theme-problem-solving"
+              ]
+            },
+            "topic-cultural-traditions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fantasy-core",
+      "label": "FANTASY-CORE",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "topic-magical-lands",
+            "topic-mystical-creatures"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "topic-time-travel",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "style-modern"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-pattern",
+      "label": "COMPLEX-PATTERN",
+      "formula_type": "And",
+      "formula_args": [
+        "narrative-structural",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "style-and-tone",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "fantasy-core"
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "arts-traditional-problem",
+                "fantasy-core"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "syndic-conjunction",
+      "label": "SYNDIC-CONJUNCTION",
+      "formula_type": "And",
+      "formula_args": [
+        "complex-pattern",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "arts-traditional-problem",
+            "fantasy-core"
+          ]
+        },
+        {
+          "formula_type": "Equal",
+          "formula_args": [
+            "style-and-tone",
+            "style-humorous"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story-archetype",
+      "label": "STORY-ARCHETYPE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "syndic-conjunction",
+            {
+              "formula_type": "In",
+              "formula_args": [
+                "complex-pattern",
+                [
+                  "complex-pattern",
+                  "syndic-conjunction",
+                  "fantasy-core"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "fantasy-core",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "arts-traditional-problem"
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "arts-traditional-problem",
+                {
+                  "formula_type": "Xor",
+                  "formula_args": [
+                    "style-and-tone",
+                    "narrative-structural"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "has-circular-narrative-struct",
+      "target": "narrative-structural"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "narrative-structural"
+    },
+    {
+      "source": "starts-with-adjective",
+      "target": "narrative-structural"
+    },
+    {
+      "source": "style-humorous",
+      "target": "style-and-tone"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "style-and-tone"
+    },
+    {
+      "source": "style-modern",
+      "target": "style-and-tone"
+    },
+    {
+      "source": "low-readability",
+      "target": "style-and-tone"
+    },
+    {
+      "source": "topic-the-arts",
+      "target": "arts-traditional-problem"
+    },
+    {
+      "source": "topic-cultural-traditions",
+      "target": "arts-traditional-problem"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "arts-traditional-problem"
+    },
+    {
+      "source": "topic-magical-lands",
+      "target": "fantasy-core"
+    },
+    {
+      "source": "topic-mystical-creatures",
+      "target": "fantasy-core"
+    },
+    {
+      "source": "topic-time-travel",
+      "target": "fantasy-core"
+    },
+    {
+      "source": "style-modern",
+      "target": "fantasy-core"
+    },
+    {
+      "source": "narrative-structural",
+      "target": "complex-pattern"
+    },
+    {
+      "source": "style-and-tone",
+      "target": "complex-pattern"
+    },
+    {
+      "source": "fantasy-core",
+      "target": "complex-pattern"
+    },
+    {
+      "source": "arts-traditional-problem",
+      "target": "complex-pattern"
+    },
+    {
+      "source": "complex-pattern",
+      "target": "syndic-conjunction"
+    },
+    {
+      "source": "arts-traditional-problem",
+      "target": "syndic-conjunction"
+    },
+    {
+      "source": "fantasy-core",
+      "target": "syndic-conjunction"
+    },
+    {
+      "source": "style-and-tone",
+      "target": "syndic-conjunction"
+    },
+    {
+      "source": "style-humorous",
+      "target": "syndic-conjunction"
+    },
+    {
+      "source": "syndic-conjunction",
+      "target": "story-archetype"
+    },
+    {
+      "source": "complex-pattern",
+      "target": "story-archetype"
+    },
+    {
+      "source": "fantasy-core",
+      "target": "story-archetype"
+    },
+    {
+      "source": "arts-traditional-problem",
+      "target": "story-archetype"
+    },
+    {
+      "source": "style-and-tone",
+      "target": "story-archetype"
+    },
+    {
+      "source": "narrative-structural",
+      "target": "story-archetype"
+    }
+  ]
+}

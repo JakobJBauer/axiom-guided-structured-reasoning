@@ -1,0 +1,74 @@
+Interviewer: Let's go through this codebook node by node. Start simple — what does [attr-9] mean?
+
+Expert: A story is [attr-9] if The story has the theme Humor.
+
+Interviewer: And [attr-11]?
+
+Expert: A story is [attr-11] if The story is about lost civilizations.
+
+Interviewer: Style tags next — what is [attr-7]?
+
+Expert: A story is [attr-7] if The story is playful.
+
+Interviewer: [attr-8]?
+
+Expert: A story is [attr-8] if The story is surreal.
+
+Interviewer: How about [attr-12]?
+
+Expert: A story is [attr-12] if The story uses discourse markers.
+
+Interviewer: I see a readability label. Explain [attr-2].
+
+Expert: A story is [attr-2] if The story has readability score below 86.4.
+
+Interviewer: And classic style?
+
+Expert: A story is [attr-5] if The story is classic.
+
+Interviewer: What does [attr-6] capture?
+
+Expert: A story is [attr-6] if The story is philosophical.
+
+Interviewer: Cliffhangers?
+
+Expert: A story is [attr-1] if The story has a cliffhanger.
+
+Interviewer: There's a structural condition about how a story starts. Tell me about [attr-4].
+
+Expert: A story is [attr-4] if The story starts with a preposition.
+
+Interviewer: Now the composite nodes. [attr-10] looks more complex — can you walk me through it precisely?
+
+Expert: Certainly. A story is [attr-10] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-8]
+  - The story is not [attr-5]
+
+Interviewer: Let me paraphrase to check I understand: [attr-10] holds when either the story is exactly one of playful or philosophical, or when it’s surreal and explicitly not classic. Is that right?
+
+Expert: Yes — that restates the exact logical structure. Note the important quantifier “Exactly one” for the first option and the conjunction for the second.
+
+Interviewer: Great. Finally, [attr-3] — this looks nested. Please read it carefully.
+
+Expert: A story is [attr-3] if both of the following are true:
+- The story is in the following set:
+  - [attr-9]
+  - [attr-11]
+- Either of the following is true:
+  - The story is [attr-1]
+  - Both of the following are true:
+    - The story is equal to [attr-9]
+    - The story is not [attr-2]
+- Or the story is [attr-10]
+
+Interviewer: That’s a lot to unpack. Can you summarize the logical structure without changing it?
+
+Expert: Sure. For [attr-3] to hold, first the story must be in the set consisting of [attr-9] and [attr-11]. Then one of three paths must be satisfied: (1) it has [attr-1]; (2) it is exactly [attr-9] and not [attr-2]; or (3) it meets [attr-10]. Those are presented under the “Either of the following is true” clause, and the whole thing is governed by the initial “both of the following are true” — the set membership plus that either/or condition — which is then extended with the final “Or the story is [attr-10]” alternative as shown.
+
+Interviewer: Thanks — that preserves the exact logical relationships and node names, but makes the flow easier to follow.
+
+Expert: Exactly. Every node ID, every logical operator (Not, And, Or, Exactly one, Either, Both), and their relationships remain unchanged. This transcript just frames them as a Q&A so annotators can reason through them conversationally.

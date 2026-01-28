@@ -1,0 +1,156 @@
+{
+  "nodes": [
+    {
+      "id": "attr-1",
+      "label": "Story is [attr-1]: [attr-7] and (exactly one of [attr-5] and [attr-4] or [attr-12])",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-7",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "attr-5",
+                "attr-4"
+              ]
+            },
+            "attr-12"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Story has circular narrative structure",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Story has juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Story has readability score above 96.1",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Story has readability score below 86.4",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Story is [attr-6]: modern AND (philosophical OR juxtaposition) AND NOT circular",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-8",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-9",
+            "attr-3"
+          ]
+        },
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-7",
+      "label": "Story is [attr-7]: kindness AND deception AND [attr-6]",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-11",
+        "attr-10",
+        "attr-6"
+      ]
+    },
+    {
+      "id": "attr-8",
+      "label": "Story is modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "Story is philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Story has the theme Deception",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "Story has the theme Kindness",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "Story is about hidden treasures",
+      "formula_type": null,
+      "formula_args": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-7",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-7"
+    }
+  ]
+}

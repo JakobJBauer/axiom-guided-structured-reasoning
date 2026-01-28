@@ -1,0 +1,37 @@
+[attr-7]
+Definition: A story satisfies the predicate [attr-7] when its principal thematic content corresponds to "Helping Others."
+
+[attr-6]
+Definition: A story satisfies the predicate [attr-6] when its narrative style is philosophical in nature.
+
+[attr-4]
+Definition: A story satisfies the predicate [attr-4] when its stylistic characteristics conform to a classic style.
+
+[attr-1]
+Definition: A story satisfies the predicate [attr-1] when it contains juxtaposition as a structural or rhetorical device.
+
+[attr-5]
+Definition: A story satisfies the predicate [attr-5] when its stylistic characteristics conform to a modern style.
+
+[attr-2]
+Definition: A story satisfies the predicate [attr-2] if and only if both of the following conditions hold:
+- The story satisfies [attr-1].
+- Exactly one of the following is true:
+  - The story satisfies [attr-4].
+  - The story satisfies [attr-5].
+
+[attr-3]
+Definition: A story satisfies the predicate [attr-3] when at least one of the following disjoint cases applies:
+
+Case A — Philosophical Helping (non-mixed):
+- All of the following are true:
+  - The story satisfies [attr-6].
+  - The story satisfies [attr-7].
+  - The story does not satisfy [attr-2].
+
+Case B — Mixed-style Juxtaposition without Helping Theme:
+- Both of the following are true:
+  - The story satisfies [attr-2].
+  - The story does not satisfy [attr-7].
+
+Interpretation note: The predicate [attr-3] is true if either Case A or Case B holds; these cases are mutually exclusive due to the specified negations.

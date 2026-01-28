@@ -1,0 +1,135 @@
+{
+  "nodes": [
+    {
+      "id": "attr-9",
+      "label": "Uses conditional mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Starts with an adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "Has theme Agency",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Fewer than 160 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Uses perfect aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "attr-3",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-9",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-4",
+      "label": "attr-4",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        "attr-7"
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "attr-1",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-8",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-6",
+            "attr-5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "attr-2",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-4",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-3",
+            "attr-1"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-9",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-2"
+    }
+  ]
+}

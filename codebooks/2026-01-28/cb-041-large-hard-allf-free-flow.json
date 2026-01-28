@@ -1,0 +1,285 @@
+{
+  "nodes": [
+    {
+      "id": "short-story",
+      "label": "Short Story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-kindness",
+      "label": "Theme: Kindness",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-helping-others",
+      "label": "Theme: Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-problem-solving",
+      "label": "Theme: Problem Solving",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "Style: Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "high-readability",
+      "label": "High Readability",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-playful",
+      "label": "Style: Playful",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-humor",
+      "label": "Theme: Humor",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-humorous",
+      "label": "Style: Humorous",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-story-within-a-story",
+      "label": "Has a Story Within a Story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-mystical-creatures",
+      "label": "Topic: Mystical Creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-red-herring",
+      "label": "Has a Red Herring",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "kindness-helping",
+      "label": "Kindness Helping",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-kindness",
+        "theme-helping-others"
+      ]
+    },
+    {
+      "id": "light-hearted",
+      "label": "Light Hearted",
+      "formula_type": "Xor",
+      "formula_args": [
+        "style-playful",
+        "style-humorous"
+      ]
+    },
+    {
+      "id": "theme-in-core-set",
+      "label": "Theme In Core Set",
+      "formula_type": "In",
+      "formula_args": [
+        "dominant-theme",
+        [
+          "theme-kindness",
+          "theme-helping-others",
+          "theme-problem-solving"
+        ]
+      ]
+    },
+    {
+      "id": "balanced-tone",
+      "label": "Balanced Tone",
+      "formula_type": "Equal",
+      "formula_args": [
+        "style-philosophical",
+        "style-humorous"
+      ]
+    },
+    {
+      "id": "mystical-allegory",
+      "label": "Mystical Allegory",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-mystical-creatures",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "has-a-story-within-a-story",
+            "style-philosophical"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-arc",
+      "label": "Complex Arc",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "kindness-helping",
+            "theme-problem-solving"
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "has-a-red-herring",
+            "has-a-story-within-a-story"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "short-story"
+              ]
+            },
+            "high-readability"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "recommendable-composition",
+      "label": "Recommendable Composition",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "complex-arc",
+            "balanced-tone"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "theme-in-core-set",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "light-hearted",
+                "mystical-allegory"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "theme-kindness",
+      "target": "kindness-helping"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "kindness-helping"
+    },
+    {
+      "source": "style-playful",
+      "target": "light-hearted"
+    },
+    {
+      "source": "style-humorous",
+      "target": "light-hearted"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "theme-in-core-set"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "theme-in-core-set"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "theme-in-core-set"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "balanced-tone"
+    },
+    {
+      "source": "style-humorous",
+      "target": "balanced-tone"
+    },
+    {
+      "source": "topic-mystical-creatures",
+      "target": "mystical-allegory"
+    },
+    {
+      "source": "has-a-story-within-a-story",
+      "target": "mystical-allegory"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "mystical-allegory"
+    },
+    {
+      "source": "kindness-helping",
+      "target": "complex-arc"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "complex-arc"
+    },
+    {
+      "source": "has-a-red-herring",
+      "target": "complex-arc"
+    },
+    {
+      "source": "has-a-story-within-a-story",
+      "target": "complex-arc"
+    },
+    {
+      "source": "short-story",
+      "target": "complex-arc"
+    },
+    {
+      "source": "high-readability",
+      "target": "complex-arc"
+    },
+    {
+      "source": "complex-arc",
+      "target": "recommendable-composition"
+    },
+    {
+      "source": "balanced-tone",
+      "target": "recommendable-composition"
+    },
+    {
+      "source": "theme-in-core-set",
+      "target": "recommendable-composition"
+    },
+    {
+      "source": "light-hearted",
+      "target": "recommendable-composition"
+    },
+    {
+      "source": "mystical-allegory",
+      "target": "recommendable-composition"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+Think of this codebook as a little atlas for stories — a set of signs and crossroads that tell you what kind of tale you're holding. Each label is a verdict, a small magic stamp you give a piece of writing when it shows certain traits. Below, the labels speak like characters in a village, but the rules that bind them remain unbroken. Every node ID stays exactly as written in brackets, and every logical rule — the ANDs, ORs, NOTs, and the special counts like “Exactly one” — holds firm like laws of the land.
+
+[attr-9]
+A story is [attr-9] if the story uses conditional mood.
+- Imagine a narrator who often says "would," "could," or "might" — that tendency is what earns the story this name.
+
+[attr-6]
+A story is [attr-6] if the story starts with an adverb.
+- If the first word leans into manner or time — briskly, suddenly, tomorrow — the story wears this badge.
+
+[attr-8]
+A story is [attr-8] if the story has the theme Agency.
+- When characters shape their fate, make decisions, and act on purpose, the theme of agency is present and this tag applies.
+
+[attr-5]
+A story is [attr-5] if the story has fewer than 160 words.
+- Small and concentrated, under 160 words qualifies it as a [attr-5].
+
+[attr-7]
+A story is [attr-7] if the story is lighthearted.
+- If the tone is playful, cheerful, or otherwise easy on the heart, it earns this descriptor.
+
+[attr-10]
+A story is [attr-10] if the story uses perfect aspect.
+- When the prose relies on constructions like "has done" or "had seen," it carries the perfect aspect tag.
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-9]
+- The story is not [attr-10]
+- Picture a mood that favors hypothetical turns and avoids perfect constructions; when both those conditions meet, the tale is labeled [attr-3].
+
+[attr-4]
+A story is [attr-4] if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-7]
+- When brevity and a sunny tone pair up, the story qualifies as [attr-4].
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-8]
+- Exactly one of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- Think of [attr-1] as a little dramatic setup: agency must be present, and then the story must satisfy exactly one of the two entrance conditions — either it opens with an adverb, or it’s compact enough to be a short story, but not both at once.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-4]
+- Either of the following are true:
+  - The story is [attr-3]
+  - The story is [attr-1]
+- Imagine the final prize: an [attr-2] blooms when a short, lighthearted pace pairs with either the mixed mood (conditional without perfect aspect) or the precise agency-start condition. It’s the intersection where pacing, tone, mood, and a hint of agency combine to create a tidy, pleasing whole.
+
+Read this as a map: each node is a signpost, each logical connector a path. Nothing here is changed except the voice — the structure and rules are preserved so you can annotate and reason with confidence, but enjoy the labels as characters in a small, exact world of story traits.

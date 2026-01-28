@@ -1,0 +1,125 @@
+I'll walk you through this codebook in a more conversational, free-flow voice while keeping every technical detail exactly where it belongs. The node IDs remain unchanged in [attr-3] form, and all logical relationships—Not, And, Or, Exactly one, and so on—are preserved exactly as in the original. Think of this as a friendly guide that gently explains what each label means, then repeats the precise logical rules you need for annotation.
+
+[attr-15]
+Call a story [attr-15] when its overall tone is lighthearted — playful, breezy, or gently amusing. In short: if the story is lighthearted, it gets this tag.
+
+[attr-17]
+Tag a story [attr-17] when it leans into philosophical ideas, reflections, or questions. If the story is philosophical, it’s [attr-17].
+
+[attr-25]
+Use [attr-25] for stories that take place in or are centrally about enchanted, uncanny, or distinctly magical lands. If the story is about magical lands, it’s [attr-25].
+
+[attr-27]
+If a story explicitly uses wh-questions (who, what, where, when, why, how), label it [attr-27].
+
+[attr-12]
+When the whole piece is concise — under 160 words — mark it [attr-12].
+
+[attr-19]
+If kindness is a core theme of the tale, assign [attr-19].
+
+[attr-8]
+When the story is broken into more than six paragraphs, use [attr-8].
+
+[attr-26]
+If the narrative makes use of the conditional mood (would, could, might, etc.), give it [attr-26].
+
+[attr-21]
+If problem-solving drives the story’s theme — characters working out puzzles, challenges, or obstacles — mark [attr-21].
+
+[attr-18]
+When growth (personal, moral, or otherwise) is a clear theme, label the story [attr-18].
+
+[attr-13]
+If the very first word of the story is a preposition (in, on, under, before, etc.), tag it [attr-13].
+
+[attr-22]
+Use [attr-22] when giant creatures are a central subject of the story.
+
+[attr-16]
+If the story reads as modern in style — contemporary voice, modern settings or sensibilities — call it [attr-16].
+
+[attr-14]
+If the story has a classic style — timeless structure, older conventions, or a classic voice — mark it [attr-14].
+
+[attr-20]
+When magic itself is an explicit theme, use [attr-20].
+
+[attr-24]
+If the story is about lost civilizations, ancient ruins, or rediscovered cultures, tag [attr-24].
+
+[attr-5]
+If a flashback appears in the narrative, give it [attr-5].
+
+[attr-23]
+Stories centered on hidden treasures, secret hoards, or buried riches should carry [attr-23].
+
+[attr-10]
+A story is [attr-10] if the story is not [attr-15]. In other words, apply this when the story is explicitly not lighthearted.
+
+[attr-9]
+A story is [attr-9] if exactly one of the following is true:
+- The story is [attr-16]
+- The story is [attr-14]
+
+[attr-7]
+Think of [attr-7] as a special kind of adventure that must meet both of these conditions:
+- The story is [attr-25]
+- Either of the following is true:
+  - The story is [attr-20]
+  - Both of the following are true:
+    - The story is [attr-22]
+    - The story is [attr-21]
+
+[attr-6]
+Label a story [attr-6] when it fits either of these possibilities:
+- Exactly one of the following is true:
+  - The story is [attr-23]
+  - The story is [attr-24]
+- Both of the following are true:
+  - The story is [attr-23]
+  - The story is [attr-24]
+
+[attr-11]
+Use [attr-11] for stories that have a wh-question device and either a conditional mood or begin with a preposition:
+- [attr-27] is in the set of devices the story uses (it explicitly uses wh-questions)
+- Either of the following is true:
+  - The story is [attr-26]
+  - The story is [attr-13]
+
+[attr-4]
+An [attr-4] is a tightly specified kind of growth story. Two big requirements must both be met:
+- The set of themes in the story is equal to the set containing [attr-19] and [attr-18]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-21]
+    - The story is [attr-5]
+  - Both of the following are true:
+    - The story is [attr-8]
+    - The story is not [attr-12]
+
+[attr-1]
+An [attr-1] happens in one of two ways:
+- Both of the following are true:
+  - The story is [attr-7]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-22]
+  - The story is [attr-24]
+
+[attr-2]
+Finally, [attr-2] captures a particular, layered combination. A story is this if either of these two larger blocks applies:
+- Both of the following are true:
+  - The story is [attr-1]
+  - Both of the following are true:
+    - The story is [attr-9]
+    - Either of the following is true:
+      - The story is [attr-19]
+      - The story is [attr-20]
+- Both of the following are true:
+  - The story is [attr-4]
+  - Both of the following are true:
+    - The story is not [attr-10]
+    - The story is [attr-11]
+
+That’s the whole codebook, rewritten in a friendlier flow but keeping every ID, every logical condition, and every relationship just as originally specified. Use these labels exactly as defined when annotating or reasoning about stories.

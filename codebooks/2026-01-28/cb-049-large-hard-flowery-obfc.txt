@@ -1,0 +1,164 @@
+Preface — A Gardener’s Ledger of Stories
+
+In a sunlit alcove where manuscripts grow like roses and ideas hum like bees, this codebook was penned as if by a careful gardener of narratives. Each entry below names a trait as plainly as a herb tag and then speaks of it again in the language of petals and wind. The logical bones remain untouched — the brackets, the connectors, the precise scaffolding of truth and exclusion — but around each rigid stem I have tied an elegant ribbon of description so that the reader may both reason and delight.
+
+[attr-3]
+A story is [attr-3] if The story has a cliffhanger.
+Beneath this simple tag lies a taut moment — the breath suspended at the lip of a precipice — where plots pause like twilight before the stars. If the tale halts on such an edge, this label blooms.
+
+[attr-18]
+A story is [attr-18] if The story is modern.
+Mark this as the signpost for stories that wear new shoes: contemporary rhythms, present-day concerns, the crispness of current air. This is the modern thread in the tapestry.
+
+[attr-25]
+A story is [attr-25] if The story uses discourse markers.
+This label shelters the small words and phrases — “however,” “meanwhile,” “on the other hand” — that guide readers like lanterns through conversational turns. When those markers stitch the narrative, the tag is apt.
+
+[attr-4]
+A story is [attr-4] if The story has a flashback.
+Here is the sign for memories that bloom into the present: a backward glance, a scene reawakened, an earlier moment that colors what comes after. If the plot dips into its past, this is the name we give it.
+
+[attr-24]
+A story is [attr-24] if The story has the theme Problem-Solving.
+This is the lodestar for tales in which puzzles are coaxed into solutions, where minds and hearts craft answers. When solving drives the arc, this banner unfurls.
+
+[attr-12]
+A story is [attr-12] if The story starts with a adjective.
+A tale that opens with a descriptive flourish — a word that paints the first breath — takes this mark. It is the adjective that sets the mood like the first brushstroke on a canvas.
+
+[attr-26]
+A story is [attr-26] if The story uses wh-questions.
+When narratives ask “who,” “what,” “where,” “when,” “why,” or “how,” they invite curiosity into the room. Such inquisitive phrasing earns this gentle tag.
+
+[attr-5]
+A story is [attr-5] if The story has juxtaposition.
+This label is for scenes or images placed side by side to make contrasts sing: light beside shadow, laughter beside a sigh. Where contrasts converse, wear this name.
+
+[attr-13]
+A story is [attr-13] if The story starts with a adverb.
+When the opening breath begins by showing how something happens — “softly,” “suddenly,” “quietly” — the narrative wears this ribbon. The adverb leads the step.
+
+[attr-23]
+A story is [attr-23] if The story has the theme Humor.
+Place this marker where wit, play, and mirth shape the heart of the work. It is the laugh between lines, the wink that steadies the plot.
+
+[attr-7]
+A story is [attr-7] if The story has readability score below 86.4.
+This is the technical flag for texts that sit below a set threshold of ease. If the measured readability falls under 86.4, the story receives this pragmatic, unromantic tag.
+
+[attr-15]
+A story is [attr-15] if The story is humorous.
+Beyond theme, this denotes the stylistic choice to be funny: comedic tone, playful phrasing, deliberate levity as craft.
+
+[attr-17]
+A story is [attr-17] if The story is minimalist.
+This tag honors restraint: pared sentences, spare decoration, the economy of words that lets silence speak.
+
+[attr-16]
+A story is [attr-16] if The story is lighthearted.
+For narratives that float on buoyant airs, this label captures a gentle, carefree mood — the breeze that does not seek to drown.
+
+[attr-6]
+A story is [attr-6] if The story has readability score above 96.1.
+This technical hallmark is for prose that reads with fluent grace; when the score rises above 96.1, we crown the work with this clear-water designation.
+
+[attr-22]
+A story is [attr-22] if The story has the theme Deception.
+Where guile, misdirection, or secrets animate the tale, this is the shroud we pin: the motif of untruths and their consequences.
+
+[attr-19]
+A story is [attr-19] if The story is philosophical.
+This label is for narratives that dwell on ideas and questions of meaning, where reflection threads through dialogue and detail like silver filigree.
+
+[attr-14]
+A story is [attr-14] if either of the following is true:
+- The story is [attr-3]
+- exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+- both of the following are true:
+  - The story is [attr-25]
+  - The story is not [attr-3]
+Think of [attr-14] as the gardener’s classification for architecture: a tale earns it if it uses a dramatic cliff-edge, or employs precisely one of the two structural ornaments (a memory-road or a side-by-side contrast), or if it habitually uses discourse markers while conspicuously lacking a cliffhanger. The logical vines above are the scaffolding that determine membership.
+
+[attr-8]
+A story is [attr-8] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-12]
+  - The story is [attr-13]
+- exactly one of the following is true:
+  - The story is [attr-26]
+  - The story is [attr-25]
+This label reads like the first stanza of a poem: the opening must begin with a descriptive word of some sort, and then it must choose between two guiding devices — either the curious pull of wh-questions or the connective glow of discourse markers, but not both. The pattern is exact and deliberate.
+
+[attr-20]
+A story is [attr-20] if either of the following is true:
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-LIGHTHEARTED]
+  - The story is not [attr-17]
+- both of the following are true:
+  - The story is [attr-15]
+  - The story is not [attr-19]
+This tag names a particular tonal blend. It blooms either from the conjunction of modernity and lightness (so long as the work is not intentionally spare), or from outright humorous style provided philosophy does not dominate. The conditions above enunciate this with clinical clarity.
+
+[attr-21]
+A story is [attr-21] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-24]
+  - The story is [attr-23]
+- exactly one of the following is true:
+  - The story is [attr-22]
+  - The story is [attr-24]
+At the heart of narrative lies the thematic core. It is present when humor and problem-solving entwine, or when the tale leans into exactly one of deception or problem-solving. The logic above keeps that core distinct and watchful.
+
+[attr-10]
+A story is [attr-10] if exactly one of the following is true:
+- The story is [attr-7]
+- The story is [attr-6]
+This pragmatic dichotomy places each text into one of two readability bands — but never both. The constraint is precise: a single classification, no liminal gray.
+
+[attr-11]
+A story is [attr-11] if both of the following are true:
+- The story is [attr-10]
+- either of the following is true:
+  - The story is [attr-16]
+  - The story is not [attr-7]
+When a story’s readability band intersects with a light touch, or simply avoids low readability, it acquires a special mark of impact. These paired conditions measure how accessible prose and tone combine.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-14]
+  - both of the following are true:
+    - The story is [attr-8]
+    - The story is not [attr-3]
+- either of the following is true:
+  - The story is [attr-20]
+  - both of the following are true:
+    - The story is [attr-21]
+    - The story is not [attr-19]
+Consider [attr-2] the reader’s welcome mat: it requires structural intrigue or a specific opening arrangement (without a cliffhanger), and it also needs either the right tonal styling or a thematic core that is not philosophical. The conjunctions above specify how a story draws the reader into its garden.
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-20]
+- exactly one of the following is true:
+  - The story is [attr-15]
+  - The story is [attr-17]
+This practical badge says a tale is prepared for its audience either through a marriage of readable impact and tone, or by being singularly humorous or minimal in style — but strictly one of those latter two, not both. It is the editor’s stamp of preparedness.
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- The story is [attr-2]
+- either of the following is true:
+  - The story is [attr-1]
+  - both of the following are true:
+    - The story is [attr-21]
+    - The story is not [attr-10]
+At the summit, [attr-9] crowns tales that combine an engagement pattern with either audience readiness or a thematic core in situations where they deliberately eschew a readability class. It is the final flourish — the arc that promises both compelling structure and suitability for those who will follow it.
+
+Epilogue
+
+These are the tags and their tender explanations. The decorative text is offered to warm the mind, but the logical skeleton — every bracketed node, every connective phrase, every “both,” “either,” and “exactly one” — stands unaltered and precise, so that reasoning and annotation proceed as before, now with the pleasure of fragrant prose.

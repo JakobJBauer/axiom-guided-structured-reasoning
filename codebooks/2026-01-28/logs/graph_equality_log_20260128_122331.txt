@@ -1,0 +1,297 @@
+================================================================================
+GRAPH EQUALITY VERIFICATION SUMMARY
+================================================================================
+Codebooks with all variants equal: 9
+Codebooks with unequal variants: 46
+================================================================================
+
+UNEQUAL CODEBOOKS:
+--------------------------------------------------------------------------------
+
+cb-038-medium-hard
+  Group: 15 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, narrative-obfc, obfc, structured, structured-obfc, technical, transcript, transcript-obfc)
+  Group: 1 (technical-obfc)
+
+cb-024-medium-medium
+  Group: 15 (base, concise, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, narrative-obfc, obfc, structured, structured-obfc, technical, technical-obfc, transcript, transcript-obfc)
+  Group: 1 (concise-obfc)
+
+cb-037-medium-hard-allf
+  Group: 5 (base, concise, flowery, free-flow, transcript)
+  Group: 2 (free-flow-obfc, technical-obfc)
+  Group: 2 (concise-obfc, transcript-obfc)
+  Group: 1 (flowery-obfc)
+  Group: 1 (narrative)
+  Group: 1 (obfc)
+  Group: 2 (narrative-obfc, structured-obfc)
+  Group: 2 (structured, technical)
+
+cb-040-medium-hard
+  Group: 8 (base, concise, flowery, free-flow, narrative, structured, technical, transcript)
+  Group: 6 (concise-obfc, flowery-obfc, free-flow-obfc, narrative-obfc, obfc, technical-obfc)
+  Group: 1 (structured-obfc)
+  Group: 1 (transcript-obfc)
+
+cb-053-insane-hard
+  Group: 15 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, obfc, structured, structured-obfc, technical, technical-obfc, transcript, transcript-obfc)
+  Group: 1 (narrative-obfc)
+
+cb-017-small-medium
+  Group: 11 (base, concise, flowery, flowery-obfc, free-flow, narrative, narrative-obfc, obfc, structured, technical, transcript)
+  Group: 5 (concise-obfc, free-flow-obfc, structured-obfc, technical-obfc, transcript-obfc)
+
+cb-010-small-easy
+  Group: 14 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, narrative-obfc, obfc, technical, technical-obfc, transcript, transcript-obfc)
+  Group: 2 (structured, structured-obfc)
+
+cb-025-medium-medium-allf
+  Group: 2 (structured, transcript)
+  Group: 7 (concise-obfc, flowery-obfc, free-flow-obfc, narrative-obfc, obfc, structured-obfc, transcript-obfc)
+  Group: 6 (base, concise, flowery, free-flow, narrative, technical)
+  Group: 1 (technical-obfc)
+
+cb-016-small-medium-allf
+  Group: 6 (flowery, flowery-obfc, narrative, structured-obfc, technical-obfc, transcript)
+  Group: 1 (free-flow-obfc)
+  Group: 1 (free-flow)
+  Group: 1 (obfc)
+  Group: 1 (narrative-obfc)
+  Group: 1 (transcript-obfc)
+  Group: 1 (technical)
+  Group: 1 (concise-obfc)
+  Group: 1 (base)
+  Group: 1 (concise)
+  Group: 1 (structured)
+
+cb-043-large-hard
+  Group: 4 (concise-obfc, flowery-obfc, obfc, technical-obfc)
+  Group: 1 (structured-obfc)
+  Group: 7 (base, concise, flowery, narrative, structured, technical, transcript)
+  Group: 1 (transcript-obfc)
+  Group: 1 (narrative-obfc)
+  Group: 1 (free-flow)
+  Group: 1 (free-flow-obfc)
+
+cb-027-medium-medium
+  Group: 9 (base, concise, flowery, free-flow, narrative, structured, structured-obfc, technical, transcript)
+  Group: 7 (concise-obfc, flowery-obfc, free-flow-obfc, narrative-obfc, obfc, technical-obfc, transcript-obfc)
+
+cb-052-insane-hard
+  Group: 9 (base, concise, flowery, free-flow, narrative, structured, structured-obfc, technical, transcript)
+  Group: 6 (concise-obfc, flowery-obfc, free-flow-obfc, narrative-obfc, obfc, technical-obfc)
+  Group: 1 (transcript-obfc)
+
+cb-013-small-medium
+  Group: 14 (base, concise, flowery, flowery-obfc, free-flow, narrative, narrative-obfc, obfc, structured, structured-obfc, technical, technical-obfc, transcript, transcript-obfc)
+  Group: 1 (concise-obfc)
+  Group: 1 (free-flow-obfc)
+
+cb-051-insane-hard-allf
+  Group: 1 (structured-obfc)
+  Group: 1 (flowery-obfc)
+  Group: 7 (base, concise, flowery, free-flow, structured, technical, transcript)
+  Group: 5 (free-flow-obfc, narrative-obfc, obfc, technical-obfc, transcript-obfc)
+  Group: 1 (narrative)
+  Group: 1 (concise-obfc)
+
+cb-015-small-medium
+  Group: 15 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow-obfc, narrative, narrative-obfc, obfc, structured, structured-obfc, technical, technical-obfc, transcript, transcript-obfc)
+  Group: 1 (free-flow)
+
+cb-048-large-hard
+  Group: 7 (concise-obfc, flowery-obfc, narrative-obfc, obfc, structured-obfc, technical-obfc, transcript-obfc)
+  Group: 8 (base, concise, flowery, free-flow, narrative, structured, technical, transcript)
+  Group: 1 (free-flow-obfc)
+
+cb-044-large-hard
+  Group: 14 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative-obfc, obfc, structured, structured-obfc, technical, technical-obfc, transcript)
+  Group: 1 (narrative)
+  Group: 1 (transcript-obfc)
+
+cb-045-large-hard
+  Group: 1 (concise)
+  Group: 13 (base, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, narrative-obfc, obfc, structured-obfc, technical-obfc, transcript, transcript-obfc)
+  Group: 2 (structured, technical)
+
+cb-034-medium-medium
+  Group: 13 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, narrative-obfc, structured, structured-obfc, transcript, transcript-obfc)
+  Group: 2 (technical, technical-obfc)
+  Group: 1 (obfc)
+
+cb-031-medium-medium
+  Group: 9 (concise-obfc, flowery-obfc, free-flow-obfc, narrative-obfc, obfc, structured-obfc, technical-obfc, transcript, transcript-obfc)
+  Group: 7 (base, concise, flowery, free-flow, narrative, structured, technical)
+
+cb-055-insane-hard
+  Group: 7 (base, concise, free-flow, narrative, structured, technical, transcript)
+  Group: 1 (narrative-obfc)
+  Group: 1 (obfc)
+  Group: 1 (structured-obfc)
+  Group: 1 (transcript-obfc)
+  Group: 1 (technical-obfc)
+  Group: 2 (flowery-obfc, free-flow-obfc)
+  Group: 1 (concise-obfc)
+  Group: 1 (flowery)
+
+cb-049-large-hard
+  Group: 3 (flowery, free-flow, narrative)
+  Group: 1 (transcript-obfc)
+  Group: 2 (concise, transcript)
+  Group: 1 (concise-obfc)
+  Group: 3 (base, structured, technical)
+  Group: 1 (technical-obfc)
+  Group: 2 (free-flow-obfc, narrative-obfc)
+  Group: 1 (flowery-obfc)
+  Group: 1 (structured-obfc)
+  Group: 1 (obfc)
+
+cb-050-large-hard
+  Group: 13 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, obfc, structured, technical, technical-obfc, transcript)
+  Group: 1 (structured-obfc)
+  Group: 1 (narrative-obfc)
+  Group: 1 (transcript-obfc)
+
+cb-036-medium-hard
+  Group: 15 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, obfc, structured, structured-obfc, technical, technical-obfc, transcript, transcript-obfc)
+  Group: 1 (narrative-obfc)
+
+cb-003-small-easy
+  Group: 15 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, narrative, narrative-obfc, obfc, structured, structured-obfc, technical, technical-obfc, transcript, transcript-obfc)
+  Group: 1 (free-flow-obfc)
+
+cb-054-insane-hard
+  Group: 6 (base, concise, flowery, free-flow, structured, transcript)
+  Group: 5 (concise-obfc, flowery-obfc, narrative-obfc, obfc, transcript-obfc)
+  Group: 3 (narrative, technical, technical-obfc)
+  Group: 1 (free-flow-obfc)
+  Group: 1 (structured-obfc)
+
+cb-005-small-easy
+  Group: 9 (base, concise, flowery, free-flow, narrative, structured, structured-obfc, technical, transcript-obfc)
+  Group: 3 (concise-obfc, free-flow-obfc, technical-obfc)
+  Group: 3 (flowery-obfc, narrative-obfc, obfc)
+  Group: 1 (transcript)
+
+cb-041-large-hard-allf
+  Group: 5 (base, flowery, structured, technical, transcript)
+  Group: 3 (concise, free-flow, narrative)
+  Group: 2 (free-flow-obfc, structured-obfc)
+  Group: 5 (concise-obfc, flowery-obfc, obfc, technical-obfc, transcript-obfc)
+  Group: 1 (narrative-obfc)
+
+cb-011-small-medium-allf
+  Group: 6 (flowery-obfc, free-flow-obfc, narrative-obfc, obfc, structured-obfc, transcript-obfc)
+  Group: 1 (concise-obfc)
+  Group: 2 (base, structured)
+  Group: 6 (concise, flowery, free-flow, narrative, technical, transcript)
+  Group: 1 (technical-obfc)
+
+cb-018-small-medium
+  Group: 14 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, narrative-obfc, obfc, structured-obfc, technical, technical-obfc, transcript-obfc)
+  Group: 2 (structured, transcript)
+
+cb-026-medium-medium
+  Group: 15 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, narrative-obfc, obfc, structured, technical, technical-obfc, transcript, transcript-obfc)
+  Group: 1 (structured-obfc)
+
+cb-032-medium-medium
+  Group: 15 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, narrative-obfc, obfc, structured, technical, technical-obfc, transcript, transcript-obfc)
+  Group: 1 (structured-obfc)
+
+cb-029-medium-medium-allf
+  Group: 7 (base, concise, flowery, narrative, structured, technical, transcript)
+  Group: 1 (obfc)
+  Group: 5 (concise-obfc, free-flow-obfc, narrative-obfc, technical-obfc, transcript-obfc)
+  Group: 1 (flowery-obfc)
+  Group: 1 (structured-obfc)
+  Group: 1 (free-flow)
+
+cb-023-medium-medium
+  Group: 15 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, narrative-obfc, obfc, structured, structured-obfc, technical, transcript, transcript-obfc)
+  Group: 1 (technical-obfc)
+
+cb-039-medium-hard
+  Group: 13 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, narrative-obfc, obfc, structured, technical, transcript)
+  Group: 2 (structured-obfc, transcript-obfc)
+  Group: 1 (technical-obfc)
+
+cb-033-medium-medium-allf
+  Group: 3 (flowery-obfc, narrative, narrative-obfc)
+  Group: 1 (transcript-obfc)
+  Group: 2 (concise-obfc, technical-obfc)
+  Group: 1 (free-flow-obfc)
+  Group: 2 (base, transcript)
+  Group: 1 (structured-obfc)
+  Group: 1 (concise)
+  Group: 1 (technical)
+  Group: 1 (structured)
+  Group: 1 (flowery)
+  Group: 1 (free-flow)
+  Group: 1 (obfc)
+
+cb-035-medium-medium
+  Group: 15 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, narrative-obfc, obfc, structured, technical, technical-obfc, transcript, transcript-obfc)
+  Group: 1 (structured-obfc)
+
+cb-022-medium-medium
+  Group: 12 (base, concise, flowery, free-flow, free-flow-obfc, narrative, narrative-obfc, structured, structured-obfc, technical, technical-obfc, transcript)
+  Group: 4 (concise-obfc, flowery-obfc, obfc, transcript-obfc)
+
+cb-046-large-hard-allf
+  Group: 6 (base, concise, flowery, narrative, structured, transcript)
+  Group: 1 (technical)
+  Group: 1 (concise-obfc)
+  Group: 1 (narrative-obfc)
+  Group: 1 (free-flow)
+  Group: 2 (flowery-obfc, transcript-obfc)
+  Group: 2 (obfc, technical-obfc)
+  Group: 1 (free-flow-obfc)
+  Group: 1 (structured-obfc)
+
+cb-001-small-easy-allf
+  Group: 4 (concise-obfc, free-flow-obfc, narrative-obfc, obfc)
+  Group: 3 (base, concise, free-flow)
+  Group: 1 (structured-obfc)
+  Group: 1 (structured)
+  Group: 5 (flowery, flowery-obfc, narrative, transcript, transcript-obfc)
+  Group: 1 (technical)
+  Group: 1 (technical-obfc)
+
+cb-009-small-easy
+  Group: 14 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, narrative, narrative-obfc, obfc, structured, technical, technical-obfc, transcript, transcript-obfc)
+  Group: 2 (free-flow-obfc, structured-obfc)
+
+cb-007-small-easy
+  Group: 14 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, narrative-obfc, structured, technical, technical-obfc, transcript, transcript-obfc)
+  Group: 1 (structured-obfc)
+  Group: 1 (obfc)
+
+cb-028-medium-medium
+  Group: 14 (base, concise, concise-obfc, flowery, flowery-obfc, free-flow, free-flow-obfc, narrative, narrative-obfc, obfc, structured-obfc, technical, transcript, transcript-obfc)
+  Group: 1 (structured)
+  Group: 1 (technical-obfc)
+
+cb-006-small-easy-allf
+  Group: 1 (transcript-obfc)
+  Group: 2 (base, transcript)
+  Group: 7 (flowery, free-flow, free-flow-obfc, structured, structured-obfc, technical, technical-obfc)
+  Group: 1 (concise)
+  Group: 1 (narrative)
+  Group: 3 (concise-obfc, narrative-obfc, obfc)
+
+cb-021-medium-medium-allf
+  Group: 8 (base, concise, flowery, free-flow, narrative, structured, technical, transcript)
+  Group: 7 (concise-obfc, flowery-obfc, free-flow-obfc, obfc, structured-obfc, technical-obfc, transcript-obfc)
+  Group: 1 (narrative-obfc)
+
+cb-042-large-hard
+  Group: 5 (base, flowery, free-flow, narrative, structured)
+  Group: 1 (technical)
+  Group: 4 (concise-obfc, flowery-obfc, narrative-obfc, obfc)
+  Group: 1 (technical-obfc)
+  Group: 1 (transcript)
+  Group: 1 (structured-obfc)
+  Group: 1 (transcript-obfc)
+  Group: 1 (free-flow-obfc)
+  Group: 1 (concise)
+

@@ -1,0 +1,54 @@
+[attr-13]
+A story is [attr-13] if it's about time travel.
+
+[attr-11]
+A story is [attr-11] if it's about hidden treasures.
+
+[attr-9]
+A story is [attr-9] if it's philosophical.
+
+[attr-5]
+A story is [attr-5] if it has more than 6 paragraphs.
+
+[attr-4]
+A story is [attr-4] if its readability score is above 96.1.
+
+[attr-7]
+A story is [attr-7] if it's classic.
+
+[attr-8]
+A story is [attr-8] if it's humorous.
+
+[attr-12]
+A story is [attr-12] if it's about mystical creatures.
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- The story is [attr-9]
+- The story is not [attr-8]
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- The story is [attr-4]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-8]
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- The story is [attr-11]
+- Both of the following are true:
+  - The story is [attr-13]
+  - The story is not [attr-9]
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-10]
+- Either of the following is true:
+  - The story is [attr-1]
+  - The story is [attr-12]
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-2]
+- The story is [attr-5]

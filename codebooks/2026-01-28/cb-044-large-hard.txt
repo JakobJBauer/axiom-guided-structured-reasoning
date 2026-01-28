@@ -1,0 +1,116 @@
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if the story has juxtaposition
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if the story has the theme Hardship
+
+[THEME-HUMOR]
+A story is [THEME-HUMOR] if the story has the theme Humor
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if the story is about the arts
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if the story has the theme Deception
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if the story is humorous
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if the story is minimalist
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if the story is lighthearted
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if the story has fewer than 160 words
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if the story has the theme Kindness
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if the story has readability score above 96.1
+
+[JUX-PREP-CLASH]
+A story is [JUX-PREP-CLASH] if both of the following are true:
+- The story is [HAS-JUXTAPOSITION]
+- Either of the following is true:
+  - The story is [STARTS-WITH-PREPOSITION]
+  - The story is [SHORT-STORY]
+
+[JUXTAPOSED-SUPERLATIVE]
+A story is [JUXTAPOSED-SUPERLATIVE] if both of the following are true:
+- The story is [JUX-PREP-CLASH]
+- Exactly one of the following is true:
+  - The story is [USES-SUPERLATIVE-FORMS]
+  - The story is [STYLE-MINIMALIST]
+
+[ARTISTIC-PHILOSOPHY]
+A story is [ARTISTIC-PHILOSOPHY] if both of the following are true:
+- The story is [TOPIC-THE-ARTS]
+- Either of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [JUXTAPOSED-SUPERLATIVE]
+
+[HUMOROUS-HYBRID]
+A story is [HUMOROUS-HYBRID] if both of the following are true:
+- Either of the following is true:
+  - The story is [THEME-HUMOR]
+  - The story is [STYLE-HUMOROUS]
+- All of the following are true:
+  - The story is not [STYLE-MINIMALIST]
+  - Exactly one of the following is true:
+    - The story is [STYLE-LIGHTHEARTED]
+    - The story is [USES-SUPERLATIVE-FORMS]
+
+[ALTRUISTIC-CONTRACTION]
+A story is [ALTRUISTIC-CONTRACTION] if either of the following is true:
+- Both of the following are true:
+  - The story is [HAS-A-MORAL-LESSON]
+  - Either of the following is true:
+    - The story is [THEME-HELPING-OTHERS]
+    - The story is [THEME-KINDNESS]
+- Exactly one of the following is true:
+  - The story is [THEME-DECEPTION]
+  - The story is [THEME-HARDSHIP]
+
+[COMPLEX-ARTFUL-STORY]
+A story is [COMPLEX-ARTFUL-STORY] if both of the following are true:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [ARTISTIC-PHILOSOPHY]
+    - The story is [ALTRUISTIC-CONTRACTION]
+  - Exactly one of the following is true:
+    - The story is [HUMOROUS-HYBRID]
+    - The story is [TOPIC-GIANT-CREATURES]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [TOPIC-TIME-TRAVEL]
+    - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - Both of the following are true:
+    - The story is [SHORT-STORY]
+    - The story is [HIGH-READABILITY]

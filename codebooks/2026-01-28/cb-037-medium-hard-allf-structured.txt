@@ -1,0 +1,72 @@
+Codebook — Structured Reference
+
+Purpose: Provide clear, hierarchical definitions for each annotation node. Each entry states the exact logical condition(s) that make a story qualify for that node. All node IDs, logical operators, and relationships are preserved exactly as written.
+
+Basic (atomic) nodes
+- [HAS-A-STORY-WITHIN-A-STORY]
+  - Definition: A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+- [THEME-MAGIC]
+  - Definition: A story is [THEME-MAGIC] if the story has the theme Magic.
+
+- [HAS-A-FLASHBACK]
+  - Definition: A story is [HAS-A-FLASHBACK] if the story has a flashback.
+
+- [TOPIC-THE-ARTS]
+  - Definition: A story is [TOPIC-THE-ARTS] if the story is about the arts.
+
+- [STYLE-MINIMALIST]
+  - Definition: A story is [STYLE-MINIMALIST] if the story is minimalist.
+
+- [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - Definition: A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+Device / relation nodes (logical comparisons between devices)
+- [DEVICE-XOR]
+  - Definition: A story is [DEVICE-XOR] if exactly one of the following is true:
+    - The story is [HAS-A-STORY-WITHIN-A-STORY]
+    - The story is [HAS-A-FLASHBACK]
+  - (Interpretation: exclusive OR — one and only one of those device nodes applies.)
+
+- [DEVICE-EQUAL]
+  - Definition: A story is [DEVICE-EQUAL] if the truth value of [HAS-A-STORY-WITHIN-A-STORY] equals the truth value of [HAS-CIRCULAR-NARRATIVE-STRUCT].
+  - (Interpretation: both are true or both are false.)
+
+Set-membership / theme combination
+- [MAGIC-ART-MEMBER]
+  - Definition: A story is [MAGIC-ART-MEMBER] if the story's primary theme or topic is in the set {[THEME-MAGIC], [TOPIC-THE-ARTS]}.
+  - (Interpretation: primary theme/topic is either Magic or The Arts.)
+
+Composite narrative nodes (combined logical requirements)
+- [COMPLEX-NARRATIVE-CORE]
+  - Definition: A story is [COMPLEX-NARRATIVE-CORE] if both of the following are true:
+    1. Either of the following are true:
+       - The story is [DEVICE-XOR]
+       - The story is [DEVICE-EQUAL]
+    2. The story is not [STYLE-MINIMALIST] and (the story is [HAS-CIRCULAR-NARRATIVE-STRUCT] or the story is [HAS-A-FLASHBACK])
+  - (Interpretation: one of the device relations must hold, and the story must be non-minimalist while also having a circular structure or a flashback.)
+
+- [ART-MAGIC-NARRATIVE]
+  - Definition: A story is [ART-MAGIC-NARRATIVE] if both of the following are true:
+    1. The story is [MAGIC-ART-MEMBER]
+    2. Either of the following are true:
+       - The story is [COMPLEX-NARRATIVE-CORE]
+       - The story is [STYLE-MINIMALIST]
+  - (Interpretation: primary theme/topic is Magic or The Arts, and the story is either complex by the core definition or deliberately minimalist.)
+
+Final composite node (exact exclusivity)
+- [COMPLEX-ARTISTIC-NARRATIVE]
+  - Definition: A story is [COMPLEX-ARTISTIC-NARRATIVE] if both of the following are true:
+    1. The story is [ART-MAGIC-NARRATIVE]
+    2. Exactly one of the following is true:
+       - The story is [DEVICE-EQUAL]
+       - The story is not [HAS-A-FLASHBACK]
+  - (Interpretation: must be an ART-MAGIC-NARRATIVE and satisfy an exclusive condition between [DEVICE-EQUAL] and the negation of [HAS-A-FLASHBACK].)
+
+Notes for annotators (practical reminders)
+- Preserve exact node semantics when deciding truth values. Do not conflate similar-sounding concepts.
+- When a node requires compound conditions, ensure each sub-condition is evaluated individually and combined according to the specified logic (And / Or / Exactly one / Not / Equal).
+- For set-membership [MAGIC-ART-MEMBER], treat the story’s primary theme or topic as the determining factor.
+- For [DEVICE-EQUAL], check equality of truth values (both true or both false) — not structural similarity.
+
+End of codebook.

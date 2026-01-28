@@ -1,0 +1,49 @@
+Think of this as a friendly guide to the labels we use when annotating stories. I’ll walk through each tag and what triggers it, keeping the exact logic you rely on — every bracketed node stays the same, and the logical words (both, either, not) remain intact.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if the story is minimalist — in other words, it leans into simplicity, pared-down language, and an economy of detail.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if the story has readability score above 96.1 — a clear numerical cutoff that marks extremely easy-to-read prose.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms — language that goes to the top: best, strongest, most, and the like.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if the story has the theme Growth — whenever change, development, or personal/plot expansion is central.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel — any narrative element that involves moving through time.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures — whether literal caches or metaphorical discoveries.
+
+[CLEAR-CONCISE]
+A story is [CLEAR-CONCISE] if both of the following are true:
+- The story is [STYLE-MINIMALIST]
+- The story is [HIGH-READABILITY]
+So [CLEAR-CONCISE] happens when simplicity and very high readability come together.
+
+[EMPHATIC]
+A story is [EMPHATIC] if both of the following are true:
+- The story is [USES-SUPERLATIVE-FORMS]
+- The story is not [STYLE-MINIMALIST]
+Here, emphasis through superlatives counts only when the piece is not minimalist — it’s loud, not spare.
+
+[THEMATIC-ARC]
+A story is [THEMATIC-ARC] if both of the following are true:
+- The story is [THEME-GROWTH]
+- Either of the following is true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is [TOPIC-HIDDEN-TREASURES]
+So a growth-focused tale becomes a [THEMATIC-ARC] when it pairs that theme with either time travel or hidden treasures.
+
+[COMPELLING]
+A story is [COMPELLING] if both of the following are true:
+- The story is [CLEAR-CONCISE]
+- Either of the following is true:
+  - The story is [EMPHATIC]
+  - The story is [THEMATIC-ARC]
+In short, to be [COMPELLING] a story needs to be clear and concise, plus either strikingly emphatic (without being minimalist) or carrying that growth-oriented thematic arc described above.
+
+That’s the set — same logical structure, just explained in a conversational flow so it’s easier to read and apply.

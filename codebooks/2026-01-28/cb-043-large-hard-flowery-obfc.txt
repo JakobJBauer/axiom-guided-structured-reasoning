@@ -1,0 +1,135 @@
+[attr-19]
+A story is [attr-19] if The story has the theme Innovation
+In the gentle hush of our catalog, this label is bestowed upon any narrative whose beating heart sings of invention, bright contrivances, and the audacious reshaping of the world — a theme that tastes of copper and new dawns.
+
+[attr-20]
+A story is [attr-20] if The story has the theme Magic
+Let this marker crown tales steeped in wonder, where hidden forces whisper and improbable charms ripple through the plot like starlight through leaves.
+
+[attr-4]
+A story is [attr-4] if The story has Checkhov's gun
+This token marks the presence of a promise kept: an object or detail introduced with deliberate gravity whose later arrival fulfills fate’s quiet contract.
+
+[attr-10]
+A story is [attr-10] if The story starts with a adverb
+We listen for the first breath of the sentence: when it opens with an adverb, the tale is flagged with this subtle stylistic flourish.
+
+[attr-18]
+A story is [attr-18] if The story has the theme Helping Others
+Bestow this upon narratives that turn their compass toward compassion, where characters reach outward and the plot is braided with acts of aid.
+
+[attr-14]
+A story is [attr-14] if The story is philosophical
+Use this when a story lingers in the halls of thought, weighing abstractions and asking large, patient questions of existence.
+
+[attr-11]
+A story is [attr-11] if The story starts with a noun
+This label is given when the tale’s opening is anchored by a noun, a solid first step that names the world before it moves.
+
+[attr-21]
+A story is [attr-21] if The story is about hidden treasures
+Attach this when the plot turns on secret hoards, buried riches, or valuables waiting beneath the soil of the narrative.
+
+[attr-17]
+A story is [attr-17] if The story has the theme Growth
+Mark stories where unfolding, maturation, and transformation are the lodestars — the arc of becoming is central.
+
+[attr-2]
+A story is [attr-2] if The story has a cliffhanger
+This badge denotes a tale that leaves breath suspended at the precipice, promising continuation with the delicious ache of uncertainty.
+
+[attr-13]
+A story is [attr-13] if The story is minimalist
+Assign this to works trimmed to essential lines, where silence and sparse detail carve meaning with surgical precision.
+
+[attr-24]
+A story is [attr-24] if The story uses conditional mood
+We note when a narrative habitually dwells in “ifs” and “mights,” when contingency shapes sentences and possibilities.
+
+[attr-23]
+A story is [attr-23] if The story is about seasonal changes
+This tag embraces tales that chart the turning of seasons, using the year’s wheel as a stage for mood and moment.
+
+[attr-22]
+A story is [attr-22] if The story is about mystical creatures
+Apply this when the cast includes beings of myth, fey, or otherworldly provenance, whose very presence colors the tale with enchantment.
+
+[attr-3]
+A story is [attr-3] if The story has a story within a story
+This denotes nesting: the main narrative cradles another tale inside it, a smaller story echoing the larger.
+
+[attr-5]
+A story is [attr-5] if The story has more than 6 paragraphs
+A practical measure of length: when the text blossoms beyond six paragraphs, it earns this descriptor.
+
+[attr-16]
+A story is [attr-16] if The story has the theme Agency
+Label stories where characters actively steer their fates, exercising choice and will that shape the journey.
+
+[attr-9]
+A story is [attr-9] if [attr-5] equals true
+A shorthand: when the tale satisfies the threshold of many paragraphs, we consider its paragraph density to be affirmed.
+
+[attr-12]
+A story is [attr-12] if both of the following are true:
+- exactly one of the following is true:
+  - The story is [attr-10]
+  - The story is [attr-11]
+- The story is in [STYLE-PHILOSOPHICAL, STYLE-MINIMALIST]
+Think of this as a structural rubric: the beginning’s grammar must choose only one avenue — either an adverbial wind or a noun’s solid footfall — and the whole composition must reside in the stylistic territory of philosophical reflection or austere minimalism.
+
+[attr-7]
+A story is [attr-7] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-21]
+  - The story is [attr-22]
+- exactly one of the following is true:
+  - The story is [attr-21]
+  - The story is [attr-23]
+This motif gathers tales in which the allure of secret riches and the presence of the uncanny cohabit, or where a single thread — buried treasure or the turning seasons — alone suffices to weave an air of enigma.
+
+[attr-6]
+A story is [attr-6] if either of the following is true:
+- The story is [attr-18]
+- both of the following are true:
+  - exactly one of the following is true:
+    - The story is [attr-17]
+    - The story is [attr-16]
+  - The story is not [attr-13]
+This label captures ethical strain: it appears when altruism is central, or when the tale balances growth against agency — but only if the narrative is not pared down to minimalist austerity.
+
+[attr-15]
+A story is [attr-15] if both of the following are true:
+- The story is [attr-19]
+- either of the following is true:
+  - The story is [attr-6]
+  - both of the following are true:
+    - The story is [attr-20]
+    - The story is [attr-24]
+Here we name the heart of a complex idea: a tale driven by innovation that is also braided with moral quandary, or else infused with magic and the soft subjunctive of conditional possibility.
+
+[attr-8]
+A story is [attr-8] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-2]
+- either of the following is true:
+  - The story is [attr-3]
+  - The story is not [attr-4]
+This category gathers tales employing striking structural tools: echoes of promise or the breath-held cliff, together with nesting tales or the absence of a previously mentioned device, composing a tapestry of narrative technique.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-15]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [attr-12]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [attr-8]
+        - The story is [attr-9]
+      - The story is [attr-7]
+  - both of the following are true:
+    - The story is [attr-8]
+    - The story is not [attr-13]
+This final, ornate classification crowns those narratives that dwell at the intersection of inventive core themes and layered form: innovation married to moral or magical depth, then woven through with a particular opening structure plus either dense paragraphs and narrative flourishes or a motif of mystery — or else granted narrative devices without the lean austerity of minimalism. It is the label for stories whose complexity reads like a rich tapestry, every thread intentionally placed.

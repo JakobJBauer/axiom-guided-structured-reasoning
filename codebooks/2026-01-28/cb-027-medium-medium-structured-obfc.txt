@@ -1,0 +1,96 @@
+Purpose
+- This codebook defines labels (nodes) that annotators apply to stories.  
+- Each node below is stated as: "A story is [attr-7] if ..." followed by the precise conditions you must check.
+- Logical relationships (AND, OR, NOT, XOR / "exactly one") are preserved exactly as given; conditions are arranged hierarchically to help you annotate consistently.
+
+Nodes
+
+- [attr-8]
+  - Definition:
+    - A story is [attr-8] if the story starts with an adverb.
+  - Quick check:
+    - Look at the first word of the story. If it is an adverb, assign this label.
+
+- [attr-9]
+  - Definition:
+    - A story is [attr-9] if the story is classic.
+  - Quick check:
+    - Determine whether the story’s style fits classic conventions; if so, assign this label.
+
+- [attr-4]
+  - Definition:
+    - A story is [attr-4] if the story has more than 375 words.
+  - Quick check:
+    - Count words; if > 375, assign this label.
+
+- [attr-11]
+  - Definition:
+    - A story is [attr-11] if the story is about giant creatures.
+  - Quick check:
+    - Check whether giant creatures are a central subject; if yes, assign.
+
+- [attr-10]
+  - Definition:
+    - A story is [attr-10] if the story has the theme Deception.
+  - Quick check:
+    - Identify deception as a core theme; if present, assign.
+
+- [attr-12]
+  - Definition:
+    - A story is [attr-12] if the story is about hidden treasures.
+  - Quick check:
+    - If hidden treasures are central to the plot, assign this label.
+
+Composite nodes (combinations of other nodes)
+
+- [attr-1]
+  - Definition:
+    - A story is [attr-1] if all of the following are true:
+      - The story is [attr-4]
+      - The story is [attr-11]
+      - The story is not [attr-9]
+  - Interpretation:
+    - Requires every listed condition to hold: long length, giant creatures topic, and explicitly not classic style.
+
+- [attr-5]
+  - Definition:
+    - A story is [attr-5] if all of the following are true:
+      - The story is [attr-10]
+      - The story is [attr-12]
+      - Either of the following is true:
+        - The story is [attr-8]
+        - The story is not [attr-9]
+  - Interpretation:
+    - Both theme (deception) and topic (hidden treasures) must hold, plus at least one of the two alternative conditions (starts with an adverb OR is not classic).
+
+- [attr-3]
+  - Definition:
+    - A story is [attr-3] if exactly one of the following is true:
+      - The story is [attr-1]
+      - The story is [attr-5]
+  - Interpretation:
+    - This is an exclusive-or: assign [attr-3] only when exactly one of those composite labels applies.
+
+- [attr-2]
+  - Definition:
+    - A story is [attr-2] if all of the following are true:
+      - The story is [attr-3]
+      - Either of the following is true:
+        - The story is [attr-9]
+        - The story is [attr-4]
+      - The story is not [attr-8]
+  - Interpretation:
+    - Requires: the story to be a HYBRID-TALE; additionally it must be either classic in style or long in length; and it must not start with an adverb.
+
+Annotator guidance (practical workflow)
+- Evaluate simple nodes first (e.g., [attr-4], [attr-8], topic/theme, style).
+- Use those basic labels to determine composite labels in the order given (AMPHIBIOUS-EPIC, MISLEADING-QUEST → HYBRID-TALE → COMPLEX-ARTIFACT).
+- When you see nested conditions, read them as written:
+  - "All of the following are true" = logical AND of the listed items.
+  - "Either of the following is true" = logical OR of the listed alternatives.
+  - "Exactly one of the following is true" = exclusive OR (XOR).
+  - "The story is not [attr-6]" = logical NOT of that label.
+- Keep each node ID exactly as shown (e.g., [attr-1]) when recording labels.
+
+End note
+- Logical structure and node IDs are preserved exactly; the above layout is intended to help you reason step-by-step while annotating.

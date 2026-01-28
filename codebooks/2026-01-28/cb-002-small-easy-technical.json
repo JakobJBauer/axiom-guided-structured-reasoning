@@ -1,0 +1,80 @@
+{
+  "nodes": [
+    {
+      "id": "style-playful",
+      "label": "Style Playful",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "Style Modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adjective",
+      "label": "Starts With Adjective",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-discourse-markers",
+      "label": "Uses Discourse Markers",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-checkhovs-gun",
+      "label": "Has Chekhovs Gun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "modern-opening",
+      "label": "Modern Opening",
+      "formula_type": "And",
+      "formula_args": [
+        "style-modern",
+        "starts-with-adjective"
+      ]
+    },
+    {
+      "id": "engaging-structure",
+      "label": "Engaging Structure",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-playful",
+            "uses-discourse-markers"
+          ]
+        },
+        "has-checkhovs-gun"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "style-modern",
+      "target": "modern-opening"
+    },
+    {
+      "source": "starts-with-adjective",
+      "target": "modern-opening"
+    },
+    {
+      "source": "style-playful",
+      "target": "engaging-structure"
+    },
+    {
+      "source": "uses-discourse-markers",
+      "target": "engaging-structure"
+    },
+    {
+      "source": "has-checkhovs-gun",
+      "target": "engaging-structure"
+    }
+  ]
+}

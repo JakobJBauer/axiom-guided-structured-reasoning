@@ -1,0 +1,52 @@
+Codebook — Structured View
+Purpose: Provide a clear, hierarchical representation of each annotation node and its logical relationships. Use this as a checklist when deciding whether a story satisfies a node.
+
+1) Atomic nodes — basic labels
+- [attr-6]
+  - Definition: A story is [attr-6] if the story is about the arts.
+
+- [attr-7]
+  - Definition: A story is [attr-7] if the story uses conditional mood.
+
+- [attr-4]
+  - Definition: A story is [attr-4] if the story starts with a adjective.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story is philosophical.
+
+2) Compound nodes — logical combinations
+- [attr-3]
+  - Qualification rule: A story is [attr-3] if both of the following are true:
+    - The story is [attr-7]
+    - The story is not [attr-4]
+
+- [attr-1]
+  - Qualification rule: A story is [attr-1] if exactly one of the following is true:
+    - The story is [attr-6]
+    - The story is [attr-5]
+
+- [attr-2]
+  - Qualification rule: A story is [attr-2] if either of the following is true:
+    - The story is [attr-3]
+    - Both of the following are true:
+      - The story is in the set of topics that includes [attr-6]
+      - The truth of [attr-5] is equal to the truth of not [attr-7]
+
+3) Quick annotation checklist (how to decide)
+- First, identify atomic properties:
+  - Is the story about the arts? → [attr-6]
+  - Does the story use conditional mood? → [attr-7]
+  - Does the story start with an adjective? → [attr-4]
+  - Is the story philosophical in style? → [attr-5]
+
+- Then evaluate compounds in order:
+  - If the story both uses conditional mood and does not start with an adjective → tag [attr-3].
+  - If exactly one of “about the arts” or “philosophical” holds → tag [attr-1].
+  - For [attr-2], mark true if:
+    - the story meets [attr-3], OR
+    - both (it is within the topics that include [attr-6]) AND (STYLE-PHILOSOPHICAL’s truth equals the truth of not [attr-7]).
+
+Notes and reminders
+- All logical relationships must be preserved exactly as listed above (Not, And, Or / both, exactly one, either).
+- Do not alter node IDs — use the bracketed IDs verbatim when annotating.
+- The phrase “the story is in the set of topics that includes [attr-6]” is intentional: treat it as checking topic membership that covers [attr-6].

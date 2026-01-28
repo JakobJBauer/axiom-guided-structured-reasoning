@@ -1,0 +1,100 @@
+{
+  "nodes": [
+    {
+      "id": "attr-4",
+      "label": "Attr 4",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Attr 5",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Attr 7",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "Attr 1",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "Attr 2",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Attr 3",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-6",
+      "label": "Attr 6",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-4",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-3",
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-2"
+                  ]
+                },
+                "attr-7"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-5",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-6"
+    }
+  ]
+}

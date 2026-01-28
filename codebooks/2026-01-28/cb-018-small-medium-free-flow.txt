@@ -1,0 +1,37 @@
+Think of this as a short, friendly guide to how we label stories — using the exact node names in brackets so nothing gets lost in translation.
+
+[THEME-HELPING-OTHERS]
+If a story’s central thread is about helping others, you’d tag it [THEME-HELPING-OTHERS]. In plain terms: when the theme is Helping Others, that label applies.
+
+[STYLE-PHILOSOPHICAL]
+When a story leans into ideas, reflection, or philosophical inquiry, mark it as [STYLE-PHILOSOPHICAL]. If it’s philosophical, that’s the tag.
+
+[STYLE-CLASSIC]
+If a story feels classic in style — the traditional rhythms, structures, or sensibilities — it gets [STYLE-CLASSIC]. In short: classic stories = [STYLE-CLASSIC].
+
+[HAS-JUXTAPOSITION]
+When a story sets contrasting elements side-by-side — striking contrasts or comparisons — label it [HAS-JUXTAPOSITION]. If it has juxtaposition, that’s the identifier.
+
+[MIXED-STYLE-JUXTAPOSE]
+Use [MIXED-STYLE-JUXTAPOSE] when two conditions are both true:
+- The story is [HAS-JUXTAPOSITION]
+- Exactly one of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [STYLE-MODERN]
+So this tag is for stories that pair juxtaposition with either classic or modern style — but not both; exactly one of those styles must be present.
+
+[STYLE-MODERN]
+If the story reads with modern sensibilities — contemporary voice, techniques, or pacing — it’s [STYLE-MODERN]. In other words, modern stories = [STYLE-MODERN].
+
+[PHILOSOPHICAL-HELPING-OTHERS-DRAMATIC]
+This one is a little layered. A story is [PHILOSOPHICAL-HELPING-OTHERS-DRAMATIC] if either of the following is true:
+- All of the following are true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [THEME-HELPING-OTHERS]
+  - The story is not [MIXED-STYLE-JUXTAPOSE]
+- Both of the following are true:
+  - The story is [MIXED-STYLE-JUXTAPOSE]
+  - The story is not [THEME-HELPING-OTHERS]
+So, to wear the [PHILOSOPHICAL-HELPING-OTHERS-DRAMATIC] label a story must either be philosophical and about helping others while not being a mixed-style juxtaposition, or it must be a mixed-style juxtaposition that is explicitly not about helping others.
+
+That’s everything — same logic, same exact node names and relationships, just laid out in a smoother, conversational flow to make the rules easier to follow when you’re annotating.

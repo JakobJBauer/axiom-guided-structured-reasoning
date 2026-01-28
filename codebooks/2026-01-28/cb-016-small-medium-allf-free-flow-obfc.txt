@@ -1,0 +1,29 @@
+Think of this as a gentle, conversational guide to the same logical rules — the nodes and their relationships are unchanged, just presented in a more natural voice. Each definition keeps the exact node IDs and the same logical structure; I've only smoothed the wording so it reads more like how you'd explain it aloud.
+
+[attr-5]
+A story is [attr-5] if the story has the theme Helping Others. In other words, when the overall theme centers on helping other people, you tag it with [attr-5].
+
+[attr-2]
+A story is [attr-2] if either of the following is true:
+- The protagonist's central action is in the set {aid, rescue}
+- The protagonist's central action is in the set {donate, teach}
+So, if the main thing the protagonist does is one of those actions — whether it’s aiding or rescuing, or donating or teaching — the story meets the [attr-2] definition.
+
+[attr-3]
+A story is [attr-3] if
+- The protagonist's motive is equal to "personal gain"
+This marks stories where the driving reason for the protagonist’s behavior is explicit personal gain.
+
+[attr-4]
+A story is [attr-4] if both of the following are true:
+- The story is [attr-2]
+- The story is not [attr-3]
+So a [attr-4] happens when the protagonist performs one of the helpful actions listed above and does so without a motive of personal gain.
+
+[attr-1]
+A story is [attr-1] if exactly one of the following is true:
+- The story is [attr-5]
+- The story is [attr-4]
+That means you tag [attr-1] only when either the theme itself is Helping Others or the plot fits the selfless action arc — but not both at the same time (exactly one must hold).
+
+If you keep those relationships in mind — theme versus action, motive versus behavior, and the rule that [attr-1] requires exactly one of the two conditions — you’ll be able to apply these labels consistently and clearly.

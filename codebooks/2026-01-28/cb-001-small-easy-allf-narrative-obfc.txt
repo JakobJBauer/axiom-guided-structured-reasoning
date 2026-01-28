@@ -1,0 +1,44 @@
+Imagine a dusty library where each shelf carries a single worn label: a compact rule that tells you how to recognize a story by a single whisper. Here are those labels, each introduced by its bracketed name and then written exactly as the library card prescribes — the recipe that turns a tale into a tag.
+
+[attr-5]
+An old librarian smiles and points to a spine whenever a tale fits a familiar mold. She files it under:
+A story is [attr-5] if The story is classic
+
+[attr-6]
+Across the room, a younger curator marks stories that bend and reforge tradition. She keeps one short card for them:
+A story is [attr-6] if The story is modern
+
+[attr-3]
+Near the stairwell, a bookmark with a jagged edge flags tales that leave you hanging at dusk. Its rule is plain:
+A story is [attr-3] if The story has a cliffhanger
+
+[attr-4]
+On a high shelf, thick tomes rest under a heavy tag. The tag's truth is measured in words:
+A story is [attr-4] if The story has more than 375 words
+
+[attr-7]
+In the history alcove, stories that travel backward in time gather. Their sign reads:
+A story is [attr-7] if The story is about bygone eras
+
+Some labels are simple; some combine clues into a narrative of their own. They are the catalog rules that let us say, without hesitation, when a story belongs to a particular blended identity.
+
+[attr-1]
+This one is for the grand, sprawling epics that feel like they were pulled from archival dust — classic in voice, long enough to breathe, and full of eras gone by:
+A story is [attr-1] if all of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+- The story is [attr-7]
+
+[attr-2]
+Finally, there is a more complex card — a little dramatic, a little technical — that maps a dynamic mix of style and suspense. It reads like a decision tree, offering two distinct paths by which a tale earns the tag: either it sits exclusively in one style, or it fulfills a quartet of conditions that tie style and subject to a cliffhanger. The rule is preserved here exactly as the archivist wrote it:
+A story is [attr-2] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- All of the following are true:
+  - The story is not [attr-5]
+  - The story's style is equal to [attr-6]
+  - The story is [attr-3]
+  - The story's topic is in [attr-7]
+
+These are the rules the catalog keeps close: short, exact lines that let an annotator gaze at a narrative and decide which labels it deserves. The story behind each tag is simple, but the weave of rules lets readers and reasoners navigate genres like visitors following a map through that quiet, rule-bound library.

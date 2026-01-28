@@ -1,0 +1,301 @@
+Interviewer: Let's go through this codebook. I'll ask about each label and you explain it clearly. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What does [attr-44] mean?
+
+Expert: A story is [attr-44] if The story is about magical lands.
+
+Interviewer: And [attr-14]?
+
+Expert: A story is [attr-14] if The story has readability score below 86.4.
+
+Interviewer: [attr-33]?
+
+Expert: A story is [attr-33] if The story has the theme Deception.
+
+Interviewer: [attr-16]?
+
+Expert: A story is [attr-16] if The story has more than 6 paragraphs.
+
+Interviewer: [attr-20]?
+
+Expert: A story is [attr-20] if The story starts with a adjective.
+
+Interviewer: [attr-30]?
+
+Expert: A story is [attr-30] if The story is surreal.
+
+Interviewer: [attr-22]?
+
+Expert: A story is [attr-22] if The story starts with a noun.
+
+Interviewer: [attr-46]?
+
+Expert: A story is [attr-46] if The story is about the arts.
+
+Interviewer: [attr-42]?
+
+Expert: A story is [attr-42] if The story is about hidden treasures.
+
+Interviewer: [attr-35]?
+
+Expert: A story is [attr-35] if The story has the theme Hardship.
+
+Interviewer: [attr-25]?
+
+Expert: A story is [attr-25] if The story is classic.
+
+Interviewer: [attr-10]?
+
+Expert: A story is [attr-10] if The story has Checkhov's gun.
+
+Interviewer: [attr-48]?
+
+Expert: A story is [attr-48] if The story uses discourse markers.
+
+Interviewer: [attr-50]?
+
+Expert: A story is [attr-50] if The story uses superlative forms.
+
+Interviewer: [attr-41]?
+
+Expert: A story is [attr-41] if The story is about giant creatures.
+
+Interviewer: [attr-9]?
+
+Expert: A story is [attr-9] if The story has a flashback.
+
+Interviewer: [attr-28]?
+
+Expert: A story is [attr-28] if The story is modern.
+
+Interviewer: [attr-34]?
+
+Expert: A story is [attr-34] if The story has the theme Growth.
+
+Interviewer: [attr-45]?
+
+Expert: A story is [attr-45] if The story is about seasonal changes.
+
+Interviewer: [attr-27]?
+
+Expert: A story is [attr-27] if The story is minimalist.
+
+Interviewer: [attr-21]?
+
+Expert: A story is [attr-21] if The story starts with a adverb.
+
+Interviewer: [attr-43]?
+
+Expert: A story is [attr-43] if The story is about lost civilizations.
+
+Interviewer: [attr-36]?
+
+Expert: A story is [attr-36] if The story has the theme Helping Others.
+
+Interviewer: [attr-38]?
+
+Expert: A story is [attr-38] if The story has the theme Magic.
+
+Interviewer: [attr-29]?
+
+Expert: A story is [attr-29] if The story is playful.
+
+Interviewer: [attr-47]?
+
+Expert: A story is [attr-47] if The story uses conditional mood.
+
+Interviewer: [attr-49]?
+
+Expert: A story is [attr-49] if The story uses perfect aspect.
+
+Interviewer: [attr-37]?
+
+Expert: A story is [attr-37] if The story has the theme Humor.
+
+Interviewer: [attr-40]?
+
+Expert: A story is [attr-40] if The story is about cultural traditions.
+
+Interviewer: [attr-11]?
+
+Expert: A story is [attr-11] if The story has juxtaposition.
+
+Interviewer: [attr-8]?
+
+Expert: A story is [attr-8] if The story has a cliffhanger.
+
+Interviewer: [attr-12]?
+
+Expert: A story is [attr-12] if The story has readability score above 96.1.
+
+Interviewer: [attr-26]?
+
+Expert: A story is [attr-26] if The story is lighthearted.
+
+Interviewer: [attr-19] — that sounds composite. Explain it.
+
+Expert: Sure. A story is [attr-19] if exactly one of the following is true:
+- The story is [attr-20]
+- The story is [attr-21]
+- The story is [attr-22]
+
+Interviewer: [attr-24]?
+
+Expert: A story is [attr-24] if the story is in [STYLE-SURREAL, STYLE-PLAYFUL, STYLE-LIGHTHEARTED].
+
+Interviewer: [attr-39] — how is that defined?
+
+Expert: A story is [attr-39] if both of the following are true:
+- The story is [attr-43]
+- Either of the following is true:
+  - The story is [attr-42]
+  - The story is [attr-40]
+
+Interviewer: [attr-15]?
+
+Expert: A story is [attr-15] if both of the following are true:
+- The story is [attr-44]
+- The story is [attr-38]
+
+Interviewer: [attr-5]?
+
+Expert: A story is [attr-5] if both of the following are true:
+- The story is [attr-41]
+- The story is [attr-44]
+
+Interviewer: [attr-17] — this one had several alternatives. Walk me through it.
+
+Expert: Of course. A story is [attr-17] if either of the following is true:
+
+- Both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-9]
+
+- Both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-8]
+
+- Both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-11]
+
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-8]
+
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-11]
+
+- Both of the following are true:
+  - The story is [attr-8]
+  - The story is [attr-11]
+
+Interviewer: [attr-23]?
+
+Expert: A story is [attr-23] if both of the following are true:
+- The story is [attr-16]
+- Both of the following are true:
+  - The story is [attr-48]
+  - Either of the following is true:
+    - The story is [attr-47]
+    - The story is [attr-49]
+
+Interviewer: [attr-4]?
+
+Expert: A story is [attr-4] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-38]
+  - The story is [attr-34]
+- Either of the following is true:
+  - The story is [attr-33]
+  - The story is [attr-35]
+  - The story is [attr-36]
+  - The story is [attr-37]
+
+Interviewer: [attr-13]?
+
+Expert: A story is [attr-13] if both of the following are true:
+- The story is [attr-37]
+- Both of the following are true:
+  - The story is [attr-26]
+  - The story is [attr-29]
+
+Interviewer: [attr-18] — I remember a negation there.
+
+Expert: Correct. A story is [attr-18] if both of the following are true:
+- The story is [attr-27]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [attr-25]
+    - The story is [attr-28]
+  - The story is not [attr-30]
+
+Interviewer: [attr-1]?
+
+Expert: A story is [attr-1] if both of the following are true:
+- The story is [attr-34]
+- The story is [attr-36]
+
+Interviewer: [attr-31]?
+
+Expert: A story is [attr-31] if both of the following are true:
+- The story is [attr-10]
+- The story is [attr-8]
+
+Interviewer: [attr-3]?
+
+Expert: A story is [attr-3] if both of the following are true:
+- The story is [attr-17]
+- The story is [attr-23]
+
+Interviewer: [attr-7]?
+
+Expert: A story is [attr-7] if both of the following are true:
+- The story is [attr-39]
+- Either of the following is true:
+  - The story is [attr-41]
+  - The story is [attr-45]
+
+Interviewer: [attr-6]?
+
+Expert: A story is [attr-6] if both of the following are true:
+- The story is [attr-15]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [attr-42]
+    - The story is [attr-43]
+  - Either of the following is true:
+    - The story is [attr-35]
+    - The story is [attr-34]
+
+Interviewer: [attr-32]?
+
+Expert: A story is [attr-32] if both of the following are true:
+- The story is [attr-24]
+- Both of the following are true:
+  - The story is [attr-31]
+  - The story is [attr-1]
+
+Interviewer: Finally, [attr-2] — the big one.
+
+Expert: A story is [attr-2] if both of the following are true:
+- Both of the following are true:
+  - The story is [attr-3]
+  - The story is [attr-4]
+- Either of the following is true:
+  - The story is [attr-6]
+  - Both of the following are true:
+    - The story is [attr-7]
+    - The story is [attr-5]
+- The story is [attr-19]
+
+Interviewer: That's a lot to take in. Any final tip for annotators using this transcript-style codebook?
+
+Expert: Keep the node IDs in brackets exactly as they are, follow the logical connectors—"Both of the following," "Either of the following," and negations like "The story is not"—and check the nested conditions step by step. If one composite label applies, walk through its component requirements exactly as stated here.
+
+Interviewer: Great. Thanks — this makes the structure much more conversational and easy to follow.
+
+Expert: You're welcome. If you want, we can run through a sample story and annotate it live.

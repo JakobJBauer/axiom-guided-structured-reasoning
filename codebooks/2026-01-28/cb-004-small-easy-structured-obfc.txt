@@ -1,0 +1,61 @@
+Codebook — Structured Edition
+
+Purpose
+- Provide a clear, organized reference for annotators.
+- Preserve all original nodes, IDs, and logical relationships exactly as given.
+- Make it easy to decide when to apply each label.
+
+I. Core (Atomic) Labels
+- [attr-4]
+  - Definition: A story is [attr-4] if the story is about seasonal changes.
+  - Quick cue: Mentions of seasons, seasonal transitions, or effects tied to seasons.
+
+- [attr-7]
+  - Definition: A story is [attr-7] if the story uses wh-questions.
+  - Quick cue: Presence of who/what/when/where/why/how questions in the text.
+
+- [attr-2]
+  - Definition: A story is [attr-2] if the story starts with a noun.
+  - Quick cue: The very first word of the story is a noun (person, place, thing, concept).
+
+- [attr-3]
+  - Definition: A story is [attr-3] if the story is about cultural traditions.
+  - Quick cue: References to rituals, customs, festivals, or culturally specific practices.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story is about time travel.
+  - Quick cue: Elements involving traveling to past or future times, time machines, temporal shifts.
+
+II. Composite Labels (Logical Combinations)
+- [attr-1]
+  - Rule: A story is [attr-1] if both of the following are true:
+    - The story is [attr-4]
+    - The story is [attr-7]
+  - Interpretation: Apply this label only when the story is about seasonal changes and it contains wh-questions.
+
+- [attr-6]
+  - Rule: A story is [attr-6] if either of the following is true:
+    - The story is [attr-3]
+    - The story is [attr-5]
+  - Interpretation: Apply this label when the story is about cultural traditions, or about time travel, or about both.
+
+III. Annotation Guidance (Practical, without changing rules)
+- Decision flow (use this to think structurally):
+  1. Check atomic labels first (Is it seasonal? Does it use wh-questions? Does it start with a noun? Is it about traditions or time travel?).
+  2. Then assign composite labels by evaluating the listed conditions exactly:
+     - For [attr-1], require both conditions to be true.
+     - For [attr-6], require at least one condition to be true.
+- Notes:
+  - Do not invent intermediate nodes or alter any existing node IDs.
+  - Preserve the logical operators: "both of the following are true" (AND), "either of the following is true" (OR).
+  - Multiple labels may apply simultaneously if their conditions are met.
+
+IV. Quick Examples (how to think about application)
+- If a story discusses how leaves change color across seasons and asks "Why do leaves change?" → label both [attr-4] and [attr-7], therefore also [attr-1].
+- If a story describes a harvest festival → label [attr-3] and therefore [attr-6].
+- If a story involves traveling to the future but has no cultural tradition content → label [attr-5] and therefore [attr-6].
+
+V. Final reminders
+- All node IDs must remain exactly as shown (brackets and spelling).
+- Logical relationships and formula structures must not be altered.
+- Use the structured flow above for consistent, accurate annotation.

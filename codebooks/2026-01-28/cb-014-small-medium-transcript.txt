@@ -1,0 +1,40 @@
+Interviewer: Okay, let's walk through this codebook together. First, what does [STARTS-WITH-ADJECTIVE] mean?
+
+Annotator: Simple definition:
+- A story is [STARTS-WITH-ADJECTIVE] if the story starts with a adjective
+
+Interviewer: Got it. And what about [TOPIC-GIANT-CREATURES]?
+
+Annotator: Also straightforward:
+- A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures
+
+Interviewer: Now we get into combinations. What is [GIANT-FOCUSED]?
+
+Annotator: This one combines two conditions. The rule states:
+- A story is [GIANT-FOCUSED] if both of the following are true:
+  - The story is [TOPIC-GIANT-CREATURES]
+  - The story is not [STARTS-WITH-ADJECTIVE]
+
+Interviewer: So it must be about giant creatures and must not start with an adjective. Clear. Next: [DYNAMIC-OPENING] — what does that capture?
+
+Annotator: [DYNAMIC-OPENING] describes an exclusive alternative between two possibilities. The exact wording is important:
+- A story is [DYNAMIC-OPENING] if exactly one of the following is true:
+  - The story is [STARTS-WITH-ADJECTIVE]
+  - The story is [TOPIC-GIANT-CREATURES]
+
+Interviewer: So for [DYNAMIC-OPENING], either it starts with an adjective or it’s about giant creatures — but not both. Right?
+
+Annotator: Exactly.
+
+Interviewer: Finally, tell me about [ENGAGING-GIANT-STORY]. That sounds like a compound rule.
+
+Annotator: It is compound and layered. Here’s the precise definition:
+- A story is [ENGAGING-GIANT-STORY] if both of the following are true:
+  - The story is [GIANT-FOCUSED]
+  - Either of the following is true:
+    - The story is [DYNAMIC-OPENING]
+    - The story is not [STARTS-WITH-ADJECTIVE]
+
+Interviewer: So to be an [ENGAGING-GIANT-STORY], the story must first be [GIANT-FOCUSED] (which we already know requires [TOPIC-GIANT-CREATURES] and not [STARTS-WITH-ADJECTIVE]). Then, additionally, either it has a [DYNAMIC-OPENING] or it is not [STARTS-WITH-ADJECTIVE]. Understood.
+
+Annotator: Right — all the logical relationships (Not, both/and, exactly one, either/or) are kept exactly as written. If you want, I can run through a couple of quick examples to see how a story would be labeled under these rules.

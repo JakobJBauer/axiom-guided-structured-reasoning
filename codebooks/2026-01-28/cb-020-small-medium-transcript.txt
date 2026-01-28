@@ -1,0 +1,40 @@
+Interviewer: Let’s go through this codebook together. First up — what does [USES-PERFECT-ASPECT] mean?
+
+Expert: A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+
+Interviewer: Clear. And the topical categories?
+
+Expert: Sure.
+- A story is [TOPIC-CULTURAL-TRADITIONS] if The story is about cultural traditions.
+- A story is [TOPIC-THE-ARTS] if The story is about the arts.
+
+Interviewer: How about tone or style?
+
+Expert: A story is [STYLE-LIGHTHEARTED] if The story is lighthearted.
+
+Interviewer: Now I see some nodes that combine these. How is [ARTS-TRADITIONAL] defined?
+
+Expert: A story is [ARTS-TRADITIONAL] if both of the following are true:
+- The story is [TOPIC-THE-ARTS]
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+
+Interviewer: So it must be both about the arts and about cultural traditions — got it. What about [NOSTALGIC-ARTS]? That sounds more specific.
+
+Expert: Right. A story is [NOSTALGIC-ARTS] if all of the following are true:
+- The story is [ARTS-TRADITIONAL]
+- The story is [USES-PERFECT-ASPECT]
+- The story is not [STYLE-LIGHTHEARTED]
+
+Interviewer: Let me paraphrase to check I’ve got it: [NOSTALGIC-ARTS] requires being an arts/cultural traditions story, using the perfect aspect, and explicitly not being lighthearted. Is that accurate?
+
+Expert: Exactly.
+
+Interviewer: And finally, is there a lighthearted counterpart to [NOSTALGIC-ARTS]?
+
+Expert: Yes. A story is [LIGHT-ARTS-TRADITION] if both of the following are true:
+- The story is [ARTS-TRADITIONAL]
+- The story is [STYLE-LIGHTHEARTED]
+
+Interviewer: Great — that keeps the logical structure tidy: basic labels, an intersection for traditional arts, then two branches that depend on aspect and tone. Anything else to note?
+
+Expert: Nothing changes in the logic or IDs. Each definition is precise: simple predicates for single labels, "both of the following are true" for two-way And, and "all of the following are true" when three conditions (including a Not) must hold. All node IDs remain as shown.

@@ -1,0 +1,167 @@
+{
+  "nodes": [
+    {
+      "id": "style-philosophical",
+      "label": "Style Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-story-within-a-story",
+      "label": "Has a Story Within a Story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-conditional-mood",
+      "label": "Uses Conditional Mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-circular-narrative-struct",
+      "label": "Has Circular Narrative Struct",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-cultural-traditions",
+      "label": "Topic Cultural Traditions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "short-story",
+      "label": "Short Story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-seasonal-changes",
+      "label": "Topic Seasonal Changes",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "low-readability",
+      "label": "Low Readability",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "inner-conditional",
+      "label": "Inner Conditional",
+      "formula_type": "And",
+      "formula_args": [
+        "has-a-story-within-a-story",
+        "uses-conditional-mood"
+      ]
+    },
+    {
+      "id": "philos-circular-xor",
+      "label": "Philos Circular Xor",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "style-philosophical",
+            "has-circular-narrative-struct"
+          ]
+        },
+        {
+          "formula_type": "Equal",
+          "formula_args": [
+            "short-story",
+            "low-readability"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thematic-in",
+      "label": "Thematic In",
+      "formula_type": "Or",
+      "formula_args": [
+        "topic-cultural-traditions",
+        "topic-seasonal-changes"
+      ]
+    },
+    {
+      "id": "complex-narrative",
+      "label": "Complex Narrative",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "inner-conditional",
+            "philos-circular-xor"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "thematic-in",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "short-story"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "has-a-story-within-a-story",
+      "target": "inner-conditional"
+    },
+    {
+      "source": "uses-conditional-mood",
+      "target": "inner-conditional"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "philos-circular-xor"
+    },
+    {
+      "source": "has-circular-narrative-struct",
+      "target": "philos-circular-xor"
+    },
+    {
+      "source": "short-story",
+      "target": "philos-circular-xor"
+    },
+    {
+      "source": "low-readability",
+      "target": "philos-circular-xor"
+    },
+    {
+      "source": "topic-cultural-traditions",
+      "target": "thematic-in"
+    },
+    {
+      "source": "topic-seasonal-changes",
+      "target": "thematic-in"
+    },
+    {
+      "source": "inner-conditional",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "philos-circular-xor",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "thematic-in",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "short-story",
+      "target": "complex-narrative"
+    }
+  ]
+}

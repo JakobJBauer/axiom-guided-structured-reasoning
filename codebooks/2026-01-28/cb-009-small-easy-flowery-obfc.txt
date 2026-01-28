@@ -1,0 +1,41 @@
+Preface — The Curator’s Whisper:
+In a sunlit alcove of a great, dust-scented library, an old curator arranges the taxonomy of tales like precious flowers in a glass case. Each label is a petal, each condition a filament — precise, deliberate, and humming with meaning. Below you will find that careful codex, rewritten as if read aloud beside a hearth: lavish in description and luxuriant in language, yet faithful and exact in its judgement. The formal definitions themselves remain untouched so that scholars and annotators may work without ambiguity; the surrounding prose only seeks to illuminate, not to alter.
+
+[attr-7]
+Like a bard who pours gold upon words and crowns every attribute with the tallest peak, this mark attends to those sentences that reach for the utmost degree of an adjective or adverb. It honors the rhetoric that insists something is the "most," the "least," the "greatest," or the "smallest" — the language of extremes, proudly worn.
+A story is [attr-7] if The story uses superlative forms
+
+[attr-6]
+Imagine verbs arranged like well-polished mirrors, reflecting completed moments and actions that have settled into a finished state. This marker finds those tales that favor the perfect aspect — the quiet voice of "has done," "had seen," or "have become" — where past and present entwine with a tidy, reflective finish.
+A story is [attr-6] if The story uses perfect aspect
+
+[attr-5]
+Envision maps with faded ink and cities swallowed by sand, rivers that have drifted into memory. This label seeks the stories whose heart beats for vanished empires, buried streets, and the melancholy grandeur of civilizations that time has folded away. It is the rubric for narratives steeped in archaeological wistfulness and the lore of ruins.
+A story is [attr-5] if The story is about lost civilizations
+
+[attr-2]
+This is the eye that notices contrasts set side by side — light against shadow, the ancient beside the new, silence against a sudden clamor. When elements are deliberately placed in counterpoint to reveal meaning by their adjacency, the tale receives this thoughtful designation.
+A story is [attr-2] if The story has juxtaposition
+
+[attr-4]
+A sprig of language, brief and concentrated like a pressed flower, this tag belongs to narratives that accomplish their charm within a narrow span. It measures tale-length with a precise blade: the story that fits into fewer than 160 words wears this title.
+A story is [attr-4] if The story has fewer than 160 words
+
+[attr-1]
+In a single breath, a story can be both grand in subject and modest in length — an epic told in a whisper. This classification is reserved for those rare blossoms that unite vanished worlds with the economy of a very short telling.
+A story is [attr-1] if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+
+[attr-3]
+There are tales that wear ornamentation like sober jewelry: ornate in tone yet reflective in mood. This label captures that fusion, allowing for two different yet equivalent pathways into such a temperament. It attends to combinations of lofty language, completed aspect, and the artful placing of contrasts — any of which, in the specified pairings below, confer this designation.
+A story is [attr-3] if either of the following are true:
+- Both of the following are true:
+  - The story is [attr-7]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-2]
+
+Epilogue — The Curator’s Note:
+May this lovingly worded guide make the task of annotation a gentler, more luminous labour. The formal conditions remain explicit and exact; the surrounding prose merely lends warmth and color, like lacquer over a well-carved plaque.

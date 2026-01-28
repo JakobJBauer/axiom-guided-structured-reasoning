@@ -1,0 +1,52 @@
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if the story is playful. Imagine a tale that skips like a pebble across a sunlit pond, full of mischief and lightness — a narrative that delights in surprise, wit, and the gentle tug of whimsy while still meeting the simple, exacting criterion above.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if the story is minimalist. Picture prose pared to its essential bones, elegant in its restraint and spare in ornament — the unmistakable hush and clarity of a tale that accomplishes much with very little, exactly as this definition requires.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson. Envision a narrative that quietly bends toward meaning, leaving a talisman of wisdom or a guiding truth in the reader’s hand — a lesson woven deliberately into the fabric of the plot, fulfilling the straightforward condition above.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel. Think of corridors of seasons and clocks that lean and sigh, tales that fold past into present and present into future — yet, for our purposes, the classification depends simply on whether time travel is central to the story.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun. The smallest of formalities — the opener anchored by a noun — becomes a stylistic lodestar here, like the first stone set in a mosaic that determines the pattern to follow.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs. Imagine a composition that unfurls across multiple breaths and stanzas — more than six paragraphs, a measured unfolding that signals breadth and cadence, and thus satisfies this numeric threshold.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood. Picture sentences that lean on possibility and hypothesis — a language of “would,” “could,” and “if” that opens doors of contingency; this presence of conditional mood is the criterion that defines the node.
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if the story has the theme Hardship. Visualize a narrative that traces trials, grit, and the sculpting force of adversity — a theme of hardship that shapes characters and plot and thereby fulfills this exact classification.
+
+[COMPOUND-STYLE]
+A story is [COMPOUND-STYLE] if both of the following are true:
+- The story is [STYLE-PLAYFUL]
+- The story is [STYLE-MINIMALIST]
+Imagine, for the sake of the reader’s imagination, a rare floral creature of style that is at once sprightly and spare: the playfulness of a wink contained within the discipline of minimalism. Yet the definition stands precise and unaltered — [COMPOUND-STYLE] is true only when both of the listed conditions above hold.
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if all of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is [STARTS-WITH-NOUN]
+Think of a narrative tapestry rich in structure: a work that spans many paragraphs, speaks in the hush of conditional possibilities, and opens boldly with a noun. Only when all three threads are woven together does the label [COMPLEX-NARRATIVE] apply.
+
+[TIME-MORAL]
+A story is [TIME-MORAL] if both of the following are true:
+- The story is [TOPIC-TIME-TRAVEL]
+- The story is [HAS-A-MORAL-LESSON]
+Envision a clockwork parable: a tale that journeys through time and arrives bearing a moral, its temporal twists serving to illuminate an ethical heart. The node [TIME-MORAL] precisely captures this conjunction of subject and lesson.
+
+[RICH-STYLE-NARRATIVE]
+A story is [RICH-STYLE-NARRATIVE] if both of the following are true:
+- The story is [COMPLEX-NARRATIVE]
+- Either of the following is true:
+  - The story is [COMPOUND-STYLE]
+  - Both of the following are true:
+    - The story is [STYLE-PLAYFUL]
+    - The story is not [THEME-HARDSHIP]
+Imagine a luxuriant narrative bloom: complex in form, and rich in stylistic hue. To earn the name [RICH-STYLE-NARRATIVE], a tale must first be a [COMPLEX-NARRATIVE]; beyond that, it must either combine playful and minimalist virtues as a [COMPOUND-STYLE], or else be playful without bearing the burden of hardship as a theme. Note the careful exclusion in the last branch — the story is not [THEME-HARDSHIP] — a precise negative that ensures the richness here favors lightness over trials.

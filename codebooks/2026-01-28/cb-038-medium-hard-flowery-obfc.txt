@@ -1,0 +1,96 @@
+Prologue — The Keeper’s Loom
+
+In a sunlit alcove of an old library, an earnest keeper sits at a wooden loom of meaning, threading definitions like ribbons through the tapestry of stories. Each ribbon bears a name in a bracketed sigil, and each knot ties one notion to another with the unyielding logic of a compass. What follows is that very codebook, embroidered here in a florid voice: the same exact instruments and stitches as the original, but described with the kind of lush language that invites annotators to linger and understand. The structure, the links, the spellings of the sigils — all remain inviolate, so scholars may still reason with crystalline precision.
+
+[attr-6]
+A story is [attr-6] if The story is lighthearted
+
+- In the garden of genres, [attr-6] is the bloom given to any tale whose breath is buoyant and whose heart is unfettered by heaviness — simply put, a story is crowned with this sigil when the story is lighthearted.
+
+[attr-3]
+A story is [attr-3] if The story has Checkhov's gun
+
+- This marker, [attr-3], is lain upon any narrative that carries an item or element introduced for a purpose later: in other words, when the story has Checkhov's gun, the seed planted early will inevitably bear significance.
+
+[attr-2]
+A story is [attr-2] if The story has a cliffhanger
+
+- The [attr-2] banner flutters on tales that leave the reader poised at an edge, a breath suspended — when the story has a cliffhanger, it halts at a precipice of suspense.
+
+[attr-9]
+A story is [attr-9] if The story has the theme Hardship
+
+- When the narrative walks through storms or the characters shoulder burdens, the tale receives the [attr-9] mark: it is simply that the story has the theme Hardship.
+
+[attr-10]
+A story is [attr-10] if The story has the theme Helping Others
+
+- If the plot turns its light toward compassion, mutual aid, or acts that uplift others, we anoint it [attr-10]; in formal terms, the story has the theme Helping Others.
+
+[attr-8]
+A story is [attr-8] if The story has the theme Deception
+
+- Where misdirection, secrets, or deliberate falsehood weave through the plot, the tale bears the [attr-8] sigil: the story has the theme Deception.
+
+[attr-11]
+A story is [attr-11] if The story has the theme Problem-Solving
+
+- Stories that are lively with puzzles, cleverness, and the labor of untangling knots earn the [attr-11] token; technically, the story has the theme Problem-Solving.
+
+[attr-7]
+A story is [attr-7] if exactly one of the following is true:
+- The story is [attr-9]
+- The story is [attr-8]
+
+- Think of [attr-7] as the crossroads banner: it flutters only when exactly one path is chosen — either the narrative is steeped in hardship or it is cloaked in deception, but not both. This node captures that exclusive fork in thematic fate.
+
+[attr-12]
+A story is [attr-12] if both of the following are true:
+- The story is [attr-6]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-11]
+
+- The label [attr-12] is reserved for those charmingly dissonant tales: one must find the story suffused with lightheartedness, and also discover either a single thematic conflict (hardship xor deception) or the presence of problem-solving as a theme. When both conditions align, the story wears this double-etched emblem.
+
+[attr-5]
+A story is [attr-5] if both of the following are true:
+- The story is [attr-3]
+- Exactly one of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-2]
+
+- The [attr-5] crest adorns narratives propelled by crafted devices and pivotal turns: the tale must harbor Checkhov’s gun, and then — but not both — it must either be threaded with problem-solving or leave us teetering on a cliffhanger. This exclusive-or stipulation ensures a forward-leaning momentum at the core.
+
+[attr-4]
+A story is [attr-4] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-10]
+  - The story is not [attr-8]
+- Both of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-10]
+
+- The emblem [attr-4] crowns tales that journey through ethical growth or communal virtue. It lights up either when acts of helping others shine and there is an absence of deception, or when helping others intertwines with problem-solving. Either pathway suffices to trace a moral arc across the story’s shape.
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-12]
+  - Both of the following are true:
+    - The story is [attr-5]
+    - The story is [attr-4]
+- All of the following are true:
+  - The story is not [attr-12]
+  - Either of the following is true:
+    - The story is [attr-5]
+    - The story is [attr-2]
+  - The story is not both of the following:
+    - The story is [attr-9]
+    - The story is [attr-8]
+
+- At last, [attr-1] is the tapestry for stories that weave multiple strands into an intricate pattern. A story is thus deemed complex either when it is tone-conflicted and simultaneously both plot-driven and bearing a moral arc, or when it is not tone-conflicted yet still meets three tests: it must be either plot-driven or cliffhanger-bearing, it must not be simultaneously characterized by both hardship and deception, and it must, of course, fail the tone-conflicted condition. In short, this node captures the richer, layered narratives where tension, plot mechanics, and ethical currents entwine.
+
+Epilogue — The Keeper’s Blessing
+
+May these ornate descriptions make the same logical loom easier to see and more delightful to work with. Every bracket, every conditional, every exact phrasing of logic stands where it stood; the embellishments only seek to illuminate the meaning behind each sigil, so that those who annotate may do so with both rigor and a touch of wonder.

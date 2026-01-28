@@ -1,0 +1,522 @@
+{
+  "nodes": [
+    {
+      "id": "attr-30",
+      "label": "A story is [attr-30] if the story has the theme Growth.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-22",
+      "label": "A story is [attr-22] if the story is humorous.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-32",
+      "label": "A story is [attr-32] if the story has the theme Helping Others.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-21",
+      "label": "A story is [attr-21] if the story starts with a preposition.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-25",
+      "label": "A story is [attr-25] if the story is modern.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-48",
+      "label": "A story is [attr-48] if the story uses perfect aspect.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-23",
+      "label": "A story is [attr-23] if the story is lighthearted.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-29",
+      "label": "A story is [attr-29] if the story has the theme Deception.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-35",
+      "label": "A story is [attr-35] if the story has the theme Kindness.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-50",
+      "label": "A story is [attr-50] if the story uses wh-questions.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-42",
+      "label": "A story is [attr-42] if the story is about lost civilizations.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-46",
+      "label": "A story is [attr-46] if the story is about time travel.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "A story is [attr-6] if the story has Checkhov's gun.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "A story is [attr-4] if the story has a moral lesson.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-31",
+      "label": "A story is [attr-31] if the story has the theme Hardship.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "A story is [attr-11] if the story has more than 375 words.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-45",
+      "label": "A story is [attr-45] if the story is about seasonal changes.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "A story is [attr-2] if the story has a cliffhanger.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-37",
+      "label": "A story is [attr-37] if the story has the theme Problem-Solving.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-34",
+      "label": "A story is [attr-34] if the story has the theme Innovation.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-36",
+      "label": "A story is [attr-36] if the story has the theme Magic.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "A story is [attr-7] if the story has circular narrative structure.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-41",
+      "label": "A story is [attr-41] if the story is about giant creatures.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-47",
+      "label": "A story is [attr-47] if the story uses discourse markers.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-26",
+      "label": "A story is [attr-26] if the story is philosophical.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-19",
+      "label": "A story is [attr-19] if the story starts with an adverb.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-40",
+      "label": "A story is [attr-40] if the story is about cultural traditions.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "A story is [attr-3] if the story has a flashback.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "A story is [attr-8] if the story has readability score above 96.1.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-24",
+      "label": "A story is [attr-24] if the story is minimalist.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-49",
+      "label": "A story is [attr-49] if the story uses superlative forms.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-43",
+      "label": "A story is [attr-43] if the story is about magical lands.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "A story is [attr-5] if the story has a story within a story.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-27",
+      "label": "A story is [attr-27] if the story is surreal.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-20",
+      "label": "A story is [attr-20] if the story starts with a noun.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-39",
+      "label": "A story is [attr-39] if the story is about bygone eras.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "A story is [attr-12] if the story has readability score below 86.4.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-33",
+      "label": "A story is [attr-33] if the story has the theme Humor.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-44",
+      "label": "A story is [attr-44] if the story is about mystical creatures.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "A story is [attr-9] if both of the following are true: The story is [attr-22] and The story is [attr-23].",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-22",
+        "attr-23"
+      ]
+    },
+    {
+      "id": "attr-14",
+      "label": "A story is [attr-14] if either of the following is true: The story is [attr-25] or (The story is [attr-26] and The story is [attr-27]).",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-25",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-26",
+            "attr-27"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-18",
+      "label": "A story is [attr-18] if exactly one of the following is true: [attr-8] or [attr-12].",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-8",
+        "attr-12"
+      ]
+    },
+    {
+      "id": "attr-16",
+      "label": "A story is [attr-16] if all of the following are true: [attr-5], [attr-3], [attr-7].",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        "attr-3",
+        "attr-7"
+      ]
+    },
+    {
+      "id": "attr-28",
+      "label": "A story is [attr-28] if both of the following are true: [attr-32] and [attr-35].",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-32",
+        "attr-35"
+      ]
+    },
+    {
+      "id": "attr-13",
+      "label": "A story is [attr-13] if both of the following are true: [attr-43] and either [attr-44] or [attr-41].",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-43",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-44",
+            "attr-41"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-38",
+      "label": "A story is [attr-38] if either of the following is true: (both [attr-46] and [attr-42]) or [attr-39].",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-46",
+            "attr-42"
+          ]
+        },
+        "attr-39"
+      ]
+    },
+    {
+      "id": "attr-15",
+      "label": "A story is [attr-15] if all of the following are true: [attr-4], [attr-35], and the story is not [attr-29].",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-4",
+        "attr-35",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-29"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-10",
+      "label": "A story is [attr-10] if both of the following are true: [attr-34] and [attr-37].",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-34",
+        "attr-37"
+      ]
+    },
+    {
+      "id": "attr-17",
+      "label": "A story is [attr-17] if both of the following are true: [attr-11] and [attr-2].",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-11",
+        "attr-2"
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "A story is [attr-1] if either: (all of [attr-9], [attr-15], and either [attr-16] or [attr-17]) OR (exactly one of: (both [attr-13] and not [attr-24]) and [attr-38]).",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-9",
+            "attr-15",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-16",
+                "attr-17"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-13",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-24"
+                  ]
+                }
+              ]
+            },
+            "attr-38"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-22",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-25",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-26",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-27",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-18"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-18"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-16"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-16"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-16"
+    },
+    {
+      "source": "attr-32",
+      "target": "attr-28"
+    },
+    {
+      "source": "attr-35",
+      "target": "attr-28"
+    },
+    {
+      "source": "attr-43",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-44",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-41",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-46",
+      "target": "attr-38"
+    },
+    {
+      "source": "attr-42",
+      "target": "attr-38"
+    },
+    {
+      "source": "attr-39",
+      "target": "attr-38"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-35",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-29",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-34",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-37",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-17"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-17"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-15",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-16",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-17",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-38",
+      "target": "attr-1"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[THEME-HELPING-OTHERS]  
+In the world of stories, you can recognize [THEME-HELPING-OTHERS] when the tale’s heart is set on one clear mission: the theme is Helping Others.
+
+[TOPIC-MYSTICAL-CREATURES]  
+A story earns the mark [TOPIC-MYSTICAL-CREATURES] when its spotlight falls on mystical creatures—beings of legend, wonder, and the uncanny.
+
+[STARTS-WITH-PREPOSITION]  
+Watch the very first step the story takes. A story is [STARTS-WITH-PREPOSITION] if it opens its journey with a preposition—starting right away with words like “In,” “On,” “Under,” “Beyond,” and the like.
+
+[MYTHIC-BUT-NOT-ALTRUISTIC]  
+Sometimes a tale feels enchanted, but its spirit isn’t guided by kindness. A story is [MYTHIC-BUT-NOT-ALTRUISTIC] if both of the following are true:  
+- The story is [TOPIC-MYSTICAL-CREATURES]  
+- The story is not [THEME-HELPING-OTHERS]
+
+[INVITING-OPENING]  
+Now imagine an opening that extends a hand and draws the reader in—yet avoids a particular shadow. A story is [INVITING-OPENING] if both of the following are true:  
+- The story is [STARTS-WITH-PREPOSITION]  
+- The story is not [MYTHIC-BUT-NOT-ALTRUISTIC]

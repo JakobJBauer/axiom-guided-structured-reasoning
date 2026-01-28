@@ -1,0 +1,34 @@
+Think of this codebook as a map through a forest of stories, where signposts mark the qualities that matter to an annotator. Each signpost wears a name in brackets — these are our nodes — and beneath each name a simple rule tells you when to hang that label on a tale. Read it like a storyteller whispering secrets: vivid, memorable, but always precise.
+
+[attr-2]
+A story is [attr-2] if the story starts with a preposition.
+Imagine a tale that opens with “Under,” “Before,” or “Beyond.” That opening word is a small spell: if the very first word is a preposition, the tale earns the [attr-2] tag.
+
+[attr-7]
+A story is [attr-7] if the story uses discourse markers.
+Some narrators pepper their speech with guideposts like “however,” “then,” or “meanwhile.” When those discourse markers appear and shape the flow, the story carries the [attr-7] banner.
+
+[attr-3]
+A story is [attr-3] if the story has the theme Deception.
+If deceit, trickery, or hidden motives run at the heart of the tale, the theme in play is deception — and so the story qualifies as [attr-3].
+
+[attr-5]
+A story is [attr-5] if the story is about magical lands.
+When the setting itself is enchanted — a realm where maps bend and rules shift — the story belongs to the domain of [attr-5].
+
+[attr-4]
+A story is [attr-4] if the story is about cultural traditions.
+If the narrative centers on rituals, customs, festivals, or the practices that bind a community, it bears the mark [attr-4].
+
+[attr-6]
+A story is [attr-6] if the story is about the arts.
+When music, painting, theatre, or other creative practices are central to the plot or theme, the story is labeled [attr-6].
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-5]
+- The story is [attr-3]
+- The story is [attr-6]
+Picture a cunning gallery in a city of floating islands, where artists craft illusions that twist belief — only when a tale simultaneously lives in magical lands, centers on the arts, and explores deception does it qualify as [attr-1]. The three conditions must all be met; together they define this particular corner of the map.
+
+Keep this map close when you annotate: each bracketed name is a clear rule for classification, and the relationships between them are the paths you must follow.

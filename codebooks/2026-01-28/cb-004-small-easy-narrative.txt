@@ -1,0 +1,44 @@
+Imagine a quiet archive where every tale is a little traveler arriving with a name-tag. The archivist, fond of clarity, writes a short key for each tag so future readers know exactly why a story earned it. Here are those keys — each one kept precise like an inscription on a wooden label, but told as if the archive itself were whispering the story of how we mark each tale.
+
+[A small label is pinned to a story when it moves through this gate:]
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+
+The label for [TOPIC-SEASONAL-CHANGES] is for tales that follow the world as it turns — spring’s first green, summer’s heat, autumn’s falling leaves, winter’s hush.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+This tag, [USES-WH-QUESTIONS], is for stories that ask — who, what, when, where, why, how — using those curious question-words to open doors and chase mysteries.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+Some stories announce themselves plainly. When the first word that greets the reader is a noun, the tale wears the [STARTS-WITH-NOUN] badge.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+Stories with the [TOPIC-CULTURAL-TRADITIONS] tag carry the rituals and practices of communities — the songs, festivals, and handed-down ways that bind people to meaning.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+When a tale folds time — sending characters backward or forward, or collapsing eras into one another — it earns the [TOPIC-TIME-TRAVEL] mark.
+
+[SEASONAL-QUESTION-STORY]
+A story is [SEASONAL-QUESTION-STORY] if both of the following are true:
+- The story is [TOPIC-SEASONAL-CHANGES]
+- The story is [USES-WH-QUESTIONS]
+
+There are moments when two traits meet: a story that follows the turning seasons and does so by asking wh-questions receives a double seal, [SEASONAL-QUESTION-STORY]. Picture a narrator asking “Why does autumn come?” as the leaves begin to fall — that precise conjunction is what this tag captures.
+
+[TRADITION-OR-TIME-STORY]
+A story is [TRADITION-OR-TIME-STORY] if either of the following is true:
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+- The story is [TOPIC-TIME-TRAVEL]
+
+Finally, some tales qualify if they hold either of two vivid possibilities: they are rooted in customs passed through generations, or they bend the river of time. If a story has either quality, it receives the [TRADITION-OR-TIME-STORY] label — a banner that tells the reader, “This tale walks in ritual or steps through eras.”
+
+In this little archive, each tag is a careful decision — crisp, reliable, and written so that anyone who reads the labels will know exactly which gate the story walked through. The nodes and their links remain unchanged; the labels simply help us tell the stories in an orderly, human way.

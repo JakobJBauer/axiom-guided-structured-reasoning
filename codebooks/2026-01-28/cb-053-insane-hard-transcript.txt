@@ -1,0 +1,247 @@
+Interviewer: Let's go through this codebook node by node. I'll ask what each identifier means, and you explain it plainly. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What does [STARTS-WITH-ADVERB] mean?
+
+Expert: A story is [STARTS-WITH-ADVERB] if the story starts with an adverb.
+
+Interviewer: And [TOPIC-CULTURAL-TRADITIONS]?
+
+Expert: A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+Interviewer: [THEME-INNOVATION]?
+
+Expert: A story is [THEME-INNOVATION] if the story has the theme Innovation.
+
+Interviewer: [THEME-HUMOR]?
+
+Expert: A story is [THEME-HUMOR] if the story has the theme Humor.
+
+Interviewer: [TOPIC-HIDDEN-TREASURES]?
+
+Expert: A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+Interviewer: [STYLE-CLASSIC]?
+
+Expert: A story is [STYLE-CLASSIC] if the story is classic.
+
+Interviewer: [STYLE-HUMOROUS]?
+
+Expert: A story is [STYLE-HUMOROUS] if the story is humorous.
+
+Interviewer: [STYLE-MODERN]?
+
+Expert: A story is [STYLE-MODERN] if the story is modern.
+
+Interviewer: [TOPIC-GIANT-CREATURES]?
+
+Expert: A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures.
+
+Interviewer: [USES-PERFECT-ASPECT]?
+
+Expert: A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect.
+
+Interviewer: [HAS-A-FLASHBACK]?
+
+Expert: A story is [HAS-A-FLASHBACK] if the story has a flashback.
+
+Interviewer: [THEME-HARDSHIP]?
+
+Expert: A story is [THEME-HARDSHIP] if the story has the theme Hardship.
+
+Interviewer: [HAS-A-CLIFFHANGER]?
+
+Expert: A story is [HAS-A-CLIFFHANGER] if the story has a cliffhanger.
+
+Interviewer: [HAS-A-MORAL-LESSON]?
+
+Expert: A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+Interviewer: [TOPIC-LOST-CIVILIZATIONS]?
+
+Expert: A story is [TOPIC-LOST-CIVILIZATIONS] if the story is about lost civilizations.
+
+Interviewer: [STYLE-PLAYFUL]?
+
+Expert: A story is [STYLE-PLAYFUL] if the story is playful.
+
+Interviewer: [TOPIC-SEASONAL-CHANGES]?
+
+Expert: A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+
+Interviewer: [STARTS-WITH-PREPOSITION]?
+
+Expert: A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+
+Interviewer: [HAS-JUXTAPOSITION]?
+
+Expert: A story is [HAS-JUXTAPOSITION] if the story has juxtaposition.
+
+Interviewer: [THEME-PROBLEM-SOLVING]?
+
+Expert: A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+Interviewer: [TOPIC-TIME-TRAVEL]?
+
+Expert: A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+Interviewer: [TOPIC-BYGONE-ERAS]?
+
+Expert: A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras.
+
+Interviewer: [HAS-CIRCULAR-NARRATIVE-STRUCT]?
+
+Expert: A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+Interviewer: [USES-DISCOURSE-MARKERS]?
+
+Expert: A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers.
+
+Interviewer: [USES-WH-QUESTIONS]?
+
+Expert: A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+Interviewer: [TOPIC-THE-ARTS]?
+
+Expert: A story is [TOPIC-THE-ARTS] if the story is about the arts.
+
+Interviewer: [THEME-MAGIC]?
+
+Expert: A story is [THEME-MAGIC] if the story has the theme Magic.
+
+Interviewer: [STYLE-PHILOSOPHICAL]?
+
+Expert: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+Interviewer: [STYLE-MINIMALIST]?
+
+Expert: A story is [STYLE-MINIMALIST] if the story is minimalist.
+
+Interviewer: [HAS-A-STORY-WITHIN-A-STORY]?
+
+Expert: A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+Interviewer: [LONG-STORY]?
+
+Expert: A story is [LONG-STORY] if the story has more than 375 words.
+
+Interviewer: [TOPIC-MYSTICAL-CREATURES]?
+
+Expert: A story is [TOPIC-MYSTICAL-CREATURES] if the story is about mystical creatures.
+
+Interviewer: [LOW-READABILITY]?
+
+Expert: A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+Interviewer: [HAS-CHECKHOVS-GUN]?
+
+Expert: A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun.
+
+Interviewer: [MANY-PARAGRAPHS]?
+
+Expert: A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+
+Interviewer: [THEME-DECEPTION]?
+
+Expert: A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+Interviewer: [THEME-AGENCY]?
+
+Expert: A story is [THEME-AGENCY] if the story has the theme Agency.
+
+Interviewer: [TOPIC-MAGICAL-LANDS]?
+
+Expert: A story is [TOPIC-MAGICAL-LANDS] if the story is about magical lands.
+
+Interviewer: [USES-SUPERLATIVE-FORMS]?
+
+Expert: A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+Interviewer: [STARTS-WITH-ADJECTIVE]?
+
+Expert: A story is [STARTS-WITH-ADJECTIVE] if the story starts with an adjective.
+
+Interviewer: [THEME-KINDNESS]?
+
+Expert: A story is [THEME-KINDNESS] if the story has the theme Kindness.
+
+Interviewer: [HIGH-READABILITY]?
+
+Expert: A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+Interviewer: [STARTS-WITH-NOUN]?
+
+Expert: A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+Interviewer: [USES-CONDITIONAL-MOOD]?
+
+Expert: A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+Interviewer: [HAS-A-RED-HERRING]?
+
+Expert: A story is [HAS-A-RED-HERRING] if the story has a Red Herring.
+
+Interviewer: [SHORT-STORY]?
+
+Expert: A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+Interviewer: [STYLE-SURREAL]?
+
+Expert: A story is [STYLE-SURREAL] if the story is surreal.
+
+Interviewer: [THEME-HELPING-OTHERS]?
+
+Expert: A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others.
+
+Interviewer: [STYLE-LIGHTHEARTED]?
+
+Expert: A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+Interviewer: Now the big one: how is [COMPLEX-NARRATIVE] defined? This one looks nested and precise — walk me through it exactly.
+
+Expert: Certainly. I'll read it carefully and keep the logical phrasing intact.
+
+A story is [COMPLEX-NARRATIVE] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is in [TOPIC-LOST-CIVILIZATIONS], [TOPIC-BYGONE-ERAS], [TOPIC-TIME-TRAVEL]
+      - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+    - either of the following is true:
+      - The story is [HAS-A-STORY-WITHIN-A-STORY]
+      - both of the following are true:
+        - The story is [HAS-A-FLASHBACK]
+        - It is not the case that both of the following are true:
+          - The story is [HAS-A-RED-HERRING]
+          - The story is [HAS-CHECKHOVS-GUN]
+  - both of the following are true:
+    - exactly one of the following is true:
+      - The story is [STYLE-CLASSIC]
+      - The story is [STYLE-MODERN]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [THEME-MAGIC]
+        - It is not the case that the story is [TOPIC-MYSTICAL-CREATURES]
+      - both of the following are true:
+        - The story is [THEME-PROBLEM-SOLVING]
+        - The story is [USES-DISCOURSE-MARKERS]
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [THEME-DECEPTION]
+      - It is not both of the following are true:
+        - The story is [THEME-KINDNESS]
+        - The story is [THEME-HELPING-OTHERS]
+    - The story is [HAS-A-RED-HERRING]
+  - either of the following is true:
+    - exactly one of the following is true:
+      - The story is [LONG-STORY]
+      - The story is [SHORT-STORY]
+    - both of the following are true:
+      - The story is [HAS-CHECKHOVS-GUN]
+      - It is not the case that the story is [HAS-A-CLIFFHANGER]
+
+Interviewer: Thanks — that's precise and unchanged in logic. One last question: you preserved every node and all logical operators, yes?
+
+Expert: Yes. I kept every node ID exactly as written (including brackets), and I preserved the logical structure and operators (either/both/exactly one/It is not the case/It is not both). Nothing was added or removed; the phrasing was made conversational only to clarify meaning while keeping accuracy for annotation and reasoning.

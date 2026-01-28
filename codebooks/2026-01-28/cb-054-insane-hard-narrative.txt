@@ -1,0 +1,287 @@
+Imagine a weathered map of storytelling—each symbol a rule, each rule a small village with its own law. Walk with me through that map. I will read each sign exactly as the codex requires, then whisper the tale that makes the rule breathe. The rules remain untouched; only the voice around them grows warm and human.
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] if The story is about magical lands
+- Think of this as a gatekeeper: whenever a tale wanders into landscapes threaded with enchantment, this badge is pinned to its chest.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if The story has readability score below 86.4
+- Here sits the librarian who frowns at dense sentences—if the score dips below that line, the story is labeled as harder to read.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if The story has the theme Deception
+- In this corner lives the trickster: any story that bears deception in its bones wears this name.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs
+- This is the territory of long, layered narratives—the kind that spread across many paragraphs like a journey over rolling hills.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective
+- A flag planted at the very first word: an adjective starts the march, and this flag flies.
+
+[STYLE-SURREAL]
+A story is [STYLE-SURREAL] if The story is surreal
+- Here the world tilts and familiar things become strange; this style is the upside-down mirror of realism.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if The story starts with a noun
+- When the door opens with a thing, a person, a place—ceremonially, the tale is crowned with this label.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if The story is about the arts
+- Galleries, stages, brushes, and rhythm—any narrative centered on creative practice carries this mark.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures
+- The map X’s and the chest of secrets; stories that hunt or reveal buried riches are in this fold.
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if The story has the theme Hardship
+- When characters are forged by trials, hardship is the anvil—this theme names those crucibles.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic
+- Timeless rhythms, traditional beats—anything that feels classically fashioned is given this designation.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun
+- The foreshadowed object that later matters: when a detail is planted with purpose, this label follows.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if The story uses discourse markers
+- Transitional words that guide the reader’s train of thought—if they’re present, this tag is attached.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if The story uses superlative forms
+- “Best,” “most,” the highest degree—when the language reaches its superlatives, this is noted.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if The story is about giant creatures
+- When the narrative populates its world with titans and leviathans, this is the creature-passport it receives.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if The story has a flashback
+- Time folds backward here; a memory sequence that momentarily rewrites chronology earns this trait.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if The story is modern
+- Contemporary cadence, present-day voice—this style is the story of now.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if The story has the theme Growth
+- Characters stretching, learning, becoming—growth is the quiet gardener of the plot.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if The story is about seasonal changes
+- If the turning of seasons is a subject or motif, this node places the story in the cycle of time.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if The story is minimalist
+- Economy of words, deliberate silence—minimalism trims everything down to essentials.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if The story starts with a adverb
+- When an adverb opens the scene—softly, suddenly, curiously—this tag is hoisted.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations
+- Ruins, legends, the echo of vanished peoples: these tales walk the ruins and wear this badge.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others
+- Altruism threads through the plot; where assistance is central, the story gains this label.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if The story has the theme Magic
+- Magic as a thematic current: not just setting, but a throughline in character and consequence.
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if The story is playful
+- Mischief and lightness color the voice—this style laughs and dances around strict formalities.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if The story uses conditional mood
+- “If this were so…” The grammar of possibility appears, and this trait is noted.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect
+- Actions completed before others show up in the verb shapes; if those forms appear, this node marks them.
+
+[THEME-HUMOR]
+A story is [THEME-HUMOR] if The story has the theme Humor
+- Where laughter is part of the engine, humor becomes the theme’s flag.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if The story is about cultural traditions
+- Rituals, customs, inherited practices—the narrative that studies or celebrates them earns this name.
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if The story has juxtaposition
+- Side-by-side contrasts that illuminate meaning—if those contrasts exist, this marker applies.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+- Suspense stopped mid-step: when a story leaves you dangling, this is the tag it carries.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if The story has readability score above 96.1
+- Smooth, clear prose that skims like a canoe over glass—this label marks such readability.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if The story is lighthearted
+- Cheerful, unburdened tones; the story breathes easy and is given this style name.
+
+[STARTING-WORD-TYPE]
+A story is [STARTING-WORD-TYPE] if exactly one of the following is true:
+- The story is [STARTS-WITH-ADJECTIVE]
+- The story is [STARTS-WITH-ADVERB]
+- The story is [STARTS-WITH-NOUN]
+- The rule here is strict and ceremonial: the story must begin with exactly one of those word types—no more, no less.
+
+[STYLE-AESTHETICS]
+A story is [STYLE-AESTHETICS] if the story is in [STYLE-SURREAL, STYLE-PLAYFUL, STYLE-LIGHTHEARTED]
+- Imagine a trio of colors that, when blended, make a particular hue. If the story’s aesthetic falls into that set, it carries the banner of STYLE-AESTHETICS.
+
+[TOPIC-ANCIENT-MYSTERIES]
+A story is [TOPIC-ANCIENT-MYSTERIES] if both of the following are true:
+- The story is [TOPIC-LOST-CIVILIZATIONS]
+- Either of the following is true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+- This is the archaeologist’s rule: a tale of lost civilizations that also pursues treasures or traditions becomes an ancient mystery.
+
+[MAGIC-SETTINGS]
+A story is [MAGIC-SETTINGS] if both of the following are true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- The story is [THEME-MAGIC]
+- When place and theme meet—lands that are magical and narratives threaded with magic—the setting itself is named.
+
+[CREATURES-IN-MAGICAL-LANDS]
+A story is [CREATURES-IN-MAGICAL-LANDS] if both of the following are true:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is [TOPIC-MAGICAL-LANDS]
+- Titans roaming enchanted realms—that precise overlap is captured by this tag.
+
+[NARRATIVE-DEVICES]
+A story is [NARRATIVE-DEVICES] if either of the following is true:
+- Both of the following are true:
+  - The story is [HAS-CHECKHOVS-GUN]
+  - The story is [HAS-A-FLASHBACK]
+- Both of the following are true:
+  - The story is [HAS-CHECKHOVS-GUN]
+  - The story is [HAS-A-CLIFFHANGER]
+- Both of the following are true:
+  - The story is [HAS-CHECKHOVS-GUN]
+  - The story is [HAS-JUXTAPOSITION]
+- Both of the following are true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is [HAS-A-CLIFFHANGER]
+- Both of the following are true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is [HAS-JUXTAPOSITION]
+- Both of the following are true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is [HAS-JUXTAPOSITION]
+- Picture a cabinet of narrative tricks: if the story pairs these devices in any of the listed combinations, it joins the company of NARRATIVE-DEVICES.
+
+[STRUCTURED-FORM]
+A story is [STRUCTURED-FORM] if both of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- Both of the following are true:
+  - The story is [USES-DISCOURSE-MARKERS]
+  - Either of the following is true:
+    - The story is [USES-CONDITIONAL-MOOD]
+    - The story is [USES-PERFECT-ASPECT]
+- This is the blueprint for organized complexity: many paragraphs plus connective grammar and a certain verbal aspect make the story formally structured.
+
+[COMPOUND-THEME]
+A story is [COMPOUND-THEME] if both of the following are true:
+- Either of the following is true:
+  - The story is [THEME-MAGIC]
+  - The story is [THEME-GROWTH]
+- Either of the following is true:
+  - The story is [THEME-DECEPTION]
+  - The story is [THEME-HARDSHIP]
+  - The story is [THEME-HELPING-OTHERS]
+  - The story is [THEME-HUMOR]
+- This node describes thematic fusion: the tale must take one of the first pair and pair it with one of the second quartet to be considered compound in theme.
+
+[HUMOROUS-LIGHT]
+A story is [HUMOROUS-LIGHT] if both of the following are true:
+- The story is [THEME-HUMOR]
+- Both of the following are true:
+  - The story is [STYLE-LIGHTHEARTED]
+  - The story is [STYLE-PLAYFUL]
+- When humor is the engine and the style is both light and playful, the story becomes HUMOROUS-LIGHT.
+
+[POETIC-MINIMALISM]
+A story is [POETIC-MINIMALISM] if both of the following are true:
+- The story is [STYLE-MINIMALIST]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [STYLE-CLASSIC]
+    - The story is [STYLE-MODERN]
+  - The story is not [STYLE-SURREAL]
+- Minimalist and either classical or modern in tone, but resolutely not surreal—this precise combination crafts POETIC-MINIMALISM.
+
+[ARC-GROWTH-HELP]
+A story is [ARC-GROWTH-HELP] if both of the following are true:
+- The story is [THEME-GROWTH]
+- The story is [THEME-HELPING-OTHERS]
+- Growth that unfolds through helping others—that narrative arc is what this node captures.
+
+[SURPRISING-FINALE]
+A story is [SURPRISING-FINALE] if both of the following are true:
+- The story is [HAS-CHECKHOVS-GUN]
+- The story is [HAS-A-CLIFFHANGER]
+- When an object is planted and a dramatic cliffhanger closes a scene, the ending becomes unexpectedly revelatory.
+
+[COMPLEX-STRUCTURE]
+A story is [COMPLEX-STRUCTURE] if both of the following are true:
+- The story is [NARRATIVE-DEVICES]
+- The story is [STRUCTURED-FORM]
+- When layered narrative devices meet formal structure, the story’s architecture becomes complex.
+
+[EPIC-MYSTERY]
+A story is [EPIC-MYSTERY] if both of the following are true:
+- The story is [TOPIC-ANCIENT-MYSTERIES]
+- Either of the following is true:
+  - The story is [TOPIC-GIANT-CREATURES]
+  - The story is [TOPIC-SEASONAL-CHANGES]
+- Ancient enigmas that swell into epic scale—whether by titanic beings or by sweeping seasons—are crowned EPIC-MYSTERY.
+
+[ENCHANTED-ODYSSEY]
+A story is [ENCHANTED-ODYSSEY] if both of the following are true:
+- The story is [MAGIC-SETTINGS]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [TOPIC-HIDDEN-TREASURES]
+    - The story is [TOPIC-LOST-CIVILIZATIONS]
+  - Either of the following is true:
+    - The story is [THEME-HARDSHIP]
+    - The story is [THEME-GROWTH]
+- Picture an odyssey across magic-soaked lands with treasure hunts or ruins, tempered by hardship or growth—this precise constellation becomes an ENCHANTED-ODYSSEY.
+
+[SURPRISING-SURREAL-ARC]
+A story is [SURPRISING-SURREAL-ARC] if both of the following are true:
+- The story is [STYLE-AESTHETICS]
+- Both of the following are true:
+  - The story is [SURPRISING-FINALE]
+  - The story is [ARC-GROWTH-HELP]
+- When surreal, playful, or lighthearted aesthetics combine with an ending that surprises and an arc of growth through helping others, the narrative becomes a SURPRISING-SURREAL-ARC.
+
+[COMPLEX-EPIC]
+A story is [COMPLEX-EPIC] if both of the following are true:
+- Both of the following are true:
+  - The story is [COMPLEX-STRUCTURE]
+  - The story is [COMPOUND-THEME]
+- Either of the following is true:
+  - The story is [ENCHANTED-ODYSSEY]
+  - Both of the following are true:
+    - The story is [EPIC-MYSTERY]
+    - The story is [CREATURES-IN-MAGICAL-LANDS]
+- The story is [STARTING-WORD-TYPE]
+- This is the summit: a tale that pairs formal complexity with compound thematic richness, that either wanders an enchanted odyssey or combines epic mysteries with giants-in-magic, and that begins with the right kind of starting word—only then does it earn the name COMPLEX-EPIC.
+
+There—each rule remains exactly where the codex placed it, bracketed and precise, but now you can picture them as characters and crossroads on a map. Use this map to annotate and reason: the logic is unchanged, but the landmarks are easier to remember.

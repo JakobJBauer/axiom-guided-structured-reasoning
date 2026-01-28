@@ -1,0 +1,58 @@
+Interviewer: Let's go through this codebook line by line. First, what does [USES-CONDITIONAL-MOOD] mean?
+
+Expert: A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+Interviewer: Simple enough. And [USES-PERFECT-ASPECT]?
+
+Expert: A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect.
+
+Interviewer: What about themes—what does [THEME-DECEPTION] capture?
+
+Expert: A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+Interviewer: And structural features—what is [HAS-A-CLIFFHANGER]?
+
+Expert: A story is [HAS-A-CLIFFHANGER] if the story has a cliffhanger.
+
+Interviewer: Now we’re getting to the composite nodes. Explain [COMPLEX-DECEPTION].
+
+Expert: Sure. A story is [COMPLEX-DECEPTION] if all of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is not [HAS-A-CLIFFHANGER]
+- Either of the following is true:
+  - The story is [USES-CONDITIONAL-MOOD]
+  - The story is [USES-PERFECT-ASPECT]
+
+Interviewer: Let me double-check. So for [COMPLEX-DECEPTION], the story must have the deception theme, must not have a cliffhanger, and must use at least one of conditional mood or perfect aspect. Is that correct?
+
+Expert: Exactly. That restates the same logical structure.
+
+Interviewer: Next: [ASPECTUAL-AMBIVALENCE]. How is that defined?
+
+Expert: A story is [ASPECTUAL-AMBIVALENCE] if both of the following are true:
+- Either of the following is true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-CONDITIONAL-MOOD]
+- The story is not both of the following:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-CONDITIONAL-MOOD]
+
+Interviewer: So [ASPECTUAL-AMBIVALENCE] means the story uses one of those two aspect/mood features, but not both at the same time. Correct?
+
+Expert: Correct. The phrasing “Either of the following is true” plus “not both of the following” enforces that exactly one of [USES-PERFECT-ASPECT] or [USES-CONDITIONAL-MOOD] holds.
+
+Interviewer: Finally, tell me about [AMBIGUOUS-DECEPTION-NARRATIVE].
+
+Expert: A story is [AMBIGUOUS-DECEPTION-NARRATIVE] if both of the following are true:
+- The story is [COMPLEX-DECEPTION]
+- Either of the following is true:
+  - The story is [ASPECTUAL-AMBIVALENCE]
+  - The story is not [HAS-A-CLIFFHANGER]
+
+Interviewer: To paraphrase: to qualify as [AMBIGUOUS-DECEPTION-NARRATIVE], a story must already meet the criteria for [COMPLEX-DECEPTION], and additionally must either satisfy the exclusive-aspect condition ([ASPECTUAL-AMBIVALENCE]) or still be one that is not [HAS-A-CLIFFHANGER]. Right?
+
+Expert: Yes. That preserves the original logical relationships exactly: [AMBIGUOUS-DECEPTION-NARRATIVE] requires [COMPLEX-DECEPTION], and then one of the two listed alternatives must hold.
+
+Interviewer: Great. That preserves the structure while making the logic clearer in a conversational way.
+
+Expert: Precisely—no node IDs, logical operators, or relationships were altered; we only explained them in an interview-style transcript for readability.

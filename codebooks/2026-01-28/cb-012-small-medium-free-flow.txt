@@ -1,0 +1,14 @@
+[THEME-HELPING-OTHERS]  
+Use [THEME-HELPING-OTHERS] when the story’s theme is clearly Helping Others.
+
+[TOPIC-MYSTICAL-CREATURES]  
+Tag a story as [TOPIC-MYSTICAL-CREATURES] if it’s about mystical creatures.
+
+[STARTS-WITH-PREPOSITION]  
+Apply [STARTS-WITH-PREPOSITION] when the very beginning of the story starts with a preposition.
+
+[MYTHIC-BUT-NOT-ALTRUISTIC]  
+A story fits [MYTHIC-BUT-NOT-ALTRUISTIC] when both pieces line up: the story is [TOPIC-MYSTICAL-CREATURES] And the story is not [THEME-HELPING-OTHERS].
+
+[INVITING-OPENING]  
+Mark a story as [INVITING-OPENING] only when both conditions are met: the story is [STARTS-WITH-PREPOSITION] And the story is not [MYTHIC-BUT-NOT-ALTRUISTIC].

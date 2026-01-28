@@ -1,0 +1,44 @@
+[attr-6]
+Definition: Predicate [attr-6] is true for a story S if and only if the initial lexical token of S is an adverb.
+
+[attr-7]
+Definition: Predicate [attr-7] is true for a story S if and only if S conforms to a classic style classification.
+
+[attr-4]
+Definition: Predicate [attr-4] is true for a story S if and only if the word count of S > 375.
+
+[attr-9]
+Definition: Predicate [attr-9] is true for a story S if and only if the primary subject matter of S concerns giant creatures.
+
+[attr-8]
+Definition: Predicate [attr-8] is true for a story S if and only if S centrally incorporates the theme of deception.
+
+[attr-10]
+Definition: Predicate [attr-10] is true for a story S if and only if S is about hidden treasures.
+
+[attr-1]
+Definition: Predicate [attr-1] is true for a story S if and only if all of the following conditions hold:
+- The predicate [attr-4] is true for S.
+- The predicate [attr-9] is true for S.
+- The predicate [attr-7] is false for S (i.e., S is not [attr-7]).
+
+[attr-5]
+Definition: Predicate [attr-5] is true for a story S if and only if all of the following conditions hold:
+- The predicate [attr-8] is true for S.
+- The predicate [attr-10] is true for S.
+- Either of the following is true for S:
+  - The predicate [attr-6] is true.
+  - The predicate [attr-7] is false (Not [attr-7]).
+
+[attr-3]
+Definition: Predicate [attr-3] is true for a story S if and only if exactly one of the following predicates is true for S:
+- [attr-1]
+- [attr-5]
+
+[attr-2]
+Definition: Predicate [attr-2] is true for a story S if and only if all of the following conditions hold:
+- The predicate [attr-3] is true for S.
+- Either of the following is true for S:
+  - The predicate [attr-7] is true.
+  - The predicate [attr-4] is true.
+- The predicate [attr-6] is false for S (Not [attr-6]).

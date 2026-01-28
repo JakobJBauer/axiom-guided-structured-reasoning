@@ -1,0 +1,48 @@
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if The story has the theme Deception.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if The story has a story within a story.
+
+[STYLE-SURREAL]
+A story is [STYLE-SURREAL] if The story is surreal.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if The story is minimalist.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if The story has the theme Growth.
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if The story is humorous.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if The story uses discourse markers.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if The story starts with a noun.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if The story has circular narrative structure.
+
+[NARRATIVE-COMPLEXITY]
+A story is [NARRATIVE-COMPLEXITY] if either of the following is true:
+- Both of the following are true:
+  - The story is [HAS-A-STORY-WITHIN-A-STORY]
+  - Exactly one of the following is true:
+    - The story is [THEME-DECEPTION]
+    - The story is [THEME-GROWTH]
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT] and the story is not [STARTS-WITH-NOUN]
+
+[ENGAGING-STORY]
+A story is [ENGAGING-STORY] if both of the following are true:
+- The story is [NARRATIVE-COMPLEXITY]
+- Either of the following is true:
+  - The truth of [USES-DISCOURSE-MARKERS] equals the truth of [STARTS-WITH-NOUN] (both true or both false)
+  - One of the following style nodes is in the story:
+    - The story is [STYLE-SURREAL]
+    - The story is [STYLE-HUMOROUS]
+    - The story is [STYLE-MINIMALIST]

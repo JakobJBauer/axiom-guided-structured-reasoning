@@ -1,0 +1,148 @@
+Interviewer: Let’s go through this codebook like an interview. First, what does [attr-14] mean?
+
+Expert: Simple. A story is [attr-14] if the story is lighthearted.
+
+Interviewer: And [attr-16]?
+
+Expert: A story is [attr-16] if the story is philosophical.
+
+Interviewer: What about topics like magical places?
+
+Expert: A story is [attr-24] if the story is about magical lands.
+
+Interviewer: How do you recognize device usage like wh-questions?
+
+Expert: A story is [attr-26] if the story uses wh-questions.
+
+Interviewer: What makes something a [attr-11]?
+
+Expert: A story is [attr-11] if the story has fewer than 160 words.
+
+Interviewer: Themes now — what is [attr-18]?
+
+Expert: A story is [attr-18] if the story has the theme Kindness.
+
+Interviewer: And paragraph length?
+
+Expert: A story is [attr-7] if the story has more than 6 paragraphs.
+
+Interviewer: Grammatical mood?
+
+Expert: A story is [attr-25] if the story uses conditional mood.
+
+Interviewer: Another theme — [attr-20]?
+
+Expert: A story is [attr-20] if the story has the theme Problem-Solving.
+
+Interviewer: [attr-17]?
+
+Expert: A story is [attr-17] if the story has the theme Growth.
+
+Interviewer: What does [attr-12] indicate?
+
+Expert: A story is [attr-12] if the story starts with a preposition.
+
+Interviewer: Giant creatures?
+
+Expert: A story is [attr-21] if the story is about giant creatures.
+
+Interviewer: Style labels again — [attr-15] and [attr-13]?
+
+Expert: A story is [attr-15] if the story is modern.
+A story is [attr-13] if the story is classic.
+
+Interviewer: Magical theme?
+
+Expert: A story is [attr-19] if the story has the theme Magic.
+
+Interviewer: Lost civilizations?
+
+Expert: A story is [attr-23] if the story is about lost civilizations.
+
+Interviewer: Any structural device like flashbacks?
+
+Expert: A story is [attr-4] if the story has a flashback.
+
+Interviewer: Hidden treasures?
+
+Expert: A story is [attr-22] if the story is about hidden treasures.
+
+Interviewer: Negative style label — [attr-9]?
+
+Expert: A story is [attr-9] if the story is not [attr-14].
+
+Interviewer: Now let’s look at some logical combinations. What is [attr-8]?
+
+Expert: A story is [attr-8] if exactly one of the following is true:
+- The story is [attr-15]
+- The story is [attr-13]
+
+Interviewer: How about [attr-6]? That sounds compound.
+
+Expert: A story is [attr-6] if both of the following are true:
+- The story is [attr-24]
+- Either of the following is true:
+  - The story is [attr-19]
+  - Both of the following are true:
+    - The story is [attr-21]
+    - The story is [attr-20]
+
+Interviewer: Tell me about [attr-5].
+
+Expert: A story is [attr-5] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-22]
+  - The story is [attr-23]
+- Both of the following are true:
+  - The story is [attr-22]
+  - The story is [attr-23]
+
+Interviewer: What defines [attr-10]?
+
+Expert: A story is [attr-10] if both of the following are true:
+- [attr-26] is in the set of devices the story uses (it explicitly uses wh-questions)
+- Either of the following is true:
+  - The story is [attr-25]
+  - The story is [attr-12]
+
+Interviewer: The [attr-3] sounds specific. How is that formed?
+
+Expert: A story is [attr-3] if both of the following are true:
+- The set of themes in the story is equal to the set containing [attr-18] and [attr-17]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-20]
+    - The story is [attr-4]
+  - Both of the following are true:
+    - The story is [attr-7]
+    - The story is not [attr-11]
+
+Interviewer: What about [attr-1]?
+
+Expert: A story is [attr-1] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- Both of the following are true:
+  - The story is [attr-21]
+  - The story is [attr-23]
+
+Interviewer: And finally, the big one — [attr-2]?
+
+Expert: A story is [attr-2] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-1]
+  - Both of the following are true:
+    - The story is [attr-8]
+    - Either of the following is true:
+      - The story is [attr-18]
+      - The story is [attr-19]
+- Both of the following are true:
+  - The story is [attr-3]
+  - Both of the following are true:
+    - The story is not [attr-9]
+    - The story is [attr-10]
+
+Interviewer: That was thorough. Any final tip for annotators using this codebook?
+
+Expert: Treat each bracketed node as a precise criterion. When a node lists "either," "both," or "exactly one," follow those logical constraints exactly. The transcript form here is just to make the relationships easier to read; the logical structure and node IDs remain unchanged.

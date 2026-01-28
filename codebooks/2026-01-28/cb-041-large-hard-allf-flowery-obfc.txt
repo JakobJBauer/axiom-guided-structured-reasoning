@@ -1,0 +1,86 @@
+In a quiet hall of ink and moonlight, where labels bloom like roses on the trellis of storytelling, this codebook unfurls its petals. Each line below is a delicate silver thread in a tapestry that guides annotators and reasoners alike. Though the language here sings with ornament, the architecture beneath remains exact and resolute: every node, every relationship, and every logical operator stands unchanged—carved in stone, gilded in gold.
+
+[attr-10]
+A tale is deemed [attr-10] when it wears the cloak of brevity: the story contains fewer than 160 words. Think of it as a comet streaking briefly across the sky — brief, bright, and counted by the handful of words it carries.
+
+[attr-17]
+A tale is [attr-17] if its heart beats with the theme Kindness. This label is given when kindness is a central current running through the narrative.
+
+[attr-14]
+A tale is [attr-14] if it carries the theme Helping Others. When characters reach outward to assist or uplift, this banner is raised.
+
+[attr-18]
+A tale is [attr-18] if it centers on Problem-Solving. Stories that twist through challenges and arrive at practical solutions wear this emblem.
+
+[attr-12]
+A tale is [attr-12] if its voice turns inward and questions—if it is philosophical. It contemplates, muses, and lingers on meaning.
+
+[attr-5]
+A tale is [attr-5] if it scores above 96.1 on the readability scale. Imagine a smooth river of prose that lets any reader glide downstream effortlessly.
+
+[attr-13]
+A tale is [attr-13] if it gambols in a playful style. It delights, teases, and dances with language and tone.
+
+[attr-15]
+A tale is [attr-15] if it carries the theme Humor. Laughter or comedic intent threads the storyline.
+
+[attr-11]
+A tale is [attr-11] if it is humorous in style. The narration itself makes room for wit and comedic timing.
+
+[attr-4]
+A tale is [attr-4] if it contains a story nested within the larger story—like a quaint doll hidden inside another.
+
+[attr-19]
+A tale is [attr-19] if it is about mystical creatures. Where dragons, sprites, or otherworldly beings tread, this flag flies.
+
+[attr-3]
+A tale is [attr-3] if it contains a Red Herring—an intentional diversion meant to mislead or distract.
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- The story is [attr-17]
+- The story is [attr-14]
+(And both must hold simultaneously.)
+
+[attr-7]
+A story is [attr-7] if exactly one of the following is true (Xor):
+- The story is [attr-13]
+- The story is [attr-11]
+This is the delicate balance where a tale is playful or humorous—but not both—granting it an airy, singular temperament.
+
+[attr-16]
+A story is [attr-16] if the story's dominant theme is In the following set:
+- [attr-17], [attr-14], [attr-18]
+(Use In to check membership among those theme nodes.)
+
+[attr-1]
+A story is [attr-1] if the following Equal relationship holds:
+- The presence of [attr-12] Equal the presence of [attr-11]
+(They are Equal when either both are present or both are absent.)
+
+[attr-8]
+A story is [attr-8] if both of the following are true:
+- The story is [attr-19]
+- The story is [attr-4] And the story is [attr-12]
+(This nests an And inside an And to form an allegorical structure.)
+
+[attr-2]
+A story is [attr-2] if all of the following are true:
+- Either of the following is true (Or):
+  - The story is [attr-6]
+  - The story is [attr-18]
+- Exactly one of the following is true (Xor):
+  - The story is [attr-3]
+  - The story is [attr-4]
+- The story is Not [attr-10] Or the story is [attr-5]
+(Uses Not to exclude short stories unless they also meet HIGH-READABILITY; combines Or and Xor for nuanced arc structure.)
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- The story is [attr-2] And the story is [attr-1]
+- The story is [attr-16] And either of the following is true (Or):
+  - The story is [attr-7]
+  - The story is [attr-8]
+(This node nests multiple logical operators to form a deep, recommendable composition: And at the top level, Or inside a branch, and references In, Equal, Not, and Xor through its subordinate nodes.)
+
+Thus, in this garden of criteria, each bracketed sigil is a plant with precise roots and branches. The language here may blossom with imagery, but the roots—the logical structure and the exact relationships—remain unaltered and steadfast, ready for use by those who annotate and reason with faithful care.

@@ -1,0 +1,49 @@
+[attr-7]
+True if the story contains a story within a story.
+
+[attr-11]
+True if the story's theme is Magic.
+
+[attr-6]
+True if the story includes a flashback.
+
+[attr-12]
+True if the story is about the arts.
+
+[attr-10]
+True if the story is minimalist.
+
+[attr-8]
+True if the story uses a circular narrative structure.
+
+[attr-5]
+True if exactly one of the following is true:
+- The story is [attr-7]
+- The story is [attr-6]
+
+[attr-4]
+True if the truth value of [attr-7] equals the truth value of [attr-8].
+
+[attr-9]
+True if the story's primary theme or topic is in the set {[attr-11], [attr-12]}.
+
+[attr-3]
+True if both of the following are true:
+- Either of the following:
+  - The story is [attr-5]
+  - The story is [attr-4]
+- The story is not [attr-10] and (the story is [attr-8] or the story is [attr-6])
+
+[attr-1]
+True if both of the following are true:
+- The story is [attr-9]
+- Either of the following:
+  - The story is [attr-3]
+  - The story is [attr-10]
+
+[attr-2]
+True if both of the following are true:
+- The story is [attr-1]
+- Exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is not [attr-6]

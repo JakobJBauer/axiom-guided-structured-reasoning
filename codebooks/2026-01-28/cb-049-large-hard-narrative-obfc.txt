@@ -1,0 +1,139 @@
+[attr-3]
+A story is [attr-3] if the story has a cliffhanger — that breathless pause that leaves readers dangling, hungry for what comes next.
+
+[attr-18]
+A story is [attr-18] if the story is modern — set or styled with contemporary sensibilities and voice.
+
+[attr-25]
+A story is [attr-25] if the story uses discourse markers — those little signposts (like “however,” “meanwhile,” or “on the other hand”) that guide the reader through turns of thought.
+
+[attr-4]
+A story is [attr-4] if the story has a flashback — a backward glance that folds past scenes into the present.
+
+[attr-24]
+A story is [attr-24] if the story has the theme Problem-Solving — when overcoming obstacles and finding solutions is central to the tale.
+
+[attr-12]
+A story is [attr-12] if the story starts with an adjective — its opening word colors the scene immediately.
+
+[attr-26]
+A story is [attr-26] if the story uses wh-questions — who, what, when, where, why, or how that probe and pique curiosity.
+
+[attr-5]
+A story is [attr-5] if the story has juxtaposition — placing contrasting elements side by side so their differences sing.
+
+[attr-13]
+A story is [attr-13] if the story starts with an adverb — an opening that modifies the action and sets the tempo.
+
+[attr-23]
+A story is [attr-23] if the story has the theme Humor — laughter or light irony woven into what it means.
+
+[attr-7]
+A story is [attr-7] if the story has readability score below 86.4 — a denser path for readers to follow.
+
+[attr-15]
+A story is [attr-15] if the story is humorous — it aims to amuse and delight.
+
+[attr-17]
+A story is [attr-17] if the story is minimalist — spare, essential, saying more with less.
+
+[attr-16]
+A story is [attr-16] if the story is lighthearted — buoyant, easygoing, and unheavy.
+
+[attr-6]
+A story is [attr-6] if the story has readability score above 96.1 — effortlessly gliding along for most readers.
+
+[attr-22]
+A story is [attr-22] if the story has the theme Deception — trickery, concealment, or the art of misleading.
+
+[attr-19]
+A story is [attr-19] if the story is philosophical — contemplative, probing big questions.
+
+[attr-14]
+A story is [attr-14] if either of the following is true:
+- The story is [attr-3]
+- exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+- both of the following are true:
+  - The story is [attr-25]
+  - The story is not [attr-3]
+Imagine [attr-14] as the structural toolbox: it’s present if the tale dangles a cliffhanger, or if it uses exactly one of flashback or juxtaposition, or if it pairs discourse markers with the absence of a cliffhanger.
+
+[attr-8]
+A story is [attr-8] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-12]
+  - The story is [attr-13]
+- exactly one of the following is true:
+  - The story is [attr-26]
+  - The story is [attr-25]
+Think of [attr-8] as the front-door choreography: the story must begin with an adjective or an adverb, and then choose exactly one path — either it asks wh-questions or it guides with discourse markers.
+
+[attr-20]
+A story is [attr-20] if either of the following is true:
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-LIGHTHEARTED]
+  - The story is not [attr-17]
+- both of the following are true:
+  - The story is [attr-15]
+  - The story is not [attr-19]
+[attr-20] captures tone as a pair of possible identities: either a modern, lighthearted piece that is not minimalist, or a humorous work that keeps a philosophical bent at bay.
+
+[attr-21]
+A story is [attr-21] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-24]
+  - The story is [attr-23]
+- exactly one of the following is true:
+  - The story is [attr-22]
+  - The story is [attr-24]
+The heart, [attr-21], pulses when problem-solving and humor beat together, or when the tale embraces exactly one of deception or problem-solving.
+
+[attr-10]
+A story is [attr-10] if exactly one of the following is true:
+- The story is [attr-7]
+- The story is [attr-6]
+[attr-10] insists on a single readability lane: either below the lower threshold or above the higher one — never both.
+
+[attr-11]
+A story is [attr-11] if both of the following are true:
+- The story is [attr-10]
+- either of the following is true:
+  - The story is [attr-16]
+  - The story is not [attr-7]
+When [attr-11] arrives, it melds readability classification with tone: the story must belong to a readability class, and either be lighthearted or avoid low readability.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-14]
+  - both of the following are true:
+    - The story is [attr-8]
+    - The story is not [attr-3]
+- either of the following is true:
+  - The story is [attr-20]
+  - both of the following are true:
+    - The story is [attr-21]
+    - The story is not [attr-19]
+Think of [attr-2] as the story’s magnetic field: it needs structural hooks or a particular opening pattern without cliffhangers, and it must carry the right stylistic tone or a thematic core that is not philosophical.
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-20]
+- exactly one of the following is true:
+  - The story is [attr-15]
+  - The story is [attr-17]
+[attr-1] is the polish at the end: either readability impact and tone align, or the story wears exactly one of two styles — humorous or minimalist — that makes it ready for its readers.
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- The story is [attr-2]
+- either of the following is true:
+  - The story is [attr-1]
+  - both of the following are true:
+    - The story is [attr-21]
+    - The story is not [attr-10]
+Finally, [attr-9] is the summit: the tale must meet the engagement pattern, and then either be audience-ready, or possess a thematic core while not fitting neatly into a readability class. It’s the narrative arc that feels both compelling and complete.

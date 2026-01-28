@@ -1,0 +1,198 @@
+Interviewer: Let's go through this codebook together. First, can you define the simple labels—those that state a single property?
+
+Expert: Sure. I'll read each one and then give a short conversational clarification.
+
+Interviewer: What is [HAS-A-CLIFFHANGER]?
+
+Expert: A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger.
+Interviewer: So that tag is applied when the story literally ends on a cliffhanger. Got it.
+
+Interviewer: What about [STYLE-MODERN]?
+
+Expert: A story is [STYLE-MODERN] if The story is modern.
+
+Interviewer: And [USES-DISCOURSE-MARKERS]?
+
+Expert: A story is [USES-DISCOURSE-MARKERS] if The story uses discourse markers.
+
+Interviewer: [HAS-A-FLASHBACK]?
+
+Expert: A story is [HAS-A-FLASHBACK] if The story has a flashback.
+
+Interviewer: [THEME-PROBLEM-SOLVING]?
+
+Expert: A story is [THEME-PROBLEM-SOLVING] if The story has the theme Problem-Solving.
+
+Interviewer: [STARTS-WITH-ADJECTIVE]?
+
+Expert: A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective.
+
+Interviewer: [USES-WH-QUESTIONS]?
+
+Expert: A story is [USES-WH-QUESTIONS] if The story uses wh-questions.
+
+Interviewer: [HAS-JUXTAPOSITION]?
+
+Expert: A story is [HAS-JUXTAPOSITION] if The story has juxtaposition.
+
+Interviewer: [STARTS-WITH-ADVERB]?
+
+Expert: A story is [STARTS-WITH-ADVERB] if The story starts with a adverb.
+
+Interviewer: [THEME-HUMOR]?
+
+Expert: A story is [THEME-HUMOR] if The story has the theme Humor.
+
+Interviewer: [LOW-READABILITY]?
+
+Expert: A story is [LOW-READABILITY] if The story has readability score below 86.4.
+
+Interviewer: [STYLE-HUMOROUS]?
+
+Expert: A story is [STYLE-HUMOROUS] if The story is humorous.
+
+Interviewer: [STYLE-MINIMALIST]?
+
+Expert: A story is [STYLE-MINIMALIST] if The story is minimalist.
+
+Interviewer: [STYLE-LIGHTHEARTED]?
+
+Expert: A story is [STYLE-LIGHTHEARTED] if The story is lighthearted.
+
+Interviewer: [HIGH-READABILITY]?
+
+Expert: A story is [HIGH-READABILITY] if The story has readability score above 96.1.
+
+Interviewer: [THEME-DECEPTION]?
+
+Expert: A story is [THEME-DECEPTION] if The story has the theme Deception.
+
+Interviewer: [STYLE-PHILOSOPHICAL]?
+
+Expert: A story is [STYLE-PHILOSOPHICAL] if The story is philosophical.
+
+Interviewer: Great. Now let's move to the composite, logical definitions. Start with [STRUCTURAL-DEVICES].
+
+Expert: Okay. Here’s the formal definition and how to read it.
+
+A story is [STRUCTURAL-DEVICES] if either of the following is true:
+- The story is [HAS-A-CLIFFHANGER]
+- exactly one of the following is true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is [HAS-JUXTAPOSITION]
+- both of the following are true:
+  - The story is [USES-DISCOURSE-MARKERS]
+  - The story is not [HAS-A-CLIFFHANGER]
+
+Interviewer: Let me clarify—so [STRUCTURAL-DEVICES] holds if any one of those three high-level cases is satisfied: it has a cliffhanger; exactly one of flashback or juxtaposition; or it uses discourse markers but does not have a cliffhanger. Right?
+
+Expert: Exactly. The logical structure—either / exactly one / both with a negation—stays as written.
+
+Interviewer: Next: [OPENING-PATTERN].
+
+Expert: A story is [OPENING-PATTERN] if both of the following are true:
+- either of the following is true:
+  - The story is [STARTS-WITH-ADJECTIVE]
+  - The story is [STARTS-WITH-ADVERB]
+- exactly one of the following is true:
+  - The story is [USES-WH-QUESTIONS]
+  - The story is [USES-DISCOURSE-MARKERS]
+
+Interviewer: So to tag [OPENING-PATTERN], the story must start with an adjective or an adverb, and then exactly one of wh-questions or discourse markers must appear. Understood.
+
+Interviewer: Now [STYLE-TONE].
+
+Expert: A story is [STYLE-TONE] if either of the following is true:
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-LIGHTHEARTED]
+  - The story is not [STYLE-MINIMALIST]
+- both of the following are true:
+  - The story is [STYLE-HUMOROUS]
+  - The story is not [STYLE-PHILOSOPHICAL]
+
+Interviewer: Note the first conjunction: it requires "in [STYLE-MODERN, STYLE-LIGHTHEARTED]" and not minimalist. The second option is humorous but not philosophical. Clear.
+
+Interviewer: [THEMATIC-CORE]?
+
+Expert: A story is [THEMATIC-CORE] if either of the following is true:
+- both of the following are true:
+  - The story is [THEME-PROBLEM-SOLVING]
+  - The story is [THEME-HUMOR]
+- exactly one of the following is true:
+  - The story is [THEME-DECEPTION]
+  - The story is [THEME-PROBLEM-SOLVING]
+
+Interviewer: So [THEMATIC-CORE] either requires both Problem-Solving and Humor, or exactly one of Deception or Problem-Solving. Got it.
+
+Interviewer: [READABILITY-CLASS]?
+
+Expert: A story is [READABILITY-CLASS] if exactly one of the following is true:
+- The story is [LOW-READABILITY]
+- The story is [HIGH-READABILITY]
+
+Interviewer: That enforces a mutually exclusive classification between low and high readability. Clear.
+
+Interviewer: [READABILITY-IMPACT]?
+
+Expert: A story is [READABILITY-IMPACT] if both of the following are true:
+- The story is [READABILITY-CLASS]
+- either of the following is true:
+  - The story is [STYLE-LIGHTHEARTED]
+  - The story is not [LOW-READABILITY]
+
+Interviewer: So for READABILITY-IMPACT, you first must be in the readability class, and then either the story is lighthearted or it is not low-readability. Understood.
+
+Interviewer: [ENGAGEMENT-PATTERN]?
+
+Expert: A story is [ENGAGEMENT-PATTERN] if both of the following are true:
+- either of the following is true:
+  - The story is [STRUCTURAL-DEVICES]
+  - both of the following are true:
+    - The story is [OPENING-PATTERN]
+    - The story is not [HAS-A-CLIFFHANGER]
+- either of the following is true:
+  - The story is [STYLE-TONE]
+  - both of the following are true:
+    - The story is [THEMATIC-CORE]
+    - The story is not [STYLE-PHILOSOPHICAL]
+
+Interviewer: That's a two-part conjunction. The first part accepts either STRUCTURAL-DEVICES or a specific OPENING-PATTERN without cliffhanger. The second part accepts STYLE-TONE or THEMATIC-CORE provided it's not philosophical. Correct.
+
+Expert: Correct. The "both of the following are true" at the top level requires one condition from each of those two big choices.
+
+Interviewer: Now [AUDIENCE-READY]?
+
+Expert: A story is [AUDIENCE-READY] if either of the following is true:
+- both of the following are true:
+  - The story is [READABILITY-IMPACT]
+  - The story is [STYLE-TONE]
+- exactly one of the following is true:
+  - The story is [STYLE-HUMOROUS]
+  - The story is [STYLE-MINIMALIST]
+
+Interviewer: So to be audience-ready, either it meets both readability impact and style tone, or it is exactly one of humorous or minimalist. Clear.
+
+Interviewer: Finally, [OPTIMAL-ARC].
+
+Expert: A story is [OPTIMAL-ARC] if both of the following are true:
+- The story is [ENGAGEMENT-PATTERN]
+- either of the following is true:
+  - The story is [AUDIENCE-READY]
+  - both of the following are true:
+    - The story is [THEMATIC-CORE]
+    - The story is not [READABILITY-CLASS]
+
+Interviewer: So OPTIMAL-ARC requires an engagement pattern, plus either the story is audience-ready, or it has thematic core but lacks a readability class. That preserves the intended trade-off between engagement, audience fit, and thematic strength. Perfect.
+
+Interviewer: Anything else we should note about reading and using this transcript-style codebook?
+
+Expert: A couple of practical notes:
+- Whenever you see "either of the following is true", treat that as logical OR.
+- "Both of the following are true" is logical AND.
+- "Exactly one of the following is true" is exclusive OR: one true, the other false.
+- "The story is not [NODE]" is logical negation.
+- All node IDs appear exactly as [THIS], and their relationships and formulas are unchanged from the original spec.
+
+Interviewer: Thanks—that keeps the formal logic intact while making the definitions easy to talk through.
+
+Expert: You're welcome. If you want, we can walk through an example story and annotate which nodes apply, step by step.

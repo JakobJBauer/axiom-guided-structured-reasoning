@@ -1,0 +1,52 @@
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+When we tag a story with [HAS-CIRCULAR-NARRATIVE-STRUCT], we mean it: the narrative loops back on itself in a circular way. The plot, structure, or timeline returns to its starting point, creating that distinct roundabout feeling.
+
+[THEME-KINDNESS]
+A story gets the [THEME-KINDNESS] label when kindness is a central theme—when acts of generosity, compassion, or benevolence drive meaning or character choices.
+
+[HAS-JUXTAPOSITION]
+Use [HAS-JUXTAPOSITION] when a story places contrasting elements side by side—ideas, images, tones, or scenes that highlight each other through contrast.
+
+[TOPIC-HIDDEN-TREASURES]
+If the story revolves around secret caches, lost riches, or buried meanings—literal or metaphorical—mark it as [TOPIC-HIDDEN-TREASURES].
+
+[LOW-READABILITY]
+We call a story [LOW-READABILITY] when its readability score falls below 86.4. It implies denser, more complex prose or structure.
+
+[STYLE-PHILOSOPHICAL]
+Label a work [STYLE-PHILOSOPHICAL] when it leans into ideas and reflections, posing big questions or exploring concepts in a contemplative way.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if its style feels contemporary—in voice, themes, or technique—reflecting modern sensibilities.
+
+[THEME-DECEPTION]
+Tag [THEME-DECEPTION] when deception is a core theme—lies, trickery, misdirection, or duplicity shape the narrative or character dynamics.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if its readability score is above 96.1, suggesting clear, accessible prose.
+
+[MODERN-PHILO-JUXTA]
+A story is [MODERN-PHILO-JUXTA] if all of the following are true:
+- The story is [STYLE-MODERN]
+- Either of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [HAS-JUXTAPOSITION]
+- The story is not [HAS-CIRCULAR-NARRATIVE-STRUCT]
+In other words, it’s a modern piece that either thinks philosophically or plays with juxtaposition, but it doesn’t loop back into a circular narrative.
+
+[MORAL-AMBIVALENCE]
+A story is [MORAL-AMBIVALENCE] if all of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [THEME-DECEPTION]
+- The story is [MODERN-PHILO-JUXTA]
+This captures those morally mixed stories where kindness and deception coexist within a modern, philosophical or juxtaposing framework.
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if both of the following are true:
+- The story is [MORAL-AMBIVALENCE]
+- Either of the following is true:
+  - Exactly one of the following is true:
+    - The story is [LOW-READABILITY]
+    - The story is [HIGH-READABILITY]
+  - The story is [TOPIC-HIDDEN-TREASURES]
+So a [COMPLEX-NARRATIVE] combines moral ambiguity (kindness tangled with deception inside that modern-philosophical/juxtaposed form) with either a precise readability condition—one score category but not both—or with a focus on hidden treasures.

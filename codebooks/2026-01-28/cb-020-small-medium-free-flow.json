@@ -1,0 +1,91 @@
+{
+  "nodes": [
+    {
+      "id": "uses-perfect-aspect",
+      "label": "USES-PERFECT-ASPECT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-cultural-traditions",
+      "label": "TOPIC-CULTURAL-TRADITIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-the-arts",
+      "label": "TOPIC-THE-ARTS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-lighthearted",
+      "label": "STYLE-LIGHTHEARTED",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "arts-traditional",
+      "label": "ARTS-TRADITIONAL",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-the-arts",
+        "topic-cultural-traditions"
+      ]
+    },
+    {
+      "id": "nostalgic-arts",
+      "label": "NOSTALGIC-ARTS",
+      "formula_type": "And",
+      "formula_args": [
+        "arts-traditional",
+        "uses-perfect-aspect",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "style-lighthearted"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "light-arts-tradition",
+      "label": "LIGHT-ARTS-TRADITION",
+      "formula_type": "And",
+      "formula_args": [
+        "arts-traditional",
+        "style-lighthearted"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic-the-arts",
+      "target": "arts-traditional"
+    },
+    {
+      "source": "topic-cultural-traditions",
+      "target": "arts-traditional"
+    },
+    {
+      "source": "arts-traditional",
+      "target": "nostalgic-arts"
+    },
+    {
+      "source": "uses-perfect-aspect",
+      "target": "nostalgic-arts"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "nostalgic-arts"
+    },
+    {
+      "source": "arts-traditional",
+      "target": "light-arts-tradition"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "light-arts-tradition"
+    }
+  ]
+}

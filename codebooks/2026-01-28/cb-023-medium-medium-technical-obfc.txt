@@ -1,0 +1,50 @@
+Technical codebook — categorical definitions and logical composition rules
+
+Notation: Each bracketed token [attr-9] denotes a categorical label assigned to a narrative (hereafter "story"). The schema uses propositional classification: atomic predicates define base properties; compound predicates specify Boolean combinations of those atomic predicates. The connective language (both of the following are true / either of the following is true / all of the following are true / not) encodes logical AND, OR, universal conjunction, and negation, respectively. Node identifiers and logical relationships are fixed and must not be altered.
+
+[attr-11]
+A story is [attr-11] if the narrative foregrounds philosophical inquiry, reflection, or argumentation as a principal stylistic or thematic feature.
+
+[attr-13]
+A story is [attr-13] if the primary subject matter or sustained topical focus of the narrative concerns the arts (e.g., visual art, music, theatre, literature, or other artistic practice).
+
+[attr-3]
+A story is [attr-3] if the narrative includes at least one flashback sequence — a scene that returns the narrative temporally to prior events for the purpose of exposition or character development.
+
+[attr-6]
+A story is [attr-6] if the narrative contains an embedded diegetic narrative (a secondary story told within the primary story).
+
+[attr-12]
+A story is [attr-12] if deception functions as an explicit thematic element; that is, the plot or character dynamics centrally involve acts or motifs of deceit, concealment, or misrepresentation.
+
+[attr-5]
+A story is [attr-5] if the narrative deliberately introduces misleading information or distractors intended to divert inference or expectation (a red herring).
+
+[attr-4]
+A story is [attr-4] if the narrative conveys an explicit or clearly inferable moral lesson, ethical prescription, or didactic point.
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-13]
+
+[attr-7]
+A story is [attr-7] if either of the following is true:
+- The story is [attr-3]
+- The story is [attr-6]
+
+[attr-8]
+A story is [attr-8] if both of the following are true:
+- The story is [attr-12]
+- The story is [attr-5]
+
+[attr-2]
+A story is [attr-2] if all of the following are true:
+- The story is [attr-8]
+- The story is [attr-4]
+- The story is not [attr-10]
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-2]
+- The story is [attr-7]

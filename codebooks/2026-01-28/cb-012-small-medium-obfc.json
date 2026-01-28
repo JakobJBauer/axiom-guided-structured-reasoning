@@ -1,0 +1,68 @@
+{
+  "nodes": [
+    {
+      "id": "attr-4",
+      "label": "A story is [attr-4] if The story has the theme Helping Others.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "A story is [attr-5] if The story is about mystical creatures.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "A story is [attr-3] if The story starts with a preposition.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "A story is [attr-2] if both of the following are true: the story is [attr-5] and the story is not [attr-4].",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "A story is [attr-1] if both of the following are true: the story is [attr-3] and the story is not [attr-2].",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-3",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-2"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-5",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-1"
+    }
+  ]
+}

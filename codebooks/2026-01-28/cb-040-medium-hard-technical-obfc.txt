@@ -1,0 +1,63 @@
+Codebook — Technical specification
+
+Atomic node definitions
+- [attr-8]
+  - Classification rule: A story is assigned the label [attr-8] if the narrative contains the thematic element "Agency".
+
+- [attr-7]
+  - Classification rule: A story is assigned the label [attr-7] if the first lexical token of the story is a noun.
+
+- [attr-11]
+  - Classification rule: A story is assigned the label [attr-11] if its primary topic concerns giant creatures.
+
+- [attr-9]
+  - Classification rule: A story is assigned the label [attr-9] if it contains the theme "Kindness".
+
+- [attr-3]
+  - Classification rule: A story is assigned the label [attr-3] if its readability metric exceeds 96.1.
+
+- [attr-12]
+  - Classification rule: A story is assigned the label [attr-12] if its subject matter concerns mystical creatures.
+
+- [attr-10]
+  - Classification rule: A story is assigned the label [attr-10] if it contains the theme "Problem-Solving".
+
+Composite node definitions (logical specifications)
+- [attr-4]
+  - Logical specification: A story is [attr-4] if both of the following are true:
+    - The story is [attr-11]
+    - The story is [attr-12]
+
+- [attr-6]
+  - Logical specification: A story is [attr-6] if exactly one of the following is true:
+    - The story is [attr-10]
+    - The story is [attr-8]
+  - Interpretation: This node encodes exclusive disjunction (XOR) between the two thematic labels.
+
+- [attr-1]
+  - Logical specification: A story is [attr-1] if both of the following are true:
+    - The story is [attr-9]
+    - The story is [attr-6]
+
+- [attr-5]
+  - Logical specification: A story is [attr-5] if both of the following are true:
+    - [attr-7] equals true
+    - The story is not [attr-8]
+  - Interpretation: This node identifies narratives that begin with a noun and explicitly do not carry the [attr-8] label.
+
+- [attr-2]
+  - Logical specification: A story is [attr-2] if both of the following are true:
+    - The story is [attr-4]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [attr-1]
+        - [attr-3] equals true
+      - both of the following are true:
+        - The story is [attr-5]
+        - [attr-11] is in [TOPIC-GIANT-CREATURES, TOPIC-MYSTICAL-CREATURES]
+  - Interpretation: [attr-2] requires the story to be both giant-related and mystical, and then to satisfy one of two alternative conjunctive branches: (1) it is an altruistic solver story with high readability, or (2) it is an assertive-opening giant story that meets the listed topic membership condition.
+
+Notes on semantics and usage
+- All definitions are binary: a label either applies or does not apply to a story.
+- Composite nodes use standard logical connectives: conjunction (both of the following are true), disjunction (either of the following is true), negation (not), and exclusive disjunction (exactly one of the following is true).
+- Node identifiers must remain exactly as specified (bracketed form) when referenced in annotations or automated rules.

@@ -1,0 +1,82 @@
+Interviewer: Let’s go through this codebook one item at a time. First, what does [attr-11] mean?
+
+Expert: [attr-11] — A story is [attr-11] if The story has the theme Deception.
+
+Interviewer: And [attr-12]?
+
+Expert: [attr-12] — A story is [attr-12] if The story has the theme Helping Others.
+
+Interviewer: How about [attr-9]?
+
+Expert: [attr-9] — A story is [attr-9] if The story is philosophical.
+
+Interviewer: [attr-3] — what’s the definition there?
+
+Expert: [attr-3] — A story is [attr-3] if The story has Checkhov's gun.
+
+Interviewer: Simple enough. Next, [attr-7]?
+
+Expert: [attr-7] — A story is [attr-7] if The story starts with a noun.
+
+Interviewer: And [attr-13]?
+
+Expert: [attr-13] — A story is [attr-13] if The story is about hidden treasures.
+
+Interviewer: [attr-10]?
+
+Expert: [attr-10] — A story is [attr-10] if The story has the theme Agency.
+
+Interviewer: There’s also [attr-6]. What does that say?
+
+Expert: [attr-6] — A story is [attr-6] if The story starts with a adjective.
+
+Interviewer: [attr-4]?
+
+Expert: [attr-4] — A story is [attr-4] if The story has juxtaposition.
+
+Interviewer: Now we reach a compound one: [attr-5]. How is that determined?
+
+Expert: [attr-5] — A story is [attr-5] if either of the following is true:
+- The story is [attr-7]
+- The story is [attr-6] xor [attr-7]
+
+Interviewer: Quick clarification — when you say "xor" here, you mean exactly one of those two holds, correct?
+
+Expert: Correct. "xor" means exclusive or: only one of [attr-6] or [attr-7] is true in that clause.
+
+Interviewer: Good. Next up: [attr-8]. This looks more complex — can you walk me through it?
+
+Expert: Sure. [attr-8] — A story is [attr-8] if both of the following are true:
+- The story is [attr-5]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-11]
+    - The story is [attr-13]
+  - Either of the following is true:
+    - The story is [attr-3] xor [attr-10]
+    - The story is [attr-11] and not [attr-10]
+
+Interviewer: So for [attr-8], first we require [attr-5]. Then we need either the deception+hidden-treasures pair, or one of those two alternatives — the xor between Checkhov’s gun and Agency, or Deception with not Agency. Right?
+
+Expert: Exactly. The logic is preserved as written: [attr-5] must be true, and then one of the two branches must hold — either the conjunction of [attr-11] and [attr-13], or the inner "either" branch that itself contains an xor and a conjunction-with-not.
+
+Interviewer: Excellent. Now the most layered: [attr-2]. What are the exact conditions?
+
+Expert: [attr-2] — A story is [attr-2] if all of the following are true:
+- The story is [attr-8]
+- Not both of the following are true:
+  - The story is [attr-12]
+  - The story is [attr-9]
+- Either of the following is true:
+  - The story is [attr-4]
+  - Both of the following are true:
+    - The story is [attr-7] equals true
+    - The story is [attr-6] equals false
+
+Interviewer: Let me restate that to ensure I’ve got it: To qualify as [attr-2] you must have [attr-8]; you must not have both [attr-12] and [attr-9] simultaneously; and finally, you must either have [attr-4] or meet the starts-with condition where [attr-7] is true and [attr-6] is false. Correct?
+
+Expert: Correct. That restatement matches the original logical structure exactly — no nodes, operators, or relationships have been changed.
+
+Interviewer: Thanks. One last check — throughout, you kept each node ID the same, and preserved all logical words like "xor", "not", "Either", "Both", "Not both", and the "equals true/false" clauses, right?
+
+Expert: Yes. Every node ID remains in [attr-1] format exactly as they appear. All logical operations and relationships are preserved verbatim in their intended places. The transcript simply frames the same logic in a conversational, explanatory style for readability.

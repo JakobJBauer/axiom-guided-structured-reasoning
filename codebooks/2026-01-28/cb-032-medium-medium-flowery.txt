@@ -1,0 +1,67 @@
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs
+
+In the quiet garden of prose, this label blooms for tales that unfurl across more than six paragraphs — a generous unfolding of scenes and sentiments, where ideas have room to stretch their limbs and breathe.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic
+
+Affixed to narratives that wear the garb of time-honored formality and familiar structure, this mantle honors stories that echo tradition and the steady cadence of the canon.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+
+This tag is whispered to those chapters that leave the reader dangling on a precipice of suspense, hearts aloft, awaiting the next turn of fate.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if The story starts with a preposition
+
+A small syntactic flourish at the very threshold — a preposition leading the opening line — marks the tale with a subtle grammatical signature, a doorway begun in relation.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if The story has the theme Deception
+
+Here lies the veil of cunning and hidden truths: stories that weave deception into their marrow, where appearances and reality slip and twine.
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if The story is playful
+
+This label is reserved for narratives that gambol and frolic in language and tone, where wit and lightness skip through the paragraphs like children in a sunlit meadow.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others
+
+Bestowed upon tales that center generosity and aid, this theme celebrates acts of assistance and the moral gravity of reaching out.
+
+[THEME-AGENCY]
+A story is [THEME-AGENCY] if The story has the theme Agency
+
+This marker honors stories of volition and action, where characters seize their choices and steer the currents of their destinies.
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if The story has juxtaposition
+
+Tagged for contrast and counterpoint, these stories set elements side by side so their differences sing — a deliberate pairing that amplifies meaning.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if The story is philosophical
+
+Reserved for works that ponder and probe, this style leans into reflection and inquiry, turning every scene into a mirror for thought.
+
+[RICH-THEME]
+A story is [RICH-THEME] if either of the following is true:
+- The story is both [THEME-DECEPTION] and not [THEME-HELPING-OTHERS]
+- Exactly one of the following is true:
+  - The story is [THEME-AGENCY]
+  - The story is [THEME-HELPING-OTHERS]
+
+In the grand tapestry of motifs, [RICH-THEME] crowns stories that possess a certain thematic depth. It catches those cloaked in deception yet absent the balm of helpfulness, as well as those that carry precisely one of two virtues: either the determined heartbeat of agency or the gentle hand of aiding others — but not both together in that specific toggle. Think of it as a spectrum where particular combinations of motive and moral hue create an especially resonant thematic color.
+
+[COMPLEX-CLASSIC-ARC]
+A story is [COMPLEX-CLASSIC-ARC] if both of the following are true:
+- The story is [STYLE-CLASSIC]
+- Either of the following is true:
+  - The story is both [HAS-A-CLIFFHANGER] and not [STYLE-PLAYFUL]
+  - The story is both [STARTS-WITH-PREPOSITION] and [RICH-THEME]
+
+This label unfolds like an ornate reliquary around tales that wear classic form yet hide multifaceted structure within. They are traditional in bearing and either end with poignant suspense while remaining serious rather than playful, or begin with a relational prepositional doorway and carry the dense coloration of a [RICH-THEME]. In short, a refined classic exterior wrapped around a layered, intricate arc.

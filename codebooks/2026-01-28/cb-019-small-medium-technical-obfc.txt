@@ -1,0 +1,41 @@
+Codebook — Formal annotation specifications
+
+Purpose: Precise definitions for story-level annotation nodes. Each node below specifies the criterion required to assign the corresponding label to a story. Logical operators used: Not (logical negation), And (conjunction / all must hold), Or (inclusive disjunction), and "Exactly one" (exclusive disjunction / XOR). Node identifiers are preserved verbatim in [attr-1] format.
+
+Atomic labels (single-condition predicates)
+
+[attr-7]
+Definition: A story is annotated with [attr-7] if the narrative text employs superlative grammatical forms (e.g., "best", "most", "largest") in its expression.
+
+[attr-6]
+Definition: A story is annotated with [attr-6] if the subject matter of the story concerns lost, extinct, or otherwise historically vanished civilizations.
+
+[attr-4]
+Definition: A story is annotated with [attr-4] if the first token of the story is a noun (lexical category: noun).
+
+[attr-5]
+Definition: A story is annotated with [attr-5] if the principal theme of the narrative is humor (the story is intended to be humorous or comedic in tone).
+
+Composite labels (logical combinations)
+
+[attr-2]
+Specification: Assign [attr-2] when all of the following conditions are simultaneously satisfied:
+- The story is [attr-4] (conjunction).
+- The story is [attr-5] (conjunction).
+- The story is not [attr-7] (logical negation: the story must not satisfy [attr-7]).
+
+Formal interpretation: [attr-2] = [attr-4] AND [attr-5] AND NOT [attr-7].
+
+[attr-3]
+Specification: Assign [attr-3] when both of the following hold:
+- The story is [attr-6].
+- Exactly one of the following is true (exclusive disjunction):
+  - The story is [attr-2].
+  - The story is [attr-7].
+
+Formal interpretation: [attr-3] = [attr-6] AND ( [attr-2] XOR [attr-7] ).
+
+Notes on application
+- These definitions are intended as deterministic annotation rules: labels should be applied only when the specified logical condition is satisfied.
+- "Exactly one" denotes exclusive OR: if both subconditions are true or both false, the exclusive condition fails.
+- The composite-node formal interpretations above preserve the original logical structure and operators; do not alter the underlying relationships when applying labels.

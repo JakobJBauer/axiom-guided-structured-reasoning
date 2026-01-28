@@ -1,0 +1,87 @@
+Overview — How to read this codebook
+- Each entry is labeled by its node ID in [attr-3] form. Do not modify these IDs.
+- Definitions state the condition under which a story should be assigned the node.
+- Composite nodes list their logical conditions using the same phrasing and logical structure as the original (e.g., "both of the following are true", "Either of the following is true", "not both of the following").
+- Preserve all logical relationships and operators exactly. Use the nested checklist to evaluate stories step by step.
+
+Nodes (organized, annotated, and checklist-ready)
+
+1) [attr-7]
+- Definition
+  - A story is [attr-7] if the story uses conditional mood.
+- Quick annotator checklist
+  - Does the story use conditional mood? If yes → assign [attr-7].
+
+2) [attr-8]
+- Definition
+  - A story is [attr-8] if the story uses perfect aspect.
+- Quick annotator checklist
+  - Does the story use perfect aspect? If yes → assign [attr-8].
+
+3) [attr-6]
+- Definition
+  - A story is [attr-6] if the story has the theme Deception.
+- Quick annotator checklist
+  - Is Deception a theme in the story? If yes → assign [attr-6].
+
+4) [attr-5]
+- Definition
+  - A story is [attr-5] if the story has a cliffhanger.
+- Quick annotator checklist
+  - Does the story end (or present a moment) with unresolved tension or an explicit cliffhanger? If yes → assign [attr-5].
+
+5) [attr-4]
+- Definition
+  - A story is [attr-4] if all of the following are true:
+- Logical structure (preserved exactly)
+  - The story is [attr-6]
+  - The story is not [attr-5]
+  - Either of the following is true:
+    - The story is [attr-7]
+    - The story is [attr-8]
+- Annotator checklist (step-by-step)
+  1. Confirm the story is [attr-6].
+  2. Confirm the story is not [attr-5].
+  3. Confirm at least one of:
+     - [attr-7], or
+     - [attr-8].
+  4. If 1, 2, and 3 are satisfied → assign [attr-4].
+
+6) [attr-2]
+- Definition
+  - A story is [attr-2] if both of the following are true:
+- Logical structure (preserved exactly)
+  - Either of the following is true:
+    - The story is [attr-8]
+    - The story is [attr-7]
+  - The story is not both of the following:
+    - The story is [attr-8]
+    - The story is [attr-7]
+- Clarified interpretation (keeps logic unchanged)
+  - This node captures cases where at least one of the two aspect/mood signals is present, but not both simultaneously.
+- Annotator checklist (step-by-step)
+  1. Confirm at least one of these is true:
+     - [attr-8], or
+     - [attr-7].
+  2. Confirm it is not the case that both [attr-8] and [attr-7] hold.
+  3. If 1 and 2 are satisfied → assign [attr-2].
+
+7) [attr-1]
+- Definition
+  - A story is [attr-1] if both of the following are true:
+- Logical structure (preserved exactly)
+  - The story is [attr-4]
+  - Either of the following is true:
+    - The story is [attr-2]
+    - The story is not [attr-5]
+- Annotator checklist (step-by-step)
+  1. Confirm the story is [attr-4].
+  2. Confirm at least one of:
+     - The story is [attr-2], or
+     - The story is not [attr-5].
+  3. If 1 and 2 are satisfied → assign [attr-1].
+
+Final notes for annotators
+- Follow the checklists in order: evaluate atomic nodes ([attr-7], [attr-8], [attr-6], [attr-5]) first. Then evaluate composite nodes using those atomic labels.
+- Do not change node IDs, logical phrases, or the nesting/order of conditions. The phrasing "both of the following are true", "Either of the following is true", and "not both of the following" must be respected exactly in your reasoning.
+- When in doubt, apply the checklist step-by-step to ensure each logical clause is satisfied before assigning a composite node.

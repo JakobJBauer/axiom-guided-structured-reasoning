@@ -1,0 +1,27 @@
+[attr-7]
+A story is [attr-7] if The story uses perfect aspect
+
+[attr-5]
+A story is [attr-5] if The story is about cultural traditions
+
+[attr-6]
+A story is [attr-6] if The story is about the arts
+
+[attr-4]
+A story is [attr-4] if The story is lighthearted
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-6]
+- The story is [attr-5]
+
+[attr-3]
+A story is [attr-3] if all of the following are true:
+- The story is [attr-1]
+- The story is [attr-7]
+- The story is not [attr-4]
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-1]
+- The story is [attr-4]

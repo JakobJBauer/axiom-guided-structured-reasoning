@@ -1,0 +1,31 @@
+Think of these labels as a small set of clear, practical tags you can apply when reading or annotating a story. I’ll name each label by its ID and then say, in plain language, the exact condition under which that label applies — keeping every logical relationship and ID exactly as they appear.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if The story is about cultural traditions.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if The story is about the arts.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if The story is lighthearted.
+
+[ARTS-TRADITIONAL]
+A story is [ARTS-TRADITIONAL] if both of the following are true:
+- The story is [TOPIC-THE-ARTS]
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+
+[NOSTALGIC-ARTS]
+A story is [NOSTALGIC-ARTS] if all of the following are true:
+- The story is [ARTS-TRADITIONAL]
+- The story is [USES-PERFECT-ASPECT]
+- The story is not [STYLE-LIGHTHEARTED]
+
+[LIGHT-ARTS-TRADITION]
+A story is [LIGHT-ARTS-TRADITION] if both of the following are true:
+- The story is [ARTS-TRADITIONAL]
+- The story is [STYLE-LIGHTHEARTED]
+
+That’s it — concise labels, each tied to precise conditions. Use them as a checklist when you annotate: check the simple tags first ([USES-PERFECT-ASPECT], [TOPIC-*], [STYLE-*]), then derive the composite tags ([ARTS-TRADITIONAL], [NOSTALGIC-ARTS], [LIGHT-ARTS-TRADITION]) by following the listed logical requirements.

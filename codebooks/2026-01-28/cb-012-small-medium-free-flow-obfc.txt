@@ -1,0 +1,14 @@
+[attr-4]  
+Use [attr-4] when the story’s theme is clearly Helping Others.
+
+[attr-5]  
+Tag a story as [attr-5] if it’s about mystical creatures.
+
+[attr-3]  
+Apply [attr-3] when the very beginning of the story starts with a preposition.
+
+[attr-2]  
+A story fits [attr-2] when both pieces line up: the story is [attr-5] And the story is not [attr-4].
+
+[attr-1]  
+Mark a story as [attr-1] only when both conditions are met: the story is [attr-3] And the story is not [attr-2].

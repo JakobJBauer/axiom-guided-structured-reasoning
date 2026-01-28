@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "id": "low-readability",
+      "label": "Low Readability",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "Style: Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "Style: Modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-superlative-forms",
+      "label": "Uses Superlative Forms",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-bygone-eras",
+      "label": "Topic: Bygone Eras",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-time-travel",
+      "label": "Topic: Time Travel",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-magic",
+      "label": "Theme: Magic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-problem-solving",
+      "label": "Theme: Problem-Solving",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-moral-lesson",
+      "label": "Has a Moral Lesson",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "time-magic-nexus",
+      "label": "Time-Magic Nexus",
+      "formula_type": "Xor",
+      "formula_args": [
+        "topic-time-travel",
+        "theme-magic"
+      ]
+    },
+    {
+      "id": "didactic-bygone",
+      "label": "Didactic Bygone",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-bygone-eras",
+        "has-a-moral-lesson",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "uses-superlative-forms"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-arc",
+      "label": "Complex Arc",
+      "formula_type": "And",
+      "formula_args": [
+        "time-magic-nexus",
+        "theme-problem-solving",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "low-readability"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic-time-travel",
+      "target": "time-magic-nexus"
+    },
+    {
+      "source": "theme-magic",
+      "target": "time-magic-nexus"
+    },
+    {
+      "source": "topic-bygone-eras",
+      "target": "didactic-bygone"
+    },
+    {
+      "source": "has-a-moral-lesson",
+      "target": "didactic-bygone"
+    },
+    {
+      "source": "uses-superlative-forms",
+      "target": "didactic-bygone"
+    },
+    {
+      "source": "time-magic-nexus",
+      "target": "complex-arc"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "complex-arc"
+    },
+    {
+      "source": "low-readability",
+      "target": "complex-arc"
+    }
+  ]
+}

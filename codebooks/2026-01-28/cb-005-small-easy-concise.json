@@ -1,0 +1,70 @@
+{
+  "nodes": [
+    {
+      "id": "uses-discourse-markers",
+      "label": "USES-DISCOURSE-MARKERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-juxtaposition",
+      "label": "HAS-JUXTAPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-mystical-creatures",
+      "label": "TOPIC-MYSTICAL-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-red-herring",
+      "label": "HAS-A-RED-HERRING",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-giant-creatures",
+      "label": "TOPIC-GIANT-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "fantastical-juxtaposition",
+      "label": "FANTASTICAL-JUXTAPOSITION",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-mystical-creatures",
+        "has-juxtaposition"
+      ]
+    },
+    {
+      "id": "giant-misdirection",
+      "label": "GIANT-MISDIRECTION",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-giant-creatures",
+        "has-a-red-herring"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic-mystical-creatures",
+      "target": "fantastical-juxtaposition"
+    },
+    {
+      "source": "has-juxtaposition",
+      "target": "fantastical-juxtaposition"
+    },
+    {
+      "source": "topic-giant-creatures",
+      "target": "giant-misdirection"
+    },
+    {
+      "source": "has-a-red-herring",
+      "target": "giant-misdirection"
+    }
+  ]
+}

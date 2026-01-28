@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": "theme-helping-others",
+      "label": "THEME-HELPING-OTHERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "helpful-action",
+      "label": "HELPFUL-ACTION",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "In",
+          "formula_args": [
+            "protagonist-central-action",
+            [
+              "aid",
+              "rescue"
+            ]
+          ]
+        },
+        {
+          "formula_type": "In",
+          "formula_args": [
+            "protagonist-central-action",
+            [
+              "donate",
+              "teach"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "motive-selfish",
+      "label": "MOTIVE-SELFISH",
+      "formula_type": "Equal",
+      "formula_args": [
+        "protagonist-motive",
+        "personal gain"
+      ]
+    },
+    {
+      "id": "selfless-arc",
+      "label": "SELFLESS-ARC",
+      "formula_type": "And",
+      "formula_args": [
+        "helpful-action",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "motive-selfish"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "altruistic-help",
+      "label": "ALTRUISTIC-HELP",
+      "formula_type": "Xor",
+      "formula_args": [
+        "theme-helping-others",
+        "selfless-arc"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "protagonist-central-action",
+      "target": "helpful-action"
+    },
+    {
+      "source": "protagonist-motive",
+      "target": "motive-selfish"
+    },
+    {
+      "source": "helpful-action",
+      "target": "selfless-arc"
+    },
+    {
+      "source": "motive-selfish",
+      "target": "selfless-arc"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "altruistic-help"
+    },
+    {
+      "source": "selfless-arc",
+      "target": "altruistic-help"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+[attr-4]
+Definition: The predicate [attr-4] is true for a story when the narrative contains an explicit moral lesson. Equivalently: the story conveys a didactic conclusion or ethical maxim intended as the narrative's moral.
+
+[attr-12]
+Definition: The predicate [attr-12] is true for a story when the text employs grammatical perfect aspect (e.g., forms constructed with auxiliary perfect markers such as "has/have/had + past participle").
+
+[attr-2]
+Definition: The predicate [attr-2] is true for a story when the narrative ends, or interrupts a scene, with unresolved events or questions constituting a cliffhanger.
+
+[attr-11]
+Definition: The predicate [attr-11] is true for a story when the primary thematic content concerns kindness (e.g., emphasis on benevolence, compassion, or altruistic actions).
+
+[attr-10]
+Definition: The predicate [attr-10] is true for a story when the story exhibits characteristics of modern style (contemporary diction, modernist conventions, or other identifiable modern stylistic markers).
+
+[attr-3]
+Definition: The predicate [attr-3] is true for a story when the narrative includes at least one flashback sequence (a retroactive scene or memory that interrupts present chronology).
+
+[attr-8]
+Definition: The predicate [attr-8] is true for a story when the story exhibits characteristics of classic style (traditional structure, period conventions, or other identifiable classical stylistic markers).
+
+[attr-6]
+Definition: The predicate [attr-6] is true for a story when the story's length exceeds 375 words.
+
+[attr-5]
+Definition: The predicate [attr-5] is true for a story when the narrative employs juxtaposition (placement of contrasting elements in proximity for effect).
+
+[attr-9]
+Definition: The predicate [attr-9] is true for a story when the overall tone is lighthearted (playful, unserious, or pleasantly buoyant).
+
+[attr-7]
+Definition: The predicate [attr-7] is true for a story if and only if all of the following conditions hold:
+- Either of the following is true:
+  - The story is [attr-2]
+  - The story is [attr-3]
+- Exactly one of the following is true:
+  - The story is [attr-5]
+  - The story is [attr-12]
+- The story is not [attr-9]
+- At least one of the story's structural features is in the set { [attr-2], [attr-3], [attr-5] }
+
+Commentary: This node constitutes a conjunctive predicate that requires (1) presence of either a cliffhanger or a flashback, (2) an exclusive choice between juxtaposition and perfect aspect, (3) exclusion of a lighthearted style, and (4) confirmation that at least one of the enumerated structural features is present.
+
+[attr-1]
+Definition: The predicate [attr-1] is true for a story if and only if both of the following are true:
+- The story is [attr-7]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [attr-11]
+    - The story is [attr-4]
+  - The presence of [attr-10] equals the presence of [attr-8]
+
+Commentary: This node is a higher-order conjunction. It requires that the story satisfy [attr-7] and, additionally, that the story either contains the theme of kindness or a moral lesson, and that the truth value of [attr-10] is identical to the truth value of [attr-8] (i.e., both present or both absent).

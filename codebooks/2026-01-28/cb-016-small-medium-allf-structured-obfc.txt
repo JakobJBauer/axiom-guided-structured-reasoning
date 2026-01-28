@@ -1,0 +1,53 @@
+Codebook — structured edition
+
+Notes for annotators
+- The logical structure and node identifiers are unchanged; every node ID appears exactly as in the original (e.g., [attr-5]).
+- Logical operators and relationships are preserved verbatim: "either ...", "both ...", "exactly one ...", and explicit negation ("not").
+- Use this document as a clear checklist when deciding whether a story meets a node’s criteria.
+
+Nodes (organized, with concise checks)
+
+1) [attr-5]
+- Definition:
+  - A story is [attr-5] if:
+    - The story has the theme Helping Others.
+
+2) [attr-2]
+- Definition:
+  - A story is [attr-2] if either of the following is true:
+    - The protagonist's central action is in the set {aid, rescue}
+    - The protagonist's central action is in the set {donate, teach}
+- Practical interpretation:
+  - Treat this node as an OR between two action-sets. If the protagonist’s main action matches any item in either set, mark [attr-2].
+
+3) [attr-3]
+- Definition:
+  - A story is [attr-3] if:
+    - The protagonist's motive is equal to "personal gain"
+- Practical interpretation:
+  - This node flags explicit, stated motives of personal benefit.
+
+4) [attr-4]
+- Definition:
+  - A story is [attr-4] if both of the following are true:
+    - The story is [attr-2]
+    - The story is not [attr-3]
+- Logical structure:
+  - This is a logical AND combined with a negation: it requires a helpful action and the absence of a selfish motive.
+
+5) [attr-1]
+- Definition:
+  - A story is [attr-1] if exactly one of the following is true:
+    - The story is [attr-5]
+    - The story is [attr-4]
+- Logical structure:
+  - This node represents an exclusive OR (XOR) between theme-level helping and a selfless action arc: mark [attr-1] only when exactly one of those nodes applies.
+
+Quick decision checklist (compact)
+- Is the theme Helping Others? → [attr-5]
+- Is the protagonist’s central action aid/rescue/donate/teach? → [attr-2]
+- Is the motive explicitly "personal gain"? → [attr-3]
+- If [attr-2] is true AND [attr-3] is false → [attr-4]
+- If exactly one of [attr-5] or [attr-4] is true → [attr-1]
+
+End — Use this structured checklist to make consistent, logic-preserving annotations.

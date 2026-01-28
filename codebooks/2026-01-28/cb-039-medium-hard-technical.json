@@ -1,0 +1,216 @@
+{
+  "nodes": [
+    {
+      "id": "theme-deception",
+      "label": "THEME-DECEPTION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-helping-others",
+      "label": "THEME-HELPING-OTHERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "STYLE-PHILOSOPHICAL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-checkhovs-gun",
+      "label": "HAS-CHECKHOVS-GUN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-noun",
+      "label": "STARTS-WITH-NOUN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-hidden-treasures",
+      "label": "TOPIC-HIDDEN-TREASURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-agency",
+      "label": "THEME-AGENCY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adjective",
+      "label": "STARTS-WITH-ADJECTIVE",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-juxtaposition",
+      "label": "HAS-JUXTAPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "opening-primacy",
+      "label": "OPENING-PRIMACY",
+      "formula_type": "Or",
+      "formula_args": [
+        "starts-with-noun",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "starts-with-adjective",
+            "starts-with-noun"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structured-deception",
+      "label": "STRUCTURED-DECEPTION",
+      "formula_type": "And",
+      "formula_args": [
+        "opening-primacy",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "theme-deception",
+                "topic-hidden-treasures"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                {
+                  "formula_type": "Xor",
+                  "formula_args": [
+                    "has-checkhovs-gun",
+                    "theme-agency"
+                  ]
+                },
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "theme-deception",
+                    {
+                      "formula_type": "Not",
+                      "formula_args": [
+                        "theme-agency"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-narrative",
+      "label": "COMPLEX-NARRATIVE",
+      "formula_type": "And",
+      "formula_args": [
+        "structured-deception",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "theme-helping-others",
+                "style-philosophical"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "has-juxtaposition",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                {
+                  "formula_type": "Equal",
+                  "formula_args": [
+                    "starts-with-noun",
+                    true
+                  ]
+                },
+                {
+                  "formula_type": "Equal",
+                  "formula_args": [
+                    "starts-with-adjective",
+                    false
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "starts-with-noun",
+      "target": "opening-primacy"
+    },
+    {
+      "source": "starts-with-adjective",
+      "target": "opening-primacy"
+    },
+    {
+      "source": "opening-primacy",
+      "target": "structured-deception"
+    },
+    {
+      "source": "theme-deception",
+      "target": "structured-deception"
+    },
+    {
+      "source": "topic-hidden-treasures",
+      "target": "structured-deception"
+    },
+    {
+      "source": "has-checkhovs-gun",
+      "target": "structured-deception"
+    },
+    {
+      "source": "theme-agency",
+      "target": "structured-deception"
+    },
+    {
+      "source": "structured-deception",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "has-juxtaposition",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "starts-with-noun",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "starts-with-adjective",
+      "target": "complex-narrative"
+    }
+  ]
+}

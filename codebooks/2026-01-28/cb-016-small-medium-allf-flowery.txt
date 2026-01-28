@@ -1,0 +1,27 @@
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if
+The story has the theme Helping Others.
+- In the tapestry of narrative, this tag is applied when the overarching motif is one of compassion and assistance — when the story's heart beats for the well-being of others.
+
+[HELPFUL-ACTION]
+A story is [HELPFUL-ACTION] if either of the following is true:
+- The protagonist's central action is in the set {aid, rescue}
+- The protagonist's central action is in the set {donate, teach}
+- This label unfurls when the main deed performed by the protagonist centers on offering concrete help: whether through brave rescue or steady aid, or through generous donation or the patient imparting of knowledge.
+
+[MOTIVE-SELFISH]
+A story is [MOTIVE-SELFISH] if
+- The protagonist's motive is equal to "personal gain"
+- This marker is reserved for those tales where the inner engine of action is plainly self-regarding, where the aim behind deeds is the pursuit of one’s own advantage.
+
+[SELFLESS-ARC]
+A story is [SELFLESS-ARC] if both of the following are true:
+- The story is [HELPFUL-ACTION]
+- The story is not [MOTIVE-SELFISH]
+- Thus is declared an arc of selflessness: the protagonist performs helpful actions, and those actions are not driven by personal gain — a gentle moral geometry where benevolence stands unmarred by selfish intent.
+
+[ALTRUISTIC-HELP]
+A story is [ALTRUISTIC-HELP] if exactly one of the following is true:
+- The story is [THEME-HELPING-OTHERS]
+- The story is [SELFLESS-ARC]
+- This final flourish captures exclusivity: the tale is marked for altruistic help when it either carries the broad theme of helping others or it specifically traces a selfless arc, but not both at once — a single, clear note in the symphony of kindness.

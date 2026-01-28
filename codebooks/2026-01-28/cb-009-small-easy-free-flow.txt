@@ -1,0 +1,32 @@
+Think of this as a friendly guide to the labels we use when annotating stories — each label is followed by the exact condition that makes it apply. I’ll keep things natural and easy to read, but the logical structure stays intact: the node IDs in [BRACKET] form, the connective words, and the formula shapes are unchanged.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if The story uses superlative forms
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if The story has juxtaposition
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if The story has fewer than 160 words
+
+[EPICALLY-CONCISE-LOST]
+A story is [EPICALLY-CONCISE-LOST] if both of the following are true:
+- The story is [TOPIC-LOST-CIVILIZATIONS]
+- The story is [SHORT-STORY]
+
+[ORNATE-REFLECTIVE]
+A story is [ORNATE-REFLECTIVE] if either of the following are true:
+- Both of the following are true:
+  - The story is [USES-SUPERLATIVE-FORMS]
+  - The story is [USES-PERFECT-ASPECT]
+- Both of the following are true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [HAS-JUXTAPOSITION]
+
+That’s it — same nodes, same logic, just presented so it reads like a conversation rather than a dry checklist.

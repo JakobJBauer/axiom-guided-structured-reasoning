@@ -1,0 +1,55 @@
+Think of this as a friendly guide to the tagging rules — written like a conversation, but precise enough for annotation and reasoning. I’ll keep every node ID exactly as it appears, and I won’t change any logical tests or relationships. Here’s the same codebook, made easier to read.
+
+[THEME-AGENCY]
+We mark a story as [THEME-AGENCY] when the story carries the theme Agency.
+
+[STARTS-WITH-NOUN]
+We call a story [STARTS-WITH-NOUN] when the story begins with a noun.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] when it carries the theme Kindness.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if the story has a readability score above 96.1.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if the story is about mystical creatures.
+
+[THEME-PROBLEM-SOLVING]
+We tag a story as [THEME-PROBLEM-SOLVING] if the theme of the story is Problem-Solving.
+
+[MYSTICAL-GIANTS]
+A story is [MYSTICAL-GIANTS] if both of the following are true:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is [TOPIC-MYSTICAL-CREATURES]
+
+[SOLVER-OR-AGENCY]
+A story is [SOLVER-OR-AGENCY] if exactly one of the following is true:
+- The story is [THEME-PROBLEM-SOLVING]
+- The story is [THEME-AGENCY]
+
+[ALTRUISM-SOLVER]
+A story is [ALTRUISM-SOLVER] if both of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [SOLVER-OR-AGENCY]
+
+[OPENING-ASSERTIVE]
+A story is [OPENING-ASSERTIVE] if both of the following are true:
+- [STARTS-WITH-NOUN] equals true
+- The story is not [THEME-AGENCY]
+
+[FEATURED-STORY]
+A story is [FEATURED-STORY] if both of the following are true:
+- The story is [MYSTICAL-GIANTS]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [ALTRUISM-SOLVER]
+    - [HIGH-READABILITY] equals true
+  - both of the following are true:
+    - The story is [OPENING-ASSERTIVE]
+    - [TOPIC-GIANT-CREATURES] is in [TOPIC-GIANT-CREATURES, TOPIC-MYSTICAL-CREATURES]
+
+That’s it — the same logic, just presented with a bit more conversational flow so it’s easier to read while you annotate.

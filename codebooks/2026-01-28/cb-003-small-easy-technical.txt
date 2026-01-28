@@ -1,0 +1,25 @@
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition. Operationally, this is a binary annotation assigned when the initial lexical token of the narrative functions as a preposition (i.e., the opening token’s part-of-speech corresponds to a prepositional category).
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers. This label denotes the presence of explicit connective elements or pragmatic markers (for example: however, therefore, meanwhile, moreover) that signal discourse relations or shifts.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if the story has the theme Deception. This is a thematic predicate indicating that deceptive behavior, concealment, fraud, or intentional misrepresentation is a central element of the narrative.
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] if the story is about magical lands. This topical predicate marks narratives whose setting or central subject matter concerns fantastical geographies, enchanted realms, or otherworldly territories.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions. This topical predicate applies when the narrative focuses on customs, rituals, heritage practices, or socially transmitted cultural behaviors.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if the story is about the arts. This topical predicate indicates that the narrative concerns artistic disciplines, practices, or aesthetic activities (e.g., music, visual art, theater, dance).
+
+[ARTFUL-DECEPTION-IN-FANTASY]
+A story is [ARTFUL-DECEPTION-IN-FANTASY] if all of the following are true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- The story is [THEME-DECEPTION]
+- The story is [TOPIC-THE-ARTS]
+
+This composite label is defined by logical conjunction: it is assigned when each of the three constituent predicates above concurrently hold for the narrative.

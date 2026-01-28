@@ -1,0 +1,107 @@
+Codebook — Structured rewrite
+Purpose: Present each node and its precise annotation logic in a clear, hierarchical format. All node IDs, logical operators, and relationships are preserved exactly as in the original. Use this as a checklist when labeling.
+
+I. Atomic (simple) labels
+- [attr-20]
+  - Definition: A story is [attr-20] if The story is about time travel.
+- [attr-8]
+  - Definition: A story is [attr-8] if The story starts with a adjective.
+- [attr-21]
+  - Definition: A story is [attr-21] if The story uses perfect aspect.
+- [attr-13]
+  - Definition: A story is [attr-13] if The story is modern.
+- [attr-6]
+  - Definition: A story is [attr-6] if The story has readability score below 86.4.
+- [attr-19]
+  - Definition: A story is [attr-19] if The story is about the arts.
+- [attr-5]
+  - Definition: A story is [attr-5] if The story has circular narrative structure.
+- [attr-16]
+  - Definition: A story is [attr-16] if The story is about cultural traditions.
+- [attr-4]
+  - Definition: A story is [attr-4] if The story has a flashback.
+- [attr-11]
+  - Definition: A story is [attr-11] if The story is humorous.
+- [attr-17]
+  - Definition: A story is [attr-17] if The story is about magical lands.
+- [attr-12]
+  - Definition: A story is [attr-12] if The story is lighthearted.
+- [attr-18]
+  - Definition: A story is [attr-18] if The story is about mystical creatures.
+- [attr-15]
+  - Definition: A story is [attr-15] if The story has the theme Problem-Solving.
+
+II. Composite labels (logical combinations)
+- [attr-7]
+  - A story is [attr-7] if both of the following are true:
+    - The story is [attr-5]
+    - Either of the following is true:
+      - The story is [attr-4]
+      - The story is not [attr-8]
+
+- [attr-10]
+  - A story is [attr-10] if both of the following are true:
+    - Exactly one of the following is true:
+      - The story is [attr-11]
+      - The story is [attr-12]
+    - Either of the following is true:
+      - The story is [attr-13]
+      - The story is not [attr-6]
+
+- [attr-1]
+  - A story is [attr-1] if either of the following is true:
+    - All of the following are true:
+      - The story is [attr-19]
+      - The story is [attr-16]
+      - The story is [attr-15]
+    - Both of the following are true:
+      - Exactly one of the following is true:
+        - The story is [attr-19]
+        - The story is [attr-15]
+      - The story is [attr-16]
+
+- [attr-3]
+  - A story is [attr-3] if both of the following are true:
+    - Exactly one of the following is true:
+      - The story is [attr-17]
+      - The story is [attr-18]
+    - Either of the following is true:
+      - The story is [attr-20]
+      - The story is not [attr-13]
+
+- [attr-2]
+  - A story is [attr-2] if both of the following are true:
+    - The story is [attr-7]
+    - Either of the following is true:
+      - Both of the following are true:
+        - The story is [attr-10]
+        - The story is not [attr-3]
+      - Both of the following are true:
+        - The story is [attr-1]
+        - The story is [attr-3]
+
+- [attr-14]
+  - A story is [attr-14] if all of the following are true:
+    - The story is [attr-2]
+    - The story is [attr-1] or the story is [attr-3]
+    - The story is [attr-10] equals [attr-11]
+
+III. Highest-level label (multi-branch logic)
+- [attr-9]
+  - A story is [attr-9] if either of the following is true:
+    - Both of the following are true:
+      - The story is [attr-14]
+      - The story is [attr-2] in [COMPLEX-PATTERN, SYNDIC-CONJUNCTION, FANTASY-CORE]
+    - Either of the following is true:
+      - The story is [attr-3] and the story is not [attr-1]
+      - The story is [attr-1] and exactly one of the following is true:
+        - The story is [attr-10]
+        - The story is [attr-7]
+
+IV. Quick annotation guidance (how to think structurally)
+- Start from atomic labels (Section I). Determine truth for each simple property.
+- Build composite labels (Section II) by following the exact logical constructions (both/either/all/exactly one/not).
+- For [attr-14] and [attr-9], evaluate all referenced composites; do not shortcut—verify each clause in order.
+- Preserve the exact logical relations when deciding a label: do not alter any "not", "exactly one", "either", "both", or "all" conditions.
+
+End of codebook (structured).

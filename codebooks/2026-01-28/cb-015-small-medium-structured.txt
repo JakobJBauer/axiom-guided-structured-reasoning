@@ -1,0 +1,73 @@
+Codebook — structured and actionable
+(Keep node IDs and logical structure exactly as shown. Use this as a checklist when annotating.)
+
+1) Simple (atomic) nodes — direct criteria
+- [SHORT-STORY]
+  - Definition: A story is [SHORT-STORY] if the story has fewer than 160 words.
+  - What to check: Count words; label true if word count < 160.
+
+- [THEME-MAGIC]
+  - Definition: A story is [THEME-MAGIC] if the story has the theme Magic.
+  - What to check: Identify whether the central theme involves Magic.
+
+- [USES-WH-QUESTIONS]
+  - Definition: A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+  - What to check: Look for wh-words (who, what, when, where, why, how) used as questions.
+
+- [HAS-CHECKHOVS-GUN]
+  - Definition: A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun.
+  - What to check: Does the story introduce a seemingly minor element that later becomes important?
+
+- [HIGH-READABILITY]
+  - Definition: A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+  - What to check: Compute readability; label true if score > 96.1.
+
+2) Composite nodes — composed using logical operators
+- [MYSTERIOUS-MAGIC]
+  - Summary: Combines theme and absence of a revealed device.
+  - Rule (logical form: AND / Not):
+    - A story is [MYSTERIOUS-MAGIC] if both of the following are true:
+      - The story is [THEME-MAGIC]
+      - The story is not [HAS-CHECKHOVS-GUN]
+    - Informal equivalent: [THEME-MAGIC] AND NOT [HAS-CHECKHOVS-GUN]
+  - Annotator checklist:
+    - Confirm the story’s theme is Magic.
+    - Confirm it does not contain Checkhov's gun.
+
+- [TIGHT-MAGIC-CRAFT]
+  - Summary: A short story that pairs a magical theme or a precisely balanced readability/question structure.
+  - Rule (nested logical structure):
+    - A story is [TIGHT-MAGIC-CRAFT] if both of the following are true:
+      - The story is [SHORT-STORY]
+      - Either of the following is true:
+        - The story is [MYSTERIOUS-MAGIC]
+        - Exactly one of the following is true:
+          - The story is not [HIGH-READABILITY]
+          - The story is [USES-WH-QUESTIONS]
+    - Logical interpretation:
+      - [TIGHT-MAGIC-CRAFT] = [SHORT-STORY] AND ( [MYSTERIOUS-MAGIC] OR (EXACTLY ONE of { NOT [HIGH-READABILITY], [USES-WH-QUESTIONS] } ) )
+  - Annotator checklist (step-by-step):
+    1. Verify the story is [SHORT-STORY] (word count < 160).
+    2. Then evaluate the second part:
+       - If [MYSTERIOUS-MAGIC] is true, mark [TIGHT-MAGIC-CRAFT] true.
+       - Otherwise, check the pair:
+         - Is NOT [HIGH-READABILITY] true? (i.e., readability ≤ 96.1)
+         - Is [USES-WH-QUESTIONS] true?
+         - If exactly one of those two is true, mark [TIGHT-MAGIC-CRAFT] true.
+         - If both are true or both are false, do not mark [TIGHT-MAGIC-CRAFT] true (unless [MYSTERIOUS-MAGIC] was true).
+  - Notes on “Exactly one”:
+    - Exactly one = exclusive OR: only one of the listed conditions must hold, not both.
+
+3) Quick reference — logical operator meanings (for consistency)
+- AND / “both of the following are true”: all listed conditions must hold.
+- NOT / “is not”: the listed condition must be false.
+- OR / “Either of the following is true”: at least one listed option must hold.
+- EXACTLY ONE / “Exactly one of the following is true”: precisely one option holds (exclusive OR).
+
+4) Practical annotation flow (recommended)
+- Step 1: Evaluate atomic nodes ([SHORT-STORY], [THEME-MAGIC], [USES-WH-QUESTIONS], [HAS-CHECKHOVS-GUN], [HIGH-READABILITY]).
+- Step 2: Derive [MYSTERIOUS-MAGIC] using its two conditions (use AND + NOT).
+- Step 3: Derive [TIGHT-MAGIC-CRAFT] using [SHORT-STORY] and the nested Either/Exactly-one structure.
+- Step 4: Double-check exclusivity when “Exactly one” appears.
+
+Keep this structure while annotating: evaluate simple nodes first, then build composite labels by applying the exact logical combinations shown above.

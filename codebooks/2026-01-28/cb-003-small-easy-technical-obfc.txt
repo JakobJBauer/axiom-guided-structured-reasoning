@@ -1,0 +1,53 @@
+Codebook — Technical Definitions and Annotation Specifications
+
+Overview
+This document defines a set of binary annotation predicates used to label narrative texts. Each predicate is represented by its identifier in bracketed form (e.g., [attr-2]). A predicate is considered true for a given story when the specified condition is satisfied. Composite predicates are defined by logical combinations of other predicates; these logical relationships are preserved verbatim.
+
+Node definitions
+
+[attr-2]
+- Predicate: [attr-2]
+- Definition: This predicate evaluates to true if, and only if, the first lexical token of the story is a preposition.
+- Operationalization: Inspect the initial token of the story; annotate true if that token is classified as a preposition according to standard syntactic categories (POS tag: preposition). Annotate false otherwise.
+
+[attr-7]
+- Predicate: [attr-7]
+- Definition: This predicate evaluates to true if the story contains explicit discourse markers (connectives or transitional expressions used to organize discourse).
+- Operationalization: Scan the story for tokens or phrases that function as discourse markers (e.g., transitional connectives, sequence markers, contrastive markers). If at least one discourse marker is present, annotate true; otherwise annotate false.
+
+[attr-3]
+- Predicate: [attr-3]
+- Definition: This predicate evaluates to true when the narrative content of the story exhibits the theme of deception (intentional misleading, trickery, fraud, or concealment as a central element).
+- Operationalization: Determine whether deception is a demonstrated theme within the narrative (central or prominent). If deception is present as a thematic element, annotate true; otherwise annotate false.
+
+[attr-5]
+- Predicate: [attr-5]
+- Definition: This predicate evaluates to true if the story’s subject matter concerns magical or fantastical lands (settings characterized by supernatural or otherwise nonmundane properties).
+- Operationalization: Assess the primary setting or topic of the story; annotate true if it plausibly concerns magical lands, false if not.
+
+[attr-4]
+- Predicate: [attr-4]
+- Definition: This predicate evaluates to true if the story addresses cultural traditions (rituals, customs, heritage practices, or communal observances).
+- Operationalization: Identify whether the narrative centers on cultural traditions. Annotate true when such content is present; otherwise annotate false.
+
+[attr-6]
+- Predicate: [attr-6]
+- Definition: This predicate evaluates to true if the story concerns the arts (visual arts, performing arts, literature, music, or other artistic practices).
+- Operationalization: Determine whether the story’s topic is related to artistic disciplines or practices. Annotate true if it is; otherwise annotate false.
+
+[attr-1]
+- Predicate: [attr-1]
+- Definition: This composite predicate evaluates to true when all of the following constituent predicates are true:
+  - The story is [attr-5]
+  - The story is [attr-3]
+  - The story is [attr-6]
+- Logical structure: [attr-1] = [attr-5] AND [attr-3] AND [attr-6]
+- Operationalization: Compute the truth value of each constituent predicate as defined above. Annotate [attr-1] as true only if every constituent predicate is true; otherwise annotate false.
+
+Annotation guidance (procedural)
+- Each predicate is binary (true / false).
+- Use the defined operationalizations to make determinations; when in doubt, prefer conservative judgments (i.e., annotate false unless the criterion is clearly satisfied).
+- For composite predicates, do not infer truth from partial satisfaction; all listed constituents must be true for a composite to be true.
+- Preserve the predicate identifiers exactly as shown when recording annotations.
+
+End of codebook.

@@ -1,0 +1,639 @@
+{
+  "nodes": [
+    {
+      "id": "theme-problem-solving",
+      "label": "Theme Problem Solving",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-mystical-creatures",
+      "label": "Topic Mystical Creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "short-story",
+      "label": "Short Story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-time-travel",
+      "label": "Topic Time Travel",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-discourse-markers",
+      "label": "Uses Discourse Markers",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-cultural-traditions",
+      "label": "Topic Cultural Traditions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-innovation",
+      "label": "Theme Innovation",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "Starts With Adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-helping-others",
+      "label": "Theme Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-juxtaposition",
+      "label": "Has Juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-playful",
+      "label": "Style Playful",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-red-herring",
+      "label": "Has a Red Herring",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-hardship",
+      "label": "Theme Hardship",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-humor",
+      "label": "Theme Humor",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-agency",
+      "label": "Theme Agency",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-flashback",
+      "label": "Has a Flashback",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-perfect-aspect",
+      "label": "Uses Perfect Aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-conditional-mood",
+      "label": "Uses Conditional Mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "Uses WH Questions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-kindness",
+      "label": "Theme Kindness",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-moral-lesson",
+      "label": "Has a Moral Lesson",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-humorous",
+      "label": "Style Humorous",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "low-readability",
+      "label": "Low Readability",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "many-paragraphs",
+      "label": "Many Paragraphs",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-cliffhanger",
+      "label": "Has a Cliffhanger",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-magical-lands",
+      "label": "Topic Magical Lands",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-giant-creatures",
+      "label": "Topic Giant Creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-growth",
+      "label": "Theme Growth",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "long-story",
+      "label": "Long Story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "fantasy-topics",
+      "label": "Fantasy Topics",
+      "formula_type": "In",
+      "formula_args": [
+        "topic-mystical-creatures",
+        "topic-magical-lands",
+        "topic-giant-creatures"
+      ]
+    },
+    {
+      "id": "magical-story",
+      "label": "Magical Story",
+      "formula_type": "Or",
+      "formula_args": [
+        "topic-magical-lands",
+        "topic-mystical-creatures"
+      ]
+    },
+    {
+      "id": "epic-tale",
+      "label": "Epic Tale",
+      "formula_type": "And",
+      "formula_args": [
+        "long-story",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "topic-giant-creatures",
+            "topic-magical-lands"
+          ]
+        },
+        "theme-growth"
+      ]
+    },
+    {
+      "id": "short-magical",
+      "label": "Short Magical",
+      "formula_type": "And",
+      "formula_args": [
+        "short-story",
+        "magical-story"
+      ]
+    },
+    {
+      "id": "time-travel-paradox",
+      "label": "Time Travel Paradox",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-time-travel",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "has-a-red-herring",
+            "has-a-flashback"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-structure",
+      "label": "Complex Structure",
+      "formula_type": "And",
+      "formula_args": [
+        "many-paragraphs",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "has-a-flashback",
+            "has-a-cliffhanger"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "narrative-voice",
+      "label": "Narrative Voice",
+      "formula_type": "Or",
+      "formula_args": [
+        "starts-with-adverb",
+        "uses-discourse-markers",
+        "uses-wh-questions"
+      ]
+    },
+    {
+      "id": "humorous-playful",
+      "label": "Humorous Playful",
+      "formula_type": "Xor",
+      "formula_args": [
+        "style-humorous",
+        "style-playful"
+      ]
+    },
+    {
+      "id": "moral-kindness",
+      "label": "Moral Kindness",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-kindness",
+        "has-a-moral-lesson"
+      ]
+    },
+    {
+      "id": "helpful-innovator",
+      "label": "Helpful Innovator",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-innovation",
+        "theme-helping-others",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "theme-agency",
+            "theme-problem-solving"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "growth-from-hardship",
+      "label": "Growth From Hardship",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-growth",
+        "theme-hardship"
+      ]
+    },
+    {
+      "id": "engaging-readability",
+      "label": "Engaging Readability",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "low-readability"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "short-story",
+            "long-story"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brief-choice",
+      "label": "Brief Choice",
+      "formula_type": "And",
+      "formula_args": [
+        "short-story",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "theme-humor",
+            "theme-hardship"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "question-driven",
+      "label": "Question Driven",
+      "formula_type": "And",
+      "formula_args": [
+        "uses-wh-questions",
+        "uses-discourse-markers"
+      ]
+    },
+    {
+      "id": "complex-logic-story",
+      "label": "Complex Logic Story",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "time-travel-paradox",
+            "magical-story"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "complex-structure",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "narrative-voice",
+                "engaging-readability"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "uses-conditional-mood",
+            "uses-perfect-aspect"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thematic-fusion",
+      "label": "Thematic Fusion",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "helpful-innovator",
+            "moral-kindness"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "growth-from-hardship",
+            "theme-problem-solving"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pragmatic-voice",
+      "label": "Pragmatic Voice",
+      "formula_type": "And",
+      "formula_args": [
+        "narrative-voice",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "style-playful"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "uses-perfect-aspect",
+            "uses-conditional-mood"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic-mystical-creatures",
+      "target": "fantasy-topics"
+    },
+    {
+      "source": "topic-magical-lands",
+      "target": "fantasy-topics"
+    },
+    {
+      "source": "topic-giant-creatures",
+      "target": "fantasy-topics"
+    },
+    {
+      "source": "topic-magical-lands",
+      "target": "magical-story"
+    },
+    {
+      "source": "topic-mystical-creatures",
+      "target": "magical-story"
+    },
+    {
+      "source": "long-story",
+      "target": "epic-tale"
+    },
+    {
+      "source": "topic-giant-creatures",
+      "target": "epic-tale"
+    },
+    {
+      "source": "topic-magical-lands",
+      "target": "epic-tale"
+    },
+    {
+      "source": "theme-growth",
+      "target": "epic-tale"
+    },
+    {
+      "source": "short-story",
+      "target": "short-magical"
+    },
+    {
+      "source": "magical-story",
+      "target": "short-magical"
+    },
+    {
+      "source": "topic-time-travel",
+      "target": "time-travel-paradox"
+    },
+    {
+      "source": "has-a-red-herring",
+      "target": "time-travel-paradox"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "time-travel-paradox"
+    },
+    {
+      "source": "many-paragraphs",
+      "target": "complex-structure"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "complex-structure"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "complex-structure"
+    },
+    {
+      "source": "starts-with-adverb",
+      "target": "narrative-voice"
+    },
+    {
+      "source": "uses-discourse-markers",
+      "target": "narrative-voice"
+    },
+    {
+      "source": "uses-wh-questions",
+      "target": "narrative-voice"
+    },
+    {
+      "source": "style-humorous",
+      "target": "humorous-playful"
+    },
+    {
+      "source": "style-playful",
+      "target": "humorous-playful"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "moral-kindness"
+    },
+    {
+      "source": "has-a-moral-lesson",
+      "target": "moral-kindness"
+    },
+    {
+      "source": "theme-innovation",
+      "target": "helpful-innovator"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "helpful-innovator"
+    },
+    {
+      "source": "theme-agency",
+      "target": "helpful-innovator"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "helpful-innovator"
+    },
+    {
+      "source": "theme-growth",
+      "target": "growth-from-hardship"
+    },
+    {
+      "source": "theme-hardship",
+      "target": "growth-from-hardship"
+    },
+    {
+      "source": "low-readability",
+      "target": "engaging-readability"
+    },
+    {
+      "source": "short-story",
+      "target": "engaging-readability"
+    },
+    {
+      "source": "long-story",
+      "target": "engaging-readability"
+    },
+    {
+      "source": "short-story",
+      "target": "brief-choice"
+    },
+    {
+      "source": "theme-humor",
+      "target": "brief-choice"
+    },
+    {
+      "source": "theme-hardship",
+      "target": "brief-choice"
+    },
+    {
+      "source": "uses-wh-questions",
+      "target": "question-driven"
+    },
+    {
+      "source": "uses-discourse-markers",
+      "target": "question-driven"
+    },
+    {
+      "source": "time-travel-paradox",
+      "target": "complex-logic-story"
+    },
+    {
+      "source": "magical-story",
+      "target": "complex-logic-story"
+    },
+    {
+      "source": "complex-structure",
+      "target": "complex-logic-story"
+    },
+    {
+      "source": "narrative-voice",
+      "target": "complex-logic-story"
+    },
+    {
+      "source": "engaging-readability",
+      "target": "complex-logic-story"
+    },
+    {
+      "source": "uses-conditional-mood",
+      "target": "complex-logic-story"
+    },
+    {
+      "source": "uses-perfect-aspect",
+      "target": "complex-logic-story"
+    },
+    {
+      "source": "helpful-innovator",
+      "target": "thematic-fusion"
+    },
+    {
+      "source": "moral-kindness",
+      "target": "thematic-fusion"
+    },
+    {
+      "source": "growth-from-hardship",
+      "target": "thematic-fusion"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "thematic-fusion"
+    },
+    {
+      "source": "narrative-voice",
+      "target": "pragmatic-voice"
+    },
+    {
+      "source": "style-playful",
+      "target": "pragmatic-voice"
+    },
+    {
+      "source": "uses-perfect-aspect",
+      "target": "pragmatic-voice"
+    },
+    {
+      "source": "uses-conditional-mood",
+      "target": "pragmatic-voice"
+    }
+  ]
+}

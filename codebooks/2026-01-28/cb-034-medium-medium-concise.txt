@@ -1,0 +1,50 @@
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if it has the theme Growth.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if it has the theme Helping Others.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if it starts with an adverb.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if it is modern.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if it is about seasonal changes.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if it uses perfect aspect.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if its readability score is below 86.4.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if it is classic.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if it is about mystical creatures.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if its readability score is above 96.1.
+
+[SEASONAL-GROWTH]
+A story is [SEASONAL-GROWTH] if all of the following are true:
+- The story is [TOPIC-SEASONAL-CHANGES]
+- The story is [THEME-GROWTH]
+- The story is not [TOPIC-MYSTICAL-CREATURES]
+
+[COMPOSED-STORY]
+A story is [COMPOSED-STORY] if either of the following is true:
+- both of the following are true:
+  - The story is [SEASONAL-GROWTH]
+  - The story is [THEME-HELPING-OTHERS]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [STYLE-MODERN]
+    - The story is not [LOW-READABILITY]
+  - both of the following are true:
+    - The story is [STYLE-CLASSIC]
+    - both of the following are true:
+      - The story is [USES-PERFECT-ASPECT]
+      - The story is [HIGH-READABILITY]

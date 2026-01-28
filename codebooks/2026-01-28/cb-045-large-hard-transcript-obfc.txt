@@ -1,0 +1,255 @@
+**Interviewer:** We’re going to walk through a story-annotation codebook. I’ll ask the kinds of questions annotators usually ask, and you’ll answer with the exact criteria. Ready?
+
+**Annotator:** Ready. I’ll keep the node IDs and logic exactly as defined.
+
+---
+
+## Basic single-condition nodes
+
+**Interviewer:** First one: what does it mean when a story is tagged as [attr-9]?
+
+**Annotator:** A story is [attr-9] **if the story has more than 6 paragraphs**.
+
+---
+
+**Interviewer:** What qualifies as [attr-4]?
+
+**Annotator:** A story is [attr-4] **if the story has a story within a story**.
+
+---
+
+**Interviewer:** How do we decide [attr-16]?
+
+**Annotator:** A story is [attr-16] **if the story starts with a noun**.
+
+---
+
+**Interviewer:** And [attr-29]—what are we looking for?
+
+**Annotator:** A story is [attr-29] **if the story uses superlative forms**.
+
+---
+
+**Interviewer:** What about [attr-5]?
+
+**Annotator:** A story is [attr-5] **if the story has Checkhov's gun**.
+
+---
+
+**Interviewer:** If a story feels “magical,” is there a specific tag?
+
+**Annotator:** Yes. A story is [attr-21] **if the story has the theme Magic**.
+
+---
+
+**Interviewer:** How do we tag conditional phrasing?
+
+**Annotator:** A story is [attr-28] **if the story uses conditional mood**.
+
+---
+
+**Interviewer:** And question-heavy stories—specifically wh-questions?
+
+**Annotator:** A story is [attr-30] **if the story uses wh-questions**.
+
+---
+
+**Interviewer:** How do we tag a “treasure hunt” kind of topic?
+
+**Annotator:** A story is [attr-22] **if the story is about hidden treasures**.
+
+---
+
+**Interviewer:** Innovation as a theme—what’s the rule?
+
+**Annotator:** A story is [attr-20] **if the story has the theme Innovation**.
+
+---
+
+**Interviewer:** Seasonal changes—what defines [attr-24]?
+
+**Annotator:** A story is [attr-24] **if the story is about seasonal changes**.
+
+---
+
+**Interviewer:** Stories centered on art?
+
+**Annotator:** A story is [attr-25] **if the story is about the arts**.
+
+---
+
+**Interviewer:** What counts as [attr-7]?
+
+**Annotator:** A story is [attr-7] **if the story has more than 375 words**.
+
+---
+
+**Interviewer:** If the theme is personal development?
+
+**Annotator:** A story is [attr-18] **if the story has the theme Growth**.
+
+---
+
+**Interviewer:** What about settings like enchanted kingdoms?
+
+**Annotator:** A story is [attr-23] **if the story is about magical lands**.
+
+---
+
+**Interviewer:** Time travel?
+
+**Annotator:** A story is [attr-26] **if the story is about time travel**.
+
+---
+
+**Interviewer:** Hardship as a theme?
+
+**Annotator:** A story is [attr-19] **if the story has the theme Hardship**.
+
+---
+
+**Interviewer:** How do we tag stories that begin with an adverb?
+
+**Annotator:** A story is [attr-14] **if the story starts with a adverb**.
+
+---
+
+**Interviewer:** And moral lessons?
+
+**Annotator:** A story is [attr-3] **if the story has a moral lesson**.
+
+---
+
+**Interviewer:** Readability—how is [attr-8] defined?
+
+**Annotator:** A story is [attr-8] **if the story has readability score below 86.4**.
+
+---
+
+**Interviewer:** And a story that begins with an adjective?
+
+**Annotator:** A story is [attr-13] **if the story starts with a adjective**.
+
+---
+
+**Interviewer:** Now a tricky one: what is [attr-15]?
+
+**Annotator:** A story is [attr-15] **if it is not [attr-16]**.
+
+---
+
+## Multi-condition / logical-combination nodes
+
+### [attr-17]
+
+**Interviewer:** Let’s move to combined tags. What makes a story a [attr-17]?
+
+**Annotator:** A story is [attr-17] **if both of the following are true**:  
+- The story is [attr-7]  
+- The story is [attr-9]
+
+---
+
+### [attr-2]
+
+**Interviewer:** Okay, [attr-2] sounds nuanced. What’s the exact logic?
+
+**Annotator:** A story is [attr-2] **if either of the following is true**:  
+- **Exactly one of the following is true**: the story is [attr-14] **or** the story is [attr-13]  
+- **Both of the following are true**:  
+  - The story is [attr-15]  
+  - The story is [attr-30]
+
+---
+
+### [attr-11]
+
+**Interviewer:** How do we decide [attr-11]?
+
+**Annotator:** A story is [attr-11] **if both of the following are true**:  
+- **Either of the following is true**:  
+  - The story is [attr-21]  
+  - The story is [attr-23]  
+- **Either of the following is true**:  
+  - The story is [attr-20]  
+  - The story is [attr-26]
+
+---
+
+### [attr-6]
+
+**Interviewer:** And [attr-6]—what’s the structure there?
+
+**Annotator:** A story is [attr-6] **if both of the following are true**:  
+- The story is [attr-28]  
+- **Either of the following is true**:  
+  - The story is [attr-30]  
+  - The story is [attr-8]
+
+---
+
+### [attr-1]
+
+**Interviewer:** Now for [attr-1]. What exactly has to happen?
+
+**Annotator:** A story is [attr-1] **if both of the following are true**:  
+- The story is [attr-4]  
+- **Either of the following is true**:  
+  - The story is [attr-5]  
+  - **Both of the following are true**:  
+    - The story is [attr-29]  
+    - It is not [attr-28]
+
+---
+
+### [attr-27]
+
+**Interviewer:** What about [attr-27]? How do we apply it correctly?
+
+**Annotator:** A story is [attr-27] **if both of the following are true**:  
+- The story is [attr-22]  
+- **Either of the following is true**:  
+  - **Both of the following are true**:  
+    - The story is [attr-18]  
+    - The story is [attr-3]  
+  - **Both of the following are true**:  
+    - The story is [attr-19]  
+    - It is not [attr-3]
+
+---
+
+### [attr-12]
+
+**Interviewer:** How do we tag [attr-12]?
+
+**Annotator:** A story is [attr-12] **if both of the following are true**:  
+- The story is [attr-24]  
+- **Either of the following is true**:  
+  - The story is [attr-25]  
+  - **Both of the following are true**:  
+    - The story is [attr-29]  
+    - It is not [attr-8]
+
+---
+
+### [attr-10]
+
+**Interviewer:** Finally, the big one: [attr-10]. Walk me through it carefully.
+
+**Annotator:** A story is [attr-10] **if both of the following are true**:  
+
+- **Either of the following is true**:  
+  - The story is [attr-1]  
+  - **Both of the following are true**:  
+    - The story is [attr-17]  
+    - The story is [attr-6]  
+
+- **Exactly one of the following is true**:  
+  - The story is [attr-27]  
+  - The story is [attr-12]
+
+---
+
+**Interviewer:** Perfect—same logic, but much easier to “hear” as you annotate.
+
+**Annotator:** Exactly. The IDs, negations, AND/OR structure, and “exactly one” constraints are all preserved as written.

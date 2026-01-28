@@ -1,0 +1,46 @@
+[STYLE-HUMOROUS]
+- Short label: STYLE-HUMOROUS
+- Definition / rule:
+  - A story is STYLE-HUMOROUS if:
+    - The story is humorous
+
+[STYLE-LIGHTHEARTED]
+- Short label: STYLE-LIGHTHEARTED
+- Definition / rule:
+  - A story is STYLE-LIGHTHEARTED if:
+    - The story is lighthearted
+
+[THEME-KINDNESS]
+- Short label: THEME-KINDNESS
+- Definition / rule:
+  - A story is THEME-KINDNESS if:
+    - The story has the theme Kindness
+
+[STYLE-EXCLUSIVE]
+- Short label: STYLE-EXCLUSIVE
+- Logical operator: exactly one of the following is true (exclusive OR)
+- Definition / rule:
+  - A story is STYLE-EXCLUSIVE if exactly one of the following is true:
+    - The story is [STYLE-HUMOROUS]
+    - The story is [STYLE-LIGHTHEARTED]
+
+[GENRE-GENTLE]
+- Short label: GENRE-GENTLE
+- Logical operator: both of the following are true (AND) with a nested OR
+- Definition / rule:
+  - A story is GENRE-GENTLE if both of the following are true:
+    1. The story is [THEME-KINDNESS]
+    2. Either of the following are true:
+       - The story is [STYLE-EXCLUSIVE]
+       - Both of the following are true:
+         - The story is [STYLE-LIGHTHEARTED]
+         - The story is not [STYLE-HUMOROUS]
+
+Notes for annotators (kept concise and structural)
+- Preserve the exact node IDs in brackets when marking labels.
+- Follow the logical operators as written:
+  - "exactly one of the following is true" = exclusive OR between listed items.
+  - "both of the following are true" = logical AND of listed items.
+  - "Either of the following are true" = logical OR of listed items.
+  - "not" negates the condition that follows.
+- When evaluating [GENRE-GENTLE], apply the outer AND first, then evaluate the nested OR/AND structure exactly as presented.

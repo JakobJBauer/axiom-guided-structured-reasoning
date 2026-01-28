@@ -1,0 +1,57 @@
+Picture a quiet library at midnight, where each shelf holds a different way of recognizing what a story truly is. Each placard is stamped with a bracketed name — a little law that decides whether a tale belongs to a certain club. Below, I’ll walk you past those placards. I’ll keep every sign exactly as it hangs, including the bracketed names and the precise rules that govern them; I’ll only tell you the tale behind each rule so the logic reads like a story.
+
+[attr-2]
+A story is [attr-2] if The story has a moral lesson.
+Think of this as the sign by the hearth: any tale that hands you a clear lesson, a rule for life folded into its ending, earns this mark.
+
+[attr-4]
+A story is [attr-4] if The story has more than 6 paragraphs.
+This is the measure of length and breath — when a tale stretches past six paragraphs, it steps into the “many” territory and gets this label.
+
+[attr-7]
+A story is [attr-7] if The story starts with a adverb.
+This badge is for openings that begin with the adverbial whisper — a “quickly,” “suddenly,” or “silently” that launches the narrative.
+
+[attr-3]
+A story is [attr-3] if The story has circular narrative structure.
+Some stories orbit back to their beginning like a roundabout, and when they do, this is the structure they wear.
+
+[attr-9]
+A story is [attr-9] if The story uses perfect aspect.
+When a tale makes use of the grammatical lens that looks back — the perfect aspect — it ticks this box.
+
+[attr-10]
+A story is [attr-10] if The story uses superlative forms.
+If a narrator calls something “the greatest,” “the smallest,” or otherwise crowns it with a superlative, the story carries this mark.
+
+[attr-8]
+A story is [attr-8] if both of the following are true:
+- The story is [attr-7]
+- Exactly one of the following is true:
+  - The story is [attr-9]
+  - The story is [attr-10]
+This is a little salon for stylistic flair: a story must open with an adverb, and then choose exactly one kind of flourish — either the reflective perfect aspect or the boastful superlative — but not both. Think of it as an exclusive taste test where only one of the two accents pairs with the adverbial start.
+
+[attr-6]
+A story is [attr-6] if either of the following is true:
+- The story is [attr-3]
+- Both of the following are true:
+  - The story is not [attr-3]
+  - The story is [attr-4]
+This placard describes what makes something a narrative type: it’s either circular in structure, or, if it isn’t circular, it must be long enough — more than six paragraphs — to qualify. In other words, circular stories claim the label outright; non-circular ones must prove their length.
+
+[attr-5]
+A story is [attr-5] if exactly one of the following is true:
+- The story is [attr-2]
+- The story is [attr-4]
+This is the exclusive fork: a tale is either moral or long, but it can’t be both. It must belong to exactly one of these camps.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-8]
+  - The story is not [attr-5]
+- The story is [attr-6]
+Here is the summit for complexity. To reach it, a story must first be a recognized narrative type (so it’s circular or sufficiently long). Then, on top of that, it must either bear the distinctive stylistic choice (that adverb-plus-exactly-one-flourish pattern) or deliberately not belong to the mutual-exclusion of moral or long (that is, it fails to be exactly one of moral or long). Only when both conditions are satisfied does the tale earn the [attr-1] designation.
+
+Walk away with this map in your head: each bracketed name is a gate; the bullets beneath are the locks. Read the locks exactly as they’re written, and you can sort any story into its rightful place on the shelves.

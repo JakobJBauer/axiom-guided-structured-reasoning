@@ -1,0 +1,84 @@
+{
+  "nodes": [
+    {
+      "id": "attr-6",
+      "label": "Uses superlatives (biggest, best, most legendary)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Subject is lost civilizations (sunken cities, vanished empires)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "First word of the story is a noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Comedic tone or theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "Lighthearted intro (noun-start, humorous theme, no superlatives)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-3",
+        "attr-4",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Mythic satire (lost-civilizations + exactly one of lighthearted intro or superlatives)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-1",
+            "attr-6"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-2"
+    }
+  ]
+}

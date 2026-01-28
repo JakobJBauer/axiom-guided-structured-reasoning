@@ -1,0 +1,137 @@
+Overview — how to use this codebook
+- Purpose: Define clear, testable labels (nodes) for annotating stories.
+- Reading rules:
+  - Each node ID appears exactly in [attr-3] form; treat it as an atomic predicate (e.g., “The story is [attr-25]”).
+  - Composite nodes state logical conditions using:
+    - “Both of the following are true:” (logical AND)
+    - “Either of the following is true:” (logical OR)
+    - “Exactly one of the following is true:” (exclusive OR)
+    - “All of the following are true:” (universal AND)
+    - Negation is expressed with “not”
+  - Do not change node IDs or the logical relationships when applying these rules.
+
+Atomic (single-condition) nodes
+- [attr-7]
+  - Definition: A story is [attr-7] if the story has juxtaposition.
+- [attr-18]
+  - Definition: A story is [attr-18] if the story is philosophical.
+- [attr-20]
+  - Definition: A story is [attr-20] if the story has the theme Hardship.
+- [attr-22]
+  - Definition: A story is [attr-22] if the story has the theme Humor.
+- [attr-25]
+  - Definition: A story is [attr-25] if the story is about the arts.
+- [attr-6]
+  - Definition: A story is [attr-6] if the story has circular narrative structure.
+- [attr-19]
+  - Definition: A story is [attr-19] if the story has the theme Deception.
+- [attr-21]
+  - Definition: A story is [attr-21] if the story has the theme Helping Others.
+- [attr-5]
+  - Definition: A story is [attr-5] if the story has a moral lesson.
+- [attr-15]
+  - Definition: A story is [attr-15] if the story is humorous.
+- [attr-17]
+  - Definition: A story is [attr-17] if the story is minimalist.
+- [attr-24]
+  - Definition: A story is [attr-24] if the story is about giant creatures.
+- [attr-16]
+  - Definition: A story is [attr-16] if the story is lighthearted.
+- [attr-26]
+  - Definition: A story is [attr-26] if the story is about time travel.
+- [attr-14]
+  - Definition: A story is [attr-14] if the story starts with a preposition.
+- [attr-13]
+  - Definition: A story is [attr-13] if the story has fewer than 160 words.
+- [attr-27]
+  - Definition: A story is [attr-27] if the story uses superlative forms.
+- [attr-23]
+  - Definition: A story is [attr-23] if the story has the theme Kindness.
+- [attr-8]
+  - Definition: A story is [attr-8] if the story has readability score above 96.1.
+
+Composite nodes — structured definitions and decision trees
+- [attr-10]
+  - A story is [attr-10] if both of the following are true:
+    1. The story is [attr-7]
+    2. Either of the following is true:
+       - The story is [attr-14]
+       - The story is [attr-13]
+  - Practical note: This captures juxtaposition that coincides with a prepositional start or with being very short.
+
+- [attr-11]
+  - A story is [attr-11] if both of the following are true:
+    1. The story is [attr-10]
+    2. Exactly one of the following is true:
+       - The story is [attr-27]
+       - The story is [attr-17]
+  - Practical note: This refines [attr-10] by requiring a mutually exclusive choice between superlatives and a minimalist style.
+
+- [attr-2]
+  - A story is [attr-2] if both of the following are true:
+    1. The story is [attr-25]
+    2. Either of the following is true:
+       - The story is [attr-18]
+       - The story is [attr-11]
+  - Practical note: This labels arts-focused stories that are either philosophical in tone or employ the juxtaposed-superlative pattern.
+
+- [attr-9]
+  - A story is [attr-9] if both of the following are true:
+    1. Either of the following is true:
+       - The story is [attr-22]
+       - The story is [attr-15]
+    2. All of the following are true:
+       - The story is not [attr-17]
+       - Exactly one of the following is true:
+         - The story is [attr-16]
+         - The story is [attr-27]
+  - Practical note: This captures humor-oriented pieces that are not minimalist and that choose exactly one of two expressive modes (lighthearted vs. superlative).
+
+- [attr-1]
+  - A story is [attr-1] if either of the following is true:
+    - Option A (conjunctive):
+      - Both of the following are true:
+        1. The story is [attr-5]
+        2. Either of the following is true:
+           - The story is [attr-21]
+           - The story is [attr-23]
+    - Option B (exclusive choice):
+      - Exactly one of the following is true:
+        - The story is [attr-19]
+        - The story is [attr-20]
+  - Practical note: This node groups morally framed kindness/helping narratives with an alternate mutually exclusive pairing of deception vs. hardship.
+
+- [attr-4]
+  - A story is [attr-4] if both of the following are true:
+    1. Either of the following is true:
+       - Sub-option 1 (conjunction):
+         - Both of the following are true:
+           - The story is [attr-2]
+           - The story is [attr-1]
+       - Sub-option 2 (exclusive choice):
+         - Exactly one of the following is true:
+           - The story is [attr-9]
+           - The story is [attr-24]
+    2. Either of the following is true:
+       - Pair A:
+         - Both of the following are true:
+           - The story is [attr-26]
+           - The story is [attr-6]
+       - Pair B:
+         - Both of the following are true:
+           - The story is [attr-13]
+           - The story is [attr-8]
+  - Practical note: This final composite identifies stories that combine an artful/affective core (either the artful-philosophical + altruistic axis or an exclusive choice between humorous hybrid vs. giant-creature focus) with one of two structural/readability outcomes (time-travel circularity, or short + highly readable).
+
+Quick annotation checklist (practical workflow)
+- Step 1: Mark all atomic nodes that apply (use the exact [attr-12] form).
+- Step 2: Evaluate composite nodes in bottom-up order:
+  - Resolve [attr-10] → then [attr-11] → [attr-2]
+  - Resolve humor cluster: [attr-9]
+  - Resolve altruism cluster: [attr-1]
+  - Finally evaluate [attr-4] using the results above plus structural nodes.
+- Step 3: Apply negation exactly as written (e.g., “The story is not [attr-17]” must be satisfied where specified).
+- Step 4: When “Exactly one of the following is true” appears, ensure exclusivity — confirm that only one of the listed sub-nodes holds.
+
+Reminder
+- Do not change node IDs, logical connectors, or add/remove nodes. This document reorganizes the presentation for clarity only; the underlying logic is unchanged.

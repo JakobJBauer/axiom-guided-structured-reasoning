@@ -1,0 +1,70 @@
+{
+  "nodes": [
+    {
+      "id": "topic-seasonal-changes",
+      "label": "Topic - Seasonal Changes",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "Uses WH Questions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-noun",
+      "label": "Starts With Noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-cultural-traditions",
+      "label": "Topic - Cultural Traditions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-time-travel",
+      "label": "Topic - Time Travel",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "seasonal-question-story",
+      "label": "Seasonal Question Story",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-seasonal-changes",
+        "uses-wh-questions"
+      ]
+    },
+    {
+      "id": "tradition-or-time-story",
+      "label": "Tradition or Time Story",
+      "formula_type": "Or",
+      "formula_args": [
+        "topic-cultural-traditions",
+        "topic-time-travel"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic-seasonal-changes",
+      "target": "seasonal-question-story"
+    },
+    {
+      "source": "uses-wh-questions",
+      "target": "seasonal-question-story"
+    },
+    {
+      "source": "topic-cultural-traditions",
+      "target": "tradition-or-time-story"
+    },
+    {
+      "source": "topic-time-travel",
+      "target": "tradition-or-time-story"
+    }
+  ]
+}

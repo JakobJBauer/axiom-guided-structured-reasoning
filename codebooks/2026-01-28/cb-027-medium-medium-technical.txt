@@ -1,0 +1,44 @@
+[STARTS-WITH-ADVERB]
+Definition: Predicate [STARTS-WITH-ADVERB] is true for a story S if and only if the initial lexical token of S is an adverb.
+
+[STYLE-CLASSIC]
+Definition: Predicate [STYLE-CLASSIC] is true for a story S if and only if S conforms to a classic style classification.
+
+[LONG-STORY]
+Definition: Predicate [LONG-STORY] is true for a story S if and only if the word count of S > 375.
+
+[TOPIC-GIANT-CREATURES]
+Definition: Predicate [TOPIC-GIANT-CREATURES] is true for a story S if and only if the primary subject matter of S concerns giant creatures.
+
+[THEME-DECEPTION]
+Definition: Predicate [THEME-DECEPTION] is true for a story S if and only if S centrally incorporates the theme of deception.
+
+[TOPIC-HIDDEN-TREASURES]
+Definition: Predicate [TOPIC-HIDDEN-TREASURES] is true for a story S if and only if S is about hidden treasures.
+
+[AMPHIBIOUS-EPIC]
+Definition: Predicate [AMPHIBIOUS-EPIC] is true for a story S if and only if all of the following conditions hold:
+- The predicate [LONG-STORY] is true for S.
+- The predicate [TOPIC-GIANT-CREATURES] is true for S.
+- The predicate [STYLE-CLASSIC] is false for S (i.e., S is not [STYLE-CLASSIC]).
+
+[MISLEADING-QUEST]
+Definition: Predicate [MISLEADING-QUEST] is true for a story S if and only if all of the following conditions hold:
+- The predicate [THEME-DECEPTION] is true for S.
+- The predicate [TOPIC-HIDDEN-TREASURES] is true for S.
+- Either of the following is true for S:
+  - The predicate [STARTS-WITH-ADVERB] is true.
+  - The predicate [STYLE-CLASSIC] is false (Not [STYLE-CLASSIC]).
+
+[HYBRID-TALE]
+Definition: Predicate [HYBRID-TALE] is true for a story S if and only if exactly one of the following predicates is true for S:
+- [AMPHIBIOUS-EPIC]
+- [MISLEADING-QUEST]
+
+[COMPLEX-ARTIFACT]
+Definition: Predicate [COMPLEX-ARTIFACT] is true for a story S if and only if all of the following conditions hold:
+- The predicate [HYBRID-TALE] is true for S.
+- Either of the following is true for S:
+  - The predicate [STYLE-CLASSIC] is true.
+  - The predicate [LONG-STORY] is true.
+- The predicate [STARTS-WITH-ADVERB] is false for S (Not [STARTS-WITH-ADVERB]).

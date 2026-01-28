@@ -1,0 +1,522 @@
+{
+  "nodes": [
+    {
+      "id": "theme-growth",
+      "label": "THEME-GROWTH",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-helping-others",
+      "label": "THEME-HELPING-OTHERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "THEME-DECEPTION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-kindness",
+      "label": "THEME-KINDNESS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-hardship",
+      "label": "THEME-HARDSHIP",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-problem-solving",
+      "label": "THEME-PROBLEM-SOLVING",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-innovation",
+      "label": "THEME-INNOVATION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-magic",
+      "label": "THEME-MAGIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-humor",
+      "label": "THEME-HUMOR",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-humorous",
+      "label": "STYLE-HUMOROUS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "STYLE-MODERN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-lighthearted",
+      "label": "STYLE-LIGHTHEARTED",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "STYLE-PHILOSOPHICAL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-minimalist",
+      "label": "STYLE-MINIMALIST",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-surreal",
+      "label": "STYLE-SURREAL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-lost-civilizations",
+      "label": "TOPIC-LOST-CIVILIZATIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-time-travel",
+      "label": "TOPIC-TIME-TRAVEL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-seasonal-changes",
+      "label": "TOPIC-SEASONAL-CHANGES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-giant-creatures",
+      "label": "TOPIC-GIANT-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-cultural-traditions",
+      "label": "TOPIC-CULTURAL-TRADITIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-magical-lands",
+      "label": "TOPIC-MAGICAL-LANDS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-bygone-eras",
+      "label": "TOPIC-BYGONE-ERAS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-mystical-creatures",
+      "label": "TOPIC-MYSTICAL-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-preposition",
+      "label": "STARTS-WITH-PREPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "STARTS-WITH-ADVERB",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-noun",
+      "label": "STARTS-WITH-NOUN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-perfect-aspect",
+      "label": "USES-PERFECT-ASPECT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "USES-WH-QUESTIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-discourse-markers",
+      "label": "USES-DISCOURSE-MARKERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-superlative-forms",
+      "label": "USES-SUPERLATIVE-FORMS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-checkhovs-gun",
+      "label": "HAS-CHECKHOVS-GUN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-moral-lesson",
+      "label": "HAS-A-MORAL-LESSON",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-cliffhanger",
+      "label": "HAS-A-CLIFFHANGER",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-circular-narrative-struct",
+      "label": "HAS-CIRCULAR-NARRATIVE-STRUCT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-flashback",
+      "label": "HAS-A-FLASHBACK",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-story-within-a-story",
+      "label": "HAS-A-STORY-WITHIN-A-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "high-readability",
+      "label": "HIGH-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "low-readability",
+      "label": "LOW-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "long-story",
+      "label": "LONG-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "humorous-lighthearted",
+      "label": "HUMOROUS-LIGHTHEARTED",
+      "formula_type": "And",
+      "formula_args": [
+        "style-humorous",
+        "style-lighthearted"
+      ]
+    },
+    {
+      "id": "magic-lands-creatures",
+      "label": "MAGIC-LANDS-CREATURES",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-magical-lands",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "topic-mystical-creatures",
+            "topic-giant-creatures"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "innovation-problem-solve",
+      "label": "INNOVATION-PROBLEM-SOLVE",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-innovation",
+        "theme-problem-solving"
+      ]
+    },
+    {
+      "id": "pacing-long-cliff",
+      "label": "PACING-LONG-CLIFF",
+      "formula_type": "And",
+      "formula_args": [
+        "long-story",
+        "has-a-cliffhanger"
+      ]
+    },
+    {
+      "id": "modern-philosophical-surreal",
+      "label": "MODERN-PHILOSOPHICAL-SURREAL",
+      "formula_type": "Or",
+      "formula_args": [
+        "style-modern",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "style-philosophical",
+            "style-surreal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-lost-bygone",
+      "label": "TIME-LOST-BYGONE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "topic-time-travel",
+            "topic-lost-civilizations"
+          ]
+        },
+        "topic-bygone-eras"
+      ]
+    },
+    {
+      "id": "narrative-complexity",
+      "label": "NARRATIVE-COMPLEXITY",
+      "formula_type": "And",
+      "formula_args": [
+        "has-a-story-within-a-story",
+        "has-a-flashback",
+        "has-circular-narrative-struct"
+      ]
+    },
+    {
+      "id": "morality-filter",
+      "label": "MORALITY-FILTER",
+      "formula_type": "And",
+      "formula_args": [
+        "has-a-moral-lesson",
+        "theme-kindness",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "theme-deception"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thematic-help-kind",
+      "label": "THEMATIC-HELP-KIND",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-helping-others",
+        "theme-kindness"
+      ]
+    },
+    {
+      "id": "readability-extremes",
+      "label": "READABILITY-EXTREMES",
+      "formula_type": "Xor",
+      "formula_args": [
+        "high-readability",
+        "low-readability"
+      ]
+    },
+    {
+      "id": "complex-archetype",
+      "label": "COMPLEX-ARCHETYPE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "humorous-lighthearted",
+            "morality-filter",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "narrative-complexity",
+                "pacing-long-cliff"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "magic-lands-creatures",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "style-minimalist"
+                  ]
+                }
+              ]
+            },
+            "time-lost-bygone"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "style-humorous",
+      "target": "humorous-lighthearted"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "humorous-lighthearted"
+    },
+    {
+      "source": "topic-magical-lands",
+      "target": "magic-lands-creatures"
+    },
+    {
+      "source": "topic-mystical-creatures",
+      "target": "magic-lands-creatures"
+    },
+    {
+      "source": "topic-giant-creatures",
+      "target": "magic-lands-creatures"
+    },
+    {
+      "source": "theme-innovation",
+      "target": "innovation-problem-solve"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "innovation-problem-solve"
+    },
+    {
+      "source": "long-story",
+      "target": "pacing-long-cliff"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "pacing-long-cliff"
+    },
+    {
+      "source": "style-modern",
+      "target": "modern-philosophical-surreal"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "modern-philosophical-surreal"
+    },
+    {
+      "source": "style-surreal",
+      "target": "modern-philosophical-surreal"
+    },
+    {
+      "source": "topic-time-travel",
+      "target": "time-lost-bygone"
+    },
+    {
+      "source": "topic-lost-civilizations",
+      "target": "time-lost-bygone"
+    },
+    {
+      "source": "topic-bygone-eras",
+      "target": "time-lost-bygone"
+    },
+    {
+      "source": "has-a-story-within-a-story",
+      "target": "narrative-complexity"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "narrative-complexity"
+    },
+    {
+      "source": "has-circular-narrative-struct",
+      "target": "narrative-complexity"
+    },
+    {
+      "source": "has-a-moral-lesson",
+      "target": "morality-filter"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "morality-filter"
+    },
+    {
+      "source": "theme-deception",
+      "target": "morality-filter"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "thematic-help-kind"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "thematic-help-kind"
+    },
+    {
+      "source": "high-readability",
+      "target": "readability-extremes"
+    },
+    {
+      "source": "low-readability",
+      "target": "readability-extremes"
+    },
+    {
+      "source": "humorous-lighthearted",
+      "target": "complex-archetype"
+    },
+    {
+      "source": "morality-filter",
+      "target": "complex-archetype"
+    },
+    {
+      "source": "narrative-complexity",
+      "target": "complex-archetype"
+    },
+    {
+      "source": "pacing-long-cliff",
+      "target": "complex-archetype"
+    },
+    {
+      "source": "magic-lands-creatures",
+      "target": "complex-archetype"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "complex-archetype"
+    },
+    {
+      "source": "time-lost-bygone",
+      "target": "complex-archetype"
+    }
+  ]
+}

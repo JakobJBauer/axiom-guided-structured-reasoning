@@ -1,0 +1,138 @@
+Document: Formal codebook — technical specification
+
+Purpose: This codebook defines a set of boolean predicates (node IDs in [BRACKET] format) that classify stories. Each predicate is specified precisely in terms of logical conditions over other predicates or attributes of the story. Do not alter node identifiers, logical operators, or the structure of the formulae.
+
+Atomic predicate definitions
+- [THEME-PROBLEM-SOLVING]
+  - Definition: The predicate [THEME-PROBLEM-SOLVING] is true for a story if and only if the story contains the theme "Problem-Solving."
+
+- [TOPIC-HIDDEN-TREASURES]
+  - Definition: [TOPIC-HIDDEN-TREASURES] is true if the story's subject matter concerns hidden treasures.
+
+- [STYLE-LIGHTHEARTED]
+  - Definition: [STYLE-LIGHTHEARTED] is true if the narrative tone of the story is lighthearted.
+
+- [HAS-A-RED-HERRING]
+  - Definition: [HAS-A-RED-HERRING] is true if the story contains a red herring (a misleading clue or element).
+
+- [STARTS-WITH-PREPOSITION]
+  - Definition: [STARTS-WITH-PREPOSITION] is true if the first lexical token of the story is a preposition.
+
+- [TOPIC-GIANT-CREATURES]
+  - Definition: [TOPIC-GIANT-CREATURES] is true if the story focuses on giant creatures.
+
+- [USES-SUPERLATIVE-FORMS]
+  - Definition: [USES-SUPERLATIVE-FORMS] is true if the text uses grammatical superlative forms (e.g., "biggest", "most").
+
+- [THEME-MAGIC]
+  - Definition: [THEME-MAGIC] is true if the story contains the theme "Magic."
+
+- [STYLE-MODERN]
+  - Definition: [STYLE-MODERN] is true if the story's style is modern.
+
+- [STARTS-WITH-ADVERB]
+  - Definition: [STARTS-WITH-ADVERB] is true if the first lexical token of the story is an adverb.
+
+- [TOPIC-MAGICAL-LANDS]
+  - Definition: [TOPIC-MAGICAL-LANDS] is true if the story is about magical lands.
+
+- [LOW-READABILITY]
+  - Definition: [LOW-READABILITY] is true if the story's readability score is below 86.4.
+
+- [STYLE-HUMOROUS]
+  - Definition: [STYLE-HUMOROUS] is true if the story is humorous in style.
+
+- [THEME-INNOVATION]
+  - Definition: [THEME-INNOVATION] is true if the story carries the theme "Innovation."
+
+- [STYLE-CLASSIC]
+  - Definition: [STYLE-CLASSIC] is true if the story conforms to a classic style.
+
+- [TOPIC-MYSTICAL-CREATURES]
+  - Definition: [TOPIC-MYSTICAL-CREATURES] is true if the story is about mystical creatures.
+
+- [THEME-KINDNESS]
+  - Definition: [THEME-KINDNESS] is true if the story contains the theme "Kindness."
+
+- [THEME-HUMOR]
+  - Definition: [THEME-HUMOR] is true if the story contains the theme "Humor."
+
+- [SHORT-STORY]
+  - Definition: [SHORT-STORY] is true if the story length is fewer than 160 words.
+
+- [TOPIC-THE-ARTS]
+  - Definition: [TOPIC-THE-ARTS] is true if the story is about the arts.
+
+Composite predicate specifications
+- [PLOT-STRUCTURE]
+  - Logical specification: [PLOT-STRUCTURE] is true if either of the following disjuncts holds:
+    1. Conjunction (both):
+       - Disjunction (either):
+         - The story is [TOPIC-HIDDEN-TREASURES]
+         - The story is [TOPIC-MAGICAL-LANDS]
+       - Disjunction (either):
+         - The story is [TOPIC-MYSTICAL-CREATURES]
+         - The story is [TOPIC-GIANT-CREATURES] xor The story is [TOPIC-THE-ARTS]
+    2. Conjunction (both):
+       - The story is [HAS-A-RED-HERRING]
+       - The story is [SHORT-STORY]
+  - Interpretation: [PLOT-STRUCTURE] captures two canonical plot configurations — (A) a compound topical combination involving hidden/magical settings plus creature/art topics with an exclusive-or constraint, or (B) a short-form piece that contains a red herring.
+
+- [TONE-AND-STYLE]
+  - Logical specification: [TONE-AND-STYLE] is true if both of the following hold:
+    1. Disjunction (either):
+       - The story is [STYLE-LIGHTHEARTED]
+       - The story is [STYLE-HUMOROUS] xor The story is [STYLE-CLASSIC]
+    2. Conjunction (both):
+       - The story is in [STYLE-MODERN, STYLE-CLASSIC]
+       - not both of the following are true:
+         - The story is [LOW-READABILITY]
+         - The story starts with a preposition: The story is [STARTS-WITH-PREPOSITION]
+  - Interpretation: This predicate constrains tone via a choice among styles (including an exclusive-or) and enforces that the story belongs simultaneously to the STYLE-MODERN and STYLE-CLASSIC set while prohibiting the conjunction of low readability and a leading preposition.
+
+- [THEMATIC-CORE]
+  - Logical specification: [THEMATIC-CORE] is true if any of the following alternative conditions is satisfied:
+    1. Conjunction (both):
+       - The story is [THEME-PROBLEM-SOLVING]
+       - Disjunction (either):
+         - The story is [THEME-INNOVATION]
+         - The story is [THEME-MAGIC]
+    2. Exactly one of:
+       - The story is [THEME-KINDNESS]
+       - The story is [THEME-HUMOR]
+    3. Conjunction (both):
+       - The story is in [THEME-MAGIC, THEME-INNOVATION, THEME-PROBLEM-SOLVING]
+       - The story is [THEME-KINDNESS] equals false
+  - Interpretation: [THEMATIC-CORE] defines core thematic profiles via three alternative patterns: problem-solving combined with innovation or magic; exclusive selection between kindness and humor; or presence in a specified thematic set while explicitly excluding THEME-KINDNESS.
+
+- [COMBINED-PLOT-TONE]
+  - Logical specification: [COMBINED-PLOT-TONE] is true if both of these conditions hold:
+    1. The story is [PLOT-STRUCTURE]
+    2. Disjunction (either):
+       - The story is [TONE-AND-STYLE]
+       - Conjunction (both):
+         - The story is [USES-SUPERLATIVE-FORMS]
+         - The story is not [HAS-A-RED-HERRING]
+  - Interpretation: This predicate links plot configuration with either an approved tone-and-style or the presence of superlatives in the absence of red herrings.
+
+- [COMPLEX-STORY-TYPE]
+  - Logical specification: [COMPLEX-STORY-TYPE] is true if either of the following is true:
+    1. Conjunction (both):
+       - The story is [THEMATIC-CORE]
+       - Exactly one of:
+         - The story is [COMBINED-PLOT-TONE]
+         - Conjunction (both):
+           - The story is [SHORT-STORY]
+           - Disjunction (either):
+             - The story is [TOPIC-THE-ARTS]
+             - The story is [TOPIC-HIDDEN-TREASURES]
+    2. not both of the following are true:
+       - The story is [STYLE-HUMOROUS]
+       - The story is [THEME-HUMOR]
+  - Interpretation: [COMPLEX-STORY-TYPE] encodes two alternative acceptance conditions: (A) membership in THEMATIC-CORE combined with an exclusive choice between COMBINED-PLOT-TONE or a short-story topical pair; or (B) the negation of the simultaneous presence of STYLE-HUMOROUS and THEME-HUMOR.
+
+Notes on semantics and usage
+- All predicates are boolean indicators; evaluate them as true or false for a given story.
+- Logical operators appearing in the specifications must be interpreted literally: "both" = logical AND, "either" = logical OR, "exactly one" = exclusive OR among the listed alternatives (unless an explicit xor is provided), "xor" = exclusive OR, "not both" = negation of conjunction, and "equals false" denotes explicit falsity of the specified predicate.
+- The phrase "The story is in [A, B]" indicates simultaneous membership in both predicates listed.
+- Do not modify node IDs, operator tokens (xor, not both, exactly one), or the nesting of the clauses; this document only clarifies and formalizes the original codebook content for technical use.

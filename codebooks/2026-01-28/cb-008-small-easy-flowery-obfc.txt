@@ -1,0 +1,26 @@
+In a sunlit alcove of an old library where vellum whispers and ink blooms like midnight flowers, this little codebook lives — a map of meaning fashioned for those who annotate tales and seek to understand their woven purposes. Imagine a gentle scholar, quill poised, cataloging the heartbeats of stories; each entry below is a lantern hung on a branch, guiding readers to recognize particular qualities in a tale. The wording that follows is embellished with the fire of imagination and the scent of distant festivals, but the logic beneath remains steadfast and true, unaltered as bedrock.
+
+[attr-4]
+A story is [attr-4] if the story is about cultural traditions.
+- In softer terms: this label blooms on any narrative that dwells in the customs, rites, ceremonies, folkways, or long-held practices of a people — those patterned acts and shared meanings passed from one generation to the next. When a tale turns its attention to heritage and communal ritual, it wears this name.
+
+[attr-1]
+A story is [attr-1] if the story has a moral lesson.
+- Here we mark the stories that lift a lantern toward guidance: fables, parables, and many a didactic yarn that conclude by teaching a principle, imparting a value, or offering a general truth meant to shape conduct or thought. If the tale intends to instruct or illuminate right from wrong, prudence from folly, the tag applies.
+
+[attr-2]
+A story is [attr-2] if the story starts with an adverb.
+- This is a structural note of form: if the very first word that breathes life into the narrative is an adverb — that graceful modifier that often tints action with manner or degree (quickly, solemnly, joyfully, etc.) — then the story is crowned with this descriptor.
+
+[attr-3]
+A story is [attr-3] if the story has the theme Magic.
+- This designation is reserved for tales that carry magic as a central motif: enchantments, sorcery, numinous forces, or the presence of the supernatural that meaningfully shapes characters, plot, or setting. If the magical is a guiding current in the story’s waters, this theme is present.
+
+[attr-5]
+A story is [attr-5] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-3]
+- The story is [attr-1]
+- In elegant clarity: this composite label alights only when a narrative simultaneously celebrates communal customs, weaves magic into its tapestry, and conveys an instructive moral. When all three petals open together, the blossom is called [attr-5].
+
+May this ornate guide feel like a small grimoire — richly worded yet faithful to the architecture of meaning — helping annotators and reasoners alike to identify and celebrate the qualities of each story without mistaking poetry for logic.

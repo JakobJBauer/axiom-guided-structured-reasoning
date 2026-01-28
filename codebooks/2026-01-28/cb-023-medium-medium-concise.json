@@ -1,0 +1,143 @@
+{
+  "nodes": [
+    {
+      "id": "style-philosophical",
+      "label": "Style Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-the-arts",
+      "label": "Topic The Arts",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-flashback",
+      "label": "Has A Flashback",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-story-within-a-story",
+      "label": "Has A Story Within A Story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "Theme Deception",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-red-herring",
+      "label": "Has A Red Herring",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-moral-lesson",
+      "label": "Has A Moral Lesson",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "reflective-arts",
+      "label": "Reflective Arts",
+      "formula_type": "And",
+      "formula_args": [
+        "style-philosophical",
+        "topic-the-arts"
+      ]
+    },
+    {
+      "id": "meta-structure",
+      "label": "Meta Structure",
+      "formula_type": "Or",
+      "formula_args": [
+        "has-a-flashback",
+        "has-a-story-within-a-story"
+      ]
+    },
+    {
+      "id": "misdirection",
+      "label": "Misdirection",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-deception",
+        "has-a-red-herring"
+      ]
+    },
+    {
+      "id": "didactic-misdirect",
+      "label": "Didactic Misdirect",
+      "formula_type": "And",
+      "formula_args": [
+        "misdirection",
+        "has-a-moral-lesson",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "reflective-arts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-parable",
+      "label": "Complex Parable",
+      "formula_type": "And",
+      "formula_args": [
+        "didactic-misdirect",
+        "meta-structure"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "style-philosophical",
+      "target": "reflective-arts"
+    },
+    {
+      "source": "topic-the-arts",
+      "target": "reflective-arts"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "meta-structure"
+    },
+    {
+      "source": "has-a-story-within-a-story",
+      "target": "meta-structure"
+    },
+    {
+      "source": "theme-deception",
+      "target": "misdirection"
+    },
+    {
+      "source": "has-a-red-herring",
+      "target": "misdirection"
+    },
+    {
+      "source": "misdirection",
+      "target": "didactic-misdirect"
+    },
+    {
+      "source": "has-a-moral-lesson",
+      "target": "didactic-misdirect"
+    },
+    {
+      "source": "reflective-arts",
+      "target": "didactic-misdirect"
+    },
+    {
+      "source": "didactic-misdirect",
+      "target": "complex-parable"
+    },
+    {
+      "source": "meta-structure",
+      "target": "complex-parable"
+    }
+  ]
+}

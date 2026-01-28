@@ -1,0 +1,65 @@
+Overview
+- Purpose: Provide a clear, structured reference for each annotation label (node).  
+- Format: Each entry states the condition(s) under which a story is considered to have that label. Composite labels explicitly list the logical operations (And / Or / Not / Exactly one) that combine simpler labels.  
+- Note: All node IDs are preserved exactly as written (in [attr-2] format). Logical relationships and formulas are unchanged.
+
+Atomic labels (base conditions)
+- [attr-10]
+  - Definition: A story is [attr-10] if the story has the theme Agency.
+
+- [attr-9]
+  - Definition: A story is [attr-9] if the story starts with a noun.
+
+- [attr-13]
+  - Definition: A story is [attr-13] if the story is about giant creatures.
+
+- [attr-11]
+  - Definition: A story is [attr-11] if the story has the theme Kindness.
+
+- [attr-4]
+  - Definition: A story is [attr-4] if the story has readability score above 96.1.
+
+- [attr-14]
+  - Definition: A story is [attr-14] if the story is about mystical creatures.
+
+Composite labels (built from atomic labels)
+- [attr-6]
+  - Rule: A story is [attr-6] if both of the following are true:
+    - The story is [attr-13]
+    - The story is [attr-14]
+
+- [attr-8]
+  - Rule: A story is [attr-8] if exactly one of the following is true:
+    - The story is [attr-12]
+    - The story is [attr-10]
+
+- [attr-1]
+  - Rule: A story is [attr-1] if both of the following are true:
+    - The story is [attr-11]
+    - The story is [attr-8]
+
+- [attr-7]
+  - Rule: A story is [attr-7] if both of the following are true:
+    - [attr-9] equals true
+    - The story is not [attr-10]
+
+Featured label (complex nested condition)
+- [attr-3]
+  - Rule: A story is [attr-3] if both of the following are true:
+    - The story is [attr-6]
+    - either of the following is true:
+      - Branch A — both conditions must hold:
+        - The story is [attr-1]
+        - [attr-4] equals true
+      - Branch B — both conditions must hold:
+        - The story is [attr-7]
+        - [attr-13] is in [TOPIC-GIANT-CREATURES, TOPIC-MYSTICAL-CREATURES]
+
+Usage guidance (how to read these rules)
+- “Both of the following are true” indicates a logical AND: every listed sub-condition must hold.
+- “Exactly one of the following is true” indicates exclusive OR: choose one and only one sub-condition must hold.
+- “Either of the following is true” indicates logical OR: at least one of the branches must hold; each branch may itself require multiple conditions (AND).
+- When a condition uses phrasing like “[attr-5] equals true” or “is not [attr-5],” apply the label’s truth as the boolean check.
+
+End note
+- This structured layout preserves the original logical relationships and node IDs. Use it as a checklist when annotating: evaluate atomic labels first, then apply composite rules in the order shown.

@@ -1,0 +1,85 @@
+Think of this as a friendly guide you can read like a conversation about how we label stories — but rest assured, every logical link, every [attr-2] ID, and every operator stays exactly as it was. I’ll walk you through each label in plain, flowing language while keeping the original structure intact.
+
+[attr-11]
+Call a piece a [attr-11] when it’s very brief: the whole story totals fewer than 160 words.
+
+[attr-18]
+If a story centers on Kindness as its theme, we mark it [attr-18].
+
+[attr-15]
+When the theme is Helping Others, the story gets the label [attr-15].
+
+[attr-19]
+If the story is about Problem-Solving, it’s tagged [attr-19].
+
+[attr-13]
+When a story takes on a reflective, philosophical tone, call it [attr-13].
+
+[attr-6]
+A story earns [attr-6] when its readability score is above 96.1.
+
+[attr-14]
+If the story feels bright and playful, it’s [attr-14].
+
+[attr-16]
+When Humor is the theme, the story is [attr-16].
+
+[attr-12]
+If the storytelling itself is humorous, mark it [attr-12].
+
+[attr-5]
+When a tale includes another tale inside it — a story within the story — we use [attr-5].
+
+[attr-20]
+If the subject matter is mystical creatures, label the story [attr-20].
+
+[attr-4]
+When the narrative deliberately plants a misleading clue — a red herring — tag it [attr-4].
+
+[attr-7]
+A story is [attr-7] if both of the following are true:
+- The story is [attr-18]
+- The story is [attr-15]
+(And both must hold simultaneously.)
+
+[attr-8]
+A story is [attr-8] if exactly one of the following is true (Xor):
+- The story is [attr-14]
+- The story is [attr-12]
+
+[attr-17]
+A story is [attr-17] if the story's dominant theme is In the following set:
+- [attr-18], [attr-15], [attr-19]
+(Use In to check membership among those theme nodes.)
+
+[attr-1]
+A story is [attr-1] if the following Equal relationship holds:
+- The presence of [attr-13] Equal the presence of [attr-12]
+(They are Equal when either both are present or both are absent.)
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- The story is [attr-20]
+- The story is [attr-5] And the story is [attr-13]
+(This nests an And inside an And to form an allegorical structure.)
+
+[attr-3]
+A story is [attr-3] if all of the following are true:
+- Either of the following is true (Or):
+  - The story is [attr-7]
+  - The story is [attr-19]
+- Exactly one of the following is true (Xor):
+  - The story is [attr-4]
+  - The story is [attr-5]
+- The story is Not [attr-11] Or the story is [attr-6]
+(Uses Not to exclude short stories unless they also meet HIGH-READABILITY; combines Or and Xor for nuanced arc structure.)
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- The story is [attr-3] And the story is [attr-1]
+- The story is [attr-17] And either of the following is true (Or):
+  - The story is [attr-8]
+  - The story is [attr-9]
+(This node nests multiple logical operators to form a deep, recommendable composition: And at the top level, Or inside a branch, and references In, Equal, Not, and Xor through its subordinate nodes.)
+
+That’s the whole set, rewritten to read more like a conversation while keeping every ID, every logical connection, and every operator exactly as in the original. Use these labels and relationships just as you would before — only now they might be a little easier to talk about.

@@ -1,0 +1,138 @@
+Document: Formal codebook — technical specification
+
+Purpose: This codebook defines a set of boolean predicates (node IDs in [attr-1] format) that classify stories. Each predicate is specified precisely in terms of logical conditions over other predicates or attributes of the story. Do not alter node identifiers, logical operators, or the structure of the formulae.
+
+Atomic predicate definitions
+- [attr-19]
+  - Definition: The predicate [attr-19] is true for a story if and only if the story contains the theme "Problem-Solving."
+
+- [attr-22]
+  - Definition: [attr-22] is true if the story's subject matter concerns hidden treasures.
+
+- [attr-12]
+  - Definition: [attr-12] is true if the narrative tone of the story is lighthearted.
+
+- [attr-4]
+  - Definition: [attr-4] is true if the story contains a red herring (a misleading clue or element).
+
+- [attr-9]
+  - Definition: [attr-9] is true if the first lexical token of the story is a preposition.
+
+- [attr-21]
+  - Definition: [attr-21] is true if the story focuses on giant creatures.
+
+- [attr-26]
+  - Definition: [attr-26] is true if the text uses grammatical superlative forms (e.g., "biggest", "most").
+
+- [attr-18]
+  - Definition: [attr-18] is true if the story contains the theme "Magic."
+
+- [attr-13]
+  - Definition: [attr-13] is true if the story's style is modern.
+
+- [attr-8]
+  - Definition: [attr-8] is true if the first lexical token of the story is an adverb.
+
+- [attr-23]
+  - Definition: [attr-23] is true if the story is about magical lands.
+
+- [attr-5]
+  - Definition: [attr-5] is true if the story's readability score is below 86.4.
+
+- [attr-11]
+  - Definition: [attr-11] is true if the story is humorous in style.
+
+- [attr-16]
+  - Definition: [attr-16] is true if the story carries the theme "Innovation."
+
+- [attr-10]
+  - Definition: [attr-10] is true if the story conforms to a classic style.
+
+- [attr-24]
+  - Definition: [attr-24] is true if the story is about mystical creatures.
+
+- [attr-17]
+  - Definition: [attr-17] is true if the story contains the theme "Kindness."
+
+- [attr-15]
+  - Definition: [attr-15] is true if the story contains the theme "Humor."
+
+- [attr-7]
+  - Definition: [attr-7] is true if the story length is fewer than 160 words.
+
+- [attr-25]
+  - Definition: [attr-25] is true if the story is about the arts.
+
+Composite predicate specifications
+- [attr-6]
+  - Logical specification: [attr-6] is true if either of the following disjuncts holds:
+    1. Conjunction (both):
+       - Disjunction (either):
+         - The story is [attr-22]
+         - The story is [attr-23]
+       - Disjunction (either):
+         - The story is [attr-24]
+         - The story is [attr-21] xor The story is [attr-25]
+    2. Conjunction (both):
+       - The story is [attr-4]
+       - The story is [attr-7]
+  - Interpretation: [attr-6] captures two canonical plot configurations — (A) a compound topical combination involving hidden/magical settings plus creature/art topics with an exclusive-or constraint, or (B) a short-form piece that contains a red herring.
+
+- [attr-20]
+  - Logical specification: [attr-20] is true if both of the following hold:
+    1. Disjunction (either):
+       - The story is [attr-12]
+       - The story is [attr-11] xor The story is [attr-10]
+    2. Conjunction (both):
+       - The story is in [STYLE-MODERN, STYLE-CLASSIC]
+       - not both of the following are true:
+         - The story is [attr-5]
+         - The story starts with a preposition: The story is [attr-9]
+  - Interpretation: This predicate constrains tone via a choice among styles (including an exclusive-or) and enforces that the story belongs simultaneously to the STYLE-MODERN and STYLE-CLASSIC set while prohibiting the conjunction of low readability and a leading preposition.
+
+- [attr-14]
+  - Logical specification: [attr-14] is true if any of the following alternative conditions is satisfied:
+    1. Conjunction (both):
+       - The story is [attr-19]
+       - Disjunction (either):
+         - The story is [attr-16]
+         - The story is [attr-18]
+    2. Exactly one of:
+       - The story is [attr-17]
+       - The story is [attr-15]
+    3. Conjunction (both):
+       - The story is in [THEME-MAGIC, THEME-INNOVATION, THEME-PROBLEM-SOLVING]
+       - The story is [attr-17] equals false
+  - Interpretation: [attr-14] defines core thematic profiles via three alternative patterns: problem-solving combined with innovation or magic; exclusive selection between kindness and humor; or presence in a specified thematic set while explicitly excluding THEME-KINDNESS.
+
+- [attr-2]
+  - Logical specification: [attr-2] is true if both of these conditions hold:
+    1. The story is [attr-6]
+    2. Disjunction (either):
+       - The story is [attr-20]
+       - Conjunction (both):
+         - The story is [attr-26]
+         - The story is not [attr-4]
+  - Interpretation: This predicate links plot configuration with either an approved tone-and-style or the presence of superlatives in the absence of red herrings.
+
+- [attr-3]
+  - Logical specification: [attr-3] is true if either of the following is true:
+    1. Conjunction (both):
+       - The story is [attr-14]
+       - Exactly one of:
+         - The story is [attr-2]
+         - Conjunction (both):
+           - The story is [attr-7]
+           - Disjunction (either):
+             - The story is [attr-25]
+             - The story is [attr-22]
+    2. not both of the following are true:
+       - The story is [attr-11]
+       - The story is [attr-15]
+  - Interpretation: [attr-3] encodes two alternative acceptance conditions: (A) membership in THEMATIC-CORE combined with an exclusive choice between COMBINED-PLOT-TONE or a short-story topical pair; or (B) the negation of the simultaneous presence of STYLE-HUMOROUS and THEME-HUMOR.
+
+Notes on semantics and usage
+- All predicates are boolean indicators; evaluate them as true or false for a given story.
+- Logical operators appearing in the specifications must be interpreted literally: "both" = logical AND, "either" = logical OR, "exactly one" = exclusive OR among the listed alternatives (unless an explicit xor is provided), "xor" = exclusive OR, "not both" = negation of conjunction, and "equals false" denotes explicit falsity of the specified predicate.
+- The phrase "The story is in [A, B]" indicates simultaneous membership in both predicates listed.
+- Do not modify node IDs, operator tokens (xor, not both, exactly one), or the nesting of the clauses; this document only clarifies and formalizes the original codebook content for technical use.

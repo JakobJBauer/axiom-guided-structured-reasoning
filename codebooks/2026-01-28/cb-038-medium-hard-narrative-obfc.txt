@@ -1,0 +1,80 @@
+Imagine this codebook as a small, precise atlas of stories — each entry a signpost that tells you how to classify a tale. Below, the formal rules stand exactly as they must, and beside each rule I’ll walk you through a quick, story-like explanation so the logic sings as well as it instructs.
+
+[attr-6]
+A story is [attr-6] if The story is lighthearted
+Narrative: Picture a tale that moves with a spring in its step, one that prefers laughter and levity over gloom. When a story wears that bright, buoyant mood, it earns the [attr-6] label.
+
+[attr-3]
+A story is [attr-3] if The story has Checkhov's gun
+Narrative: Think of the small detail introduced early that later becomes crucial — the shiny pistol on the mantel, the seemingly throwaway line that returns with weight. When a story includes that deliberately placed element, it qualifies as [attr-3].
+
+[attr-2]
+A story is [attr-2] if The story has a cliffhanger
+Narrative: Imagine the heartbeat-stopping pause at the end of a chapter, the unanswered question that leaves readers suspended. That unresolved snap becomes the mark [attr-2].
+
+[attr-9]
+A story is [attr-9] if The story has the theme Hardship
+Narrative: When a story centers on struggle — scarcity, loss, endurance — it carries the theme labeled [attr-9].
+
+[attr-10]
+A story is [attr-10] if The story has the theme Helping Others
+Narrative: If the plot highlights acts of aid, sacrifice, or community care, it belongs to the clan of [attr-10].
+
+[attr-8]
+A story is [attr-8] if The story has the theme Deception
+Narrative: Tales that pivot on lies, masks, betrayal, or hidden truths are marked with [attr-8].
+
+[attr-11]
+A story is [attr-11] if The story has the theme Problem-Solving
+Narrative: When a story’s engine is puzzles, plans, or clever fixes — characters confronting obstacles with ingenuity — it earns [attr-11].
+
+[attr-7]
+A story is [attr-7] if exactly one of the following is true:
+- The story is [attr-9]
+- The story is [attr-8]
+Narrative: Imagine a balance with two weights. [attr-7] is true when exactly one weight tips the scale: either hardship or deception, but not both. It’s the exclusive choice between those two thematic paths.
+
+[attr-12]
+A story is [attr-12] if both of the following are true:
+- The story is [attr-6]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-11]
+Narrative: This is the delightful dissonance where a story’s jaunty voice coexists with more serious structural tension. To be [attr-12], a tale must sound light and, at the same time, either carry the exclusive hardship-or-deception tension ([attr-7]) or center on problem-solving. Think of a cheerful storyteller whose plot insists on sharper stakes.
+
+[attr-5]
+A story is [attr-5] if both of the following are true:
+- The story is [attr-3]
+- Exactly one of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-2]
+Narrative: The engine of a [attr-5] tale is events and their consequences. It needs a planted element that pays off ([attr-3]) and then one — and only one — of two engines: either a problem-solving theme or a cliffhanger. This combination keeps the plot moving like clockwork.
+
+[attr-4]
+A story is [attr-4] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-10]
+  - The story is not [attr-8]
+- Both of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-10]
+Narrative: [attr-4] signals an ethical or redemptive journey. It appears either when helping others is central and deception is absent — a clear-hearted generosity — or when helping others is paired with problem-solving, where compassion and cleverness walk together toward a moral growth.
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-12]
+  - Both of the following are true:
+    - The story is [attr-5]
+    - The story is [attr-4]
+- All of the following are true:
+  - The story is not [attr-12]
+  - Either of the following is true:
+    - The story is [attr-5]
+    - The story is [attr-2]
+  - The story is not both of the following:
+    - The story is [attr-9]
+    - The story is [attr-8]
+Narrative: Here is the crown jewel: [attr-1]. A tale earns it in one of two ways. First, if it juggles tonal dissonance ([attr-12]) while also being plot-driven and carrying a moral arc — a knot of voice, action, and ethics. Or second, if it avoids that tonal dissonance but still drives the plot or hooks you with a cliffhanger, while not simultaneously dwelling in both hardship and deception. In short, complexity comes from layered tone plus plot plus moral depth, or from tightly balanced plot mechanics that steer clear of overlapping harsh themes.
+
+Endnote: Each line above keeps the exact logical rules in place; the little stories beside them are just the storytelling that helps you feel the rule as much as read it. Use the formal statements to annotate and the narrative notes to guide your intuition.

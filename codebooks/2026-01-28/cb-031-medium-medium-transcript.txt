@@ -1,0 +1,53 @@
+Interviewer: Let's go through this codebook node by node. First, what does [LOW-READABILITY] mean?
+
+Expert: A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+Interviewer: Clear. And the stylistic labels — how are they defined?
+
+Expert: Here they are, simple and direct:
+- A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+- A story is [STYLE-MODERN] if the story is modern.
+- A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+Interviewer: What about topical tags?
+
+Expert: Same straightforward pattern:
+- A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras.
+- A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+Interviewer: And theme labels?
+
+Expert: Yes:
+- A story is [THEME-MAGIC] if the story has the theme Magic.
+- A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+- A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+Interviewer: Now we get to the composite nodes. How is [TIME-MAGIC-NEXUS] defined?
+
+Expert: A story is [TIME-MAGIC-NEXUS] if exactly one of the following is true:
+- The story is [TOPIC-TIME-TRAVEL]
+- The story is [THEME-MAGIC]
+
+Interviewer: So "exactly one" means one or the other, but not both. Got it. Next composite node?
+
+Expert: [DIDACTIC-BYGONE]. The definition is:
+A story is [DIDACTIC-BYGONE] if all of the following are true:
+- The story is [TOPIC-BYGONE-ERAS]
+- The story is [HAS-A-MORAL-LESSON]
+- The story is not [USES-SUPERLATIVE-FORMS]
+
+Interviewer: That last line uses negation. So the story must not use superlatives. Understood. And the most complex node?
+
+Expert: [COMPLEX-ARC]. It requires multiple conditions:
+A story is [COMPLEX-ARC] if all of the following are true:
+- The story is [TIME-MAGIC-NEXUS]
+- The story is [THEME-PROBLEM-SOLVING]
+- The story is not [LOW-READABILITY]
+
+Interviewer: Let me summarize to make sure I'm following: [COMPLEX-ARC] needs the exclusive time-or-magic condition from [TIME-MAGIC-NEXUS], plus problem-solving as a theme, and it must not be low-readability. Is that right?
+
+Expert: Exactly. You’ve captured the logical structure: preserve each node identity, apply the specified logical operators (exactly one / all / not), and combine them as written.
+
+Interviewer: Thanks — that keeps the relationships clear for anyone doing annotation or reasoning.
+
+Expert: My pleasure. Each node is defined precisely so annotators can use these rules without ambiguity.

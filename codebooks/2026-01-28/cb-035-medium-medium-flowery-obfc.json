@@ -1,0 +1,135 @@
+{
+  "nodes": [
+    {
+      "id": "attr-5",
+      "label": "Minimalist",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Readability > 96.1",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Uses superlatives",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Theme: Growth",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "About time travel",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "About hidden treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "Spare and legible (attr-1)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        "attr-4"
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "Superlative but not minimalist (attr-3)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-10",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-6",
+      "label": "Growth with journey (attr-6)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-7",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-9",
+            "attr-8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Concise with emphasis or growth-journey (attr-2)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-1",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-3",
+            "attr-6"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-2"
+    }
+  ]
+}

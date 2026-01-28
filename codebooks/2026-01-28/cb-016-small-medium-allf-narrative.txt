@@ -1,0 +1,27 @@
+[THEME-HELPING-OTHERS]
+There are stories that wear their compassion like a banner — tales where the characters turn toward others and the narrative is swept along by generosity. 
+A story is [THEME-HELPING-OTHERS] if
+The story has the theme Helping Others.
+
+[HELPFUL-ACTION]
+Imagine the protagonist stepping into the scene with hands ready to fix what’s broken or a heart open to give. That central deed — the pivot of the plot — tells you whether the tale is built around active help.
+A story is [HELPFUL-ACTION] if either of the following is true:
+- The protagonist's central action is in the set {aid, rescue}
+- The protagonist's central action is in the set {donate, teach}
+
+[MOTIVE-SELFISH]
+Sometimes a helpful gesture is a mask for something else — the glint of self-interest behind a smile.
+A story is [MOTIVE-SELFISH] if
+- The protagonist's motive is equal to "personal gain"
+
+[SELFLESS-ARC]
+Now picture an arc that shines because the lead chooses to help for the sake of others, not for a reward. That arc needs two things to hold true together: the act of help, and the absence of selfish motive.
+A story is [SELFLESS-ARC] if both of the following are true:
+- The story is [HELPFUL-ACTION]
+- The story is not [MOTIVE-SELFISH]
+
+[ALTRUISTIC-HELP]
+Finally, there are moments that feel altruistic — but that feeling can come from one of two sources, and only one may be present at a time for the label to fit. The story is marked as [ALTRUISTIC-HELP] when exactly one of these guiding lights shines.
+A story is [ALTRUISTIC-HELP] if exactly one of the following is true:
+- The story is [THEME-HELPING-OTHERS]
+- The story is [SELFLESS-ARC]

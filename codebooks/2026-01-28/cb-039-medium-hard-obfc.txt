@@ -1,0 +1,54 @@
+[attr-10]
+A story is [attr-10] if The story has the theme Deception.
+
+[attr-11]
+A story is [attr-11] if The story has the theme Helping Others.
+
+[attr-8]
+A story is [attr-8] if The story is philosophical.
+
+[attr-2]
+A story is [attr-2] if The story has Checkhov's gun.
+
+[attr-6]
+A story is [attr-6] if The story starts with a noun.
+
+[attr-12]
+A story is [attr-12] if The story is about hidden treasures.
+
+[attr-9]
+A story is [attr-9] if The story has the theme Agency.
+
+[attr-5]
+A story is [attr-5] if The story starts with a adjective.
+
+[attr-3]
+A story is [attr-3] if The story has juxtaposition.
+
+[attr-4]
+A story is [attr-4] if either of the following is true:
+- The story is [attr-6]
+- The story is [attr-5] xor [attr-6]
+
+[attr-7]
+A story is [attr-7] if both of the following are true:
+- The story is [attr-4]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-10]
+    - The story is [attr-12]
+  - Either of the following is true:
+    - The story is [attr-2] xor [attr-9]
+    - The story is [attr-10] and not [attr-9]
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-7]
+- Not both of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-8]
+- Either of the following is true:
+  - The story is [attr-3]
+  - Both of the following are true:
+    - The story is [attr-6] equals true
+    - The story is [attr-5] equals false

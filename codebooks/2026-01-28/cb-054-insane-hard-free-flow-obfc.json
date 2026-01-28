@@ -1,0 +1,719 @@
+{
+  "nodes": [
+    {
+      "id": "attr-44",
+      "label": "attr-44",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-14",
+      "label": "attr-14",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-33",
+      "label": "attr-33",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-16",
+      "label": "attr-16",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-20",
+      "label": "attr-20",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-30",
+      "label": "attr-30",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-22",
+      "label": "attr-22",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-46",
+      "label": "attr-46",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-42",
+      "label": "attr-42",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-35",
+      "label": "attr-35",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-25",
+      "label": "attr-25",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "attr-10",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-48",
+      "label": "attr-48",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-50",
+      "label": "attr-50",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-41",
+      "label": "attr-41",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "attr-9",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-28",
+      "label": "attr-28",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-34",
+      "label": "attr-34",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-45",
+      "label": "attr-45",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-27",
+      "label": "attr-27",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-21",
+      "label": "attr-21",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-43",
+      "label": "attr-43",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-36",
+      "label": "attr-36",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-38",
+      "label": "attr-38",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-29",
+      "label": "attr-29",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-47",
+      "label": "attr-47",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-49",
+      "label": "attr-49",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-37",
+      "label": "attr-37",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-40",
+      "label": "attr-40",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "attr-11",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "attr-8",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "attr-12",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-26",
+      "label": "attr-26",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-19",
+      "label": "attr-19",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-20",
+        "attr-21",
+        "attr-22"
+      ]
+    },
+    {
+      "id": "attr-24",
+      "label": "attr-24",
+      "formula_type": "In",
+      "formula_args": [
+        "STYLE-SURREAL",
+        "STYLE-PLAYFUL",
+        "STYLE-LIGHTHEARTED"
+      ]
+    },
+    {
+      "id": "attr-39",
+      "label": "attr-39",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-43",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-42",
+            "attr-40"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-15",
+      "label": "attr-15",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-44",
+        "attr-38"
+      ]
+    },
+    {
+      "id": "attr-5",
+      "label": "attr-5",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-41",
+        "attr-44"
+      ]
+    },
+    {
+      "id": "attr-17",
+      "label": "attr-17",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-10",
+            "attr-9"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-10",
+            "attr-8"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-10",
+            "attr-11"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-9",
+            "attr-8"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-9",
+            "attr-11"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-8",
+            "attr-11"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-23",
+      "label": "attr-23",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-16",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-48",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-47",
+                "attr-49"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-4",
+      "label": "attr-4",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-38",
+            "attr-34"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-33",
+            "attr-35",
+            "attr-36",
+            "attr-37"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-13",
+      "label": "attr-13",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-37",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-26",
+            "attr-29"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-18",
+      "label": "attr-18",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-27",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-25",
+                "attr-28"
+              ]
+            },
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-30"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "attr-1",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-34",
+        "attr-36"
+      ]
+    },
+    {
+      "id": "attr-31",
+      "label": "attr-31",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-10",
+        "attr-8"
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "attr-3",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-17",
+        "attr-23"
+      ]
+    },
+    {
+      "id": "attr-7",
+      "label": "attr-7",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-39",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-41",
+            "attr-45"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-6",
+      "label": "attr-6",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-15",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-42",
+                "attr-43"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-35",
+                "attr-34"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-32",
+      "label": "attr-32",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-24",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-31",
+            "attr-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "attr-2",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-3",
+            "attr-4"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-6",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-7",
+                "attr-5"
+              ]
+            }
+          ]
+        },
+        "attr-19"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-20",
+      "target": "attr-19"
+    },
+    {
+      "source": "attr-21",
+      "target": "attr-19"
+    },
+    {
+      "source": "attr-22",
+      "target": "attr-19"
+    },
+    {
+      "source": "attr-43",
+      "target": "attr-39"
+    },
+    {
+      "source": "attr-42",
+      "target": "attr-39"
+    },
+    {
+      "source": "attr-40",
+      "target": "attr-39"
+    },
+    {
+      "source": "attr-44",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-38",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-41",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-44",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-17"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-17"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-17"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-17"
+    },
+    {
+      "source": "attr-16",
+      "target": "attr-23"
+    },
+    {
+      "source": "attr-48",
+      "target": "attr-23"
+    },
+    {
+      "source": "attr-47",
+      "target": "attr-23"
+    },
+    {
+      "source": "attr-49",
+      "target": "attr-23"
+    },
+    {
+      "source": "attr-38",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-34",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-33",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-35",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-36",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-37",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-37",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-26",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-29",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-27",
+      "target": "attr-18"
+    },
+    {
+      "source": "attr-25",
+      "target": "attr-18"
+    },
+    {
+      "source": "attr-28",
+      "target": "attr-18"
+    },
+    {
+      "source": "attr-30",
+      "target": "attr-18"
+    },
+    {
+      "source": "attr-34",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-36",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-31"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-31"
+    },
+    {
+      "source": "attr-17",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-39",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-41",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-45",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-15",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-42",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-43",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-35",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-34",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-32"
+    },
+    {
+      "source": "attr-31",
+      "target": "attr-32"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-32"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-2"
+    }
+  ]
+}

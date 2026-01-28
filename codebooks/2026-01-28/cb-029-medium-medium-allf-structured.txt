@@ -1,0 +1,75 @@
+Overview
+- Purpose: Provide a clear, structured reference for annotators. Each entry defines when a story satisfies a given label (node). Atomic labels describe single observable features. Composite labels combine atomic labels using explicit logical operations (And, Or, Not, Exactly one, equality of truth values).
+- Notation: Node identifiers are shown in [BRACKET] form and must remain exactly as written. Logical relationships (both/either/not/exactly one/truth equality) are preserved verbatim.
+
+Atomic (single-feature) nodes
+- [STYLE-PHILOSOPHICAL]
+  - Definition: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+- [HAS-A-STORY-WITHIN-A-STORY]
+  - Definition: A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+- [USES-CONDITIONAL-MOOD]
+  - Definition: A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+- [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - Definition: A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+- [TOPIC-CULTURAL-TRADITIONS]
+  - Definition: A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+- [SHORT-STORY]
+  - Definition: A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+- [TOPIC-SEASONAL-CHANGES]
+  - Definition: A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+
+- [LOW-READABILITY]
+  - Definition: A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+Composite nodes (logical combinations)
+- [INNER-CONDITIONAL]
+  - Summary: Conjunction (AND) of two atomic features.
+  - A story is [INNER-CONDITIONAL] if both of the following are true:
+    - The story is [HAS-A-STORY-WITHIN-A-STORY]
+    - The story is [USES-CONDITIONAL-MOOD]
+
+- [PHILOS-CIRCULAR-XOR]
+  - Summary: Exclusive condition plus a parity constraint between two other labels.
+  - A story is [PHILOS-CIRCULAR-XOR] if both of the following are true:
+    - Exactly one of the following is true:
+      - The story is [STYLE-PHILOSOPHICAL]
+      - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+    - The truth value of the following are equal:
+      - [SHORT-STORY]
+      - [LOW-READABILITY]
+
+- [THEMATIC-IN]
+  - Summary: Membership in a small topic set.
+  - A story is [THEMATIC-IN] if the story's topic is in the set:
+    - [TOPIC-CULTURAL-TRADITIONS]
+    - [TOPIC-SEASONAL-CHANGES]
+
+- [COMPLEX-NARRATIVE]
+  - Summary: Conjunction of an either/or condition and two additional constraints.
+  - A story is [COMPLEX-NARRATIVE] if all of the following are true:
+    - Either of the following is true:
+      - The story is [INNER-CONDITIONAL]
+      - The story is [PHILOS-CIRCULAR-XOR]
+    - Both of the following are true:
+      - The story is [THEMATIC-IN]
+      - The story is not [SHORT-STORY]
+
+Quick annotator guidance (structured thinking)
+- Check atomic labels first (e.g., style, structure, topic, length, readability).
+- Use atomic results to evaluate composite nodes in the order presented:
+  1. Evaluate [INNER-CONDITIONAL] (AND of two atomics).
+  2. Evaluate [PHILOS-CIRCULAR-XOR]:
+     - Determine whether exactly one of [STYLE-PHILOSOPHICAL] and [HAS-CIRCULAR-NARRATIVE-STRUCT] holds.
+     - Confirm whether [SHORT-STORY] and [LOW-READABILITY] share the same truth value (both true or both false).
+     - Both conditions must hold for [PHILOS-CIRCULAR-XOR] to be true.
+  3. Evaluate [THEMATIC-IN] by checking whether topic matches either topical node.
+  4. Evaluate [COMPLEX-NARRATIVE]:
+     - Ensure at least one of [INNER-CONDITIONAL] or [PHILOS-CIRCULAR-XOR] is true.
+     - Also ensure [THEMATIC-IN] is true and [SHORT-STORY] is false (i.e., story is not [SHORT-STORY]).
+- Remember: Do not alter node IDs, logical operators, or the specified relationships. Use the definitions above as precise criteria for labeling.

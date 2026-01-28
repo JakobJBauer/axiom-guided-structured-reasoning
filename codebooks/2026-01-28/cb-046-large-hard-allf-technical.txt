@@ -1,0 +1,121 @@
+[STYLE-LIGHTHEARTED]
+Definition: Assign the label [STYLE-LIGHTHEARTED] to a story when the story exhibits a lighthearted tone.
+
+[STYLE-PHILOSOPHICAL]
+Definition: Assign the label [STYLE-PHILOSOPHICAL] to a story when the story presents philosophical themes or reasoning.
+
+[TOPIC-MAGICAL-LANDS]
+Definition: Assign the label [TOPIC-MAGICAL-LANDS] to a story when its subject matter concerns magical lands.
+
+[USES-WH-QUESTIONS]
+Definition: Assign the label [USES-WH-QUESTIONS] to a story when the narrative explicitly employs wh-questions (who, what, where, when, why, how).
+
+[SHORT-STORY]
+Definition: Assign the label [SHORT-STORY] to a story when the story’s length is fewer than 160 words.
+
+[THEME-KINDNESS]
+Definition: Assign the label [THEME-KINDNESS] to a story when the central theme is kindness.
+
+[MANY-PARAGRAPHS]
+Definition: Assign the label [MANY-PARAGRAPHS] to a story when the story contains more than 6 paragraphs.
+
+[USES-CONDITIONAL-MOOD]
+Definition: Assign the label [USES-CONDITIONAL-MOOD] to a story when the narrative employs conditional mood constructions.
+
+[THEME-PROBLEM-SOLVING]
+Definition: Assign the label [THEME-PROBLEM-SOLVING] to a story when problem-solving is a thematic element.
+
+[THEME-GROWTH]
+Definition: Assign the label [THEME-GROWTH] to a story when growth (personal, skill, or situational development) is a theme.
+
+[STARTS-WITH-PREPOSITION]
+Definition: Assign the label [STARTS-WITH-PREPOSITION] to a story when the first token/word of the story is a preposition.
+
+[TOPIC-GIANT-CREATURES]
+Definition: Assign the label [TOPIC-GIANT-CREATURES] to a story when the subject matter includes giant creatures.
+
+[STYLE-MODERN]
+Definition: Assign the label [STYLE-MODERN] to a story when the stylistic register is modern.
+
+[STYLE-CLASSIC]
+Definition: Assign the label [STYLE-CLASSIC] to a story when the stylistic register is classic.
+
+[THEME-MAGIC]
+Definition: Assign the label [THEME-MAGIC] to a story when magic is a theme.
+
+[TOPIC-LOST-CIVILIZATIONS]
+Definition: Assign the label [TOPIC-LOST-CIVILIZATIONS] to a story when it concerns lost civilizations.
+
+[HAS-A-FLASHBACK]
+Definition: Assign the label [HAS-A-FLASHBACK] to a story when the narrative contains a flashback sequence.
+
+[TOPIC-HIDDEN-TREASURES]
+Definition: Assign the label [TOPIC-HIDDEN-TREASURES] to a story when it concerns hidden treasures.
+
+[NON-LIGHTHEARTED]
+Definition: Assign the label [NON-LIGHTHEARTED] to a story when the story is not [STYLE-LIGHTHEARTED].
+
+[MODERN-XOR-CLASSIC]
+Definition: Assign the label [MODERN-XOR-CLASSIC] to a story if exactly one of the following is true:
+- The story is [STYLE-MODERN]
+- The story is [STYLE-CLASSIC]
+
+[MAGICAL-ADVENTURE]
+Definition: Assign the label [MAGICAL-ADVENTURE] to a story if both of the following conditions hold:
+- The story is [TOPIC-MAGICAL-LANDS]
+- Either of the following is true:
+  - The story is [THEME-MAGIC]
+  - Both of the following are true:
+    - The story is [TOPIC-GIANT-CREATURES]
+    - The story is [THEME-PROBLEM-SOLVING]
+
+[HIDDEN-LOST-ADVENTURE]
+Definition: Assign the label [HIDDEN-LOST-ADVENTURE] to a story if either of the following conditions holds:
+- Exactly one of the following is true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+- Both of the following are true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+
+[QUEST-STYLE]
+Definition: Assign the label [QUEST-STYLE] to a story if both of the following conditions hold:
+- The set of narrative devices used by the story includes [USES-WH-QUESTIONS] (i.e., the story explicitly uses wh-questions).
+- Either of the following is true:
+  - The story is [USES-CONDITIONAL-MOOD]
+  - The story is [STARTS-WITH-PREPOSITION]
+
+[EPIC-GROWTH-ARC]
+Definition: Assign the label [EPIC-GROWTH-ARC] to a story if both of the following conditions hold:
+- The set of themes present in the story is equal to the set containing [THEME-KINDNESS] and [THEME-GROWTH].
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [THEME-PROBLEM-SOLVING]
+    - The story is [HAS-A-FLASHBACK]
+  - Both of the following are true:
+    - The story is [MANY-PARAGRAPHS]
+    - The story is not [SHORT-STORY]
+
+[AMALGAM-OF-ADVENTURE]
+Definition: Assign the label [AMALGAM-OF-ADVENTURE] to a story if either of the following conditions holds:
+- Both of the following are true:
+  - The story is [MAGICAL-ADVENTURE]
+  - The story is [HIDDEN-LOST-ADVENTURE]
+- Both of the following are true:
+  - The story is [TOPIC-GIANT-CREATURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+
+[AMBIGUOUS-MAGICAL-TALE]
+Definition: Assign the label [AMBIGUOUS-MAGICAL-TALE] to a story if either of the following conditions holds:
+- Both of the following are true:
+  - The story is [AMALGAM-OF-ADVENTURE]
+  - Both of the following are true:
+    - The story is [MODERN-XOR-CLASSIC]
+    - Either of the following is true:
+      - The story is [THEME-KINDNESS]
+      - The story is [THEME-MAGIC]
+- Both of the following are true:
+  - The story is [EPIC-GROWTH-ARC]
+  - Both of the following are true:
+    - The story is not [NON-LIGHTHEARTED]
+    - The story is [QUEST-STYLE]

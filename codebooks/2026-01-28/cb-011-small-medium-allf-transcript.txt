@@ -1,0 +1,41 @@
+Interviewer: Let's walk through this codebook step by step. First, what is [TOPIC-THE-ARTS]?
+
+Expert: A story is [TOPIC-THE-ARTS] if The story is about the arts.
+
+Interviewer: Got it. And what about [USES-CONDITIONAL-MOOD]?
+
+Expert: A story is [USES-CONDITIONAL-MOOD] if The story uses conditional mood.
+
+Interviewer: How about [STARTS-WITH-ADJECTIVE]?
+
+Expert: A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective.
+
+Interviewer: And [STYLE-PHILOSOPHICAL]?
+
+Expert: A story is [STYLE-PHILOSOPHICAL] if The story is philosophical.
+
+Interviewer: Now the compound nodes — can you explain [CONDITIONAL-AND-NOT-START]?
+
+Expert: Sure. A story is [CONDITIONAL-AND-NOT-START] if both of the following are true:
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is not [STARTS-WITH-ADJECTIVE]
+
+Interviewer: So that requires the conditional mood and explicitly not starting with an adjective. Clear. What about [ARTS-XOR-PHILOSOPHICAL]?
+
+Expert: A story is [ARTS-XOR-PHILOSOPHICAL] if exactly one of the following is true:
+- The story is [TOPIC-THE-ARTS]
+- The story is [STYLE-PHILOSOPHICAL]
+
+Interviewer: So it's an exclusive-or: it must be either about the arts or philosophical, but not both. Understood. Finally, explain [COMPLEX-CRITERION].
+
+Expert: A story is [COMPLEX-CRITERION] if either of the following is true:
+- The story is [CONDITIONAL-AND-NOT-START]
+- Both of the following are true:
+  - The story is in the set of topics that includes [TOPIC-THE-ARTS]
+  - The truth of [STYLE-PHILOSOPHICAL] is equal to the truth of not [USES-CONDITIONAL-MOOD]
+
+Interviewer: That second option is a little dense. Can you restate it briefly?
+
+Expert: Of course. The second option says: the story belongs to the topics that include [TOPIC-THE-ARTS], and at the same time the statement "[STYLE-PHILOSOPHICAL]" has the same truth value as "not [USES-CONDITIONAL-MOOD]". In other words, [STYLE-PHILOSOPHICAL] is true exactly when [USES-CONDITIONAL-MOOD] is false, and vice versa — while the story is also in the topic set containing [TOPIC-THE-ARTS].
+
+Interviewer: Thanks — that keeps the logical structure intact and makes it easier to apply when annotating. That completes the codebook.

@@ -1,0 +1,29 @@
+Think of this as the same precise codebook, just spoken in a more natural, easygoing way. Every node ID remains exactly as written in brackets, and every logical condition, operator, and relationship stays intact — I’ve only added brief, friendly clarifications so the intent reads smoothly.
+
+[STYLE-HUMOROUS]
+A story is STYLE-HUMOROUS if The story is humorous
+- In plain language: use this tag for stories that aim to be funny or that rely on humor as a defining trait.
+
+[STYLE-LIGHTHEARTED]
+A story is STYLE-LIGHTHEARTED if The story is lighthearted
+- This marks stories with a gentle, upbeat tone — the kind that feels breezy or easygoing rather than heavy.
+
+[THEME-KINDNESS]
+A story is THEME-KINDNESS if The story has the theme Kindness
+- Simple and direct: this flags stories where kindness is a clear thematic element.
+
+[STYLE-EXCLUSIVE]
+A story is STYLE-EXCLUSIVE if exactly one of the following is true:
+- The story is [STYLE-HUMOROUS]
+- The story is [STYLE-LIGHTHEARTED]
+- That is, STYLE-EXCLUSIVE applies when a story is one of those styles but not both — exactly one must hold.
+
+[GENRE-GENTLE]
+A story is GENRE-GENTLE if both of the following are true:
+- The story is [THEME-KINDNESS]
+- Either of the following are true:
+  - The story is [STYLE-EXCLUSIVE]
+  - Both of the following are true:
+    - The story is [STYLE-LIGHTHEARTED]
+    - The story is not [STYLE-HUMOROUS]
+- In everyday terms: GENRE-GENTLE requires kindness as a theme, plus either (a) the story is exclusively humorous or lighthearted, or (b) it is lighthearted while explicitly not being humorous. This keeps the logic intact while clarifying when we call a story “gentle.”

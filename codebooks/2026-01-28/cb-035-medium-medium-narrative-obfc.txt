@@ -1,0 +1,45 @@
+Stories in this little atlas wear labels like badges, and each badge has a quiet rule that decides when it belongs. Read them like a map: the badge name in brackets, then the rule that claims a story. I’ll tell it like a traveler's tale, but I won’t change a single signpost or crossroads—every logical turn stays exactly where it was.
+
+[attr-5]
+Think of a story that travels light, carrying only what it must. That story earns the mark [attr-5]. A story is [attr-5] if the story is minimalist.
+
+[attr-4]
+Now imagine a path so smooth that anyone can follow it at speed. When a tale scores above 96.1 on readability, it steps into that clearing and takes the name [attr-4]. A story is [attr-4] if the story has readability score above 96.1.
+
+[attr-10]
+Some storytellers speak in extremes, topping every comparison with the ultimate degree. Those tales carry the banner [attr-10]. A story is [attr-10] if the story uses superlative forms.
+
+[attr-7]
+There are stories that follow a seed to a tree, a child to wisdom, a slump to a rise—these are the tales of becoming. Such a tale is labeled [attr-7]. A story is [attr-7] if the story has the theme Growth.
+
+[attr-9]
+Some narratives fold time like origami, stepping forward and backward across years. When a story is about such journeys, it wears the tag [attr-9]. A story is [attr-9] if the story is about time travel.
+
+[attr-8]
+Other stories whisper about chests beneath the sand or secrets tucked in attic boxes. Those that center on concealed riches receive the [attr-8] mark. A story is [attr-8] if the story is about hidden treasures.
+
+[attr-1]
+Picture a tale that is both lean and effortless to read—the ideal intersection of brevity and clarity. It collects two simple truths to claim the title [attr-1]. A story is [attr-1] if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+
+[attr-3]
+Now imagine a voice that loves extremes but refuses to be spare. To be [attr-3], a story must do two things: use the ultimate forms and refuse the minimalist whisper. A story is [attr-3] if both of the following are true:
+- The story is [attr-10]
+- The story is not [attr-5]
+
+[attr-6]
+Some stories inherit momentum: they chart growth and pair that growth with an adventurous topic. A tale earns [attr-6] when it carries the theme of Growth and also centers on either time-bending journeys or buried treasures. A story is [attr-6] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - The story is [attr-9]
+  - The story is [attr-8]
+
+[attr-2]
+Finally, imagine the golden coin of our map: a story that is clear and concise, and then goes further—either it speaks with emphatic force or it arcs with themes of growth combined with time travel or hidden treasure. Such a tale is called [attr-2]. A story is [attr-2] if both of the following are true:
+- The story is [attr-1]
+- Either of the following is true:
+  - The story is [attr-3]
+  - The story is [attr-6]
+
+Follow these signposts and you can tag any tale you meet—each label lives by the exact rules above, and the roads between them remain unchanged, faithful and orderly as a compass.

@@ -1,0 +1,29 @@
+[attr-2]
+Definition: The predicate [attr-2] holds for a story if the story contains a flashback sequence.
+Annotation criterion: Mark [attr-2] = true when at least one portion of the narrative explicitly represents past events relocated from the primary timeline (i.e., a flashback).
+
+[attr-6]
+Definition: The predicate [attr-6] holds for a story if the story employs one or more wh-questions in its text.
+Annotation criterion: Mark [attr-6] = true when the narrative includes question forms beginning with wh-words (for example: who, what, when, where, why, how).
+
+[attr-5]
+Definition: The predicate [attr-5] holds for a story if the story makes use of discourse markers.
+Annotation criterion: Mark [attr-5] = true when the text contains explicit discourse markers (connectives or pragmatic particles that structure discourse).
+
+[attr-3]
+Definition: The predicate [attr-3] holds for a story if exactly one of the following is true:
+- The story is [attr-6]
+- The story is [attr-5]
+Specification: This is an exclusive condition — [attr-3] is true when precisely one of the two predicates above holds; it is false if neither or both hold.
+
+[attr-1]
+Definition: The predicate [attr-1] holds for a story if both of the following are true:
+- The story is [attr-2]
+- The story is not [attr-3]
+Specification: Both conditions must be satisfied simultaneously for [attr-1] to be true. Note that the second condition is the logical negation of [attr-3].
+
+[attr-4]
+Definition: The predicate [attr-4] holds for a story if either of the following is true:
+- The story is in the set { [attr-3], [attr-1] }
+- The story is equal to [attr-2]
+Specification: [attr-4] is true when the story satisfies membership in the specified set or when it is exactly [attr-2]. This is a logical disjunction: if any listed condition holds, mark [attr-4] = true.

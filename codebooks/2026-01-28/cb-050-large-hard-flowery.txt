@@ -1,0 +1,145 @@
+In a sunlit archive where inked constellations map the anatomy of stories, this codebook lives like a well-trimmed garden of taxonomies. Each bracketed mark is a sigil, a small lantern hung upon a knot of narrative wood so that annotators and reasoners may find their way. Below, I have tended each entry into a more ornamented, lyrical form—without altering a single logical stitch. Every node ID remains exactly as written in its bracketed garb, and every connective—Not, And, Or, Exactly one, Either, Both, All—stands as a faithful beam in the structure. Read gently: the logic is unchanged; only the language blooms.
+
+[HAS-A-RED-HERRING]
+A story is [HAS-A-RED-HERRING] if The story has a Red Herring.
+- In simpler, more lush terms: grant this node when the tale has been graced by a Red Herring—an alluring, misleading clue that perfumes the plot and lures the reader’s eye.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs.
+- Imagine the narrative unfolding like a long, braided scroll; apply this mark whenever the tale stretches beyond six paragraphs, a richness of length to be savored.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if The story is lighthearted.
+- Award this badge when the spirit of the prose is airy and playful, when the mood carries the lightness of sunlit laughter.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun.
+- This sigil is for those narratives that obey the portable prophecy: if an object or promise appears, it will be used. Mark it when Chekhov’s principle is at work.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if The story has the theme Magic.
+- Bestow this label when the tale’s thematic heart beats with enchantment and the uncanny—when magic is a thematic current.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if The story is about the arts.
+- Use this token for stories centered on artistic life—paint, music, dance, theater, and the creative crafts that shape culture.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+- Assign this attribute when the narrative employs the perfect aspect in its verb forms—those grammatical echoes of actions completed or tied to another moment.
+
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if The story has the theme Innovation.
+- Mark this when innovation—novelty, invention, a turning toward the new—forms a central theme of the work.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if The story has the theme Growth.
+- Apply this when the arc of the piece concerns growth—personal, cultural, or systemic—when change and maturation are prominent motifs.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic.
+- This label is reserved for tales that wear the manner of the classic: stately, traditional, or evoking time-honored forms.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if The story starts with a preposition.
+- A literal, formal cue: if the very first word of the story is a preposition, this node is true.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if The story is about cultural traditions.
+- Give this marker when the narrative explores rites, customs, and the practices that bind communities across generations.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations.
+- Apply this tag when the plot or theme concerns vanished peoples, forgotten cities, or remnant cultures of the past.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if The story has the theme Deception.
+- This node belongs to narratives where deception—trickery, concealment, betrayal of expectation—features in the thematic weave.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if The story uses wh-questions.
+- Mark when the text employs wh-questions (who, what, where, when, why, how) as part of its interrogative texture.
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] if The story is about bygone eras.
+- When the story conjures centuries past, earlier epochs, or the moods of historical times, this node applies.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective.
+- A crisp syntactic cue: if the story’s opening word is an adjective, tag it here.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if The story is modern.
+- Use this when the voice, sensibility, or formal tendencies of the piece align with modern styles.
+
+[NARRATIVE-SURPRISE]
+A story is [NARRATIVE-SURPRISE] if both of the following are true:
+- Either of the following is true:
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [HAS-CHECKHOVS-GUN]
+- Either of the following is true:
+  - Exactly one of [THEME-DECEPTION] and [USES-WH-QUESTIONS] is true
+  - The story is [MANY-PARAGRAPHS]
+- In more lyrical phrasing: a narrative surprise blooms when the plot carries an intentional misleading charm or a promised instrument of fate (a red herring or Chekhov’s gun), and when either the thematic interplay singles out deception versus interrogative probing exactly once, or the tale unfurls across many paragraphs. Both conditions together usher the story into the category of [NARRATIVE-SURPRISE].
+
+[RICH-LENGTH]
+A story is [RICH-LENGTH] if both of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- The story is [USES-PERFECT-ASPECT]
+- Think of this as a flourish of formal and structural wealth: a tale that is long in paragraphs and textured by uses of the perfect aspect earns the epithet [RICH-LENGTH].
+
+[CLASSIC-VS-MODERN]
+A story is [CLASSIC-VS-MODERN] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [STYLE-MODERN]
+- The story is not [STYLE-LIGHTHEARTED]
+- Either of the following is true:
+  - The story is [STARTS-WITH-PREPOSITION]
+  - The story is [STARTS-WITH-ADJECTIVE]
+- In narrative terms: this node singles out stories firmly in one stylistic camp—classic or modern, but not both—provided the tone is not lighthearted, and the opening word is either a preposition or an adjective. The symmetry and exclusivity are deliberate: exactly one style must hold.
+
+[CULTURAL-PAST-THEME]
+A story is [CULTURAL-PAST-THEME] if either of the following is true:
+- Both of the following are true:
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+  - The story is [TOPIC-BYGONE-ERAS]
+- Both of the following are true:
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+  - Exactly one of [THEME-GROWTH] and [THEME-DECEPTION] is true
+- Elegantly put: a cultural-past theme arises when the tale ties cultural traditions to bygone eras, or when it deals with lost civilizations and either growth or deception (but not both) figures in the thematic balance.
+
+[INNOVATION-GROWTH-MIX]
+A story is [INNOVATION-GROWTH-MIX] if either of the following is true:
+- Both of the following are true:
+  - The story is [THEME-INNOVATION]
+  - The story is [THEME-GROWTH]
+- All of the following are true:
+  - The story is [THEME-INNOVATION]
+  - The story is [TOPIC-THE-ARTS]
+  - The story is not [THEME-GROWTH]
+- This node captures either a direct blending of innovation and growth as twin themes, or the special case where innovation plus the arts appear without growth—both configurations qualify under this emblem.
+
+[ARTS-ROOT]
+A story is [ARTS-ROOT] if both of the following are true:
+- The story is [TOPIC-THE-ARTS]
+- Either of the following is true:
+  - The story is [INNOVATION-GROWTH-MIX]
+  - The story is [CULTURAL-PAST-THEME]
+- In other words: a story rooted in the arts becomes an [ARTS-ROOT] when it either sprouts the hybrid of innovation and growth or when it engages themes tying culture to the past.
+
+[EPIC-ARTS-MYSTERY]
+A story is [EPIC-ARTS-MYSTERY] if both of the following are true:
+- Either of the following is true:
+  - The story is [ARTS-ROOT]
+  - Both of the following are true:
+    - The story is [NARRATIVE-SURPRISE]
+    - The story is [RICH-LENGTH]
+- Either of the following is true:
+  - The story is [CLASSIC-VS-MODERN]
+  - Both of the following are true:
+    - The story is [CULTURAL-PAST-THEME]
+    - The story is [INNOVATION-GROWTH-MIX]
+- To close with a flourish: the designation [EPIC-ARTS-MYSTERY] is reserved for storied tapestries that are rooted in the arts or, alternatively, combine narrative surprises with a rich length; additionally, they must either occupy a clear classic-or-modern stance or unite cultural-past themes with the innovation-growth mix. When all these latticeworks align, a story may be crowned with this grand label.
+
+Thus ends the garden tour. Each nectar-scented sentence above preserves the exact logical beams and bracketed nodes as in the original—only the language has been embroidered so that the codebook reads as both a precise instrument and a small piece of literary delight.

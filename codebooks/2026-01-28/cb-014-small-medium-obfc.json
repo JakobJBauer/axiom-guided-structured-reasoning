@@ -1,0 +1,89 @@
+{
+  "nodes": [
+    {
+      "id": "starts-with-adjective",
+      "label": "Starts with adjective",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-giant-creatures",
+      "label": "Topic: giant creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "giant-focused",
+      "label": "Giant focused",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-giant-creatures",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "starts-with-adjective"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dynamic-opening",
+      "label": "Dynamic opening",
+      "formula_type": "Xor",
+      "formula_args": [
+        "starts-with-adjective",
+        "topic-giant-creatures"
+      ]
+    },
+    {
+      "id": "engaging-giant-story",
+      "label": "Engaging giant story",
+      "formula_type": "And",
+      "formula_args": [
+        "giant-focused",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "dynamic-opening",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "starts-with-adjective"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic-giant-creatures",
+      "target": "giant-focused"
+    },
+    {
+      "source": "starts-with-adjective",
+      "target": "giant-focused"
+    },
+    {
+      "source": "starts-with-adjective",
+      "target": "dynamic-opening"
+    },
+    {
+      "source": "topic-giant-creatures",
+      "target": "dynamic-opening"
+    },
+    {
+      "source": "giant-focused",
+      "target": "engaging-giant-story"
+    },
+    {
+      "source": "dynamic-opening",
+      "target": "engaging-giant-story"
+    },
+    {
+      "source": "starts-with-adjective",
+      "target": "engaging-giant-story"
+    }
+  ]
+}

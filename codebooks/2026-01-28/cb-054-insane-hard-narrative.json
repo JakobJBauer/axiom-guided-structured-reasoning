@@ -1,0 +1,731 @@
+{
+  "nodes": [
+    {
+      "id": "topic-magical-lands",
+      "label": "TOPIC-MAGICAL-LANDS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "low-readability",
+      "label": "LOW-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "THEME-DECEPTION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "many-paragraphs",
+      "label": "MANY-PARAGRAPHS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adjective",
+      "label": "STARTS-WITH-ADJECTIVE",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-surreal",
+      "label": "STYLE-SURREAL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-noun",
+      "label": "STARTS-WITH-NOUN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-the-arts",
+      "label": "TOPIC-THE-ARTS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-hidden-treasures",
+      "label": "TOPIC-HIDDEN-TREASURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-hardship",
+      "label": "THEME-HARDSHIP",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-classic",
+      "label": "STYLE-CLASSIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-checkhovs-gun",
+      "label": "HAS-CHECKHOVS-GUN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-discourse-markers",
+      "label": "USES-DISCOURSE-MARKERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-superlative-forms",
+      "label": "USES-SUPERLATIVE-FORMS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-giant-creatures",
+      "label": "TOPIC-GIANT-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-flashback",
+      "label": "HAS-A-FLASHBACK",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "STYLE-MODERN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-growth",
+      "label": "THEME-GROWTH",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-seasonal-changes",
+      "label": "TOPIC-SEASONAL-CHANGES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-minimalist",
+      "label": "STYLE-MINIMALIST",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "STARTS-WITH-ADVERB",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-lost-civilizations",
+      "label": "TOPIC-LOST-CIVILIZATIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-helping-others",
+      "label": "THEME-HELPING-OTHERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-magic",
+      "label": "THEME-MAGIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-playful",
+      "label": "STYLE-PLAYFUL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-conditional-mood",
+      "label": "USES-CONDITIONAL-MOOD",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-perfect-aspect",
+      "label": "USES-PERFECT-ASPECT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-humor",
+      "label": "THEME-HUMOR",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-cultural-traditions",
+      "label": "TOPIC-CULTURAL-TRADITIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-juxtaposition",
+      "label": "HAS-JUXTAPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-cliffhanger",
+      "label": "HAS-A-CLIFFHANGER",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "high-readability",
+      "label": "HIGH-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-lighthearted",
+      "label": "STYLE-LIGHTHEARTED",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starting-word-type",
+      "label": "STARTING-WORD-TYPE",
+      "formula_type": "Xor",
+      "formula_args": [
+        "starts-with-adjective",
+        "starts-with-adverb",
+        "starts-with-noun"
+      ]
+    },
+    {
+      "id": "style-aesthetics",
+      "label": "STYLE-AESTHETICS",
+      "formula_type": "Or",
+      "formula_args": [
+        "style-surreal",
+        "style-playful",
+        "style-lighthearted"
+      ]
+    },
+    {
+      "id": "topic-ancient-mysteries",
+      "label": "TOPIC-ANCIENT-MYSTERIES",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-lost-civilizations",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "topic-hidden-treasures",
+            "topic-cultural-traditions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magic-settings",
+      "label": "MAGIC-SETTINGS",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-magical-lands",
+        "theme-magic"
+      ]
+    },
+    {
+      "id": "creatures-in-magical-lands",
+      "label": "CREATURES-IN-MAGICAL-LANDS",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-giant-creatures",
+        "topic-magical-lands"
+      ]
+    },
+    {
+      "id": "narrative-devices",
+      "label": "NARRATIVE-DEVICES",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "has-checkhovs-gun",
+            "has-a-flashback"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "has-checkhovs-gun",
+            "has-a-cliffhanger"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "has-checkhovs-gun",
+            "has-juxtaposition"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "has-a-flashback",
+            "has-a-cliffhanger"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "has-a-flashback",
+            "has-juxtaposition"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "has-a-cliffhanger",
+            "has-juxtaposition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structured-form",
+      "label": "STRUCTURED-FORM",
+      "formula_type": "And",
+      "formula_args": [
+        "many-paragraphs",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "uses-discourse-markers",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "uses-conditional-mood",
+                "uses-perfect-aspect"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compound-theme",
+      "label": "COMPOUND-THEME",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "theme-magic",
+            "theme-growth"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "theme-deception",
+            "theme-hardship",
+            "theme-helping-others",
+            "theme-humor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "humorous-light",
+      "label": "HUMOROUS-LIGHT",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-humor",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "style-lighthearted",
+            "style-playful"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "poetic-minimalism",
+      "label": "POETIC-MINIMALISM",
+      "formula_type": "And",
+      "formula_args": [
+        "style-minimalist",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "style-classic",
+                "style-modern"
+              ]
+            },
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "style-surreal"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arc-growth-help",
+      "label": "ARC-GROWTH-HELP",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-growth",
+        "theme-helping-others"
+      ]
+    },
+    {
+      "id": "surprising-finale",
+      "label": "SURPRISING-FINALE",
+      "formula_type": "And",
+      "formula_args": [
+        "has-checkhovs-gun",
+        "has-a-cliffhanger"
+      ]
+    },
+    {
+      "id": "complex-structure",
+      "label": "COMPLEX-STRUCTURE",
+      "formula_type": "And",
+      "formula_args": [
+        "narrative-devices",
+        "structured-form"
+      ]
+    },
+    {
+      "id": "epic-mystery",
+      "label": "EPIC-MYSTERY",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-ancient-mysteries",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "topic-giant-creatures",
+            "topic-seasonal-changes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enchanted-odyssey",
+      "label": "ENCHANTED-ODYSSEY",
+      "formula_type": "And",
+      "formula_args": [
+        "magic-settings",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "topic-hidden-treasures",
+                "topic-lost-civilizations"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "theme-hardship",
+                "theme-growth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "surprising-surreal-arc",
+      "label": "SURPRISING-SURREAL-ARC",
+      "formula_type": "And",
+      "formula_args": [
+        "style-aesthetics",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "surprising-finale",
+            "arc-growth-help"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-epic",
+      "label": "COMPLEX-EPIC",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "complex-structure",
+            "compound-theme"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "enchanted-odyssey",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "epic-mystery",
+                "creatures-in-magical-lands"
+              ]
+            }
+          ]
+        },
+        "starting-word-type"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "starts-with-adjective",
+      "target": "starting-word-type"
+    },
+    {
+      "source": "starts-with-adverb",
+      "target": "starting-word-type"
+    },
+    {
+      "source": "starts-with-noun",
+      "target": "starting-word-type"
+    },
+    {
+      "source": "style-surreal",
+      "target": "style-aesthetics"
+    },
+    {
+      "source": "style-playful",
+      "target": "style-aesthetics"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "style-aesthetics"
+    },
+    {
+      "source": "topic-lost-civilizations",
+      "target": "topic-ancient-mysteries"
+    },
+    {
+      "source": "topic-hidden-treasures",
+      "target": "topic-ancient-mysteries"
+    },
+    {
+      "source": "topic-cultural-traditions",
+      "target": "topic-ancient-mysteries"
+    },
+    {
+      "source": "topic-magical-lands",
+      "target": "magic-settings"
+    },
+    {
+      "source": "theme-magic",
+      "target": "magic-settings"
+    },
+    {
+      "source": "topic-giant-creatures",
+      "target": "creatures-in-magical-lands"
+    },
+    {
+      "source": "topic-magical-lands",
+      "target": "creatures-in-magical-lands"
+    },
+    {
+      "source": "has-checkhovs-gun",
+      "target": "narrative-devices"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "narrative-devices"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "narrative-devices"
+    },
+    {
+      "source": "has-juxtaposition",
+      "target": "narrative-devices"
+    },
+    {
+      "source": "many-paragraphs",
+      "target": "structured-form"
+    },
+    {
+      "source": "uses-discourse-markers",
+      "target": "structured-form"
+    },
+    {
+      "source": "uses-conditional-mood",
+      "target": "structured-form"
+    },
+    {
+      "source": "uses-perfect-aspect",
+      "target": "structured-form"
+    },
+    {
+      "source": "theme-magic",
+      "target": "compound-theme"
+    },
+    {
+      "source": "theme-growth",
+      "target": "compound-theme"
+    },
+    {
+      "source": "theme-deception",
+      "target": "compound-theme"
+    },
+    {
+      "source": "theme-hardship",
+      "target": "compound-theme"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "compound-theme"
+    },
+    {
+      "source": "theme-humor",
+      "target": "compound-theme"
+    },
+    {
+      "source": "theme-humor",
+      "target": "humorous-light"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "humorous-light"
+    },
+    {
+      "source": "style-playful",
+      "target": "humorous-light"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "poetic-minimalism"
+    },
+    {
+      "source": "style-classic",
+      "target": "poetic-minimalism"
+    },
+    {
+      "source": "style-modern",
+      "target": "poetic-minimalism"
+    },
+    {
+      "source": "style-surreal",
+      "target": "poetic-minimalism"
+    },
+    {
+      "source": "theme-growth",
+      "target": "arc-growth-help"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "arc-growth-help"
+    },
+    {
+      "source": "has-checkhovs-gun",
+      "target": "surprising-finale"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "surprising-finale"
+    },
+    {
+      "source": "narrative-devices",
+      "target": "complex-structure"
+    },
+    {
+      "source": "structured-form",
+      "target": "complex-structure"
+    },
+    {
+      "source": "topic-ancient-mysteries",
+      "target": "epic-mystery"
+    },
+    {
+      "source": "topic-giant-creatures",
+      "target": "epic-mystery"
+    },
+    {
+      "source": "topic-seasonal-changes",
+      "target": "epic-mystery"
+    },
+    {
+      "source": "magic-settings",
+      "target": "enchanted-odyssey"
+    },
+    {
+      "source": "topic-hidden-treasures",
+      "target": "enchanted-odyssey"
+    },
+    {
+      "source": "topic-lost-civilizations",
+      "target": "enchanted-odyssey"
+    },
+    {
+      "source": "theme-hardship",
+      "target": "enchanted-odyssey"
+    },
+    {
+      "source": "theme-growth",
+      "target": "enchanted-odyssey"
+    },
+    {
+      "source": "style-aesthetics",
+      "target": "surprising-surreal-arc"
+    },
+    {
+      "source": "surprising-finale",
+      "target": "surprising-surreal-arc"
+    },
+    {
+      "source": "arc-growth-help",
+      "target": "surprising-surreal-arc"
+    },
+    {
+      "source": "complex-structure",
+      "target": "complex-epic"
+    },
+    {
+      "source": "compound-theme",
+      "target": "complex-epic"
+    },
+    {
+      "source": "enchanted-odyssey",
+      "target": "complex-epic"
+    },
+    {
+      "source": "epic-mystery",
+      "target": "complex-epic"
+    },
+    {
+      "source": "creatures-in-magical-lands",
+      "target": "complex-epic"
+    },
+    {
+      "source": "starting-word-type",
+      "target": "complex-epic"
+    }
+  ]
+}

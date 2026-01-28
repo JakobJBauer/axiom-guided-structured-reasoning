@@ -1,0 +1,17 @@
+[attr-4]
+A story is [attr-4] if the story is about cultural traditions.
+
+[attr-1]
+A story is [attr-1] if the story has a moral lesson.
+
+[attr-2]
+A story is [attr-2] if the story starts with a adverb.
+
+[attr-3]
+A story is [attr-3] if the story has the theme Magic.
+
+[attr-5]
+A story is [attr-5] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-3]
+- The story is [attr-1]

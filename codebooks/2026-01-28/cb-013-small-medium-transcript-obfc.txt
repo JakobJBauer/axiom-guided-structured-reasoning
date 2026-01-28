@@ -1,0 +1,58 @@
+Interviewer: Let's go through this codebook line by line. First, what does [attr-6] mean?
+
+Expert: A story is [attr-6] if the story uses conditional mood.
+
+Interviewer: Simple enough. And [attr-7]?
+
+Expert: A story is [attr-7] if the story uses perfect aspect.
+
+Interviewer: What about themes—what does [attr-5] capture?
+
+Expert: A story is [attr-5] if the story has the theme Deception.
+
+Interviewer: And structural features—what is [attr-4]?
+
+Expert: A story is [attr-4] if the story has a cliffhanger.
+
+Interviewer: Now we’re getting to the composite nodes. Explain [attr-3].
+
+Expert: Sure. A story is [attr-3] if all of the following are true:
+- The story is [attr-5]
+- The story is not [attr-4]
+- Either of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-7]
+
+Interviewer: Let me double-check. So for [attr-3], the story must have the deception theme, must not have a cliffhanger, and must use at least one of conditional mood or perfect aspect. Is that correct?
+
+Expert: Exactly. That restates the same logical structure.
+
+Interviewer: Next: [attr-2]. How is that defined?
+
+Expert: A story is [attr-2] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-6]
+- The story is not both of the following:
+  - The story is [attr-7]
+  - The story is [attr-6]
+
+Interviewer: So [attr-2] means the story uses one of those two aspect/mood features, but not both at the same time. Correct?
+
+Expert: Correct. The phrasing “Either of the following is true” plus “not both of the following” enforces that exactly one of [attr-7] or [attr-6] holds.
+
+Interviewer: Finally, tell me about [attr-1].
+
+Expert: A story is [attr-1] if both of the following are true:
+- The story is [attr-3]
+- Either of the following is true:
+  - The story is [attr-2]
+  - The story is not [attr-4]
+
+Interviewer: To paraphrase: to qualify as [attr-1], a story must already meet the criteria for [attr-3], and additionally must either satisfy the exclusive-aspect condition ([attr-2]) or still be one that is not [attr-4]. Right?
+
+Expert: Yes. That preserves the original logical relationships exactly: [attr-1] requires [attr-3], and then one of the two listed alternatives must hold.
+
+Interviewer: Great. That preserves the structure while making the logic clearer in a conversational way.
+
+Expert: Precisely—no node IDs, logical operators, or relationships were altered; we only explained them in an interview-style transcript for readability.

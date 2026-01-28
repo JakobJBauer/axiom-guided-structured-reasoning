@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "id": "attr-4",
+      "label": "Low Readability",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "Uses Superlatives",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Bygone Eras",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Magic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "Time Travel",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Moral Lesson",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "Problem-Solving",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "Exclusive: Time XOR Magic",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-11",
+        "attr-7"
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Bygone Era with Moral (no superlatives)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-10",
+        "attr-3",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-12"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Curator Favorite",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-9",
+        "attr-8",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-4"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-11",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    }
+  ]
+}

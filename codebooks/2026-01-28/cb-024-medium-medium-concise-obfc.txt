@@ -1,0 +1,48 @@
+[attr-8]
+Story is playful.
+
+[attr-7]
+Story is minimalist.
+
+[attr-3]
+Story has a moral lesson.
+
+[attr-11]
+Story is about time travel.
+
+[attr-6]
+Story starts with a noun.
+
+[attr-4]
+Story has more than 6 paragraphs.
+
+[attr-12]
+Story uses conditional mood.
+
+[attr-9]
+Story's theme is Hardship.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-8]
+- The story is [attr-7]
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-12]
+- The story is [attr-6]
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-3]
+
+[attr-5]
+A story is [attr-5] if both of the following are true:
+- The story is [attr-1]
+- Either of the following is true:
+  - The story is [attr-2]
+  - Both of the following are true:
+    - The story is [attr-8]
+    - The story is not [attr-9]
