@@ -234,8 +234,10 @@ Return only valid JSON, no additional text."""
             formula = None
             formula_type = node_data.get("formula_type")
             formula_args = node_data.get("formula_args", [])
+            if isinstance(formula_type, str) and formula_type.strip().lower() in ("null", "none", ""):
+                formula_type = None
             
-            if formula_type:
+            if formula_type is not None:
                 formula = self._create_formula(formula_type, formula_args)
             
             node = Node(
