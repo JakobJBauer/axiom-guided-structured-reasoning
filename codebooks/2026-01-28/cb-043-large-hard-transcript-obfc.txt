@@ -1,0 +1,143 @@
+Interviewer: Let's walk through this codebook together, one rule at a time. I'll ask about each node and you explain what it means. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What does [attr-19] mean?
+
+Expert: A story is [attr-19] if The story has the theme Innovation
+
+Interviewer: And [attr-20]?
+
+Expert: A story is [attr-20] if The story has the theme Magic
+
+Interviewer: How about [attr-4]?
+
+Expert: A story is [attr-4] if The story has Checkhov's gun
+
+Interviewer: What about [attr-10]?
+
+Expert: A story is [attr-10] if The story starts with a adverb
+
+Interviewer: [attr-18]?
+
+Expert: A story is [attr-18] if The story has the theme Helping Others
+
+Interviewer: [attr-14] — what's the rule?
+
+Expert: A story is [attr-14] if The story is philosophical
+
+Interviewer: And [attr-11]?
+
+Expert: A story is [attr-11] if The story starts with a noun
+
+Interviewer: [attr-21]?
+
+Expert: A story is [attr-21] if The story is about hidden treasures
+
+Interviewer: [attr-17] — what does that denote?
+
+Expert: A story is [attr-17] if The story has the theme Growth
+
+Interviewer: [attr-2]?
+
+Expert: A story is [attr-2] if The story has a cliffhanger
+
+Interviewer: [attr-13]?
+
+Expert: A story is [attr-13] if The story is minimalist
+
+Interviewer: [attr-24]?
+
+Expert: A story is [attr-24] if The story uses conditional mood
+
+Interviewer: [attr-23]?
+
+Expert: A story is [attr-23] if The story is about seasonal changes
+
+Interviewer: [attr-22]?
+
+Expert: A story is [attr-22] if The story is about mystical creatures
+
+Interviewer: [attr-3] — what triggers this?
+
+Expert: A story is [attr-3] if The story has a story within a story
+
+Interviewer: [attr-5] — how is that defined?
+
+Expert: A story is [attr-5] if The story has more than 6 paragraphs
+
+Interviewer: [attr-16]?
+
+Expert: A story is [attr-16] if The story has the theme Agency
+
+Interviewer: [attr-9] — this one looks different. Explain it.
+
+Expert: A story is [attr-9] if [attr-5] equals true
+
+Interviewer: Now for a compound one: [attr-12]. What exactly must be true?
+
+Expert: A story is [attr-12] if both of the following are true:
+- exactly one of the following is true:
+  - The story is [attr-10]
+  - The story is [attr-11]
+- The story is in [STYLE-PHILOSOPHICAL, STYLE-MINIMALIST]
+
+Interviewer: That keeps the structure strict. Next: [attr-7]. Walk me through the logic.
+
+Expert: A story is [attr-7] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-21]
+  - The story is [attr-22]
+- exactly one of the following is true:
+  - The story is [attr-21]
+  - The story is [attr-23]
+
+Interviewer: [attr-6] seems nuanced. How do we decide that?
+
+Expert: A story is [attr-6] if either of the following is true:
+- The story is [attr-18]
+- both of the following are true:
+  - exactly one of the following is true:
+    - The story is [attr-17]
+    - The story is [attr-16]
+  - The story is not [attr-13]
+
+Interviewer: I appreciate that conditional. Now [attr-15] — what's required?
+
+Expert: A story is [attr-15] if both of the following are true:
+- The story is [attr-19]
+- either of the following is true:
+  - The story is [attr-6]
+  - both of the following are true:
+    - The story is [attr-20]
+    - The story is [attr-24]
+
+Interviewer: [attr-8] — how is that defined?
+
+Expert: A story is [attr-8] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-2]
+- either of the following is true:
+  - The story is [attr-3]
+  - The story is not [attr-4]
+
+Interviewer: And finally, the big one: [attr-1]. What's the full rule?
+
+Expert: A story is [attr-1] if both of the following are true:
+- The story is [attr-15]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [attr-12]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [attr-8]
+        - The story is [attr-9]
+      - The story is [attr-7]
+  - both of the following are true:
+    - The story is [attr-8]
+    - The story is not [attr-13]
+
+Interviewer: That preserves everything neatly. Any final notes?
+
+Expert: Just this: each node and logical connector here is preserved exactly as written. Think of this transcript as an annotated walkthrough — questions you might ask while annotating, with answers that repeat the precise rules you must follow.

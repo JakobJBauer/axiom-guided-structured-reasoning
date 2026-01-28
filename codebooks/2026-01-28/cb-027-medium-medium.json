@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "id": "starts-with-adverb",
+      "label": "Starts With Adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-classic",
+      "label": "Style Classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "long-story",
+      "label": "Long Story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-giant-creatures",
+      "label": "Topic Giant Creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "Theme Deception",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-hidden-treasures",
+      "label": "Topic Hidden Treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "amphibious-epic",
+      "label": "Amphibious Epic",
+      "formula_type": "And",
+      "formula_args": [
+        "long-story",
+        "topic-giant-creatures",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "style-classic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "misleading-quest",
+      "label": "Misleading Quest",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-deception",
+        "topic-hidden-treasures",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "starts-with-adverb",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "style-classic"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hybrid-tale",
+      "label": "Hybrid Tale",
+      "formula_type": "Xor",
+      "formula_args": [
+        "amphibious-epic",
+        "misleading-quest"
+      ]
+    },
+    {
+      "id": "complex-artifact",
+      "label": "Complex Artifact",
+      "formula_type": "And",
+      "formula_args": [
+        "hybrid-tale",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-classic",
+            "long-story"
+          ]
+        },
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "starts-with-adverb"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "long-story",
+      "target": "amphibious-epic"
+    },
+    {
+      "source": "topic-giant-creatures",
+      "target": "amphibious-epic"
+    },
+    {
+      "source": "style-classic",
+      "target": "amphibious-epic"
+    },
+    {
+      "source": "theme-deception",
+      "target": "misleading-quest"
+    },
+    {
+      "source": "topic-hidden-treasures",
+      "target": "misleading-quest"
+    },
+    {
+      "source": "starts-with-adverb",
+      "target": "misleading-quest"
+    },
+    {
+      "source": "style-classic",
+      "target": "misleading-quest"
+    },
+    {
+      "source": "amphibious-epic",
+      "target": "hybrid-tale"
+    },
+    {
+      "source": "misleading-quest",
+      "target": "hybrid-tale"
+    },
+    {
+      "source": "hybrid-tale",
+      "target": "complex-artifact"
+    },
+    {
+      "source": "style-classic",
+      "target": "complex-artifact"
+    },
+    {
+      "source": "long-story",
+      "target": "complex-artifact"
+    },
+    {
+      "source": "starts-with-adverb",
+      "target": "complex-artifact"
+    }
+  ]
+}

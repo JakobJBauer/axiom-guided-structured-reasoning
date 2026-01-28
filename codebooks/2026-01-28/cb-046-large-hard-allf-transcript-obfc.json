@@ -1,0 +1,410 @@
+{
+  "nodes": [
+    {
+      "id": "attr-14",
+      "label": "lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-16",
+      "label": "philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-24",
+      "label": "about magical lands",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-26",
+      "label": "uses wh-questions (device)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "fewer than 160 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-18",
+      "label": "theme: Kindness",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "more than 6 paragraphs",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-25",
+      "label": "uses conditional mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-20",
+      "label": "theme: Problem-Solving",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-17",
+      "label": "theme: Growth",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "starts with a preposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-21",
+      "label": "about giant creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-15",
+      "label": "modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-13",
+      "label": "classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-19",
+      "label": "theme: Magic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-23",
+      "label": "about lost civilizations",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "has a flashback",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-22",
+      "label": "about hidden treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "not lighthearted",
+      "formula_type": "Not",
+      "formula_args": [
+        "attr-14"
+      ]
+    },
+    {
+      "id": "attr-8",
+      "label": "exactly one of modern or classic",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-15",
+        "attr-13"
+      ]
+    },
+    {
+      "id": "attr-6",
+      "label": "magical-lands combined condition",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-24",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-19",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-21",
+                "attr-20"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-5",
+      "label": "hidden-treasures / lost-civs combination",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-22",
+            "attr-23"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-22",
+            "attr-23"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-10",
+      "label": "uses-wh-questions-and-(conditional-or-starts-with-prep)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-26",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-25",
+            "attr-12"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "themes-equal-kindness-and-growth with subconditions",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Equal",
+          "formula_args": [
+            "themes",
+            [
+              "attr-18",
+              "attr-17"
+            ]
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-20",
+                "attr-4"
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-7",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-11"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "compound condition attr-1",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-6",
+            "attr-5"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-21",
+            "attr-23"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "top-level attr-2",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-1",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-8",
+                {
+                  "formula_type": "Or",
+                  "formula_args": [
+                    "attr-18",
+                    "attr-19"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-3",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-9"
+                  ]
+                },
+                "attr-10"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-14",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-15",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-21",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-20",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-22",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-26",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-25",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-18",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-17",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-20",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-21",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-18",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-2"
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+[TOPIC-MAGICAL-LANDS]
+Definition: Classify a story as [TOPIC-MAGICAL-LANDS] when the narrative focuses on magical lands.
+Criterion: The story is about magical lands.
+
+[LOW-READABILITY]
+Definition: Classify a story as [LOW-READABILITY] when its readability metric falls below a specific threshold.
+Criterion: The story has a readability score below 86.4.
+
+[THEME-DECEPTION]
+Definition: Classify a story as [THEME-DECEPTION] when deception is a central thematic element.
+Criterion: The story has the theme Deception.
+
+[MANY-PARAGRAPHS]
+Definition: Classify a story as [MANY-PARAGRAPHS] when its paragraph count exceeds a defined limit.
+Criterion: The story has more than 6 paragraphs.
+
+[STARTS-WITH-ADJECTIVE]
+Definition: Classify a story as [STARTS-WITH-ADJECTIVE] when the first lexical token is an adjective.
+Criterion: The story starts with an adjective.
+
+[STYLE-SURREAL]
+Definition: Classify a story as [STYLE-SURREAL] when its stylistic register is surreal.
+Criterion: The story is surreal.
+
+[STARTS-WITH-NOUN]
+Definition: Classify a story as [STARTS-WITH-NOUN] when the first lexical token is a noun.
+Criterion: The story starts with a noun.
+
+[TOPIC-THE-ARTS]
+Definition: Classify a story as [TOPIC-THE-ARTS] when the subject matter concerns the arts.
+Criterion: The story is about the arts.
+
+[TOPIC-HIDDEN-TREASURES]
+Definition: Classify a story as [TOPIC-HIDDEN-TREASURES] when the plot revolves around hidden treasures.
+Criterion: The story is about hidden treasures.
+
+[THEME-HARDSHIP]
+Definition: Classify a story as [THEME-HARDSHIP] when hardship is a principal theme.
+Criterion: The story has the theme Hardship.
+
+[STYLE-CLASSIC]
+Definition: Classify a story as [STYLE-CLASSIC] when its stylistic register aligns with classic conventions.
+Criterion: The story is classic.
+
+[HAS-CHECKHOVS-GUN]
+Definition: Classify a story as [HAS-CHECKHOVS-GUN] when it contains an instance of Chekhov’s gun (a deliberately placed plot element that becomes significant later).
+Criterion: The story has Checkhov's gun.
+
+[USES-DISCOURSE-MARKERS]
+Definition: Classify a story as [USES-DISCOURSE-MARKERS] when it employs discourse markers (connective particles, transition phrases).
+Criterion: The story uses discourse markers.
+
+[USES-SUPERLATIVE-FORMS]
+Definition: Classify a story as [USES-SUPERLATIVE-FORMS] when superlative morphological forms appear in the text.
+Criterion: The story uses superlative forms.
+
+[TOPIC-GIANT-CREATURES]
+Definition: Classify a story as [TOPIC-GIANT-CREATURES] when giant creatures are a prominent topic.
+Criterion: The story is about giant creatures.
+
+[HAS-A-FLASHBACK]
+Definition: Classify a story as [HAS-A-FLASHBACK] when it contains a flashback narrative device.
+Criterion: The story has a flashback.
+
+[STYLE-MODERN]
+Definition: Classify a story as [STYLE-MODERN] when its stylistic register aligns with modern conventions.
+Criterion: The story is modern.
+
+[THEME-GROWTH]
+Definition: Classify a story as [THEME-GROWTH] when growth or character development is a core theme.
+Criterion: The story has the theme Growth.
+
+[TOPIC-SEASONAL-CHANGES]
+Definition: Classify a story as [TOPIC-SEASONAL-CHANGES] when seasonal change is a subject of the narrative.
+Criterion: The story is about seasonal changes.
+
+[STYLE-MINIMALIST]
+Definition: Classify a story as [STYLE-MINIMALIST] when it employs minimalist stylistic principles.
+Criterion: The story is minimalist.
+
+[STARTS-WITH-ADVERB]
+Definition: Classify a story as [STARTS-WITH-ADVERB] when the first lexical token is an adverb.
+Criterion: The story starts with an adverb.
+
+[TOPIC-LOST-CIVILIZATIONS]
+Definition: Classify a story as [TOPIC-LOST-CIVILIZATIONS] when lost civilizations are central to the narrative.
+Criterion: The story is about lost civilizations.
+
+[THEME-HELPING-OTHERS]
+Definition: Classify a story as [THEME-HELPING-OTHERS] when helping others is a principal theme.
+Criterion: The story has the theme Helping Others.
+
+[THEME-MAGIC]
+Definition: Classify a story as [THEME-MAGIC] when magic constitutes a thematic element of the story.
+Criterion: The story has the theme Magic.
+
+[STYLE-PLAYFUL]
+Definition: Classify a story as [STYLE-PLAYFUL] when its tone and style are playful.
+Criterion: The story is playful.
+
+[USES-CONDITIONAL-MOOD]
+Definition: Classify a story as [USES-CONDITIONAL-MOOD] when it employs the conditional grammatical mood.
+Criterion: The story uses conditional mood.
+
+[USES-PERFECT-ASPECT]
+Definition: Classify a story as [USES-PERFECT-ASPECT] when it employs the perfect aspect in its verbal morphology.
+Criterion: The story uses perfect aspect.
+
+[THEME-HUMOR]
+Definition: Classify a story as [THEME-HUMOR] when humor is a primary thematic element.
+Criterion: The story has the theme Humor.
+
+[TOPIC-CULTURAL-TRADITIONS]
+Definition: Classify a story as [TOPIC-CULTURAL-TRADITIONS] when cultural traditions are central to the content.
+Criterion: The story is about cultural traditions.
+
+[HAS-JUXTAPOSITION]
+Definition: Classify a story as [HAS-JUXTAPOSITION] when it contains juxtaposition as a device (contrasting elements presented adjacent to each other).
+Criterion: The story has juxtaposition.
+
+[HAS-A-CLIFFHANGER]
+Definition: Classify a story as [HAS-A-CLIFFHANGER] when the narrative ends or pauses with a cliffhanger.
+Criterion: The story has a cliffhanger.
+
+[HIGH-READABILITY]
+Definition: Classify a story as [HIGH-READABILITY] when its readability metric exceeds a specified threshold.
+Criterion: The story has a readability score above 96.1.
+
+[STYLE-LIGHTHEARTED]
+Definition: Classify a story as [STYLE-LIGHTHEARTED] when its tone is lighthearted.
+Criterion: The story is lighthearted.
+
+[STARTING-WORD-TYPE]
+Definition: Classify a story as [STARTING-WORD-TYPE] when exactly one of three mutually exclusive starting-word conditions holds.
+Criterion: Exactly one of the following is true:
+- The story is [STARTS-WITH-ADJECTIVE]
+- The story is [STARTS-WITH-ADVERB]
+- The story is [STARTS-WITH-NOUN]
+
+[STYLE-AESTHETICS]
+Definition: Classify a story as [STYLE-AESTHETICS] when its style belongs to a specified set of aesthetic registers.
+Criterion: The story is any of the following:
+- [STYLE-SURREAL]
+- [STYLE-PLAYFUL]
+- [STYLE-LIGHTHEARTED]
+
+[TOPIC-ANCIENT-MYSTERIES]
+Definition: Classify a story as [TOPIC-ANCIENT-MYSTERIES] when it treats ancient mysteries as its subject through a conjunction of conditions.
+Criterion: Both of the following are true:
+- The story is [TOPIC-LOST-CIVILIZATIONS]
+- Either of the following is true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+
+[MAGIC-SETTINGS]
+Definition: Classify a story as [MAGIC-SETTINGS] when the setting is both magical and thematically magical.
+Criterion: Both of the following are true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- The story is [THEME-MAGIC]
+
+[CREATURES-IN-MAGICAL-LANDS]
+Definition: Classify a story as [CREATURES-IN-MAGICAL-LANDS] when both creature-focused content and magical lands co-occur.
+Criterion: Both of the following are true:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is [TOPIC-MAGICAL-LANDS]
+
+[NARRATIVE-DEVICES]
+Definition: Classify a story as [NARRATIVE-DEVICES] when it contains specific pairs of narrative devices; this node is true if any listed conjunction holds.
+Criterion: Either of the following is true:
+- Both of the following are true:
+  - The story is [HAS-CHECKHOVS-GUN]
+  - The story is [HAS-A-FLASHBACK]
+- Both of the following are true:
+  - The story is [HAS-CHECKHOVS-GUN]
+  - The story is [HAS-A-CLIFFHANGER]
+- Both of the following are true:
+  - The story is [HAS-CHECKHOVS-GUN]
+  - The story is [HAS-JUXTAPOSITION]
+- Both of the following are true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is [HAS-A-CLIFFHANGER]
+- Both of the following are true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is [HAS-JUXTAPOSITION]
+- Both of the following are true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is [HAS-JUXTAPOSITION]
+
+[STRUCTURED-FORM]
+Definition: Classify a story as [STRUCTURED-FORM] when it satisfies a hierarchy of structural and grammatical conditions.
+Criterion: Both of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- Both of the following are true:
+  - The story is [USES-DISCOURSE-MARKERS]
+  - Either of the following is true:
+    - The story is [USES-CONDITIONAL-MOOD]
+    - The story is [USES-PERFECT-ASPECT]
+
+[COMPOUND-THEME]
+Definition: Classify a story as [COMPOUND-THEME] when it combines a primary theme from a first set with a secondary element from a second set.
+Criterion: Both of the following are true:
+- Either of the following is true:
+  - The story is [THEME-MAGIC]
+  - The story is [THEME-GROWTH]
+- Either of the following is true:
+  - The story is [THEME-DECEPTION]
+  - The story is [THEME-HARDSHIP]
+  - The story is [THEME-HELPING-OTHERS]
+  - The story is [THEME-HUMOR]
+
+[HUMOROUS-LIGHT]
+Definition: Classify a story as [HUMOROUS-LIGHT] when humor co-occurs with a light, playful style.
+Criterion: Both of the following are true:
+- The story is [THEME-HUMOR]
+- Both of the following are true:
+  - The story is [STYLE-LIGHTHEARTED]
+  - The story is [STYLE-PLAYFUL]
+
+[POETIC-MINIMALISM]
+Definition: Classify a story as [POETIC-MINIMALISM] when it exhibits minimalist form, aligns with a canonical stylistic epoch, and explicitly excludes surrealism.
+Criterion: Both of the following are true:
+- The story is [STYLE-MINIMALIST]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [STYLE-CLASSIC]
+    - The story is [STYLE-MODERN]
+  - The story is not [STYLE-SURREAL]
+
+[ARC-GROWTH-HELP]
+Definition: Classify a story as [ARC-GROWTH-HELP] when it simultaneously embodies growth and altruism as themes.
+Criterion: Both of the following are true:
+- The story is [THEME-GROWTH]
+- The story is [THEME-HELPING-OTHERS]
+
+[SURPRISING-FINALE]
+Definition: Classify a story as [SURPRISING-FINALE] when a planted plot element and a narrative cliffhanger coexist.
+Criterion: Both of the following are true:
+- The story is [HAS-CHECKHOVS-GUN]
+- The story is [HAS-A-CLIFFHANGER]
+
+[COMPLEX-STRUCTURE]
+Definition: Classify a story as [COMPLEX-STRUCTURE] when it combines specific narrative devices with a structured form.
+Criterion: Both of the following are true:
+- The story is [NARRATIVE-DEVICES]
+- The story is [STRUCTURED-FORM]
+
+[EPIC-MYSTERY]
+Definition: Classify a story as [EPIC-MYSTERY] when it treats ancient mysteries and additionally includes one of two large-scale topical elements.
+Criterion: Both of the following are true:
+- The story is [TOPIC-ANCIENT-MYSTERIES]
+- Either of the following is true:
+  - The story is [TOPIC-GIANT-CREATURES]
+  - The story is [TOPIC-SEASONAL-CHANGES]
+
+[ENCHANTED-ODYSSEY]
+Definition: Classify a story as [ENCHANTED-ODYSSEY] when it combines magical setting with an exploratory plot element and a progression-related theme.
+Criterion: Both of the following are true:
+- The story is [MAGIC-SETTINGS]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [TOPIC-HIDDEN-TREASURES]
+    - The story is [TOPIC-LOST-CIVILIZATIONS]
+  - Either of the following is true:
+    - The story is [THEME-HARDSHIP]
+    - The story is [THEME-GROWTH]
+
+[SURPRISING-SURREAL-ARC]
+Definition: Classify a story as [SURPRISING-SURREAL-ARC] when a specified aesthetic style coincides with a surprising finale and a growth-help arc.
+Criterion: Both of the following are true:
+- The story is [STYLE-AESTHETICS]
+- Both of the following are true:
+  - The story is [SURPRISING-FINALE]
+  - The story is [ARC-GROWTH-HELP]
+
+[COMPLEX-EPIC]
+Definition: Classify a story as [COMPLEX-EPIC] when multiple structural and thematic conjunctions hold, and the starting-word constraint is satisfied.
+Criterion: All of the following are true:
+- Both of the following are true:
+  - The story is [COMPLEX-STRUCTURE]
+  - The story is [COMPOUND-THEME]
+- Either of the following is true:
+  - The story is [ENCHANTED-ODYSSEY]
+  - Both of the following are true:
+    - The story is [EPIC-MYSTERY]
+    - The story is [CREATURES-IN-MAGICAL-LANDS]
+- The story is [STARTING-WORD-TYPE]

@@ -1,0 +1,91 @@
+Codebook — Structured View
+
+Below is a clear, organized presentation of the codebook. Each node is shown with its ID, a short definition, and an explicit, hierarchical listing of the logical conditions that determine when a story meets that node. Logical operators (Both / Either / Exactly one / All / Not / And / Or) and all node IDs are preserved exactly as in the original.
+
+- Node: [STYLE-LIGHTHEARTED]
+  - Definition: A story is [STYLE-LIGHTHEARTED] if:
+    - The story is lighthearted
+
+- Node: [HAS-CHECKHOVS-GUN]
+  - Definition: A story is [HAS-CHECKHOVS-GUN] if:
+    - The story has Checkhov's gun
+
+- Node: [HAS-A-CLIFFHANGER]
+  - Definition: A story is [HAS-A-CLIFFHANGER] if:
+    - The story has a cliffhanger
+
+- Node: [THEME-HARDSHIP]
+  - Definition: A story is [THEME-HARDSHIP] if:
+    - The story has the theme Hardship
+
+- Node: [THEME-HELPING-OTHERS]
+  - Definition: A story is [THEME-HELPING-OTHERS] if:
+    - The story has the theme Helping Others
+
+- Node: [THEME-DECEPTION]
+  - Definition: A story is [THEME-DECEPTION] if:
+    - The story has the theme Deception
+
+- Node: [THEME-PROBLEM-SOLVING]
+  - Definition: A story is [THEME-PROBLEM-SOLVING] if:
+    - The story has the theme Problem-Solving
+
+- Node: [THEMATIC-CONFLICT]
+  - Definition: A story is [THEMATIC-CONFLICT] if exactly one of the following is true:
+    - The story is [THEME-HARDSHIP]
+    - The story is [THEME-DECEPTION]
+  - Notes:
+    - Exactly one = exclusive choice: the story cannot be both [THEME-HARDSHIP] and [THEME-DECEPTION]; it must be one or the other.
+
+- Node: [TONE-CONFLICTED]
+  - Definition: A story is [TONE-CONFLICTED] if both of the following are true:
+    - The story is [STYLE-LIGHTHEARTED]
+    - Either of the following is true:
+      - The story is [THEMATIC-CONFLICT]
+      - The story is [THEME-PROBLEM-SOLVING]
+  - Structure:
+    - Requirement 1: lighthearted style is present.
+    - Requirement 2: either a thematic exclusivity between hardship and deception, or a problem-solving theme.
+
+- Node: [PLOT-DRIVEN]
+  - Definition: A story is [PLOT-DRIVEN] if both of the following are true:
+    - The story is [HAS-CHECKHOVS-GUN]
+    - Exactly one of the following is true:
+      - The story is [THEME-PROBLEM-SOLVING]
+      - The story is [HAS-A-CLIFFHANGER]
+  - Structure:
+    - Must have Checkhov's gun.
+    - Must have either problem-solving or a cliffhanger, but not both.
+
+- Node: [MORAL-ARC]
+  - Definition: A story is [MORAL-ARC] if either of the following is true:
+    - Both of the following are true:
+      - The story is [THEME-HELPING-OTHERS]
+      - The story is not [THEME-DECEPTION]
+    - Both of the following are true:
+      - The story is [THEME-PROBLEM-SOLVING]
+      - The story is [THEME-HELPING-OTHERS]
+  - Structure:
+    - Option A: Helping Others theme, and explicitly not Deception.
+    - Option B: Helping Others together with Problem-Solving.
+
+- Node: [COMPLEX-NARRATIVE]
+  - Definition: A story is [COMPLEX-NARRATIVE] if either of the following is true:
+    - Both of the following are true:
+      - The story is [TONE-CONFLICTED]
+      - Both of the following are true:
+        - The story is [PLOT-DRIVEN]
+        - The story is [MORAL-ARC]
+    - All of the following are true:
+      - The story is not [TONE-CONFLICTED]
+      - Either of the following is true:
+        - The story is [PLOT-DRIVEN]
+        - The story is [HAS-A-CLIFFHANGER]
+      - The story is not both of the following:
+        - The story is [THEME-HARDSHIP]
+        - The story is [THEME-DECEPTION]
+  - Interpreting the branches:
+    - Branch 1 (conjunctive): The story must be tone-conflicted, and simultaneously both plot-driven and carrying a moral arc.
+    - Branch 2 (constrained alternative): The story must not be tone-conflicted, but must be either plot-driven or have a cliffhanger, and it cannot simultaneously have both Hardship and Deception themes.
+
+End of codebook — all node IDs, logical operations, and relationships are preserved exactly.

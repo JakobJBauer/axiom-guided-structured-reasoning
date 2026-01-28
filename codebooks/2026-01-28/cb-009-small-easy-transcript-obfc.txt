@@ -1,0 +1,53 @@
+Interviewer: Let's go through this codebook line by line. First, what is [attr-7]?
+
+Expert: 
+[attr-7]
+A story is [attr-7] if The story uses superlative forms.
+
+Interviewer: Clear. And what about [attr-6]?
+
+Expert:
+[attr-6]
+A story is [attr-6] if The story uses perfect aspect.
+
+Interviewer: Good. Now, what does [attr-5] mean?
+
+Expert:
+[attr-5]
+A story is [attr-5] if The story is about lost civilizations.
+
+Interviewer: Got it. How about [attr-2]?
+
+Expert:
+[attr-2]
+A story is [attr-2] if The story has juxtaposition.
+
+Interviewer: And the length-based tag [attr-4]?
+
+Expert:
+[attr-4]
+A story is [attr-4] if The story has fewer than 160 words.
+
+Interviewer: Now for the composed nodes. Walk me through [attr-1].
+
+Expert:
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+
+Interviewer: So to label something [attr-1], both conditions must hold at once. Understood. Lastly, explain [attr-3].
+
+Expert:
+[attr-3]
+A story is [attr-3] if either of the following are true:
+- Both of the following are true:
+  - The story is [attr-7]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-2]
+
+Interviewer: So for [attr-3], we accept either of two conjunctions: (1) superlatives plus perfect aspect, or (2) perfect aspect plus juxtaposition.
+
+Expert: Exactly. That keeps the logical structure intact: the node requires one of the listed options, and each option itself requires both of its subconditions.

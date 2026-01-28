@@ -1,0 +1,116 @@
+{
+  "nodes": [
+    {
+      "id": "style-classic",
+      "label": "STYLE-CLASSIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "STYLE-MODERN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-cliffhanger",
+      "label": "HAS-A-CLIFFHANGER",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "long-story",
+      "label": "LONG-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-bygone-eras",
+      "label": "TOPIC-BYGONE-ERAS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "classic-historical-long",
+      "label": "CLASSIC-HISTORICAL-LONG",
+      "formula_type": "And",
+      "formula_args": [
+        "style-classic",
+        "long-story",
+        "topic-bygone-eras"
+      ]
+    },
+    {
+      "id": "dynamic-style-cliff",
+      "label": "DYNAMIC-STYLE-CLIFF",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "style-modern",
+            "style-classic"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "style-classic"
+              ]
+            },
+            {
+              "formula_type": "Equal",
+              "formula_args": [
+                "story-style",
+                "style-modern"
+              ]
+            },
+            "has-a-cliffhanger",
+            {
+              "formula_type": "In",
+              "formula_args": [
+                "story-topic",
+                [
+                  "topic-bygone-eras"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "style-classic",
+      "target": "classic-historical-long"
+    },
+    {
+      "source": "long-story",
+      "target": "classic-historical-long"
+    },
+    {
+      "source": "topic-bygone-eras",
+      "target": "classic-historical-long"
+    },
+    {
+      "source": "style-modern",
+      "target": "dynamic-style-cliff"
+    },
+    {
+      "source": "style-classic",
+      "target": "dynamic-style-cliff"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "dynamic-style-cliff"
+    },
+    {
+      "source": "topic-bygone-eras",
+      "target": "dynamic-style-cliff"
+    }
+  ]
+}

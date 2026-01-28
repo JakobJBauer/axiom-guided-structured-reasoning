@@ -1,0 +1,279 @@
+Interviewer: Let's walk through this codebook node by node. I'll ask about each node ID and you explain exactly what it means. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What does [attr-31] mean?
+
+Expert: A story is [attr-31] if The story has the theme Growth.
+
+Interviewer: And [attr-23]?
+
+Expert: A story is [attr-23] if The story is humorous.
+
+Interviewer: [attr-33]?
+
+Expert: A story is [attr-33] if The story has the theme Helping Others.
+
+Interviewer: How about [attr-22]?
+
+Expert: A story is [attr-22] if The story starts with a preposition.
+
+Interviewer: [attr-26]?
+
+Expert: A story is [attr-26] if The story is modern.
+
+Interviewer: [attr-49]?
+
+Expert: A story is [attr-49] if The story uses perfect aspect.
+
+Interviewer: [attr-24]?
+
+Expert: A story is [attr-24] if The story is lighthearted.
+
+Interviewer: [attr-30]?
+
+Expert: A story is [attr-30] if The story has the theme Deception.
+
+Interviewer: [attr-36]?
+
+Expert: A story is [attr-36] if The story has the theme Kindness.
+
+Interviewer: [attr-51]?
+
+Expert: A story is [attr-51] if The story uses wh-questions.
+
+Interviewer: [attr-43]?
+
+Expert: A story is [attr-43] if The story is about lost civilizations.
+
+Interviewer: [attr-47]?
+
+Expert: A story is [attr-47] if The story is about time travel.
+
+Interviewer: [attr-7]?
+
+Expert: A story is [attr-7] if The story has Checkhov's gun.
+
+Interviewer: [attr-5]?
+
+Expert: A story is [attr-5] if The story has a moral lesson.
+
+Interviewer: [attr-32]?
+
+Expert: A story is [attr-32] if The story has the theme Hardship.
+
+Interviewer: [attr-12]?
+
+Expert: A story is [attr-12] if The story has more than 375 words.
+
+Interviewer: [attr-46]?
+
+Expert: A story is [attr-46] if The story is about seasonal changes.
+
+Interviewer: [attr-3]?
+
+Expert: A story is [attr-3] if The story has a cliffhanger.
+
+Interviewer: [attr-38]?
+
+Expert: A story is [attr-38] if The story has the theme Problem-Solving.
+
+Interviewer: [attr-35]?
+
+Expert: A story is [attr-35] if The story has the theme Innovation.
+
+Interviewer: [attr-37]?
+
+Expert: A story is [attr-37] if The story has the theme Magic.
+
+Interviewer: [attr-8]?
+
+Expert: A story is [attr-8] if The story has circular narrative structure.
+
+Interviewer: [attr-42]?
+
+Expert: A story is [attr-42] if The story is about giant creatures.
+
+Interviewer: [attr-48]?
+
+Expert: A story is [attr-48] if The story uses discourse markers.
+
+Interviewer: [attr-27]?
+
+Expert: A story is [attr-27] if The story is philosophical.
+
+Interviewer: [attr-20]?
+
+Expert: A story is [attr-20] if The story starts with a adverb.
+
+Interviewer: [attr-41]?
+
+Expert: A story is [attr-41] if The story is about cultural traditions.
+
+Interviewer: [attr-4]?
+
+Expert: A story is [attr-4] if The story has a flashback.
+
+Interviewer: [attr-9]?
+
+Expert: A story is [attr-9] if The story has readability score above 96.1.
+
+Interviewer: [attr-25]?
+
+Expert: A story is [attr-25] if The story is minimalist.
+
+Interviewer: [attr-50]?
+
+Expert: A story is [attr-50] if The story uses superlative forms.
+
+Interviewer: [attr-44]?
+
+Expert: A story is [attr-44] if The story is about magical lands.
+
+Interviewer: [attr-6]?
+
+Expert: A story is [attr-6] if The story has a story within a story.
+
+Interviewer: [attr-28]?
+
+Expert: A story is [attr-28] if The story is surreal.
+
+Interviewer: [attr-21]?
+
+Expert: A story is [attr-21] if The story starts with a noun.
+
+Interviewer: [attr-40]?
+
+Expert: A story is [attr-40] if The story is about bygone eras.
+
+Interviewer: [attr-13]?
+
+Expert: A story is [attr-13] if The story has readability score below 86.4.
+
+Interviewer: [attr-34]?
+
+Expert: A story is [attr-34] if The story has the theme Humor.
+
+Interviewer: [attr-45]?
+
+Expert: A story is [attr-45] if The story is about mystical creatures.
+
+Interviewer: Now let's get into the composite definitions. Start with [attr-10].
+
+Expert: Sure.
+
+- [attr-10]  
+  A story is [attr-10] if both of the following are true:
+  - The story is [attr-23]
+  - The story is [attr-24]
+
+Interviewer: Got it. Next, [attr-15].
+
+Expert: Here it is.
+
+- [attr-15]  
+  A story is [attr-15] if either of the following is true:
+  - The story is [attr-26]
+  - both of the following are true:
+    - The story is [attr-27]
+    - The story is [attr-28]
+
+Interviewer: Explain [attr-19].
+
+Expert: Of course.
+
+- [attr-19]  
+  A story is [attr-19] if exactly one of the following is true:
+  - The story is [attr-9]
+  - The story is [attr-13]
+
+Interviewer: What about [attr-17]?
+
+Expert: Here it is.
+
+- [attr-17]  
+  A story is [attr-17] if all of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-4]
+  - The story is [attr-8]
+
+Interviewer: [attr-29]?
+
+Expert: Simple conjunction.
+
+- [attr-29]  
+  A story is [attr-29] if both of the following are true:
+  - The story is [attr-33]
+  - The story is [attr-36]
+
+Interviewer: [attr-14]?
+
+Expert: That one mixes an and/or.
+
+- [attr-14]  
+  A story is [attr-14] if both of the following are true:
+  - The story is [attr-44]
+  - either of the following is true:
+    - The story is [attr-45]
+    - The story is [attr-42]
+
+Interviewer: Explain [attr-39].
+
+Expert: Sure.
+
+- [attr-39]  
+  A story is [attr-39] if either of the following is true:
+  - both of the following are true:
+    - The story is [attr-47]
+    - The story is [attr-43]
+  - The story is [attr-40]
+
+Interviewer: [attr-16]?
+
+Expert: Pay attention to the negation.
+
+- [attr-16]  
+  A story is [attr-16] if all of the following are true:
+  - The story is [attr-5]
+  - The story is [attr-36]
+  - The story is not [attr-30]
+
+Interviewer: [attr-11]?
+
+Expert: Straightforward.
+
+- [attr-11]  
+  A story is [attr-11] if both of the following are true:
+  - The story is [attr-35]
+  - The story is [attr-38]
+
+Interviewer: [attr-18]?
+
+Expert: Another conjunction.
+
+- [attr-18]  
+  A story is [attr-18] if both of the following are true:
+  - The story is [attr-12]
+  - The story is [attr-3]
+
+Interviewer: Finally, the big one: [attr-2]. This one looked nested.
+
+Expert: Yes, it's the most involved. I'll read it carefully.
+
+- [attr-2]  
+  A story is [attr-2] if either of the following is true:
+  - all of the following are true:
+    - The story is [attr-10]
+    - The story is [attr-16]
+    - either of the following is true:
+      - The story is [attr-17]
+      - The story is [attr-18]
+  - exactly one of the following is true:
+    - both of the following are true:
+      - The story is [attr-14]
+      - The story is not [attr-25]
+    - The story is [attr-39]
+
+Interviewer: Great. That's everything. One last question: you've preserved every node ID, every logical connector, and the structure exactly, right?
+
+Expert: Yes. Every node ID remains in [attr-1] format exactly as given. All logical operations—Not, And (phrased as "both/all of the following are true"), Or (phrased as "either of the following is true"), and "exactly one"—are preserved in their original relationships. I only changed the presentation to a Q&A transcript to make it clearer and more engaging while keeping the pragmatics intact.

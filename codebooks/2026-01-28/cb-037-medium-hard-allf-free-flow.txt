@@ -1,0 +1,47 @@
+Think of this as a friendly guide to the tags and how they fit together — written conversationally, but keeping every logical rule exactly as it was.
+
+[A story is [HAS-A-STORY-WITHIN-A-STORY] if] The story has a story within a story. In plain terms: we tag a piece as [HAS-A-STORY-WITHIN-A-STORY] when it literally contains a nested tale inside the main tale.
+
+[A story is [THEME-MAGIC] if] The story has the theme Magic. This is the label we give when magic is the thematic heartbeat of the work.
+
+[A story is [HAS-A-FLASHBACK] if] The story has a flashback. Use this whenever the narrative deliberately drops back into an earlier moment.
+
+[A story is [TOPIC-THE-ARTS] if] The story is about the arts. When the subject matter centers on artistic practice, creativity, artists, or art worlds, this tag applies.
+
+[A story is [STYLE-MINIMALIST] if] The story is minimalist. Reserve [STYLE-MINIMALIST] for works with a sparse, pared-down aesthetic.
+
+[A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if] The story has circular narrative structure. We use this when the plot loops back on itself or ends where it began.
+
+[A story is [DEVICE-XOR] if exactly one of the following is true:]
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [HAS-A-FLASHBACK]
+Here we’re saying [DEVICE-XOR] holds only when exactly one of those devices appears — either a nested story or a flashback, but not both at the same time.
+
+[A story is [DEVICE-EQUAL] if the truth value of [HAS-A-STORY-WITHIN-A-STORY] equals the truth value of [HAS-CIRCULAR-NARRATIVE-STRUCT]]
+This one checks parity: [DEVICE-EQUAL] is true when the presence (or absence) of a story-within-a-story matches the presence (or absence) of a circular narrative. They must align.
+
+[A story is [MAGIC-ART-MEMBER] if the story's primary theme or topic is in the set {[THEME-MAGIC], [TOPIC-THE-ARTS]}]
+If a story’s main identity is either magic or the arts, it belongs to [MAGIC-ART-MEMBER]. It’s a simple membership check: theme or topic falls in that set.
+
+[A story is [COMPLEX-NARRATIVE-CORE] if both of the following are true:]
+- Either of the following are true:
+  - The story is [DEVICE-XOR]
+  - The story is [DEVICE-EQUAL]
+- The story is not [STYLE-MINIMALIST] and (the story is [HAS-CIRCULAR-NARRATIVE-STRUCT] or the story is [HAS-A-FLASHBACK])
+Here we’re defining a core category for complex narrative behavior. First, the story must satisfy one of the device-level conditions ([DEVICE-XOR] or [DEVICE-EQUAL]). Second, it must not be minimalist, and it must have either a circular structure or a flashback. Both of those top-level bullets must hold for [COMPLEX-NARRATIVE-CORE] to apply.
+
+[A story is [ART-MAGIC-NARRATIVE] if both of the following are true:]
+- The story is [MAGIC-ART-MEMBER]
+- Either of the following are true:
+  - The story is [COMPLEX-NARRATIVE-CORE]
+  - The story is [STYLE-MINIMALIST]
+Think of [ART-MAGIC-NARRATIVE] as an intersection: the piece is rooted in magic or the arts, and then it’s either structurally complex (per [COMPLEX-NARRATIVE-CORE]) or deliberately minimalist. One of those structural conditions must hold, in addition to being a [MAGIC-ART-MEMBER].
+
+[A story is [COMPLEX-ARTISTIC-NARRATIVE] if both of the following are true:]
+- The story is [ART-MAGIC-NARRATIVE]
+- Exactly one of the following is true:
+  - The story is [DEVICE-EQUAL]
+  - The story is not [HAS-A-FLASHBACK]
+Finally, [COMPLEX-ARTISTIC-NARRATIVE] narrows things down further: it starts from [ART-MAGIC-NARRATIVE], and then requires a precise exclusive choice — either the device parity holds ([DEVICE-EQUAL]) or the story lacks a flashback, but not both. Exactly one of those two conditions must be true.
+
+That’s the full map: each label has a clear place, and the logical relationships — XOR, equality, “not,” “and,” “or,” and “exactly one” — are preserved exactly as specified. Use these descriptions while tagging and reasoning, and they’ll guide consistent, accurate annotations.

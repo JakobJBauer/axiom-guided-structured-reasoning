@@ -1,0 +1,53 @@
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if The story has a moral lesson.
+Operational definition: The predicate holds when the narrative contains an explicit or implicit didactic statement (a prescriptive ethical maxim or clear lesson about conduct). Use this label when the story communicates a recognizable moral conclusion or teaching.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs.
+Operational definition: Count paragraphs; this predicate is true if the paragraph count > 6.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if The story starts with a adverb.
+Operational definition: The first lexical token of the story is an adverb (e.g., "Quickly", "Suddenly"). Apply standard part-of-speech tagging to determine whether the initial token qualifies as an adverb.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if The story has circular narrative structure.
+Operational definition: The narrative exhibits circularity (for example, the plot returns to its beginning state, opening events are mirrored or revisited at the end, or the sequence is explicitly framed to close the initial scene). Label narratives that structurally close on their opening.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+Operational definition: The predicate is true when verb constructions in the narrative include perfect aspect (e.g., present perfect, past perfect, or other perfect forms such as "has done", "had done", "have been"). Use grammatical analysis to detect perfect aspect usage.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if The story uses superlative forms.
+Operational definition: The predicate holds when the text contains superlative adjectives or adverbs (e.g., "best", "most", "least") or morphological/analytic equivalents.
+
+[STYLISTIC-CHOICE]
+A story is [STYLISTIC-CHOICE] if both of the following are true:
+- The story is [STARTS-WITH-ADVERB]
+- Exactly one of the following is true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-SUPERLATIVE-FORMS]
+Specification: This node encodes a conjunction (AND) between the initial-adverb condition and an exclusive-or (XOR) between perfect-aspect and superlative usage. In plain terms: starts with an adverb AND (uses exactly one of perfect aspect or superlatives).
+
+[NARRATIVE-TYPE]
+A story is [NARRATIVE-TYPE] if either of the following is true:
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- Both of the following are true:
+  - The story is not [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - The story is [MANY-PARAGRAPHS]
+Specification: This node represents a disjunction (OR). It evaluates to true if the narrative is circular, or if it is not circular but is long (more than six paragraphs).
+
+[MORAL-OR-LONG]
+A story is [MORAL-OR-LONG] if exactly one of the following is true:
+- The story is [HAS-A-MORAL-LESSON]
+- The story is [MANY-PARAGRAPHS]
+Specification: This node implements exclusive disjunction (XOR) between having a moral lesson and being long (>6 paragraphs). It is true when exactly one of those predicates holds.
+
+[COMPLEXITY-HIGH]
+A story is [COMPLEXITY-HIGH] if both of the following are true:
+- Either of the following is true:
+  - The story is [STYLISTIC-CHOICE]
+  - The story is not [MORAL-OR-LONG]
+- The story is [NARRATIVE-TYPE]
+Specification: This node requires conjunction (AND) of two conditions: (1) a disjunction (OR) where either the stylistic-choice holds or the story is not moral-or-long, and (2) the narrative-type predicate holds. In logical terms: [COMPLEXITY-HIGH] = ([STYLISTIC-CHOICE] OR NOT [MORAL-OR-LONG]) AND [NARRATIVE-TYPE].

@@ -1,0 +1,28 @@
+Think of this as a small set of labeling rules — simple, human-friendly, and still precise enough for careful annotation. Below I’ve restated each node in a natural, conversational tone while keeping every ID, logical link, and operation exactly as they were.
+
+- A story is [attr-6] if the story is playful.
+  - In other words, when a story feels light, whimsical, or playful in tone, we tag it [attr-6].
+
+- A story is [attr-5] if the story is modern.
+  - Use [attr-5] for stories that have a contemporary vibe, themes, or sensibilities.
+
+- A story is [attr-4] if the story starts with a adjective.
+  - Apply [attr-4] when the very first word of the story is an adjective.
+
+- A story is [attr-7] if the story uses discourse markers.
+  - If the narration leans on words or phrases that guide the flow of ideas (like "however," "so," "then," and the like), mark it [attr-7].
+
+- A story is [attr-2] if the story has Checkhov's gun.
+  - When an element introduced earlier becomes significant later — that classic Chekhov’s gun principle — the story gets [attr-2].
+
+- A story is [attr-3] if both of the following are true:
+  - The story is [attr-5]
+  - The story is [attr-4]
+  - So [attr-3] is simply the intersection: a contemporary-tasting story that opens with an adjective.
+
+- A story is [attr-1] if both of the following are true:
+  - The story is either [attr-6] or [attr-7]
+  - The story is [attr-2]
+  - In plain terms, label a story [attr-1] when it pairs a playful tone or clear discourse markers with a Chekhov’s-gun element — that combination gives the narrative an engaging structural hook.
+
+That’s it — same logic, same IDs, but expressed in a more conversational, easy-to-read way.

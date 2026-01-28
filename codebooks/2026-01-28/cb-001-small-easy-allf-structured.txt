@@ -1,0 +1,60 @@
+Overview
+- Purpose: Provide a compact, structured reference for annotators. Each entry below defines when a story should be labeled with a given node (the node ID is shown in brackets).
+- Read this as: “A story is [NODE-ID] if <condition(s)>.”
+- Logical constructs (And, Or, Not, Exactly one of, All of the following, Either of the following) are preserved exactly as written and indicate how conditions combine.
+
+Node definitions (explicit, atomic)
+- [STYLE-CLASSIC]
+  - Definition: A story is [STYLE-CLASSIC] if The story is classic
+
+- [STYLE-MODERN]
+  - Definition: A story is [STYLE-MODERN] if The story is modern
+
+- [HAS-A-CLIFFHANGER]
+  - Definition: A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+
+- [LONG-STORY]
+  - Definition: A story is [LONG-STORY] if The story has more than 375 words
+
+- [TOPIC-BYGONE-ERAS]
+  - Definition: A story is [TOPIC-BYGONE-ERAS] if The story is about bygone eras
+
+Composite nodes (rules combining atomic conditions)
+- [CLASSIC-HISTORICAL-LONG]
+  - Summary: Use this when a story is classic, long, and about bygone eras.
+  - Rule form: A story is [CLASSIC-HISTORICAL-LONG] if all of the following are true:
+    - The story is [STYLE-CLASSIC]
+    - The story is [LONG-STORY]
+    - The story is [TOPIC-BYGONE-ERAS]
+
+- [DYNAMIC-STYLE-CLIFF]
+  - Summary: This label applies when the story has a dynamic relationship between style and cliffhanger presence. The rule is satisfied if either of two alternative condition-sets holds.
+  - Rule form: A story is [DYNAMIC-STYLE-CLIFF] if either of the following is true:
+    - Exactly one of the following is true:
+      - The story is [STYLE-MODERN]
+      - The story is [STYLE-CLASSIC]
+    - All of the following are true:
+      - The story is not [STYLE-CLASSIC]
+      - The story's style is equal to [STYLE-MODERN]
+      - The story is [HAS-A-CLIFFHANGER]
+      - The story's topic is in [TOPIC-BYGONE-ERAS]
+
+Annotation guidance (how to apply these rules)
+- Atomic nodes:
+  - Evaluate each atomic condition directly from the story text or metadata (e.g., count words for [LONG-STORY], identify explicit style or topic signals for style/topic nodes).
+- Composite nodes:
+  - For “all of the following are true”: require every listed bullet to hold before applying the composite label.
+  - For “Exactly one of the following is true”: label the story only if precisely one of the listed conditions holds (i.e., XOR).
+  - For “Either of the following is true”: apply the composite label if at least one of the two main branches is satisfied; each branch itself may contain its own logical structure (Exactly one, All of the following, Not, etc.).
+- Notes:
+  - Do not alter node IDs or the logical operators when performing annotation decisions.
+  - When a branch contains “The story is not [STYLE-CLASSIC]” plus “The story's style is equal to [STYLE-MODERN],” both must be read together (they are part of an “All of the following are true” block).
+
+Quick examples (illustrative)
+- A long (400+ words) classic story about a historical period → satisfies:
+  - [STYLE-CLASSIC], [LONG-STORY], [TOPIC-BYGONE-ERAS] → therefore [CLASSIC-HISTORICAL-LONG]
+- A short modern story with a cliffhanger about bygone eras → satisfies:
+  - For [DYNAMIC-STYLE-CLIFF], check first branch (Exactly one of [STYLE-MODERN], [STYLE-CLASSIC]): true if it’s modern and not classic → satisfies [DYNAMIC-STYLE-CLIFF]
+  - Second branch also possible if all four conditions align (style modern, not classic, cliffhanger, topic bygone eras).
+
+Keep this sheet handy while annotating: it preserves the exact logical relationships and node IDs you need to apply labels consistently and accurately.

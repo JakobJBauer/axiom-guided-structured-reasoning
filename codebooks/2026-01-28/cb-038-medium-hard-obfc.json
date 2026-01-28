@@ -1,0 +1,231 @@
+{
+  "nodes": [
+    {
+      "id": "attr-6",
+      "label": "story is lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "story has Checkhov's gun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "story has a cliffhanger",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "theme Hardship",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "theme Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "theme Deception",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "theme Problem-Solving",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "exactly one of hardship or deception",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-9",
+        "attr-8"
+      ]
+    },
+    {
+      "id": "attr-12",
+      "label": "attr-12",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-6",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-7",
+            "attr-11"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-5",
+      "label": "attr-5",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-3",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-11",
+            "attr-2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-4",
+      "label": "attr-4",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-10",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-8"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-11",
+            "attr-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "attr-1",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-12",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-5",
+                "attr-4"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-12"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-5",
+                "attr-2"
+              ]
+            },
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "attr-9",
+                    "attr-8"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-9",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-1"
+    }
+  ]
+}

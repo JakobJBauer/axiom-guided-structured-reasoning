@@ -1,0 +1,473 @@
+{
+  "nodes": [
+    {
+      "id": "has-a-cliffhanger",
+      "label": "HAS-A-CLIFFHANGER",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "STYLE-MODERN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-discourse-markers",
+      "label": "USES-DISCOURSE-MARKERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-flashback",
+      "label": "HAS-A-FLASHBACK",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-problem-solving",
+      "label": "THEME-PROBLEM-SOLVING",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adjective",
+      "label": "STARTS-WITH-ADJECTIVE",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "USES-WH-QUESTIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-juxtaposition",
+      "label": "HAS-JUXTAPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "STARTS-WITH-ADVERB",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-humor",
+      "label": "THEME-HUMOR",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "low-readability",
+      "label": "LOW-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-humorous",
+      "label": "STYLE-HUMOROUS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-minimalist",
+      "label": "STYLE-MINIMALIST",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-lighthearted",
+      "label": "STYLE-LIGHTHEARTED",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "high-readability",
+      "label": "HIGH-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "THEME-DECEPTION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "STYLE-PHILOSOPHICAL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "structural-devices",
+      "label": "STRUCTURAL-DEVICES",
+      "formula_type": "Or",
+      "formula_args": [
+        "has-a-cliffhanger",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "has-a-flashback",
+            "has-juxtaposition"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "uses-discourse-markers",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "has-a-cliffhanger"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opening-pattern",
+      "label": "OPENING-PATTERN",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "starts-with-adjective",
+            "starts-with-adverb"
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "uses-wh-questions",
+            "uses-discourse-markers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-tone",
+      "label": "STYLE-TONE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "style-modern",
+                "style-lighthearted"
+              ]
+            },
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "style-minimalist"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "style-humorous",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "style-philosophical"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thematic-core",
+      "label": "THEMATIC-CORE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "theme-problem-solving",
+            "theme-humor"
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "theme-deception",
+            "theme-problem-solving"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "readability-class",
+      "label": "READABILITY-CLASS",
+      "formula_type": "Xor",
+      "formula_args": [
+        "low-readability",
+        "high-readability"
+      ]
+    },
+    {
+      "id": "readability-impact",
+      "label": "READABILITY-IMPACT",
+      "formula_type": "And",
+      "formula_args": [
+        "readability-class",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-lighthearted",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "low-readability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engagement-pattern",
+      "label": "ENGAGEMENT-PATTERN",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "structural-devices",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "opening-pattern",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "has-a-cliffhanger"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-tone",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "thematic-core",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "style-philosophical"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "audience-ready",
+      "label": "AUDIENCE-READY",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "readability-impact",
+            "style-tone"
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "style-humorous",
+            "style-minimalist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "optimal-arc",
+      "label": "OPTIMAL-ARC",
+      "formula_type": "And",
+      "formula_args": [
+        "engagement-pattern",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "audience-ready",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "thematic-core",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "readability-class"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "has-a-cliffhanger",
+      "target": "structural-devices"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "structural-devices"
+    },
+    {
+      "source": "has-juxtaposition",
+      "target": "structural-devices"
+    },
+    {
+      "source": "uses-discourse-markers",
+      "target": "structural-devices"
+    },
+    {
+      "source": "starts-with-adjective",
+      "target": "opening-pattern"
+    },
+    {
+      "source": "starts-with-adverb",
+      "target": "opening-pattern"
+    },
+    {
+      "source": "uses-wh-questions",
+      "target": "opening-pattern"
+    },
+    {
+      "source": "uses-discourse-markers",
+      "target": "opening-pattern"
+    },
+    {
+      "source": "style-modern",
+      "target": "style-tone"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "style-tone"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "style-tone"
+    },
+    {
+      "source": "style-humorous",
+      "target": "style-tone"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "style-tone"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "thematic-core"
+    },
+    {
+      "source": "theme-humor",
+      "target": "thematic-core"
+    },
+    {
+      "source": "theme-deception",
+      "target": "thematic-core"
+    },
+    {
+      "source": "low-readability",
+      "target": "readability-class"
+    },
+    {
+      "source": "high-readability",
+      "target": "readability-class"
+    },
+    {
+      "source": "readability-class",
+      "target": "readability-impact"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "readability-impact"
+    },
+    {
+      "source": "low-readability",
+      "target": "readability-impact"
+    },
+    {
+      "source": "structural-devices",
+      "target": "engagement-pattern"
+    },
+    {
+      "source": "opening-pattern",
+      "target": "engagement-pattern"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "engagement-pattern"
+    },
+    {
+      "source": "style-tone",
+      "target": "engagement-pattern"
+    },
+    {
+      "source": "thematic-core",
+      "target": "engagement-pattern"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "engagement-pattern"
+    },
+    {
+      "source": "readability-impact",
+      "target": "audience-ready"
+    },
+    {
+      "source": "style-tone",
+      "target": "audience-ready"
+    },
+    {
+      "source": "style-humorous",
+      "target": "audience-ready"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "audience-ready"
+    },
+    {
+      "source": "engagement-pattern",
+      "target": "optimal-arc"
+    },
+    {
+      "source": "audience-ready",
+      "target": "optimal-arc"
+    },
+    {
+      "source": "thematic-core",
+      "target": "optimal-arc"
+    },
+    {
+      "source": "readability-class",
+      "target": "optimal-arc"
+    }
+  ]
+}

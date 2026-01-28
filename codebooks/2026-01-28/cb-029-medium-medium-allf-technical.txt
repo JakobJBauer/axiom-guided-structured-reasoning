@@ -1,0 +1,51 @@
+[STYLE-PHILOSOPHICAL]
+Definition: A story satisfies [STYLE-PHILOSOPHICAL] when its stylistic character is philosophical — i.e., the narrative foregrounds philosophical themes, inquiry, or argumentative reflection.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+Definition: A story satisfies [HAS-A-STORY-WITHIN-A-STORY] when the text contains an embedded narrative (a distinct story told inside the primary story).
+
+[USES-CONDITIONAL-MOOD]
+Definition: A story satisfies [USES-CONDITIONAL-MOOD] when it systematically employs the grammatical or modal conditional (for example: conditional clauses, modal auxiliaries such as would/could/should, or equivalent hypothetical constructions).
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+Definition: A story satisfies [HAS-CIRCULAR-NARRATIVE-STRUCT] when its narrative structure is circular or cyclical — for example, when the plot returns to its point of origin or events are organized in a recurrent loop.
+
+[TOPIC-CULTURAL-TRADITIONS]
+Definition: A story satisfies [TOPIC-CULTURAL-TRADITIONS] when its primary topical focus concerns cultural traditions, customs, or practices.
+
+[SHORT-STORY]
+Definition: A story satisfies [SHORT-STORY] when its length is strictly fewer than 160 words.
+
+[TOPIC-SEASONAL-CHANGES]
+Definition: A story satisfies [TOPIC-SEASONAL-CHANGES] when its primary topical focus concerns seasonal changes or cycles.
+
+[LOW-READABILITY]
+Definition: A story satisfies [LOW-READABILITY] when its measured readability score is below 86.4.
+
+[INNER-CONDITIONAL]
+A story is [INNER-CONDITIONAL] if both of the following are true:
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [USES-CONDITIONAL-MOOD]
+
+[PHILOS-CIRCULAR-XOR]
+A story is [PHILOS-CIRCULAR-XOR] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- The truth value of the following are equal:
+  - [SHORT-STORY]
+  - [LOW-READABILITY]
+
+[THEMATIC-IN]
+A story is [THEMATIC-IN] if the story's topic is in the set:
+- [TOPIC-CULTURAL-TRADITIONS]
+- [TOPIC-SEASONAL-CHANGES]
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if all of the following are true:
+- Either of the following is true:
+  - The story is [INNER-CONDITIONAL]
+  - The story is [PHILOS-CIRCULAR-XOR]
+- Both of the following are true:
+  - The story is [THEMATIC-IN]
+  - The story is not [SHORT-STORY]

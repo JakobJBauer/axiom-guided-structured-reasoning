@@ -1,0 +1,28 @@
+Think of this as a small set of labeling rules — simple, human-friendly, and still precise enough for careful annotation. Below I’ve restated each node in a natural, conversational tone while keeping every ID, logical link, and operation exactly as they were.
+
+- A story is [STYLE-PLAYFUL] if the story is playful.
+  - In other words, when a story feels light, whimsical, or playful in tone, we tag it [STYLE-PLAYFUL].
+
+- A story is [STYLE-MODERN] if the story is modern.
+  - Use [STYLE-MODERN] for stories that have a contemporary vibe, themes, or sensibilities.
+
+- A story is [STARTS-WITH-ADJECTIVE] if the story starts with a adjective.
+  - Apply [STARTS-WITH-ADJECTIVE] when the very first word of the story is an adjective.
+
+- A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers.
+  - If the narration leans on words or phrases that guide the flow of ideas (like "however," "so," "then," and the like), mark it [USES-DISCOURSE-MARKERS].
+
+- A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun.
+  - When an element introduced earlier becomes significant later — that classic Chekhov’s gun principle — the story gets [HAS-CHECKHOVS-GUN].
+
+- A story is [MODERN-OPENING] if both of the following are true:
+  - The story is [STYLE-MODERN]
+  - The story is [STARTS-WITH-ADJECTIVE]
+  - So [MODERN-OPENING] is simply the intersection: a contemporary-tasting story that opens with an adjective.
+
+- A story is [ENGAGING-STRUCTURE] if both of the following are true:
+  - The story is either [STYLE-PLAYFUL] or [USES-DISCOURSE-MARKERS]
+  - The story is [HAS-CHECKHOVS-GUN]
+  - In plain terms, label a story [ENGAGING-STRUCTURE] when it pairs a playful tone or clear discourse markers with a Chekhov’s-gun element — that combination gives the narrative an engaging structural hook.
+
+That’s it — same logic, same IDs, but expressed in a more conversational, easy-to-read way.

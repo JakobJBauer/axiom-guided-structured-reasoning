@@ -1,0 +1,103 @@
+[attr-6]
+A story is HIGH-READABILITY if its readability score is above 96.1
+
+[attr-7]
+A story is LOW-READABILITY if its readability score is below 86.4
+
+[attr-13]
+A story is STARTS-WITH-NOUN if it begins with a noun
+
+[attr-12]
+A story is STARTS-WITH-ADVERB if it begins with an adverb
+
+[attr-20]
+A story is USES-PERFECT-ASPECT if it uses the perfect aspect
+
+[attr-19]
+A story is USES-DISCOURSE-MARKERS if it includes discourse markers
+
+[attr-3]
+A story is HAS-A-CLIFFHANGER if it ends with a cliffhanger
+
+[attr-5]
+A story is HAS-JUXTAPOSITION if it contains juxtaposition
+
+[attr-4]
+A story is HAS-A-RED-HERRING if it contains a red herring
+
+[attr-11]
+A story is SHORT-STORY if it has fewer than 160 words
+
+[attr-15]
+A story is STYLE-PHILOSOPHICAL if its style is philosophical
+
+[attr-16]
+A story is STYLE-PLAYFUL if its style is playful
+
+[attr-14]
+A story is STYLE-HUMOROUS if its style is humorous
+
+[attr-18]
+A story is THEME-AGENCY if its theme is Agency
+
+[attr-9]
+A story is OPENING-TONE if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-13]
+  - The story is [attr-12]
+- Either of the following is true:
+  - The story is [attr-15]
+  - The story is [attr-16]
+
+[attr-8]
+A story is NARRATIVE-PACE if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-20]
+  - The story is not [attr-7]
+
+[attr-1]
+A story is COMEDIC-STRUCTURE if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-16]
+  - The story is [attr-14]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [attr-11]
+    - The story is [attr-19]
+  - Either of the following is true:
+    - The story is [attr-4]
+    - The story is [attr-5]
+
+[attr-17]
+A story is THEMATIC-FUSION if both of the following are true:
+- The story is [attr-18]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-15]
+    - The story is [attr-9]
+  - Exactly one of the following is true:
+    - The story is [attr-5]
+    - The story is [attr-4]
+
+[attr-10]
+A story is RAPTURE-ENDING if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-3]
+  - The story is not [attr-11]
+- Exactly one of the following is true:
+  - The story is [attr-3]
+  - The story is [attr-4]
+
+[attr-2]
+A story is COMPLEX-STORY if both of the following are true:
+- All of the following are true:
+  - The story is [attr-17]
+  - The story is [attr-1]
+- Either of the following is true:
+  - The story is [attr-8]
+  - Both of the following are true:
+    - The story is [attr-10]
+    - The story is not [attr-6]

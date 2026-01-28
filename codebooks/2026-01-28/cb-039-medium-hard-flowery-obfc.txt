@@ -1,0 +1,74 @@
+Preface — The Codex of Quiet Schemes
+
+In a lantern-lit library at the edge of a fog-bound sea, a careful scribe composed a codex to guide readers and annotators who wander through stories like distant islands. Each entry below is both a whispered epithet and a precise decree: a flourish of imagination wrapped around an unyielding logical skeleton. Read the ornate preamble if you must—enjoy the scent of old paper and the warmth of metaphor—but know that beneath every embroidered phrase the exact rules remain intact, steadfast as lighthouses.
+
+[attr-10]
+In the lexicon of shadows and sleights, we name a tale [attr-10] when it wears the cloak of deception—when false faces, secret bargains, or cunning misdirections shape its heart.
+A story is [attr-10] if The story has the theme Deception.
+
+[attr-11]
+In a corner of the codex where compassion is illuminated like morning dew, a narrative is crowned [attr-11] when its pulse quickens for the sake of others—when aid and benevolence are the story’s quiet purpose.
+A story is [attr-11] if The story has the theme Helping Others.
+
+[attr-8]
+Where thought unfurls like slow, fragrant smoke, we mark a story [attr-8] when it lingers over questions—musing on meaning, existence, and the gravity of choice.
+A story is [attr-8] if The story is philosophical.
+
+[attr-2]
+Among plot devices, some objects hum with promise. We label a tale [attr-2] when an element placed early returns with purpose—Chekhov’s gun waiting patiently for its cue.
+A story is [attr-2] if The story has Checkhov's gun.
+
+[attr-6]
+At the story’s threshold, the first word may stand like a statue. If that first step is a noun, the tale earns the marker [attr-6].
+A story is [attr-6] if The story starts with a noun.
+
+[attr-12]
+There are stories that map secret riches beneath common soil—chests, relics, and buried maps. Such tales are gathered under the banner [attr-12].
+A story is [attr-12] if The story is about hidden treasures.
+
+[attr-9]
+When characters seize the reins of fate and act with self-directed force, the story is blessed with [attr-9]—the motif of will and consequence.
+A story is [attr-9] if The story has the theme Agency.
+
+[attr-5]
+Sometimes the tale opens with a flourish of description, an adjective that paints the first breath. We call such openings [attr-5].
+A story is [attr-5] if The story starts with a adjective.
+
+[attr-3]
+When contrasts are placed shoulder to shoulder—bright shadow beside soft clarity—such artful pairing is captured by the tag [attr-3].
+A story is [attr-3] if The story has juxtaposition.
+
+[attr-4]
+Consider the opening’s primacy—the way beginnings assert themselves. This node captures that heraldic quality in two formal ways, as if weighing whether a prologue is a statue or a painted arch.
+A story is [attr-4] if either of the following is true:
+- The story is [attr-6]
+- The story is [attr-5] xor [attr-6]
+
+[attr-7]
+Now we stitch together opening gravitas and cunning plotcraft. A story becomes [attr-7] when its opening claims primacy and one of two intricate configurations of deception, treasure, and agency holds—like a pattern in woven silk that matches a secret map.
+A story is [attr-7] if both of the following are true:
+- The story is [attr-4]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-10]
+    - The story is [attr-12]
+  - Either of the following is true:
+    - The story is [attr-2] xor [attr-9]
+    - The story is [attr-10] and not [attr-9]
+
+[attr-1]
+Here we arrive at the cathedral of intricacy. A tale is anointed [attr-1] when it satisfies the patterned deceit of [attr-7], resists a simple pairing of help and philosophy, and displays either a deliberate contrast or a specific syntactic profile at its opening. Think of it as a tapestry whose threads of beginning, theme, and stylistic choices are woven into deliberate complexity.
+A story is [attr-1] if all of the following are true:
+- The story is [attr-7]
+- Not both of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-8]
+- Either of the following is true:
+  - The story is [attr-3]
+  - Both of the following are true:
+    - The story is [attr-6] equals true
+    - The story is [attr-5] equals false
+
+Epilogue — How to Use the Codex
+
+Let this ornate commentary guide you as you annotate: the flowery language is a lamp to help you see the shape of each criterion, but the formal conditions above are the true compass. Apply them exactly as written; they are the sturdy bones beneath the velvet cloak of metaphor.

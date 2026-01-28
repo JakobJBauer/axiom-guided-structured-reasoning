@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "attr-4",
+      "label": "True when the story focuses on cultural traditions.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "True when the story contains a moral lesson.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "True when the story begins with an adverb.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "True when the story’s theme is Magic.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "True when all of the following are true: attr-4, attr-3, attr-1",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-4",
+        "attr-3",
+        "attr-1"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-4",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-5"
+    }
+  ]
+}

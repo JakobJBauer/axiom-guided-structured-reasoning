@@ -1,0 +1,72 @@
+Interviewer: Let's go through this codebook together. First, what is [THEME-DECEPTION]?
+
+Expert: A story is [THEME-DECEPTION] if The story has the theme Deception.
+
+Interviewer: Simple and clear. Next: [HAS-A-STORY-WITHIN-A-STORY]?
+
+Expert: A story is [HAS-A-STORY-WITHIN-A-STORY] if The story has a story within a story.
+
+Interviewer: And [STYLE-SURREAL]?
+
+Expert: A story is [STYLE-SURREAL] if The story is surreal.
+
+Interviewer: How about [THEME-HELPING-OTHERS]?
+
+Expert: A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others.
+
+Interviewer: [STYLE-MINIMALIST]?
+
+Expert: A story is [STYLE-MINIMALIST] if The story is minimalist.
+
+Interviewer: [THEME-GROWTH]?
+
+Expert: A story is [THEME-GROWTH] if The story has the theme Growth.
+
+Interviewer: [STYLE-HUMOROUS]?
+
+Expert: A story is [STYLE-HUMOROUS] if The story is humorous.
+
+Interviewer: [USES-DISCOURSE-MARKERS] — what does that label capture?
+
+Expert: A story is [USES-DISCOURSE-MARKERS] if The story uses discourse markers.
+
+Interviewer: [STARTS-WITH-NOUN]?
+
+Expert: A story is [STARTS-WITH-NOUN] if The story starts with a noun.
+
+Interviewer: [HAS-CIRCULAR-NARRATIVE-STRUCT]?
+
+Expert: A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if The story has circular narrative structure.
+
+Interviewer: Now things get more logical. Explain [NARRATIVE-COMPLEXITY].
+
+Expert: Sure — [NARRATIVE-COMPLEXITY] is defined with a clear logical condition. A story is [NARRATIVE-COMPLEXITY] if either of the following is true:
+- Both of the following are true:
+  - The story is [HAS-A-STORY-WITHIN-A-STORY]
+  - Exactly one of the following is true:
+    - The story is [THEME-DECEPTION]
+    - The story is [THEME-GROWTH]
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT] and the story is not [STARTS-WITH-NOUN]
+
+Interviewer: Let me restate that to make sure I’ve got it. One way to meet [NARRATIVE-COMPLEXITY] is to have a story within a story, and alongside that, exactly one of the two themes — either [THEME-DECEPTION] or [THEME-GROWTH] — must hold. The other way is to have a circular narrative structure while not starting with a noun. Correct?
+
+Expert: Exactly. That restates the two branches without changing the logical structure.
+
+Interviewer: Great. Finally, what about [ENGAGING-STORY]?
+
+Expert: [ENGAGING-STORY] ties together narrative complexity and some surface cues. A story is [ENGAGING-STORY] if both of the following are true:
+- The story is [NARRATIVE-COMPLEXITY]
+- Either of the following is true:
+  - The truth of [USES-DISCOURSE-MARKERS] equals the truth of [STARTS-WITH-NOUN] (both true or both false)
+  - One of the following style nodes is in the story:
+    - The story is [STYLE-SURREAL]
+    - The story is [STYLE-HUMOROUS]
+    - The story is [STYLE-MINIMALIST]
+
+Interviewer: So to be an [ENGAGING-STORY], you must first satisfy [NARRATIVE-COMPLEXITY], and then either match the presence/absence of discourse markers with whether the story starts with a noun, or else be one of those three styles — surreal, humorous, or minimalist.
+
+Expert: Yes — that captures the logic exactly: both the narrative condition and one of the two style/discourse conditions must hold.
+
+Interviewer: Thanks — that was a clear walk-through. That preserves every node, every bracketed ID, and all the logical operators you specified.
+
+Expert: You're welcome — the structure and logical relationships are unchanged; I only presented them as an interview for readability.

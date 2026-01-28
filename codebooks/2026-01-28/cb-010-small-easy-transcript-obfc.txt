@@ -1,0 +1,36 @@
+Interviewer: Let's go through this codebook together. First, what does [attr-4] mean?
+
+Expert: A story is [attr-4] if the story has the theme Innovation.
+
+Interviewer: Got it. And what about [attr-6]?
+
+Expert: A story is [attr-6] if the story is about cultural traditions.
+
+Interviewer: How about [attr-5]?
+
+Expert: A story is [attr-5] if the story is about bygone eras.
+
+Interviewer: I see. There's also [attr-7] — what does that denote?
+
+Expert: A story is [attr-7] if the story uses wh-questions.
+
+Interviewer: And these start-with tags — what do they indicate?
+
+Expert: A story is [attr-2] if the story starts with a noun.
+A story is [attr-3] if the story starts with a preposition.
+
+Interviewer: Now the important composite node — tell me how [attr-1] is defined.
+
+Expert: Sure. Here's the exact logical definition you should use:
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-4]
+- Either of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- The story is [attr-7]
+
+Interviewer: So to confirm, a story must have the Innovation theme, must be either about cultural traditions or bygone eras, and must use wh-questions — all three together — to be marked as [attr-1]?
+
+Expert: Exactly. All those conditions together form the label [attr-1].

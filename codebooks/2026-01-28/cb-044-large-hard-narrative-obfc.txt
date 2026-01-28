@@ -1,0 +1,127 @@
+Imagine a quiet archive where each tale is a living thing, labeled carefully so we can whisper its secrets back into the world. In this little book of rules, each label is a name in square brackets — exact and sacred — and each rule is a path that tells us how a story earns that name. Walk with me through that archive; I will tell you how each name is given, and I will speak in the rhythm of the rules themselves so nothing gets lost.
+
+[attr-6]
+In the archive’s catalog, we call a story [attr-6] when, like two contrasting portraits hung side by side, the tale contains juxtaposition.
+
+[attr-16]
+A story is crowned [attr-16] if it leans into thought — if it feels like a meditation, a question posed in sentences.
+
+[attr-18]
+When hardship threads through the plot, shaping choices and scars, the story earns the tag [attr-18].
+
+[attr-20]
+If the tale carries laughter, wit, or playful irony as a theme, we call it [attr-20].
+
+[attr-23]
+A story focused on painters, musicians, performers, or the life of art itself is assigned [attr-23].
+
+[attr-5]
+A plot that loops back to its own beginning — a circle traced in time — is marked [attr-5].
+
+[attr-17]
+When deceit, tricks, or hidden motives drive the narrative, the story becomes [attr-17].
+
+[attr-19]
+A tale where helping others is a central thread receives the label [attr-19].
+
+[attr-4]
+If the story stops to fold a moral into its last lines, we mark it [attr-4].
+
+[attr-13]
+A story that is written to amuse — that carries a humorous style — is noted as [attr-13].
+
+[attr-15]
+When prose pares itself down to essentials and an economy of language defines the work, the story is [attr-15].
+
+[attr-22]
+If giants, titans, or enormous creatures roam the plot, the tale is filed under [attr-22].
+
+[attr-14]
+A story with a buoyant, easy tone — where worry is brief and warmth prevails — wears the tag [attr-14].
+
+[attr-24]
+Stories that step through hours, years, or eras into different times are labeled [attr-24].
+
+[attr-12]
+If the very first word of the story is a preposition — a small pivot like “In,” “On,” or “Before” — then the story is [attr-12].
+
+[attr-11]
+The archive’s short shelf holds tales under 160 words; those stories are [attr-11].
+
+[attr-25]
+When language reaches for the extremes — “best,” “largest,” “most”— the story is noted as [attr-25].
+
+[attr-21]
+A prevailing theme of kindness in acts and choices earns the label [attr-21].
+
+[attr-7]
+If a story’s clarity is so bright that it scores above 96.1 on the readability scale, it is called [attr-7].
+
+[attr-9]
+Here the archive’s curators lean in and say: A story is [attr-9] if both of the following are true:
+- The story is [attr-6]
+- Either of the following is true:
+  - The story is [attr-12]
+  - The story is [attr-11]
+Think of JUX-PREP-CLASH as a meeting where contrast meets a specific start or a very short form.
+
+[attr-10]
+There is another, rarer classification: A story is [attr-10] if both of the following are true:
+- The story is [attr-9]
+- Exactly one of the following is true:
+  - The story is [attr-25]
+  - The story is [attr-15]
+It’s a delicate balance — juxtaposition and that clash, plus either bold extremes of language or a minimalist restraint, but never both.
+
+[attr-2]
+When art and thought entwine, we award the name [attr-2] if both of the following are true:
+- The story is [attr-23]
+- Either of the following is true:
+  - The story is [attr-16]
+  - The story is [attr-10]
+Picture an artist who asks the big questions: that’s ARTISTIC-PHILOSOPHY, born from topic plus either philosophical depth or a striking juxtaposed superlative.
+
+[attr-8]
+The archive loves hybrids. A story is [attr-8] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-20]
+  - The story is [attr-13]
+- All of the following are true:
+  - The story is not [attr-15]
+  - Exactly one of the following is true:
+    - The story is [attr-14]
+    - The story is [attr-25]
+So humor is present by theme or style, the prose is not minimalist, and the tone is either light or exaggerated — but not both.
+
+[attr-1]
+Some stories wear a compassionate contradiction. A story is [attr-1] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-4]
+  - Either of the following is true:
+    - The story is [attr-19]
+    - The story is [attr-21]
+- Exactly one of the following is true:
+  - The story is [attr-17]
+  - The story is [attr-18]
+In plain terms: altruistic lessons paired with helping or kindness, or a solitary presence of deception or hardship — that tension gives rise to ALTRUISTIC-CONTRACTION.
+
+[attr-3]
+At the top shelf sits [attr-3]. A story is [attr-3] if both of the following are true:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-2]
+    - The story is [attr-1]
+  - Exactly one of the following is true:
+    - The story is [attr-8]
+    - The story is [attr-22]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-24]
+    - The story is [attr-5]
+  - Both of the following are true:
+    - The story is [attr-11]
+    - The story is [attr-7]
+
+Here, the archive binds complexity and art: the first pillar demands either an artistic, altruistic fusion or one exclusive choice between a humorous hybrid and giant creatures; the second pillar requires either time-travel woven into a circular structure, or the compact clarity of a short story with very high readability. Only when one block from the first pillar and one block from the second pillar stand together does the story ascend to [attr-3].
+
+And so each tale finds its place, labeled by careful, sometimes surprising rules. The archive keeps nothing arbitrary: every bracketed name, every connective phrase — both, either, exactly one, not — is a guidepost so readers, writers, and annotators can trace the logic back through the story’s bones.

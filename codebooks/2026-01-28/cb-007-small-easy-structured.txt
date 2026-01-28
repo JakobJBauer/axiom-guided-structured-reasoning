@@ -1,0 +1,60 @@
+Codebook — structured, clear, and ready for annotation
+
+Overview
+- Purpose: Provide concise, unambiguous definitions for each annotation node.
+- Format: Each node is listed by its exact ID in [BRACKET] format, followed by a short, natural-language definition and pragmatic annotation guidance.
+- Logical combinations: Compound nodes preserve the original logical structure and operators (both/and/either/or). Do not change node IDs or their relationships.
+
+Individual node definitions
+
+- [STYLE-LIGHTHEARTED]
+  - Definition: A story qualifies as [STYLE-LIGHTHEARTED] when its overall tone is lighthearted.
+  - Annotation guidance: Mark this if the story’s voice and mood feel playful, breezy, or not serious.
+
+- [STARTS-WITH-ADVERB]
+  - Definition: A story qualifies as [STARTS-WITH-ADVERB] when the very first word of the story is an adverb.
+  - Annotation guidance: Check the opening token. If it is an adverb (e.g., “Quickly,” “Happily,” “Suddenly,” etc.), mark this node true.
+
+- [LONG-STORY]
+  - Definition: A story qualifies as [LONG-STORY] when it contains more than 375 words.
+  - Annotation guidance: Count words; if count > 375, mark true.
+
+- [THEME-HUMOR]
+  - Definition: A story qualifies as [THEME-HUMOR] when its primary theme is Humor.
+  - Annotation guidance: Mark this if the central theme or intent of the piece is comedic or designed to make the reader laugh.
+
+- [TOPIC-BYGONE-ERAS]
+  - Definition: A story qualifies as [TOPIC-BYGONE-ERAS] when its subject matter concerns bygone eras (past historical periods).
+  - Annotation guidance: Mark this if the story explicitly centers on, references, or is set in a past historical era.
+
+Compound node: logical structure preserved
+
+- [WHIMSY-RETRO-COMEDY]
+  - Natural-language summary: This node is true when a story is both lighthearted in style and comedic in theme, and additionally is either about bygone eras or begins with an adverb.
+  - Formal logical structure (preserved exactly):
+    - A story is WHIMSY-RETRO-COMEDY if both of the following are true:
+      - The story is [STYLE-LIGHTHEARTED]
+      - The story is [THEME-HUMOR] and either of the following is true:
+        - The story is [TOPIC-BYGONE-ERAS]
+        - The story is [STARTS-WITH-ADVERB]
+  - Annotation checklist (step-by-step):
+    1. Confirm [STYLE-LIGHTHEARTED] is true.
+    2. Confirm [THEME-HUMOR] is true.
+    3. Confirm at least one of the following:
+       - [TOPIC-BYGONE-ERAS] is true, OR
+       - [STARTS-WITH-ADVERB] is true.
+    4. If steps 1–3 hold, mark [WHIMSY-RETRO-COMEDY] true; otherwise mark false.
+  - Tip: Treat the inner “and either” clause carefully — both the lighthearted style and the humor theme are required, and the topic/start condition is a necessary alternative paired with the humor theme.
+
+Quick reference (compact)
+- [STYLE-LIGHTHEARTED]: Tone is lighthearted.
+- [STARTS-WITH-ADVERB]: First word is an adverb.
+- [LONG-STORY]: > 375 words.
+- [THEME-HUMOR]: Theme = Humor.
+- [TOPIC-BYGONE-ERAS]: Topic = bygone eras.
+- [WHIMSY-RETRO-COMEDY]: [STYLE-LIGHTHEARTED] AND ([THEME-HUMOR] AND ([TOPIC-BYGONE-ERAS] OR [STARTS-WITH-ADVERB]))
+
+Notes for annotators
+- Preserve the exact node IDs when tagging.
+- Follow the logical flow for compound nodes; do not assume any implied shortcuts.
+- Accuracy is critical: verify each atomic node before combining them into compound nodes.

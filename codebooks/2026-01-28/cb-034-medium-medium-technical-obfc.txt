@@ -1,0 +1,52 @@
+[attr-8]
+A story is classified as [attr-8] if the narrative contains the thematic element "Growth."
+
+[attr-9]
+A story is classified as [attr-9] if the narrative contains the thematic element "Helping Others."
+
+[attr-5]
+A story is classified as [attr-5] if the first lexical token of the story is an adverb.
+
+[attr-7]
+A story is classified as [attr-7] if the narrative exhibits characteristics of modern style.
+
+[attr-11]
+A story is classified as [attr-11] if the subject matter concerns seasonal changes.
+
+[attr-12]
+A story is classified as [attr-12] if the narrative employs perfect aspect in verb constructions.
+
+[attr-3]
+A story is classified as [attr-3] if the computed readability score for the text is below 86.4.
+
+[attr-6]
+A story is classified as [attr-6] if the narrative exhibits characteristics of classic style.
+
+[attr-10]
+A story is classified as [attr-10] if the subject matter concerns mystical creatures.
+
+[attr-2]
+A story is classified as [attr-2] if the computed readability score for the text is above 96.1.
+
+[attr-4]
+A story is classified as [attr-4] if and only if all of the following conditions hold:
+- The story is [attr-11]
+- The story is [attr-8]
+- The story is not [attr-10]
+
+[attr-1]
+A story is classified as [attr-1] if any one of the following disjunctive conditions is satisfied:
+
+- Conjunctive condition A (both must be true):
+  - The story is [attr-4]
+  - The story is [attr-9]
+
+- Disjunctive branch B (either of the following sub-branches):
+  - Branch B1 (both must be true):
+    - The story is [attr-7]
+    - The story is not [attr-3]
+  - Branch B2 (both must be true):
+    - The story is [attr-6]
+    - Conjunctive requirement (both must be true):
+      - The story is [attr-12]
+      - The story is [attr-2]

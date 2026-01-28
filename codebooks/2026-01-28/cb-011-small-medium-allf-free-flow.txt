@@ -1,0 +1,20 @@
+[TOPIC-THE-ARTS]  
+Tag a story as [TOPIC-THE-ARTS] whenever it’s simply about the arts.
+
+[USES-CONDITIONAL-MOOD]  
+Use [USES-CONDITIONAL-MOOD] when the story is written using conditional mood.
+
+[STARTS-WITH-ADJECTIVE]  
+Mark [STARTS-WITH-ADJECTIVE] if the very beginning of the story starts with a adjective.
+
+[STYLE-PHILOSOPHICAL]  
+Apply [STYLE-PHILOSOPHICAL] when the story has a philosophical style or character.
+
+[CONDITIONAL-AND-NOT-START]  
+A story counts as [CONDITIONAL-AND-NOT-START] only when both things line up at the same time: the story is [USES-CONDITIONAL-MOOD], and the story is not [STARTS-WITH-ADJECTIVE].
+
+[ARTS-XOR-PHILOSOPHICAL]  
+Give a story the label [ARTS-XOR-PHILOSOPHICAL] when exactly one of these is true—no more, no less: the story is [TOPIC-THE-ARTS] or the story is [STYLE-PHILOSOPHICAL].
+
+[COMPLEX-CRITERION]  
+A story qualifies as [COMPLEX-CRITERION] if either path gets you there. One path is straightforward: the story is [CONDITIONAL-AND-NOT-START]. The other path is more layered, and it requires both of the following to be true: the story is in the set of topics that includes [TOPIC-THE-ARTS], and the truth of [STYLE-PHILOSOPHICAL] is equal to the truth of not [USES-CONDITIONAL-MOOD].

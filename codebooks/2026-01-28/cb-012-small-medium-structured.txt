@@ -1,0 +1,30 @@
+## Codebook (Structured)
+
+### 1) Core Labels (Atomic Nodes)
+
+#### [THEME-HELPING-OTHERS]
+- **Use this label when:** the story has the theme **Helping Others**.
+
+#### [TOPIC-MYSTICAL-CREATURES]
+- **Use this label when:** the story is about **mystical creatures**.
+
+#### [STARTS-WITH-PREPOSITION]
+- **Use this label when:** the story **starts with a preposition**.
+
+---
+
+### 2) Composite Labels (Built from Other Nodes)
+
+#### [MYTHIC-BUT-NOT-ALTRUISTIC]
+- **Assign [MYTHIC-BUT-NOT-ALTRUISTIC] if and only if** *both* conditions below are true (**And**):
+  - The story is **[TOPIC-MYSTICAL-CREATURES]**
+  - The story is **not [THEME-HELPING-OTHERS]** (**Not**)
+
+---
+
+### 3) Higher-Level Composite Label
+
+#### [INVITING-OPENING]
+- **Assign [INVITING-OPENING] if and only if** *both* conditions below are true (**And**):
+  - The story is **[STARTS-WITH-PREPOSITION]**
+  - The story is **not [MYTHIC-BUT-NOT-ALTRUISTIC]** (**Not**)

@@ -1,0 +1,100 @@
+{
+  "nodes": [
+    {
+      "id": "short-story",
+      "label": "SHORT-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-magic",
+      "label": "THEME-MAGIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "USES-WH-QUESTIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-checkhovs-gun",
+      "label": "HAS-CHECKHOVS-GUN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "high-readability",
+      "label": "HIGH-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "mysterious-magic",
+      "label": "MYSTERIOUS-MAGIC",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-magic",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "has-checkhovs-gun"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tight-magic-craft",
+      "label": "TIGHT-MAGIC-CRAFT",
+      "formula_type": "And",
+      "formula_args": [
+        "short-story",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "mysterious-magic",
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "high-readability"
+                  ]
+                },
+                "uses-wh-questions"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "theme-magic",
+      "target": "mysterious-magic"
+    },
+    {
+      "source": "has-checkhovs-gun",
+      "target": "mysterious-magic"
+    },
+    {
+      "source": "short-story",
+      "target": "tight-magic-craft"
+    },
+    {
+      "source": "mysterious-magic",
+      "target": "tight-magic-craft"
+    },
+    {
+      "source": "high-readability",
+      "target": "tight-magic-craft"
+    },
+    {
+      "source": "uses-wh-questions",
+      "target": "tight-magic-craft"
+    }
+  ]
+}

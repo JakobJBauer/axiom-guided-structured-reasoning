@@ -1,0 +1,73 @@
+Interviewer: Let's go through this codebook one node at a time. I'll ask, you answer—so anyone can use this as a guided annotation transcript. Ready?
+
+Annotator: Ready. Ask away.
+
+Interviewer: What does [MANY-PARAGRAPHS] mean?
+
+Annotator: A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs.
+
+Interviewer: And [STYLE-CLASSIC]?
+
+Annotator: A story is [STYLE-CLASSIC] if The story is classic.
+
+Interviewer: How about [HAS-A-CLIFFHANGER]?
+
+Annotator: A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger.
+
+Interviewer: [STARTS-WITH-PREPOSITION] — what do we check for?
+
+Annotator: A story is [STARTS-WITH-PREPOSITION] if The story starts with a preposition.
+
+Interviewer: What about thematic nodes like [THEME-DECEPTION]?
+
+Annotator: A story is [THEME-DECEPTION] if The story has the theme Deception.
+
+Interviewer: And [STYLE-PLAYFUL]?
+
+Annotator: A story is [STYLE-PLAYFUL] if The story is playful.
+
+Interviewer: [THEME-HELPING-OTHERS]?
+
+Annotator: A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others.
+
+Interviewer: [THEME-AGENCY] — quick answer?
+
+Annotator: A story is [THEME-AGENCY] if The story has the theme Agency.
+
+Interviewer: [HAS-JUXTAPOSITION] — what does that capture?
+
+Annotator: A story is [HAS-JUXTAPOSITION] if The story has juxtaposition.
+
+Interviewer: And [STYLE-PHILOSOPHICAL]?
+
+Annotator: A story is [STYLE-PHILOSOPHICAL] if The story is philosophical.
+
+Interviewer: Now the composite node [RICH-THEME] — this one looks logical. How is it defined?
+
+Annotator: A story is [RICH-THEME] if either of the following is true:
+- The story is both [THEME-DECEPTION] and not [THEME-HELPING-OTHERS]
+- Exactly one of the following is true:
+  - The story is [THEME-AGENCY]
+  - The story is [THEME-HELPING-OTHERS]
+
+Interviewer: Let me rephrase to check I understand: [RICH-THEME] becomes true when either deception appears without helping-others, or when exactly one of agency or helping-others is present. Correct?
+
+Annotator: Correct. That restates the logic while preserving the structure: either the conjunction with a negation, or an exclusive choice between two themes.
+
+Interviewer: Finally, [COMPLEX-CLASSIC-ARC] — walk me through it slowly.
+
+Annotator: A story is [COMPLEX-CLASSIC-ARC] if both of the following are true:
+- The story is [STYLE-CLASSIC]
+- Either of the following is true:
+  - The story is both [HAS-A-CLIFFHANGER] and not [STYLE-PLAYFUL]
+  - The story is both [STARTS-WITH-PREPOSITION] and [RICH-THEME]
+
+Interviewer: So to be a [COMPLEX-CLASSIC-ARC], the story must be classic, and additionally either have a cliffhanger but not be playful, or start with a preposition and satisfy the [RICH-THEME] condition. Is that a fair plain-English read?
+
+Annotator: That's exactly it—plain-English interpretation, with the original logical relationships unchanged.
+
+Interviewer: Great. Anything else users should keep in mind when annotating with this transcript?
+
+Annotator: Yes — when you apply these labels, preserve the exact node IDs in brackets and follow the logical operators (both / not / either / exactly one) as stated. The transcript style here is only a presentation layer; the logical structure and node identifiers must remain unchanged for correct reasoning.
+
+Interviewer: Thanks — that should make the codebook easier to follow for annotators.

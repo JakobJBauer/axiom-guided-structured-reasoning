@@ -1,0 +1,81 @@
+[attr-10]
+A story is [attr-10] if it has fewer than 160 words.
+
+[attr-17]
+A story is [attr-17] if it has the theme Kindness.
+
+[attr-14]
+A story is [attr-14] if it has the theme Helping Others.
+
+[attr-18]
+A story is [attr-18] if it has the theme Problem-Solving.
+
+[attr-12]
+A story is [attr-12] if it is philosophical.
+
+[attr-5]
+A story is [attr-5] if its readability score is above 96.1.
+
+[attr-13]
+A story is [attr-13] if it is playful.
+
+[attr-15]
+A story is [attr-15] if it has the theme Humor.
+
+[attr-11]
+A story is [attr-11] if it is humorous.
+
+[attr-4]
+A story is [attr-4] if it contains a story within the story.
+
+[attr-19]
+A story is [attr-19] if it’s about mystical creatures.
+
+[attr-3]
+A story is [attr-3] if it includes a red herring.
+
+[attr-6]
+A story is [attr-6] if both are true:
+- The story is [attr-17]
+- The story is [attr-14]
+(Both must hold simultaneously.)
+
+[attr-7]
+A story is [attr-7] if exactly one is true (Xor):
+- The story is [attr-13]
+- The story is [attr-11]
+
+[attr-16]
+A story is [attr-16] if its dominant theme is a member of:
+- [attr-17], [attr-14], [attr-18]
+(Use In to test membership among those nodes.)
+
+[attr-1]
+A story is [attr-1] if this Equal relation holds:
+- Presence of [attr-12] Equal presence of [attr-11]
+(They are Equal when both are present or both absent.)
+
+[attr-8]
+A story is [attr-8] if both are true:
+- The story is [attr-19]
+- The story is ([attr-4] And [attr-12])
+(This nests an And inside an And.)
+
+[attr-2]
+A story is [attr-2] if all are true:
+- Either is true (Or):
+  - The story is [attr-6]
+  - The story is [attr-18]
+- Exactly one is true (Xor):
+  - The story is [attr-3]
+  - The story is [attr-4]
+- The story is Not [attr-10] Or the story is [attr-5]
+(Excludes short stories unless they have HIGH-READABILITY; combines Or and Xor for a nuanced arc.)
+
+[attr-9]
+A story is [attr-9] if both are true:
+- The story is ([attr-2] And [attr-1])
+- The story is ([attr-16] And (Or):
+  - The story is [attr-7]
+  - The story is [attr-8])
+(Nests multiple operators: And at top level, Or inside a branch; references In, Equal, Not, and Xor via subnodes.)

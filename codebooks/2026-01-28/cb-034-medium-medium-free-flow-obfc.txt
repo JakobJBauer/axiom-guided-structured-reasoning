@@ -1,0 +1,66 @@
+Think of this as the same codebook, only spoken more naturally — like I’m walking you through the labels as we flip through a stack of stories. I won’t change any of the logic or the exact node IDs; I’ll just make the descriptions easier to read while keeping the formal definitions exactly as they are.
+
+A story is [attr-8] when its central idea is about growing — personal change, development, learning. Formally:
+[attr-8]
+A story is [attr-8] if The story has the theme Growth.
+
+A story is [attr-9] when it focuses on people helping one another, acts of kindness, or support. Formally:
+[attr-9]
+A story is [attr-9] if The story has the theme Helping Others.
+
+If the opening word of a story is an adverb, we mark it as [attr-5]. Plain and simple. Formally:
+[attr-5]
+A story is [attr-5] if The story starts with a adverb.
+
+When a story feels contemporary — language, references, or setting that place it in a modern context — we call it [attr-7]. Formally:
+[attr-7]
+A story is [attr-7] if The story is modern.
+
+If the plot or subject deals with seasonal shifts — the turning of the year, weather marking time, cycles of nature — that’s [attr-11]. Formally:
+[attr-11]
+A story is [attr-11] if The story is about seasonal changes.
+
+When the narrative uses the perfect aspect (has/have/had + past participle), it gets the [attr-12] tag. Formally:
+[attr-12]
+A story is [attr-12] if The story uses perfect aspect.
+
+We flag a story [attr-3] if its readability score falls below 86.4 — meaning it might be denser or trickier to read. Formally:
+[attr-3]
+A story is [attr-3] if The story has readability score below 86.4.
+
+If a story reads like a classic — timeless style, older conventions, or a traditional feel — we use [attr-6]. Formally:
+[attr-6]
+A story is [attr-6] if The story is classic.
+
+Stories that talk about dragons, spirits, or other fantastical beings get [attr-10]. Formally:
+[attr-10]
+A story is [attr-10] if The story is about mystical creatures.
+
+We call a story [attr-2] when it scores above 96.1 — very easy to follow. Formally:
+[attr-2]
+A story is [attr-2] if The story has readability score above 96.1.
+
+Now for a combined label: [attr-4] is for stories that hit a particular trio of conditions — they must be about seasonal changes, carry the theme of growth, and not involve mystical creatures. In plain words: seasonal + growth, but exclude fantasy beings. Formally:
+[attr-4]
+A story is [attr-4] if all of the following are true:
+- The story is [attr-11]
+- The story is [attr-8]
+- The story is not [attr-10]
+
+Finally, [attr-1] is a slightly more elaborate mix — a label we apply when a story satisfies one of a few compound conditions. Either it blends seasonal growth with helping others, or it meets one of two stylistic pathways: modern and not low-readability, or classic while using perfect aspect and showing high readability. In everyday phrasing: a story can be composed if it’s a seasonal-growth story that also helps others, or if it’s modern and readable, or if it’s a classic that uses the perfect aspect and is very easy to read. Formally:
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-4]
+  - The story is [attr-9]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [attr-7]
+    - The story is not [attr-3]
+  - both of the following are true:
+    - The story is [attr-6]
+    - both of the following are true:
+      - The story is [attr-12]
+      - The story is [attr-2]
+
+That’s the whole set — same nodes, same logical relationships, just presented with a friendlier voice to make the labels easier to grasp while you annotate or reason with them.

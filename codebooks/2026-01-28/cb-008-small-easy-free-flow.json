@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "topic-cultural-traditions",
+      "label": "Topic: Cultural Traditions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-moral-lesson",
+      "label": "Has a Moral Lesson",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "Starts with Adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-magic",
+      "label": "Theme: Magic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "traditional-magic-teaching",
+      "label": "Traditional Magic Teaching",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-cultural-traditions",
+        "theme-magic",
+        "has-a-moral-lesson"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic-cultural-traditions",
+      "target": "traditional-magic-teaching"
+    },
+    {
+      "source": "theme-magic",
+      "target": "traditional-magic-teaching"
+    },
+    {
+      "source": "has-a-moral-lesson",
+      "target": "traditional-magic-teaching"
+    }
+  ]
+}

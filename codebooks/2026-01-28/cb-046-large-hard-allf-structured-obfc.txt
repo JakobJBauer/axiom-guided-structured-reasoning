@@ -1,0 +1,126 @@
+Codebook — Structured Edition
+
+Overview
+- This document lists all story annotation nodes and their exact logical definitions.
+- Each node ID appears in [attr-3] form and is preserved exactly.
+- Logical operations (Both / Either / Exactly one / Not) and their hierarchical relationships are retained verbatim, shown with clear indentation to guide annotation decisions.
+
+1) Basic / Atomic labels
+- [attr-16]
+  - A story is [attr-16] if the story is lighthearted.
+- [attr-18]
+  - A story is [attr-18] if the story is philosophical.
+- [attr-26]
+  - A story is [attr-26] if the story is about magical lands.
+- [attr-28]
+  - A story is [attr-28] if the story uses wh-questions.
+- [attr-13]
+  - A story is [attr-13] if the story has fewer than 160 words.
+- [attr-20]
+  - A story is [attr-20] if the story has the theme Kindness.
+- [attr-8]
+  - A story is [attr-8] if the story has more than 6 paragraphs.
+- [attr-27]
+  - A story is [attr-27] if the story uses conditional mood.
+- [attr-22]
+  - A story is [attr-22] if the story has the theme Problem-Solving.
+- [attr-19]
+  - A story is [attr-19] if the story has the theme Growth.
+- [attr-14]
+  - A story is [attr-14] if the story starts with a preposition.
+- [attr-23]
+  - A story is [attr-23] if the story is about giant creatures.
+- [attr-17]
+  - A story is [attr-17] if the story is modern.
+- [attr-15]
+  - A story is [attr-15] if the story is classic.
+- [attr-21]
+  - A story is [attr-21] if the story has the theme Magic.
+- [attr-25]
+  - A story is [attr-25] if the story is about lost civilizations.
+- [attr-5]
+  - A story is [attr-5] if the story has a flashback.
+- [attr-24]
+  - A story is [attr-24] if the story is about hidden treasures.
+
+2) Simple negation
+- [attr-11]
+  - A story is [attr-11] if the story is not [attr-16].
+
+3) Exclusive / XOR relationship
+- [attr-9]
+  - A story is [attr-9] if exactly one of the following is true:
+    - The story is [attr-17]
+    - The story is [attr-15]
+
+4) Compound definitions (AND / OR / nested)
+- [attr-7]
+  - A story is [attr-7] if both of the following are true:
+    - The story is [attr-26]
+    - Either of the following is true:
+      - The story is [attr-21]
+      - Both of the following are true:
+        - The story is [attr-23]
+        - The story is [attr-22]
+
+- [attr-6]
+  - A story is [attr-6] if either of the following is true:
+    - Exactly one of the following is true:
+      - The story is [attr-24]
+      - The story is [attr-25]
+    - Both of the following are true:
+      - The story is [attr-24]
+      - The story is [attr-25]
+
+- [attr-12]
+  - A story is [attr-12] if both of the following are true:
+    - [attr-28] is in the set of devices the story uses (it explicitly uses wh-questions)
+    - Either of the following is true:
+      - The story is [attr-27]
+      - The story is [attr-14]
+
+- [attr-4]
+  - A story is [attr-4] if both of the following are true:
+    - The set of themes in the story is equal to the set containing [attr-20] and [attr-19]
+    - Either of the following is true:
+      - Both of the following are true:
+        - The story is [attr-22]
+        - The story is [attr-5]
+      - Both of the following are true:
+        - The story is [attr-8]
+        - The story is not [attr-13]
+
+- [attr-1]
+  - A story is [attr-1] if either of the following is true:
+    - Both of the following are true:
+      - The story is [attr-7]
+      - The story is [attr-6]
+    - Both of the following are true:
+      - The story is [attr-23]
+      - The story is [attr-25]
+
+- [attr-2]
+  - A story is [attr-2] if either of the following is true:
+    - Both of the following are true:
+      - The story is [attr-1]
+      - Both of the following are true:
+        - The story is [attr-9]
+        - Either of the following is true:
+          - The story is [attr-20]
+          - The story is [attr-21]
+    - Both of the following are true:
+      - The story is [attr-4]
+      - Both of the following are true:
+        - The story is not [attr-11]
+        - The story is [attr-12]
+
+Notes for annotators (how to use this structure)
+- Work top-down: identify atomic tags first (Section 1), then apply negation and exclusive rules (Sections 2–3), and finally evaluate compound nodes (Section 4).
+- Follow the exact logical phrases:
+  - "Both of the following are true" = logical AND (all listed conditions must hold).
+  - "Either of the following is true" = logical OR (at least one must hold).
+  - "Exactly one of the following is true" = XOR (precisely one holds).
+  - "is not [attr-10]" = logical NOT (negation of that node).
+- When a node refers to a "set of themes" or "set of devices," interpret that as the story's explicit, annotated themes/devices; matching must be exact for set equality conditions (as in [attr-4]).
+
+End — All node IDs, logical relationships, and formula structures are retained unchanged for accurate annotation and reasoning.

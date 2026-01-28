@@ -1,0 +1,38 @@
+Interviewer: Let's go through the codebook step by step. First, what does [USES-SUPERLATIVE-FORMS] mean?
+
+Expert: Simple question. A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+Interviewer: Got it. Next one: what is [TOPIC-LOST-CIVILIZATIONS]?
+
+Expert: A story is [TOPIC-LOST-CIVILIZATIONS] if the story is about lost civilizations.
+
+Interviewer: And [STARTS-WITH-NOUN]?
+
+Expert: A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+Interviewer: How about [THEME-HUMOR]?
+
+Expert: A story is [THEME-HUMOR] if the story has the theme Humor.
+
+Interviewer: Now the first composite category: [LIGHTHEARTED-INTRO]. How should I interpret that?
+
+Expert: Think of it as a checklist. A story is [LIGHTHEARTED-INTRO] if all of the following are true:
+- The story is [STARTS-WITH-NOUN]
+- The story is [THEME-HUMOR]
+- The story is not [USES-SUPERLATIVE-FORMS]
+
+Interviewer: So all three must hold — it must start with a noun, be humorous, and explicitly not use superlatives. Correct?
+
+Expert: Exactly. All three conditions must be true for [LIGHTHEARTED-INTRO] to apply.
+
+Interviewer: Finally, tell me about [MYTHIC-SATIRE].
+
+Expert: [MYTHIC-SATIRE] requires two things to be true together:
+- The story is [TOPIC-LOST-CIVILIZATIONS]
+- Exactly one of the following is true:
+  - The story is [LIGHTHEARTED-INTRO]
+  - The story is [USES-SUPERLATIVE-FORMS]
+
+Interviewer: Let me restate that to be sure I understand: for [MYTHIC-SATIRE], the story must be about lost civilizations, and between [LIGHTHEARTED-INTRO] and [USES-SUPERLATIVE-FORMS] exactly one must hold — not both and not neither.
+
+Expert: Correct. The second bullet enforces that exclusive choice: exactly one of those two must be true, while [TOPIC-LOST-CIVILIZATIONS] must also be true.

@@ -1,0 +1,33 @@
+[attr-5]
+Think of this as the simple label for an old-fashioned feel: a story is [attr-5] if The story is classic.
+
+[attr-6]
+On the flip side, when a story has a contemporary vibe, it earns the tag [attr-6] — a story is [attr-6] if The story is modern.
+
+[attr-3]
+If the plot leaves you hanging at the end, that’s when the [attr-3] marker applies: a story is [attr-3] if The story has a cliffhanger.
+
+[attr-4]
+Length matters here — anything over the threshold gets a label. A story is [attr-4] if The story has more than 375 words.
+
+[attr-7]
+When the subject turns toward histories and eras gone by, we mark it as [attr-7]: a story is [attr-7] if The story is about bygone eras.
+
+[attr-1]
+When a tale checks all three boxes — classic in style, lengthy, and about bygone times — we give it the combined label [attr-1]. Formally:
+A story is [attr-1] if all of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+- The story is [attr-7]
+
+[attr-2]
+This one’s a little more nuanced: [attr-2] catches stories that either sit in a single clear style or combine a modern style with a dramatic cliff. In precise terms:
+A story is [attr-2] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- All of the following are true:
+  - The story is not [attr-5]
+  - The story's style is equal to [attr-6]
+  - The story is [attr-3]
+  - The story's topic is in [attr-7]

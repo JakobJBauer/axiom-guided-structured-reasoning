@@ -1,0 +1,43 @@
+Interviewer: Let's go through this codebook together. First off, what does [attr-6] mean?
+
+Expert: Simple. A story is [attr-6] if the story is playful.
+
+Interviewer: And [attr-5]?
+
+Expert: A story is [attr-5] if the story is modern.
+
+Interviewer: How about [attr-4] — what does that label capture?
+
+Expert: A story is [attr-4] if the story starts with a adjective.
+
+Interviewer: There's also [attr-7]. What's the criterion there?
+
+Expert: A story is [attr-7] if the story uses discourse markers.
+
+Interviewer: I see a node called [attr-2]. What does that encode?
+
+Expert: A story is [attr-2] if the story has Checkhov's gun.
+
+Interviewer: Now the codebook defines some compound nodes. Tell me about [attr-3].
+
+Expert: Sure. A story is [attr-3] if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+
+Interviewer: So to mark [attr-3], both conditions must hold — it's an AND, right?
+
+Expert: Correct. Both must be true for [attr-3] to apply.
+
+Interviewer: And finally, what's the rule for [attr-1]?
+
+Expert: A story is [attr-1] if both of the following are true:
+- The story is either [attr-6] or [attr-7]
+- The story is [attr-2]
+
+Interviewer: Let me restate that to be clear: [attr-1] requires two things — first, the story must satisfy at least one of [attr-6] or [attr-7] (an OR), and second, it must satisfy [attr-2]. Is that accurate?
+
+Expert: Exactly. The first bullet is an either/or condition; the second is required as well. Both bullets together must be true for [attr-1].
+
+Interviewer: Thanks — that keeps the logical relationships precise and easy to follow. Anything else I should note while annotating?
+
+Expert: Just remember: all node IDs—like [attr-6], [attr-3], [attr-1]—are the anchors. Apply the simple definitions for the atomic nodes, and then use the compound rules exactly as stated: "both of the following are true" indicates conjunction, and "either ... or" indicates disjunction in the listed compound nodes.

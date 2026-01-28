@@ -1,0 +1,133 @@
+[MANY-PARAGRAPHS]  
+A story is [MANY-PARAGRAPHS] if it has more than 6 paragraphs.
+
+[HAS-A-STORY-WITHIN-A-STORY]  
+A story is [HAS-A-STORY-WITHIN-A-STORY] if it contains a story within the story.
+
+[STARTS-WITH-NOUN]  
+A story is [STARTS-WITH-NOUN] if it begins with a noun.
+
+[USES-SUPERLATIVE-FORMS]  
+A story is [USES-SUPERLATIVE-FORMS] if it uses superlatives.
+
+[HAS-CHECKHOVS-GUN]  
+A story is [HAS-CHECKHOVS-GUN] if it includes Chekhov’s gun.
+
+[THEME-MAGIC]  
+A story is [THEME-MAGIC] if its theme is Magic.
+
+[USES-CONDITIONAL-MOOD]  
+A story is [USES-CONDITIONAL-MOOD] if it uses the conditional mood.
+
+[USES-WH-QUESTIONS]  
+A story is [USES-WH-QUESTIONS] if it asks wh-questions.
+
+[TOPIC-HIDDEN-TREASURES]  
+A story is [TOPIC-HIDDEN-TREASURES] if it’s about hidden treasures.
+
+[THEME-INNOVATION]  
+A story is [THEME-INNOVATION] if its theme is Innovation.
+
+[TOPIC-SEASONAL-CHANGES]  
+A story is [TOPIC-SEASONAL-CHANGES] if it’s about seasonal changes.
+
+[TOPIC-THE-ARTS]  
+A story is [TOPIC-THE-ARTS] if it’s about the arts.
+
+[LONG-STORY]  
+A story is [LONG-STORY] if it has more than 375 words.
+
+[THEME-GROWTH]  
+A story is [THEME-GROWTH] if its theme is Growth.
+
+[TOPIC-MAGICAL-LANDS]  
+A story is [TOPIC-MAGICAL-LANDS] if it’s about magical lands.
+
+[TOPIC-TIME-TRAVEL]  
+A story is [TOPIC-TIME-TRAVEL] if it’s about time travel.
+
+[THEME-HARDSHIP]  
+A story is [THEME-HARDSHIP] if its theme is Hardship.
+
+[STARTS-WITH-ADVERB]  
+A story is [STARTS-WITH-ADVERB] if it begins with an adverb.
+
+[HAS-A-MORAL-LESSON]  
+A story is [HAS-A-MORAL-LESSON] if it includes a moral lesson.
+
+[LOW-READABILITY]  
+A story is [LOW-READABILITY] if its readability score is below 86.4.
+
+[STARTS-WITH-ADJECTIVE]  
+A story is [STARTS-WITH-ADJECTIVE] if it begins with an adjective.
+
+[STARTS-WITH-NONNOUN]  
+A story is [STARTS-WITH-NONNOUN] if it is not [STARTS-WITH-NOUN].
+
+[STRUCTURAL-EPIC]  
+A story is [STRUCTURAL-EPIC] if both are true:  
+- The story is [LONG-STORY]  
+- The story is [MANY-PARAGRAPHS]
+
+[EXPERIMENTAL-VOICE]  
+A story is [EXPERIMENTAL-VOICE] if either is true:  
+- Exactly one is true: the story is [STARTS-WITH-ADVERB] or the story is [STARTS-WITH-ADJECTIVE]  
+- Both are true:  
+  - The story is [STARTS-WITH-NONNOUN]  
+  - The story is [USES-WH-QUESTIONS]
+
+[MYTHIC-ENGINEERING]  
+A story is [MYTHIC-ENGINEERING] if both are true:  
+- Either is true:  
+  - The story is [THEME-MAGIC]  
+  - The story is [TOPIC-MAGICAL-LANDS]  
+- Either is true:  
+  - The story is [THEME-INNOVATION]  
+  - The story is [TOPIC-TIME-TRAVEL]
+
+[INTERROGATIVE-CONDITIONALITY]  
+A story is [INTERROGATIVE-CONDITIONALITY] if both are true:  
+- The story is [USES-CONDITIONAL-MOOD]  
+- Either is true:  
+  - The story is [USES-WH-QUESTIONS]  
+  - The story is [LOW-READABILITY]
+
+[EMBEDDED-FORESHADOWING]  
+A story is [EMBEDDED-FORESHADOWING] if both are true:  
+- The story is [HAS-A-STORY-WITHIN-A-STORY]  
+- Either is true:  
+  - The story is [HAS-CHECKHOVS-GUN]  
+  - Both are true:  
+    - The story is [USES-SUPERLATIVE-FORMS]  
+    - It is not [USES-CONDITIONAL-MOOD]
+
+[TREASURED-TRANSFORMATION]  
+A story is [TREASURED-TRANSFORMATION] if both are true:  
+- The story is [TOPIC-HIDDEN-TREASURES]  
+- Either is true:  
+  - Both are true:  
+    - The story is [THEME-GROWTH]  
+    - The story is [HAS-A-MORAL-LESSON]  
+  - Both are true:  
+    - The story is [THEME-HARDSHIP]  
+    - It is not [HAS-A-MORAL-LESSON]
+
+[SEASONAL-AESTHETIC]  
+A story is [SEASONAL-AESTHETIC] if both are true:  
+- The story is [TOPIC-SEASONAL-CHANGES]  
+- Either is true:  
+  - The story is [TOPIC-THE-ARTS]  
+  - Both are true:  
+    - The story is [USES-SUPERLATIVE-FORMS]  
+    - It is not [LOW-READABILITY]
+
+[MASTER-CLASS-PLOT]  
+A story is [MASTER-CLASS-PLOT] if both are true:  
+- Either is true:  
+  - The story is [EMBEDDED-FORESHADOWING]  
+  - Both are true:  
+    - The story is [STRUCTURAL-EPIC]  
+    - The story is [INTERROGATIVE-CONDITIONALITY]  
+- Exactly one is true:  
+  - The story is [TREASURED-TRANSFORMATION]  
+  - The story is [SEASONAL-AESTHETIC]

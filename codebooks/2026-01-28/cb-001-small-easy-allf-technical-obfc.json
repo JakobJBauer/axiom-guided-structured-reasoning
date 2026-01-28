@@ -1,0 +1,114 @@
+{
+  "nodes": [
+    {
+      "id": "attr-5",
+      "label": "Conforms to classic style",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Conforms to modern style",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Contains a cliffhanger element",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Length exceeds 375 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Primary topic concerns bygone eras",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "attr-1 (attr-5 AND attr-4 AND attr-7)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        "attr-4",
+        "attr-7"
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "attr-2 (XOR(attr-6, attr-5) OR (NOT attr-5 AND style = attr-6 AND attr-3 AND topic IN attr-7))",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-6",
+            "attr-5"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-5"
+              ]
+            },
+            {
+              "formula_type": "Equal",
+              "formula_args": [
+                "style",
+                "attr-6"
+              ]
+            },
+            "attr-3",
+            {
+              "formula_type": "In",
+              "formula_args": [
+                "topic",
+                "attr-7"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-2"
+    }
+  ]
+}

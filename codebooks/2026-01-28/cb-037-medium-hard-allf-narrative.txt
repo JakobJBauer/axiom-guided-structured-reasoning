@@ -1,0 +1,51 @@
+Imagine an old archivist in a candlelit room where every story is a living thing and every label is a spell. He speaks each classification like a line in a rite — clear, deliberate, and exact. Listen as he names the rules that bind stories into kinds, keeping every bracketed name intact and every logical whisper in place.
+
+A story is [HAS-A-STORY-WITHIN-A-STORY] if The story has a story within a story
+
+A story is [THEME-MAGIC] if The story has the theme Magic
+
+A story is [HAS-A-FLASHBACK] if The story has a flashback
+
+A story is [TOPIC-THE-ARTS] if The story is about the arts
+
+A story is [STYLE-MINIMALIST] if The story is minimalist
+
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if The story has circular narrative structure
+
+Then the archivist shows how devices relate, like coins falling into two hands:
+
+A story is [DEVICE-XOR] if exactly one of the following is true:
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [HAS-A-FLASHBACK]
+
+A story is [DEVICE-EQUAL] if the truth value of [HAS-A-STORY-WITHIN-A-STORY] equals the truth value of [HAS-CIRCULAR-NARRATIVE-STRUCT]
+
+Next he gathers themes and topics, naming membership as if grouping stars into constellations:
+
+A story is [MAGIC-ART-MEMBER] if the story's primary theme or topic is in the set {[THEME-MAGIC], [TOPIC-THE-ARTS]}
+
+Now the rules grow a little more intricate — a core of complexity, forged from device relations and narrative texture:
+
+A story is [COMPLEX-NARRATIVE-CORE] if both of the following are true:
+- Either of the following are true:
+  - The story is [DEVICE-XOR]
+  - The story is [DEVICE-EQUAL]
+- The story is not [STYLE-MINIMALIST] and (the story is [HAS-CIRCULAR-NARRATIVE-STRUCT] or the story is [HAS-A-FLASHBACK])
+
+He smiles and folds theme into structure, crafting a hybrid category that catches both magic and art:
+
+A story is [ART-MAGIC-NARRATIVE] if both of the following are true:
+- The story is [MAGIC-ART-MEMBER]
+- Either of the following are true:
+  - The story is [COMPLEX-NARRATIVE-CORE]
+  - The story is [STYLE-MINIMALIST]
+
+Finally, the archivist ties the last knot, demanding a precise balance — a condition that insists on exclusivity and presence:
+
+A story is [COMPLEX-ARTISTIC-NARRATIVE] if both of the following are true:
+- The story is [ART-MAGIC-NARRATIVE]
+- Exactly one of the following is true:
+  - The story is [DEVICE-EQUAL]
+  - The story is not [HAS-A-FLASHBACK]
+
+When he finishes, the room hums with the rules laid bare — strict, logical, and yet alive in the telling. Each bracketed name is a character in his catalogue, each connective a promise: nothing added, nothing lost, only the elegant architecture of how stories can be read and labeled.

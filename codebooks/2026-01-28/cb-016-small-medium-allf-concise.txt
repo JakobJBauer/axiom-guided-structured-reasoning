@@ -1,0 +1,22 @@
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if
+- it has the theme "Helping Others".
+
+[HELPFUL-ACTION]
+A story is [HELPFUL-ACTION] if either of the following is true:
+- The protagonist's central action is in the set {aid, rescue}
+- The protagonist's central action is in the set {donate, teach}
+
+[MOTIVE-SELFISH]
+A story is [MOTIVE-SELFISH] if
+- The protagonist's motive is equal to "personal gain"
+
+[SELFLESS-ARC]
+A story is [SELFLESS-ARC] if both of the following are true:
+- The story is [HELPFUL-ACTION]
+- The story is not [MOTIVE-SELFISH]
+
+[ALTRUISTIC-HELP]
+A story is [ALTRUISTIC-HELP] if exactly one of the following is true:
+- The story is [THEME-HELPING-OTHERS]
+- The story is [SELFLESS-ARC]

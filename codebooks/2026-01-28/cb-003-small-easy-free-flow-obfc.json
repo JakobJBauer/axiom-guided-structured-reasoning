@@ -1,0 +1,64 @@
+{
+  "nodes": [
+    {
+      "id": "attr-1",
+      "label": "Attr 1 (magical lands AND deception AND arts)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        "attr-3",
+        "attr-6"
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Attr 2 (starts with a preposition)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Attr 3 (deception)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Attr 4 (cultural traditions)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Attr 5 (magical lands)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Attr 6 (the arts)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Attr 7 (discourse markers)",
+      "formula_type": null,
+      "formula_args": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-1"
+    }
+  ]
+}

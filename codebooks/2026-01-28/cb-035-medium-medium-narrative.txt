@@ -1,0 +1,45 @@
+Stories in this little atlas wear labels like badges, and each badge has a quiet rule that decides when it belongs. Read them like a map: the badge name in brackets, then the rule that claims a story. I’ll tell it like a traveler's tale, but I won’t change a single signpost or crossroads—every logical turn stays exactly where it was.
+
+[STYLE-MINIMALIST]
+Think of a story that travels light, carrying only what it must. That story earns the mark [STYLE-MINIMALIST]. A story is [STYLE-MINIMALIST] if the story is minimalist.
+
+[HIGH-READABILITY]
+Now imagine a path so smooth that anyone can follow it at speed. When a tale scores above 96.1 on readability, it steps into that clearing and takes the name [HIGH-READABILITY]. A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+[USES-SUPERLATIVE-FORMS]
+Some storytellers speak in extremes, topping every comparison with the ultimate degree. Those tales carry the banner [USES-SUPERLATIVE-FORMS]. A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+[THEME-GROWTH]
+There are stories that follow a seed to a tree, a child to wisdom, a slump to a rise—these are the tales of becoming. Such a tale is labeled [THEME-GROWTH]. A story is [THEME-GROWTH] if the story has the theme Growth.
+
+[TOPIC-TIME-TRAVEL]
+Some narratives fold time like origami, stepping forward and backward across years. When a story is about such journeys, it wears the tag [TOPIC-TIME-TRAVEL]. A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+[TOPIC-HIDDEN-TREASURES]
+Other stories whisper about chests beneath the sand or secrets tucked in attic boxes. Those that center on concealed riches receive the [TOPIC-HIDDEN-TREASURES] mark. A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+[CLEAR-CONCISE]
+Picture a tale that is both lean and effortless to read—the ideal intersection of brevity and clarity. It collects two simple truths to claim the title [CLEAR-CONCISE]. A story is [CLEAR-CONCISE] if both of the following are true:
+- The story is [STYLE-MINIMALIST]
+- The story is [HIGH-READABILITY]
+
+[EMPHATIC]
+Now imagine a voice that loves extremes but refuses to be spare. To be [EMPHATIC], a story must do two things: use the ultimate forms and refuse the minimalist whisper. A story is [EMPHATIC] if both of the following are true:
+- The story is [USES-SUPERLATIVE-FORMS]
+- The story is not [STYLE-MINIMALIST]
+
+[THEMATIC-ARC]
+Some stories inherit momentum: they chart growth and pair that growth with an adventurous topic. A tale earns [THEMATIC-ARC] when it carries the theme of Growth and also centers on either time-bending journeys or buried treasures. A story is [THEMATIC-ARC] if both of the following are true:
+- The story is [THEME-GROWTH]
+- Either of the following is true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is [TOPIC-HIDDEN-TREASURES]
+
+[COMPELLING]
+Finally, imagine the golden coin of our map: a story that is clear and concise, and then goes further—either it speaks with emphatic force or it arcs with themes of growth combined with time travel or hidden treasure. Such a tale is called [COMPELLING]. A story is [COMPELLING] if both of the following are true:
+- The story is [CLEAR-CONCISE]
+- Either of the following is true:
+  - The story is [EMPHATIC]
+  - The story is [THEMATIC-ARC]
+
+Follow these signposts and you can tag any tale you meet—each label lives by the exact rules above, and the roads between them remain unchanged, faithful and orderly as a compass.

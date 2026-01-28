@@ -1,0 +1,99 @@
+Codebook — Structured Reference for Annotators
+
+Purpose
+- Provide a clear, actionable reference for labeling stories using the defined nodes.
+- Keep logical relationships explicit and easy to follow when deciding which labels apply.
+- Read each node carefully; use the checklists to make consistent, defensible annotations.
+
+Notation and quick rules
+- Node IDs appear exactly in brackets, e.g., [STARTS-WITH-ADJECTIVE]. Do not change them.
+- Follow the stated logical relationships exactly (e.g., “both of the following,” “exactly one,” “not,” “Either of the following”).
+- Use the checklists below in order: determine simple properties first, then evaluate composite nodes that depend on them.
+
+Nodes (in logical order)
+
+1) [STARTS-WITH-ADJECTIVE]
+- Plain definition:
+  - A story is [STARTS-WITH-ADJECTIVE] if the story begins with an adjective.
+- Decision checklist:
+  - Look at the very first word of the story.
+  - Is that first word an adjective (descriptive word like "Lonely", "Enormous", "Silent")?
+    - Yes → mark [STARTS-WITH-ADJECTIVE].
+    - No → do not mark [STARTS-WITH-ADJECTIVE].
+- Annotation tip:
+  - Ignore articles (a/an/the) or leading quotes; evaluate the first actual token/word that functions grammatically as the opening word.
+
+2) [TOPIC-GIANT-CREATURES]
+- Plain definition:
+  - A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures.
+- Decision checklist:
+  - Does the core subject matter center on creatures of unusually large size (giants, colossal monsters, huge animals, etc.)?
+    - Yes → mark [TOPIC-GIANT-CREATURES].
+    - No → do not mark [TOPIC-GIANT-CREATURES].
+- Annotation tip:
+  - Focus on the main topic or recurring focus of the narrative, not a single passing metaphor or brief mention.
+
+3) [GIANT-FOCUSED]
+- Logical definition (preserved exactly):
+  - A story is GIANT-FOCUSED if both of the following are true:
+    - The story is [TOPIC-GIANT-CREATURES]
+    - The story is not [STARTS-WITH-ADJECTIVE]
+- Plain explanation:
+  - Mark [GIANT-FOCUSED] only when the story is about giant creatures and its opening does not start with an adjective.
+- Decision checklist:
+  - Is the story about giant creatures? (Check [TOPIC-GIANT-CREATURES].)
+  - Does the story NOT start with an adjective? (Check that [STARTS-WITH-ADJECTIVE] is false.)
+  - If both answers are true → mark [GIANT-FOCUSED].
+- Annotation tip:
+  - This node combines topical focus and a property of the opening. Confirm both items independently before assigning.
+
+4) [DYNAMIC-OPENING]
+- Logical definition (preserved exactly):
+  - A story is DYNAMIC-OPENING if exactly one of the following is true:
+    - The story is [STARTS-WITH-ADJECTIVE]
+    - The story is [TOPIC-GIANT-CREATURES]
+- Plain explanation:
+  - [DYNAMIC-OPENING] is an exclusive-or (XOR) relationship: mark it when either the story starts with an adjective or it is about giant creatures — but not both.
+- Decision checklist:
+  - Check [STARTS-WITH-ADJECTIVE].
+  - Check [TOPIC-GIANT-CREATURES].
+  - Count how many of those are true:
+    - If exactly one is true → mark [DYNAMIC-OPENING].
+    - If zero or both are true → do not mark [DYNAMIC-OPENING].
+- Annotation tip:
+  - Use this node to flag openings that convey energy by either striking language at the start or an immediate giant-creature topic — choose only when the two do not coincide.
+
+5) [ENGAGING-GIANT-STORY]
+- Logical definition (preserved exactly):
+  - A story is ENGAGING-GIANT-STORY if both of the following are true:
+    - The story is [GIANT-FOCUSED]
+    - Either of the following is true:
+      - The story is [DYNAMIC-OPENING]
+      - The story is not [STARTS-WITH-ADJECTIVE]
+- Plain explanation:
+  - This label applies to stories that are focused on giant creatures and also meet an additional opening-related condition: either they have a dynamic opening (as defined above) or they simply do not start with an adjective.
+- Decision checklist (stepwise):
+  1. Confirm the story is [GIANT-FOCUSED] (see node 3).
+     - If NO → do not mark [ENGAGING-GIANT-STORY].
+     - If YES → continue.
+  2. Evaluate the second clause:
+     - Is the story [DYNAMIC-OPENING]? If yes → mark [ENGAGING-GIANT-STORY].
+     - If not, is the story not [STARTS-WITH-ADJECTIVE]? If yes → mark [ENGAGING-GIANT-STORY].
+     - If neither subcondition holds → do not mark [ENGAGING-GIANT-STORY].
+- Annotation tip:
+  - Because [GIANT-FOCUSED] already includes “not [STARTS-WITH-ADJECTIVE],” this node effectively requires a giant-focused story and then checks for either a dynamic opening or that same non-adjective start — follow the checklist literally to preserve correctness.
+
+Quick decision workflow (recommended)
+1. Determine atomic properties:
+   - Decide [STARTS-WITH-ADJECTIVE].
+   - Decide [TOPIC-GIANT-CREATURES].
+2. Compute composite nodes in this order:
+   - [GIANT-FOCUSED] (needs the two atomic decisions)
+   - [DYNAMIC-OPENING] (depends on the two atomic decisions)
+3. Finally decide:
+   - [ENGAGING-GIANT-STORY] (requires [GIANT-FOCUSED] and one of the opening conditions)
+
+Final annotation advice
+- Work top-down for clarity: label the simple properties first, then the composite ones.
+- When in doubt about grammatical categories (e.g., whether a word is an adjective) or topical focus, annotate conservatively and add a short note if allowed by your annotation interface.
+- Preserve the logical definitions exactly as given when making decisions—these are the normative rules for assignment.

@@ -1,0 +1,48 @@
+Think of this as a friendly guide to the labels we use when annotating stories. I’ll walk through each tag in plain language so it’s easy to understand, but I won’t change the logical bones — every bracketed ID and every logical connector stays exactly as it is.
+
+[attr-6]
+We call a story [attr-6] when its very first word is an adverb. Simple as that: if the story starts with an adverb, it gets this tag.
+
+[attr-7]
+If a story reads like a classic—tonality, structure, or intent that fits the “classic” mold—then the story is [attr-7].
+
+[attr-4]
+When a story runs long, past 375 words, we mark it as [attr-4].
+
+[attr-9]
+If the central subject of the story involves giant creatures—be they monsters, titans, enormous beasts—that story is [attr-9].
+
+[attr-8]
+Stories that revolve around deception—tricks, lies, betrayals, misdirection—are labeled [attr-8].
+
+[attr-10]
+When the plot centers on hidden treasures, secret hoards, lost riches, or the hunt for them, the story is [attr-10].
+
+[attr-1]
+A story becomes [attr-1] only when all of the following are true:
+- The story is [attr-4]
+- The story is [attr-9]
+- The story is not [attr-7]
+
+[attr-5]
+We tag a story [attr-5] when both of the following are true:
+- The story is [attr-8]
+- The story is [attr-10]
+- Either of the following is true:
+  - The story is [attr-6]
+  - The story is not [attr-7]
+
+[attr-3]
+A story is a [attr-3] if exactly one of the following is true:
+- The story is [attr-1]
+- The story is [attr-5]
+
+[attr-2]
+We reserve the [attr-2] label for stories that meet all of the following:
+- The story is [attr-3]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-4]
+- The story is not [attr-6]
+
+That’s the full set. Each label has a clear condition or combination of conditions — some simple, some layered — and they build on one another. Keep the bracketed IDs and the logical phrasing intact when you use these labels, and you’ll be able to annotate and reason about stories consistently.

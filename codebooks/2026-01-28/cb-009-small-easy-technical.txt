@@ -1,0 +1,28 @@
+[USES-SUPERLATIVE-FORMS]
+Specification: A story is [USES-SUPERLATIVE-FORMS] if the narrative employs superlative forms. This criterion identifies the presence of grammatical superlatives (e.g., syntactic tokens or constructions conveying maximality such as "most," "least," or adjectival/adverbial superlative morphology).
+
+[USES-PERFECT-ASPECT]
+Specification: A story is [USES-PERFECT-ASPECT] if the narrative uses the perfect aspect. This criterion detects verbal aspectual marking that indicates completed relevance (e.g., present perfect, past perfect constructions).
+
+[TOPIC-LOST-CIVILIZATIONS]
+Specification: A story is [TOPIC-LOST-CIVILIZATIONS] if the primary topical content of the narrative concerns lost civilizations. This label applies when the subject matter explicitly centers on civilizations that are abandoned, extinct, or otherwise historically lost.
+
+[HAS-JUXTAPOSITION]
+Specification: A story is [HAS-JUXTAPOSITION] if the narrative contains juxtaposition. That is, the text deliberately places contrasting elements, images, ideas, or scenes in proximity for comparative or rhetorical effect.
+
+[SHORT-STORY]
+Specification: A story is [SHORT-STORY] if the narrative length is fewer than 160 words. Word count is the operational metric for this classification.
+
+[EPICALLY-CONCISE-LOST]
+Specification: A story is [EPICALLY-CONCISE-LOST] if both of the following are true:
+- The story is [TOPIC-LOST-CIVILIZATIONS]
+- The story is [SHORT-STORY]
+
+[ORNATE-REFLECTIVE]
+Specification: A story is [ORNATE-REFLECTIVE] if either of the following are true:
+- Both of the following are true:
+  - The story is [USES-SUPERLATIVE-FORMS]
+  - The story is [USES-PERFECT-ASPECT]
+- Both of the following are true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [HAS-JUXTAPOSITION]

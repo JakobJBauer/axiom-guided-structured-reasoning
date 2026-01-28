@@ -1,0 +1,116 @@
+[attr-5]
+A story is [attr-5] if The story has a Red Herring.
+
+[attr-8]
+A story is [attr-8] if The story has more than 6 paragraphs.
+
+[attr-14]
+A story is [attr-14] if The story is lighthearted.
+
+[attr-6]
+A story is [attr-6] if The story has Checkhov's gun.
+
+[attr-19]
+A story is [attr-19] if The story has the theme Magic.
+
+[attr-23]
+A story is [attr-23] if The story is about the arts.
+
+[attr-24]
+A story is [attr-24] if The story uses perfect aspect.
+
+[attr-18]
+A story is [attr-18] if The story has the theme Innovation.
+
+[attr-17]
+A story is [attr-17] if The story has the theme Growth.
+
+[attr-13]
+A story is [attr-13] if The story is classic.
+
+[attr-12]
+A story is [attr-12] if The story starts with a preposition.
+
+[attr-21]
+A story is [attr-21] if The story is about cultural traditions.
+
+[attr-22]
+A story is [attr-22] if The story is about lost civilizations.
+
+[attr-16]
+A story is [attr-16] if The story has the theme Deception.
+
+[attr-25]
+A story is [attr-25] if The story uses wh-questions.
+
+[attr-20]
+A story is [attr-20] if The story is about bygone eras.
+
+[attr-11]
+A story is [attr-11] if The story starts with a adjective.
+
+[attr-15]
+A story is [attr-15] if The story is modern.
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-5]
+  - The story is [attr-6]
+- Either of the following is true:
+  - Exactly one of [attr-16] and [attr-25] is true
+  - The story is [attr-8]
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- The story is [attr-8]
+- The story is [attr-24]
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [attr-13]
+  - The story is [attr-15]
+- The story is not [attr-14]
+- Either of the following is true:
+  - The story is [attr-12]
+  - The story is [attr-11]
+
+[attr-3]
+A story is [attr-3] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-21]
+  - The story is [attr-20]
+- Both of the following are true:
+  - The story is [attr-22]
+  - Exactly one of [attr-17] and [attr-16] is true
+
+[attr-7]
+A story is [attr-7] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-18]
+  - The story is [attr-17]
+- All of the following are true:
+  - The story is [attr-18]
+  - The story is [attr-23]
+  - The story is not [attr-17]
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-23]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-3]
+
+[attr-4]
+A story is [attr-4] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-1]
+  - Both of the following are true:
+    - The story is [attr-9]
+    - The story is [attr-10]
+- Either of the following is true:
+  - The story is [attr-2]
+  - Both of the following are true:
+    - The story is [attr-3]
+    - The story is [attr-7]

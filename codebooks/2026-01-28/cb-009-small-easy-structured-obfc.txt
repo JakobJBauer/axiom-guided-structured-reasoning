@@ -1,0 +1,52 @@
+Purpose
+- This codebook defines annotation labels (nodes) and the exact logical conditions that make a story qualify for each label.
+- Node IDs are shown in [attr-1] format and must be used exactly as written.
+- Logical relationships (And / Or / Both / Either) are preserved precisely as structured below.
+
+Atomic (single-condition) nodes
+- [attr-8]
+  - Definition: A story is [attr-8] if the story uses superlative forms.
+  - Quick note: This label flags language that explicitly marks extremes (e.g., "the greatest," "the most ancient").
+
+- [attr-7]
+  - Definition: A story is [attr-7] if the story uses the perfect aspect.
+  - Quick note: This label flags use of perfect tenses (e.g., "has seen," "had discovered").
+
+- [attr-6]
+  - Definition: A story is [attr-6] if the story is about lost civilizations.
+  - Quick note: This is a topical label (content-focused), not a stylistic one.
+
+- [attr-3]
+  - Definition: A story is [attr-3] if the story has juxtaposition.
+  - Quick note: Use this when contrasting images, ideas, or elements are placed side-by-side for effect.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story has fewer than 160 words.
+  - Quick note: Word count is the only criterion for this node.
+
+Compound (multi-condition) nodes
+- [attr-2]
+  - Condition: A story is [attr-2] if both of the following are true:
+    - The story is [attr-6]
+    - The story is [attr-5]
+  - Interpretation: This label marks stories that are both about lost civilizations and extremely short (under 160 words).
+
+- [attr-4]
+  - Condition: A story is [attr-4] if either of the following are true:
+    - Both of the following are true:
+      - The story is [attr-8]
+      - The story is [attr-7]
+    - Both of the following are true:
+      - The story is [attr-7]
+      - The story is [attr-3]
+  - Interpretation: [attr-4] applies when the story combines perfect aspect with either superlatives or juxtaposition. In other words:
+    - ( [attr-8] AND [attr-7] ) OR
+    - ( [attr-7] AND [attr-3] )
+
+Annotation guidance (practical reminders)
+- Always refer to node IDs exactly as shown (e.g., [attr-6]).
+- For compound nodes, verify each required sub-node independently before assigning the compound label.
+- Preserve the logical structure: "both of the following are true" corresponds to logical AND; "either of the following are true" corresponds to logical OR.
+- Do not introduce or remove nodes or alter relationships when annotating.
+
+End of codebook.

@@ -1,0 +1,127 @@
+I’ll walk through this codebook in a relaxed, conversational way while keeping every logical piece exactly where it belongs. I’ll gently explain what each node is getting at, then show the original logical definition unchanged so you can use it for precise annotation and reasoning.
+
+[HIGH-READABILITY]
+Think of this as a simple threshold for clarity: a story that scores exceptionally high on readability.
+A story is HIGH-READABILITY if The story has readability score above 96.1
+
+[LOW-READABILITY]
+This is the flip side — stories that fall below a certain clarity mark.
+A story is LOW-READABILITY if The story has readability score below 86.4
+
+[STARTS-WITH-NOUN]
+A quick, structural tag: does the first word set a noun scene?
+A story is STARTS-WITH-NOUN if The story starts with a noun
+
+[STARTS-WITH-ADVERB]
+Or does the tale launch itself with an adverb, giving pace or manner right away?
+A story is STARTS-WITH-ADVERB if The story starts with a adverb
+
+[USES-PERFECT-ASPECT]
+This one flags a grammatical flavor — the use of perfect aspect in the writing.
+A story is USES-PERFECT-ASPECT if The story uses perfect aspect
+
+[USES-DISCOURSE-MARKERS]
+Here we notice whether the story uses connective words that guide the reader through ideas.
+A story is USES-DISCOURSE-MARKERS if The story uses discourse markers
+
+[HAS-A-CLIFFHANGER]
+A dramatic beat: is the ending unresolved, leaving tension or curiosity hanging?
+A story is HAS-A-CLIFFHANGER if The story has a cliffhanger
+
+[HAS-JUXTAPOSITION]
+This marks the presence of contrasting elements placed close together to create effect.
+A story is HAS-JUXTAPOSITION if The story has juxtaposition
+
+[HAS-A-RED-HERRING]
+A little misleading bait — does the story include a Red Herring?
+A story is HAS-A-RED-HERRING if The story has a Red Herring
+
+[SHORT-STORY]
+A size check: whether the piece is brief and compact.
+A story is SHORT-STORY if The story has fewer than 160 words
+
+[STYLE-PHILOSOPHICAL]
+This flags an introspective, reflective tone or approach.
+A story is STYLE-PHILOSOPHICAL if The story is philosophical
+
+[STYLE-PLAYFUL]
+A lighter, more mischievous voice is captured here.
+A story is STYLE-PLAYFUL if The story is playful
+
+[STYLE-HUMOROUS]
+When humor is a defining element of the writing, this node applies.
+A story is STYLE-HUMOROUS if The story is humorous
+
+[THEME-AGENCY]
+When characters or forces in the story emphasize action, choice, or control, we tag it like this.
+A story is THEME-AGENCY if The story has the theme Agency
+
+[OPENING-TONE]
+Think of OPENING-TONE as a small checklist about how the story begins and the flavor of its opening. It requires two things to be true: first, the opening word must be a noun or an adverb; second, the overall style at the start must lean philosophical or playful.
+A story is OPENING-TONE if both of the following are true:
+- Either of the following is true:
+  - The story is [STARTS-WITH-NOUN]
+  - The story is [STARTS-WITH-ADVERB]
+- Either of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [STYLE-PLAYFUL]
+
+[NARRATIVE-PACE]
+This one captures a sense of speed or flow. It’s satisfied in two different ways: either the story is short and very readable, or it uses the perfect aspect while not being low in readability.
+A story is NARRATIVE-PACE if either of the following is true:
+- Both of the following are true:
+  - The story is [SHORT-STORY]
+  - The story is [HIGH-READABILITY]
+- Both of the following are true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is not [LOW-READABILITY]
+
+[COMEDIC-STRUCTURE]
+Comedic structure lives where playfulness or humor combines with a particular setup: exactly one of brevity or discourse markers must be present, and the punchline mechanism is either a red herring or juxtaposition.
+A story is COMEDIC-STRUCTURE if both of the following are true:
+- Either of the following is true:
+  - The story is [STYLE-PLAYFUL]
+  - The story is [STYLE-HUMOROUS]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [SHORT-STORY]
+    - The story is [USES-DISCOURSE-MARKERS]
+  - Either of the following is true:
+    - The story is [HAS-A-RED-HERRING]
+    - The story is [HAS-JUXTAPOSITION]
+
+[THEMATIC-FUSION]
+This node signals when the theme of agency is fused with certain stylistic or structural traits — either a philosophical style that meets the opening-tone condition, or an exclusive pairing of juxtaposition and red herring.
+A story is THEMATIC-FUSION if both of the following are true:
+- The story is [THEME-AGENCY]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [STYLE-PHILOSOPHICAL]
+    - The story is [OPENING-TONE]
+  - Exactly one of the following is true:
+    - The story is [HAS-JUXTAPOSITION]
+    - The story is [HAS-A-RED-HERRING]
+
+[RAPTURE-ENDING]
+RAPTURE-ENDING captures endings that either build on a cliffhanger but in a longer piece, or endings that hinge on a single dramatic device — a cliffhanger or a red herring — but not both.
+A story is RAPTURE-ENDING if either of the following is true:
+- Both of the following are true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is not [SHORT-STORY]
+- Exactly one of the following is true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is [HAS-A-RED-HERRING]
+
+[COMPLEX-STORY]
+Finally, COMPLEX-STORY is the big composite: a tale that combines thematic fusion and comedic structure, and then either carries narrative pace or pairs a rapture ending with not being especially highly readable.
+A story is COMPLEX-STORY if both of the following are true:
+- All of the following are true:
+  - The story is [THEMATIC-FUSION]
+  - The story is [COMEDIC-STRUCTURE]
+- Either of the following is true:
+  - The story is [NARRATIVE-PACE]
+  - Both of the following are true:
+    - The story is [RAPTURE-ENDING]
+    - The story is not [HIGH-READABILITY]
+
+That’s the whole map: each bracketed node and every logical connector remain intact — I’ve only added a human touch to explain what each piece means, while leaving the formal definitions exactly as they were for accurate annotation.

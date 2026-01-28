@@ -1,0 +1,363 @@
+{
+  "nodes": [
+    {
+      "id": "high-readability",
+      "label": "High Readability",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "low-readability",
+      "label": "Low Readability",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-noun",
+      "label": "Starts With Noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "Starts With Adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-perfect-aspect",
+      "label": "Uses Perfect Aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-discourse-markers",
+      "label": "Uses Discourse Markers",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-cliffhanger",
+      "label": "Has a Cliffhanger",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-juxtaposition",
+      "label": "Has Juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-red-herring",
+      "label": "Has a Red Herring",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "short-story",
+      "label": "Short Story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "Style Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-playful",
+      "label": "Style Playful",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-humorous",
+      "label": "Style Humorous",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-agency",
+      "label": "Theme Agency",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "opening-tone",
+      "label": "Opening Tone",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "starts-with-noun",
+            "starts-with-adverb"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-philosophical",
+            "style-playful"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "narrative-pace",
+      "label": "Narrative Pace",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "short-story",
+            "high-readability"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "uses-perfect-aspect",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "low-readability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comedic-structure",
+      "label": "Comedic Structure",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-playful",
+            "style-humorous"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "short-story",
+                "uses-discourse-markers"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "has-a-red-herring",
+                "has-juxtaposition"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thematic-fusion",
+      "label": "Thematic Fusion",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-agency",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "style-philosophical",
+                "opening-tone"
+              ]
+            },
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "has-juxtaposition",
+                "has-a-red-herring"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rapture-ending",
+      "label": "Rapture Ending",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "has-a-cliffhanger",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "short-story"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "has-a-cliffhanger",
+            "has-a-red-herring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-story",
+      "label": "Complex Story",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "thematic-fusion",
+            "comedic-structure"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "narrative-pace",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "rapture-ending",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "high-readability"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "starts-with-noun",
+      "target": "opening-tone"
+    },
+    {
+      "source": "starts-with-adverb",
+      "target": "opening-tone"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "opening-tone"
+    },
+    {
+      "source": "style-playful",
+      "target": "opening-tone"
+    },
+    {
+      "source": "short-story",
+      "target": "narrative-pace"
+    },
+    {
+      "source": "high-readability",
+      "target": "narrative-pace"
+    },
+    {
+      "source": "uses-perfect-aspect",
+      "target": "narrative-pace"
+    },
+    {
+      "source": "low-readability",
+      "target": "narrative-pace"
+    },
+    {
+      "source": "style-playful",
+      "target": "comedic-structure"
+    },
+    {
+      "source": "style-humorous",
+      "target": "comedic-structure"
+    },
+    {
+      "source": "short-story",
+      "target": "comedic-structure"
+    },
+    {
+      "source": "uses-discourse-markers",
+      "target": "comedic-structure"
+    },
+    {
+      "source": "has-a-red-herring",
+      "target": "comedic-structure"
+    },
+    {
+      "source": "has-juxtaposition",
+      "target": "comedic-structure"
+    },
+    {
+      "source": "theme-agency",
+      "target": "thematic-fusion"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "thematic-fusion"
+    },
+    {
+      "source": "opening-tone",
+      "target": "thematic-fusion"
+    },
+    {
+      "source": "has-juxtaposition",
+      "target": "thematic-fusion"
+    },
+    {
+      "source": "has-a-red-herring",
+      "target": "thematic-fusion"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "rapture-ending"
+    },
+    {
+      "source": "short-story",
+      "target": "rapture-ending"
+    },
+    {
+      "source": "has-a-red-herring",
+      "target": "rapture-ending"
+    },
+    {
+      "source": "thematic-fusion",
+      "target": "complex-story"
+    },
+    {
+      "source": "comedic-structure",
+      "target": "complex-story"
+    },
+    {
+      "source": "narrative-pace",
+      "target": "complex-story"
+    },
+    {
+      "source": "rapture-ending",
+      "target": "complex-story"
+    },
+    {
+      "source": "high-readability",
+      "target": "complex-story"
+    }
+  ]
+}

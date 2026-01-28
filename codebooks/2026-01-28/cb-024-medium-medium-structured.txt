@@ -1,0 +1,110 @@
+Codebook — Structured version
+Purpose
+- Provide a clear, checklist-friendly reference for annotators.
+- Preserve the exact logical relationships between labels while making the rules easier to follow.
+- Keep all node IDs exactly as written (in [BRACKET] form) and preserve all logical operators (Not, And, Or, etc.).
+
+I. Atomic (single-condition) labels
+- [STYLE-PLAYFUL]
+  - Definition: A story is [STYLE-PLAYFUL] if the story is playful.
+  - Quick check: Is the tone light, whimsical, or deliberately fun?
+
+- [STYLE-MINIMALIST]
+  - Definition: A story is [STYLE-MINIMALIST] if the story is minimalist.
+  - Quick check: Is the prose spare, focused, and economical?
+
+- [HAS-A-MORAL-LESSON]
+  - Definition: A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+  - Quick check: Does the narrative convey an explicit or implicit moral?
+
+- [TOPIC-TIME-TRAVEL]
+  - Definition: A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+  - Quick check: Are time travel elements central to the plot or setting?
+
+- [STARTS-WITH-NOUN]
+  - Definition: A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+  - Quick check: Does the very first token/word read as a noun?
+
+- [MANY-PARAGRAPHS]
+  - Definition: A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+  - Quick check: Count paragraphs; more than six → label true.
+
+- [USES-CONDITIONAL-MOOD]
+  - Definition: A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+  - Quick check: Look for conditional constructions (would, could, might, if…).
+
+- [THEME-HARDSHIP]
+  - Definition: A story is [THEME-HARDSHIP] if the story has the theme Hardship.
+  - Quick check: Does the story center on struggle, adversity, or hardship?
+
+II. Composite labels — structure and checklist
+- [COMPOUND-STYLE]
+  - Rule header: A story is [COMPOUND-STYLE] if both of the following are true:
+  - Components:
+    - The story is [STYLE-PLAYFUL]
+    - The story is [STYLE-MINIMALIST]
+  - Annotator checklist:
+    1. Confirm [STYLE-PLAYFUL].
+    2. Confirm [STYLE-MINIMALIST].
+    3. If both confirmed → apply [COMPOUND-STYLE].
+
+- [COMPLEX-NARRATIVE]
+  - Rule header: A story is [COMPLEX-NARRATIVE] if all of the following are true:
+  - Components:
+    - The story is [MANY-PARAGRAPHS]
+    - The story is [USES-CONDITIONAL-MOOD]
+    - The story is [STARTS-WITH-NOUN]
+  - Annotator checklist:
+    1. Verify >6 paragraphs → [MANY-PARAGRAPHS].
+    2. Verify presence of conditional mood → [USES-CONDITIONAL-MOOD].
+    3. Verify first word is a noun → [STARTS-WITH-NOUN].
+    4. If all three hold → apply [COMPLEX-NARRATIVE].
+
+- [TIME-MORAL]
+  - Rule header: A story is [TIME-MORAL] if both of the following are true:
+  - Components:
+    - The story is [TOPIC-TIME-TRAVEL]
+    - The story is [HAS-A-MORAL-LESSON]
+  - Annotator checklist:
+    1. Confirm time-travel topic → [TOPIC-TIME-TRAVEL].
+    2. Confirm a moral lesson → [HAS-A-MORAL-LESSON].
+    3. If both confirmed → apply [TIME-MORAL].
+
+- [RICH-STYLE-NARRATIVE]
+  - Rule header: A story is [RICH-STYLE-NARRATIVE] if both of the following are true:
+  - Primary requirement:
+    - The story is [COMPLEX-NARRATIVE]
+  - Secondary (either/or) requirement:
+    - Either of the following is true:
+      - The story is [COMPOUND-STYLE]
+      - Both of the following are true:
+        - The story is [STYLE-PLAYFUL]
+        - The story is not [THEME-HARDSHIP]
+  - Annotator checklist (stepwise):
+    1. Confirm [COMPLEX-NARRATIVE]. If not confirmed → do not apply [RICH-STYLE-NARRATIVE].
+    2. If [COMPLEX-NARRATIVE] is true, evaluate the secondary condition:
+       - Option A: Check [COMPOUND-STYLE]. If true → apply [RICH-STYLE-NARRATIVE].
+       - Option B: If [COMPOUND-STYLE] is false, check both:
+         a. [STYLE-PLAYFUL] is true, and
+         b. [THEME-HARDSHIP] is false (i.e., the story is not [THEME-HARDSHIP]).
+         - If both (a) and (b) hold → apply [RICH-STYLE-NARRATIVE].
+    3. If none of the secondary options hold → do not apply [RICH-STYLE-NARRATIVE].
+
+III. Practical annotation tips (keeps logic intact)
+- Work top-down for composites:
+  - First evaluate atomic labels.
+  - Then evaluate composites by following their explicit logical connectors.
+- For “not” conditions:
+  - “The story is not [THEME-HARDSHIP]” means absence of the hardship theme (do not invert other conditions).
+- When in doubt:
+  - Use the explicit checklist for each composite node; do not infer extra conditions beyond those listed.
+
+IV. Summary reference (quick map)
+- Atomic nodes: [STYLE-PLAYFUL], [STYLE-MINIMALIST], [HAS-A-MORAL-LESSON], [TOPIC-TIME-TRAVEL], [STARTS-WITH-NOUN], [MANY-PARAGRAPHS], [USES-CONDITIONAL-MOOD], [THEME-HARDSHIP]
+- Composite nodes and their direct structures:
+  - [COMPOUND-STYLE] = both of: [STYLE-PLAYFUL] AND [STYLE-MINIMALIST]
+  - [COMPLEX-NARRATIVE] = all of: [MANY-PARAGRAPHS], [USES-CONDITIONAL-MOOD], [STARTS-WITH-NOUN]
+  - [TIME-MORAL] = both of: [TOPIC-TIME-TRAVEL] AND [HAS-A-MORAL-LESSON]
+  - [RICH-STYLE-NARRATIVE] = both of: [COMPLEX-NARRATIVE] AND (Either: [COMPOUND-STYLE] OR (both: [STYLE-PLAYFUL] AND the story is not [THEME-HARDSHIP]))
+
+End — Follow these structured checks to apply labels consistently while preserving the exact logical relationships from the original codebook.

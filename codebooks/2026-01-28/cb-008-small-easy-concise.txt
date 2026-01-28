@@ -1,0 +1,17 @@
+[TOPIC-CULTURAL-TRADITIONS]
+True when the story focuses on cultural traditions.
+
+[HAS-A-MORAL-LESSON]
+True when the story contains a moral lesson.
+
+[STARTS-WITH-ADVERB]
+True when the story begins with an adverb.
+
+[THEME-MAGIC]
+True when the story’s theme is Magic.
+
+[TRADITIONAL-MAGIC-TEACHING]
+True when all of the following are true:
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+- The story is [THEME-MAGIC]
+- The story is [HAS-A-MORAL-LESSON]

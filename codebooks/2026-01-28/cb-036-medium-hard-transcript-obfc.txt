@@ -1,0 +1,88 @@
+Interviewer: Let’s walk through this codebook together. I’ll ask about each node and you can read the rule. Ready?
+
+Explainer: Ready.
+
+Interviewer: What does [attr-2] mean?
+
+Explainer: A story is [attr-2] if the story has readability score below 86.4
+
+Interviewer: And [attr-11]?
+
+Explainer: A story is [attr-11] if the story is about time travel
+
+Interviewer: How about [attr-10]?
+
+Explainer: A story is [attr-10] if the story is about seasonal changes
+
+Interviewer: What does [attr-12] indicate?
+
+Explainer: A story is [attr-12] if the story uses discourse markers
+
+Interviewer: Explain [attr-4].
+
+Explainer: A story is [attr-4] if the story starts with a adjective
+
+Interviewer: And [attr-9]?
+
+Explainer: A story is [attr-9] if the story is about hidden treasures
+
+Interviewer: What about [attr-7]?
+
+Explainer: A story is [attr-7] if the story has the theme Deception
+
+Interviewer: [attr-8] — what’s that?
+
+Explainer: A story is [attr-8] if the story has the theme Helping Others
+
+Interviewer: [attr-6], please.
+
+Explainer: A story is [attr-6] if the story starts with a preposition
+
+Interviewer: And [attr-5]?
+
+Explainer: A story is [attr-5] if the story starts with a adverb
+
+Interviewer: Now the more complex ones. How is [attr-3] defined?
+
+Explainer: A story is [attr-3] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+- Both of the following are true:
+  - The story is [attr-12]
+  - Either of the following is true:
+    - The story is [attr-2]
+    - The story is [attr-6]
+
+Interviewer: Let me make sure I understand—so [attr-3] is true if either it starts with exactly one of adjective/adverb, or if it uses discourse markers and additionally is either low-readability or starts with a preposition. Correct?
+
+Explainer: Correct. That restatement preserves the same logical structure.
+
+Interviewer: Finally, the big one: [attr-1]. How is that specified?
+
+Explainer: A story is [attr-1] if both of the following are true:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-11]
+    - Exactly one of the following is true:
+      - The story is [attr-7]
+      - The story is [attr-8]
+  - Both of the following are true:
+    - The story is [attr-10]
+    - Both of the following are true:
+      - The story is [attr-9]
+      - The story is not [attr-11]
+- The story is [attr-3]
+
+Interviewer: So to confirm: [attr-1] requires two things at once — first, one of two complex topic-theme combinations (either time travel with exactly one of Deception/Helping Others, or seasonal changes combined with hidden treasures while explicitly not being time travel); and second, it must satisfy the [attr-3] condition. Right?
+
+Explainer: Exactly. That explanation keeps the same logical relationships and operators.
+
+Interviewer: That’s very clear. Is there anything else we should note about how to use these nodes?
+
+Explainer: Just the practical reminders:
+- Keep every node ID exactly as shown in brackets (for example, [attr-2]).
+- Preserve the logical operators and the structure when annotating or reasoning (Not, And, Or, Exactly one, Either, Both).
+- Do not add or remove nodes — use this set as-is for consistent annotation.
+
+Interviewer: Great — thanks for the walkthrough. That transcript-style presentation keeps the original logic intact and makes it easier to follow.

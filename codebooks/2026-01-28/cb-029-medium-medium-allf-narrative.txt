@@ -1,0 +1,61 @@
+Imagine a quiet archive where each story is a living thing and each label is a small sign hung around its neck. Walk with me through that archive, and I'll tell you how the signs are decided — not by chance, but by rules that read like recipes, promises, and riddles.
+
+[STYLE-PHILOSOPHICAL]
+Think of a story that leans back, asks why the sky is blue, and lingers on meaning. When a tale takes that reflective posture, the archivist ties the sign [STYLE-PHILOSOPHICAL] to its spine. In plain terms: a story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+Some narratives contain smaller, shining tales nested inside them — a tale told by a character, a manuscript discovered in an attic. When this nesting happens, the story earns the sign [HAS-A-STORY-WITHIN-A-STORY]. Formally: a story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+[USES-CONDITIONAL-MOOD]
+Other stories speak in possibilities: if this, then maybe that; if only, perhaps otherwise. Such a voice gets labeled [USES-CONDITIONAL-MOOD]. Concretely: a story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+And there are tales that loop back on themselves, returning to the point where they began, like a path that folds into a circle. Those receive the sign [HAS-CIRCULAR-NARRATIVE-STRUCT]. That is: a story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+[TOPIC-CULTURAL-TRADITIONS]
+Some stories are anchored in the rituals, customs, and shared past of people and places. When the subject matter is such, we mark the tale [TOPIC-CULTURAL-TRADITIONS]. Precisely: a story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+[SHORT-STORY]
+Tiny tales live in a different wing. If a story fits into fewer than 160 words, it wears the [SHORT-STORY] label. In rule form: a story is [SHORT-STORY] if the story has fewer than 160 words.
+
+[TOPIC-SEASONAL-CHANGES]
+Some narratives turn around seasons — the thaw and freeze, the harvest and the hush. Those are labeled [TOPIC-SEASONAL-CHANGES]. Formally: a story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+
+[LOW-READABILITY]
+And there are stories whose language resists easy reading; their readability score dips below a threshold. When that happens, the tag [LOW-READABILITY] is applied. In exact terms: a story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+Now the archive’s keeper moves to the more intricate signs — combinations that are like secret handshakes between properties.
+
+[INNER-CONDITIONAL]
+Sometimes a story hides another story and, within that nesting, speaks in hypotheticals. When both of those things happen together, the tale is given a special name. A story is [INNER-CONDITIONAL] if both of the following are true:
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [USES-CONDITIONAL-MOOD]
+
+[PHILOS-CIRCULAR-XOR]
+There’s a curious rule for a rare breed of tales: they must be either philosophical or circular in structure, but not both — and, at the same time, a certain balance between length and clarity must hold. Concretely, a story is [PHILOS-CIRCULAR-XOR] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- The truth value of the following are equal:
+  - [SHORT-STORY]
+  - [LOW-READABILITY]
+
+The first line demands exclusivity — pick philosophy or circle — while the second line insists that being short and being low-readability stand or fall together.
+
+[THEMATIC-IN]
+Some stories belong to a particular thematic neighborhood: they are about cultural traditions or seasonal changes. When a tale’s topic sits in that set, it receives the sign [THEMATIC-IN]. Formally: a story is [THEMATIC-IN] if the story's topic is in the set:
+- [TOPIC-CULTURAL-TRADITIONS]
+- [TOPIC-SEASONAL-CHANGES]
+
+[COMPLEX-NARRATIVE]
+Finally, at the heart of the archive is the label for stories that weave several threads into a richer tapestry. To be called a [COMPLEX-NARRATIVE], a story must satisfy every strand of a two-part test: first, it must meet one of two narrative conditions; second, it must meet both thematic and length requirements. In precise terms: a story is [COMPLEX-NARRATIVE] if all of the following are true:
+- Either of the following is true:
+  - The story is [INNER-CONDITIONAL]
+  - The story is [PHILOS-CIRCULAR-XOR]
+- Both of the following are true:
+  - The story is [THEMATIC-IN]
+  - The story is not [SHORT-STORY]
+
+So the keeper reads the tale: does it nest conditional moods or occupy that philosophical-or-circular exclusive category? Is it thematically rooted in tradition or seasons, and is it longer than a tiny vignette? If every condition lines up, the [COMPLEX-NARRATIVE] sign is placed with careful hands.
+
+And so the archive breathes: each label a decision, each decision a story about the story. The rules are strict, but when you move among them, you can feel the logic as a rhythm — nested possibilities, careful exclusions, and thematic ties — all guiding how every tale is named and understood.

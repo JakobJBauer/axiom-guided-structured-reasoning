@@ -1,0 +1,35 @@
+Picture a catalog of stories as if it were a curious museum wing, each label a rule that decides where a tale hangs. Walk with me through these signs — each one is strict about wording and order, but they tell a little tale of their own.
+
+[TOPIC-THE-ARTS]
+In the glass case labeled [TOPIC-THE-ARTS], a story earns its place if The story is about the arts. That simple sentence is the key: any tale that revolves around painters, plays, music, sculpture, or the craft and craftiness of creative life belongs here.
+
+[USES-CONDITIONAL-MOOD]
+A different label, [USES-CONDITIONAL-MOOD], is pinned to stories that speak in possibilities and what-ifs. A story is [USES-CONDITIONAL-MOOD] if The story uses conditional mood — the linguistic thread of might, would, could, and if.
+
+[STARTS-WITH-ADJECTIVE]
+Near the entrance, a bright placard reads [STARTS-WITH-ADJECTIVE]. To earn this badge, a tale must begin with a descriptive spark: A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective.
+
+[STYLE-PHILOSOPHICAL]
+In a quieter alcove, the label [STYLE-PHILOSOPHICAL] hangs on narratives that pause to ask and to weigh. A story is [STYLE-PHILOSOPHICAL] if The story is philosophical — seeking meaning, framing questions, and lingering on ideas.
+
+[CONDITIONAL-AND-NOT-START]
+Some labels are compound, stitched from smaller truths. [CONDITIONAL-AND-NOT-START] is such a patchwork: A story is [CONDITIONAL-AND-NOT-START] if both of the following are true:
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is not [STARTS-WITH-ADJECTIVE]
+It’s the kind of story that toys with possibilities but doesn’t open with a descriptive lead-in.
+
+[ARTS-XOR-PHILOSOPHICAL]
+Then there’s a label for tales that stand on one side or the other, but not both. [ARTS-XOR-PHILOSOPHICAL] is given when exactly one of the following is true:
+- The story is [TOPIC-THE-ARTS]
+- The story is [STYLE-PHILOSOPHICAL]
+It’s an exclusive choice: either the story is about artistic worlds, or it dwells in philosophical style — but not both at once.
+
+[COMPLEX-CRITERION]
+Finally, the most intricate plaque: [COMPLEX-CRITERION]. It reads like a riddle with two routes. A story is [COMPLEX-CRITERION] if either of the following is true:
+- The story is [CONDITIONAL-AND-NOT-START]
+- Both of the following are true:
+  - The story is in the set of topics that includes [TOPIC-THE-ARTS]
+  - The truth of [STYLE-PHILOSOPHICAL] is equal to the truth of not [USES-CONDITIONAL-MOOD]
+In other words, a story can qualify by being conditional in mood while not starting with an adjective, or by fitting into the arts topics and having a philosophical status that exactly mirrors whether it does not use the conditional mood.
+
+Walk away from this wing knowing each label is precise — every bracketed name, every logical connector — but now imagine them as characters in the same story: topics and moods, openings and styles, each rule a voice that decides where a tale belongs.

@@ -1,0 +1,187 @@
+[attr-16]
+A tale is bestowed the mark [attr-16] when, like a silver wind at dawn, its very first word is an adverb—an adverb that opens the door and sets the tempo for everything that follows.
+
+[attr-37]
+A story is labeled [attr-37] when its heart beats with customs, rites, and rituals—when it speaks of cultural traditions and the ways people pass meaning from generation to generation.
+
+[attr-32]
+A story is [attr-32] when it carries the luminous thread of Innovation, celebrating new ideas, inventive turns, or creative breakthroughs as a central theme.
+
+[attr-31]
+A story is [attr-31] when it dances in the register of Humor, its narrative shaped by wit, amusement, or comic perspective.
+
+[attr-39]
+A story is [attr-39] when it revolves around hidden treasures—secret hoards, buried fortunes, or discoveries tucked away from plain sight.
+
+[attr-19]
+A story is [attr-19] when it bears the hallmarks of the classic—timeless structure, traditional tone, or enduring stylistic conventions.
+
+[attr-20]
+A story is [attr-20] when it adopts a humorous style, crafted to provoke smiles and laughter through its phrasing and delivery.
+
+[attr-23]
+A story is [attr-23] when its voice and manner are modern—contemporary sensibilities, up-to-date style, and present-day idiom.
+
+[attr-38]
+A story is [attr-38] when it concerns creatures of immense size—giants that loom, colossal beings that shape the plot.
+
+[attr-48]
+A story is [attr-48] when its verbs employ the perfect aspect, weaving completed or resulting actions into the fabric of narration.
+
+[attr-3]
+A story is [attr-3] when it pauses the present to glance backward—when it contains a flashback that reveals events from before the current moment.
+
+[attr-29]
+A story is [attr-29] when Hardship hangs at its core—struggle, adversity, and trial drive the emotional current.
+
+[attr-2]
+A story is [attr-2] when it leaves the reader suspended on a precipice, ending a section or the tale with a cliffhanger that promises unresolved fate.
+
+[attr-4]
+A story is [attr-4] when it imparts a moral lesson—a didactic thread informing right or wrong, guiding reflection after the last line.
+
+[attr-40]
+A story is [attr-40] when its plot turns around lost civilizations—ancient societies, forgotten empires, or buried cities of lore.
+
+[attr-25]
+A story is [attr-25] when it adopts a playful style, full of light mischief, spirited tone, and whimsical turns.
+
+[attr-43]
+A story is [attr-43] when it contemplates seasonal changes—the ebb and flow of weather, harvests, and the year’s procession.
+
+[attr-18]
+A story is [attr-18] when its opening word is a preposition, a little connector that invites the sentence to come alive.
+
+[attr-9]
+A story is [attr-9] when it features juxtaposition—contrasting images, ideas, or scenes placed side by side for emphasis or tension.
+
+[attr-35]
+A story is [attr-35] when Problem-Solving is central—characters employ reasoning, strategy, and cleverness to resolve dilemmas.
+
+[attr-45]
+A story is [attr-45] when time travel supplies its engine—movement across eras, temporal loops, or journeys through chronology.
+
+[attr-36]
+A story is [attr-36] when it dwells upon bygone eras—times long past, epochs evoked with historical or nostalgic resonance.
+
+[attr-8]
+A story is [attr-8] when its narrative loops back upon itself—when the structure is circular, returning to earlier points or themes.
+
+[attr-47]
+A story is [attr-47] when it makes use of discourse markers—words or phrases that guide the reader through argument and transition.
+
+[attr-50]
+A story is [attr-50] when it employs wh-questions (who, what, when, where, why, how) as a rhetorical or narrative device.
+
+[attr-44]
+A story is [attr-44] when it concerns the arts—painting, music, dance, sculpture, and the creative practices that animate culture.
+
+[attr-34]
+A story is [attr-34] when Magic infuses it—sorcery, enchantment, or supernatural elements are integral themes.
+
+[attr-24]
+A story is [attr-24] when it takes on a philosophical style, inviting contemplation, abstraction, and probing thought.
+
+[attr-22]
+A story is [attr-22] when it embraces minimalism—pared-down prose, economical detail, and restrained expression.
+
+[attr-6]
+A story is [attr-6] when it contains a nested narrative—a story within a story that mirrors or informs the main tale.
+
+[attr-11]
+A story is [attr-11] when it extends beyond 375 words, spreading its scenes and ideas at generous length.
+
+[attr-42]
+A story is [attr-42] when it centers on mystical creatures—beings of myth, wonder, and supernatural origin.
+
+[attr-12]
+A story is [attr-12] when its readability score dips below 86.4, meaning the prose is denser or more complex to parse.
+
+[attr-7]
+A story is [attr-7] when it includes Chekhov’s gun—a seemingly small detail introduced earlier that later proves crucial.
+
+[attr-13]
+A story is [attr-13] when it unfolds in more than six paragraphs, each a stepping-stone along the narrative path.
+
+[attr-28]
+A story is [attr-28] when Deception threads through it—lies, concealments, and misleading maneuvers that shape the plot.
+
+[attr-27]
+A story is [attr-27] when Agency is a central concern—characters exercising choice, autonomy, and the consequences of their actions.
+
+[attr-41]
+A story is [attr-41] when it is set in magical lands—realms of enchantment, strange geography, and wonder.
+
+[attr-49]
+A story is [attr-49] when its language reaches for superlatives—the tallest, the most wondrous, the utmost—employing extreme comparative forms.
+
+[attr-15]
+A story is [attr-15] when its first word is an adjective, an adjectival banner that colors what follows.
+
+[attr-33]
+A story is [attr-33] when Kindness stands at its thematic core—compassion, benevolence, and gentle acts guiding meaning.
+
+[attr-10]
+A story is [attr-10] when its readability score rises above 96.1, indicating prose that is notably clear and easy to follow.
+
+[attr-17]
+A story is [attr-17] when the very first word is a noun, grounding the opening in someone or something.
+
+[attr-46]
+A story is [attr-46] when it uses the conditional mood—phrases of possibility, supposition, or contingent outcomes.
+
+[attr-5]
+A story is [attr-5] when it contains a red herring—an intentional misdirection planted to distract or deceive.
+
+[attr-14]
+A story is [attr-14] when it is brief, totaling fewer than 160 words—compact and to the point.
+
+[attr-26]
+A story is [attr-26] when it embraces surrealism—dreamlike imagery, illogical juxtapositions, and a bending of expected reality.
+
+[attr-30]
+A story is [attr-30] when Helping Others forms a central theme—acts of assistance, solidarity, and altruism woven through the plot.
+
+[attr-21]
+A story is [attr-21] when it adopts a lighthearted style—buoyant, carefree, and pleasantly unburdened.
+
+[attr-1]
+In the grand loom of classification, a tale is declared [attr-1] when the following intricate pattern of conditions is met—when the narrative weaves several specified threads together. A story is [attr-1] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is in [attr-40], [attr-36], [attr-45]
+      - The story is [attr-8]
+    - either of the following is true:
+      - The story is [attr-6]
+      - both of the following are true:
+        - The story is [attr-3]
+        - It is not the case that both of the following are true:
+          - The story is [attr-5]
+          - The story is [attr-7]
+  - both of the following are true:
+    - exactly one of the following is true:
+      - The story is [attr-19]
+      - The story is [attr-23]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [attr-34]
+        - It is not the case that the story is [attr-42]
+      - both of the following are true:
+        - The story is [attr-35]
+        - The story is [attr-47]
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [attr-28]
+      - It is not both of the following are true:
+        - The story is [attr-33]
+        - The story is [attr-30]
+    - The story is [attr-5]
+  - either of the following is true:
+    - exactly one of the following is true:
+      - The story is [attr-11]
+      - The story is [attr-14]
+    - both of the following are true:
+      - The story is [attr-7]
+      - It is not the case that the story is [attr-2]

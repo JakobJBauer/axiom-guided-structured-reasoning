@@ -1,0 +1,380 @@
+{
+  "nodes": [
+    {
+      "id": "theme-innovation",
+      "label": "Theme: Innovation",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-magic",
+      "label": "Theme: Magic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-checkhovs-gun",
+      "label": "Has Chekhov's gun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "Starts with adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-helping-others",
+      "label": "Theme: Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "Style: Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-noun",
+      "label": "Starts with noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-hidden-treasures",
+      "label": "Topic: Hidden Treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-growth",
+      "label": "Theme: Growth",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-cliffhanger",
+      "label": "Has a cliffhanger",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-minimalist",
+      "label": "Style: Minimalist",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-conditional-mood",
+      "label": "Uses conditional mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-seasonal-changes",
+      "label": "Topic: Seasonal Changes",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-mystical-creatures",
+      "label": "Topic: Mystical Creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-story-within-a-story",
+      "label": "Has a story within a story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "many-paragraphs",
+      "label": "Many paragraphs (>6)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-agency",
+      "label": "Theme: Agency",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "paragraph-density",
+      "label": "Paragraph density",
+      "formula_type": "Equal",
+      "formula_args": [
+        "many-paragraphs",
+        true
+      ]
+    },
+    {
+      "id": "structural-start",
+      "label": "Structural start",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "starts-with-adverb",
+            "starts-with-noun"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-philosophical",
+            "style-minimalist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "motif-mystery",
+      "label": "Motif: Mystery",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "topic-hidden-treasures",
+            "topic-mystical-creatures"
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "topic-hidden-treasures",
+            "topic-seasonal-changes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moral-tension",
+      "label": "Moral tension",
+      "formula_type": "Or",
+      "formula_args": [
+        "theme-helping-others",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "theme-growth",
+                "theme-agency"
+              ]
+            },
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "style-minimalist"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thematic-core",
+      "label": "Thematic core",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-innovation",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "moral-tension",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "theme-magic",
+                "uses-conditional-mood"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "narrative-devices",
+      "label": "Narrative devices",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "has-checkhovs-gun",
+            "has-a-cliffhanger"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "has-a-story-within-a-story",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "has-checkhovs-gun"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-story-type",
+      "label": "Complex story type",
+      "formula_type": "And",
+      "formula_args": [
+        "thematic-core",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "structural-start",
+                {
+                  "formula_type": "Or",
+                  "formula_args": [
+                    {
+                      "formula_type": "And",
+                      "formula_args": [
+                        "narrative-devices",
+                        "paragraph-density"
+                      ]
+                    },
+                    "motif-mystery"
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "narrative-devices",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "style-minimalist"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "many-paragraphs",
+      "target": "paragraph-density"
+    },
+    {
+      "source": "starts-with-adverb",
+      "target": "structural-start"
+    },
+    {
+      "source": "starts-with-noun",
+      "target": "structural-start"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "structural-start"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "structural-start"
+    },
+    {
+      "source": "topic-hidden-treasures",
+      "target": "motif-mystery"
+    },
+    {
+      "source": "topic-mystical-creatures",
+      "target": "motif-mystery"
+    },
+    {
+      "source": "topic-seasonal-changes",
+      "target": "motif-mystery"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "moral-tension"
+    },
+    {
+      "source": "theme-growth",
+      "target": "moral-tension"
+    },
+    {
+      "source": "theme-agency",
+      "target": "moral-tension"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "moral-tension"
+    },
+    {
+      "source": "theme-innovation",
+      "target": "thematic-core"
+    },
+    {
+      "source": "moral-tension",
+      "target": "thematic-core"
+    },
+    {
+      "source": "theme-magic",
+      "target": "thematic-core"
+    },
+    {
+      "source": "uses-conditional-mood",
+      "target": "thematic-core"
+    },
+    {
+      "source": "has-checkhovs-gun",
+      "target": "narrative-devices"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "narrative-devices"
+    },
+    {
+      "source": "has-a-story-within-a-story",
+      "target": "narrative-devices"
+    },
+    {
+      "source": "has-checkhovs-gun",
+      "target": "narrative-devices"
+    },
+    {
+      "source": "thematic-core",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "structural-start",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "narrative-devices",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "paragraph-density",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "motif-mystery",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "complex-story-type"
+    }
+  ]
+}

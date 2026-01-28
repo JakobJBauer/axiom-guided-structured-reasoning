@@ -1,0 +1,51 @@
+Interviewer: Let's go through this codebook together. Start simple — what is [attr-7]?
+
+Expert: A story is [attr-7] if The story has the theme Helping Others.
+
+Interviewer: Okay. And the style labels?
+
+Expert: Sure.
+
+- A story is [attr-6] if The story is philosophical.
+- A story is [attr-4] if The story is classic.
+- A story is [attr-5] if The story is modern.
+
+Interviewer: There's also something called [attr-1]. What does that mean here?
+
+Expert: A story is [attr-1] if The story has juxtaposition.
+
+Interviewer: Now it gets more interesting. What does [attr-2] capture?
+
+Expert: A story is [attr-2] if both of the following are true:
+- The story is [attr-1]
+- Exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+
+Interviewer: When you say "Exactly one of the following is true," you mean the story must be one style or the other, but not both, right?
+
+Expert: Exactly. That phrase enforces an exclusive choice: the story has to be either [attr-4] or [attr-5], but not both.
+
+Interviewer: Got it. Now the big composite: [attr-3]. How is that defined?
+
+Expert: A story is [attr-3] if either of the following is true:
+- All of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-7]
+  - The story is not [attr-2]
+- Both of the following are true:
+  - The story is [attr-2]
+  - The story is not [attr-7]
+
+Interviewer: Let me restate that to check I understand. A story qualifies as [attr-3] in two possible ways: either it's philosophical and about helping others while explicitly not being a mixed-style juxtaposition, or it's a mixed-style juxtapositional story but explicitly not about helping others. Correct?
+
+Expert: Correct. Those are the two alternative conditions — the "either" indicates at least one of those branches must hold, and each branch has its own internal requirements.
+
+Interviewer: Anything else I should keep in mind when using these labels for annotation?
+
+Expert: Just the essentials:
+- Keep the node IDs exactly as written (e.g., [attr-6], [attr-2]) — they’re the anchors for these rules.
+- Preserve the logical connectives: "All of the following are true", "Exactly one of the following is true", "Both of the following are true", and negations like "not".
+- Apply the rules literally when deciding labels so the relationships remain accurate for annotation and reasoning.
+
+Interviewer: Perfect — thanks. That clarifies how each node is defined and how they link together.

@@ -1,0 +1,81 @@
+[attr-10]
+Definition: A story satisfies [attr-10] iff its total word count is strictly less than 160 words.
+
+[attr-17]
+Definition: A story satisfies [attr-17] iff the story’s principal theme is Kindness.
+
+[attr-14]
+Definition: A story satisfies [attr-14] iff the story’s principal theme is Helping Others.
+
+[attr-18]
+Definition: A story satisfies [attr-18] iff the story’s principal theme is Problem-Solving.
+
+[attr-12]
+Definition: A story satisfies [attr-12] iff the narrative tone or approach is philosophical.
+
+[attr-5]
+Definition: A story satisfies [attr-5] iff a readability metric for the story exceeds 96.1.
+
+[attr-13]
+Definition: A story satisfies [attr-13] iff the narrative style is playful.
+
+[attr-15]
+Definition: A story satisfies [attr-15] iff the story’s theme is Humor.
+
+[attr-11]
+Definition: A story satisfies [attr-11] iff the story’s style is humorous.
+
+[attr-4]
+Definition: A story satisfies [attr-4] iff the narrative contains an embedded or nested story (a story-within-a-story).
+
+[attr-19]
+Definition: A story satisfies [attr-19] iff the subject matter concerns mystical creatures.
+
+[attr-3]
+Definition: A story satisfies [attr-3] iff the narrative includes a deliberate red herring (a misleading clue or distraction).
+
+[attr-6]
+Definition: A story satisfies [attr-6] iff both of the following are true (logical conjunction):
+- The story is [attr-17]
+- The story is [attr-14]
+(Conjunction: both predicates must hold simultaneously.)
+
+[attr-7]
+Definition: A story satisfies [attr-7] iff exactly one of the following is true (Xor):
+- The story is [attr-13]
+- The story is [attr-11]
+(Xor denotes exclusivity: exactly one operand is true.)
+
+[attr-16]
+Definition: A story satisfies [attr-16] iff the story’s dominant theme is a member of the set { [attr-17], [attr-14], [attr-18] }.
+(Use the In operator to test membership among those theme nodes.)
+
+[attr-1]
+Definition: A story satisfies [attr-1] iff the following Equal relationship holds:
+- The presence of [attr-12] Equal the presence of [attr-11]
+(Equality here indicates parity: both styles are present, or both are absent.)
+
+[attr-8]
+Definition: A story satisfies [attr-8] iff both of the following conditions are true (logical conjunction):
+- The story is [attr-19]
+- The story is ([attr-4] And [attr-12])
+(This is a nested And: the story must both involve mystical creatures and simultaneously include an embedded story that is philosophical.)
+
+[attr-2]
+Definition: A story satisfies [attr-2] iff all of the following conditions are met:
+- Either of the following is true (Or):
+  - The story is [attr-6]
+  - The story is [attr-18]
+- Exactly one of the following is true (Xor):
+  - The story is [attr-3]
+  - The story is [attr-4]
+- The story is Not [attr-10] Or the story is [attr-5]
+(Interpretation: the arc requires either a combined kindness/helping theme or a problem-solving theme; it requires an exclusive presence of either a red herring or an embedded story; and it excludes short stories unless they meet HIGH-READABILITY.)
+
+[attr-9]
+Definition: A story satisfies [attr-9] iff both of the following top-level conditions are true (logical conjunction):
+- The story is ([attr-2] And [attr-1])
+- The story is ([attr-16] And (either of the following is true (Or):
+  - The story is [attr-7]
+  - The story is [attr-8]))
+(Structure note: this node composes multiple logical operators — And at the top level, an Or branch inside a thematic conjunction — and it references In, Equal, Not, and Xor through its subordinate nodes to define a deep, recommendable composition.)

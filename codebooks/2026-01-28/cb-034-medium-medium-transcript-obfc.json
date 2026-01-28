@@ -1,0 +1,165 @@
+{
+  "nodes": [
+    {
+      "id": "attr-9",
+      "label": "The story has the theme Growth",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "The story has the theme Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "The story starts with an adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "The story is modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "The story is about seasonal changes",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-13",
+      "label": "The story uses perfect aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "The story has readability score below 86.4",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "The story is classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "The story is about mystical creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "The story has readability score above 96.1",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Composite: attr-5",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-12",
+        "attr-9",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-11"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Composite: attr-2",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-5",
+            "attr-10"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-8",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-4"
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-7",
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "attr-13",
+                    "attr-3"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-12",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-2"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+[attr-9]
+A story is [attr-9] if The story has the theme Humor — that bright, mischievous thread that makes the narrative wink, waltz, and tumble into laughter.
+
+[attr-11]
+A story is [attr-11] if The story is about lost civilizations — tales that drift like dust over ruined marble, singing of vanished empires, forgotten cities, and the ghosts of bygone grandeur.
+
+[attr-7]
+A story is [attr-7] if The story is playful — light-footed and sprightly in tone, teasing conventions with a delighted grin.
+
+[attr-8]
+A story is [attr-8] if The story is surreal — dream-woven, where cause and consequence unfold in strange, incandescent patterns.
+
+[attr-12]
+A story is [attr-12] if The story uses discourse markers — the linguistic signposts and soft bridges that guide the reader through thought and turn.
+
+[attr-2]
+A story is [attr-2] if The story has readability score below 86.4 — where sentences tangle and the prose requires extra effort to unpick.
+
+[attr-5]
+A story is [attr-5] if The story is classic — composed with the measured cadence and venerable restraint of timeless craft.
+
+[attr-6]
+A story is [attr-6] if The story is philosophical — a contemplative lantern that probes meaning, essence, and the quiet questions beneath action.
+
+[attr-1]
+A story is [attr-1] if The story has a cliffhanger — that deliciously cruel pause at the edge of fate, leaving the reader suspended between breaths.
+
+[attr-4]
+A story is [attr-4] if The story starts with a preposition — the sentence opening like a doorway led in by a small, humble word.
+
+[attr-10]
+A story is [attr-10] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-8]
+  - The story is not [attr-5]
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is in the following set:
+  - [attr-9]
+  - [attr-11]
+- Either of the following is true:
+  - The story is [attr-1]
+  - Both of the following are true:
+    - The story is equal to [attr-9]
+    - The story is not [attr-2]
+- Or the story is [attr-10]
+
+(Thus, like a rose pressed between pages of a grimoire, these labels and their relations remain intact: every bracketed sigil, every logical hinge, preserved so that annotators may read and reason with both precision and pleasure.)

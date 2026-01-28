@@ -1,0 +1,61 @@
+Codebook — Formal Definitions for Story Annotation
+
+This document specifies the atomic and compound annotation labels used for classifying short stories. Each label is defined as a predicate that evaluates to true for a given story when the stated conditions are satisfied. Logical compositions preserve the original Boolean structure (AND, OR, NOT, exclusive OR). Node identifiers are preserved exactly as given.
+
+Atomic predicates
+
+- [attr-9]
+  - Definition: The predicate [attr-9] is true if and only if the story employs the conditional mood in its verbal morphology or modal construction (e.g., “would,” conditional verb forms).
+
+- [attr-6]
+  - Definition: The predicate [attr-6] is true if and only if the first lexical token of the story is an adverb.
+
+- [attr-8]
+  - Definition: The predicate [attr-8] is true if and only if the story contains the thematic element of agency (e.g., emphasis on volition, intentional action, autonomy).
+
+- [attr-5]
+  - Definition: The predicate [attr-5] is true if and only if the story contains fewer than 160 words.
+
+- [attr-7]
+  - Definition: The predicate [attr-7] is true if and only if the story’s tone is lighthearted.
+
+- [attr-10]
+  - Definition: The predicate [attr-10] is true if and only if the story employs perfect aspect constructions (e.g., “has eaten,” “had gone”).
+
+Compound predicates (logical compositions)
+
+- [attr-3]
+  - Logical specification: [attr-3] is true iff both of the following hold:
+    - The story is [attr-9]
+    - The story is not [attr-10]
+  - Formal: [attr-3] = [attr-9] AND (NOT [attr-10])
+
+- [attr-4]
+  - Logical specification: [attr-4] is true iff both of the following hold:
+    - The story is [attr-5]
+    - The story is [attr-7]
+  - Formal: [attr-4] = [attr-5] AND [attr-7]
+
+- [attr-1]
+  - Logical specification: [attr-1] is true iff both of the following hold:
+    - The story is [attr-8]
+    - Exactly one of the following is true (exclusive OR):
+      - The story is [attr-6]
+      - The story is [attr-5]
+  - Formal: [attr-1] = [attr-8] AND XOR([attr-6], [attr-5])
+
+- [attr-2]
+  - Logical specification: [attr-2] is true iff both of the following hold:
+    - The story is [attr-4]
+    - At least one of the following is true:
+      - The story is [attr-3]
+      - The story is [attr-1]
+  - Formal: [attr-2] = [attr-4] AND ([attr-3] OR [attr-1])
+
+Notes on interpretation
+- “Both of the following are true” specifies a logical AND of the enumerated conditions.
+- “Exactly one of the following is true” specifies an exclusive OR (XOR): precisely one operand must be true.
+- “Either/At least one of the following are true” specifies an inclusive OR: one or more operands may be true.
+- Atomic predicates are evaluated with reference to the story text and linguistic/semantic criteria as defined above.
+
+Use these definitions as authoritative for annotation and automated rule-based reasoning.

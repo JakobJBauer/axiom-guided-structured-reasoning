@@ -1,0 +1,37 @@
+In a sunlit archive tucked between the pages of countless tales, there lives a delicate codebook — a map of meanings, each label a jeweled key that opens a particular door in the mansion of stories. Below, I present these keys anew, polished and adorned with petals of language, but unchanged in their shape or lock. Each line keeps the exact bracketed sigils that guide annotators and reasoners alike; the logic that binds them remains inviolate.
+
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if the story has the theme Innovation.
+- In other words: if a narrative hums with invention, novelty, or the breath of something new, it bears this banner.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+- Picture stories woven from rituals, ceremonies, inherited customs, and the warm threads of communal memory — such tales wear this label.
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras.
+- These are chronicles that drift on the dust of old days, singing of epochs that have folded into history.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+- Whenever a narrative asks who, what, where, when, why, or how — those curious, probing words — it is crowned with this mark.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+- If the very first breath of the text is a person, place, thing, or idea named plainly as a noun, this sigil is placed upon it.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+- Should the opening word be a preposition — a slender bridge like "in," "on," or "through" — the tale receives this designation.
+
+[CULTURAL-INNOVATION-QUESTIONS]
+A story is [CULTURAL-INNOVATION-QUESTIONS] if all of the following are true:
+- The story is [THEME-INNOVATION]
+- Either of the following is true:
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+  - The story is [TOPIC-BYGONE-ERAS]
+- The story is [USES-WH-QUESTIONS]
+
+- Imagine a tapestry where the golden thread of innovation runs through cloth patterned with ritual or the echoes of past ages, and where curious questions — those tender wh-words — open windows into the weave. Only when all these conditions entwine does a tale receive the name [CULTURAL-INNOVATION-QUESTIONS].
+
+Thus the codebook stands: ornate in language, steadfast in logic. Each bracketed emblem remains exactly as before, and every connective clasp — the conjunctions, the choice between paths, the necessary conditions — holds firm, guiding careful hands to annotate with both precision and pleasure.

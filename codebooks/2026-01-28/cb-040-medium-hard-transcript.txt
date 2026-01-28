@@ -1,0 +1,105 @@
+**Transcript: Codebook Walkthrough (Q&A Style)**
+
+---
+
+**Interviewer:** Let’s start simple. What does it mean for a story to be **[THEME-AGENCY]**?
+
+**Expert:** A story is **[THEME-AGENCY]** if **The story has the theme Agency**.
+
+---
+
+**Interviewer:** Okay. What about **[STARTS-WITH-NOUN]**—how do we decide that?
+
+**Expert:** A story is **[STARTS-WITH-NOUN]** if **The story starts with a noun**.
+
+---
+
+**Interviewer:** And if I’m trying to tag stories about big beings—what’s **[TOPIC-GIANT-CREATURES]**?
+
+**Expert:** A story is **[TOPIC-GIANT-CREATURES]** if **The story is about giant creatures**.
+
+---
+
+**Interviewer:** Nice. Then what qualifies as **[THEME-KINDNESS]**?
+
+**Expert:** A story is **[THEME-KINDNESS]** if **The story has the theme Kindness**.
+
+---
+
+**Interviewer:** I see a readability rule. How does **[HIGH-READABILITY]** get assigned?
+
+**Expert:** A story is **[HIGH-READABILITY]** if **The story has readability score above 96.1**.
+
+---
+
+**Interviewer:** And **[TOPIC-MYSTICAL-CREATURES]**?
+
+**Expert:** A story is **[TOPIC-MYSTICAL-CREATURES]** if **The story is about mystical creatures**.
+
+---
+
+**Interviewer:** What about a more “skills and solutions” theme—what is **[THEME-PROBLEM-SOLVING]**?
+
+**Expert:** A story is **[THEME-PROBLEM-SOLVING]** if **The story has the theme Problem-Solving**.
+
+---
+
+### Combining Topics
+
+**Interviewer:** Now I’m seeing something called **[MYSTICAL-GIANTS]**. How does that work?
+
+**Expert:** A story is **[MYSTICAL-GIANTS]** if **both of the following are true**:  
+- The story is **[TOPIC-GIANT-CREATURES]**  
+- The story is **[TOPIC-MYSTICAL-CREATURES]**
+
+---
+
+### Exclusive Theme Logic
+
+**Interviewer:** The label **[SOLVER-OR-AGENCY]** sounds like a logical operator. What exactly is the condition?
+
+**Expert:** A story is **[SOLVER-OR-AGENCY]** if **exactly one of the following is true**:  
+- The story is **[THEME-PROBLEM-SOLVING]**  
+- The story is **[THEME-AGENCY]**
+
+---
+
+### Layering on Kindness
+
+**Interviewer:** Then what does **[ALTRUISM-SOLVER]** require?
+
+**Expert:** A story is **[ALTRUISM-SOLVER]** if **both of the following are true**:  
+- The story is **[THEME-KINDNESS]**  
+- The story is **[SOLVER-OR-AGENCY]**
+
+---
+
+### Opening Constraint
+
+**Interviewer:** I’m curious about **[OPENING-ASSERTIVE]**. What makes an opening “assertive” here?
+
+**Expert:** A story is **[OPENING-ASSERTIVE]** if **both of the following are true**:  
+- **[STARTS-WITH-NOUN] equals true**  
+- The story is **not [THEME-AGENCY]**
+
+---
+
+### Final Composite: Featured Story
+
+**Interviewer:** Great—now the big one: **[FEATURED-STORY]**. What’s the full checklist?
+
+**Expert:** A story is **[FEATURED-STORY]** if **both of the following are true**:  
+- The story is **[MYSTICAL-GIANTS]**  
+- **either of the following is true**:  
+  - **both of the following are true**:  
+    - The story is **[ALTRUISM-SOLVER]**  
+    - **[HIGH-READABILITY] equals true**  
+  - **both of the following are true**:  
+    - The story is **[OPENING-ASSERTIVE]**  
+    - **[TOPIC-GIANT-CREATURES] is in [TOPIC-GIANT-CREATURES, TOPIC-MYSTICAL-CREATURES]**
+
+---
+
+**Interviewer:** So to recap: to be **[FEATURED-STORY]**, it must be **[MYSTICAL-GIANTS]**, and then it must satisfy one of those two “either” branches exactly as written.
+
+**Expert:** Correct—same structure, same logic, just explained in a more conversational way.

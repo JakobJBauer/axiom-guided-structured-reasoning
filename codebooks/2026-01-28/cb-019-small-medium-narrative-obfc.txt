@@ -1,0 +1,28 @@
+Imagine you have wandered into a warm, dim reading room where a kindly librarian—the keeper of labels—speaks in short, clear rules carved into wooden plaques. Each plaque names a trait and explains how to recognize it. Listen as the librarian tells their stories, one rule at a time, weaving a gentle tale of classification that you can both enjoy and use.
+
+- The first plaque reads: "A story is [attr-6] if the story uses superlative forms." It is simple and proud, like a herald declaring when a tale chooses the tallest peaks of comparison—the absolute best, worst, fastest—anything crowned with 'most' or '-est.'
+
+- Beside it, another plaque is devoted to ancient dust and vanished empires: "A story is [attr-5] if the story is about lost civilizations." This sign points your attention to tales that wander ruins, decipher cracked stones, and whisper of peoples who once were.
+
+- A third plaque is almost playful: "A story is [attr-3] if the story starts with a noun." It's the gatekeeper of openings—watching whether a sentence begins with a person, place, thing, or idea before any verbs stir the scene.
+
+- Nearby, a lantern-shaped placard giggles: "A story is [attr-4] if the story has the theme Humor." This one recognizes when a story leans toward the comic, the ironic, or the joyfully absurd.
+
+Then the librarian points to a little trio of conditions grouped together like a charm. The charm's label reads [attr-1], and the librarian explains the incantation carefully: "A story is [attr-1] if all of the following are true:" The charm’s threads list three beads—each must be present.
+
+  - The story is [attr-3]
+  - The story is [attr-4]
+  - The story is not [attr-6]
+
+Picture it as a doorway that only opens when a tale begins with a sturdy noun, carries a playful tone, and yet does not boast in superlatives. Only when every one of those three conditions shines at once does the doorway swing wide.
+
+Finally, the librarian points to the grandest plaque of them all, which binds setting and tone into a more intricate spell. It is labeled [attr-2], and its proclamation is precise: "A story is [attr-2] if both of the following are true:" Two pillars must stand together.
+
+  - The story is [attr-5]
+  - Exactly one of the following is true:
+    - The story is [attr-1]
+    - The story is [attr-6]
+
+Imagine a stage where lost cities loom and satirical wit dances. For the [attr-2] mark to be earned, the tale must be about lost civilizations, and then—decisively—either it must pass through the lighthearted doorway described above, or it must wear the crown of superlatives. But not both: the rule insists on exclusivity—exactly one of those two possibilities must hold.
+
+The librarian closes the book with a smile. The rules are strict but fair—each plaque a trustworthy guide. Keep these signs in mind as you read and annotate: they tell you exactly when to hang each label, and they do so with the clarity of a story-teller who loves logic as much as a good tale.

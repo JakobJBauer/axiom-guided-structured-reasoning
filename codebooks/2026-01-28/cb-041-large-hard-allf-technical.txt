@@ -1,0 +1,106 @@
+Codebook — Technical Specification
+
+Each entry defines a boolean annotation node. For a given story, a node evaluates to true if and only if the specified semantic condition holds. Logical operators are applied as indicated: And (conjunction), Or (disjunction), Xor (exclusive disjunction), Not (negation), In (set membership), Equal (logical equivalence / biconditional). Node identifiers are shown in square brackets and must be preserved exactly.
+
+[SHORT-STORY]
+Specification: [SHORT-STORY] = true iff the story length < 160 words.
+Semantics: This node is a pure quantitative length predicate.
+
+[THEME-KINDNESS]
+Specification: [THEME-KINDNESS] = true iff the story’s dominant thematic element is Kindness.
+Semantics: Theme classification predicate (categorical).
+
+[THEME-HELPING-OTHERS]
+Specification: [THEME-HELPING-OTHERS] = true iff the story’s dominant thematic element is Helping Others.
+Semantics: Theme classification predicate (categorical).
+
+[THEME-PROBLEM-SOLVING]
+Specification: [THEME-PROBLEM-SOLVING] = true iff the story’s dominant thematic element is Problem-Solving.
+Semantics: Theme classification predicate (categorical).
+
+[STYLE-PHILOSOPHICAL]
+Specification: [STYLE-PHILOSOPHICAL] = true iff the narrative style is philosophical.
+Semantics: Style-level predicate indicating reflective/abstract tone.
+
+[HIGH-READABILITY]
+Specification: [HIGH-READABILITY] = true iff the story’s readability score > 96.1.
+Semantics: Numeric threshold predicate on readability metric.
+
+[STYLE-PLAYFUL]
+Specification: [STYLE-PLAYFUL] = true iff the narrative style is playful.
+Semantics: Style-level predicate indicating light, whimsical delivery.
+
+[THEME-HUMOR]
+Specification: [THEME-HUMOR] = true iff the story’s dominant thematic element is Humor.
+Semantics: Theme classification predicate (categorical).
+
+[STYLE-HUMOROUS]
+Specification: [STYLE-HUMOROUS] = true iff the narrative style is humorous.
+Semantics: Style-level predicate indicating comedic tone.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+Specification: [HAS-A-STORY-WITHIN-A-STORY] = true iff the narrative contains an embedded secondary story.
+Semantics: Structural predicate indicating a frame or nested narrative.
+
+[TOPIC-MYSTICAL-CREATURES]
+Specification: [TOPIC-MYSTICAL-CREATURES] = true iff the story’s subject matter includes mystical creatures.
+Semantics: Subject-matter predicate.
+
+[HAS-A-RED-HERRING]
+Specification: [HAS-A-RED-HERRING] = true iff the story contains a red herring (an intentionally misleading clue).
+Semantics: Narrative device predicate.
+
+[KINDNESS-HELPING]
+Specification: [KINDNESS-HELPING] = true iff both of the following hold:
+- [THEME-KINDNESS] is true
+- [THEME-HELPING-OTHERS] is true
+Logical operator: conjunction (And). Both component theme predicates must be simultaneously true.
+
+[LIGHT-HEARTED]
+Specification: [LIGHT-HEARTED] = true iff exactly one of the following is true:
+- [STYLE-PLAYFUL]
+- [STYLE-HUMOROUS]
+Logical operator: exclusive disjunction (Xor). This node is true when precisely one style predicate holds, and false when both or neither hold.
+
+[THEME-IN-CORE-SET]
+Specification: [THEME-IN-CORE-SET] = true iff the story’s dominant theme is a member of the following set:
+- [THEME-KINDNESS], [THEME-HELPING-OTHERS], [THEME-PROBLEM-SOLVING]
+Logical operator: set membership (In). Evaluate membership among the listed theme nodes.
+
+[BALANCED-TONE]
+Specification: [BALANCED-TONE] = true iff the following equivalence holds:
+- Presence([STYLE-PHILOSOPHICAL]) Equal Presence([STYLE-HUMOROUS])
+Logical operator: logical equivalence (Equal / biconditional). [BALANCED-TONE] is true when both [STYLE-PHILOSOPHICAL] and [STYLE-HUMOROUS] are either both true or both false.
+
+[MYSTICAL-ALLEGORY]
+Specification: [MYSTICAL-ALLEGORY] = true iff both of the following hold:
+- [TOPIC-MYSTICAL-CREATURES] is true
+- Conjunction: ([HAS-A-STORY-WITHIN-A-STORY] And [STYLE-PHILOSOPHICAL]) is true
+Logical operator: nested conjunction (And within And). This node encodes an allegorical structure combining mystical subject matter with a nested, philosophical narrative.
+
+[COMPLEX-ARC]
+Specification: [COMPLEX-ARC] = true iff all of these conditions are satisfied:
+1. Disjunction: one of the following is true (Or):
+   - [KINDNESS-HELPING]
+   - [THEME-PROBLEM-SOLVING]
+2. Exclusive disjunction: exactly one of the following is true (Xor):
+   - [HAS-A-RED-HERRING]
+   - [HAS-A-STORY-WITHIN-A-STORY]
+3. Disjunction involving negation: ([Not [SHORT-STORY]] Or [HIGH-READABILITY]) is true
+Logical commentary: This node combines Or, Xor, and Not to define a nuanced narrative arc. Condition 3 excludes short stories unless they meet the [HIGH-READABILITY] threshold.
+
+[RECOMMENDABLE-COMPOSITION]
+Specification: [RECOMMENDABLE-COMPOSITION] = true iff both of the following compound conditions hold:
+- Conjunction: ([COMPLEX-ARC] And [BALANCED-TONE]) is true
+- Conjunction: ([THEME-IN-CORE-SET] And (Or: [LIGHT-HEARTED] or [MYSTICAL-ALLEGORY])) is true
+Logical operator composition: Top-level And combines two branches. The second branch nests an Or that selects between a light tone or mystical allegory, while referencing set membership (In), equivalence (Equal), negation (Not), and exclusive disjunction (Xor) indirectly via subordinate nodes.
+
+Notes on operator semantics (for implementers)
+- And: true when all operands are true.
+- Or: true when at least one operand is true.
+- Xor: true when exactly one operand is true.
+- Not: logical negation of the operand.
+- In: membership check against a finite set of nodes.
+- Equal: logical equivalence (true when both operands have identical truth values).
+
+End of specification.

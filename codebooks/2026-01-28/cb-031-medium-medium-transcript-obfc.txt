@@ -1,0 +1,53 @@
+Interviewer: Let's go through this codebook node by node. First, what does [attr-4] mean?
+
+Expert: A story is [attr-4] if the story has readability score below 86.4.
+
+Interviewer: Clear. And the stylistic labels — how are they defined?
+
+Expert: Here they are, simple and direct:
+- A story is [attr-6] if the story is philosophical.
+- A story is [attr-5] if the story is modern.
+- A story is [attr-12] if the story uses superlative forms.
+
+Interviewer: What about topical tags?
+
+Expert: Same straightforward pattern:
+- A story is [attr-10] if the story is about bygone eras.
+- A story is [attr-11] if the story is about time travel.
+
+Interviewer: And theme labels?
+
+Expert: Yes:
+- A story is [attr-7] if the story has the theme Magic.
+- A story is [attr-8] if the story has the theme Problem-Solving.
+- A story is [attr-3] if the story has a moral lesson.
+
+Interviewer: Now we get to the composite nodes. How is [attr-9] defined?
+
+Expert: A story is [attr-9] if exactly one of the following is true:
+- The story is [attr-11]
+- The story is [attr-7]
+
+Interviewer: So "exactly one" means one or the other, but not both. Got it. Next composite node?
+
+Expert: [attr-2]. The definition is:
+A story is [attr-2] if all of the following are true:
+- The story is [attr-10]
+- The story is [attr-3]
+- The story is not [attr-12]
+
+Interviewer: That last line uses negation. So the story must not use superlatives. Understood. And the most complex node?
+
+Expert: [attr-1]. It requires multiple conditions:
+A story is [attr-1] if all of the following are true:
+- The story is [attr-9]
+- The story is [attr-8]
+- The story is not [attr-4]
+
+Interviewer: Let me summarize to make sure I'm following: [attr-1] needs the exclusive time-or-magic condition from [attr-9], plus problem-solving as a theme, and it must not be low-readability. Is that right?
+
+Expert: Exactly. You’ve captured the logical structure: preserve each node identity, apply the specified logical operators (exactly one / all / not), and combine them as written.
+
+Interviewer: Thanks — that keeps the relationships clear for anyone doing annotation or reasoning.
+
+Expert: My pleasure. Each node is defined precisely so annotators can use these rules without ambiguity.

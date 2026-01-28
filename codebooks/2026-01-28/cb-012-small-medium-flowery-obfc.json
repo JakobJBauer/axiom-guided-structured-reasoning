@@ -1,0 +1,68 @@
+{
+  "nodes": [
+    {
+      "id": "attr-4",
+      "label": "Story carries the theme Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Story is about mystical creatures (fae, wyrms, spirits, shapeshifters)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Story starts with a preposition (In, On, Under, Beyond, etc.)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "Story is mystical creatures and not Helping Others",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Story starts with a preposition and is not attr-2",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-3",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-2"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-5",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-1"
+    }
+  ]
+}

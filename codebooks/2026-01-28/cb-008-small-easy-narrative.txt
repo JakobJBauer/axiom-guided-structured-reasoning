@@ -1,0 +1,21 @@
+Imagine a dimly lit archive where stories are catalogued like rare artifacts — each label tells you not just what a tale is, but what it does in the world of meaning. Walk with me through a short tour of that archive; I’ll tell you the little signs we pin to these tales, and then hand you the exact rule that makes each sign stick.
+
+First, there are tales braided from the practices and rituals of a people — the festivals, the rites, the recipes passed down by lantern-light. When such a tale takes center stage, we hang a ribbon on it to say where it belongs:
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+Some tales carry a lamp to guide behavior — they teach, nudge, or warn. When a story leaves you with a lesson meant to shape choices or character, we mark it with this emblem:
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+Then there are tales that open with a little rhythm, a cadence that shapes the whole sentence: an opening word that describes how the action unfolds, setting the tone from the very first breath. For those, we note:
+A story is [STARTS-WITH-ADVERB] if the story starts with a adverb.
+
+Magic also has its own corner in the archive — stories where the impossible hums as if it were ordinary. Whenever spells, enchantment, or the uncanny are central, we attach this flag:
+A story is [THEME-MAGIC] if the story has the theme Magic.
+
+Finally, there’s a special category reserved for the oldest, most instructive enchantments: tales that come from cultural roots, are threaded with magic, and also carry a moral to pass on. Think of a village elder telling a cautionary spell at the hearth — that combination is what unlocks the last label. The rule that bundles these three qualities is strict and exact; it only applies when every part is present:
+A story is [TRADITIONAL-MAGIC-TEACHING] if all of the following are true:
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+- The story is [THEME-MAGIC]
+- The story is [HAS-A-MORAL-LESSON]
+
+In this archive, each label is precise and each rule is deliberate. Read the ribbons, check the badges, and you’ll know which stories teach tradition, which begin with a particular cadence, which weave magic into their threads, and which of them do all of these things at once.

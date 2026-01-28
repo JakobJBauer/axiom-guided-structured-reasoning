@@ -1,0 +1,65 @@
+Codebook — structured reference
+
+Purpose: Provide a clear, hierarchical description of each annotation node and the exact logical conditions that determine when a story satisfies that node. All node IDs, logical operators, and relationships are preserved exactly as in the original codebook.
+
+1) Atomic (base) properties
+- [HAS-A-MORAL-LESSON]
+  - Definition: A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+- [MANY-PARAGRAPHS]
+  - Definition: A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+- [STARTS-WITH-ADVERB]
+  - Definition: A story is [STARTS-WITH-ADVERB] if the story starts with a adverb.
+- [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - Definition: A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+- [USES-PERFECT-ASPECT]
+  - Definition: A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect.
+- [USES-SUPERLATIVE-FORMS]
+  - Definition: A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+2) Derived (composite) nodes — logical structure and conditions
+- [STYLISTIC-CHOICE]
+  - Summary: Requires that the story starts with an adverb AND exactly one of two stylistic markers holds.
+  - Formal conditions:
+    - A story is [STYLISTIC-CHOICE] if both of the following are true:
+      - The story is [STARTS-WITH-ADVERB]
+      - Exactly one of the following is true:
+        - The story is [USES-PERFECT-ASPECT]
+        - The story is [USES-SUPERLATIVE-FORMS]
+
+- [NARRATIVE-TYPE]
+  - Summary: True when the story either has a circular narrative, or — if it does not have a circular structure — it has many paragraphs.
+  - Formal conditions:
+    - A story is [NARRATIVE-TYPE] if either of the following is true:
+      - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+      - Both of the following are true:
+        - The story is not [HAS-CIRCULAR-NARRATIVE-STRUCT]
+        - The story is [MANY-PARAGRAPHS]
+
+- [MORAL-OR-LONG]
+  - Summary: True when exactly one of the two length/moral properties holds: either a moral lesson or many paragraphs, but not both.
+  - Formal conditions:
+    - A story is [MORAL-OR-LONG] if exactly one of the following is true:
+      - The story is [HAS-A-MORAL-LESSON]
+      - The story is [MANY-PARAGRAPHS]
+
+- [COMPLEXITY-HIGH]
+  - Summary: Indicates a high complexity story when it meets narrative-type requirements, and additionally either shows a specific stylistic choice or does not satisfy MORAL-OR-LONG.
+  - Formal conditions:
+    - A story is [COMPLEXITY-HIGH] if both of the following are true:
+      - Either of the following is true:
+        - The story is [STYLISTIC-CHOICE]
+        - The story is not [MORAL-OR-LONG]
+      - The story is [NARRATIVE-TYPE]
+
+3) Quick logical maps (for reference)
+- [STYLISTIC-CHOICE] = [STARTS-WITH-ADVERB] AND exactly-one([USES-PERFECT-ASPECT], [USES-SUPERLATIVE-FORMS])
+- [NARRATIVE-TYPE] = [HAS-CIRCULAR-NARRATIVE-STRUCT] OR (NOT [HAS-CIRCULAR-NARRATIVE-STRUCT] AND [MANY-PARAGRAPHS])
+- [MORAL-OR-LONG] = exactly-one([HAS-A-MORAL-LESSON], [MANY-PARAGRAPHS])
+- [COMPLEXITY-HIGH] = [NARRATIVE-TYPE] AND ( [STYLISTIC-CHOICE] OR NOT [MORAL-OR-LONG] )
+
+Usage notes (annotator guidance)
+- Evaluate atomic properties first (Section 1). These are the inputs used by the composite rules.
+- Apply composite rules exactly as written—observe "both", "either", and "exactly one" carefully.
+- The logical structure is intentional: do not simplify or alter the relationships when reasoning or implementing these conditions.
+
+End of codebook.

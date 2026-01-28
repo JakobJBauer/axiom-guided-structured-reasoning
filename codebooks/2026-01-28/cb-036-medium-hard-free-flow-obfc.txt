@@ -1,0 +1,63 @@
+Here’s a more natural, free-flow rendering of the same codebook — the ideas are the same, the logic is unchanged, and every node ID and logical connector is preserved exactly as before. I’ve smoothed the language so it reads like a conversation, but all relationships stay intact.
+
+[attr-2]
+A story is [attr-2] if the story has readability score below 86.4.
+
+[attr-11]
+A story is [attr-11] if the story is about time travel.
+
+[attr-10]
+A story is [attr-10] if the story is about seasonal changes.
+
+[attr-12]
+A story is [attr-12] if the story uses discourse markers.
+
+[attr-4]
+A story is [attr-4] if the story starts with a adjective.
+
+[attr-9]
+A story is [attr-9] if the story is about hidden treasures.
+
+[attr-7]
+A story is [attr-7] if the story has the theme Deception.
+
+[attr-8]
+A story is [attr-8] if the story has the theme Helping Others.
+
+[attr-6]
+A story is [attr-6] if the story starts with a preposition.
+
+[attr-5]
+A story is [attr-5] if the story starts with a adverb.
+
+[attr-3]
+Think of [attr-3] as a label we give a story when one of two overall conditions is met. Either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+- Both of the following are true:
+  - The story is [attr-12]
+  - Either of the following is true:
+    - The story is [attr-2]
+    - The story is [attr-6]
+
+So in plain terms: a story qualifies for [attr-3] if it begins distinctly with an adjective or an adverb (but not both), or if it uses discourse markers and is either hard to read (below that readability threshold) or begins with a preposition.
+
+[attr-1]
+[attr-1] is a bit more particular: it requires two main things to be true together. Both of the following are true:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-11]
+    - Exactly one of the following is true:
+      - The story is [attr-7]
+      - The story is [attr-8]
+  - Both of the following are true:
+    - The story is [attr-10]
+    - Both of the following are true:
+      - The story is [attr-9]
+      - The story is not [attr-11]
+- The story is [attr-3]
+
+To unpack that: a story becomes [attr-1] when it meets [attr-3] and, in addition, either (A) it’s about time travel and carries exactly one of two themes — Deception or Helping Others — or (B) it ties together seasonal changes and hidden treasures, but explicitly is not about time travel. The logic is strict: both the thematic/topic condition and the narrative-surface condition must hold at the same time.
+
+That’s the whole codebook, translated into a more conversational flow while keeping every node, ID, and logical relationship intact.

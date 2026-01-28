@@ -1,0 +1,40 @@
+A whisper before the ledger: imagine an old librarian of stories, who sorts tales not by dust or date but by the secret tremors of their souls. She pens a small codex — precise as a map, ornate as a tapestry — so those who come after may recognize at a glance whether a tale walks in the manners of antiquity, speaks with the voice of today, or leaves the reader dangling at a precipice. Below you will find that codex: each rule preserved like a charter, its logic unchanged, but embroidered with the language of gardens and lanterns to make the work a pleasure to read.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic
+- In gentler terms: when a tale wears the familiar garments of long-standing tradition — measured rhythm, venerable tropes, and an air of time-honored form — we bestow upon it the token [STYLE-CLASSIC].
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if The story is modern
+- Whispered in the margins: when a narrative pulses with contemporary cadence, fresh innovations, or sensibilities of the present day, it earns the badge [STYLE-MODERN].
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+- Imagine the final line that hangs like a bird on a wire: the story possesses a cliffhanger when it intentionally leaves the reader suspended, and thus it qualifies as [HAS-A-CLIFFHANGER].
+
+[LONG-STORY]
+A story is [LONG-STORY] if The story has more than 375 words
+- Measured by length as by heartbeat: if the tale stretches beyond 375 words, unfolding pages and petals, it is considered a [LONG-STORY].
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] if The story is about bygone eras
+- If the narrative’s breath smells of dusted maps, ancient fashions, or histories turned to sepia, and it concerns epochs past, then it belongs to [TOPIC-BYGONE-ERAS].
+
+[CLASSIC-HISTORICAL-LONG]
+A story is [CLASSIC-HISTORICAL-LONG] if all of the following are true:
+- The story is [STYLE-CLASSIC]
+- The story is [LONG-STORY]
+- The story is [TOPIC-BYGONE-ERAS]
+- Picture, if you will, a long, classic chronicle of olden days: only when all three jewels — classic style, sufficient length, and a setting in bygone eras — shine together does the tale receive the name [CLASSIC-HISTORICAL-LONG].
+
+[DYNAMIC-STYLE-CLIFF]
+A story is [DYNAMIC-STYLE-CLIFF] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [STYLE-MODERN]
+  - The story is [STYLE-CLASSIC]
+- All of the following are true:
+  - The story is not [STYLE-CLASSIC]
+  - The story's style is equal to [STYLE-MODERN]
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story's topic is in [TOPIC-BYGONE-ERAS]
+- In the lexicon of moods: a tale becomes [DYNAMIC-STYLE-CLIFF] either when it decisively leans into exactly one clear temporal voice (modern or classic), or when it meets the richer conjunctive test — not classic, explicitly modern in style, bearing a cliffhanger, and concerned with bygone eras. Think of this node as the lantern that glows only when the specified combination of traits is present; the logic — exclusive choice or a strict conjunction — stands firm as a compass.

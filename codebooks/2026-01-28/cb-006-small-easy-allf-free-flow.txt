@@ -1,0 +1,26 @@
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if The story has a flashback. In plain terms: tag a story with [HAS-A-FLASHBACK] any time it literally contains a flashback sequence.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if The story uses wh-questions. That means the narrative actually employs who/what/where/when/why/how questions.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if The story uses discourse markers. Use this label when the text relies on connectors and signposting (words or phrases that guide the reader through the discourse).
+
+[INTERACTIVE]
+A story is [INTERACTIVE] if exactly one of the following is true:
+- The story is [USES-WH-QUESTIONS]
+- The story is [USES-DISCOURSE-MARKERS]
+So mark [INTERACTIVE] only when the story meets exactly one of those two conditions — not both, and not neither.
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if both of the following are true:
+- The story is [HAS-A-FLASHBACK]
+- The story is not [INTERACTIVE]
+That is, a complex narrative has a flashback and, at the same time, does not qualify as interactive under the rule above.
+
+[SPECIAL-CASE]
+A story is [SPECIAL-CASE] if either of the following is true:
+- The story is in the set { [INTERACTIVE], [COMPLEX-NARRATIVE] }
+- The story is equal to [HAS-A-FLASHBACK]
+In other words, a special-case story is one that’s either interactive or a complex narrative, or it simply equals the [HAS-A-FLASHBACK] category.

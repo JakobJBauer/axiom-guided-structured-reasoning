@@ -1,0 +1,192 @@
+Here’s a friendlier, more conversational take on the same codebook—same logic, same node IDs, just written to read more smoothly. I’ve kept every ID exactly as written and preserved every logical connective (Not, And, Or, exactly one, all, either, both, etc.), so you can use this for annotation and reasoning without changing the underlying structure.
+
+[THEME-GROWTH]
+Think of a story as [THEME-GROWTH] whenever it carries the theme Growth.
+
+[STYLE-HUMOROUS]
+Label a story [STYLE-HUMOROUS] if it’s humorous in tone.
+
+[THEME-HELPING-OTHERS]
+Call a story [THEME-HELPING-OTHERS] when its central theme is Helping Others.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if it literally starts with a preposition.
+
+[STYLE-MODERN]
+Use [STYLE-MODERN] for a story that feels modern.
+
+[USES-PERFECT-ASPECT]
+Tag a story [USES-PERFECT-ASPECT] when it employs the perfect aspect.
+
+[STYLE-LIGHTHEARTED]
+If a story keeps things breezy and upbeat, it’s [STYLE-LIGHTHEARTED].
+
+[THEME-DECEPTION]
+When the theme is Deception, mark the story as [THEME-DECEPTION].
+
+[THEME-KINDNESS]
+If Kindness is a theme, the story is [THEME-KINDNESS].
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if it makes use of wh-questions.
+
+[TOPIC-LOST-CIVILIZATIONS]
+When the subject is lost civilizations, that’s [TOPIC-LOST-CIVILIZATIONS].
+
+[TOPIC-TIME-TRAVEL]
+Stories about time travel should be marked [TOPIC-TIME-TRAVEL].
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] when it contains a Chekhov’s gun—an element introduced earlier that becomes important later.
+
+[HAS-A-MORAL-LESSON]
+Label a story [HAS-A-MORAL-LESSON] if it conveys a moral lesson.
+
+[THEME-HARDSHIP]
+If the narrative centers on Hardship, it’s [THEME-HARDSHIP].
+
+[LONG-STORY]
+Use [LONG-STORY] for any story with more than 375 words.
+
+[TOPIC-SEASONAL-CHANGES]
+When a story deals with seasonal changes, it’s [TOPIC-SEASONAL-CHANGES].
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if it ends on a cliffhanger.
+
+[THEME-PROBLEM-SOLVING]
+If Problem-Solving is a theme, tag it [THEME-PROBLEM-SOLVING].
+
+[THEME-INNOVATION]
+When Innovation is a theme, the story is [THEME-INNOVATION].
+
+[THEME-MAGIC]
+Mark a story [THEME-MAGIC] when Magic figures into its themes.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if its narrative structure is circular.
+
+[TOPIC-GIANT-CREATURES]
+Stories about giant creatures should be labeled [TOPIC-GIANT-CREATURES].
+
+[USES-DISCOURSE-MARKERS]
+If a story uses discourse markers (those little connectors that guide readers), it’s [USES-DISCOURSE-MARKERS].
+
+[STYLE-PHILOSOPHICAL]
+For a reflective, philosophical tone, use [STYLE-PHILOSOPHICAL].
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if it begins with an adverb.
+
+[TOPIC-CULTURAL-TRADITIONS]
+When cultural traditions are the focus, mark it [TOPIC-CULTURAL-TRADITIONS].
+
+[HAS-A-FLASHBACK]
+If the story contains a flashback, it’s [HAS-A-FLASHBACK].
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if its readability score is above 96.1.
+
+[STYLE-MINIMALIST]
+When a story embraces minimalism, label it [STYLE-MINIMALIST].
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if it employs superlative forms.
+
+[TOPIC-MAGICAL-LANDS]
+If the setting or subject is magical lands, that’s [TOPIC-MAGICAL-LANDS].
+
+[HAS-A-STORY-WITHIN-A-STORY]
+Mark the story [HAS-A-STORY-WITHIN-A-STORY] when it contains a nested tale—a story within the main story.
+
+[STYLE-SURREAL]
+When the style is dreamlike or surreal, use [STYLE-SURREAL].
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if its first word is a noun.
+
+[TOPIC-BYGONE-ERAS]
+Use [TOPIC-BYGONE-ERAS] for stories about bygone eras.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if its readability score is below 86.4.
+
+[THEME-HUMOR]
+If Humor is a central theme, mark the story [THEME-HUMOR].
+
+[TOPIC-MYSTICAL-CREATURES]
+When mystical creatures are the topic, tag it [TOPIC-MYSTICAL-CREATURES].
+
+[HUMOROUS-LIGHTHEARTED]
+A story is [HUMOROUS-LIGHTHEARTED] if both of the following are true:
+- The story is [STYLE-HUMOROUS]
+- The story is [STYLE-LIGHTHEARTED]
+
+[MODERN-PHILOSOPHICAL-SURREAL]
+A story is [MODERN-PHILOSOPHICAL-SURREAL] if either of the following is true:
+- The story is [STYLE-MODERN]
+- both of the following are true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [STYLE-SURREAL]
+
+[READABILITY-EXTREMES]
+A story is [READABILITY-EXTREMES] if exactly one of the following is true:
+- The story is [HIGH-READABILITY]
+- The story is [LOW-READABILITY]
+
+[NARRATIVE-COMPLEXITY]
+A story is [NARRATIVE-COMPLEXITY] if all of the following are true:
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [HAS-A-FLASHBACK]
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+
+[THEMATIC-HELP-KIND]
+A story is [THEMATIC-HELP-KIND] if both of the following are true:
+- The story is [THEME-HELPING-OTHERS]
+- The story is [THEME-KINDNESS]
+
+[MAGIC-LANDS-CREATURES]
+A story is [MAGIC-LANDS-CREATURES] if both of the following are true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- either of the following is true:
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+  - The story is [TOPIC-GIANT-CREATURES]
+
+[TIME-LOST-BYGONE]
+A story is [TIME-LOST-BYGONE] if either of the following is true:
+- both of the following are true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+- The story is [TOPIC-BYGONE-ERAS]
+
+[MORALITY-FILTER]
+A story is [MORALITY-FILTER] if all of the following are true:
+- The story is [HAS-A-MORAL-LESSON]
+- The story is [THEME-KINDNESS]
+- The story is not [THEME-DECEPTION]
+
+[INNOVATION-PROBLEM-SOLVE]
+A story is [INNOVATION-PROBLEM-SOLVE] if both of the following are true:
+- The story is [THEME-INNOVATION]
+- The story is [THEME-PROBLEM-SOLVING]
+
+[PACING-LONG-CLIFF]
+A story is [PACING-LONG-CLIFF] if both of the following are true:
+- The story is [LONG-STORY]
+- The story is [HAS-A-CLIFFHANGER]
+
+[COMPLEX-ARCHETYPE]
+A story is [COMPLEX-ARCHETYPE] if either of the following is true:
+- all of the following are true:
+  - The story is [HUMOROUS-LIGHTHEARTED]
+  - The story is [MORALITY-FILTER]
+  - either of the following is true:
+    - The story is [NARRATIVE-COMPLEXITY]
+    - The story is [PACING-LONG-CLIFF]
+- exactly one of the following is true:
+  - both of the following are true:
+    - The story is [MAGIC-LANDS-CREATURES]
+    - The story is not [STYLE-MINIMALIST]
+  - The story is [TIME-LOST-BYGONE]
+
+That’s it—same formal logic, easier phrasing. If you want, I can format this as a compact reference sheet, or expand any definition with examples to aid annotation.

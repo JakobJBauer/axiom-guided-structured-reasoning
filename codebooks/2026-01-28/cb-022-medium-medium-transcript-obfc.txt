@@ -1,0 +1,53 @@
+Interviewer: Let’s go through this codebook together. First, what does [attr-2] mean?
+
+Respondent: Simple. A story is [attr-2] if the story has circular narrative structure.
+
+Interviewer: And the basic theme and style labels?
+
+Respondent: Sure — short and direct.
+- A story is [attr-11] if the story has the theme Kindness.
+- A story is [attr-10] if the story has the theme Deception.
+- A story is [attr-9] if the story is philosophical.
+- A story is [attr-8] if the story is modern.
+- A story is [attr-3] if the story has juxtaposition.
+- A story is [attr-12] if the story is about hidden treasures.
+
+Interviewer: How are readability categories defined?
+
+Respondent:
+- A story is [attr-5] if the story has readability score below 86.4.
+- A story is [attr-4] if the story has readability score above 96.1.
+
+Interviewer: Now the composite labels — can you explain [attr-6]?
+
+Respondent: Yes. [attr-6] is true when all of the following are true:
+- The story is [attr-8]
+- Either of the following is true:
+  - The story is [attr-9]
+  - The story is [attr-3]
+- The story is not [attr-2]
+
+Interviewer: So it requires modern style, plus either philosophical or juxtaposition, and explicitly excludes circular narratives. Got it. What about [attr-7]?
+
+Respondent: [attr-7] holds if all of the following are true:
+- The story is [attr-11]
+- The story is [attr-10]
+- The story is [attr-6]
+
+Interviewer: That means moral ambivalence combines both themes and that specific stylistic condition. Clear. The most complex one is [attr-1] — how is that computed?
+
+Respondent: [attr-1] is true when both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - Exactly one of the following is true:
+    - The story is [attr-5]
+    - The story is [attr-4]
+  - The story is [attr-12]
+
+Interviewer: Quick clarification — when you say “Exactly one of the following is true,” you mean XOR: the story must be either [attr-5] or [attr-4], but not both?
+
+Respondent: Correct. “Exactly one” enforces exclusivity between [attr-5] and [attr-4].
+
+Interviewer: To summarize: atomic nodes define single properties like theme, style, topic, and readability thresholds. [attr-6] combines modern style with either philosophical or juxtaposition and excludes circular form. [attr-7] requires both kindness and deception themes plus that combined modern/philo/juxta condition. And [attr-1] layers on [attr-7] plus either an exclusive readability state or the hidden-treasures topic. Is that an accurate high-level wrap-up?
+
+Respondent: Exactly. All node IDs and logical relationships remain as stated: no nodes added or removed, and all logical operators (Either, Exactly one, not, both) are preserved.

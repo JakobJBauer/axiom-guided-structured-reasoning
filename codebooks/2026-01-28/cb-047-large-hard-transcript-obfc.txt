@@ -1,0 +1,135 @@
+Interviewer: Let's walk through this codebook like a conversation. I'll ask about each label and you explain what it means. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: First, what does [attr-7] mean?
+
+Expert: [attr-7] — It means: A story is HIGH-READABILITY if the story has readability score above 96.1.
+
+Interviewer: And [attr-8]?
+
+Expert: [attr-8] — A story is LOW-READABILITY if the story has readability score below 86.4.
+
+Interviewer: Simple enough. What about sentence-start properties, like [attr-14] and [attr-13]?
+
+Expert: 
+- [attr-14] — A story is STARTS-WITH-NOUN if the story starts with a noun.
+- [attr-13] — A story is STARTS-WITH-ADVERB if the story starts with an adverb.
+
+Interviewer: How about aspect and markers — [attr-21] and [attr-20]?
+
+Expert: 
+- [attr-21] — A story is USES-PERFECT-ASPECT if the story uses perfect aspect.
+- [attr-20] — A story is USES-DISCOURSE-MARKERS if the story uses discourse markers.
+
+Interviewer: There are a few content/plot tags: [attr-4], [attr-6], [attr-5]. Explain those.
+
+Expert:
+- [attr-4] — A story is HAS-A-CLIFFHANGER if the story has a cliffhanger.
+- [attr-6] — A story is HAS-JUXTAPOSITION if the story has juxtaposition.
+- [attr-5] — A story is HAS-A-RED-HERRING if the story has a Red Herring.
+
+Interviewer: What counts as [attr-12]?
+
+Expert: [attr-12] — A story is SHORT-STORY if the story has fewer than 160 words.
+
+Interviewer: And the style tags — [attr-16], [attr-17], [attr-15]?
+
+Expert:
+- [attr-16] — A story is STYLE-PHILOSOPHICAL if the story is philosophical.
+- [attr-17] — A story is STYLE-PLAYFUL if the story is playful.
+- [attr-15] — A story is STYLE-HUMOROUS if the story is humorous.
+
+Interviewer: There's a theme tag too: [attr-19].
+
+Expert: [attr-19] — A story is THEME-AGENCY if the story has the theme Agency.
+
+Interviewer: Now we reach composed labels. Start with [attr-10]. How is that defined?
+
+Expert: [attr-10] — A story is OPENING-TONE if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-14]
+  - The story is [attr-13]
+- Either of the following is true:
+  - The story is [attr-16]
+  - The story is [attr-17]
+
+Interviewer: So OPENING-TONE requires one of the start types and one of those styles. Got it. Next: [attr-9].
+
+Expert: [attr-9] — A story is NARRATIVE-PACE if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-12]
+  - The story is [attr-7]
+- Both of the following are true:
+  - The story is [attr-21]
+  - The story is not [attr-8]
+
+Interviewer: That gives two alternate routes to NARRATIVE-PACE. What about [attr-2]?
+
+Expert: [attr-2] — A story is COMEDIC-STRUCTURE if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-17]
+  - The story is [attr-15]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [attr-12]
+    - The story is [attr-20]
+  - Either of the following is true:
+    - The story is [attr-5]
+    - The story is [attr-6]
+
+Interviewer: That second bullet is a bit nested. So COMEDIC-STRUCTURE needs playful or humorous style, and then two conditions: an exclusive choice between short story or discourse markers, plus either a red herring or juxtaposition.
+
+Expert: Exactly — the logical relationships are preserved: "Either" at the top, and then "Both" with an "Exactly one" and another "Either."
+
+Interviewer: Now [attr-18], please.
+
+Expert: [attr-18] — A story is THEMATIC-FUSION if both of the following are true:
+- The story is [attr-19]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-16]
+    - The story is [attr-10]
+  - Exactly one of the following is true:
+    - The story is [attr-6]
+    - The story is [attr-5]
+
+Interviewer: So THEMATIC-FUSION needs the Agency theme, plus either a philosophical style combined with OPENING-TONE, or exactly one of juxtaposition/red-herring.
+
+Expert: Correct.
+
+Interviewer: [attr-11] is next. How is that structured?
+
+Expert: [attr-11] — A story is RAPTURE-ENDING if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-4]
+  - The story is not [attr-12]
+- Exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+
+Interviewer: So RAPTURE-ENDING can be satisfied by a non-short cliffhanger, or by an exclusive choice between cliffhanger and red herring.
+
+Expert: Yes — keep in mind the "not [attr-12]" and the "exactly one" constraint.
+
+Interviewer: Finally, the big one: [attr-3].
+
+Expert: [attr-3] — A story is COMPLEX-STORY if both of the following are true:
+- All of the following are true:
+  - The story is [attr-18]
+  - The story is [attr-2]
+- Either of the following is true:
+  - The story is [attr-9]
+  - Both of the following are true:
+    - The story is [attr-11]
+    - The story is not [attr-7]
+
+Interviewer: So to be COMPLEX-STORY you must satisfy THEMATIC-FUSION and COMEDIC-STRUCTURE together, and then either have NARRATIVE-PACE or have a RAPTURE-ENDING while not being HIGH-READABILITY.
+
+Expert: Exactly. The nesting and logical operators — All, Both, Either, Exactly one, and negations — are preserved precisely. Nothing added, nothing removed; just explained in dialogue.
+
+Interviewer: Great. One last check — did we change any node IDs, any logical operators, or omit nodes?
+
+Expert: No changes. All node IDs are preserved in [attr-1] format, every logical relationship (Not, And, Or, Exactly one, Both, All, Either) is kept intact, and no nodes were added or removed.
+
+Interviewer: Perfect. That should make this codebook easier to read while keeping its logic intact. Thanks.

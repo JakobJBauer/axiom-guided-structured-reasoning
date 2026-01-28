@@ -1,0 +1,66 @@
+Think of this as the same codebook, only spoken more naturally — like I’m walking you through the labels as we flip through a stack of stories. I won’t change any of the logic or the exact node IDs; I’ll just make the descriptions easier to read while keeping the formal definitions exactly as they are.
+
+A story is [THEME-GROWTH] when its central idea is about growing — personal change, development, learning. Formally:
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if The story has the theme Growth.
+
+A story is [THEME-HELPING-OTHERS] when it focuses on people helping one another, acts of kindness, or support. Formally:
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others.
+
+If the opening word of a story is an adverb, we mark it as [STARTS-WITH-ADVERB]. Plain and simple. Formally:
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if The story starts with a adverb.
+
+When a story feels contemporary — language, references, or setting that place it in a modern context — we call it [STYLE-MODERN]. Formally:
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if The story is modern.
+
+If the plot or subject deals with seasonal shifts — the turning of the year, weather marking time, cycles of nature — that’s [TOPIC-SEASONAL-CHANGES]. Formally:
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if The story is about seasonal changes.
+
+When the narrative uses the perfect aspect (has/have/had + past participle), it gets the [USES-PERFECT-ASPECT] tag. Formally:
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+
+We flag a story [LOW-READABILITY] if its readability score falls below 86.4 — meaning it might be denser or trickier to read. Formally:
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if The story has readability score below 86.4.
+
+If a story reads like a classic — timeless style, older conventions, or a traditional feel — we use [STYLE-CLASSIC]. Formally:
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic.
+
+Stories that talk about dragons, spirits, or other fantastical beings get [TOPIC-MYSTICAL-CREATURES]. Formally:
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures.
+
+We call a story [HIGH-READABILITY] when it scores above 96.1 — very easy to follow. Formally:
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if The story has readability score above 96.1.
+
+Now for a combined label: [SEASONAL-GROWTH] is for stories that hit a particular trio of conditions — they must be about seasonal changes, carry the theme of growth, and not involve mystical creatures. In plain words: seasonal + growth, but exclude fantasy beings. Formally:
+[SEASONAL-GROWTH]
+A story is [SEASONAL-GROWTH] if all of the following are true:
+- The story is [TOPIC-SEASONAL-CHANGES]
+- The story is [THEME-GROWTH]
+- The story is not [TOPIC-MYSTICAL-CREATURES]
+
+Finally, [COMPOSED-STORY] is a slightly more elaborate mix — a label we apply when a story satisfies one of a few compound conditions. Either it blends seasonal growth with helping others, or it meets one of two stylistic pathways: modern and not low-readability, or classic while using perfect aspect and showing high readability. In everyday phrasing: a story can be composed if it’s a seasonal-growth story that also helps others, or if it’s modern and readable, or if it’s a classic that uses the perfect aspect and is very easy to read. Formally:
+[COMPOSED-STORY]
+A story is [COMPOSED-STORY] if either of the following is true:
+- both of the following are true:
+  - The story is [SEASONAL-GROWTH]
+  - The story is [THEME-HELPING-OTHERS]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [STYLE-MODERN]
+    - The story is not [LOW-READABILITY]
+  - both of the following are true:
+    - The story is [STYLE-CLASSIC]
+    - both of the following are true:
+      - The story is [USES-PERFECT-ASPECT]
+      - The story is [HIGH-READABILITY]
+
+That’s the whole set — same nodes, same logical relationships, just presented with a friendlier voice to make the labels easier to grasp while you annotate or reason with them.

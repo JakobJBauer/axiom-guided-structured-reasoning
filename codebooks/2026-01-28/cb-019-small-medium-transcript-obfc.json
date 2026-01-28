@@ -1,0 +1,84 @@
+{
+  "nodes": [
+    {
+      "id": "attr-6",
+      "label": "Uses superlative forms",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "About lost civilizations",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Starts with a noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Theme is Humor",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "Starts with a noun AND Humor AND NOT superlative",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-3",
+        "attr-4",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "About lost civilizations AND exactly one of (attr-1, attr-6)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-1",
+            "attr-6"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-2"
+    }
+  ]
+}

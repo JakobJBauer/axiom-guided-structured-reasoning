@@ -1,0 +1,37 @@
+Purpose: This codebook defines annotation predicates used to classify short narratives. Each predicate is identified by its node ID (in brackets). The definitions below specify the exact criteria for setting each predicate to true. Composite predicates are expressed in terms of logical operations (AND, OR) over other predicates. Do not change node IDs, logical operators, or predicate relationships.
+
+[attr-6]
+Definition: Mark [attr-6] true when the narrative’s overall tone or stylistic presentation is playful (e.g., light-hearted, whimsical, or jocular).  
+Annotation rule: Apply if the story exhibits playfulness in voice, diction, or tone.
+
+[attr-5]
+Definition: Mark [attr-5] true when the narrative demonstrates characteristics associated with contemporary or modern style (e.g., present-day references, modern idiom, current cultural framing).  
+Annotation rule: Apply if the story’s style aligns with contemporary conventions.
+
+[attr-4]
+Definition: Mark [attr-4] true when the first lexical token of the story is an adjective.  
+Annotation rule: Apply if the first word in the narrative’s surface form is classified morphologically as an adjective.
+
+[attr-7]
+Definition: Mark [attr-7] true when the narrative contains explicit discourse markers (e.g., however, therefore, then, meanwhile) used to organize or signal discourse structure.  
+Annotation rule: Apply if one or more discourse marker tokens are present and functionally used to structure the text.
+
+[attr-2]
+Definition: Mark [attr-2] true when the narrative includes an element introduced earlier that is later used in a consequential way (Chekhov’s gun principle).  
+Annotation rule: Apply if a previously introduced detail or object is later referenced or utilized to affect the plot or outcome.
+
+[attr-3]
+Specification: [attr-3] is true if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+
+Logical formulation: [attr-3] = [attr-5] AND [attr-4]
+
+[attr-1]
+Specification: [attr-1] is true if both of the following are true:
+- The story is either [attr-6] or [attr-7]
+- The story is [attr-2]
+
+Logical formulation: [attr-1] = ([attr-6] OR [attr-7]) AND [attr-2]
+
+Annotation guidance (composite predicates): Evaluate component predicates per their individual definitions, then apply the stated logical operations to determine the composite predicate’s truth value.

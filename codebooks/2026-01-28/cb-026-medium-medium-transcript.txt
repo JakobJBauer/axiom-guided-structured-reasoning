@@ -1,0 +1,75 @@
+Interviewer: Okay, let's walk through this codebook together. First up — what does [TOPIC-TIME-TRAVEL] mean?
+
+Expert: A story is [TOPIC-TIME-TRAVEL] if The story is about time travel.
+
+Interviewer: Got it. And [TOPIC-HIDDEN-TREASURES]?
+
+Expert: A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures.
+
+Interviewer: How about the stylistic tags — what is [STYLE-PHILOSOPHICAL]?
+
+Expert: A story is [STYLE-PHILOSOPHICAL] if The story is philosophical.
+
+Interviewer: And what does [MANY-PARAGRAPHS] indicate?
+
+Expert: A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs.
+
+Interviewer: Readability — what counts as [HIGH-READABILITY]?
+
+Expert: A story is [HIGH-READABILITY] if The story has readability score above 96.1.
+
+Interviewer: Classic style — explain [STYLE-CLASSIC].
+
+Expert: A story is [STYLE-CLASSIC] if The story is classic.
+
+Interviewer: And [STYLE-HUMOROUS]?
+
+Expert: A story is [STYLE-HUMOROUS] if The story is humorous.
+
+Interviewer: Topic-wise, what is [TOPIC-MYSTICAL-CREATURES]?
+
+Expert: A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures.
+
+Interviewer: Now the composite definitions — what defines [THEMATIC-DEPTH]?
+
+Expert: A story is [THEMATIC-DEPTH] if both of the following are true:
+- The story is [STYLE-PHILOSOPHICAL]
+- The story is not [STYLE-HUMOROUS]
+
+Interviewer: So [THEMATIC-DEPTH] requires philosophical tone and explicitly excludes humor. Clear. Next, what about [NARRATIVE-STYLE]?
+
+Expert: A story is [NARRATIVE-STYLE] if both of the following are true:
+- The story is [HIGH-READABILITY]
+- Either of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [STYLE-HUMOROUS]
+
+Interviewer: That means high readability plus either classic or humorous style — correct.
+
+Interviewer: Tell me about [ADVENTURE-ARC].
+
+Expert: A story is [ADVENTURE-ARC] if either of the following is true:
+- The story is [TOPIC-HIDDEN-TREASURES]
+- Both of the following are true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is not [STYLE-PHILOSOPHICAL]
+
+Interviewer: So an adventure arc can be driven by hidden treasures, or by time travel as long as it’s not philosophical. Clear. Moving on — how is [COMPLEX-STORY] defined?
+
+Expert: A story is [COMPLEX-STORY] if both of the following are true:
+- The story is [THEMATIC-DEPTH]
+- Either of the following is true:
+  - The story is [ADVENTURE-ARC]
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+
+Interviewer: In short, a complex story needs thematic depth plus either an adventure arc or mystical creatures.
+
+Interviewer: Last one — what makes something [EPIC]?
+
+Expert: A story is [EPIC] if both of the following are true:
+- The story is [COMPLEX-STORY]
+- The story is [MANY-PARAGRAPHS]
+
+Interviewer: Great — that wraps it up. Any final notes on using this for annotation?
+
+Expert: Keep the logical relationships exactly as stated: all node IDs in brackets, all "both"/"either"/"not" structures preserved. When you annotate, apply these definitions verbatim so the derived tags (like [COMPLEX-STORY] and [EPIC]) follow logically from the base tags.

@@ -1,0 +1,37 @@
+[THEME-HELPING-OTHERS]
+Definition: A story satisfies the predicate [THEME-HELPING-OTHERS] when its principal thematic content corresponds to "Helping Others."
+
+[STYLE-PHILOSOPHICAL]
+Definition: A story satisfies the predicate [STYLE-PHILOSOPHICAL] when its narrative style is philosophical in nature.
+
+[STYLE-CLASSIC]
+Definition: A story satisfies the predicate [STYLE-CLASSIC] when its stylistic characteristics conform to a classic style.
+
+[HAS-JUXTAPOSITION]
+Definition: A story satisfies the predicate [HAS-JUXTAPOSITION] when it contains juxtaposition as a structural or rhetorical device.
+
+[STYLE-MODERN]
+Definition: A story satisfies the predicate [STYLE-MODERN] when its stylistic characteristics conform to a modern style.
+
+[MIXED-STYLE-JUXTAPOSE]
+Definition: A story satisfies the predicate [MIXED-STYLE-JUXTAPOSE] if and only if both of the following conditions hold:
+- The story satisfies [HAS-JUXTAPOSITION].
+- Exactly one of the following is true:
+  - The story satisfies [STYLE-CLASSIC].
+  - The story satisfies [STYLE-MODERN].
+
+[PHILOSOPHICAL-HELPING-OTHERS-DRAMATIC]
+Definition: A story satisfies the predicate [PHILOSOPHICAL-HELPING-OTHERS-DRAMATIC] when at least one of the following disjoint cases applies:
+
+Case A — Philosophical Helping (non-mixed):
+- All of the following are true:
+  - The story satisfies [STYLE-PHILOSOPHICAL].
+  - The story satisfies [THEME-HELPING-OTHERS].
+  - The story does not satisfy [MIXED-STYLE-JUXTAPOSE].
+
+Case B — Mixed-style Juxtaposition without Helping Theme:
+- Both of the following are true:
+  - The story satisfies [MIXED-STYLE-JUXTAPOSE].
+  - The story does not satisfy [THEME-HELPING-OTHERS].
+
+Interpretation note: The predicate [PHILOSOPHICAL-HELPING-OTHERS-DRAMATIC] is true if either Case A or Case B holds; these cases are mutually exclusive due to the specified negations.

@@ -1,0 +1,377 @@
+{
+  "nodes": [
+    {
+      "id": "has-juxtaposition",
+      "label": "HAS-JUXTAPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "STYLE-PHILOSOPHICAL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-hardship",
+      "label": "THEME-HARDSHIP",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-humor",
+      "label": "THEME-HUMOR",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-the-arts",
+      "label": "TOPIC-THE-ARTS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-circular-narrative-struct",
+      "label": "HAS-CIRCULAR-NARRATIVE-STRUCT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "THEME-DECEPTION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-helping-others",
+      "label": "THEME-HELPING-OTHERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-moral-lesson",
+      "label": "HAS-A-MORAL-LESSON",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-humorous",
+      "label": "STYLE-HUMOROUS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-minimalist",
+      "label": "STYLE-MINIMALIST",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-giant-creatures",
+      "label": "TOPIC-GIANT-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-lighthearted",
+      "label": "STYLE-LIGHTHEARTED",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-time-travel",
+      "label": "TOPIC-TIME-TRAVEL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-preposition",
+      "label": "STARTS-WITH-PREPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "short-story",
+      "label": "SHORT-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-superlative-forms",
+      "label": "USES-SUPERLATIVE-FORMS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-kindness",
+      "label": "THEME-KINDNESS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "high-readability",
+      "label": "HIGH-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "jux-prep-clash",
+      "label": "JUX-PREP-CLASH",
+      "formula_type": "And",
+      "formula_args": [
+        "has-juxtaposition",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "starts-with-preposition",
+            "short-story"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "juxtaposed-superlative",
+      "label": "JUXTAPOSED-SUPERLATIVE",
+      "formula_type": "And",
+      "formula_args": [
+        "jux-prep-clash",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "uses-superlative-forms",
+            "style-minimalist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "artistic-philosophy",
+      "label": "ARTISTIC-PHILOSOPHY",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-the-arts",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-philosophical",
+            "juxtaposed-superlative"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "humorous-hybrid",
+      "label": "HUMOROUS-HYBRID",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "theme-humor",
+            "style-humorous"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "style-minimalist"
+              ]
+            },
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "style-lighthearted",
+                "uses-superlative-forms"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "altruistic-contraction",
+      "label": "ALTRUISTIC-CONTRACTION",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "has-a-moral_lesson",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "theme-helping-others",
+                "theme-kindness"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "theme-deception",
+            "theme-hardship"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-artful-story",
+      "label": "COMPLEX-ARTFUL-STORY",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "artistic-philosophy",
+                "altruistic-contraction"
+              ]
+            },
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "humorous-hybrid",
+                "topic-giant-creatures"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "topic-time-travel",
+                "has-circular-narrative-struct"
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "short-story",
+                "high-readability"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "has-juxtaposition",
+      "target": "jux-prep-clash"
+    },
+    {
+      "source": "starts-with-preposition",
+      "target": "jux-prep-clash"
+    },
+    {
+      "source": "short-story",
+      "target": "jux-prep-clash"
+    },
+    {
+      "source": "jux-prep-clash",
+      "target": "juxtaposed-superlative"
+    },
+    {
+      "source": "uses-superlative-forms",
+      "target": "juxtaposed-superlative"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "juxtaposed-superlative"
+    },
+    {
+      "source": "topic-the-arts",
+      "target": "artistic-philosophy"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "artistic-philosophy"
+    },
+    {
+      "source": "juxtaposed-superlative",
+      "target": "artistic-philosophy"
+    },
+    {
+      "source": "theme-humor",
+      "target": "humorous-hybrid"
+    },
+    {
+      "source": "style-humorous",
+      "target": "humorous-hybrid"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "humorous-hybrid"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "humorous-hybrid"
+    },
+    {
+      "source": "uses-superlative-forms",
+      "target": "humorous-hybrid"
+    },
+    {
+      "source": "has-a-moral_lesson",
+      "target": "altruistic-contraction"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "altruistic-contraction"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "altruistic-contraction"
+    },
+    {
+      "source": "theme-deception",
+      "target": "altruistic-contraction"
+    },
+    {
+      "source": "theme-hardship",
+      "target": "altruistic-contraction"
+    },
+    {
+      "source": "artistic-philosophy",
+      "target": "complex-artful-story"
+    },
+    {
+      "source": "altruistic-contraction",
+      "target": "complex-artful-story"
+    },
+    {
+      "source": "humorous-hybrid",
+      "target": "complex-artful-story"
+    },
+    {
+      "source": "topic-giant-creatures",
+      "target": "complex-artful-story"
+    },
+    {
+      "source": "topic-time-travel",
+      "target": "complex-artful-story"
+    },
+    {
+      "source": "has-circular-narrative-struct",
+      "target": "complex-artful-story"
+    },
+    {
+      "source": "short-story",
+      "target": "complex-artful-story"
+    },
+    {
+      "source": "high-readability",
+      "target": "complex-artful-story"
+    }
+  ]
+}

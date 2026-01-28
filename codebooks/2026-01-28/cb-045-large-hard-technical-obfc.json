@@ -1,0 +1,441 @@
+{
+  "nodes": [
+    {
+      "id": "attr-9",
+      "label": "more-than-6-paragraphs",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "embedded-narrative",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-16",
+      "label": "initial-token-noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-29",
+      "label": "contains-superlative",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "chekhovs-gun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-21",
+      "label": "magic-central",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-28",
+      "label": "uses-conditional-mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-30",
+      "label": "contains-wh-interrogatives",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-22",
+      "label": "topic-hidden-treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-20",
+      "label": "innovation-central",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-24",
+      "label": "topic-seasonal-changes",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-25",
+      "label": "topic-arts",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "word-count-greater-375",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-18",
+      "label": "growth-central",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-23",
+      "label": "topic-magical-lands",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-26",
+      "label": "topic-time-travel",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-19",
+      "label": "hardship-central",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-14",
+      "label": "initial-token-adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "communicates-moral-lesson",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "readability-below-86.4",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-13",
+      "label": "initial-token-adjective",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-15",
+      "label": "not-initial-token-noun",
+      "formula_type": "Not",
+      "formula_args": [
+        "attr-16"
+      ]
+    },
+    {
+      "id": "attr-17",
+      "label": "long-and-many-paragraphs",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-7",
+        "attr-9"
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "initial-token-category-xor-or-other",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-14",
+            "attr-13"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-15",
+            "attr-30"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-11",
+      "label": "magic-or-magical-lands-and-innovation-or-time-travel",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-21",
+            "attr-23"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-20",
+            "attr-26"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-6",
+      "label": "conditional-and-questions-or-readability",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-28",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-30",
+            "attr-8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "embedded-narrative-with-payoff-or-superlative-no-conditionals",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-4",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-5",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-29",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-28"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-27",
+      "label": "hidden-treasures-with-growth-or-hardship-pattern",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-22",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-18",
+                "attr-3"
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-19",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-3"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-12",
+      "label": "seasonal-and-arts-or-superlative-and-not-low-readability",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-24",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-25",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-29",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-8"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-10",
+      "label": "complex-combination-attr-10",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-1",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-17",
+                "attr-6"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-27",
+            "attr-12"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-16",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-17"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-17"
+    },
+    {
+      "source": "attr-14",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-15",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-30",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-21",
+      "target": "attr-11"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-11"
+    },
+    {
+      "source": "attr-20",
+      "target": "attr-11"
+    },
+    {
+      "source": "attr-26",
+      "target": "attr-11"
+    },
+    {
+      "source": "attr-28",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-30",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-29",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-28",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-22",
+      "target": "attr-27"
+    },
+    {
+      "source": "attr-18",
+      "target": "attr-27"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-27"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-27"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-25",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-29",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-17",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-27",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-10"
+    }
+  ]
+}

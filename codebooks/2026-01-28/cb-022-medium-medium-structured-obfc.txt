@@ -1,0 +1,84 @@
+Codebook — Structured Reference for Annotation
+
+Purpose
+- This document presents a clear, organized view of the annotation labels (node IDs) and their exact logical definitions.
+- Follow these definitions precisely when deciding whether a story satisfies a label.
+- Node IDs are shown in [attr-1] format and must be used unchanged.
+
+1) Atomic (single-condition) labels
+- [attr-3]
+  - Definition: A story is [attr-3] if the story has circular narrative structure.
+
+- [attr-12]
+  - Definition: A story is [attr-12] if the story has the theme Kindness.
+
+- [attr-4]
+  - Definition: A story is [attr-4] if the story has juxtaposition.
+
+- [attr-13]
+  - Definition: A story is [attr-13] if the story is about hidden treasures.
+
+- [attr-6]
+  - Definition: A story is [attr-6] if the story has readability score below 86.4.
+
+- [attr-10]
+  - Definition: A story is [attr-10] if the story is philosophical.
+
+- [attr-9]
+  - Definition: A story is [attr-9] if the story is modern.
+
+- [attr-11]
+  - Definition: A story is [attr-11] if the story has the theme Deception.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story has readability score above 96.1.
+
+2) Composite (multi-condition) labels
+- [attr-7]
+  - Definition: A story is [attr-7] if all of the following are true:
+    - The story is [attr-9]
+    - Either of the following is true:
+      - The story is [attr-10]
+      - The story is [attr-4]
+    - The story is not [attr-3]
+
+- [attr-8]
+  - Definition: A story is [attr-8] if all of the following are true:
+    - The story is [attr-12]
+    - The story is [attr-11]
+    - The story is [attr-7]
+
+- [attr-2]
+  - Definition: A story is [attr-2] if both of the following are true:
+    - The story is [attr-8]
+    - Either of the following is true:
+      - Exactly one of the following is true:
+        - The story is [attr-6]
+        - The story is [attr-5]
+      - The story is [attr-13]
+
+3) Quick annotation checklist (use this to reason through each composite label)
+- To decide [attr-7]:
+  1. Is [attr-9] true?
+  2. Is at least one of [attr-10] or [attr-4] true?
+  3. Is [attr-3] false?
+  - All three must hold for [attr-7] to apply.
+
+- To decide [attr-8]:
+  - Confirm [attr-12], [attr-11], and [attr-7] are all true.
+
+- To decide [attr-2]:
+  1. Confirm [attr-8] is true.
+  2. Then confirm at least one of:
+     - Exactly one of [attr-6] or [attr-5] is true (but not both).
+     - OR [attr-13] is true.
+  - Both step 1 and step 2 must be satisfied.
+
+Notes for annotators
+- Maintain exact logical relationships when labeling.
+- "Either" and "Exactly one" are distinct:
+  - "Either" means one or more of the listed options (at least one).
+  - "Exactly one" means only one of the listed options, not more.
+- "Not" negates the listed condition (the condition must be false).
+
+End of codebook — use these structured rules to guide consistent and accurate annotation.

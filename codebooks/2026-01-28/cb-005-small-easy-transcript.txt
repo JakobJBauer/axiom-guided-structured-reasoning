@@ -1,0 +1,35 @@
+Interviewer: Let’s go through this codebook together. First question — what does [USES-DISCOURSE-MARKERS] mean?
+
+Expert: Straightforward. "A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers."
+
+Interviewer: And [HAS-JUXTAPOSITION]?
+
+Expert: "A story is [HAS-JUXTAPOSITION] if the story has juxtaposition."
+
+Interviewer: How about topics — what does [TOPIC-MYSTICAL-CREATURES] denote?
+
+Expert: "A story is [TOPIC-MYSTICAL-CREATURES] if the story is about mystical creatures."
+
+Interviewer: And similarly [TOPIC-GIANT-CREATURES]?
+
+Expert: "A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures."
+
+Interviewer: There’s also [HAS-A-RED-HERRING]. What’s that?
+
+Expert: "A story is [HAS-A-RED-HERRING] if the story has a Red Herring."
+
+Interviewer: Now the compound labels — tell me about [FANTASTICAL-JUXTAPOSITION]. What conditions must hold?
+
+Expert: "A story is [FANTASTICAL-JUXTAPOSITION] if both of the following are true:
+- The story is [TOPIC-MYSTICAL-CREATURES]
+- The story is [HAS-JUXTAPOSITION]"
+
+Interviewer: And the other compound one, [GIANT-MISDIRECTION]?
+
+Expert: "A story is [GIANT-MISDIRECTION] if both of the following are true:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is [HAS-A-RED-HERRING]"
+
+Interviewer: Just to be clear, you haven’t changed any of the IDs or the logical relationships here — they’re preserved exactly as in the original codebook?
+
+Expert: Correct — all node IDs are intact in [BRACKET] format, every definition is preserved, and the compound nodes explicitly require both listed conditions (i.e., the logical AND). No nodes were added or removed.

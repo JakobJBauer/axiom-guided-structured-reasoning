@@ -1,0 +1,53 @@
+Think of this as a friendly map for tagging stories. I’ll walk through each label, keeping the exact logical rules intact while making the language flow a bit more naturally. Every tag is shown by its ID in brackets — those IDs don’t change — and the logical relationships are preserved exactly as stated.
+
+[attr-2]
+If a story carries a moral lesson, we give it the tag [attr-2]. In short: a story is [attr-2] if the story has a moral lesson.
+
+[attr-4]
+When a story stretches beyond six paragraphs, we mark it as [attr-4]. Formally: a story is [attr-4] if the story has more than 6 paragraphs.
+
+[attr-7]
+If the very first word of the story is an adverb, it’s labeled [attr-7]. Put simply: a story is [attr-7] if the story starts with an adverb.
+
+[attr-3]
+If the story loops back on itself — a circular narrative structure — we call it [attr-3]. That is: a story is [attr-3] if the story has circular narrative structure.
+
+[attr-9]
+We use [attr-9] when the story employs perfect aspect. Concretely: a story is [attr-9] if the story uses perfect aspect.
+
+[attr-10]
+If the language includes superlatives — the “-est” forms or equivalents — the tag is [attr-10]. In other words: a story is [attr-10] if the story uses superlative forms.
+
+[attr-8]
+Call a story [attr-8] when both of the following are true:
+- The story is [attr-7]
+- Exactly one of the following is true:
+  - The story is [attr-9]
+  - The story is [attr-10]
+
+So, to earn [attr-8] it must begin with an adverb and then have exactly one of those other stylistic features — either perfect aspect or superlatives, but not both.
+
+[attr-6]
+A story is [attr-6] if either of the following is true:
+- The story is [attr-3]
+- Both of the following are true:
+  - The story is not [attr-3]
+  - The story is [attr-4]
+
+In short: a circular narrative qualifies immediately; otherwise, being a long (many-paragraph) piece makes it a [attr-6].
+
+[attr-5]
+This label, [attr-5], applies when exactly one of the following is true:
+- The story is [attr-2]
+- The story is [attr-4]
+
+So the story is tagged [attr-5] if it has a moral or is long — but not both.
+
+[attr-1]
+Finally, a story is [attr-1] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-8]
+  - The story is not [attr-5]
+- The story is [attr-6]
+
+Put another way: to be [attr-1], a story must be a [attr-6] and also either meet the [attr-8] condition or fail to be [attr-5]. The logical relationships above remain exactly as written, just explained in conversational terms to make the rules easier to follow.

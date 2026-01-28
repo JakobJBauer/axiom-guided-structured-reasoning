@@ -1,0 +1,82 @@
+Here’s the same codebook, rewritten in a more natural, conversational flow while keeping every logical connection and every node ID exactly as they were.
+
+[attr-6]
+We call a story [attr-6] when it simply reads as lighthearted.
+
+[attr-3]
+A story is tagged [attr-3] if it contains Chekhov’s gun — that detail or object that was planted earlier and becomes important later.
+
+[attr-2]
+If a story leaves you hanging at the end, it’s marked [attr-2].
+
+[attr-9]
+When a story’s central theme is hardship, it gets the label [attr-9].
+
+[attr-10]
+If the story revolves around helping others, we call it [attr-10].
+
+[attr-8]
+A story that centers on deception is tagged [attr-8].
+
+[attr-11]
+When the driving theme is figuring things out and overcoming puzzles or obstacles, the story is [attr-11].
+
+[attr-7]
+A story is [attr-7] when exactly one of these is true:
+- The story is [attr-9]
+- The story is [attr-8]
+
+So, pick one of those themes and only one — that exclusive choice is what makes the conflict thematic.
+
+[attr-12]
+Call a story [attr-12] when both of these things happen:
+- The story is [attr-6]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-11]
+
+In plain terms: it feels lighthearted on the surface, yet it either carries a single-theme conflict (hardship vs. deception) or it’s driven by problem-solving — and both conditions together create that tonal tension.
+
+[attr-5]
+A story is [attr-5] when both of these hold:
+- The story is [attr-3]
+- Exactly one of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-2]
+
+So a plot-driven tale uses planted elements like Chekhov’s gun and pairs that with one — and only one — of problem-solving or a cliffhanger.
+
+[attr-4]
+We call a story [attr-4] if either of these two situations applies:
+- Both of the following are true:
+  - The story is [attr-10]
+  - The story is not [attr-8]
+- Both of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-10]
+
+In short: the moral arc shows up when helping others is central and not paired with deception, or when helping others and problem-solving come together.
+
+[attr-1]
+A story qualifies as [attr-1] if either of these broader configurations is met:
+
+- Both of the following are true:
+  - The story is [attr-12]
+  - Both of the following are true:
+    - The story is [attr-5]
+    - The story is [attr-4]
+
+  (So one path to complexity is a tone that’s conflicted, combined with plot-driven mechanics and a moral arc.)
+
+- All of the following are true:
+  - The story is not [attr-12]
+  - Either of the following is true:
+    - The story is [attr-5]
+    - The story is [attr-2]
+  - The story is not both of the following:
+    - The story is [attr-9]
+    - The story is [attr-8]
+
+  (The other path: even without tonal conflict, the story is either plot-driven or ends on a cliffhanger, and it does not simultaneously carry both hardship and deception as themes.)
+
+That’s the full set — the same logical structure and node IDs, expressed in a smoother, conversational way so it’s easier to read while remaining precise for annotation and reasoning.

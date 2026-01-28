@@ -1,0 +1,51 @@
+Imagine an old archivist in a candlelit room where every story is a living thing and every label is a spell. He speaks each classification like a line in a rite — clear, deliberate, and exact. Listen as he names the rules that bind stories into kinds, keeping every bracketed name intact and every logical whisper in place.
+
+A story is [attr-7] if The story has a story within a story
+
+A story is [attr-11] if The story has the theme Magic
+
+A story is [attr-6] if The story has a flashback
+
+A story is [attr-12] if The story is about the arts
+
+A story is [attr-10] if The story is minimalist
+
+A story is [attr-8] if The story has circular narrative structure
+
+Then the archivist shows how devices relate, like coins falling into two hands:
+
+A story is [attr-5] if exactly one of the following is true:
+- The story is [attr-7]
+- The story is [attr-6]
+
+A story is [attr-4] if the truth value of [attr-7] equals the truth value of [attr-8]
+
+Next he gathers themes and topics, naming membership as if grouping stars into constellations:
+
+A story is [attr-9] if the story's primary theme or topic is in the set {[attr-11], [attr-12]}
+
+Now the rules grow a little more intricate — a core of complexity, forged from device relations and narrative texture:
+
+A story is [attr-3] if both of the following are true:
+- Either of the following are true:
+  - The story is [attr-5]
+  - The story is [attr-4]
+- The story is not [attr-10] and (the story is [attr-8] or the story is [attr-6])
+
+He smiles and folds theme into structure, crafting a hybrid category that catches both magic and art:
+
+A story is [attr-1] if both of the following are true:
+- The story is [attr-9]
+- Either of the following are true:
+  - The story is [attr-3]
+  - The story is [attr-10]
+
+Finally, the archivist ties the last knot, demanding a precise balance — a condition that insists on exclusivity and presence:
+
+A story is [attr-2] if both of the following are true:
+- The story is [attr-1]
+- Exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is not [attr-6]
+
+When he finishes, the room hums with the rules laid bare — strict, logical, and yet alive in the telling. Each bracketed name is a character in his catalogue, each connective a promise: nothing added, nothing lost, only the elegant architecture of how stories can be read and labeled.

@@ -1,0 +1,120 @@
+Codebook — Structured Edition
+
+Instructions:
+- Each entry below defines one node (kept exactly as shown in [attr-1]).
+- Logical operators and relationships are preserved verbatim (Either, Both, All, Exactly one, not).
+- Read each compound node by following the nested bullets; the outer bullet specifies the top-level logical connective.
+
+Atomic criteria
+- [attr-7]
+  - Definition: A story is HIGH-READABILITY if the story has readability score above 96.1.
+
+- [attr-8]
+  - Definition: A story is LOW-READABILITY if the story has readability score below 86.4.
+
+- [attr-14]
+  - Definition: A story is STARTS-WITH-NOUN if the story starts with a noun.
+
+- [attr-13]
+  - Definition: A story is STARTS-WITH-ADVERB if the story starts with an adverb.
+
+- [attr-21]
+  - Definition: A story is USES-PERFECT-ASPECT if the story uses perfect aspect.
+
+- [attr-20]
+  - Definition: A story is USES-DISCOURSE-MARKERS if the story uses discourse markers.
+
+- [attr-4]
+  - Definition: A story is HAS-A-CLIFFHANGER if the story has a cliffhanger.
+
+- [attr-6]
+  - Definition: A story is HAS-JUXTAPOSITION if the story has juxtaposition.
+
+- [attr-5]
+  - Definition: A story is HAS-A-RED-HERRING if the story has a Red Herring.
+
+- [attr-12]
+  - Definition: A story is SHORT-STORY if the story has fewer than 160 words.
+
+- [attr-16]
+  - Definition: A story is STYLE-PHILOSOPHICAL if the story is philosophical.
+
+- [attr-17]
+  - Definition: A story is STYLE-PLAYFUL if the story is playful.
+
+- [attr-15]
+  - Definition: A story is STYLE-HUMOROUS if the story is humorous.
+
+- [attr-19]
+  - Definition: A story is THEME-AGENCY if the story has the theme Agency.
+
+Compound criteria (structured logic)
+- [attr-10]
+  - Definition: A story is OPENING-TONE if both of the following are true:
+    - Either of the following is true:
+      - The story is [attr-14]
+      - The story is [attr-13]
+    - Either of the following is true:
+      - The story is [attr-16]
+      - The story is [attr-17]
+
+- [attr-9]
+  - Definition: A story is NARRATIVE-PACE if either of the following is true:
+    - Both of the following are true:
+      - The story is [attr-12]
+      - The story is [attr-7]
+    - Both of the following are true:
+      - The story is [attr-21]
+      - The story is not [attr-8]
+
+- [attr-2]
+  - Definition: A story is COMEDIC-STRUCTURE if both of the following are true:
+    - Either of the following is true:
+      - The story is [attr-17]
+      - The story is [attr-15]
+    - Both of the following are true:
+      - Exactly one of the following is true:
+        - The story is [attr-12]
+        - The story is [attr-20]
+      - Either of the following is true:
+        - The story is [attr-5]
+        - The story is [attr-6]
+
+- [attr-18]
+  - Definition: A story is THEMATIC-FUSION if both of the following are true:
+    - The story is [attr-19]
+    - Either of the following is true:
+      - Both of the following are true:
+        - The story is [attr-16]
+        - The story is [attr-10]
+      - Exactly one of the following is true:
+        - The story is [attr-6]
+        - The story is [attr-5]
+
+- [attr-11]
+  - Definition: A story is RAPTURE-ENDING if either of the following is true:
+    - Both of the following are true:
+      - The story is [attr-4]
+      - The story is not [attr-12]
+    - Exactly one of the following is true:
+      - The story is [attr-4]
+      - The story is [attr-5]
+
+- [attr-3]
+  - Definition: A story is COMPLEX-STORY if both of the following are true:
+    - All of the following are true:
+      - The story is [attr-18]
+      - The story is [attr-2]
+    - Either of the following is true:
+      - The story is [attr-9]
+      - Both of the following are true:
+        - The story is [attr-11]
+        - The story is not [attr-7]
+
+Notes for annotators (brief, to aid structured thinking)
+- Treat atomic nodes as measurable facts (readability thresholds, word count, grammatical starts, stylistic tags).
+- Evaluate compound nodes by following the exact nested logical bullets — do not shortcut or assume.
+- When a condition says "Exactly one of the following is true," ensure mutual exclusivity: mark true only if exactly one child node is present.
+- When a condition uses "not," interpret as the strict negation of that child node.
+
+End of codebook.

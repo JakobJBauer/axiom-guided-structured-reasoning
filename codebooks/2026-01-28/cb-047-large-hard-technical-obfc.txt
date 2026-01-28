@@ -1,0 +1,103 @@
+[attr-6]
+A story is [attr-6] if the story's readability score is greater than 96.1.
+
+[attr-7]
+A story is [attr-7] if the story's readability score is less than 86.4.
+
+[attr-13]
+A story is [attr-13] if the first token of the story is a noun.
+
+[attr-12]
+A story is [attr-12] if the first token of the story is an adverb.
+
+[attr-20]
+A story is [attr-20] if the story contains at least one verb phrase in the perfect aspect.
+
+[attr-19]
+A story is [attr-19] if the text contains discourse markers (e.g., however, therefore, meanwhile).
+
+[attr-3]
+A story is [attr-3] if the narrative concludes with an unresolved or suspenseful ending (a cliffhanger).
+
+[attr-5]
+A story is [attr-5] if the narrative includes juxtaposition (contrast of elements or ideas placed in proximity).
+
+[attr-4]
+A story is [attr-4] if the narrative contains a deliberate misleading clue or distractor (a red herring).
+
+[attr-11]
+A story is [attr-11] if the total word count is fewer than 160 words.
+
+[attr-15]
+A story is [attr-15] if the style exhibits philosophical themes, tone, or argumentation.
+
+[attr-16]
+A story is [attr-16] if the style exhibits playfulness, lightness, or whimsical tone.
+
+[attr-14]
+A story is [attr-14] if the style is primarily intended to produce humor.
+
+[attr-18]
+A story is [attr-18] if the central theme concerns agency (control, autonomy, or action by agents).
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-13]
+  - The story is [attr-12]
+- Either of the following is true:
+  - The story is [attr-15]
+  - The story is [attr-16]
+
+[attr-8]
+A story is [attr-8] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-20]
+  - The story is not [attr-7]
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-16]
+  - The story is [attr-14]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [attr-11]
+    - The story is [attr-19]
+  - Either of the following is true:
+    - The story is [attr-4]
+    - The story is [attr-5]
+
+[attr-17]
+A story is [attr-17] if both of the following are true:
+- The story is [attr-18]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-15]
+    - The story is [attr-9]
+  - Exactly one of the following is true:
+    - The story is [attr-5]
+    - The story is [attr-4]
+
+[attr-10]
+A story is [attr-10] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-3]
+  - The story is not [attr-11]
+- Exactly one of the following is true:
+  - The story is [attr-3]
+  - The story is [attr-4]
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- All of the following are true:
+  - The story is [attr-17]
+  - The story is [attr-1]
+- Either of the following is true:
+  - The story is [attr-8]
+  - Both of the following are true:
+    - The story is [attr-10]
+    - The story is not [attr-6]

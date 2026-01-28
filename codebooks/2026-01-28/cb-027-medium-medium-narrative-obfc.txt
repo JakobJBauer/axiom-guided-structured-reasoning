@@ -1,0 +1,58 @@
+Imagine a small taxonomy of tales—an atlas of labels that whet the imagination and, at the same time, demand precision. Each label in this atlas is a lantern: it lights up only when a story walks into its circle of definition. Below, each lantern is introduced with a little flourish, then shown exactly how it decides whether a tale belongs under its glow.
+
+[attr-6]
+There is a quicksilver badge for openings that leap into motion: a single word that sets the scene by describing how something happens.  
+A story is [attr-6] if The story starts with a adverb.
+
+[attr-7]
+Some tales wear the patina of tradition — rhythms, voice, and structure that feel timeless. That is the home of the classic.  
+A story is [attr-7] if The story is classic.
+
+[attr-4]
+Other tales stretch wide across pages, building scenes and patience in equal measure. The guard here measures length.  
+A story is [attr-4] if The story has more than 375 words.
+
+[attr-9]
+There is a label for stories whose horizons are populated by massive beings — the stomp and shadow of creatures that dwarf towns and tempers.  
+A story is [attr-9] if The story is about giant creatures.
+
+[attr-8]
+Some narratives are woven around trickery, concealment, and misdirection; this theme marks that strand.  
+A story is [attr-8] if The story has the theme Deception.
+
+[attr-10]
+There is also a compass for tales driven by buried maps, secret chests, and the hidden promise of riches.  
+A story is [attr-10] if The story is about hidden treasures.
+
+[attr-1]
+Picture an epic that moves between domain and domain—long enough to be an odyssey, populated by towering beasts, and wearing a modern coat instead of a classical one. This badge lights up only when every part of that picture is true.  
+A story is [attr-1] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-9]
+- The story is not [attr-7]
+
+[attr-5]
+Some quests promise treasure but hide their true aim behind guile. This label collects tales where deception and hidden spoils walk together — and either the opening leaps with an adverb or the tale refuses the classic mold.  
+A story is [attr-5] if both of the following are true:
+- The story is [attr-8]
+- The story is [attr-10]
+- Either of the following is true:
+  - The story is [attr-6]
+  - The story is not [attr-7]
+
+[attr-3]
+Sometimes two distinct ideas cross paths, but the label calls for exclusivity: exactly one of the two flags must be raised. It celebrates the stories that are one kind of hybrid or the other — but not both.  
+A story is [attr-3] if exactly one of the following is true:
+- The story is [attr-1]
+- The story is [attr-5]
+
+[attr-2]
+Finally, imagine a carefully engineered artifact of storytelling: it bears the mark of being a single-type hybrid, it must either have the timeless cadence of the classic or the breadth of a long story, and it refuses to begin with an adverb. Only when all these gates open together does this label apply.  
+A story is [attr-2] if all of the following are true:
+- The story is [attr-3]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-4]
+- The story is not [attr-6]
+
+Read these lantern-labels as both map and rulebook: each bracketed name is exact, each logical gate is preserved, and the relationships between them form the pathways by which a tale earns its place.

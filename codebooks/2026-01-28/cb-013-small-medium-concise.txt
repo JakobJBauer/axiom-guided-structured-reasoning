@@ -1,0 +1,35 @@
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if it uses the conditional mood.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if it uses the perfect aspect.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if it has the theme Deception.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if it has a cliffhanger.
+
+[COMPLEX-DECEPTION]
+A story is [COMPLEX-DECEPTION] if all of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is not [HAS-A-CLIFFHANGER]
+- Either of the following is true:
+  - The story is [USES-CONDITIONAL-MOOD]
+  - The story is [USES-PERFECT-ASPECT]
+
+[ASPECTUAL-AMBIVALENCE]
+A story is [ASPECTUAL-AMBIVALENCE] if both of the following are true:
+- Either of the following is true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-CONDITIONAL-MOOD]
+- The story is not both of the following:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-CONDITIONAL-MOOD]
+
+[AMBIGUOUS-DECEPTION-NARRATIVE]
+A story is [AMBIGUOUS-DECEPTION-NARRATIVE] if both of the following are true:
+- The story is [COMPLEX-DECEPTION]
+- Either of the following is true:
+  - The story is [ASPECTUAL-AMBIVALENCE]
+  - The story is not [HAS-A-CLIFFHANGER]

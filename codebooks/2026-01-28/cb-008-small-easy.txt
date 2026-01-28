@@ -1,0 +1,17 @@
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if the story starts with a adverb.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if the story has the theme Magic.
+
+[TRADITIONAL-MAGIC-TEACHING]
+A story is [TRADITIONAL-MAGIC-TEACHING] if all of the following are true:
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+- The story is [THEME-MAGIC]
+- The story is [HAS-A-MORAL-LESSON]

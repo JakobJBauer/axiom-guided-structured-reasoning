@@ -1,0 +1,72 @@
+Codebook — Structured Reference
+
+Purpose: Provide clear, hierarchical definitions for each annotation node. Each entry states the exact logical condition(s) that make a story qualify for that node. All node IDs, logical operators, and relationships are preserved exactly as written.
+
+Basic (atomic) nodes
+- [attr-7]
+  - Definition: A story is [attr-7] if the story has a story within a story.
+
+- [attr-11]
+  - Definition: A story is [attr-11] if the story has the theme Magic.
+
+- [attr-6]
+  - Definition: A story is [attr-6] if the story has a flashback.
+
+- [attr-12]
+  - Definition: A story is [attr-12] if the story is about the arts.
+
+- [attr-10]
+  - Definition: A story is [attr-10] if the story is minimalist.
+
+- [attr-8]
+  - Definition: A story is [attr-8] if the story has circular narrative structure.
+
+Device / relation nodes (logical comparisons between devices)
+- [attr-5]
+  - Definition: A story is [attr-5] if exactly one of the following is true:
+    - The story is [attr-7]
+    - The story is [attr-6]
+  - (Interpretation: exclusive OR — one and only one of those device nodes applies.)
+
+- [attr-4]
+  - Definition: A story is [attr-4] if the truth value of [attr-7] equals the truth value of [attr-8].
+  - (Interpretation: both are true or both are false.)
+
+Set-membership / theme combination
+- [attr-9]
+  - Definition: A story is [attr-9] if the story's primary theme or topic is in the set {[attr-11], [attr-12]}.
+  - (Interpretation: primary theme/topic is either Magic or The Arts.)
+
+Composite narrative nodes (combined logical requirements)
+- [attr-3]
+  - Definition: A story is [attr-3] if both of the following are true:
+    1. Either of the following are true:
+       - The story is [attr-5]
+       - The story is [attr-4]
+    2. The story is not [attr-10] and (the story is [attr-8] or the story is [attr-6])
+  - (Interpretation: one of the device relations must hold, and the story must be non-minimalist while also having a circular structure or a flashback.)
+
+- [attr-1]
+  - Definition: A story is [attr-1] if both of the following are true:
+    1. The story is [attr-9]
+    2. Either of the following are true:
+       - The story is [attr-3]
+       - The story is [attr-10]
+  - (Interpretation: primary theme/topic is Magic or The Arts, and the story is either complex by the core definition or deliberately minimalist.)
+
+Final composite node (exact exclusivity)
+- [attr-2]
+  - Definition: A story is [attr-2] if both of the following are true:
+    1. The story is [attr-1]
+    2. Exactly one of the following is true:
+       - The story is [attr-4]
+       - The story is not [attr-6]
+  - (Interpretation: must be an ART-MAGIC-NARRATIVE and satisfy an exclusive condition between [attr-4] and the negation of [attr-6].)
+
+Notes for annotators (practical reminders)
+- Preserve exact node semantics when deciding truth values. Do not conflate similar-sounding concepts.
+- When a node requires compound conditions, ensure each sub-condition is evaluated individually and combined according to the specified logic (And / Or / Exactly one / Not / Equal).
+- For set-membership [attr-9], treat the story’s primary theme or topic as the determining factor.
+- For [attr-4], check equality of truth values (both true or both false) — not structural similarity.
+
+End of codebook.

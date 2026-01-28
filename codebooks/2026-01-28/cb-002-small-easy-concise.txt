@@ -1,0 +1,24 @@
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if it’s playful.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if it’s modern.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if it starts with an adjective.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if it uses discourse markers.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if it has Checkhov's gun.
+
+[MODERN-OPENING]
+A story is [MODERN-OPENING] if both of the following are true:
+- The story is [STYLE-MODERN]
+- The story is [STARTS-WITH-ADJECTIVE]
+
+[ENGAGING-STRUCTURE]
+A story is [ENGAGING-STRUCTURE] if both of the following are true:
+- The story is either [STYLE-PLAYFUL] or [USES-DISCOURSE-MARKERS]
+- The story is [HAS-CHECKHOVS-GUN]

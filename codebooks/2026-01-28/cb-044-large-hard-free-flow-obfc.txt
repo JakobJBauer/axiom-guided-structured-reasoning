@@ -1,0 +1,81 @@
+[attr-6]
+Whenever a story places contrasting elements side by side — that feeling of two things rubbing up against each other to create meaning — we call it [attr-6]. In short: if the story has juxtaposition, tag it as [attr-6].
+
+[attr-16]
+If a story leans into big ideas, reflection, or philosophical inquiry, it falls under [attr-16]. When the tone or intent is contemplative, use this label.
+
+[attr-18]
+When struggle, suffering, or challenge is a core theme, the story is [attr-18]. If hardship drives the narrative or its message, mark it so.
+
+[attr-20]
+If humor is a defining theme — jokes, comedic situations, or an overall funny thrust — the story is [attr-20].
+
+[attr-23]
+Stories that are centered on the arts — painters, music, theater, craft, creative practice — are grouped under [attr-23].
+
+[attr-5]
+When the narrative loops back on itself or follows a circular arc, label it [attr-5]. If the structure returns to its starting point, that’s the cue.
+
+[attr-17]
+If deception — lying, trickery, or hidden motives — is a theme in the story, it should be marked [attr-17].
+
+[attr-19]
+When the story emphasizes helping others, acts of assistance, or altruistic deeds, it qualifies as [attr-19].
+
+[attr-4]
+If the story conveys a clear moral lesson — an explicit ethical takeaway — tag it as [attr-4].
+
+[attr-13]
+When the way a story is told is humorous — its style itself aims for laughs or wit — use [attr-13].
+
+[attr-15]
+A story that keeps things sparse, pared down, and economical in language is [attr-15]. If it’s stripped to essentials, that’s the sign.
+
+[attr-22]
+If giant creatures are central to the story — huge beasts or enormous entities — label it [attr-22].
+
+[attr-14]
+When a story carries a breezy, upbeat, or carefree tone, it fits [attr-14].
+
+[attr-24]
+Stories that involve moving through time or time-travel concepts should be marked [attr-24].
+
+[attr-12]
+If a story’s opening word is a preposition, tag it [attr-12].
+
+[attr-11]
+Use [attr-11] for pieces that are under 160 words — brief, compact stories.
+
+[attr-25]
+When a story uses superlatives (biggest, best, worst, most, etc.), mark it as [attr-25].
+
+[attr-21]
+If kindness — generosity, compassion, or benevolence — is a theme, label the story [attr-21].
+
+[attr-7]
+When a story scores above 96.1 on readability, it meets the threshold for [attr-7].
+
+[attr-9]
+A story is [attr-9] when two conditions hold together: first, it must be [attr-6]; and second, either it [attr-12] or it’s a [attr-11]. In other words, juxtaposition plus either a prepositional start or brevity makes a JUX-PREP-CLASH.
+
+[attr-10]
+We call a story [attr-10] when it meets these requirements: it is a [attr-9], and exactly one of the following is true — either it [attr-25] or it is [attr-15]. Precisely one, not both.
+
+[attr-2]
+A story becomes [attr-2] when it is rooted in [attr-23] and, in addition, it either embraces [attr-16] or qualifies as [attr-10]. So art + (philosophical style or that juxtaposed-superlative pattern) defines this node.
+
+[attr-8]
+Label a story [attr-8] when these two things are true at once. First, it must satisfy at least one of these: it has the theme [attr-20] or the style [attr-13]. Second, it must meet all of the following: it is not [attr-15], and exactly one of these holds — it is [attr-14] or it [attr-25]. Both conditions together create the humorous hybrid.
+
+[attr-1]
+A story is [attr-1] in either of these ways. Option one: both of these are true — it [attr-4] and, additionally, it is either [attr-19] or [attr-21]. Option two: exactly one of these themes is present — either [attr-17] or [attr-18]. So it’s either moral plus altruistic theme, or a single presence of deception or hardship.
+
+[attr-3]
+Finally, [attr-3] requires two broad conditions to be met together. First, either:
+- both [attr-2] and [attr-1] are true, or
+- exactly one of these is true: [attr-8] or [attr-22].
+And second, either:
+- both [attr-24] and [attr-5] are true, or
+- both [attr-11] and [attr-7] are true.
+
+Put simply: a Complex Artful Story is a careful blend — an artistic or hybrid element together with either time-travel circularity or a short, highly readable form — arranged exactly as above.

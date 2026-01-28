@@ -1,0 +1,67 @@
+In a quiet alcove of the Great Archive, where lantern light pools like warm honey and the air smells of old paper and citrus, a careful scribe once wove a little taxonomy of tales. They arranged the leaves and threads of stories into a lattice — each bracketed name a bright bead on a filigreed chain — so that readers and annotators might trace the hidden architecture of narrative. Below is that codex, rendered again in language that blooms: extended, descriptive, and lovingly ornate, yet faithful to the exact logical bones and bridges of the original. Every bracketed sigil, every connective hinge, every formula remains unchanged — only the explanatory cloth that covers them has been embroidered with petals and metaphor to make the structure easier and more delightful to read.
+
+[attr-8]
+A story is [attr-8] if the story is philosophical.
+- In the hush of this designation, imagine a tale that lingers on meaning like dew on a spiderweb: questions rise as smoke, arguments unfold like petals, and the narrative inclines toward meditation rather than mere action. When a story wears this badge, it invites contemplation, asking the reader to sit in the warm, questioning light of thought.
+
+[attr-2]
+A story is [attr-2] if the story has a story within a story.
+- Picture Russian dolls of plot: one narrative cradles another, a secret snug inside a larger frame. This mark signals that a tale contains a nested yarn — a smaller story living inside its larger sibling, reflecting or refracting its themes.
+
+[attr-12]
+A story is [attr-12] if the story uses conditional mood.
+- Let this label be the silver thread of possibility. Sentences here breathe with ifs and mights, conjecture and gentle speculation — a garden of hypotheticals where outcomes hover like moths just out of reach.
+
+[attr-3]
+A story is [attr-3] if the story has circular narrative structure.
+- Imagine a path that loops back to its own footprints; beginnings and endings that embrace. This sign marks narratives that turn upon themselves, ending where they began or revisiting their start with newly altered meaning.
+
+[attr-10]
+A story is [attr-10] if the story is about cultural traditions.
+- This designation nods to rites and rhythms: festivals, customs, inherited songs and ceremonies — the woven patterns that cultures pass hand to hand, year to year.
+
+[attr-7]
+A story is [attr-7] if the story has fewer than 160 words.
+- A brief comet of language: compact, concentrated, a miniature universe. This tag is given when the entire tale fits under a humble cap of fewer than 160 words.
+
+[attr-11]
+A story is [attr-11] if the story is about seasonal changes.
+- Here the subject is the earth’s slow costume changes: the turn from frost to bloom, the hush of autumn, the first thaw. Stories with this mark meditate on the wheel of seasons and the small deaths and renewals within.
+
+[attr-5]
+A story is [attr-5] if the story has readability score below 86.4.
+- This pragmatic label measures how easily words unfurl for the reader. If the score dips beneath 86.4, the tale is considered lower in readability—more tangled, more ornate, or otherwise less immediately accessible.
+
+[attr-4]
+A story is [attr-4] if both of the following are true:
+- The story is [attr-2]
+- The story is [attr-12]
+- Think of [attr-4] as the delicate blossom that opens only when both a nested tale exists and that nesting speaks in the language of possibility. It is the interlaced condition: a story-within-story that casts its lines in the soft, conditional register of if and might.
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [attr-8]
+  - The story is [attr-3]
+- The truth value of the following are equal:
+  - [attr-7]
+  - [attr-5]
+- This compound badge is a careful balance. First, it demands an exclusive choice between philosophical tone and circular form — but not both. Then, it requires that the tale’s brevity status match its readability status: either both are true or both false. Imagine a tightrope walker balancing exclusivity and parity; that is the logic of [attr-6].
+
+[attr-9]
+A story is [attr-9] if the story's topic is in the set:
+- [attr-10]
+- [attr-11]
+- This simple membership tag collects stories under a shared thematic umbrella: if a tale’s subject is either cultural traditions or the turning of the seasons, it qualifies as [attr-9]. Picture two trees whose branches together form a single bower of theme.
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- Either of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is not [attr-7]
+- At the summit, [attr-1] crowns those tales that combine layered logical texture with thematic gravity. First, they must satisfy one of two structural-logical patterns (either the inner conditional nesting, or the exclusive philosophical/circular pattern paired with matched brevity/readability). Second, they must belong to the thematic grove of traditions or seasons, and they must exceed the smallness of a 160-word flash — grown enough, in other words, to carry the weight of complexity.
+
+Thus closes the scribe’s annotated wreath: a map of narrative qualities ornamented with metaphor, yet anchored to the same exact stones of logic. Use it as you would a compass and a poem together — precise in direction, generous in color.

@@ -1,0 +1,524 @@
+{
+  "nodes": [
+    {
+      "id": "attr-16",
+      "label": "story starts with an adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-37",
+      "label": "story is about cultural traditions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-32",
+      "label": "story has the theme Innovation",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-31",
+      "label": "story has the theme Humor",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-39",
+      "label": "story is about hidden treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-19",
+      "label": "story is classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-20",
+      "label": "story is humorous",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-23",
+      "label": "story is modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-38",
+      "label": "story is about giant creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-48",
+      "label": "story uses perfect aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "story has a flashback",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-29",
+      "label": "story has the theme Hardship",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "story has a cliffhanger",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "story has a moral lesson",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-40",
+      "label": "story is about lost civilizations",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-25",
+      "label": "story is playful",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-43",
+      "label": "story is about seasonal changes",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-18",
+      "label": "story starts with a preposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "story has juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-35",
+      "label": "story has the theme Problem-Solving",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-45",
+      "label": "story is about time travel",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-36",
+      "label": "story is about bygone eras",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "story has circular narrative structure",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-47",
+      "label": "story uses discourse markers",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-50",
+      "label": "story uses wh-questions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-44",
+      "label": "story is about the arts",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-34",
+      "label": "story has the theme Magic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-24",
+      "label": "story is philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-22",
+      "label": "story is minimalist",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "story has a story within a story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "story has more than 375 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-42",
+      "label": "story is about mystical creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "story has readability score below 86.4",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "story has Checkhov's gun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-13",
+      "label": "story has more than 6 paragraphs",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-28",
+      "label": "story has the theme Deception",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-27",
+      "label": "story has the theme Agency",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-41",
+      "label": "story is about magical lands",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-49",
+      "label": "story uses superlative forms",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-15",
+      "label": "story starts with an adjective",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-33",
+      "label": "story has the theme Kindness",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "story has readability score above 96.1",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-17",
+      "label": "story starts with a noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-46",
+      "label": "story uses conditional mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "story has a Red Herring",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-14",
+      "label": "story has fewer than 160 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-26",
+      "label": "story is surreal",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-30",
+      "label": "story has the theme Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-21",
+      "label": "story is lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "complex nested definition for attr-1",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    {
+                      "formula_type": "Or",
+                      "formula_args": [
+                        "attr-40",
+                        "attr-36",
+                        "attr-45"
+                      ]
+                    },
+                    "attr-8"
+                  ]
+                },
+                {
+                  "formula_type": "Or",
+                  "formula_args": [
+                    "attr-6",
+                    {
+                      "formula_type": "And",
+                      "formula_args": [
+                        "attr-3",
+                        {
+                          "formula_type": "Not",
+                          "formula_args": [
+                            {
+                              "formula_type": "And",
+                              "formula_args": [
+                                "attr-5",
+                                "attr-7"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                {
+                  "formula_type": "Xor",
+                  "formula_args": [
+                    "attr-19",
+                    "attr-23"
+                  ]
+                },
+                {
+                  "formula_type": "Or",
+                  "formula_args": [
+                    {
+                      "formula_type": "And",
+                      "formula_args": [
+                        "attr-34",
+                        {
+                          "formula_type": "Not",
+                          "formula_args": [
+                            "attr-42"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "formula_type": "And",
+                      "formula_args": [
+                        "attr-35",
+                        "attr-47"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "attr-28",
+                    {
+                      "formula_type": "Not",
+                      "formula_args": [
+                        {
+                          "formula_type": "And",
+                          "formula_args": [
+                            "attr-33",
+                            "attr-30"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "attr-5"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                {
+                  "formula_type": "Xor",
+                  "formula_args": [
+                    "attr-11",
+                    "attr-14"
+                  ]
+                },
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "attr-7",
+                    {
+                      "formula_type": "Not",
+                      "formula_args": [
+                        "attr-2"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-40",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-36",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-45",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-34",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-42",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-35",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-47",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-28",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-33",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-30",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-14",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-1"
+    }
+  ]
+}

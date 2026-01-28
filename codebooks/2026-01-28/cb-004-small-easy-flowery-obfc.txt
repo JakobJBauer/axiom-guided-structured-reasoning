@@ -1,0 +1,35 @@
+In a small compendium of labels, woven like ribbons through a garden of tales, each tag is defined with gentle precision so that readers and annotators may stroll the paths of meaning with clarity and delight. Below, the nodes stand like signposts beneath flowering boughs—each definition is embroidered with imagery, yet preserves the exact logical bearings needed for faithful annotation.
+
+[attr-4]
+A story is [attr-4] if the story is about seasonal changes.
+- This tag blooms for narratives whose heart is the turning of seasons: the subtle exchange of light and shadow, the march from spring’s first green to winter’s hush, the patterns of weather and time that mark the year.
+
+[attr-7]
+A story is [attr-7] if the story uses wh-questions.
+- Use this label when a tale is threaded with inquisitive wh-words—who, what, when, where, why, how—those bright, prying petals that invite curiosity and prompt answers.
+
+[attr-2]
+A story is [attr-2] if the story starts with a noun.
+- Apply this marker when the very opening word of the story is a noun, a sturdy seed from which the sentence grows.
+
+[attr-3]
+A story is [attr-3] if the story is about cultural traditions.
+- This category embraces stories steeped in custom and ritual: the ceremonies, celebrations, and inherited practices that bind people across generations.
+
+[attr-5]
+A story is [attr-5] if the story is about time travel.
+- Affix this label to narratives that voyage through time—journeys that fold the present into the past or fling characters forward into futures unknown.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-4]
+- The story is [attr-7]
+- In other words, this special classification is reserved for those tales that both dwell on the cycle of seasons and are woven with wh-questions, combining theme and interrogative form like a duet.
+
+[attr-6]
+A story is [attr-6] if either of the following is true:
+- The story is [attr-3]
+- The story is [attr-5]
+- This label kindly collects stories that belong to one of two domains: those that celebrate cultural traditions, or those that traverse the tapestry of time.
+
+May this ornate yet exact codebook guide your annotations as surely as a lantern guides a night stroll—rich in language, steadfast in logic.

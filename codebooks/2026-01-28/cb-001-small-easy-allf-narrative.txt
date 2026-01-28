@@ -1,0 +1,44 @@
+Imagine a dusty library where each shelf carries a single worn label: a compact rule that tells you how to recognize a story by a single whisper. Here are those labels, each introduced by its bracketed name and then written exactly as the library card prescribes — the recipe that turns a tale into a tag.
+
+[STYLE-CLASSIC]
+An old librarian smiles and points to a spine whenever a tale fits a familiar mold. She files it under:
+A story is [STYLE-CLASSIC] if The story is classic
+
+[STYLE-MODERN]
+Across the room, a younger curator marks stories that bend and reforge tradition. She keeps one short card for them:
+A story is [STYLE-MODERN] if The story is modern
+
+[HAS-A-CLIFFHANGER]
+Near the stairwell, a bookmark with a jagged edge flags tales that leave you hanging at dusk. Its rule is plain:
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+
+[LONG-STORY]
+On a high shelf, thick tomes rest under a heavy tag. The tag's truth is measured in words:
+A story is [LONG-STORY] if The story has more than 375 words
+
+[TOPIC-BYGONE-ERAS]
+In the history alcove, stories that travel backward in time gather. Their sign reads:
+A story is [TOPIC-BYGONE-ERAS] if The story is about bygone eras
+
+Some labels are simple; some combine clues into a narrative of their own. They are the catalog rules that let us say, without hesitation, when a story belongs to a particular blended identity.
+
+[CLASSIC-HISTORICAL-LONG]
+This one is for the grand, sprawling epics that feel like they were pulled from archival dust — classic in voice, long enough to breathe, and full of eras gone by:
+A story is [CLASSIC-HISTORICAL-LONG] if all of the following are true:
+- The story is [STYLE-CLASSIC]
+- The story is [LONG-STORY]
+- The story is [TOPIC-BYGONE-ERAS]
+
+[DYNAMIC-STYLE-CLIFF]
+Finally, there is a more complex card — a little dramatic, a little technical — that maps a dynamic mix of style and suspense. It reads like a decision tree, offering two distinct paths by which a tale earns the tag: either it sits exclusively in one style, or it fulfills a quartet of conditions that tie style and subject to a cliffhanger. The rule is preserved here exactly as the archivist wrote it:
+A story is [DYNAMIC-STYLE-CLIFF] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [STYLE-MODERN]
+  - The story is [STYLE-CLASSIC]
+- All of the following are true:
+  - The story is not [STYLE-CLASSIC]
+  - The story's style is equal to [STYLE-MODERN]
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story's topic is in [TOPIC-BYGONE-ERAS]
+
+These are the rules the catalog keeps close: short, exact lines that let an annotator gaze at a narrative and decide which labels it deserves. The story behind each tag is simple, but the weave of rules lets readers and reasoners navigate genres like visitors following a map through that quiet, rule-bound library.

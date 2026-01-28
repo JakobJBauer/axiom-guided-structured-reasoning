@@ -1,0 +1,65 @@
+I’ve rewritten the codebook in a more natural, free-flow voice while leaving every logical piece exactly where it belongs. All node IDs, operators, and formula structures are unchanged — you’ll find the formal definitions intact, but wrapped in friendlier, more readable language.
+
+[attr-4]
+Sometimes a story wants to teach you something—if it does, we tag it accordingly.  
+A story is [attr-4] if The story has a moral lesson
+
+[attr-12]
+When the prose leans on perfect tenses—has done, had done, will have done—that’s what this marker catches.  
+A story is [attr-12] if The story uses perfect aspect
+
+[attr-2]
+If the narrative leaves you hanging at the end, that’s a cliffhanger and this is the label we use.  
+A story is [attr-2] if The story has a cliffhanger
+
+[attr-11]
+Stories that center kindness—whether as a theme or a guiding thread—get this tag.  
+A story is [attr-11] if The story has the theme Kindness
+
+[attr-10]
+When the tone, references, or style feel contemporary, we call that modern.  
+A story is [attr-10] if The story is modern
+
+[attr-3]
+If the narrative jumps back in time to reveal earlier moments, that’s a flashback and we note it here.  
+A story is [attr-3] if The story has a flashback
+
+[attr-8]
+When the voice or structure leans toward the traditional, timeless, or classic, this is the label to use.  
+A story is [attr-8] if The story is classic
+
+[attr-6]
+For anything that stretches beyond a brief vignette into a fuller piece, we count length.  
+A story is [attr-6] if The story has more than 375 words
+
+[attr-5]
+When elements are placed side-by-side to highlight contrasts or unexpected similarities, that’s juxtaposition.  
+A story is [attr-5] if The story has juxtaposition
+
+[attr-9]
+If the overall mood is breezy, playful, or gently amusing, we mark it as lighthearted.  
+A story is [attr-9] if The story is lighthearted
+
+[attr-7]
+Think of [attr-7] as a small checklist for stories that feel layered and textured. For a story to qualify, all of the following must be true:
+- Either of the following is true:
+  - The story is [attr-2]
+  - The story is [attr-3]
+- Exactly one of the following is true:
+  - The story is [attr-5]
+  - The story is [attr-12]
+- The story is not [attr-9]
+- At least one of the story's structural features is in the set { [attr-2], [attr-3], [attr-5] }
+
+So, a rich narrative needs either a cliffhanger or a flashback, exactly one of juxtaposition or perfect aspect, it must not be lighthearted, and it must include at least one of those structural features — that combination gives the story its “rich” label.
+
+[attr-1]
+Now, to call a story [attr-1], we stack a couple more conditions on top of richness. Both of the following must be true:
+- The story is [attr-7]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [attr-11]
+    - The story is [attr-4]
+  - The presence of [attr-10] equals the presence of [attr-8]
+
+In plain terms: a complex story has the layered properties of [attr-7], it must either carry kindness as a theme or include an explicit moral, and its modern/classic styling must be matched (either both are present or both are absent).

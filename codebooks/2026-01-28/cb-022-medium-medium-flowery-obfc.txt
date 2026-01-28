@@ -1,0 +1,65 @@
+Preface — In a sunlit library where categories bloom like roses and logic threads through the air like golden filaments, this modest codebook lives. Imagine an archivist of stories, bedecked in ink-stained robes, coaxing meaning from tales with a gentle, scholarly hand. Each node below is a named blossom on that archivist’s vine: a precise, carefully pruned label that admits a story into a particular bed of interpretation. I offer here both the formal definitions you must rely on for rigorous annotation and a little embroidered lore to make the work of classification as delightful as it is exact.
+
+[attr-2]
+A story is [attr-2] if the story has circular narrative structure.
+(Imagine a tale whose path folds like a looping river, where the end embraces the beginning and the reader feels a quiet, satisfying return.)
+
+[attr-11]
+A story is [attr-11] if the story has the theme Kindness.
+(Think of narratives warmed by gentleness and goodwill, where acts of compassion ripple outward like sunlight on water.)
+
+[attr-3]
+A story is [attr-3] if the story has juxtaposition.
+(Envision scenes placed side by side—contrast and comparison arranged like paired tapestries, gaining meaning from their nearness.)
+
+[attr-12]
+A story is [attr-12] if the story is about hidden treasures.
+(These are tales of buried glories, secret fortunes, or metaphoric treasures waiting to be unearthed by patient eyes.)
+
+[attr-5]
+A story is [attr-5] if the story has readability score below 86.4.
+(This label captures prose that asks the reader to work a little more—densely woven language or complex sentences that lower a readability metric beneath 86.4.)
+
+[attr-9]
+A story is [attr-9] if the story is philosophical.
+(Here dwell narratives that ponder existence, reason, and meaning—stories that wear reflection like a cloak.)
+
+[attr-8]
+A story is [attr-8] if the story is modern.
+(These tales bear contemporary sensibilities: current settings, voices, and devices that mark them of the now.)
+
+[attr-10]
+A story is [attr-10] if the story has the theme Deception.
+(Plots threaded with trickery, misdirection, and hidden motives receive this name—stories where appearances may betray intent.)
+
+[attr-4]
+A story is [attr-4] if the story has readability score above 96.1.
+(These are the breezy, open-window narratives—clear, quickly grasped prose that scores above 96.1 on readability.)
+
+[attr-6]
+A story is [attr-6] if all of the following are true:
+- The story is [attr-8]
+- Either of the following is true:
+  - The story is [attr-9]
+  - The story is [attr-3]
+- The story is not [attr-2]
+(When these conditions align, you have a modern tale that leans toward reflective thought or striking contrasts, but that does not fold back upon itself in circular form.)
+
+[attr-7]
+A story is [attr-7] if all of the following are true:
+- The story is [attr-11]
+- The story is [attr-10]
+- The story is [attr-6]
+(Here is a morally ambivalent garden: kindness and deception entwined in the same vine, set within a modern, philosophical or juxtaposed frame. The heart of the tale is simultaneously generous and duplicitous.)
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - Exactly one of the following is true:
+    - The story is [attr-5]
+    - The story is [attr-4]
+  - The story is [attr-12]
+(When moral ambivalence meets either a distinct readability state—low OR high, but not both—or the subject of hidden treasures, the story is crowned with the [attr-1] designation: layered, challenging, and rich with interpretive possibility.)
+
+Epilogue — Treat these labels as cherished lanterns on a long gallery wall. The decorative language above is a companion to the exact, indispensable definitions that follow it: use the bracketed nodes and their logical scaffolding without alteration. May the classification feel less like a task and more like a generous stroll through a cultivated garden of narrative knowledge.

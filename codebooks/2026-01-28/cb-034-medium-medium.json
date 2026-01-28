@@ -1,0 +1,165 @@
+{
+  "nodes": [
+    {
+      "id": "theme-growth",
+      "label": "Theme Growth",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-helping-others",
+      "label": "Theme Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "Starts With Adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "Style Modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-seasonal-changes",
+      "label": "Topic Seasonal Changes",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-perfect-aspect",
+      "label": "Uses Perfect Aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "low-readability",
+      "label": "Low Readability",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-classic",
+      "label": "Style Classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-mystical-creatures",
+      "label": "Topic Mystical Creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "high-readability",
+      "label": "High Readability",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "seasonal-growth",
+      "label": "Seasonal Growth",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-seasonal-changes",
+        "theme-growth",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "topic-mystical-creatures"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "composed-story",
+      "label": "Composed Story",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "seasonal-growth",
+            "theme-helping-others"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "style-modern",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "low-readability"
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "style-classic",
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "uses-perfect-aspect",
+                    "high-readability"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic-seasonal-changes",
+      "target": "seasonal-growth"
+    },
+    {
+      "source": "theme-growth",
+      "target": "seasonal-growth"
+    },
+    {
+      "source": "topic-mystical-creatures",
+      "target": "seasonal-growth"
+    },
+    {
+      "source": "seasonal-growth",
+      "target": "composed-story"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "composed-story"
+    },
+    {
+      "source": "style-modern",
+      "target": "composed-story"
+    },
+    {
+      "source": "low-readability",
+      "target": "composed-story"
+    },
+    {
+      "source": "style-classic",
+      "target": "composed-story"
+    },
+    {
+      "source": "uses-perfect-aspect",
+      "target": "composed-story"
+    },
+    {
+      "source": "high-readability",
+      "target": "composed-story"
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+[attr-44]
+Definition: Classify a story as [attr-44] when the narrative focuses on magical lands.
+Criterion: The story is about magical lands.
+
+[attr-14]
+Definition: Classify a story as [attr-14] when its readability metric falls below a specific threshold.
+Criterion: The story has a readability score below 86.4.
+
+[attr-33]
+Definition: Classify a story as [attr-33] when deception is a central thematic element.
+Criterion: The story has the theme Deception.
+
+[attr-16]
+Definition: Classify a story as [attr-16] when its paragraph count exceeds a defined limit.
+Criterion: The story has more than 6 paragraphs.
+
+[attr-20]
+Definition: Classify a story as [attr-20] when the first lexical token is an adjective.
+Criterion: The story starts with an adjective.
+
+[attr-30]
+Definition: Classify a story as [attr-30] when its stylistic register is surreal.
+Criterion: The story is surreal.
+
+[attr-22]
+Definition: Classify a story as [attr-22] when the first lexical token is a noun.
+Criterion: The story starts with a noun.
+
+[attr-46]
+Definition: Classify a story as [attr-46] when the subject matter concerns the arts.
+Criterion: The story is about the arts.
+
+[attr-42]
+Definition: Classify a story as [attr-42] when the plot revolves around hidden treasures.
+Criterion: The story is about hidden treasures.
+
+[attr-35]
+Definition: Classify a story as [attr-35] when hardship is a principal theme.
+Criterion: The story has the theme Hardship.
+
+[attr-25]
+Definition: Classify a story as [attr-25] when its stylistic register aligns with classic conventions.
+Criterion: The story is classic.
+
+[attr-10]
+Definition: Classify a story as [attr-10] when it contains an instance of Chekhov’s gun (a deliberately placed plot element that becomes significant later).
+Criterion: The story has Checkhov's gun.
+
+[attr-48]
+Definition: Classify a story as [attr-48] when it employs discourse markers (connective particles, transition phrases).
+Criterion: The story uses discourse markers.
+
+[attr-50]
+Definition: Classify a story as [attr-50] when superlative morphological forms appear in the text.
+Criterion: The story uses superlative forms.
+
+[attr-41]
+Definition: Classify a story as [attr-41] when giant creatures are a prominent topic.
+Criterion: The story is about giant creatures.
+
+[attr-9]
+Definition: Classify a story as [attr-9] when it contains a flashback narrative device.
+Criterion: The story has a flashback.
+
+[attr-28]
+Definition: Classify a story as [attr-28] when its stylistic register aligns with modern conventions.
+Criterion: The story is modern.
+
+[attr-34]
+Definition: Classify a story as [attr-34] when growth or character development is a core theme.
+Criterion: The story has the theme Growth.
+
+[attr-45]
+Definition: Classify a story as [attr-45] when seasonal change is a subject of the narrative.
+Criterion: The story is about seasonal changes.
+
+[attr-27]
+Definition: Classify a story as [attr-27] when it employs minimalist stylistic principles.
+Criterion: The story is minimalist.
+
+[attr-21]
+Definition: Classify a story as [attr-21] when the first lexical token is an adverb.
+Criterion: The story starts with an adverb.
+
+[attr-43]
+Definition: Classify a story as [attr-43] when lost civilizations are central to the narrative.
+Criterion: The story is about lost civilizations.
+
+[attr-36]
+Definition: Classify a story as [attr-36] when helping others is a principal theme.
+Criterion: The story has the theme Helping Others.
+
+[attr-38]
+Definition: Classify a story as [attr-38] when magic constitutes a thematic element of the story.
+Criterion: The story has the theme Magic.
+
+[attr-29]
+Definition: Classify a story as [attr-29] when its tone and style are playful.
+Criterion: The story is playful.
+
+[attr-47]
+Definition: Classify a story as [attr-47] when it employs the conditional grammatical mood.
+Criterion: The story uses conditional mood.
+
+[attr-49]
+Definition: Classify a story as [attr-49] when it employs the perfect aspect in its verbal morphology.
+Criterion: The story uses perfect aspect.
+
+[attr-37]
+Definition: Classify a story as [attr-37] when humor is a primary thematic element.
+Criterion: The story has the theme Humor.
+
+[attr-40]
+Definition: Classify a story as [attr-40] when cultural traditions are central to the content.
+Criterion: The story is about cultural traditions.
+
+[attr-11]
+Definition: Classify a story as [attr-11] when it contains juxtaposition as a device (contrasting elements presented adjacent to each other).
+Criterion: The story has juxtaposition.
+
+[attr-8]
+Definition: Classify a story as [attr-8] when the narrative ends or pauses with a cliffhanger.
+Criterion: The story has a cliffhanger.
+
+[attr-12]
+Definition: Classify a story as [attr-12] when its readability metric exceeds a specified threshold.
+Criterion: The story has a readability score above 96.1.
+
+[attr-26]
+Definition: Classify a story as [attr-26] when its tone is lighthearted.
+Criterion: The story is lighthearted.
+
+[attr-19]
+Definition: Classify a story as [attr-19] when exactly one of three mutually exclusive starting-word conditions holds.
+Criterion: Exactly one of the following is true:
+- The story is [attr-20]
+- The story is [attr-21]
+- The story is [attr-22]
+
+[attr-24]
+Definition: Classify a story as [attr-24] when its style belongs to a specified set of aesthetic registers.
+Criterion: The story is any of the following:
+- [attr-30]
+- [attr-29]
+- [attr-26]
+
+[attr-39]
+Definition: Classify a story as [attr-39] when it treats ancient mysteries as its subject through a conjunction of conditions.
+Criterion: Both of the following are true:
+- The story is [attr-43]
+- Either of the following is true:
+  - The story is [attr-42]
+  - The story is [attr-40]
+
+[attr-15]
+Definition: Classify a story as [attr-15] when the setting is both magical and thematically magical.
+Criterion: Both of the following are true:
+- The story is [attr-44]
+- The story is [attr-38]
+
+[attr-5]
+Definition: Classify a story as [attr-5] when both creature-focused content and magical lands co-occur.
+Criterion: Both of the following are true:
+- The story is [attr-41]
+- The story is [attr-44]
+
+[attr-17]
+Definition: Classify a story as [attr-17] when it contains specific pairs of narrative devices; this node is true if any listed conjunction holds.
+Criterion: Either of the following is true:
+- Both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-9]
+- Both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-8]
+- Both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-11]
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-8]
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-11]
+- Both of the following are true:
+  - The story is [attr-8]
+  - The story is [attr-11]
+
+[attr-23]
+Definition: Classify a story as [attr-23] when it satisfies a hierarchy of structural and grammatical conditions.
+Criterion: Both of the following are true:
+- The story is [attr-16]
+- Both of the following are true:
+  - The story is [attr-48]
+  - Either of the following is true:
+    - The story is [attr-47]
+    - The story is [attr-49]
+
+[attr-4]
+Definition: Classify a story as [attr-4] when it combines a primary theme from a first set with a secondary element from a second set.
+Criterion: Both of the following are true:
+- Either of the following is true:
+  - The story is [attr-38]
+  - The story is [attr-34]
+- Either of the following is true:
+  - The story is [attr-33]
+  - The story is [attr-35]
+  - The story is [attr-36]
+  - The story is [attr-37]
+
+[attr-13]
+Definition: Classify a story as [attr-13] when humor co-occurs with a light, playful style.
+Criterion: Both of the following are true:
+- The story is [attr-37]
+- Both of the following are true:
+  - The story is [attr-26]
+  - The story is [attr-29]
+
+[attr-18]
+Definition: Classify a story as [attr-18] when it exhibits minimalist form, aligns with a canonical stylistic epoch, and explicitly excludes surrealism.
+Criterion: Both of the following are true:
+- The story is [attr-27]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [attr-25]
+    - The story is [attr-28]
+  - The story is not [attr-30]
+
+[attr-1]
+Definition: Classify a story as [attr-1] when it simultaneously embodies growth and altruism as themes.
+Criterion: Both of the following are true:
+- The story is [attr-34]
+- The story is [attr-36]
+
+[attr-31]
+Definition: Classify a story as [attr-31] when a planted plot element and a narrative cliffhanger coexist.
+Criterion: Both of the following are true:
+- The story is [attr-10]
+- The story is [attr-8]
+
+[attr-3]
+Definition: Classify a story as [attr-3] when it combines specific narrative devices with a structured form.
+Criterion: Both of the following are true:
+- The story is [attr-17]
+- The story is [attr-23]
+
+[attr-7]
+Definition: Classify a story as [attr-7] when it treats ancient mysteries and additionally includes one of two large-scale topical elements.
+Criterion: Both of the following are true:
+- The story is [attr-39]
+- Either of the following is true:
+  - The story is [attr-41]
+  - The story is [attr-45]
+
+[attr-6]
+Definition: Classify a story as [attr-6] when it combines magical setting with an exploratory plot element and a progression-related theme.
+Criterion: Both of the following are true:
+- The story is [attr-15]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [attr-42]
+    - The story is [attr-43]
+  - Either of the following is true:
+    - The story is [attr-35]
+    - The story is [attr-34]
+
+[attr-32]
+Definition: Classify a story as [attr-32] when a specified aesthetic style coincides with a surprising finale and a growth-help arc.
+Criterion: Both of the following are true:
+- The story is [attr-24]
+- Both of the following are true:
+  - The story is [attr-31]
+  - The story is [attr-1]
+
+[attr-2]
+Definition: Classify a story as [attr-2] when multiple structural and thematic conjunctions hold, and the starting-word constraint is satisfied.
+Criterion: All of the following are true:
+- Both of the following are true:
+  - The story is [attr-3]
+  - The story is [attr-4]
+- Either of the following is true:
+  - The story is [attr-6]
+  - Both of the following are true:
+    - The story is [attr-7]
+    - The story is [attr-5]
+- The story is [attr-19]

@@ -1,0 +1,1 @@
+cb-006-small-easy-allf-flowery-obfc.txt: Equal formula requires 2 arguments, got 1

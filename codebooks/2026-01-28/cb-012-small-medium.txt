@@ -1,0 +1,18 @@
+[THEME-HELPING-OTHERS]  
+A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others.
+
+[TOPIC-MYSTICAL-CREATURES]  
+A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures.
+
+[STARTS-WITH-PREPOSITION]  
+A story is [STARTS-WITH-PREPOSITION] if The story starts with a preposition.
+
+[MYTHIC-BUT-NOT-ALTRUISTIC]  
+A story is [MYTHIC-BUT-NOT-ALTRUISTIC] if both of the following are true:
+- The story is [TOPIC-MYSTICAL-CREATURES]
+- The story is not [THEME-HELPING-OTHERS]
+
+[INVITING-OPENING]  
+A story is [INVITING-OPENING] if both of the following are true:
+- The story is [STARTS-WITH-PREPOSITION]
+- The story is not [MYTHIC-BUT-NOT-ALTRUISTIC]

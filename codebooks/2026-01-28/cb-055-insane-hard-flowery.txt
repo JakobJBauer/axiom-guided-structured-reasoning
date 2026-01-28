@@ -1,0 +1,157 @@
+[A shimmering preface]
+
+A story is [THEME-PROBLEM-SOLVING] if the tale bears the luminous theme Problem-Solving, as though it were a puzzle box coaxing the reader to pry it open.
+
+A story is [TOPIC-MYSTICAL-CREATURES] if the narrative wanders among mystical creatures, populated by beings that breathe starlight and whisper secrets of old.
+
+A story is [SHORT-STORY] if the composition contains fewer than 160 words, a brief blossom that opens and closes within a single breath.
+
+A story is [TOPIC-TIME-TRAVEL] if the tale turns upon the gears of time travel, where moments fold like origami and yesterday converses with tomorrow.
+
+A story is [USES-DISCOURSE-MARKERS] if the prose adorns itself with discourse markers, the small signposts that guide the reader along the byways of thought.
+
+A story is [TOPIC-CULTURAL-TRADITIONS] if the narrative centers on cultural traditions, honoring rituals and customs passed down like heirloom seeds.
+
+A story is [THEME-INNOVATION] if the story shines with the theme Innovation, celebrating fresh ideas and the courage to reshape the known.
+
+A story is [STARTS-WITH-ADVERB] if the opening word is an adverb, the sentence beginning with a swash of manner that sets the cadence.
+
+A story is [THEME-HELPING-OTHERS] if its heart belongs to the theme Helping Others, where compassion moves the plot like a steadfast compass.
+
+A story is [HAS-JUXTAPOSITION] if it presents juxtaposition—contrasts placed side by side to make meanings sing.
+
+A story is [STYLE-PLAYFUL] if it wears a playful style, fluttering with lightheartedness and mischievous grace.
+
+A story is [HAS-A-RED-HERRING] if it contains a Red Herring: a deliberate false trail that teases and deceives before the truth is revealed.
+
+A story is [THEME-HARDSHIP] if the narrative includes the theme Hardship, where trials shape the soul like weathered stone.
+
+A story is [THEME-HUMOR] if the piece carries the theme Humor, lending laughter as a salve to the scenes.
+
+A story is [THEME-AGENCY] if it embodies the theme Agency, celebrating characters who act and shape their destinies.
+
+A story is [HAS-A-FLASHBACK] if the tale contains a flashback, a window through which past events illuminate the present.
+
+A story is [USES-PERFECT-ASPECT] if the prose employs perfect aspect, verbs that trace actions completed, with echoes that reach across time.
+
+A story is [USES-CONDITIONAL-MOOD] if it uses conditional mood, phrasing possibility and hypothesis like fragile glass of “if” and “would.”
+
+A story is [USES-WH-QUESTIONS] if it asks wh-questions, those curious queries—who, what, when, where, why, how—that pry open meaning.
+
+A story is [THEME-KINDNESS] if it is woven with the theme Kindness, kindness spilling from character to character like warm light.
+
+A story is [HAS-A-MORAL-LESSON] if it carries a moral lesson, an explicit shard of wisdom meant to linger after the last line.
+
+A story is [STYLE-HUMOROUS] if it adopts a humorous style, crafting wit and comic timing as its cloth.
+
+A story is [LOW-READABILITY] if the piece has a readability score below 86.4, a density that might resist the casual reader’s stride.
+
+A story is [MANY-PARAGRAPHS] if it is arranged in more than 6 paragraphs, a multi-chambered tale with several breaths.
+
+A story is [HAS-A-CLIFFHANGER] if it ends upon a cliffhanger, leaving the future suspended like a bird paused mid-flight.
+
+A story is [TOPIC-MAGICAL-LANDS] if it explores magical lands—realms where maps are drawn from moonbeams and valleys hum with enchantment.
+
+A story is [TOPIC-GIANT-CREATURES] if it concerns giant creatures, behemoths that make mountains seem like pebbles by comparison.
+
+A story is [THEME-GROWTH] if it is threaded with the theme Growth, depicting characters who stretch and deepen as seasons pass.
+
+A story is [LONG-STORY] if its length exceeds 375 words, a sprawling tapestry long enough to wander.
+
+A story is [FANTASY-TOPICS] if the story is in [TOPIC-MYSTICAL-CREATURES, TOPIC-MAGICAL-LANDS, TOPIC-GIANT-CREATURES], a triad of fantastical territories under the same banner.
+
+A story is [MAGICAL-STORY] if either of the following is true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- The story is [TOPIC-MYSTICAL-CREATURES]
+
+A story is [EPIC-TALE] if all of the following are true:
+- The story is [LONG-STORY]
+- The story is either [TOPIC-GIANT-CREATURES] or [TOPIC-MAGICAL-LANDS]
+- The story is [THEME-GROWTH]
+
+A story is [SHORT-MAGICAL] if both of the following are true:
+- The story is [SHORT-STORY]
+- The story is [MAGICAL-STORY]
+
+A story is [TIME-TRAVEL-PARADOX] if both of the following are true:
+- The story is [TOPIC-TIME-TRAVEL]
+- Either of the following is true:
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [HAS-A-FLASHBACK]
+
+A story is [COMPLEX-STRUCTURE] if both of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- Both of the following are true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is [HAS-A-CLIFFHANGER]
+
+A story is [NARRATIVE-VOICE] if either of the following is true:
+- The story is [STARTS-WITH-ADVERB]
+- The story is [USES-DISCOURSE-MARKERS]
+- The story is [USES-WH-QUESTIONS]
+
+A story is [HUMOROUS-PLAYFUL] if exactly one of the following is true:
+- The story is [STYLE-HUMOROUS]
+- The story is [STYLE-PLAYFUL]
+
+A story is [MORAL-KINDNESS] if both of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [HAS-A-MORAL-LESSON]
+
+A story is [HELPFUL-INNOVATOR] if all of the following are true:
+- The story is [THEME-INNOVATION]
+- The story is [THEME-HELPING-OTHERS]
+- Either of the following is true:
+  - The story is [THEME-AGENCY]
+  - The story is [THEME-PROBLEM-SOLVING]
+
+A story is [GROWTH-FROM-HARDSHIP] if both of the following are true:
+- The story is [THEME-GROWTH]
+- The story is [THEME-HARDSHIP]
+
+A story is [ENGAGING-READABILITY] if both of the following are true:
+- The story is not [LOW-READABILITY]
+- Either of the following is true:
+  - The story is [SHORT-STORY]
+  - The story is [LONG-STORY]
+
+A story is [BRIEF-CHOICE] if both of the following are true:
+- The story is [SHORT-STORY]
+- Exactly one of the following is true:
+  - The story is [THEME-HUMOR]
+  - The story is [THEME-HARDSHIP]
+
+A story is [QUESTION-DRIVEN] if both of the following are true:
+- The story is [USES-WH-QUESTIONS]
+- The story is [USES-DISCOURSE-MARKERS]
+
+A story is [COMPLEX-LOGIC-STORY] if all of the following are true:
+- Either of the following is true:
+  - The story is [TIME-TRAVEL-PARADOX]
+  - The story is [MAGICAL-STORY]
+- Both of the following are true:
+  - The story is [COMPLEX-STRUCTURE]
+  - Either of the following is true:
+    - The story is [NARRATIVE-VOICE]
+    - The story is [ENGAGING-READABILITY]
+- Either of the following is true:
+  - The story uses [USES-CONDITIONAL-MOOD]
+  - The story uses [USES-PERFECT-ASPECT]
+
+A story is [THEMATIC-FUSION] if both of the following are true:
+- Either of the following is true:
+  - The story is [HELPFUL-INNOVATOR]
+  - The story is [MORAL-KINDNESS]
+- Either of the following is true:
+  - The story is [GROWTH-FROM-HARDSHIP]
+  - The story is [THEME-PROBLEM-SOLVING]
+
+A story is [PRAGMATIC-VOICE] if all of the following are true:
+- The story is [NARRATIVE-VOICE]
+- The story is not [STYLE-PLAYFUL]
+- Either of the following is true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-CONDITIONAL-MOOD]
+
+[An earnest coda]
+This lovingly rephrased codebook keeps every logical hinge and bracketed sigil exactly where they belong, like constellations unchanged in a newly embroidered sky. Use it as your map: the relationships stand firm even as the language blooms.

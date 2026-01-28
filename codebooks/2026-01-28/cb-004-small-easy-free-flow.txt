@@ -1,0 +1,24 @@
+[TOPIC-SEASONAL-CHANGES]  
+Use [TOPIC-SEASONAL-CHANGES] when the story is centered on seasonal changes—anything that’s really about the shifting seasons and what comes with them.
+
+[USES-WH-QUESTIONS]  
+Tag a story as [USES-WH-QUESTIONS] if it actively uses wh-questions—questions like who, what, when, where, why, or how.
+
+[STARTS-WITH-NOUN]  
+Mark [STARTS-WITH-NOUN] if the opening of the story begins with a noun right out of the gate.
+
+[TOPIC-CULTURAL-TRADITIONS]  
+Apply [TOPIC-CULTURAL-TRADITIONS] when the story is about cultural traditions—customs, rituals, heritage practices, and the like.
+
+[TOPIC-TIME-TRAVEL]  
+Choose [TOPIC-TIME-TRAVEL] if the story’s focus is time travel, meaning it involves moving through time as a central idea.
+
+[SEASONAL-QUESTION-STORY]  
+A story counts as [SEASONAL-QUESTION-STORY] if both of the following are true:  
+- The story is [TOPIC-SEASONAL-CHANGES]  
+- The story is [USES-WH-QUESTIONS]
+
+[TRADITION-OR-TIME-STORY]  
+A story qualifies as [TRADITION-OR-TIME-STORY] if either of the following is true:  
+- The story is [TOPIC-CULTURAL-TRADITIONS]  
+- The story is [TOPIC-TIME-TRAVEL]

@@ -1,0 +1,207 @@
+Reference and notation
+- Convention: The expression "A story is [NODE]" denotes that the predicate identified by [NODE] evaluates to true for the given story.
+- Logical connectors used in definitions: "all of the following are true:", "both of the following are true:", "either of the following is true:", "exactly one of the following is true:", and negation via "not". These reflect the intended Boolean structure and must be preserved when applying the predicates.
+
+Atomic predicates (basic feature tests)
+- [THEME-PROBLEM-SOLVING]
+  - Definition: A story is [THEME-PROBLEM-SOLVING] if the story contains the theme Problem-Solving.
+
+- [TOPIC-MYSTICAL-CREATURES]
+  - Definition: A story is [TOPIC-MYSTICAL-CREATURES] if the story concerns mystical creatures.
+
+- [SHORT-STORY]
+  - Definition: A story is [SHORT-STORY] if the story length is fewer than 160 words.
+
+- [TOPIC-TIME-TRAVEL]
+  - Definition: A story is [TOPIC-TIME-TRAVEL] if the story concerns time travel.
+
+- [USES-DISCOURSE-MARKERS]
+  - Definition: A story is [USES-DISCOURSE-MARKERS] if the narrative includes discourse markers.
+
+- [TOPIC-CULTURAL-TRADITIONS]
+  - Definition: A story is [TOPIC-CULTURAL-TRADITIONS] if the story concerns cultural traditions.
+
+- [THEME-INNOVATION]
+  - Definition: A story is [THEME-INNOVATION] if the story contains the theme Innovation.
+
+- [STARTS-WITH-ADVERB]
+  - Definition: A story is [STARTS-WITH-ADVERB] if the first token of the story is an adverb.
+
+- [THEME-HELPING-OTHERS]
+  - Definition: A story is [THEME-HELPING-OTHERS] if the story contains the theme Helping Others.
+
+- [HAS-JUXTAPOSITION]
+  - Definition: A story is [HAS-JUXTAPOSITION] if the story exhibits juxtaposition (contrast of elements).
+
+- [STYLE-PLAYFUL]
+  - Definition: A story is [STYLE-PLAYFUL] if the story’s style is playful.
+
+- [HAS-A-RED-HERRING]
+  - Definition: A story is [HAS-A-RED-HERRING] if the narrative includes a red herring.
+
+- [THEME-HARDSHIP]
+  - Definition: A story is [THEME-HARDSHIP] if the story contains the theme Hardship.
+
+- [THEME-HUMOR]
+  - Definition: A story is [THEME-HUMOR] if the story contains the theme Humor.
+
+- [THEME-AGENCY]
+  - Definition: A story is [THEME-AGENCY] if the story contains the theme Agency.
+
+- [HAS-A-FLASHBACK]
+  - Definition: A story is [HAS-A-FLASHBACK] if the narrative contains a flashback.
+
+- [USES-PERFECT-ASPECT]
+  - Definition: A story is [USES-PERFECT-ASPECT] if the text uses verbs in the perfect aspect.
+
+- [USES-CONDITIONAL-MOOD]
+  - Definition: A story is [USES-CONDITIONAL-MOOD] if the text uses conditional mood constructions.
+
+- [USES-WH-QUESTIONS]
+  - Definition: A story is [USES-WH-QUESTIONS] if the text contains wh-questions (who/what/where/when/why/how).
+
+- [THEME-KINDNESS]
+  - Definition: A story is [THEME-KINDNESS] if the story contains the theme Kindness.
+
+- [HAS-A-MORAL-LESSON]
+  - Definition: A story is [HAS-A-MORAL-LESSON] if the narrative includes an explicit moral lesson.
+
+- [STYLE-HUMOROUS]
+  - Definition: A story is [STYLE-HUMOROUS] if the story’s style is humorous.
+
+- [LOW-READABILITY]
+  - Definition: A story is [LOW-READABILITY] if the story’s readability score is below 86.4.
+
+- [MANY-PARAGRAPHS]
+  - Definition: A story is [MANY-PARAGRAPHS] if the story is composed of more than 6 paragraphs.
+
+- [HAS-A-CLIFFHANGER]
+  - Definition: A story is [HAS-A-CLIFFHANGER] if the story ends with a cliffhanger.
+
+- [TOPIC-MAGICAL-LANDS]
+  - Definition: A story is [TOPIC-MAGICAL-LANDS] if the story concerns magical lands.
+
+- [TOPIC-GIANT-CREATURES]
+  - Definition: A story is [TOPIC-GIANT-CREATURES] if the story concerns giant creatures.
+
+- [THEME-GROWTH]
+  - Definition: A story is [THEME-GROWTH] if the story contains the theme Growth.
+
+- [LONG-STORY]
+  - Definition: A story is [LONG-STORY] if the story length exceeds 375 words.
+
+Composite predicates (Boolean combinations)
+- [FANTASY-TOPICS]
+  - Definition: A story is [FANTASY-TOPICS] if the story is in [TOPIC-MYSTICAL-CREATURES, TOPIC-MAGICAL-LANDS, TOPIC-GIANT-CREATURES].
+
+- [MAGICAL-STORY]
+  - Definition: A story is [MAGICAL-STORY] if either of the following is true:
+    - The story is [TOPIC-MAGICAL-LANDS]
+    - The story is [TOPIC-MYSTICAL-CREATURES]
+
+- [EPIC-TALE]
+  - Definition: A story is [EPIC-TALE] if all of the following are true:
+    - The story is [LONG-STORY]
+    - The story is either [TOPIC-GIANT-CREATURES] or [TOPIC-MAGICAL-LANDS]
+    - The story is [THEME-GROWTH]
+
+- [SHORT-MAGICAL]
+  - Definition: A story is [SHORT-MAGICAL] if both of the following are true:
+    - The story is [SHORT-STORY]
+    - The story is [MAGICAL-STORY]
+
+- [TIME-TRAVEL-PARADOX]
+  - Definition: A story is [TIME-TRAVEL-PARADOX] if both of the following are true:
+    - The story is [TOPIC-TIME-TRAVEL]
+    - Either of the following is true:
+      - The story is [HAS-A-RED-HERRING]
+      - The story is [HAS-A-FLASHBACK]
+
+- [COMPLEX-STRUCTURE]
+  - Definition: A story is [COMPLEX-STRUCTURE] if both of the following are true:
+    - The story is [MANY-PARAGRAPHS]
+    - Both of the following are true:
+      - The story is [HAS-A-FLASHBACK]
+      - The story is [HAS-A-CLIFFHANGER]
+
+- [NARRATIVE-VOICE]
+  - Definition: A story is [NARRATIVE-VOICE] if either of the following is true:
+    - The story is [STARTS-WITH-ADVERB]
+    - The story is [USES-DISCOURSE-MARKERS]
+    - The story is [USES-WH-QUESTIONS]
+
+- [HUMOROUS-PLAYFUL]
+  - Definition: A story is [HUMOROUS-PLAYFUL] if exactly one of the following is true:
+    - The story is [STYLE-HUMOROUS]
+    - The story is [STYLE-PLAYFUL]
+
+- [MORAL-KINDNESS]
+  - Definition: A story is [MORAL-KINDNESS] if both of the following are true:
+    - The story is [THEME-KINDNESS]
+    - The story is [HAS-A-MORAL-LESSON]
+
+- [HELPFUL-INNOVATOR]
+  - Definition: A story is [HELPFUL-INNOVATOR] if all of the following are true:
+    - The story is [THEME-INNOVATION]
+    - The story is [THEME-HELPING-OTHERS]
+    - Either of the following is true:
+      - The story is [THEME-AGENCY]
+      - The story is [THEME-PROBLEM-SOLVING]
+
+- [GROWTH-FROM-HARDSHIP]
+  - Definition: A story is [GROWTH-FROM-HARDSHIP] if both of the following are true:
+    - The story is [THEME-GROWTH]
+    - The story is [THEME-HARDSHIP]
+
+- [ENGAGING-READABILITY]
+  - Definition: A story is [ENGAGING-READABILITY] if both of the following are true:
+    - The story is not [LOW-READABILITY]
+    - Either of the following is true:
+      - The story is [SHORT-STORY]
+      - The story is [LONG-STORY]
+
+- [BRIEF-CHOICE]
+  - Definition: A story is [BRIEF-CHOICE] if both of the following are true:
+    - The story is [SHORT-STORY]
+    - Exactly one of the following is true:
+      - The story is [THEME-HUMOR]
+      - The story is [THEME-HARDSHIP]
+
+- [QUESTION-DRIVEN]
+  - Definition: A story is [QUESTION-DRIVEN] if both of the following are true:
+    - The story is [USES-WH-QUESTIONS]
+    - The story is [USES-DISCOURSE-MARKERS]
+
+- [COMPLEX-LOGIC-STORY]
+  - Definition: A story is [COMPLEX-LOGIC-STORY] if all of the following are true:
+    - Either of the following is true:
+      - The story is [TIME-TRAVEL-PARADOX]
+      - The story is [MAGICAL-STORY]
+    - Both of the following are true:
+      - The story is [COMPLEX-STRUCTURE]
+      - Either of the following is true:
+        - The story is [NARRATIVE-VOICE]
+        - The story is [ENGAGING-READABILITY]
+    - Either of the following is true:
+      - The story uses [USES-CONDITIONAL-MOOD]
+      - The story uses [USES-PERFECT-ASPECT]
+
+- [THEMATIC-FUSION]
+  - Definition: A story is [THEMATIC-FUSION] if both of the following are true:
+    - Either of the following is true:
+      - The story is [HELPFUL-INNOVATOR]
+      - The story is [MORAL-KINDNESS]
+    - Either of the following is true:
+      - The story is [GROWTH-FROM-HARDSHIP]
+      - The story is [THEME-PROBLEM-SOLVING]
+
+- [PRAGMATIC-VOICE]
+  - Definition: A story is [PRAGMATIC-VOICE] if all of the following are true:
+    - The story is [NARRATIVE-VOICE]
+    - The story is not [STYLE-PLAYFUL]
+    - Either of the following is true:
+      - The story is [USES-PERFECT-ASPECT]
+      - The story is [USES-CONDITIONAL-MOOD]
+
+Implementation note
+- Apply these predicates deterministically: evaluate atomic predicates first, then compute composite predicates using the exact Boolean composition specified above. Preserve the negations and quantifiers ("either", "both", "all", "exactly one") as given when performing automated or manual annotation.

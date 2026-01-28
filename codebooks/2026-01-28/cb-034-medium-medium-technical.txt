@@ -1,0 +1,52 @@
+[THEME-GROWTH]
+A story is classified as [THEME-GROWTH] if the narrative contains the thematic element "Growth."
+
+[THEME-HELPING-OTHERS]
+A story is classified as [THEME-HELPING-OTHERS] if the narrative contains the thematic element "Helping Others."
+
+[STARTS-WITH-ADVERB]
+A story is classified as [STARTS-WITH-ADVERB] if the first lexical token of the story is an adverb.
+
+[STYLE-MODERN]
+A story is classified as [STYLE-MODERN] if the narrative exhibits characteristics of modern style.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is classified as [TOPIC-SEASONAL-CHANGES] if the subject matter concerns seasonal changes.
+
+[USES-PERFECT-ASPECT]
+A story is classified as [USES-PERFECT-ASPECT] if the narrative employs perfect aspect in verb constructions.
+
+[LOW-READABILITY]
+A story is classified as [LOW-READABILITY] if the computed readability score for the text is below 86.4.
+
+[STYLE-CLASSIC]
+A story is classified as [STYLE-CLASSIC] if the narrative exhibits characteristics of classic style.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is classified as [TOPIC-MYSTICAL-CREATURES] if the subject matter concerns mystical creatures.
+
+[HIGH-READABILITY]
+A story is classified as [HIGH-READABILITY] if the computed readability score for the text is above 96.1.
+
+[SEASONAL-GROWTH]
+A story is classified as [SEASONAL-GROWTH] if and only if all of the following conditions hold:
+- The story is [TOPIC-SEASONAL-CHANGES]
+- The story is [THEME-GROWTH]
+- The story is not [TOPIC-MYSTICAL-CREATURES]
+
+[COMPOSED-STORY]
+A story is classified as [COMPOSED-STORY] if any one of the following disjunctive conditions is satisfied:
+
+- Conjunctive condition A (both must be true):
+  - The story is [SEASONAL-GROWTH]
+  - The story is [THEME-HELPING-OTHERS]
+
+- Disjunctive branch B (either of the following sub-branches):
+  - Branch B1 (both must be true):
+    - The story is [STYLE-MODERN]
+    - The story is not [LOW-READABILITY]
+  - Branch B2 (both must be true):
+    - The story is [STYLE-CLASSIC]
+    - Conjunctive requirement (both must be true):
+      - The story is [USES-PERFECT-ASPECT]
+      - The story is [HIGH-READABILITY]

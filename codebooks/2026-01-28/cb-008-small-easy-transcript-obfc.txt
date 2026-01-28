@@ -1,0 +1,31 @@
+Interviewer: Let’s go through this codebook together. Can you start with the first entry?
+
+Expert: Sure. [attr-4]
+A story is [attr-4] if the story is about cultural traditions.
+
+Interviewer: And the next one?
+
+Expert: [attr-1]
+A story is [attr-1] if the story has a moral lesson.
+
+Interviewer: What about sentences that begin in a certain way — is that captured?
+
+Expert: Yes. [attr-2]
+A story is [attr-2] if the story starts with an adverb.
+
+Interviewer: Is there a node for the magic theme?
+
+Expert: There is. [attr-3]
+A story is [attr-3] if the story has the theme Magic.
+
+Interviewer: Now, how do these pieces combine? Is there a composite label that requires more than one condition?
+
+Expert: Yes — here's the combined rule. [attr-5]
+A story is [attr-5] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-3]
+- The story is [attr-1]
+
+Interviewer: So to be clear, a story must satisfy all three of those subconditions to be marked [attr-5], right?
+
+Expert: Exactly. All three must hold together for [attr-5] to apply.

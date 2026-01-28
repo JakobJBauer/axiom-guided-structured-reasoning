@@ -1,0 +1,62 @@
+Codebook — Structured Version
+
+Purpose
+- Provide a clear, organized reference for annotators.
+- Preserve all original node IDs, logical operators, and relationships exactly as given.
+- Present each node and its conditions in a hierarchical, easy-to-scan layout.
+
+Atomic (single-condition) labels
+- A story is [THEME-GROWTH] if:
+  - The story has the theme Growth.
+
+- A story is [THEME-HELPING-OTHERS] if:
+  - The story has the theme Helping Others.
+
+- A story is [STARTS-WITH-ADVERB] if:
+  - The story starts with an adverb.
+
+- A story is [STYLE-MODERN] if:
+  - The story is modern.
+
+- A story is [TOPIC-SEASONAL-CHANGES] if:
+  - The story is about seasonal changes.
+
+- A story is [USES-PERFECT-ASPECT] if:
+  - The story uses perfect aspect.
+
+- A story is [LOW-READABILITY] if:
+  - The story has readability score below 86.4.
+
+- A story is [STYLE-CLASSIC] if:
+  - The story is classic.
+
+- A story is [TOPIC-MYSTICAL-CREATURES] if:
+  - The story is about mystical creatures.
+
+- A story is [HIGH-READABILITY] if:
+  - The story has readability score above 96.1.
+
+Composite labels (logical combinations)
+- A story is [SEASONAL-GROWTH] if all of the following are true:
+  - The story is [TOPIC-SEASONAL-CHANGES]
+  - The story is [THEME-GROWTH]
+  - The story is not [TOPIC-MYSTICAL-CREATURES]
+
+- A story is [COMPOSED-STORY] if either of the following is true:
+  - both of the following are true:
+    - The story is [SEASONAL-GROWTH]
+    - The story is [THEME-HELPING-OTHERS]
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [STYLE-MODERN]
+      - The story is not [LOW-READABILITY]
+    - both of the following are true:
+      - The story is [STYLE-CLASSIC]
+      - both of the following are true:
+        - The story is [USES-PERFECT-ASPECT]
+        - The story is [HIGH-READABILITY]
+
+Notes for annotators (kept concise)
+- All node IDs must be used exactly as shown (including brackets).
+- Logical words such as "all of the following", "both of the following", "either of the following", and "not" indicate precise boolean relationships — follow them literally.
+- This structured layout mirrors the original logic while making it easier to check conditions step by step.

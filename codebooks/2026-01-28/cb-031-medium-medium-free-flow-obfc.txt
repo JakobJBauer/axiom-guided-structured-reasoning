@@ -1,0 +1,51 @@
+Think of this as a friendly guide to the tags we use when labeling stories — written in a more natural voice but keeping every rule exactly as it was.
+
+[attr-4]
+Call a story [attr-4] when its readability score falls below 86.4.
+
+[attr-6]
+A story is [attr-6] if the story is philosophical.
+
+[attr-5]
+A story is [attr-5] if the story is modern.
+
+[attr-12]
+A story is [attr-12] if the story uses superlative forms.
+
+[attr-10]
+A story is [attr-10] if the story is about bygone eras.
+
+[attr-7]
+A story is [attr-7] if the story has the theme Magic.
+
+[attr-11]
+A story is [attr-11] if the story is about time travel.
+
+[attr-3]
+A story is [attr-3] if the story has a moral lesson.
+
+[attr-8]
+A story is [attr-8] if the story has the theme Problem-Solving.
+
+[attr-9]
+A story is [attr-9] if exactly one of the following is true:
+- The story is [attr-11]
+- The story is [attr-7]
+
+So [attr-9] picks stories that sit squarely in either time travel or magic — but not both.
+
+[attr-2]
+A story is [attr-2] if all of the following are true:
+- The story is [attr-10]
+- The story is [attr-3]
+- The story is not [attr-12]
+
+That means a didactic bygone story must be about past eras, carry a moral, and avoid superlatives.
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-9]
+- The story is [attr-8]
+- The story is not [attr-4]
+
+In plain terms: a [attr-1] blends either time travel or magic (but not both), centers on problem-solving, and maintains a readability score at or above the 86.4 cutoff.

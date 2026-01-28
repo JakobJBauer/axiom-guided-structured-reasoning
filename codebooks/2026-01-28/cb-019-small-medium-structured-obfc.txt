@@ -1,0 +1,73 @@
+Codebook — structured view for annotation
+
+Purpose
+- Provide concise, unambiguous rules for assigning the labels below.
+- Each label is defined by a logical rule that must be followed exactly.
+- Keep the node IDs in [attr-1] format and keep all logical operators and relationships unchanged.
+
+Nodes (definitions and annotation checks)
+
+1) [attr-7]
+- Definition:
+  - A story is [attr-7] if the story uses superlative forms.
+- Annotator check:
+  - Look for superlative adjectives/adverbs (e.g., words that mark highest degree such as “biggest,” “most,” “least,” “best,” “worst”).
+
+2) [attr-6]
+- Definition:
+  - A story is [attr-6] if the story is about lost civilizations.
+- Annotator check:
+  - The main subject or theme concerns ancient or vanished societies, ruins, or civilizations that have been lost.
+
+3) [attr-4]
+- Definition:
+  - A story is [attr-4] if the story starts with a noun.
+- Annotator check:
+  - The very first token of the story is a noun (proper or common). Verify initial word class.
+
+4) [attr-5]
+- Definition:
+  - A story is [attr-5] if the story has the theme Humor.
+- Annotator check:
+  - The story’s tone, intent, or primary theme is comedic, satirical, or meant to elicit amusement.
+
+5) [attr-2]
+- Logical rule:
+  - A story is [attr-2] if all of the following are true:
+    - The story is [attr-4]
+    - The story is [attr-5]
+    - The story is not [attr-7]
+- Notes for annotators:
+  - This label requires all three conditions to hold simultaneously (logical AND of the three bullets).
+  - Pay attention to the “not” condition: the absence of superlative forms is required.
+
+6) [attr-3]
+- Logical rule:
+  - A story is [attr-3] if both of the following are true:
+    - The story is [attr-6]
+    - Exactly one of the following is true:
+      - The story is [attr-2]
+      - The story is [attr-7]
+- Notes for annotators:
+  - This label requires two things:
+    1) The story must be about lost civilizations.
+    2) Between [attr-2] and [attr-7], exactly one must hold (exclusive OR).
+  - If neither or both of those two are true, do not assign [attr-3].
+
+Quick logical cheat-sheet (for clarity)
+- [attr-2] = [attr-4] AND [attr-5] AND NOT [attr-7]
+- [attr-3] = [attr-6] AND (exactly one of ([attr-2], [attr-7]))
+
+Annotation procedure (recommended)
+- Step 1: Identify basic properties:
+  - Does the story start with a noun? → mark [attr-4] if yes.
+  - Is the theme humor? → mark [attr-5] if yes.
+  - Does the story use superlative forms? → mark [attr-7] if yes.
+  - Is it about lost civilizations? → mark [attr-6] if yes.
+- Step 2: Derive composed labels:
+  - Assign [attr-2] only if all three constituent conditions (including NOT) hold.
+  - Assign [attr-3] only if [attr-6] holds AND exactly one of ([attr-2], [attr-7]) holds.
+
+End note
+- Do not alter node IDs or the logical relationships when applying labels.
+- Follow the exact logical operators as stated (AND, NOT, Exactly one).

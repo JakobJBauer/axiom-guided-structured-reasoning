@@ -1,0 +1,437 @@
+{
+  "nodes": [
+    {
+      "id": "theme-problem-solving",
+      "label": "THEME-PROBLEM-SOLVING",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-hidden-treasures",
+      "label": "TOPIC-HIDDEN-TREASURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-lighthearted",
+      "label": "STYLE-LIGHTHEARTED",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-red-herring",
+      "label": "HAS-A-RED-HERRING",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-preposition",
+      "label": "STARTS-WITH-PREPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-giant-creatures",
+      "label": "TOPIC-GIANT-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-superlative-forms",
+      "label": "USES-SUPERLATIVE-FORMS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-magic",
+      "label": "THEME-MAGIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "STYLE-MODERN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "STARTS-WITH-ADVERB",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-magical-lands",
+      "label": "TOPIC-MAGICAL-LANDS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "low-readability",
+      "label": "LOW-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-humorous",
+      "label": "STYLE-HUMOROUS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-innovation",
+      "label": "THEME-INNOVATION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-classic",
+      "label": "STYLE-CLASSIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-mystical-creatures",
+      "label": "TOPIC-MYSTICAL-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-kindness",
+      "label": "THEME-KINDNESS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-humor",
+      "label": "THEME-HUMOR",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "short-story",
+      "label": "SHORT-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-the-arts",
+      "label": "TOPIC-THE-ARTS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "plot-structure",
+      "label": "PLOT-STRUCTURE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "topic-hidden-treasures",
+                "topic-magical-lands"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "topic-mystical-creatures",
+                {
+                  "formula_type": "Xor",
+                  "formula_args": [
+                    "topic-giant-creatures",
+                    "topic-the-arts"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "has-a-red-herring",
+            "short-story"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tone-and-style",
+      "label": "TONE-AND-STYLE",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-lighthearted",
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "style-humorous",
+                "style-classic"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "style-modern",
+            "style-classic",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "low-readability",
+                    "starts-with-preposition"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thematic-core",
+      "label": "THEMATIC-CORE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "theme-problem-solving",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "theme-innovation",
+                "theme-magic"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "theme-kindness",
+            "theme-humor"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "theme-magic",
+                "theme-innovation",
+                "theme-problem-solving"
+              ]
+            },
+            {
+              "formula_type": "Equal",
+              "formula_args": [
+                "theme-kindness",
+                false
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combined-plot-tone",
+      "label": "COMBINED-PLOT-TONE",
+      "formula_type": "And",
+      "formula_args": [
+        "plot-structure",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "tone-and-style",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "uses-superlative-forms",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "has-a-red-herring"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-story-type",
+      "label": "COMPLEX-STORY-TYPE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "thematic-core",
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "combined-plot-tone",
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "short-story",
+                    {
+                      "formula_type": "Or",
+                      "formula_args": [
+                        "topic-the-arts",
+                        "topic-hidden-treasures"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "style-humorous",
+                "theme-humor"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic-hidden-treasures",
+      "target": "plot-structure"
+    },
+    {
+      "source": "topic-magical-lands",
+      "target": "plot-structure"
+    },
+    {
+      "source": "topic-mystical-creatures",
+      "target": "plot-structure"
+    },
+    {
+      "source": "topic-giant-creatures",
+      "target": "plot-structure"
+    },
+    {
+      "source": "topic-the-arts",
+      "target": "plot-structure"
+    },
+    {
+      "source": "has-a-red-herring",
+      "target": "plot-structure"
+    },
+    {
+      "source": "short-story",
+      "target": "plot-structure"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "tone-and-style"
+    },
+    {
+      "source": "style-humorous",
+      "target": "tone-and-style"
+    },
+    {
+      "source": "style-classic",
+      "target": "tone-and-style"
+    },
+    {
+      "source": "style-modern",
+      "target": "tone-and-style"
+    },
+    {
+      "source": "low-readability",
+      "target": "tone-and-style"
+    },
+    {
+      "source": "starts-with-preposition",
+      "target": "tone-and-style"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "thematic-core"
+    },
+    {
+      "source": "theme-innovation",
+      "target": "thematic-core"
+    },
+    {
+      "source": "theme-magic",
+      "target": "thematic-core"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "thematic-core"
+    },
+    {
+      "source": "theme-humor",
+      "target": "thematic-core"
+    },
+    {
+      "source": "plot-structure",
+      "target": "combined-plot-tone"
+    },
+    {
+      "source": "tone-and-style",
+      "target": "combined-plot-tone"
+    },
+    {
+      "source": "uses-superlative-forms",
+      "target": "combined-plot-tone"
+    },
+    {
+      "source": "has-a-red-herring",
+      "target": "combined-plot-tone"
+    },
+    {
+      "source": "thematic-core",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "combined-plot-tone",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "short-story",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "topic-the-arts",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "topic-hidden-treasures",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "style-humorous",
+      "target": "complex-story-type"
+    },
+    {
+      "source": "theme-humor",
+      "target": "complex-story-type"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+[HAS-A-MORAL-LESSON]  
+A story is [HAS-A-MORAL-LESSON] if the narrative explicitly or implicitly conveys a moral lesson (i.e., a normative takeaway intended to guide interpretation or behavior).
+
+[USES-PERFECT-ASPECT]  
+A story is [USES-PERFECT-ASPECT] if the text employs the perfect aspect (e.g., constructions analogous to “has/have/had + past participle”) as a grammatical mechanism in its narration.
+
+[HAS-A-CLIFFHANGER]  
+A story is [HAS-A-CLIFFHANGER] if it contains a cliffhanger—an intentionally unresolved situation or ending engineered to create suspense or deferred closure.
+
+[THEME-KINDNESS]  
+A story is [THEME-KINDNESS] if “Kindness” is a thematic throughline (i.e., kindness is a central idea motivating events, character decisions, or the narrative’s evaluative stance).
+
+[STYLE-MODERN]  
+A story is [STYLE-MODERN] if its stylistic register is modern (e.g., contemporary voice, conventions, or aesthetic).
+
+[HAS-A-FLASHBACK]  
+A story is [HAS-A-FLASHBACK] if it includes a flashback—an analeptic shift that narratively relocates the reader to earlier events relative to the main timeline.
+
+[STYLE-CLASSIC]  
+A story is [STYLE-CLASSIC] if its stylistic register is classic (e.g., traditional voice, conventions, or aesthetic).
+
+[LONG-STORY]  
+A story is [LONG-STORY] if its total word count is strictly greater than 375 words.
+
+[HAS-JUXTAPOSITION]  
+A story is [HAS-JUXTAPOSITION] if it uses juxtaposition, i.e., it places contrasting elements in proximity to highlight differences, tensions, or comparisons.
+
+[STYLE-LIGHTHEARTED]  
+A story is [STYLE-LIGHTHEARTED] if the dominant tone is lighthearted (i.e., primarily playful, humorous, or low-stakes in affect).
+
+[RICH-NARRATIVE]  
+A story is [RICH-NARRATIVE] if all of the following are true:  
+- Either of the following is true:  
+  - The story is [HAS-A-CLIFFHANGER]  
+  - The story is [HAS-A-FLASHBACK]  
+- Exactly one of the following is true:  
+  - The story is [HAS-JUXTAPOSITION]  
+  - The story is [USES-PERFECT-ASPECT]  
+- The story is not [STYLE-LIGHTHEARTED]  
+- At least one of the story's structural features is in the set { [HAS-A-CLIFFHANGER], [HAS-A-FLASHBACK], [HAS-JUXTAPOSITION] }
+
+[COMPLEX-STORY]  
+A story is [COMPLEX-STORY] if both of the following are true:  
+- The story is [RICH-NARRATIVE]  
+- Both of the following are true:  
+  - Either of the following is true:  
+    - The story is [THEME-KINDNESS]  
+    - The story is [HAS-A-MORAL-LESSON]  
+  - The presence of [STYLE-MODERN] equals the presence of [STYLE-CLASSIC]

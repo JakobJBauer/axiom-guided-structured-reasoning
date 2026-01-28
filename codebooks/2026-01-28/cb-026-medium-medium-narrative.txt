@@ -1,0 +1,67 @@
+[TOPIC-TIME-TRAVEL]
+There are tales that slip between the tick and the tock, where a single choice folds a century into a doorway. Formally:
+A story is [TOPIC-TIME-TRAVEL] if The story is about time travel.
+
+[TOPIC-HIDDEN-TREASURES]
+Some stories whisper of maps and chests and secret rooms beneath the earth—quests that pull a reader toward a glittering reveal. Formally:
+A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures.
+
+[STYLE-PHILOSOPHICAL]
+Other narratives sit by a slow fire, asking why and listening for echoes—meditations disguised as plots. Formally:
+A story is [STYLE-PHILOSOPHICAL] if The story is philosophical.
+
+[MANY-PARAGRAPHS]
+Some epics unfold like old songs, taking their time across many stanzas until the page grows thick with paragraphs. Formally:
+A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs.
+
+[HIGH-READABILITY]
+And some works are so smoothly written that the reader glides through sentences as if down a clear river. Formally:
+A story is [HIGH-READABILITY] if The story has readability score above 96.1.
+
+[STYLE-CLASSIC]
+There are narratives that wear the weathered coat of tradition—the cadence, the structure, the echoes of what came before. Formally:
+A story is [STYLE-CLASSIC] if The story is classic.
+
+[STYLE-HUMOROUS]
+Others prefer to tilt the world on its head and invite laughter to lead the way, turning misfortune into punchline. Formally:
+A story is [STYLE-HUMOROUS] if The story is humorous.
+
+[TOPIC-MYSTICAL-CREATURES]
+Occasionally a story opens a window onto beasts of legend—creatures that breathe myth into the margins. Formally:
+A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures.
+
+[THEMATIC-DEPTH]
+Imagine a tale that not only asks the big questions but does so without jest—earnest and searching. Formally:
+A story is [THEMATIC-DEPTH] if both of the following are true:
+- The story is [STYLE-PHILOSOPHICAL]
+- The story is not [STYLE-HUMOROUS]
+
+[NARRATIVE-STYLE]
+Some narratives combine clarity with a recognizable voice—readable and leaning into either timelessness or a wink. Formally:
+A story is [NARRATIVE-STYLE] if both of the following are true:
+- The story is [HIGH-READABILITY]
+- Either of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [STYLE-HUMOROUS]
+
+[ADVENTURE-ARC]
+There are two ways a story can be swept into an adventure: by treasure’s promise, or by time’s temptation when it refuses to be merely reflective. Formally:
+A story is [ADVENTURE-ARC] if either of the following is true:
+- The story is [TOPIC-HIDDEN-TREASURES]
+- Both of the following are true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is not [STYLE-PHILOSOPHICAL]
+
+[COMPLEX-STORY]
+When a narrative carries philosophical weight without the cushion of jokes and then layers on either questing treasure or mythic beasts, it becomes richly woven. Formally:
+A story is [COMPLEX-STORY] if both of the following are true:
+- The story is [THEMATIC-DEPTH]
+- Either of the following is true:
+  - The story is [ADVENTURE-ARC]
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+
+[EPIC]
+Finally, when that complex weave stretches long—sprawling across many paragraphs—the work steps into the realm of the grand and sweeping. Formally:
+A story is [EPIC] if both of the following are true:
+- The story is [COMPLEX-STORY]
+- The story is [MANY-PARAGRAPHS]

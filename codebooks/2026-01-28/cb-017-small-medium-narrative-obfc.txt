@@ -1,0 +1,44 @@
+Once upon a time in the little kingdom of Annotation, rules lived like characters in a play. Each rule had a name on its robe and a clear job to do. Listen closely, and you'll hear the story of how tales are marked and measured—where labels are both gentle and precise, and logic keeps everything from tumbling into chaos.
+
+[attr-3]
+A story is STYLE-HUMOROUS if The story is humorous
+
+There’s the jester of the court, bright and quick, who wears the name [attr-3]. Whenever a tale makes you laugh—quick wit, absurd situations, comedic timing—that jester announces itself: A story is STYLE-HUMOROUS if The story is humorous.
+
+[attr-4]
+A story is STYLE-LIGHTHEARTED if The story is lighthearted
+
+Next comes the wandering minstrel, humming a carefree tune. When a story feels breezy and easy on the heart, the minstrel’s banner flies: A story is STYLE-LIGHTHEARTED if The story is lighthearted.
+
+[attr-5]
+A story is THEME-KINDNESS if The story has the theme Kindness
+
+In the center of the square stands a quiet philosopher who watches for good deeds. If a tale speaks of compassion and warmth, the philosopher proclaims: A story is THEME-KINDNESS if The story has the theme Kindness.
+
+[attr-2]
+A story is STYLE-EXCLUSIVE if exactly one of the following is true:
+- The story is [attr-3]
+- The story is [attr-4]
+
+Sometimes the kingdom needs a clear choice: a single banner raised, not both. That’s when the herald calls for exclusivity. [attr-2] follows a strict rule: A story is STYLE-EXCLUSIVE if exactly one of the following is true:
+- The story is [attr-3]
+- The story is [attr-4]
+
+[attr-1]
+A story is GENRE-GENTLE if both of the following are true:
+- The story is [attr-5]
+- Either of the following are true:
+  - The story is [attr-2]
+  - Both of the following are true:
+    - The story is [attr-4]
+    - The story is not [attr-3]
+
+Finally, there is the gentle garden where certain stories are invited to rest. To enter, a tale must meet two careful conditions, like passing through two gates. The sign above reads [attr-1]: A story is GENRE-GENTLE if both of the following are true:
+- The story is [attr-5]
+- Either of the following are true:
+  - The story is [attr-2]
+  - Both of the following are true:
+    - The story is [attr-4]
+    - The story is not [attr-3]
+
+And so the rules live on—clear, interconnected, and attentive—guiding annotators through the kingdom, ensuring every story finds the right label without confusion.

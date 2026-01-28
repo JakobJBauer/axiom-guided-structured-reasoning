@@ -1,0 +1,442 @@
+{
+  "nodes": [
+    {
+      "id": "attr-19",
+      "label": "Problem-Solving",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-22",
+      "label": "Hidden Treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "Lighthearted Tone",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Red Herring",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "Starts With Preposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-21",
+      "label": "Giant Creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-26",
+      "label": "Uses Superlatives",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-18",
+      "label": "Magic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-13",
+      "label": "Style: Modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "Starts With Adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-23",
+      "label": "Magical Lands",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Low Readability",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "Humorous Style",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-16",
+      "label": "Innovation",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Style: Classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-24",
+      "label": "Mystical Creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-17",
+      "label": "Kindness",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-15",
+      "label": "Humor (theme)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Short Length (<160 words)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-25",
+      "label": "Arts",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Composite: attr-6",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-22",
+                "attr-23"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-24",
+                {
+                  "formula_type": "Xor",
+                  "formula_args": [
+                    "attr-21",
+                    "attr-25"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-4",
+            "attr-7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-20",
+      "label": "Composite: attr-20",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-12",
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "attr-11",
+                "attr-10"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-13",
+                "attr-10"
+              ]
+            },
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "attr-5",
+                    "attr-9"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-14",
+      "label": "Composite: attr-14",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-19",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-16",
+                "attr-18"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-17",
+            "attr-15"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-18",
+                "attr-16",
+                "attr-19"
+              ]
+            },
+            {
+              "formula_type": "Equal",
+              "formula_args": [
+                "attr-17",
+                false
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Composite: attr-2",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-6",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-20",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-26",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-4"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "Composite: attr-3",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-14",
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "attr-2",
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "attr-7",
+                    {
+                      "formula_type": "Or",
+                      "formula_args": [
+                        "attr-25",
+                        "attr-22"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-11",
+                "attr-15"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-22",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-21",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-25",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-20"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-20"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-20"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-20"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-20"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-20"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-16",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-18",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-17",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-15",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-20",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-26",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-14",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-25",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-22",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-15",
+      "target": "attr-3"
+    }
+  ]
+}

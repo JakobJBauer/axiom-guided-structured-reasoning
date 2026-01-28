@@ -1,0 +1,122 @@
+[TOPIC-TIME-TRAVEL]  
+In the grand library of tales, a story is [TOPIC-TIME-TRAVEL] if **the story is about time travel**—if its footsteps stray across centuries, and its characters brush dust from yesterday while reaching for tomorrow.
+
+[STARTS-WITH-ADJECTIVE]  
+A story is [STARTS-WITH-ADJECTIVE] if **the story starts with a adjective**—opening not with a name or a deed, but with a shimmering descriptor that sets the air trembling before anything else arrives.
+
+[USES-PERFECT-ASPECT]  
+A story is [USES-PERFECT-ASPECT] if **the story uses perfect aspect**—speaking in the grammar of what has been completed, what had already unfolded, what will have come to pass, like a lantern held over finished footprints.
+
+[STYLE-MODERN]  
+A story is [STYLE-MODERN] if **the story is modern**—clothed in contemporary cadence, tuned to the present world’s pulse and vocabulary.
+
+[LOW-READABILITY]  
+A story is [LOW-READABILITY] if **the story has readability score below 86.4**—its path more winding, its sentences more thorned, its meaning perhaps hidden like a jewel beneath thick moss.
+
+[TOPIC-THE-ARTS]  
+A story is [TOPIC-THE-ARTS] if **the story is about the arts**—if it lingers among paintings, music, dance, theater, sculpture, or any craft where the soul learns to speak in color and form.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]  
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if **the story has circular narrative structure**—a ribbon of narrative that loops back to where it began, returning like a season that remembers its first breeze.
+
+[TOPIC-CULTURAL-TRADITIONS]  
+A story is [TOPIC-CULTURAL-TRADITIONS] if **the story is about cultural traditions**—if it honors inherited rituals, communal memory, customs carried like warm bread from generation to generation.
+
+[HAS-A-FLASHBACK]  
+A story is [HAS-A-FLASHBACK] if **the story has a flashback**—a sudden doorway flung open into what once was, letting the past pour into the present like rain through an unlatched window.
+
+[STYLE-HUMOROUS]  
+A story is [STYLE-HUMOROUS] if **the story is humorous**—if it sparkles with wit, playfulness, or laughter that nudges even sorrow into a gentler shape.
+
+[TOPIC-MAGICAL-LANDS]  
+A story is [TOPIC-MAGICAL-LANDS] if **the story is about magical lands**—realms of impossible geography, enchanted kingdoms, secret valleys, and roads that appear only when named.
+
+[STYLE-LIGHTHEARTED]  
+A story is [STYLE-LIGHTHEARTED] if **the story is lighthearted**—buoyant in tone, easy on the spirit, carrying readers as if on a mild wind rather than a storm.
+
+[TOPIC-MYSTICAL-CREATURES]  
+A story is [TOPIC-MYSTICAL-CREATURES] if **the story is about mystical creatures**—beasts and beings born of legend: winged, scaled, radiant, shadowed, or holy with strangeness.
+
+[THEME-PROBLEM-SOLVING]  
+A story is [THEME-PROBLEM-SOLVING] if **the story has the theme Problem-Solving**—if its heart beats around puzzles, obstacles, remedies, and the steady work of finding a way through.
+
+---
+
+[NARRATIVE-STRUCTURAL]  
+A story is [NARRATIVE-STRUCTURAL] if **both of the following are true**:  
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]  
+- **Either of the following is true**:  
+  - The story is [HAS-A-FLASHBACK]  
+  - The story is not [STARTS-WITH-ADJECTIVE]  
+
+(As though the tale is a wheel: it must loop back upon itself, and it must also carry either a backward glance into memory, **or** refuse to begin with an adjective’s perfume.)
+
+[STYLE-AND-TONE]  
+A story is [STYLE-AND-TONE] if **both of the following are true**:  
+- **Exactly one of the following is true**:  
+  - The story is [STYLE-HUMOROUS]  
+  - The story is [STYLE-LIGHTHEARTED]  
+- **Either of the following is true**:  
+  - The story is [STYLE-MODERN]  
+  - The story is not [LOW-READABILITY]  
+
+(Here, the gatekeeper insists: choose laughter **or** levity—never both at once—and then, let the tale be modern **or** at least not tangled beneath the threshold of low readability.)
+
+[ARTS-TRADITIONAL-PROBLEM]  
+A story is [ARTS-TRADITIONAL-PROBLEM] if **either of the following is true**:  
+- **All of the following are true**:  
+  - The story is [TOPIC-THE-ARTS]  
+  - The story is [TOPIC-CULTURAL-TRADITIONS]  
+  - The story is [THEME-PROBLEM-SOLVING]  
+- **Both of the following are true**:  
+  - **Exactly one of the following is true**:  
+    - The story is [TOPIC-THE-ARTS]  
+    - The story is [THEME-PROBLEM-SOLVING]  
+  - The story is [TOPIC-CULTURAL-TRADITIONS]  
+
+(Imagine an ancient festival where artisans and elders gather: the tale may be fully braided from arts, traditions, and problem-solving together—**or** it may carry traditions for certain, while holding **exactly one** of arts **or** problem-solving as its single bright torch.)
+
+[FANTASY-CORE]  
+A story is [FANTASY-CORE] if **both of the following are true**:  
+- **Exactly one of the following is true**:  
+  - The story is [TOPIC-MAGICAL-LANDS]  
+  - The story is [TOPIC-MYSTICAL-CREATURES]  
+- **Either of the following is true**:  
+  - The story is [TOPIC-TIME-TRAVEL]  
+  - The story is not [STYLE-MODERN]  
+
+(This is the core enchantment: it must choose **one**—either magical lands **or** mystical creatures, but not both—and then it must also carry time travel’s clockwork wonder **or** step away from modern style into older, stranger air.)
+
+[COMPLEX-PATTERN]  
+A story is [COMPLEX-PATTERN] if **both of the following are true**:  
+- The story is [NARRATIVE-STRUCTURAL]  
+- **Either of the following is true**:  
+  - **Both of the following are true**:  
+    - The story is [STYLE-AND-TONE]  
+    - The story is not [FANTASY-CORE]  
+  - **Both of the following are true**:  
+    - The story is [ARTS-TRADITIONAL-PROBLEM]  
+    - The story is [FANTASY-CORE]  
+
+(So the pattern-maker demands the looping architecture first—and then allows two pathways: either the tale bears the precise style-and-tone seal while **not** being fantasy-core, **or** it binds arts-tradition-problem tightly together **and** burns with fantasy-core at the center.)
+
+[SYNDIC-CONJUNCTION]  
+A story is [SYNDIC-CONJUNCTION] if **all of the following are true**:  
+- The story is [COMPLEX-PATTERN]  
+- The story is [ARTS-TRADITIONAL-PROBLEM] or the story is [FANTASY-CORE]  
+- The story is [STYLE-AND-TONE] equals [STYLE-HUMOROUS]  
+
+(In the secret syndicate’s charter, three clauses must all be satisfied: the tale must already wear the [COMPLEX-PATTERN] sigil; it must be [ARTS-TRADITIONAL-PROBLEM] **or** [FANTASY-CORE]; and, in a strict mirror-binding, [STYLE-AND-TONE] must equal [STYLE-HUMOROUS].)
+
+[STORY-ARCHETYPE]  
+A story is [STORY-ARCHETYPE] if **either of the following is true**:  
+- **Both of the following are true**:  
+  - The story is [SYNDIC-CONJUNCTION]  
+  - The story is [COMPLEX-PATTERN] in [COMPLEX-PATTERN, SYNDIC-CONJUNCTION, FANTASY-CORE]  
+- **Either of the following is true**:  
+  - The story is [FANTASY-CORE] and the story is not [ARTS-TRADITIONAL-PROBLEM]  
+  - The story is [ARTS-TRADITIONAL-PROBLEM] and exactly one of the following is true:  
+    - The story is [STYLE-AND-TONE]  
+    - The story is [NARRATIVE-STRUCTURAL]  
+
+(And thus, in the hall of archetypes—where stories are sorted like constellations—entrance is granted by one of two grand doors: either the tale fulfills the [SYNDIC-CONJUNCTION] covenant **and** satisfies the curious membership test that [COMPLEX-PATTERN] is in [COMPLEX-PATTERN, SYNDIC-CONJUNCTION, FANTASY-CORE]; **or** it arrives by a different fate—being [FANTASY-CORE] while not [ARTS-TRADITIONAL-PROBLEM], **or** being [ARTS-TRADITIONAL-PROBLEM] while holding **exactly one** of [STYLE-AND-TONE] **or** [NARRATIVE-STRUCTURAL] in its grasp.)

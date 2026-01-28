@@ -1,0 +1,48 @@
+Think of this as a friendly guide to the labels we use when annotating stories. I’ll walk through each tag in plain language so it’s easy to understand, but I won’t change the logical bones — every bracketed ID and every logical connector stays exactly as it is.
+
+[STARTS-WITH-ADVERB]
+We call a story [STARTS-WITH-ADVERB] when its very first word is an adverb. Simple as that: if the story starts with an adverb, it gets this tag.
+
+[STYLE-CLASSIC]
+If a story reads like a classic—tonality, structure, or intent that fits the “classic” mold—then the story is [STYLE-CLASSIC].
+
+[LONG-STORY]
+When a story runs long, past 375 words, we mark it as [LONG-STORY].
+
+[TOPIC-GIANT-CREATURES]
+If the central subject of the story involves giant creatures—be they monsters, titans, enormous beasts—that story is [TOPIC-GIANT-CREATURES].
+
+[THEME-DECEPTION]
+Stories that revolve around deception—tricks, lies, betrayals, misdirection—are labeled [THEME-DECEPTION].
+
+[TOPIC-HIDDEN-TREASURES]
+When the plot centers on hidden treasures, secret hoards, lost riches, or the hunt for them, the story is [TOPIC-HIDDEN-TREASURES].
+
+[AMPHIBIOUS-EPIC]
+A story becomes [AMPHIBIOUS-EPIC] only when all of the following are true:
+- The story is [LONG-STORY]
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is not [STYLE-CLASSIC]
+
+[MISLEADING-QUEST]
+We tag a story [MISLEADING-QUEST] when both of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is [TOPIC-HIDDEN-TREASURES]
+- Either of the following is true:
+  - The story is [STARTS-WITH-ADVERB]
+  - The story is not [STYLE-CLASSIC]
+
+[HYBRID-TALE]
+A story is a [HYBRID-TALE] if exactly one of the following is true:
+- The story is [AMPHIBIOUS-EPIC]
+- The story is [MISLEADING-QUEST]
+
+[COMPLEX-ARTIFACT]
+We reserve the [COMPLEX-ARTIFACT] label for stories that meet all of the following:
+- The story is [HYBRID-TALE]
+- Either of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [LONG-STORY]
+- The story is not [STARTS-WITH-ADVERB]
+
+That’s the full set. Each label has a clear condition or combination of conditions — some simple, some layered — and they build on one another. Keep the bracketed IDs and the logical phrasing intact when you use these labels, and you’ll be able to annotate and reason about stories consistently.

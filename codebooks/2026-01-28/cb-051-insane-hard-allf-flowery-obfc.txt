@@ -1,0 +1,191 @@
+In a sunlit library of possibility, where each label is a key and each key unlocks a scent of meaning, the following codex unfolds. Read these lines as both a map and a poem: each bracketed emblem remains inviolate, each logical hinge (And, Or, Not, Xor, Equal) a carved lintel that holds the arch of the system steady. Below, for clarity and delight, each formal rule is first introduced with a gently woven image, then stated precisely so the mind may both wander and rely.
+
+A single spark of invention: the rule that names it.
+
+A story is [attr-27] if The story has the theme Innovation
+
+An old-world portrait, framed in velvet and moonlight, for tales that wear classic bones.
+
+A story is [attr-17] if The story is classic
+
+A treasure chest half-buried beneath moss and rhyme — the subject is secrets and glittering discovery.
+
+A story is [attr-31] if The story is about hidden treasures
+
+A brief blossom of narrative, small enough to cradle between two fingers.
+
+A story is [attr-13] if The story has fewer than 160 words
+
+The breeze that begins a sentence with color — a modifier that opens the door.
+
+A story is [attr-14] if The story starts with a adjective
+
+A chuckle threaded through plot and plotter; where the heart lightens and the corners of the mouth lift.
+
+A story is [attr-26] if The story has the theme Humor
+
+When sentences wear veils and stumble in charming disguise: low clarity by measure.
+
+A story is [attr-9] if The story has readability score below 86.4
+
+A tale dressed in the sharp lines of now, humming with contemporary cadence.
+
+A story is [attr-19] if The story is modern
+
+Winged beings, horned guardians, and other shimmers of the impossible: the subject of ethereal company.
+
+A story is [attr-34] if The story is about mystical creatures
+
+A slow, patient unfurling of character, where the seed stretches toward sun and self.
+
+A story is [attr-23] if The story has the theme Growth
+
+A long road of words that lays itself across many pages.
+
+A story is [attr-8] if The story has more than 375 words
+
+A lamp set on a table to guide conscience: tales that teach or gently point a lesson.
+
+A story is [attr-4] if The story has a moral lesson
+
+The circle returned to its beginning, a narrative that comes home to itself.
+
+A story is [attr-6] if The story has circular narrative structure
+
+When the road is rocky and the characters wrestle with weight — the theme of weathering storms.
+
+A story is [attr-24] if The story has the theme Hardship
+
+If-then wistfulness and hypothesis: language that leans on possibility.
+
+A story is [attr-37] if The story uses conditional mood
+
+The language of absolutes and crowns — where things are pushed to their utmost.
+
+A story is [attr-38] if The story uses superlative forms
+
+Hands extended, small mercies made large: a motif of aid and benevolence.
+
+A story is [attr-25] if The story has the theme Helping Others
+
+A playful wind that skips and spins through sentences, leaving smiles in its wake.
+
+A story is [attr-21] if The story is playful
+
+Where two things stand side by side to illuminate contrast — a craft of comparison.
+
+A story is [attr-7] if The story has juxtaposition
+
+A gentle river of compassion, tending tender shoots in other hearts.
+
+A story is [attr-28] if The story has the theme Kindness
+
+Sorcery braided through prose, where cause and wonder entwine.
+
+A story is [attr-29] if The story has the theme Magic
+
+A tale tucked inside another tale like a secret letter folded within a book.
+
+A story is [attr-5] if The story has a story within a story
+
+Clocks, paradoxes, and journeys that step outside the march of hours: voyages through eras.
+
+A story is [attr-36] if The story is about time travel
+
+Curiosity framed as questions beginning with who, what, where, when, why, and how.
+
+A story is [attr-39] if The story uses wh-questions
+
+A grin-shaped cadence, where humor colors the very style of the telling.
+
+A story is [attr-18] if The story is humorous
+
+Ruins and memories of civilizations that slipped beneath sand and silence.
+
+A story is [attr-32] if The story is about lost civilizations
+
+Kingdoms stitched from moonlight, pageant lands where anything can happen.
+
+A story is [attr-33] if The story is about magical lands
+
+Thoughtful, deep, and ponderous — prose that invites the reader to sit and philosophize.
+
+A story is [attr-20] if The story is philosophical
+
+A tidy categorization, declaring the permissible styles as a little constellation.
+
+A story is [attr-16] if the story's style is In the set { [attr-17], [attr-19], [attr-21], [attr-18], [attr-20] }
+
+A bouquet of mystical topics gathered as a single garland, any of which will adorn the tale.
+
+A story is [attr-35] if the story's topic is In the set { [attr-34], [attr-33], [attr-31], [attr-32], [attr-36] }
+
+A constellation of themes, each a star that, when present, signals affinity with wonder, change, or whimsy.
+
+A story is [attr-22] if either of the following are true (Or):
+- The story is [attr-27]
+- The story is [attr-23]
+- The story is [attr-24]
+- The story is [attr-25]
+- The story is [attr-28]
+- The story is [attr-29]
+- The story is [attr-26]
+
+A delicate balance between brevity and breadth: the tale cannot be both tiny and sprawling.
+
+A story is [attr-11] if exactly one (Xor) of the following is true:
+- The story is [attr-13]
+- The story is [attr-8]
+
+A whisper-and-a-start conjunction: low readability entwined with an opening adjective.
+
+A story is [attr-12] if both of the following are true (And):
+- The story is [attr-9]
+- The story is [attr-14]
+
+A device of craft — one of several structural ornaments that a storyteller may choose.
+
+A story is [attr-15] if either of the following are true (Or):
+- The story is [attr-5]
+- The story is [attr-6]
+- The story is [attr-7]
+
+A moral compass or the arc of becoming: either ethical instruction or the tender work of growing.
+
+A story is [attr-10] if either of the following are true (Or):
+- The story is [attr-4]
+- The story is [attr-23]
+
+A perfect parity check between two themes, as if they were mirrors held up to one another.
+
+A story is [attr-3] if Equal(the truth of [attr-23], the truth of [attr-24])
+
+A story balanced on twin pillars: equality of theme presence plus a kindness or aid motif.
+
+A story is [attr-1] if both of the following are true (And):
+- The story is [attr-3]
+- Either of the following are true (Or):
+  - The story is [attr-28]
+  - The story is [attr-25]
+
+A syndrome named for a cluster of inclinations — when wonder and balance combine, or when invention itself looms large.
+
+A story is [attr-30] if both of the following are true (And):
+- The story is [attr-22]
+- Either of the following are true (Or):
+  - The story is [attr-1]
+  - The story is [attr-27]
+
+The apex of our taxonomy: a tale that weaves together theme, style, topic, structure, length, readability, and moral arc — yet refuses the classic cloak.
+
+A story is [attr-2] if all of the following are true:
+- The story is [attr-30]
+- The story is [attr-16]
+- The story is [attr-35]
+- The story is [attr-15]
+- Not the story is [attr-17]
+- The story is [attr-11]
+- The story is [attr-12]
+- The story is [attr-10]
+
+Thus closes the blooming ledger: each clause here is both an incantation and an instruction, precise enough for careful annotation, lyrical enough to inspire the reader’s imagination. Keep the brackets, keep the logic, and let the words sing.

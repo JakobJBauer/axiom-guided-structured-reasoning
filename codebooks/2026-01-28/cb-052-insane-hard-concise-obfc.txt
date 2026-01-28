@@ -1,0 +1,188 @@
+[attr-30]
+A story is [attr-30] if the story has the theme Growth.
+
+[attr-22]
+A story is [attr-22] if the story is humorous.
+
+[attr-32]
+A story is [attr-32] if the story has the theme Helping Others.
+
+[attr-21]
+A story is [attr-21] if the story starts with a preposition.
+
+[attr-25]
+A story is [attr-25] if the story is modern.
+
+[attr-48]
+A story is [attr-48] if the story uses perfect aspect.
+
+[attr-23]
+A story is [attr-23] if the story is lighthearted.
+
+[attr-29]
+A story is [attr-29] if the story has the theme Deception.
+
+[attr-35]
+A story is [attr-35] if the story has the theme Kindness.
+
+[attr-50]
+A story is [attr-50] if the story uses wh-questions.
+
+[attr-42]
+A story is [attr-42] if the story is about lost civilizations.
+
+[attr-46]
+A story is [attr-46] if the story is about time travel.
+
+[attr-6]
+A story is [attr-6] if the story has Checkhov's gun.
+
+[attr-4]
+A story is [attr-4] if the story has a moral lesson.
+
+[attr-31]
+A story is [attr-31] if the story has the theme Hardship.
+
+[attr-11]
+A story is [attr-11] if the story has more than 375 words.
+
+[attr-45]
+A story is [attr-45] if the story is about seasonal changes.
+
+[attr-2]
+A story is [attr-2] if the story has a cliffhanger.
+
+[attr-37]
+A story is [attr-37] if the story has the theme Problem-Solving.
+
+[attr-34]
+A story is [attr-34] if the story has the theme Innovation.
+
+[attr-36]
+A story is [attr-36] if the story has the theme Magic.
+
+[attr-7]
+A story is [attr-7] if the story has circular narrative structure.
+
+[attr-41]
+A story is [attr-41] if the story is about giant creatures.
+
+[attr-47]
+A story is [attr-47] if the story uses discourse markers.
+
+[attr-26]
+A story is [attr-26] if the story is philosophical.
+
+[attr-19]
+A story is [attr-19] if the story starts with an adverb.
+
+[attr-40]
+A story is [attr-40] if the story is about cultural traditions.
+
+[attr-3]
+A story is [attr-3] if the story has a flashback.
+
+[attr-8]
+A story is [attr-8] if the story has readability score above 96.1.
+
+[attr-24]
+A story is [attr-24] if the story is minimalist.
+
+[attr-49]
+A story is [attr-49] if the story uses superlative forms.
+
+[attr-43]
+A story is [attr-43] if the story is about magical lands.
+
+[attr-5]
+A story is [attr-5] if the story has a story within a story.
+
+[attr-27]
+A story is [attr-27] if the story is surreal.
+
+[attr-20]
+A story is [attr-20] if the story starts with a noun.
+
+[attr-39]
+A story is [attr-39] if the story is about bygone eras.
+
+[attr-12]
+A story is [attr-12] if the story has readability score below 86.4.
+
+[attr-33]
+A story is [attr-33] if the story has the theme Humor.
+
+[attr-44]
+A story is [attr-44] if the story is about mystical creatures.
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- The story is [attr-22]
+- The story is [attr-23]
+
+[attr-14]
+A story is [attr-14] if either of the following is true:
+- The story is [attr-25]
+- both of the following are true:
+  - The story is [attr-26]
+  - The story is [attr-27]
+
+[attr-18]
+A story is [attr-18] if exactly one of the following is true:
+- The story is [attr-8]
+- The story is [attr-12]
+
+[attr-16]
+A story is [attr-16] if all of the following are true:
+- The story is [attr-5]
+- The story is [attr-3]
+- The story is [attr-7]
+
+[attr-28]
+A story is [attr-28] if both of the following are true:
+- The story is [attr-32]
+- The story is [attr-35]
+
+[attr-13]
+A story is [attr-13] if both of the following are true:
+- The story is [attr-43]
+- either of the following is true:
+  - The story is [attr-44]
+  - The story is [attr-41]
+
+[attr-38]
+A story is [attr-38] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-46]
+  - The story is [attr-42]
+- The story is [attr-39]
+
+[attr-15]
+A story is [attr-15] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-35]
+- The story is not [attr-29]
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- The story is [attr-34]
+- The story is [attr-37]
+
+[attr-17]
+A story is [attr-17] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-2]
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- all of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-15]
+  - either of the following is true:
+    - The story is [attr-16]
+    - The story is [attr-17]
+- exactly one of the following is true:
+  - both of the following are true:
+    - The story is [attr-13]
+    - The story is not [attr-24]
+  - The story is [attr-38]

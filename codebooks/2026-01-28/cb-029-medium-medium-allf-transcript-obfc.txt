@@ -1,0 +1,86 @@
+Interviewer: Let's go through this codebook together. Can you tell me what each node means, one by one?
+
+Expert: Sure — I'll read each definition and explain it like we're annotators checking a story. I'll keep the exact node IDs and logical structures as written.
+
+Interviewer: Great. Start with the simple labels.
+
+Expert:
+- Question: What does [attr-8] mean?
+  - Answer: A story is [attr-8] if the story is philosophical.
+
+- Question: What does [attr-2] mean?
+  - Answer: A story is [attr-2] if the story has a story within a story.
+
+- Question: What does [attr-12] mean?
+  - Answer: A story is [attr-12] if the story uses conditional mood.
+
+- Question: What does [attr-3] mean?
+  - Answer: A story is [attr-3] if the story has circular narrative structure.
+
+- Question: What does [attr-10] mean?
+  - Answer: A story is [attr-10] if the story is about cultural traditions.
+
+- Question: What does [attr-7] mean?
+  - Answer: A story is [attr-7] if the story has fewer than 160 words.
+
+- Question: What does [attr-11] mean?
+  - Answer: A story is [attr-11] if the story is about seasonal changes.
+
+- Question: What does [attr-5] mean?
+  - Answer: A story is [attr-5] if the story has readability score below 86.4.
+
+Interviewer: Okay, those are the atomic definitions. What about the composite nodes that combine conditions?
+
+Expert:
+- Question: How is [attr-4] defined?
+  - Answer: A story is [attr-4] if both of the following are true:
+    - The story is [attr-2]
+    - The story is [attr-12]
+
+Interviewer: So [attr-4] requires both a nested story and conditional mood. What about the more complex XOR-style node?
+
+Expert:
+- Question: How is [attr-6] defined?
+  - Answer: A story is [attr-6] if both of the following are true:
+    - Exactly one of the following is true:
+      - The story is [attr-8]
+      - The story is [attr-3]
+    - The truth value of the following are equal:
+      - [attr-7]
+      - [attr-5]
+
+Interviewer: Let me check I understand: [attr-6] demands that either the story is philosophical or circular (but not both), and separately that the two boolean values [attr-7] and [attr-5] match (both true or both false). Correct?
+
+Expert: Exactly — that's the intended logic.
+
+Interviewer: What's [attr-9]?
+
+Expert:
+- Question: How is [attr-9] defined?
+  - Answer: A story is [attr-9] if the story's topic is in the set:
+    - [attr-10]
+    - [attr-11]
+
+Interviewer: So [attr-9] just means the topic is one of those two topic nodes.
+
+Expert: Right.
+
+Interviewer: Finally, the most composite node: [attr-1]. Walk me through it.
+
+Expert:
+- Question: How is [attr-1] defined?
+  - Answer: A story is [attr-1] if all of the following are true:
+    - Either of the following is true:
+      - The story is [attr-4]
+      - The story is [attr-6]
+    - Both of the following are true:
+      - The story is [attr-9]
+      - The story is not [attr-7]
+
+Interviewer: So to tag something as [attr-1], it must (1) satisfy one of the two higher-level conditions ([attr-4] or [attr-6]) and (2) be thematically in the allowed set and not be a short story. Clear.
+
+Expert: Yes. That keeps the logical relationships intact: combinations, exclusive-or, equality of truth values, membership in a small topic set, and a negation on [attr-7]. All node IDs and logical operators are preserved as in the original codebook.
+
+Interviewer: Thanks — that makes the structure both clear and easy to apply when annotating.
+
+Expert: You're welcome. If you want, we can run through an example story and annotate it step by step using these definitions.

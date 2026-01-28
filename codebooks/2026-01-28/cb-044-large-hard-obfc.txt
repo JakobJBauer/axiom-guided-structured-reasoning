@@ -1,0 +1,116 @@
+[attr-6]
+A story is [attr-6] if the story has juxtaposition
+
+[attr-16]
+A story is [attr-16] if the story is philosophical
+
+[attr-18]
+A story is [attr-18] if the story has the theme Hardship
+
+[attr-20]
+A story is [attr-20] if the story has the theme Humor
+
+[attr-23]
+A story is [attr-23] if the story is about the arts
+
+[attr-5]
+A story is [attr-5] if the story has circular narrative structure
+
+[attr-17]
+A story is [attr-17] if the story has the theme Deception
+
+[attr-19]
+A story is [attr-19] if the story has the theme Helping Others
+
+[attr-4]
+A story is [attr-4] if the story has a moral lesson
+
+[attr-13]
+A story is [attr-13] if the story is humorous
+
+[attr-15]
+A story is [attr-15] if the story is minimalist
+
+[attr-22]
+A story is [attr-22] if the story is about giant creatures
+
+[attr-14]
+A story is [attr-14] if the story is lighthearted
+
+[attr-24]
+A story is [attr-24] if the story is about time travel
+
+[attr-12]
+A story is [attr-12] if the story starts with a preposition
+
+[attr-11]
+A story is [attr-11] if the story has fewer than 160 words
+
+[attr-25]
+A story is [attr-25] if the story uses superlative forms
+
+[attr-21]
+A story is [attr-21] if the story has the theme Kindness
+
+[attr-7]
+A story is [attr-7] if the story has readability score above 96.1
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- The story is [attr-6]
+- Either of the following is true:
+  - The story is [attr-12]
+  - The story is [attr-11]
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- The story is [attr-9]
+- Exactly one of the following is true:
+  - The story is [attr-25]
+  - The story is [attr-15]
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-23]
+- Either of the following is true:
+  - The story is [attr-16]
+  - The story is [attr-10]
+
+[attr-8]
+A story is [attr-8] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-20]
+  - The story is [attr-13]
+- All of the following are true:
+  - The story is not [attr-15]
+  - Exactly one of the following is true:
+    - The story is [attr-14]
+    - The story is [attr-25]
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-4]
+  - Either of the following is true:
+    - The story is [attr-19]
+    - The story is [attr-21]
+- Exactly one of the following is true:
+  - The story is [attr-17]
+  - The story is [attr-18]
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-2]
+    - The story is [attr-1]
+  - Exactly one of the following is true:
+    - The story is [attr-8]
+    - The story is [attr-22]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-24]
+    - The story is [attr-5]
+  - Both of the following are true:
+    - The story is [attr-11]
+    - The story is [attr-7]

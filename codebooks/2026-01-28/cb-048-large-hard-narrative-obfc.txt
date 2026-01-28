@@ -1,0 +1,131 @@
+Step into a library of stories where each shelf bears a single, precise label. I’ll walk you through these labels as if we were tracing the fingerprints of a tale—some simple, some woven with rules that latch together like gears. After a small flourish, I’ll show the exact rule that names each label so you can use them without doubt.
+
+[attr-20]
+A story wears the [attr-20] tag when its heartbeat is a jump through the ages—when time travel is the axis around which the plot turns.
+A story is [attr-20] if The story is about time travel.
+
+[attr-8]
+Imagine opening a book and being greeted by a single word that colours everything that follows; that first word is an adjective, and the tale gets the [attr-8] label.
+A story is [attr-8] if The story starts with a adjective.
+
+[attr-21]
+Some narrators carry the story in the past’s completed echoes—verbs that speak of actions already finished. When they do, the story receives [attr-21].
+A story is [attr-21] if The story uses perfect aspect.
+
+[attr-13]
+When a story wears the dress of the present age—tones, references, or sensibilities of our time—it earns the [attr-13] mark.
+A story is [attr-13] if The story is modern.
+
+[attr-6]
+Not every tale is an open gate; some are intricate enough to score below a readability threshold and thus carry the [attr-6] sign.
+A story is [attr-6] if The story has readability score below 86.4.
+
+[attr-19]
+There are stories that breathe paint, music, theatre, and craft—these belong to the [attr-19] shelf.
+A story is [attr-19] if The story is about the arts.
+
+[attr-5]
+Some narratives trace a circle, returning to where they began—those are the tales stamped with [attr-5].
+A story is [attr-5] if The story has circular narrative structure.
+
+[attr-16]
+Stories that carry the rituals, customs, and inherited practices of people receive the [attr-16] label.
+A story is [attr-16] if The story is about cultural traditions.
+
+[attr-4]
+When memory becomes a scene and the present steps aside to show the past, the tale is marked [attr-4].
+A story is [attr-4] if The story has a flashback.
+
+[attr-11]
+If a story’s tone leans toward laughter, wit, or comedic timing, it earns the [attr-11] badge.
+A story is [attr-11] if The story is humorous.
+
+[attr-17]
+There are stories that open doors to kingdoms made of wonder—maps to those realms get the [attr-17] label.
+A story is [attr-17] if The story is about magical lands.
+
+[attr-12]
+Some tales float like a kite—gentle, breezy, and pleasantly undemanding; those are [attr-12].
+A story is [attr-12] if The story is lighthearted.
+
+[attr-18]
+Creatures of myth and marvel populate certain stories; those are placed under [attr-18].
+A story is [attr-18] if The story is about mystical creatures.
+
+[attr-15]
+When a story’s engine is a puzzle or a challenge and the characters grind toward a solution, the theme is [attr-15].
+A story is [attr-15] if The story has the theme Problem-Solving.
+
+[attr-7]
+Think of a pattern that demands two things: the tale must loop back on itself, and it must either open a window into its past or refuse the ornament of an opening adjective. When those pieces click together, the story is granted the name [attr-7].
+A story is [attr-7] if both of the following are true:
+- The story is [attr-5]
+- Either of the following is true:
+  - The story is [attr-4]
+  - The story is not [attr-8]
+
+[attr-10]
+Now imagine a scale where tone and style balance: the story must be one-and-only-one between humorous and lighthearted, and it must either belong to the modern world or be easy enough to read (not low in readability). When those checks pass, it carries the [attr-10] sign.
+A story is [attr-10] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-12]
+- Either of the following is true:
+  - The story is [attr-13]
+  - The story is not [attr-6]
+
+[attr-1]
+Picture an intersection where art, tradition, and the drive to solve a problem meet. A story can be labeled [attr-1] either when all three—arts, cultural traditions, and problem-solving—stand together, or when cultural traditions anchor the story and exactly one of the pair (arts or problem-solving) joins them.
+A story is [attr-1] if either of the following is true:
+- All of the following are true:
+  - The story is [attr-19]
+  - The story is [attr-16]
+  - The story is [attr-15]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [attr-19]
+    - The story is [attr-15]
+  - The story is [attr-16]
+
+[attr-3]
+Some tales sit at a hinge of fantasy: they must belong to exactly one of two enchanted families—either magical lands or mystical creatures—and then either time travel appears in the plot or the tale refuses the modern label. That precise combination names the [attr-3].
+A story is [attr-3] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [attr-17]
+  - The story is [attr-18]
+- Either of the following is true:
+  - The story is [attr-20]
+  - The story is not [attr-13]
+
+[attr-2]
+Here the gears mesh: a story must be [attr-7] and then either pair [attr-10] with the absence of [attr-3], or it must combine [attr-1] with [attr-3]. Together, these give us [attr-2].
+A story is [attr-2] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-10]
+    - The story is not [attr-3]
+  - Both of the following are true:
+    - The story is [attr-1]
+    - The story is [attr-3]
+
+[attr-14]
+At the heart of a particular configuration is [attr-14]. It requires the story to be a [attr-2], to be either an arts-tradition-problem tale or a fantasy-core tale, and to have its [attr-10] specifically set to humorous.
+A story is [attr-14] if all of the following are true:
+- The story is [attr-2]
+- The story is [attr-1] or the story is [attr-3]
+- The story is [attr-10] equals [attr-11]
+
+[attr-9]
+Finally, imagine the grand label that names a story’s archetype. It arrives by several possible roads: one route asks that [attr-14] accompanies a self-reference to [attr-2]; another allows a tale to be [attr-3] but not an arts-tradition-problem; and yet another accepts an arts-tradition-problem tale that then meets exactly one of two qualities—either it satisfies [attr-10] or it fits [attr-7]. Any of these paths will crown the story as a [attr-9].
+A story is [attr-9] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-14]
+  - The story is [attr-2] in [COMPLEX-PATTERN, SYNDIC-CONJUNCTION, FANTASY-CORE]
+- Either of the following is true:
+  - The story is [attr-3] and the story is not [attr-1]
+  - The story is [attr-1] and exactly one of the following is true:
+    - The story is [attr-10]
+    - The story is [attr-7]
+
+There—the labels stand like constellations. Each one is described with a storyteller’s touch and the exact rule you need to apply when you’re tagging, annotating, or reasoning about a tale. If you want, we can walk through examples and watch these labels spark to life on particular stories.

@@ -1,0 +1,38 @@
+Interviewer: Let's go through the codebook step by step. First, what does [attr-6] mean?
+
+Expert: Simple question. A story is [attr-6] if the story uses superlative forms.
+
+Interviewer: Got it. Next one: what is [attr-5]?
+
+Expert: A story is [attr-5] if the story is about lost civilizations.
+
+Interviewer: And [attr-3]?
+
+Expert: A story is [attr-3] if the story starts with a noun.
+
+Interviewer: How about [attr-4]?
+
+Expert: A story is [attr-4] if the story has the theme Humor.
+
+Interviewer: Now the first composite category: [attr-1]. How should I interpret that?
+
+Expert: Think of it as a checklist. A story is [attr-1] if all of the following are true:
+- The story is [attr-3]
+- The story is [attr-4]
+- The story is not [attr-6]
+
+Interviewer: So all three must hold — it must start with a noun, be humorous, and explicitly not use superlatives. Correct?
+
+Expert: Exactly. All three conditions must be true for [attr-1] to apply.
+
+Interviewer: Finally, tell me about [attr-2].
+
+Expert: [attr-2] requires two things to be true together:
+- The story is [attr-5]
+- Exactly one of the following is true:
+  - The story is [attr-1]
+  - The story is [attr-6]
+
+Interviewer: Let me restate that to be sure I understand: for [attr-2], the story must be about lost civilizations, and between [attr-1] and [attr-6] exactly one must hold — not both and not neither.
+
+Expert: Correct. The second bullet enforces that exclusive choice: exactly one of those two must be true, while [attr-5] must also be true.

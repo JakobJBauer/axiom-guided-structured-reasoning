@@ -1,0 +1,94 @@
+Codebook — structured, clear, and ready for annotation
+
+Purpose: Each entry below defines a node by its ID (in [attr-1] form) and gives the exact, structured logical criteria you should use when labeling a story. Logical operations and all node IDs are preserved exactly as in the original codebook.
+
+Atomic labels (base predicates)
+- [attr-11]
+  - Definition: A story is [attr-11] if:
+    - The story has the theme Deception.
+
+- [attr-12]
+  - Definition: A story is [attr-12] if:
+    - The story has the theme Helping Others.
+
+- [attr-9]
+  - Definition: A story is [attr-9] if:
+    - The story is philosophical.
+
+- [attr-3]
+  - Definition: A story is [attr-3] if:
+    - The story has Checkhov's gun.
+
+- [attr-7]
+  - Definition: A story is [attr-7] if:
+    - The story starts with a noun.
+
+- [attr-13]
+  - Definition: A story is [attr-13] if:
+    - The story is about hidden treasures.
+
+- [attr-10]
+  - Definition: A story is [attr-10] if:
+    - The story has the theme Agency.
+
+- [attr-6]
+  - Definition: A story is [attr-6] if:
+    - The story starts with a adjective.
+
+- [attr-4]
+  - Definition: A story is [attr-4] if:
+    - The story has juxtaposition.
+
+Derived labels (composite logical conditions)
+- [attr-5]
+  - Definition: A story is [attr-5] if either of the following is true:
+    - The story is [attr-7]
+    - The story is [attr-6] xor [attr-7]
+  - Notes:
+    - Treat this node as true when either the simpler start-with-noun condition holds, or when an exclusive choice between starting with an adjective and starting with a noun applies.
+
+- [attr-8]
+  - Definition: A story is [attr-8] if both of the following are true:
+    1. The story is [attr-5]
+    2. Either of the following is true:
+       - Both of the following are true:
+         - The story is [attr-11]
+         - The story is [attr-13]
+       - Either of the following is true:
+         - The story is [attr-3] xor [attr-10]
+         - The story is [attr-11] and not [attr-10]
+  - Structure recap:
+    - First require [attr-5].
+    - Then satisfy one of two branches:
+      - Branch A: both deception theme and hidden-treasures topic; OR
+      - Branch B: either (Checkhov's gun xor Agency) OR (Deception and not Agency).
+
+- [attr-2]
+  - Definition: A story is [attr-2] if all of the following are true:
+    1. The story is [attr-8]
+    2. Not both of the following are true:
+       - The story is [attr-12]
+       - The story is [attr-9]
+    3. Either of the following is true:
+       - The story is [attr-4]
+       - Both of the following are true:
+         - The story is [attr-7] equals true
+         - The story is [attr-6] equals false
+  - Interpretation hints:
+    - [attr-2] demands a prior [attr-8] foundation.
+    - It excludes the simultaneous presence of Helping Others and Philosophical style.
+    - It requires either juxtaposition or a precise opening pattern (explicit equality conditions on start-with flags).
+
+Annotation checklist (practical workflow)
+- Step 1: Evaluate atomic predicates (the basic nodes).
+- Step 2: Evaluate [attr-5] using its two alternatives (observe xor where stated).
+- Step 3: Evaluate [attr-8] by:
+  - Confirming [attr-5], then
+  - Checking the two main branches (both-deception+hidden-treasures OR the sub-branch with xor/and-not).
+- Step 4: Evaluate [attr-2] by:
+  - Confirming [attr-8],
+  - Ensuring not both Helping-Others and Philosophical hold,
+  - Confirming either juxtaposition OR the exact start-with conditions.
+- Always preserve logical operators exactly as listed (xor, and not, equals true/false, Not both, Both, Either).
+
+End of codebook — use this structured view to make consistent, principled annotations while maintaining the original logical relationships and node IDs.

@@ -1,0 +1,27 @@
+[attr-5]
+There are stories that wear their compassion like a banner — tales where the characters turn toward others and the narrative is swept along by generosity. 
+A story is [attr-5] if
+The story has the theme Helping Others.
+
+[attr-2]
+Imagine the protagonist stepping into the scene with hands ready to fix what’s broken or a heart open to give. That central deed — the pivot of the plot — tells you whether the tale is built around active help.
+A story is [attr-2] if either of the following is true:
+- The protagonist's central action is in the set {aid, rescue}
+- The protagonist's central action is in the set {donate, teach}
+
+[attr-3]
+Sometimes a helpful gesture is a mask for something else — the glint of self-interest behind a smile.
+A story is [attr-3] if
+- The protagonist's motive is equal to "personal gain"
+
+[attr-4]
+Now picture an arc that shines because the lead chooses to help for the sake of others, not for a reward. That arc needs two things to hold true together: the act of help, and the absence of selfish motive.
+A story is [attr-4] if both of the following are true:
+- The story is [attr-2]
+- The story is not [attr-3]
+
+[attr-1]
+Finally, there are moments that feel altruistic — but that feeling can come from one of two sources, and only one may be present at a time for the label to fit. The story is marked as [attr-1] when exactly one of these guiding lights shines.
+A story is [attr-1] if exactly one of the following is true:
+- The story is [attr-5]
+- The story is [attr-4]

@@ -1,0 +1,78 @@
+Codebook — Structured View
+
+Overview
+- Purpose: Present each labeling rule clearly and hierarchically so annotators can reason about labels step by step.
+- Note: All node IDs are shown exactly in [attr-1] format and logical constructions (Not, And, Or, Exactly one, Both, Either) are preserved verbatim.
+
+Atomic (single-condition) labels
+- [attr-10]
+  - Definition: A story is [attr-10] if The story has the theme Humor
+
+- [attr-12]
+  - Definition: A story is [attr-12] if The story is about lost civilizations
+
+- [attr-8]
+  - Definition: A story is [attr-8] if The story is playful
+
+- [attr-9]
+  - Definition: A story is [attr-9] if The story is surreal
+
+- [attr-13]
+  - Definition: A story is [attr-13] if The story uses discourse markers
+
+- [attr-3]
+  - Definition: A story is [attr-3] if The story has readability score below 86.4
+
+- [attr-6]
+  - Definition: A story is [attr-6] if The story is classic
+
+- [attr-7]
+  - Definition: A story is [attr-7] if The story is philosophical
+
+- [attr-2]
+  - Definition: A story is [attr-2] if The story has a cliffhanger
+
+- [attr-5]
+  - Definition: A story is [attr-5] if The story starts with a preposition
+
+Composite labels (logical combinations)
+- [attr-11]
+  - Primary statement: A story is [attr-11] if either of the following is true:
+    - Exactly one of the following is true:
+      - The story is [attr-8]
+      - The story is [attr-7]
+    - Both of the following are true:
+      - The story is [attr-9]
+      - The story is not [attr-6]
+  - How to evaluate:
+    - First check exclusive choice: is exactly one of [attr-8] or [attr-7] present?
+    - If not, check the conjunction: is the story [attr-9] and at the same time not [attr-6]?
+    - If either block is satisfied, label [attr-11].
+
+- [attr-4]
+  - Primary statement: A story is [attr-4] if both of the following are true:
+    - The story is in the following set:
+      - [attr-10]
+      - [attr-12]
+    - Either of the following is true:
+      - The story is [attr-2]
+      - Both of the following are true:
+        - The story is equal to [attr-10]
+        - The story is not [attr-3]
+    - Or the story is [attr-11]
+  - How to evaluate (stepwise):
+    - Step 1 (required): Confirm the story belongs to the set listed (either [attr-10] or [attr-12]).
+    - Step 2 (required): Verify that at least one of the following holds:
+      - The story is [attr-2], or
+      - Both of: the story is equal to [attr-10] and the story is not [attr-3], or
+      - The story is [attr-11].
+    - If both Step 1 and Step 2 are true, assign [attr-4].
+
+Quick reference / decision hints
+- Treat each atomic label as a single, directly observable property.
+- For [attr-11], remember the “either” structure: it accepts either an exclusive playful/philosophical signal, or a surreal-but-not-classic combination.
+- For [attr-4], both the set-membership condition and the secondary condition must hold; the secondary condition itself allows multiple alternative paths (cliffhanger; humor with acceptable readability; or tone mix).
+
+End notes
+- No node IDs or logical relationships have been changed.
+- The structure is intended to guide annotators through a clear evaluation order: check atomic labels first, then composite rules using the preserved logical operators.

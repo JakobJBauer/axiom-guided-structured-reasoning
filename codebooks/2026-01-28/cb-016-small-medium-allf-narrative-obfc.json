@@ -1,0 +1,122 @@
+{
+  "nodes": [
+    {
+      "id": "attr-5",
+      "label": "Helping Others (attr-5)",
+      "formula_type": "In",
+      "formula_args": [
+        "story-theme",
+        [
+          "helping others"
+        ]
+      ]
+    },
+    {
+      "id": "story-theme",
+      "label": "Story Theme (leaf)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "Active Help (attr-2)",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "In",
+          "formula_args": [
+            "protagonist-central-action",
+            [
+              "aid",
+              "rescue"
+            ]
+          ]
+        },
+        {
+          "formula_type": "In",
+          "formula_args": [
+            "protagonist-central-action",
+            [
+              "donate",
+              "teach"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "protagonist-central-action",
+      "label": "Protagonist Central Action (leaf)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Selfish Motive (attr-3)",
+      "formula_type": "Equal",
+      "formula_args": [
+        "protagonist-motive",
+        "personal gain"
+      ]
+    },
+    {
+      "id": "protagonist-motive",
+      "label": "Protagonist Motive (leaf)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Altruistic Act (attr-4)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-2",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Exactly One Source of Altruism (attr-1)",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-5",
+        "attr-4"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "story-theme",
+      "target": "attr-5"
+    },
+    {
+      "source": "protagonist-central-action",
+      "target": "attr-2"
+    },
+    {
+      "source": "protagonist-motive",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+[attr-6]
+A story is [attr-6] if the story is playful
+
+[attr-5]
+A story is [attr-5] if the story is modern
+
+[attr-4]
+A story is [attr-4] if the story starts with a adjective
+
+[attr-7]
+A story is [attr-7] if the story uses discourse markers
+
+[attr-2]
+A story is [attr-2] if the story has Checkhov's gun
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is either [attr-6] or [attr-7]
+- The story is [attr-2]

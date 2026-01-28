@@ -1,0 +1,115 @@
+Imagine a catalog of tales where every label tells a small truth about the story it marks. In this book of signs, each tag is a lantern, and its flame lights up when a story meets the conditions written beside it.
+
+[attr-19]
+A story is [attr-19] if The story has the theme Innovation.
+
+[attr-20]
+A story is [attr-20] if The story has the theme Magic.
+
+[attr-4]
+A story is [attr-4] if The story has Checkhov's gun.
+
+[attr-10]
+A story is [attr-10] if The story starts with a adverb.
+
+[attr-18]
+A story is [attr-18] if The story has the theme Helping Others.
+
+[attr-14]
+A story is [attr-14] if The story is philosophical.
+
+[attr-11]
+A story is [attr-11] if The story starts with a noun.
+
+[attr-21]
+A story is [attr-21] if The story is about hidden treasures.
+
+[attr-17]
+A story is [attr-17] if The story has the theme Growth.
+
+[attr-2]
+A story is [attr-2] if The story has a cliffhanger.
+
+[attr-13]
+A story is [attr-13] if The story is minimalist.
+
+[attr-24]
+A story is [attr-24] if The story uses conditional mood.
+
+[attr-23]
+A story is [attr-23] if The story is about seasonal changes.
+
+[attr-22]
+A story is [attr-22] if The story is about mystical creatures.
+
+[attr-3]
+A story is [attr-3] if The story has a story within a story.
+
+[attr-5]
+A story is [attr-5] if The story has more than 6 paragraphs.
+
+[attr-16]
+A story is [attr-16] if The story has the theme Agency.
+
+[attr-9]
+A story is [attr-9] if [attr-5] equals true.
+
+[attr-12]
+Like a doorway that requires two locks, a story becomes [attr-12] only when both precautions are met:
+- exactly one of the following is true:
+  - The story is [attr-10]
+  - The story is [attr-11]
+- The story is in [STYLE-PHILOSOPHICAL, STYLE-MINIMALIST]
+
+[attr-7]
+Think of [attr-7] as the fog that gathers when certain echoes align. The tale is so labeled if either path appears:
+- both of the following are true:
+  - The story is [attr-21]
+  - The story is [attr-22]
+- exactly one of the following is true:
+  - The story is [attr-21]
+  - The story is [attr-23]
+
+[attr-6]
+[attr-6] is the tightrope a reader walks when ethics tug at plot. A story wears this tag if either of these situations holds:
+- The story is [attr-18]
+- both of the following are true:
+  - exactly one of the following is true:
+    - The story is [attr-17]
+    - The story is [attr-16]
+  - The story is not [attr-13]
+
+[attr-15]
+At the heart of our map is [attr-15]. A story claims this center when both conditions align:
+- The story is [attr-19]
+- either of the following is true:
+  - The story is [attr-6]
+  - both of the following are true:
+    - The story is [attr-20]
+    - The story is [attr-24]
+
+[attr-8]
+Narrative gears and tricks are gathered under [attr-8]. A story is so named if both teeth mesh:
+- either of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-2]
+- either of the following is true:
+  - The story is [attr-3]
+  - The story is not [attr-4]
+
+[attr-1]
+Finally, the rare [attr-1] is a constellation formed only when its stars are in precise alignment. A story is [attr-1] if both of the following are true:
+- The story is [attr-15]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [attr-12]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [attr-8]
+        - The story is [attr-9]
+      - The story is [attr-7]
+  - both of the following are true:
+    - The story is [attr-8]
+    - The story is not [attr-13]
+
+Read this as a map where every node is a checkpoint and every condition a checkpoint’s key. Keep the keys and locks unchanged; follow them, and the classification will reveal the story’s true shape.

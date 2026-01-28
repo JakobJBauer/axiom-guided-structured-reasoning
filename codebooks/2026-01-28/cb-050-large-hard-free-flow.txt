@@ -1,0 +1,131 @@
+Think of this as a friendly guide to the tags and how we decide when a story gets one of them. I’ll keep the exact logical rules as written — the node IDs and their relationships remain untouched — but explain them in a more conversational, flowing way so they’re easier to read and use.
+
+[HAS-A-RED-HERRING]
+Call a story [HAS-A-RED-HERRING] when, simply put, the story contains a Red Herring.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if it runs longer than six paragraphs.
+
+[STYLE-LIGHTHEARTED]
+Tag a story as [STYLE-LIGHTHEARTED] when its tone is lighthearted.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if it features Chekhov’s gun — that telling detail that turns out to matter later.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] when Magic is one of its themes.
+
+[TOPIC-THE-ARTS]
+Use [TOPIC-THE-ARTS] for stories that are about the arts.
+
+[USES-PERFECT-ASPECT]
+Label a story [USES-PERFECT-ASPECT] when it makes use of the perfect aspect in its verb forms.
+
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if Innovation is a theme in the story.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] when Growth is one of its themes.
+
+[STYLE-CLASSIC]
+Call a story [STYLE-CLASSIC] if it reads as classic in style.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if its opening begins with a preposition.
+
+[TOPIC-CULTURAL-TRADITIONS]
+Use [TOPIC-CULTURAL-TRADITIONS] when the story is about cultural traditions.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if it concerns lost civilizations.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if Deception is a theme that runs through it.
+
+[USES-WH-QUESTIONS]
+Tag a story [USES-WH-QUESTIONS] if it includes wh-questions (who, what, where, when, why, how).
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] when it’s about bygone eras.
+
+[STARTS-WITH-ADJECTIVE]
+Mark a story as [STARTS-WITH-ADJECTIVE] if the first word is an adjective.
+
+[NARRATIVE-SURPRISE]
+Think of [NARRATIVE-SURPRISE] as the tag for stories that combine certain twisty elements. A story is [NARRATIVE-SURPRISE] if both of the following are true:
+- Either of the following is true:
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [HAS-CHECKHOVS-GUN]
+- Either of the following is true:
+  - Exactly one of [THEME-DECEPTION] and [USES-WH-QUESTIONS] is true
+  - The story is [MANY-PARAGRAPHS]
+
+So you need one of the trick items (red herring or Chekhov’s gun) plus either an exclusive choice between deception and wh-questions or a long form (many paragraphs).
+
+[RICH-LENGTH]
+A story is [RICH-LENGTH] when both of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- The story is [USES-PERFECT-ASPECT]
+
+That is, a long piece that also uses the perfect aspect.
+
+[CLASSIC-VS-MODERN]
+Use [CLASSIC-VS-MODERN] for stories that fit this mix: all of the following must hold:
+- Exactly one of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [STYLE-MODERN]
+- The story is not [STYLE-LIGHTHEARTED]
+- Either of the following is true:
+  - The story is [STARTS-WITH-PREPOSITION]
+  - The story is [STARTS-WITH-ADJECTIVE]
+
+So it’s either classic or modern (but not both), not lighthearted, and it opens with either a preposition or an adjective.
+
+[CULTURAL-PAST-THEME]
+A story is [CULTURAL-PAST-THEME] if either of these two paths holds:
+- Both of the following are true:
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+  - The story is [TOPIC-BYGONE-ERAS]
+- Both of the following are true:
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+  - Exactly one of [THEME-GROWTH] and [THEME-DECEPTION] is true
+
+So it’s about cultural or historical subjects — either traditions plus bygone eras, or lost civilizations with an exclusive tilt toward growth or deception.
+
+[INNOVATION-GROWTH-MIX]
+A story is [INNOVATION-GROWTH-MIX] if either of the following holds:
+- Both of the following are true:
+  - The story is [THEME-INNOVATION]
+  - The story is [THEME-GROWTH]
+- All of the following are true:
+  - The story is [THEME-INNOVATION]
+  - The story is [TOPIC-THE-ARTS]
+  - The story is not [THEME-GROWTH]
+
+So it’s about innovation and growth together, or innovation focused on the arts without growth.
+
+[ARTS-ROOT]
+A story is [ARTS-ROOT] when both of the following are true:
+- The story is [TOPIC-THE-ARTS]
+- Either of the following is true:
+  - The story is [INNOVATION-GROWTH-MIX]
+  - The story is [CULTURAL-PAST-THEME]
+
+In short: it’s an arts story that ties into either the innovation-growth mix or cultural/past themes.
+
+[EPIC-ARTS-MYSTERY]
+Finally, a story is [EPIC-ARTS-MYSTERY] if both of the following are true:
+- Either of the following is true:
+  - The story is [ARTS-ROOT]
+  - Both of the following are true:
+    - The story is [NARRATIVE-SURPRISE]
+    - The story is [RICH-LENGTH]
+- Either of the following is true:
+  - The story is [CLASSIC-VS-MODERN]
+  - Both of the following are true:
+    - The story is [CULTURAL-PAST-THEME]
+    - The story is [INNOVATION-GROWTH-MIX]
+
+So to earn [EPIC-ARTS-MYSTERY], the story must meet one of two high-level paths: be rooted in the arts (directly) or pair narrative surprise with rich length — and additionally either fit the classic-vs-modern constraints or combine cultural-past themes with the innovation-growth mix.
+
+That’s the whole map, laid out plainly: the same logical backbone, but phrased so you can read it like a conversation about what each tag really means.

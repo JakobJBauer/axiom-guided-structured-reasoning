@@ -1,0 +1,91 @@
+{
+  "nodes": [
+    {
+      "id": "attr-7",
+      "label": "uses perfect aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "about cultural traditions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "about the arts",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "arts and traditions",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-6",
+        "attr-5"
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "nostalgic artistic reflection",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-1",
+        "attr-7",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "celebratory traditional arts",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-1",
+        "attr-4"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-6",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    }
+  ]
+}

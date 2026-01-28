@@ -1,0 +1,23 @@
+[attr-2]
+A story is [attr-2] if The story has a flashback
+
+[attr-6]
+A story is [attr-6] if The story uses wh-questions
+
+[attr-5]
+A story is [attr-5] if The story uses discourse markers
+
+[attr-3]
+A story is [attr-3] if exactly one of the following is true:
+- The story is [attr-6]
+- The story is [attr-5]
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-2]
+- The story is not [attr-3]
+
+[attr-4]
+A story is [attr-4] if either of the following is true:
+- The story is in the set { [attr-3], [attr-1] }
+- The story is equal to [attr-2]

@@ -1,0 +1,62 @@
+Imagine a quiet archive where each tag lives like a character waiting to be woven into a tale. I’ll take you through that collection, introducing each label and then showing how some of them join forces to form larger, purposeful classifications. The phrasing that follows is precise—these are rules the archive obeys—so listen to the story they tell, exactly as written.
+
+[attr-10]
+A story is [attr-10] if the story is philosophical.
+
+[attr-12]
+A story is [attr-12] if the story is about the arts.
+
+[attr-3]
+A story is [attr-3] if the story has a flashback.
+
+[attr-6]
+A story is [attr-6] if the story has a story within a story.
+
+[attr-11]
+A story is [attr-11] if the story has the theme Deception.
+
+[attr-5]
+A story is [attr-5] if the story has a Red Herring.
+
+[attr-4]
+A story is [attr-4] if the story has a moral lesson.
+
+Now meet the combinations—where characters pair up or form small councils. The rules below tell you exactly which configurations qualify.
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- The story is [attr-10]
+- The story is [attr-12]
+
+Think of [attr-9] as the gallery where philosophy and artistry converse: a story needs both to enter.
+
+[attr-7]
+A story is [attr-7] if either of the following is true:
+- The story is [attr-3]
+- The story is [attr-6]
+
+[attr-7] is the house of mirrors—one mirror (a flashback) or another (a nested story) is enough to bend structure.
+
+[attr-8]
+A story is [attr-8] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-5]
+
+When deception entwines with a red herring, the tale fits neatly into [attr-8].
+
+[attr-2]
+A story is [attr-2] if all of the following are true:
+- The story is [attr-8]
+- The story is [attr-4]
+- The story is not [attr-9]
+
+[attr-2] is a careful recipe: misdirection plus a moral, and yet explicitly not reflective arts—so the reflective, philosophical art angle must be absent.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-2]
+- The story is [attr-7]
+
+Finally, the archive’s most intricate label, [attr-1], is reserved for stories that are both didactic misdirections and possess meta-structural play—where layered form meets moral mischief.
+
+These rules are the map: each bracketed name is a signpost, and each logical phrase is the rule that governs who may wear that sign. Keep them close when annotating—their order and relationships are the backbone of accurate classification.

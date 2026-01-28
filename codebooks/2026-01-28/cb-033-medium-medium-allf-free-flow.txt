@@ -1,0 +1,54 @@
+I’ll smooth this codebook into a natural, free-flow voice while keeping every logical link exactly as it is and leaving all node IDs in their original [BRACKET] form.
+
+[THEME-HUMOR]
+We call a story [THEME-HUMOR] if the story has the theme Humor.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] when it’s about lost civilizations.
+
+[STYLE-PLAYFUL]
+Label a story [STYLE-PLAYFUL] if the story is playful.
+
+[STYLE-SURREAL]
+A story is [STYLE-SURREAL] if the story is surreal.
+
+[USES-DISCOURSE-MARKERS]
+Tag a story [USES-DISCOURSE-MARKERS] when it uses discourse markers.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+[STYLE-CLASSIC]
+Mark a story [STYLE-CLASSIC] if the story is classic.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if the story has a cliffhanger.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+
+[TONE-MIX]
+A story is [TONE-MIX] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [STYLE-PLAYFUL]
+  - The story is [STYLE-PHILOSOPHICAL]
+- Both of the following are true:
+  - The story is [STYLE-SURREAL]
+  - The story is not [STYLE-CLASSIC]
+
+[PRESENTATION-CRITERIA]
+A story is [PRESENTATION-CRITERIA] if both of the following are true:
+- The story is in the following set:
+  - [THEME-HUMOR]
+  - [TOPIC-LOST-CIVILIZATIONS]
+- Either of the following is true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - Both of the following are true:
+    - The story is equal to [THEME-HUMOR]
+    - The story is not [LOW-READABILITY]
+- Or the story is [TONE-MIX]
+
+That’s it — the same logical anatomy, simply spoken: each node remains intact, every logical operator and nesting preserved, and all IDs exactly as originally written.

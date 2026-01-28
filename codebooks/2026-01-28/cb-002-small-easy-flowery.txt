@@ -1,0 +1,28 @@
+In a sunlit alcove of the anthological garden, where catalogues hum like bees and each tag blooms with a meaning, there lives a delicately kept codebook. Think of it as a map drawn in ink and petals, guiding gentle readers and meticulous annotators through the scent-laden paths of story traits. Below, each entry is given in full bloom — an evocative description to delight the mind while keeping every stitch of logic and structure exactly where it must be. Note: the bracketed node identifiers remain faithful and unchanged, like labels nailed to the trunks of enchanted trees.
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if the story is playful — that is, if it wears a jaunty hat of mischief, delights in whimsical turns, and invites the reader to smile as it skips along the page.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if the story is modern — possessing the sensibilities, references, or tonal cadences associated with contemporary life, so that it feels rooted in the present moment.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if the story starts with an adjective — opening its first breath with a descriptive word that colors the very air of the narrative from the outset.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers — employing connective signposts (like "however," "therefore," "meanwhile," and their kin) that guide the reader through transitions and the architecture of argument or narration.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun — that telling detail or planted element which, though seemingly modest at first, is destined to play a necessary role later in the tale.
+
+[MODERN-OPENING]
+A story is [MODERN-OPENING] if both of the following are true:
+- The story is [STYLE-MODERN]
+- The story is [STARTS-WITH-ADJECTIVE]
+
+[ENGAGING-STRUCTURE]
+A story is [ENGAGING-STRUCTURE] if both of the following are true:
+- The story is either [STYLE-PLAYFUL] or [USES-DISCOURSE-MARKERS]
+- The story is [HAS-CHECKHOVS-GUN]
+
+Thus the garden keeps its order: each label a petal, each relationship a vine. The logic remains inviolate — the same branches and crossings that a careful annotator relies upon — while the language here lingers, ornate and welcoming, like an invitation to stroll and reason beneath the shade of precisely named trees.

@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "id": "has-a-flashback",
+      "label": "Has a flashback",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "Uses wh-questions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-discourse-markers",
+      "label": "Uses discourse markers",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "interactive",
+      "label": "Interactive",
+      "formula_type": "Xor",
+      "formula_args": [
+        "uses-wh-questions",
+        "uses-discourse-markers"
+      ]
+    },
+    {
+      "id": "complex-narrative",
+      "label": "Complex narrative",
+      "formula_type": "And",
+      "formula_args": [
+        "has-a-flashback",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "interactive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "special-case",
+      "label": "Special case",
+      "formula_type": "Or",
+      "formula_args": [
+        "interactive",
+        "complex-narrative",
+        "has-a-flashback"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "uses-wh-questions",
+      "target": "interactive"
+    },
+    {
+      "source": "uses-discourse-markers",
+      "target": "interactive"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "interactive",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "interactive",
+      "target": "special-case"
+    },
+    {
+      "source": "complex-narrative",
+      "target": "special-case"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "special-case"
+    }
+  ]
+}

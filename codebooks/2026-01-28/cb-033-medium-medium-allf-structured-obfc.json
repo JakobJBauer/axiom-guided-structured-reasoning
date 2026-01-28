@@ -1,0 +1,167 @@
+{
+  "nodes": [
+    {
+      "id": "attr-10",
+      "label": "The story has the theme Humor",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "The story is about lost civilizations",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "The story is playful",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "The story is surreal",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-13",
+      "label": "The story uses discourse markers",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "The story has readability score below 86.4",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "The story is classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "The story is philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "The story has a cliffhanger",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "The story starts with a preposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "Composite: exclusive playful/philosophical OR surreal and not classic",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-8",
+            "attr-7"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-9",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-6"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-4",
+      "label": "Composite: membership in {attr-10, attr-12} AND (cliffhanger OR (equal to attr-10 and not attr-3) OR attr-11)",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-10",
+            "attr-12"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-2",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                {
+                  "formula_type": "Equal",
+                  "formula_args": [
+                    "attr-10",
+                    "attr-10"
+                  ]
+                },
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-3"
+                  ]
+                }
+              ]
+            },
+            "attr-11"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-8",
+      "target": "attr-11"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-11"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-11"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-11"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-4"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+Structured Codebook (preserving all node IDs and logical relationships)
+
+Use this as a compact, annotator-focused reference. Each entry shows the node ID, a clear definition, and a precise, structured statement of the criteria you must check. Composite nodes preserve their logical operations exactly (Either, Both, Exactly one, Not). Do not change node IDs or logical relationships.
+
+Basic atomic nodes
+- [LOW-READABILITY]
+  - Definition: A story is [LOW-READABILITY] if its readability score is below 86.4.
+  - Annotation rule: mark this node when measured readability < 86.4.
+
+- [TOPIC-TIME-TRAVEL]
+  - Definition: A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+  - Annotation rule: mark when time travel is a central topic.
+
+- [TOPIC-SEASONAL-CHANGES]
+  - Definition: A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+  - Annotation rule: mark when seasonal change (e.g., transitions between seasons, climate-driven season motifs) is a topic.
+
+- [USES-DISCOURSE-MARKERS]
+  - Definition: A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers.
+  - Annotation rule: mark if the text contains discourse markers (e.g., however, therefore, meanwhile) used to signal relations between segments.
+
+- [STARTS-WITH-ADJECTIVE]
+  - Definition: A story is [STARTS-WITH-ADJECTIVE] if the story starts with an adjective.
+  - Annotation rule: mark when the very first token is an adjective.
+
+- [TOPIC-HIDDEN-TREASURES]
+  - Definition: A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+  - Annotation rule: mark when hidden treasure (discoveries, buried loot, secret caches) is a topic.
+
+- [THEME-DECEPTION]
+  - Definition: A story is [THEME-DECEPTION] if the story has the theme Deception.
+  - Annotation rule: mark when deception (lies, trickery, betrayal as a theme) is present.
+
+- [THEME-HELPING-OTHERS]
+  - Definition: A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others.
+  - Annotation rule: mark when altruism or assistance to others is a theme.
+
+- [STARTS-WITH-PREPOSITION]
+  - Definition: A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+  - Annotation rule: mark when the very first token is a preposition.
+
+- [STARTS-WITH-ADVERB]
+  - Definition: A story is [STARTS-WITH-ADVERB] if the story starts with an adverb.
+  - Annotation rule: mark when the very first token is an adverb.
+
+Composite nodes (preserve logical structure)
+
+- [NARRATIVE-SURFACE]
+  - Definition: A story is [NARRATIVE-SURFACE] if either of the following is true:
+    - Exactly one of the following is true:
+      - The story is [STARTS-WITH-ADJECTIVE]
+      - The story is [STARTS-WITH-ADVERB]
+      - (Interpretation: the story starts with an adjective XOR starts with an adverb.)
+    - Both of the following are true:
+      - The story is [USES-DISCOURSE-MARKERS]
+      - Either of the following is true:
+        - The story is [LOW-READABILITY]
+        - The story is [STARTS-WITH-PREPOSITION]
+      - (Interpretation: discourse markers are used, and either the story is low-readability or it starts with a preposition.)
+  - Annotation checklist:
+    - First, test the "Exactly one" branch:
+      - Is the story starting token an adjective? If yes, does it NOT start with an adverb? If so, this sub-condition holds.
+      - Or, is the story starting token an adverb and NOT an adjective? If so, this sub-condition holds.
+    - If the "Exactly one" sub-condition holds, [NARRATIVE-SURFACE] is true.
+    - Otherwise, test the "Both" branch:
+      - Is [USES-DISCOURSE-MARKERS] true?
+      - And is either [LOW-READABILITY] true or [STARTS-WITH-PREPOSITION] true?
+      - If both of those are true, then [NARRATIVE-SURFACE] is true.
+
+- [INSCRUTABLE-THEME-STRUCTURE]
+  - Definition: A story is [INSCRUTABLE-THEME-STRUCTURE] if both of the following are true:
+    - Either of the following is true:
+      - Both of the following are true:
+        - The story is [TOPIC-TIME-TRAVEL]
+        - Exactly one of the following is true:
+          - The story is [THEME-DECEPTION]
+          - The story is [THEME-HELPING-OTHERS]
+        - (Interpretation: time travel is a topic, and exactly one of the two themes—Deception or Helping Others—is present.)
+      - Both of the following are true:
+        - The story is [TOPIC-SEASONAL-CHANGES]
+        - Both of the following are true:
+          - The story is [TOPIC-HIDDEN-TREASURES]
+          - The story is not [TOPIC-TIME-TRAVEL]
+        - (Interpretation: seasonal changes and hidden treasures are topics, and time travel is explicitly not a topic.)
+    - The story is [NARRATIVE-SURFACE]
+  - Annotation checklist:
+    - Confirm the second required condition:
+      - Is [NARRATIVE-SURFACE] true? If not, [INSCRUTABLE-THEME-STRUCTURE] cannot be true.
+    - If [NARRATIVE-SURFACE] is true, check the first (Either) condition:
+      - Option A (Time-travel route):
+        - Is [TOPIC-TIME-TRAVEL] true?
+        - And is exactly one of [THEME-DECEPTION] or [THEME-HELPING-OTHERS] true?
+      - Option B (Seasonal + treasures route):
+        - Is [TOPIC-SEASONAL-CHANGES] true?
+        - And is [TOPIC-HIDDEN-TREASURES] true?
+        - And is [TOPIC-TIME-TRAVEL] false (i.e., not [TOPIC-TIME-TRAVEL])?
+      - If either Option A or Option B is true, and [NARRATIVE-SURFACE] is true, then mark [INSCRUTABLE-THEME-STRUCTURE].
+
+Quick annotation flow (practical order)
+1. Label atomic nodes first (readability score, starting token type, presence of discourse markers, topics, themes).
+2. Use those atomic labels to resolve [NARRATIVE-SURFACE] following its two-branch logic.
+3. Finally, determine [INSCRUTABLE-THEME-STRUCTURE] by checking:
+   - that [NARRATIVE-SURFACE] holds,
+   - and that either the Time-travel route or the Seasonal+Treasure route (with the explicit "not [TOPIC-TIME-TRAVEL]") is satisfied.
+
+Notes and guidance
+- "Exactly one" means XOR: one true and the other false.
+- "Both of the following are true" means logical AND.
+- "Either of the following is true" means logical OR.
+- "The story is not [TOPIC-TIME-TRAVEL]" explicitly negates that node.
+- Preserve these logical operators precisely when you annotate—do not collapse or change them.
+
+End of codebook.

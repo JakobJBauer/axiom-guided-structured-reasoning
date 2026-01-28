@@ -1,0 +1,216 @@
+Structured Codebook — Clear, hierarchical presentation (logical relationships preserved)
+
+Atomic (base) predicates
+- [TOPIC-MAGICAL-LANDS]
+  - A story is [TOPIC-MAGICAL-LANDS] if The story is about magical lands
+- [LOW-READABILITY]
+  - A story is [LOW-READABILITY] if The story has readability score below 86.4
+- [THEME-DECEPTION]
+  - A story is [THEME-DECEPTION] if The story has the theme Deception
+- [MANY-PARAGRAPHS]
+  - A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs
+- [STARTS-WITH-ADJECTIVE]
+  - A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective
+- [STYLE-SURREAL]
+  - A story is [STYLE-SURREAL] if The story is surreal
+- [STARTS-WITH-NOUN]
+  - A story is [STARTS-WITH-NOUN] if The story starts with a noun
+- [TOPIC-THE-ARTS]
+  - A story is [TOPIC-THE-ARTS] if The story is about the arts
+- [TOPIC-HIDDEN-TREASURES]
+  - A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures
+- [THEME-HARDSHIP]
+  - A story is [THEME-HARDSHIP] if The story has the theme Hardship
+- [STYLE-CLASSIC]
+  - A story is [STYLE-CLASSIC] if The story is classic
+- [HAS-CHECKHOVS-GUN]
+  - A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun
+- [USES-DISCOURSE-MARKERS]
+  - A story is [USES-DISCOURSE-MARKERS] if The story uses discourse markers
+- [USES-SUPERLATIVE-FORMS]
+  - A story is [USES-SUPERLATIVE-FORMS] if The story uses superlative forms
+- [TOPIC-GIANT-CREATURES]
+  - A story is [TOPIC-GIANT-CREATURES] if The story is about giant creatures
+- [HAS-A-FLASHBACK]
+  - A story is [HAS-A-FLASHBACK] if The story has a flashback
+- [STYLE-MODERN]
+  - A story is [STYLE-MODERN] if The story is modern
+- [THEME-GROWTH]
+  - A story is [THEME-GROWTH] if The story has the theme Growth
+- [TOPIC-SEASONAL-CHANGES]
+  - A story is [TOPIC-SEASONAL-CHANGES] if The story is about seasonal changes
+- [STYLE-MINIMALIST]
+  - A story is [STYLE-MINIMALIST] if The story is minimalist
+- [STARTS-WITH-ADVERB]
+  - A story is [STARTS-WITH-ADVERB] if The story starts with a adverb
+- [TOPIC-LOST-CIVILIZATIONS]
+  - A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations
+- [THEME-HELPING-OTHERS]
+  - A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others
+- [THEME-MAGIC]
+  - A story is [THEME-MAGIC] if The story has the theme Magic
+- [STYLE-PLAYFUL]
+  - A story is [STYLE-PLAYFUL] if The story is playful
+- [USES-CONDITIONAL-MOOD]
+  - A story is [USES-CONDITIONAL-MOOD] if The story uses conditional mood
+- [USES-PERFECT-ASPECT]
+  - A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect
+- [THEME-HUMOR]
+  - A story is [THEME-HUMOR] if The story has the theme Humor
+- [TOPIC-CULTURAL-TRADITIONS]
+  - A story is [TOPIC-CULTURAL-TRADITIONS] if The story is about cultural traditions
+- [HAS-JUXTAPOSITION]
+  - A story is [HAS-JUXTAPOSITION] if The story has juxtaposition
+- [HAS-A-CLIFFHANGER]
+  - A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+- [HIGH-READABILITY]
+  - A story is [HIGH-READABILITY] if The story has readability score above 96.1
+- [STYLE-LIGHTHEARTED]
+  - A story is [STYLE-LIGHTHEARTED] if The story is lighthearted
+
+Single-choice / membership predicate
+- [STARTING-WORD-TYPE]
+  - A story is [STARTING-WORD-TYPE] if exactly one of the following is true:
+    - The story is [STARTS-WITH-ADJECTIVE]
+    - The story is [STARTS-WITH-ADVERB]
+    - The story is [STARTS-WITH-NOUN]
+
+Compact membership shorthand
+- [STYLE-AESTHETICS]
+  - A story is [STYLE-AESTHETICS] if the story is in [STYLE-SURREAL, STYLE-PLAYFUL, STYLE-LIGHTHEARTED]
+
+Composite predicates (nested logical structure)
+- [TOPIC-ANCIENT-MYSTERIES]
+  - A story is [TOPIC-ANCIENT-MYSTERIES] if both of the following are true:
+    - The story is [TOPIC-LOST-CIVILIZATIONS]
+    - Either of the following is true:
+      - The story is [TOPIC-HIDDEN-TREASURES]
+      - The story is [TOPIC-CULTURAL-TRADITIONS]
+
+- [MAGIC-SETTINGS]
+  - A story is [MAGIC-SETTINGS] if both of the following are true:
+    - The story is [TOPIC-MAGICAL-LANDS]
+    - The story is [THEME-MAGIC]
+
+- [CREATURES-IN-MAGICAL-LANDS]
+  - A story is [CREATURES-IN-MAGICAL-LANDS] if both of the following are true:
+    - The story is [TOPIC-GIANT-CREATURES]
+    - The story is [TOPIC-MAGICAL-LANDS]
+
+- [NARRATIVE-DEVICES]
+  - A story is [NARRATIVE-DEVICES] if either of the following is true:
+    - Both of the following are true:
+      - The story is [HAS-CHECKHOVS-GUN]
+      - The story is [HAS-A-FLASHBACK]
+    - Both of the following are true:
+      - The story is [HAS-CHECKHOVS-GUN]
+      - The story is [HAS-A-CLIFFHANGER]
+    - Both of the following are true:
+      - The story is [HAS-CHECKHOVS-GUN]
+      - The story is [HAS-JUXTAPOSITION]
+    - Both of the following are true:
+      - The story is [HAS-A-FLASHBACK]
+      - The story is [HAS-A-CLIFFHANGER]
+    - Both of the following are true:
+      - The story is [HAS-A-FLASHBACK]
+      - The story is [HAS-JUXTAPOSITION]
+    - Both of the following are true:
+      - The story is [HAS-A-CLIFFHANGER]
+      - The story is [HAS-JUXTAPOSITION]
+
+- [STRUCTURED-FORM]
+  - A story is [STRUCTURED-FORM] if both of the following are true:
+    - The story is [MANY-PARAGRAPHS]
+    - Both of the following are true:
+      - The story is [USES-DISCOURSE-MARKERS]
+      - Either of the following is true:
+        - The story is [USES-CONDITIONAL-MOOD]
+        - The story is [USES-PERFECT-ASPECT]
+
+- [COMPOUND-THEME]
+  - A story is [COMPOUND-THEME] if both of the following are true:
+    - Either of the following is true:
+      - The story is [THEME-MAGIC]
+      - The story is [THEME-GROWTH]
+    - Either of the following is true:
+      - The story is [THEME-DECEPTION]
+      - The story is [THEME-HARDSHIP]
+      - The story is [THEME-HELPING-OTHERS]
+      - The story is [THEME-HUMOR]
+
+- [HUMOROUS-LIGHT]
+  - A story is [HUMOROUS-LIGHT] if both of the following are true:
+    - The story is [THEME-HUMOR]
+    - Both of the following are true:
+      - The story is [STYLE-LIGHTHEARTED]
+      - The story is [STYLE-PLAYFUL]
+
+- [POETIC-MINIMALISM]
+  - A story is [POETIC-MINIMALISM] if both of the following are true:
+    - The story is [STYLE-MINIMALIST]
+    - Both of the following are true:
+      - Either of the following is true:
+        - The story is [STYLE-CLASSIC]
+        - The story is [STYLE-MODERN]
+      - The story is not [STYLE-SURREAL]
+
+- [ARC-GROWTH-HELP]
+  - A story is [ARC-GROWTH-HELP] if both of the following are true:
+    - The story is [THEME-GROWTH]
+    - The story is [THEME-HELPING-OTHERS]
+
+- [SURPRISING-FINALE]
+  - A story is [SURPRISING-FINALE] if both of the following are true:
+    - The story is [HAS-CHECKHOVS-GUN]
+    - The story is [HAS-A-CLIFFHANGER]
+
+- [COMPLEX-STRUCTURE]
+  - A story is [COMPLEX-STRUCTURE] if both of the following are true:
+    - The story is [NARRATIVE-DEVICES]
+    - The story is [STRUCTURED-FORM]
+
+- [EPIC-MYSTERY]
+  - A story is [EPIC-MYSTERY] if both of the following are true:
+    - The story is [TOPIC-ANCIENT-MYSTERIES]
+    - Either of the following is true:
+      - The story is [TOPIC-GIANT-CREATURES]
+      - The story is [TOPIC-SEASONAL-CHANGES]
+
+- [ENCHANTED-ODYSSEY]
+  - A story is [ENCHANTED-ODYSSEY] if both of the following are true:
+    - The story is [MAGIC-SETTINGS]
+    - Both of the following are true:
+      - Either of the following is true:
+        - The story is [TOPIC-HIDDEN-TREASURES]
+        - The story is [TOPIC-LOST-CIVILIZATIONS]
+      - Either of the following is true:
+        - The story is [THEME-HARDSHIP]
+        - The story is [THEME-GROWTH]
+
+- [SURPRISING-SURREAL-ARC]
+  - A story is [SURPRISING-SURREAL-ARC] if both of the following are true:
+    - The story is [STYLE-AESTHETICS]
+    - Both of the following are true:
+      - The story is [SURPRISING-FINALE]
+      - The story is [ARC-GROWTH-HELP]
+
+- [COMPLEX-EPIC]
+  - A story is [COMPLEX-EPIC] if both of the following are true:
+    - Both of the following are true:
+      - The story is [COMPLEX-STRUCTURE]
+      - The story is [COMPOUND-THEME]
+    - Either of the following is true:
+      - The story is [ENCHANTED-ODYSSEY]
+      - Both of the following are true:
+        - The story is [EPIC-MYSTERY]
+        - The story is [CREATURES-IN-MAGICAL-LANDS]
+    - The story is [STARTING-WORD-TYPE]
+
+Notes for annotators (concise and practical)
+- Atomic predicates are the building blocks; verify these first.
+- Composite predicates must be evaluated by following their nested logical structure exactly (observe "Both of the following..." and "Either of the following..." patterns).
+- The text preserves every node ID and logical connective as specified — do not alter them when applying labels.
+- When a clause uses "exactly one," ensure only a single subcondition holds true.
+- "The story is not [X]" is a negation and must be treated strictly as exclusion.
+
+This structured presentation keeps all node IDs, logical operators, and relationships unchanged while organizing the material for clear, step-by-step annotation.

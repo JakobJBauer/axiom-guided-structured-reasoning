@@ -1,0 +1,135 @@
+{
+  "nodes": [
+    {
+      "id": "uses-conditional-mood",
+      "label": "Uses Conditional Mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "Starts With Adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-agency",
+      "label": "Theme Agency",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "short-story",
+      "label": "Short Story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-lighthearted",
+      "label": "Style Lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-perfect-aspect",
+      "label": "Uses Perfect Aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "mood-mix",
+      "label": "Mood Mix",
+      "formula_type": "And",
+      "formula_args": [
+        "uses-conditional-mood",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "uses-perfect-aspect"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pacing-and-tone",
+      "label": "Pacing and Tone",
+      "formula_type": "And",
+      "formula_args": [
+        "short-story",
+        "style-lighthearted"
+      ]
+    },
+    {
+      "id": "agency-start",
+      "label": "Agency Start",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-agency",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "starts-with-adverb",
+            "short-story"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elegant-story",
+      "label": "Elegant Story",
+      "formula_type": "And",
+      "formula_args": [
+        "pacing-and-tone",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "mood-mix",
+            "agency-start"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "uses-conditional-mood",
+      "target": "mood-mix"
+    },
+    {
+      "source": "uses-perfect-aspect",
+      "target": "mood-mix"
+    },
+    {
+      "source": "short-story",
+      "target": "pacing-and-tone"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "pacing-and-tone"
+    },
+    {
+      "source": "theme-agency",
+      "target": "agency-start"
+    },
+    {
+      "source": "starts-with-adverb",
+      "target": "agency-start"
+    },
+    {
+      "source": "short-story",
+      "target": "agency-start"
+    },
+    {
+      "source": "pacing-and-tone",
+      "target": "elegant-story"
+    },
+    {
+      "source": "mood-mix",
+      "target": "elegant-story"
+    },
+    {
+      "source": "agency-start",
+      "target": "elegant-story"
+    }
+  ]
+}

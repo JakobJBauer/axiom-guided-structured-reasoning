@@ -1,0 +1,63 @@
+Codebook — Technical specification
+
+Atomic node definitions
+- [THEME-AGENCY]
+  - Classification rule: A story is assigned the label [THEME-AGENCY] if the narrative contains the thematic element "Agency".
+
+- [STARTS-WITH-NOUN]
+  - Classification rule: A story is assigned the label [STARTS-WITH-NOUN] if the first lexical token of the story is a noun.
+
+- [TOPIC-GIANT-CREATURES]
+  - Classification rule: A story is assigned the label [TOPIC-GIANT-CREATURES] if its primary topic concerns giant creatures.
+
+- [THEME-KINDNESS]
+  - Classification rule: A story is assigned the label [THEME-KINDNESS] if it contains the theme "Kindness".
+
+- [HIGH-READABILITY]
+  - Classification rule: A story is assigned the label [HIGH-READABILITY] if its readability metric exceeds 96.1.
+
+- [TOPIC-MYSTICAL-CREATURES]
+  - Classification rule: A story is assigned the label [TOPIC-MYSTICAL-CREATURES] if its subject matter concerns mystical creatures.
+
+- [THEME-PROBLEM-SOLVING]
+  - Classification rule: A story is assigned the label [THEME-PROBLEM-SOLVING] if it contains the theme "Problem-Solving".
+
+Composite node definitions (logical specifications)
+- [MYSTICAL-GIANTS]
+  - Logical specification: A story is [MYSTICAL-GIANTS] if both of the following are true:
+    - The story is [TOPIC-GIANT-CREATURES]
+    - The story is [TOPIC-MYSTICAL-CREATURES]
+
+- [SOLVER-OR-AGENCY]
+  - Logical specification: A story is [SOLVER-OR-AGENCY] if exactly one of the following is true:
+    - The story is [THEME-PROBLEM-SOLVING]
+    - The story is [THEME-AGENCY]
+  - Interpretation: This node encodes exclusive disjunction (XOR) between the two thematic labels.
+
+- [ALTRUISM-SOLVER]
+  - Logical specification: A story is [ALTRUISM-SOLVER] if both of the following are true:
+    - The story is [THEME-KINDNESS]
+    - The story is [SOLVER-OR-AGENCY]
+
+- [OPENING-ASSERTIVE]
+  - Logical specification: A story is [OPENING-ASSERTIVE] if both of the following are true:
+    - [STARTS-WITH-NOUN] equals true
+    - The story is not [THEME-AGENCY]
+  - Interpretation: This node identifies narratives that begin with a noun and explicitly do not carry the [THEME-AGENCY] label.
+
+- [FEATURED-STORY]
+  - Logical specification: A story is [FEATURED-STORY] if both of the following are true:
+    - The story is [MYSTICAL-GIANTS]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [ALTRUISM-SOLVER]
+        - [HIGH-READABILITY] equals true
+      - both of the following are true:
+        - The story is [OPENING-ASSERTIVE]
+        - [TOPIC-GIANT-CREATURES] is in [TOPIC-GIANT-CREATURES, TOPIC-MYSTICAL-CREATURES]
+  - Interpretation: [FEATURED-STORY] requires the story to be both giant-related and mystical, and then to satisfy one of two alternative conjunctive branches: (1) it is an altruistic solver story with high readability, or (2) it is an assertive-opening giant story that meets the listed topic membership condition.
+
+Notes on semantics and usage
+- All definitions are binary: a label either applies or does not apply to a story.
+- Composite nodes use standard logical connectives: conjunction (both of the following are true), disjunction (either of the following is true), negation (not), and exclusive disjunction (exactly one of the following is true).
+- Node identifiers must remain exactly as specified (bracketed form) when referenced in annotations or automated rules.

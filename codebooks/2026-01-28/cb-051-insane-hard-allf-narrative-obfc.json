@@ -1,0 +1,476 @@
+{
+  "nodes": [
+    {
+      "id": "attr-1",
+      "label": "Balanced compassion and equality",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-3",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-28",
+            "attr-25"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Top classification (intricately woven narratives)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-30",
+        "attr-16",
+        "attr-35",
+        "attr-15",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-17"
+          ]
+        },
+        "attr-11",
+        "attr-12",
+        "attr-10"
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "Equal growth and hardship",
+      "formula_type": "Equal",
+      "formula_args": [
+        "attr-23",
+        "attr-24"
+      ]
+    },
+    {
+      "id": "attr-4",
+      "label": "Moral lesson",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Story within a story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Circular narrative structure",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "More than 375 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "Readability score below 86.4",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Lesson or growth",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-4",
+        "attr-23"
+      ]
+    },
+    {
+      "id": "attr-11",
+      "label": "Exactly short or long (exclusive)",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-13",
+        "attr-8"
+      ]
+    },
+    {
+      "id": "attr-12",
+      "label": "Readability and first word adjective",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-9",
+        "attr-14"
+      ]
+    },
+    {
+      "id": "attr-13",
+      "label": "Fewer than 160 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-14",
+      "label": "Starts with an adjective",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-15",
+      "label": "Structural devices cluster",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-5",
+        "attr-6",
+        "attr-7"
+      ]
+    },
+    {
+      "id": "attr-16",
+      "label": "Style in set {classic, modern, playful, humorous, philosophical}",
+      "formula_type": "In",
+      "formula_args": [
+        "attr-17",
+        "attr-19",
+        "attr-21",
+        "attr-18",
+        "attr-20"
+      ]
+    },
+    {
+      "id": "attr-17",
+      "label": "Classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-18",
+      "label": "Humorous",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-19",
+      "label": "Modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-20",
+      "label": "Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-21",
+      "label": "Playful",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-22",
+      "label": "Theme cluster (attr-22)",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-27",
+        "attr-23",
+        "attr-24",
+        "attr-25",
+        "attr-28",
+        "attr-29",
+        "attr-26"
+      ]
+    },
+    {
+      "id": "attr-23",
+      "label": "Growth theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-24",
+      "label": "Hardship theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-25",
+      "label": "Helping Others theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-26",
+      "label": "Theme: Humor (laughter threads)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-27",
+      "label": "Innovation theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-28",
+      "label": "Kindness theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-29",
+      "label": "Magic / enchantment theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-30",
+      "label": "Aligned constellation of themes and balance/invention",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-22",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-1",
+            "attr-27"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-31",
+      "label": "Hidden treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-32",
+      "label": "Lost civilizations",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-33",
+      "label": "Magical lands",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-34",
+      "label": "Mystical creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-35",
+      "label": "Topic in set {mystical creatures, magical lands, hidden treasures, lost civilizations, time travel}",
+      "formula_type": "In",
+      "formula_args": [
+        "attr-34",
+        "attr-33",
+        "attr-31",
+        "attr-32",
+        "attr-36"
+      ]
+    },
+    {
+      "id": "attr-36",
+      "label": "Time travel",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-37",
+      "label": "Uses conditional mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-38",
+      "label": "Uses superlative forms",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-39",
+      "label": "Uses wh-questions",
+      "formula_type": null,
+      "formula_args": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-17",
+      "target": "attr-16"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-16"
+    },
+    {
+      "source": "attr-21",
+      "target": "attr-16"
+    },
+    {
+      "source": "attr-18",
+      "target": "attr-16"
+    },
+    {
+      "source": "attr-20",
+      "target": "attr-16"
+    },
+    {
+      "source": "attr-34",
+      "target": "attr-35"
+    },
+    {
+      "source": "attr-33",
+      "target": "attr-35"
+    },
+    {
+      "source": "attr-31",
+      "target": "attr-35"
+    },
+    {
+      "source": "attr-32",
+      "target": "attr-35"
+    },
+    {
+      "source": "attr-36",
+      "target": "attr-35"
+    },
+    {
+      "source": "attr-27",
+      "target": "attr-22"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-22"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-22"
+    },
+    {
+      "source": "attr-25",
+      "target": "attr-22"
+    },
+    {
+      "source": "attr-28",
+      "target": "attr-22"
+    },
+    {
+      "source": "attr-29",
+      "target": "attr-22"
+    },
+    {
+      "source": "attr-26",
+      "target": "attr-22"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-11"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-11"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-14",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-10"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-28",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-25",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-22",
+      "target": "attr-30"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-30"
+    },
+    {
+      "source": "attr-27",
+      "target": "attr-30"
+    },
+    {
+      "source": "attr-30",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-16",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-35",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-15",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-17",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-2"
+    }
+  ]
+}

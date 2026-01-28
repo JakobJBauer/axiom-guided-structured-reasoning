@@ -1,0 +1,24 @@
+[attr-6]
+A story is [attr-6] if it uses superlative forms.
+
+[attr-5]
+A story is [attr-5] if it’s about lost civilizations.
+
+[attr-3]
+A story is [attr-3] if it starts with a noun.
+
+[attr-4]
+A story is [attr-4] if its theme is Humor.
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-3]
+- The story is [attr-4]
+- The story is not [attr-6]
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-5]
+- Exactly one of the following is true:
+  - The story is [attr-1]
+  - The story is [attr-6]

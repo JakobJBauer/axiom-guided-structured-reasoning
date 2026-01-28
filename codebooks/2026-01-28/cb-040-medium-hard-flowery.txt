@@ -1,0 +1,67 @@
+Prologue — In the amber-lit library of narratives, this codebook sits like an illuminated manuscript: each bracketed sigil a key, each rule a filigreed hinge that opens the door to careful annotation. Below, the labels appear in their ordained form, their logic untouched; around them I have woven a garland of language to guide the reader’s eye and heart. The relationships between nodes remain faithful to the original design — a constellation of true and false, and, or, and not — while the descriptions sing a little louder.
+
+[THEME-AGENCY]
+A story is [THEME-AGENCY] if The story has the theme Agency
+In plain registry terms: if the tale carries the motif of Agency — characters making choices, exercising will, and shaping fate — then it earns this emblem. Think of it as the banner raised when a protagonist takes the reins of their own destiny.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if The story starts with a noun
+A gentle typographical test: when the very first word that opens the tale is a noun — a person, place, thing, or idea — the tale is marked with this tidy label. It is the small, decisive step of a sentence that begins by naming the world it will enter.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if The story is about giant creatures
+Attach this marker when the narrative’s heart beats for beings of monumental scale — giants who stomp across hills, leviathans that shadow seas, creatures whose size is a central concern of the story.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if The story has the theme Kindness
+This badge denotes tales suffused with compassion: acts of gentleness, selfless gestures, and moral warmth that shape characters and outcomes. If kindness is a guiding current, this node glows.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if The story has readability score above 96.1
+A technical flourish amid the romance: when a readability metric rises above the threshold of 96.1, the story qualifies here — clear, smooth prose that invites swift comprehension. Consider it the polish that lets the tale’s voice glide.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures
+This label is reserved for narratives inhabited by beings of enchantment — sylphs, spirits, dragons of myth, and other creatures touched by the uncanny. If the creaturely presence in the tale is mystical rather than mundane, the story is brought under this sigil.
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if The story has the theme Problem-Solving
+Whenever a story pivots upon puzzles, obstacles, and the deliberate unraveling of challenges — the delight of reasoning and remedy — assign this theme. It marks narratives where cleverness and method are central to progress.
+
+[MYSTICAL-GIANTS]
+A story is [MYSTICAL-GIANTS] if both of the following are true:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is [TOPIC-MYSTICAL-CREATURES]
+A conjured conjunction: a tale earns the [MYSTICAL-GIANTS] mantle only when it walks in both worlds — its giants are not merely large, but suffused with mystic quality. Both conditions must hold true for the label’s silver seal to be affixed.
+
+[SOLVER-OR-AGENCY]
+A story is [SOLVER-OR-AGENCY] if exactly one of the following is true:
+- The story is [THEME-PROBLEM-SOLVING]
+- The story is [THEME-AGENCY]
+This is an exclusive fork in the road: [SOLVER-OR-AGENCY] is lit only when the tale embodies one and only one of these themes. If it is devoted to problem-solving but not to agency, or to agency but not to problem-solving, the flag is raised; but if both or neither apply, it remains unlit.
+
+[ALTRUISM-SOLVER]
+A story is [ALTRUISM-SOLVER] if both of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [SOLVER-OR-AGENCY]
+Combine warmth with singular purpose: a narrative becomes an [ALTRUISM-SOLVER] when its spirit of kindness meets the exclusive condition of [SOLVER-OR-AGENCY]. Both elements must be present — compassionate intent entwined with exactly one of the solver/agency motifs.
+
+[OPENING-ASSERTIVE]
+A story is [OPENING-ASSERTIVE] if both of the following are true:
+- [STARTS-WITH-NOUN] equals true
+- The story is not [THEME-AGENCY]
+An assertive dawn: a story is deemed [OPENING-ASSERTIVE] when it begins with a noun (that first structural breath) and, importantly, it is not claiming the [THEME-AGENCY] banner. The combination gives a bold opening without the specific theme of agency.
+
+[FEATURED-STORY]
+A story is [FEATURED-STORY] if both of the following are true:
+- The story is [MYSTICAL-GIANTS]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [ALTRUISM-SOLVER]
+    - [HIGH-READABILITY] equals true
+  - both of the following are true:
+    - The story is [OPENING-ASSERTIVE]
+    - [TOPIC-GIANT-CREATURES] is in [TOPIC-GIANT-CREATURES, TOPIC-MYSTICAL-CREATURES]
+This is the crowning flourish: to be a [FEATURED-STORY], a tale must first be a [MYSTICAL-GIANTS] — giants steeped in magic. Then it must satisfy one of two exquisite gateways. Either it pairs altruistic problem-solving (the [ALTRUISM-SOLVER] arc) with a high polish of comprehension ([HIGH-READABILITY] equals true), or it combines an assertive, noun-beginning opening ([OPENING-ASSERTIVE]) with a topical presence that includes [TOPIC-GIANT-CREATURES] among the set [TOPIC-GIANT-CREATURES, TOPIC-MYSTICAL-CREATURES]. Only under these precise, poetically aligned conditions does the tale ascend to the featured shelf.
+
+Epilogue — Keep this codex at hand: each bracketed node is unchanged in form and logic, now wrapped in a mantle of words meant to make the rules easier and more delightful to recall. Use it as both ledger and lantern when you annotate the narratives that pass beneath your gaze.

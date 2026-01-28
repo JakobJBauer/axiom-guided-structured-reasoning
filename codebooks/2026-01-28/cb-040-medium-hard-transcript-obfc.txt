@@ -1,0 +1,75 @@
+Interviewer: Let's walk through this codebook like a conversation. I'll ask about each entry and you answer plainly. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What is [attr-8]?
+
+Expert: A story is [attr-8] if The story has the theme Agency.
+
+Interviewer: And [attr-7]?
+
+Expert: A story is [attr-7] if The story starts with a noun.
+
+Interviewer: How about [attr-11]?
+
+Expert: A story is [attr-11] if The story is about giant creatures.
+
+Interviewer: [attr-9] — what defines that?
+
+Expert: A story is [attr-9] if The story has the theme Kindness.
+
+Interviewer: [attr-3] — what's the threshold?
+
+Expert: A story is [attr-3] if The story has readability score above 96.1.
+
+Interviewer: And [attr-12]?
+
+Expert: A story is [attr-12] if The story is about mystical creatures.
+
+Interviewer: Now the first composite: How do we decide [attr-4]?
+
+Expert: A story is [attr-4] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-12]
+
+Interviewer: What about [attr-6]? That sounds like a choice.
+
+Expert: A story is [attr-6] if exactly one of the following is true:
+- The story is [attr-10]
+- The story is [attr-8]
+
+Interviewer: So it's exclusive—one or the other, not both. Got it. Next: [attr-1]?
+
+Expert: A story is [attr-1] if both of the following are true:
+- The story is [attr-9]
+- The story is [attr-6]
+
+Interviewer: [attr-5] — what's required there?
+
+Expert: A story is [attr-5] if both of the following are true:
+- [attr-7] equals true
+- The story is not [attr-8]
+
+Interviewer: Finally, the big one: [attr-2]. How do we identify those?
+
+Expert: A story is [attr-2] if both of the following are true:
+- The story is [attr-4]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [attr-1]
+    - [attr-3] equals true
+  - both of the following are true:
+    - The story is [attr-5]
+    - [attr-11] is in [TOPIC-GIANT-CREATURES, TOPIC-MYSTICAL-CREATURES]
+
+Interviewer: To check I understand: a [attr-2] must first be a [attr-4]. Then it either (1) combines kindness-driven solver status with high readability, or (2) opens assertively and has [attr-11] listed among [TOPIC-GIANT-CREATURES, TOPIC-MYSTICAL-CREATURES]. Is that right?
+
+Expert: Exactly. You've restated the logical structure correctly.
+
+Interviewer: Great — that covers every node. Anything else important to keep in mind while annotating with this codebook?
+
+Expert: Two practical reminders:
+- Keep the node IDs exactly as written (for example, [attr-8]) when you tag or refer to them.
+- Preserve the logical operators and structure — "both," "either," "exactly one," "is not," "equals true," and "is in" are meaningful and determine how nodes combine.
+
+Interviewer: Perfect. Thanks — that makes the codebook much easier to follow.

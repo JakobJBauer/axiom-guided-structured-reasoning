@@ -1,0 +1,89 @@
+[MANY-PARAGRAPHS]  
+Call a story [MANY-PARAGRAPHS] when it stretches out beyond six paragraphs—seven or more, and it qualifies.
+
+[HAS-A-STORY-WITHIN-A-STORY]  
+A story earns [HAS-A-STORY-WITHIN-A-STORY] if it contains another story nested inside it—a story within the story.
+
+[STARTS-WITH-NOUN]  
+Use [STARTS-WITH-NOUN] when the very first word of the story is a noun.
+
+[USES-SUPERLATIVE-FORMS]  
+Mark [USES-SUPERLATIVE-FORMS] if the story uses superlative forms—language like “best,” “greatest,” “most,” and similar constructions.
+
+[HAS-CHECKHOVS-GUN]  
+A story is [HAS-CHECKHOVS-GUN] if it includes Chekhov’s gun: an element introduced earlier that later becomes meaningfully important.
+
+[THEME-MAGIC]  
+Tag [THEME-MAGIC] when the story’s theme is Magic.
+
+[USES-CONDITIONAL-MOOD]  
+Choose [USES-CONDITIONAL-MOOD] if the story uses conditional mood—phrasing along the lines of “would,” “could,” “might,” “if…then,” and so on.
+
+[USES-WH-QUESTIONS]  
+A story is [USES-WH-QUESTIONS] when it uses wh-questions—questions such as “who,” “what,” “when,” “where,” “why,” or “how.”
+
+[TOPIC-HIDDEN-TREASURES]  
+Apply [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+[THEME-INNOVATION]  
+Use [THEME-INNOVATION] when the story’s theme is Innovation.
+
+[TOPIC-SEASONAL-CHANGES]  
+Label [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+
+[TOPIC-THE-ARTS]  
+A story is [TOPIC-THE-ARTS] if it’s about the arts.
+
+[LONG-STORY]  
+Mark [LONG-STORY] when the story runs longer than 375 words.
+
+[THEME-GROWTH]  
+Tag [THEME-GROWTH] if the story has the theme Growth.
+
+[TOPIC-MAGICAL-LANDS]  
+Use [TOPIC-MAGICAL-LANDS] when the story is about magical lands.
+
+[TOPIC-TIME-TRAVEL]  
+Choose [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+[THEME-HARDSHIP]  
+A story is [THEME-HARDSHIP] if the story has the theme Hardship.
+
+[STARTS-WITH-ADVERB]  
+Mark [STARTS-WITH-ADVERB] if the story opens with an adverb.
+
+[HAS-A-MORAL-LESSON]  
+Use [HAS-A-MORAL-LESSON] when the story includes a moral lesson.
+
+[LOW-READABILITY]  
+A story counts as [LOW-READABILITY] if its readability score is below 86.4.
+
+[STARTS-WITH-ADJECTIVE]  
+Apply [STARTS-WITH-ADJECTIVE] if the story starts with an adjective.
+
+[STARTS-WITH-NONNOUN]  
+A story is [STARTS-WITH-NONNOUN] exactly when it is not [STARTS-WITH-NOUN].
+
+[STRUCTURAL-EPIC]  
+A story becomes [STRUCTURAL-EPIC] only when both conditions land at once: it is [LONG-STORY] and it is [MANY-PARAGRAPHS].
+
+[EXPERIMENTAL-VOICE]  
+A story fits [EXPERIMENTAL-VOICE] if either of these paths works out. One option is that exactly one of the following is true: the story is [STARTS-WITH-ADVERB] or the story is [STARTS-WITH-ADJECTIVE]. The other option is that both of the following are true: the story is [STARTS-WITH-NONNOUN] and the story is [USES-WH-QUESTIONS].
+
+[MYTHIC-ENGINEERING]  
+Call it [MYTHIC-ENGINEERING] when two paired ideas are both present. First, either of the following is true: the story is [THEME-MAGIC] or the story is [TOPIC-MAGICAL-LANDS]. Second, either of the following is true: the story is [THEME-INNOVATION] or the story is [TOPIC-TIME-TRAVEL]. Both halves must be satisfied.
+
+[INTERROGATIVE-CONDITIONALITY]  
+A story qualifies as [INTERROGATIVE-CONDITIONALITY] if both of the following are true: the story is [USES-CONDITIONAL-MOOD], and either of the following is true: the story is [USES-WH-QUESTIONS] or the story is [LOW-READABILITY].
+
+[EMBEDDED-FORESHADOWING]  
+Use [EMBEDDED-FORESHADOWING] when both of the following are true: the story is [HAS-A-STORY-WITHIN-A-STORY], and either of the following is true—either the story is [HAS-CHECKHOVS-GUN], or (both of the following are true: the story is [USES-SUPERLATIVE-FORMS] and it is not [USES-CONDITIONAL-MOOD]).
+
+[TREASURED-TRANSFORMATION]  
+A story is [TREASURED-TRANSFORMATION] if both of the following are true: the story is [TOPIC-HIDDEN-TREASURES], and either of these two bundles holds. Bundle one: both of the following are true—the story is [THEME-GROWTH] and the story is [HAS-A-MORAL-LESSON]. Bundle two: both of the following are true—the story is [THEME-HARDSHIP] and it is not [HAS-A-MORAL-LESSON].
+
+[SEASONAL-AESTHETIC]  
+Mark [SEASONAL-AESTHETIC] when both of the following are true: the story is [TOPIC-SEASONAL-CHANGES], and either of the following is true—either the story is [TOPIC-THE-ARTS], or (both of the following are true: the story is [USES-SUPERLATIVE-FORMS] and it is not [LOW-READABILITY]).
+
+[MASTER-CLASS-PLOT]  
+A story reaches [MASTER-CLASS-PLOT] when two big requirements are met. First, either of the following is true: the story is [EMBEDDED-FORESHADOWING], or (both of the following are true: the story is [STRUCTURAL-EPIC] and the story is [INTERROGATIVE-CONDITIONALITY]). Second, exactly one of the following is true: the story is [TREASURED-TRANSFORMATION] or the story is [SEASONAL-AESTHETIC].

@@ -1,0 +1,46 @@
+Preface — In the hushed alcoves of an old archivist’s mind, where catalogues breathe like slow-sighing tomes, this codebook was born. Think of it as a little enchanted garden of criteria: each bracketed name is a marked flower, each logical rule a trellis that knots them together. Below, the formal scaffolding remains untouched — the ironwork of logic that guides annotation — yet the explanatory foliage has been allowed to unfurl in rich, descriptive language so that human readers may stroll through the rules with pleasure as well as precision.
+
+[attr-6]
+A story is [attr-6] if the story uses conditional mood.
+- In plain truth and in poetic rumination alike, such a tale leans on would, could, might: modal petals that open into possibilities. When you annotate, mark this node when the narrative voice makes room for hypothetical thinking, imagined outcomes, or the soft architecture of “if” and “then.”
+
+[attr-7]
+A story is [attr-7] if the story uses perfect aspect.
+- This label crowns stories that reach backward from the present to the completed past — those that say “has done,” “had been,” or “have known.” It is the stamp of retrospection, a grammatical echo that tells us events have been carried to completion before another reference point.
+
+[attr-5]
+A story is [attr-5] if the story has the theme Deception.
+- Apply this marker to narratives steeped in trickery, concealment, betrayal, or self-delusion. It signals the presence of deception as a central current in the tale’s thematic river.
+
+[attr-4]
+A story is [attr-4] if the story has a cliffhanger.
+- Affix this to stories that leave the reader poised on a precipice — a sudden halt, an unresolved question, or a suspenseful break that demands continuation. It is the breath-catching moment in the narrative.
+
+[attr-3]
+A story is [attr-3] if all of the following are true:
+- The story is [attr-5]
+- The story is not [attr-4]
+- Either of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-7]
+- Imagine a layered tapestry of deceit that does not end in a dangling cliff but instead resolves (or conceals) through subtle linguistic means. For annotation: mark [attr-3] when deception is central, the narrative does not rely on a cliffhanger, and the text either espouses conditional possibility or employs retrospective perfect aspect. The structural demands above must all be met.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-6]
+- The story is not both of the following:
+  - The story is [attr-7]
+  - The story is [attr-6]
+- This node captures a delicate grammatical indecision: the tale flirts with either the completed past or the realm of hypothetical possibility, but does not fully inhabit both simultaneously. It is the linguistic tension of almost-but-not-quite, a single choice among aspects rather than a blended chorus.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-3]
+- Either of the following is true:
+  - The story is [attr-2]
+  - The story is not [attr-4]
+- To crown the garden with its most enigmatic bloom: mark [attr-1] when a story already qualifies as [attr-3], and additionally either carries that aspectual single-mindedness (the ambivalence described above) or simply lacks a cliffhanger. It designates narratives where deception and grammatical subtlety entwine, or where deception stands clear without dependence on a cliff’s suspense.
+
+Epilogue — Think of these lines as both map and mapmaker’s memory: strict in their geometry, yet described here with the warmth of narrative to help you recognize each rule’s face. The logical bones — the brackets, the negations, the “Either/Neither” gates — remain as axiomatic as ever. Use them with the attentive care of a gardener pruning for clarity, and the annotator’s field will flourish.

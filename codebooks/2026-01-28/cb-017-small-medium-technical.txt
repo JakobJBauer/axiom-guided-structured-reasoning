@@ -1,0 +1,26 @@
+[STYLE-HUMOROUS]
+Specification: A story is classified as [STYLE-HUMOROUS] if the story is humorous.
+
+[STYLE-LIGHTHEARTED]
+Specification: A story is classified as [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+[THEME-KINDNESS]
+Specification: A story is classified as [THEME-KINDNESS] if the story embodies the theme of kindness.
+
+[STYLE-EXCLUSIVE]
+Specification: A story is classified as [STYLE-EXCLUSIVE] if exactly one of the following conditions holds:
+- The story is [STYLE-HUMOROUS]
+- The story is [STYLE-LIGHTHEARTED]
+
+Notes: This node implements an exclusive-or constraint between [STYLE-HUMOROUS] and [STYLE-LIGHTHEARTED]; membership in [STYLE-EXCLUSIVE] requires that precisely one of those style predicates evaluate to true.
+
+[GENRE-GENTLE]
+Specification: A story is classified as [GENRE-GENTLE] if both of the following conditions are satisfied:
+- The story is [THEME-KINDNESS]
+- Either of the following conditions hold:
+  - The story is [STYLE-EXCLUSIVE]
+  - Both of the following conditions hold:
+    - The story is [STYLE-LIGHTHEARTED]
+    - The story is not [STYLE-HUMOROUS]
+
+Notes: [GENRE-GENTLE] requires thematic alignment with [THEME-KINDNESS] and a style constraint that is either the exclusive style option ([STYLE-EXCLUSIVE]) or a conjunctive requirement of being lighthearted without being humorous.

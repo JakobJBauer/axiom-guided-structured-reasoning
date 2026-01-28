@@ -1,0 +1,55 @@
+Think of this codebook as a little atlas for stories — a set of signs and crossroads that tell you what kind of tale you're holding. Each label is a verdict, a small magic stamp you give a piece of writing when it shows certain traits. Below, the labels speak like characters in a village, but the rules that bind them remain unbroken. Every node ID stays exactly as written in brackets, and every logical rule — the ANDs, ORs, NOTs, and the special counts like “Exactly one” — holds firm like laws of the land.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+- Imagine a narrator who often says "would," "could," or "might" — that tendency is what earns the story this name.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if the story starts with an adverb.
+- If the first word leans into manner or time — briskly, suddenly, tomorrow — the story wears this badge.
+
+[THEME-AGENCY]
+A story is [THEME-AGENCY] if the story has the theme Agency.
+- When characters shape their fate, make decisions, and act on purpose, the theme of agency is present and this tag applies.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if the story has fewer than 160 words.
+- Small and concentrated, under 160 words qualifies it as a [SHORT-STORY].
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+- If the tone is playful, cheerful, or otherwise easy on the heart, it earns this descriptor.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect.
+- When the prose relies on constructions like "has done" or "had seen," it carries the perfect aspect tag.
+
+[MOOD-MIX]
+A story is [MOOD-MIX] if both of the following are true:
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is not [USES-PERFECT-ASPECT]
+- Picture a mood that favors hypothetical turns and avoids perfect constructions; when both those conditions meet, the tale is labeled [MOOD-MIX].
+
+[PACING-AND-TONE]
+A story is [PACING-AND-TONE] if both of the following are true:
+- The story is [SHORT-STORY]
+- The story is [STYLE-LIGHTHEARTED]
+- When brevity and a sunny tone pair up, the story qualifies as [PACING-AND-TONE].
+
+[AGENCY-START]
+A story is [AGENCY-START] if both of the following are true:
+- The story is [THEME-AGENCY]
+- Exactly one of the following is true:
+  - The story is [STARTS-WITH-ADVERB]
+  - The story is [SHORT-STORY]
+- Think of [AGENCY-START] as a little dramatic setup: agency must be present, and then the story must satisfy exactly one of the two entrance conditions — either it opens with an adverb, or it’s compact enough to be a short story, but not both at once.
+
+[ELEGANT-STORY]
+A story is [ELEGANT-STORY] if both of the following are true:
+- The story is [PACING-AND-TONE]
+- Either of the following are true:
+  - The story is [MOOD-MIX]
+  - The story is [AGENCY-START]
+- Imagine the final prize: an [ELEGANT-STORY] blooms when a short, lighthearted pace pairs with either the mixed mood (conditional without perfect aspect) or the precise agency-start condition. It’s the intersection where pacing, tone, mood, and a hint of agency combine to create a tidy, pleasing whole.
+
+Read this as a map: each node is a signpost, each logical connector a path. Nothing here is changed except the voice — the structure and rules are preserved so you can annotate and reason with confidence, but enjoy the labels as characters in a small, exact world of story traits.

@@ -1,0 +1,73 @@
+Interviewer: Let’s go through this codebook together. First, can you define the basic surface-level labels?
+
+Expert: Sure.
+
+- Question: What does [STARTS-WITH-ADJECTIVE] mean?
+  - Answer: A story is [STARTS-WITH-ADJECTIVE] if the story starts with a adjective.
+
+- Question: And what about [STARTS-WITH-NOUN]?
+  - Answer: A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+- Question: How do you label tone or style at a simple level?
+  - Answer: 
+    - A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+    - A story is [STYLE-SURREAL] if the story is surreal.
+    - A story is [STYLE-HUMOROUS] if the story is humorous.
+
+Interviewer: Good. What about thematic labels?
+
+Expert:
+- Question: What does [THEME-PROBLEM-SOLVING] mean?
+  - Answer: A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+- Question: And [THEME-DECEPTION]?
+  - Answer: A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+Interviewer: Now for the composite or logical nodes — how are those specified?
+
+Expert:
+- Question: How is [START-TYPE-XOR] defined?
+  - Answer: A story is [START-TYPE-XOR] if exactly one of the following is true:
+    - The story is [STARTS-WITH-ADJECTIVE]
+    - The story is [STARTS-WITH-NOUN]
+
+- Question: How is [TONE-PLAYFUL] determined?
+  - Answer: A story is [TONE-PLAYFUL] if either of the following is true:
+    - The story's style is in the set { [STYLE-LIGHTHEARTED], [STYLE-HUMOROUS] }
+    - Both of the following are true:
+      - The story is [STYLE-SURREAL]
+      - The story is not [THEME-DECEPTION]
+
+Interviewer: That “not” is important — it's part of the logical structure.
+
+Expert: Exactly. It’s an explicit negation in the second branch.
+
+Interviewer: Continue—what’s next?
+
+Expert:
+- Question: What is [DECEPTION-OR-PROBLEM]?
+  - Answer: A story is [DECEPTION-OR-PROBLEM] if either of the following is true:
+    - The story is [THEME-DECEPTION]
+    - The story is [THEME-PROBLEM-SOLVING]
+
+- Question: There’s an equality test too. What does [STYLE-EQUALITY] mean?
+  - Answer: A story is [STYLE-EQUALITY] if the following equality holds:
+    - [STYLE-LIGHTHEARTED] = [STYLE-HUMOROUS]
+
+Interviewer: So that last one checks whether those two style labels are equivalent for the story.
+
+Expert: Correct.
+
+Interviewer: And finally, the most complex node?
+
+Expert:
+- Question: How is [COMPLEX-STORY] defined?
+  - Answer: A story is [COMPLEX-STORY] if both of the following are true:
+    - The story is [START-TYPE-XOR]
+    - Exactly one of the following is true:
+      - The story is [TONE-PLAYFUL]
+      - The story is [DECEPTION-OR-PROBLEM]
+
+Interviewer: To confirm — that means [COMPLEX-STORY] requires the XOR start-type and then it requires that exactly one of the two higher-level conditions (playful tone vs deception-or-problem theme) holds.
+
+Expert: Yes. The logical relationships and operators (Exactly one, either, both, and the negation) are all preserved as written. Each node and its ID remain unchanged; we’re just restating the same conditions in a conversational, question-and-answer format for clarity.

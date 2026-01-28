@@ -1,0 +1,33 @@
+In a dim, beloved archive where stories breathe like sleeping flowers, this little codebook sits like a gilded key. Think of it as a map drawn in ink and moonlight by a kindly archivist who delights in naming the traits of tales. Each entry below is both a hymn and a precise instruction: a lyrical description followed by the exact formal rule you will use when annotating. The relationships between these nodes are the invisible threads that hold the tapestry intact — they are unchanged, faithful, and precise.
+
+[HAS-A-FLASHBACK]
+Like a sudden, perfumed gust that pulls a reader backward through time, a narrative bearing a flashback opens a secret window into its past. Such a story lets memory bloom within the present, revealing who once was to explain who now is.
+A story is [HAS-A-FLASHBACK] if The story has a flashback
+
+[USES-WH-QUESTIONS]
+Imagine the tale as a curious child, tossing up who, what, where, when, why, and how like bright, probing seeds. When a story habitually plants these wh-questions, it invites the reader to lean in and attend to inquiry as a voice of the narrative itself.
+A story is [USES-WH-QUESTIONS] if The story uses wh-questions
+
+[USES-DISCOURSE-MARKERS]
+Some stories wear discourse markers like garlands — small guiding words and phrases that stitch sentences together, signaling shifts, emphasis, and the architecture of thought. When these markers grace the prose, they become the gentle signposts of the narrator’s mind.
+A story is [USES-DISCOURSE-MARKERS] if The story uses discourse markers
+
+[INTERACTIVE]
+In the realm where stories converse rather than merely declare, interactivity blooms. A tale is deemed [INTERACTIVE] when it chooses one clear path of engagement — exactly one. It either questions the reader directly through wh-questions, or it dances with discourse markers that guide the exchange, but it does not take both roads at once.
+A story is [INTERACTIVE] if exactly one of the following is true:
+- The story is [USES-WH-QUESTIONS]
+- The story is [USES-DISCOURSE-MARKERS]
+
+[COMPLEX-NARRATIVE]
+There are narratives that wear complexity like a twilight cloak: they fold time into themselves and yet do not solicit direct interaction from the reader. Such a complex narrative combines the art of recalling the past with a more solitary voice — it has a flashback and, importantly, it is not interactive.
+A story is [COMPLEX-NARRATIVE] if both of the following are true:
+- The story is [HAS-A-FLASHBACK]
+- The story is not [INTERACTIVE]
+
+[SPECIAL-CASE]
+Finally, observe the special cases — the rare curiosities that deserve their own label. A story becomes [SPECIAL-CASE] if it falls into either of two conditions: it belongs to the small set of interactive or complex narratives, or it is defined simply by the presence of a flashback. These are the tales that require a touch of extra attention in our registry.
+A story is [SPECIAL-CASE] if either of the following is true:
+- The story is in the set { [INTERACTIVE], [COMPLEX-NARRATIVE] }
+- The story is equal to [HAS-A-FLASHBACK]
+
+Thus, with metaphors braided alongside exact rules, you may read and apply this codebook. The poetry sings; the logic endures — unchanged, clear, and ready for the careful hand of annotation.

@@ -1,0 +1,86 @@
+In a quiet hall of ink and moonlight, where labels bloom like roses on the trellis of storytelling, this codebook unfurls its petals. Each line below is a delicate silver thread in a tapestry that guides annotators and reasoners alike. Though the language here sings with ornament, the architecture beneath remains exact and resolute: every node, every relationship, and every logical operator stands unchanged—carved in stone, gilded in gold.
+
+[SHORT-STORY]
+A tale is deemed [SHORT-STORY] when it wears the cloak of brevity: the story contains fewer than 160 words. Think of it as a comet streaking briefly across the sky — brief, bright, and counted by the handful of words it carries.
+
+[THEME-KINDNESS]
+A tale is [THEME-KINDNESS] if its heart beats with the theme Kindness. This label is given when kindness is a central current running through the narrative.
+
+[THEME-HELPING-OTHERS]
+A tale is [THEME-HELPING-OTHERS] if it carries the theme Helping Others. When characters reach outward to assist or uplift, this banner is raised.
+
+[THEME-PROBLEM-SOLVING]
+A tale is [THEME-PROBLEM-SOLVING] if it centers on Problem-Solving. Stories that twist through challenges and arrive at practical solutions wear this emblem.
+
+[STYLE-PHILOSOPHICAL]
+A tale is [STYLE-PHILOSOPHICAL] if its voice turns inward and questions—if it is philosophical. It contemplates, muses, and lingers on meaning.
+
+[HIGH-READABILITY]
+A tale is [HIGH-READABILITY] if it scores above 96.1 on the readability scale. Imagine a smooth river of prose that lets any reader glide downstream effortlessly.
+
+[STYLE-PLAYFUL]
+A tale is [STYLE-PLAYFUL] if it gambols in a playful style. It delights, teases, and dances with language and tone.
+
+[THEME-HUMOR]
+A tale is [THEME-HUMOR] if it carries the theme Humor. Laughter or comedic intent threads the storyline.
+
+[STYLE-HUMOROUS]
+A tale is [STYLE-HUMOROUS] if it is humorous in style. The narration itself makes room for wit and comedic timing.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A tale is [HAS-A-STORY-WITHIN-A-STORY] if it contains a story nested within the larger story—like a quaint doll hidden inside another.
+
+[TOPIC-MYSTICAL-CREATURES]
+A tale is [TOPIC-MYSTICAL-CREATURES] if it is about mystical creatures. Where dragons, sprites, or otherworldly beings tread, this flag flies.
+
+[HAS-A-RED-HERRING]
+A tale is [HAS-A-RED-HERRING] if it contains a Red Herring—an intentional diversion meant to mislead or distract.
+
+[KINDNESS-HELPING]
+A story is [KINDNESS-HELPING] if both of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [THEME-HELPING-OTHERS]
+(And both must hold simultaneously.)
+
+[LIGHT-HEARTED]
+A story is [LIGHT-HEARTED] if exactly one of the following is true (Xor):
+- The story is [STYLE-PLAYFUL]
+- The story is [STYLE-HUMOROUS]
+This is the delicate balance where a tale is playful or humorous—but not both—granting it an airy, singular temperament.
+
+[THEME-IN-CORE-SET]
+A story is [THEME-IN-CORE-SET] if the story's dominant theme is In the following set:
+- [THEME-KINDNESS], [THEME-HELPING-OTHERS], [THEME-PROBLEM-SOLVING]
+(Use In to check membership among those theme nodes.)
+
+[BALANCED-TONE]
+A story is [BALANCED-TONE] if the following Equal relationship holds:
+- The presence of [STYLE-PHILOSOPHICAL] Equal the presence of [STYLE-HUMOROUS]
+(They are Equal when either both are present or both are absent.)
+
+[MYSTICAL-ALLEGORY]
+A story is [MYSTICAL-ALLEGORY] if both of the following are true:
+- The story is [TOPIC-MYSTICAL-CREATURES]
+- The story is [HAS-A-STORY-WITHIN-A-STORY] And the story is [STYLE-PHILOSOPHICAL]
+(This nests an And inside an And to form an allegorical structure.)
+
+[COMPLEX-ARC]
+A story is [COMPLEX-ARC] if all of the following are true:
+- Either of the following is true (Or):
+  - The story is [KINDNESS-HELPING]
+  - The story is [THEME-PROBLEM-SOLVING]
+- Exactly one of the following is true (Xor):
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is Not [SHORT-STORY] Or the story is [HIGH-READABILITY]
+(Uses Not to exclude short stories unless they also meet HIGH-READABILITY; combines Or and Xor for nuanced arc structure.)
+
+[RECOMMENDABLE-COMPOSITION]
+A story is [RECOMMENDABLE-COMPOSITION] if both of the following are true:
+- The story is [COMPLEX-ARC] And the story is [BALANCED-TONE]
+- The story is [THEME-IN-CORE-SET] And either of the following is true (Or):
+  - The story is [LIGHT-HEARTED]
+  - The story is [MYSTICAL-ALLEGORY]
+(This node nests multiple logical operators to form a deep, recommendable composition: And at the top level, Or inside a branch, and references In, Equal, Not, and Xor through its subordinate nodes.)
+
+Thus, in this garden of criteria, each bracketed sigil is a plant with precise roots and branches. The language here may blossom with imagery, but the roots—the logical structure and the exact relationships—remain unaltered and steadfast, ready for use by those who annotate and reason with faithful care.

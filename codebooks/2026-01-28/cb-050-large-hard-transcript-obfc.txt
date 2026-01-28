@@ -1,0 +1,141 @@
+Interviewer: Let's go through this codebook node by node. First: what does [attr-6] mean?
+
+Expert: A story is [attr-6] if The story has a Red Herring.
+
+Interviewer: Clear. And [attr-9]?
+
+Expert: A story is [attr-9] if The story has more than 6 paragraphs.
+
+Interviewer: What about tone — [attr-15]?
+
+Expert: A story is [attr-15] if The story is lighthearted.
+
+Interviewer: Any nodes for plot devices?
+
+Expert: Yes. A story is [attr-7] if The story has Checkhov's gun.
+
+Interviewer: Themes? Start with [attr-20].
+
+Expert: A story is [attr-20] if The story has the theme Magic.
+
+Interviewer: And topics like the arts?
+
+Expert: A story is [attr-24] if The story is about the arts.
+
+Interviewer: Grammatical features?
+
+Expert: A story is [attr-25] if The story uses perfect aspect.
+
+Interviewer: More themes?
+
+Expert: A story is [attr-19] if The story has the theme Innovation.
+A story is [attr-18] if The story has the theme Growth.
+
+Interviewer: Styles again?
+
+Expert: A story is [attr-14] if The story is classic.
+A story is [attr-13] if The story starts with a preposition.
+A story is [attr-12] if The story starts with a adjective.
+A story is [attr-16] if The story is modern.
+
+Interviewer: Topics related to culture and history?
+
+Expert: A story is [attr-22] if The story is about cultural traditions.
+A story is [attr-23] if The story is about lost civilizations.
+A story is [attr-21] if The story is about bygone eras.
+
+Interviewer: Any theme for deception?
+
+Expert: A story is [attr-17] if The story has the theme Deception.
+
+Interviewer: Questions used in the story?
+
+Expert: A story is [attr-26] if The story uses wh-questions.
+
+Interviewer: Okay, now for the compound nodes. How is [attr-10] defined? This one looked nested.
+
+Expert: Right, [attr-10] requires that both of the following are true:
+- Either of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-7]
+- Either of the following is true:
+  - Exactly one of [attr-17] and [attr-26] is true
+  - The story is [attr-9]
+
+Interviewer: So it needs a plot device (red herring or Chekhov's gun) and either a specific exclusivity between deception and wh-questions or lots of paragraphs. Got it.
+
+Interviewer: Next composite: [attr-11].
+
+Expert: A story is [attr-11] if both of the following are true:
+- The story is [attr-9]
+- The story is [attr-25]
+
+Interviewer: And [attr-3]? That had a negation in it.
+
+Expert: Yes. [attr-3] is true if all of these hold:
+- Exactly one of the following is true:
+  - The story is [attr-14]
+  - The story is [attr-16]
+- The story is not [attr-15]
+- Either of the following is true:
+  - The story is [attr-13]
+  - The story is [attr-12]
+
+Interviewer: So it's exclusively classic or modern, not lighthearted, and begins with either a preposition or an adjective.
+
+Interviewer: What about [attr-4]?
+
+Expert: [attr-4] is true if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-22]
+  - The story is [attr-21]
+- Both of the following are true:
+  - The story is [attr-23]
+  - Exactly one of [attr-18] and [attr-17] is true
+
+Interviewer: So it can be about cultural traditions and bygone eras together, or about lost civilizations with an exclusive choice between growth and deception.
+
+Interviewer: Explain [attr-8].
+
+Expert: [attr-8] is true if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-19]
+  - The story is [attr-18]
+- All of the following are true:
+  - The story is [attr-19]
+  - The story is [attr-24]
+  - The story is not [attr-18]
+
+Interviewer: So either innovation and growth appear together, or innovation with the arts but explicitly not growth.
+
+Interviewer: And [attr-1]?
+
+Expert: [attr-1] is true if both of the following are true:
+- The story is [attr-24]
+- Either of the following is true:
+  - The story is [attr-8]
+  - The story is [attr-4]
+
+Interviewer: That links the arts topic to either innovation-growth mixing or cultural past themes.
+
+Interviewer: Finally, the big one: [attr-5]. How is that assembled?
+
+Expert: [attr-5] is true if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-1]
+  - Both of the following are true:
+    - The story is [attr-10]
+    - The story is [attr-11]
+- Either of the following is true:
+  - The story is [attr-3]
+  - Both of the following are true:
+    - The story is [attr-4]
+    - The story is [attr-8]
+
+Interviewer: So to get [attr-5], you need either an arts root or a surprise-rich narrative, and then either classic-vs-modern or a pairing of cultural-past-theme with innovation-growth-mix.
+
+Expert: Exactly — the logical structure is preserved: the top-level requirement is two conjunctive branches, and each branch is an either/or of the specified conditions.
+
+Interviewer: Great. That wraps up the nodes. One last check: you didn't change any node IDs, logical operators, or the underlying relationships, right?
+
+Expert: Correct. Every node ID remains in [attr-2] format exactly as provided, all logical operations (Either, Both, Exactly one, All, not) and their relationships are preserved, and no nodes were added or removed. This transcript simply puts the same codebook into a conversational question-and-answer form for readability and ease of use.

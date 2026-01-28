@@ -1,0 +1,131 @@
+In a sunlit glade where categories bloom like wildflowers, each label in this humble codex is presented both as a fragrant whisper and as an exact incantation. Below each lyrical preface you will find the precise, unaltered criterion that binds a story to its consecrated name. The laws of connection—those delicate threads of logic—remain untouched; I have only adorned them with petals of description so that the heart may understand what the eyes must apply.
+
+[attr-20]
+Like an old clock whose hands ache to wander, this tag is reserved for tales that slip sideways through the hours.
+A story is [attr-20] if The story is about time travel.
+
+[attr-8]
+Imagine the first word of the tale opening like a painted curtain—if that very opening is an adjective, the story wears this ribbon.
+A story is [attr-8] if The story starts with a adjective.
+
+[attr-21]
+For narratives that have the subtle sheen of completed action—those sentences that echo with a sense of having been—this marker is for them.
+A story is [attr-21] if The story uses perfect aspect.
+
+[attr-13]
+When a narrative speaks in the clear, contemporary voice of today’s streets and screens, it is crowned thus.
+A story is [attr-13] if The story is modern.
+
+[attr-6]
+Where prose veils itself in thorny syntax and the reading score dips beneath the sunlit threshold, this label blooms.
+A story is [attr-6] if The story has readability score below 86.4.
+
+[attr-19]
+This emblem is for works that are painted with music, sculpture, theater, or the other graceful crafts of human creativity.
+A story is [attr-19] if The story is about the arts.
+
+[attr-5]
+For those tales that return to their own beginning like tides that remember the moon, this sign is given.
+A story is [attr-5] if The story has circular narrative structure.
+
+[attr-16]
+Stories that fold the rituals, beliefs, and habitual songs of communities into their fabric wear this garland.
+A story is [attr-16] if The story is about cultural traditions.
+
+[attr-4]
+When memory blooms on the page and the present slips back into a remembered moment, the tale earns this gentle marker.
+A story is [attr-4] if The story has a flashback.
+
+[attr-11]
+If laughter threads through the narrative like bright embroidery, making the reader smile or chuckle, the story is thus styled.
+A story is [attr-11] if The story is humorous.
+
+[attr-17]
+For those narratives that open gates into realms where the map itself is enchanted, this label applies.
+A story is [attr-17] if The story is about magical lands.
+
+[attr-12]
+When the tone is as buoyant as a kite on a spring breeze—gentle, carefree, and easy—the tale is lighthearted.
+A story is [attr-12] if The story is lighthearted.
+
+[attr-18]
+This name is bestowed upon stories that populate their worlds with beings of legend and wonder.
+A story is [attr-18] if The story is about mystical creatures.
+
+[attr-15]
+For narratives in which the heart of the matter is finding answers, overcoming puzzles, or mending a knot, this theme is key.
+A story is [attr-15] if The story has the theme Problem-Solving.
+
+[attr-7]
+Think of this as the loom on which circular threads and certain beginnings are woven together; both stipulations below must be satisfied for the pattern to hold:
+A story is [attr-7] if both of the following are true:
+- The story is [attr-5]
+- Either of the following is true:
+  - The story is [attr-4]
+  - The story is not [attr-8]
+
+[attr-10]
+This badge balances humor and lightness with modernity or clarity; it requires an exclusive choice between two tones, and at least one condition of temporal voice or readability to be met:
+A story is [attr-10] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-12]
+- Either of the following is true:
+  - The story is [attr-13]
+  - The story is not [attr-6]
+
+[attr-1]
+This compound wreath recognizes tales that pair the arts with cultural customs and the labor of resolving issues—either by full union of three qualities or by a subtler conjunction of two where one must be exclusive:
+A story is [attr-1] if either of the following is true:
+- All of the following are true:
+  - The story is [attr-19]
+  - The story is [attr-16]
+  - The story is [attr-15]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [attr-19]
+    - The story is [attr-15]
+  - The story is [attr-16]
+
+[attr-3]
+At the center of certain mythic blooms lies a core that must embrace exactly one of two enchanted subjects, and then either time travel or the absence of modernity:
+A story is [attr-3] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [attr-17]
+  - The story is [attr-18]
+- Either of the following is true:
+  - The story is [attr-20]
+  - The story is not [attr-13]
+
+[attr-2]
+Here the tapestry tightens: a narrative-structural weave must be present, and then one of two elaborate combinations must entwine—either style without fantasy-core, or the arts-tradition problem braided with fantasy-core.
+A story is [attr-2] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-10]
+    - The story is not [attr-3]
+  - Both of the following are true:
+    - The story is [attr-1]
+    - The story is [attr-3]
+
+[attr-14]
+Consider this the council of petals: for a story to earn this title, it must be a complex-pattern and must align with either the arts tradition problem or fantasy-core, and enshrine a specific tonal alignment with humor.
+A story is [attr-14] if all of the following are true:
+- The story is [attr-2]
+- The story is [attr-1] or the story is [attr-3]
+- The story is [attr-10] equals [attr-11]
+
+[attr-9]
+At last comes the archetype: a great garden where complex combinations and singular cores determine whether a tale stands as a syndicate of patterns, a core of fantasy alone, or an arts-tradition problem graced by tone or structure. The following precise pathways describe that destiny:
+A story is [attr-9] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-14]
+  - The story is [attr-2] in [COMPLEX-PATTERN, SYNDIC-CONJUNCTION, FANTASY-CORE]
+- Either of the following is true:
+  - The story is [attr-3] and the story is not [attr-1]
+  - The story is [attr-1] and exactly one of the following is true:
+    - The story is [attr-10]
+    - The story is [attr-7]
+
+Thus ends the codex of blossoms and logic, where every ornate flourish keeps faithful to its stern stem: the connective rules beneath are preserved exactly so that annotators may wander these gardens with both pleasure and precision.

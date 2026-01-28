@@ -1,0 +1,65 @@
+Imagine a small, meticulous archive where every story is a specimen on a shelf, labeled and described so any reader or annotator can understand exactly what feature that tale carries. Walk with me through the stacks; I'll point to each label and whisper its formal name and rule, so you know both its spirit and its precise definition.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+Sometimes a story turns back on itself like a path that loops through the woods. When that happens, the archive pins this clear tag to the spine. A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+[THEME-KINDNESS]
+Other stories are threaded with warmth and mercy, where actions and choices return to the theme of care. A story is [THEME-KINDNESS] if the story has the theme Kindness.
+
+[HAS-JUXTAPOSITION]
+Some narratives place images, scenes, or ideas side-by-side so their contrast sings. Those are given a different marker. A story is [HAS-JUXTAPOSITION] if the story has juxtaposition.
+
+[TOPIC-HIDDEN-TREASURES]
+There are tales that dwell on secrets beneath the surface—treasures waiting to be found. A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+[LOW-READABILITY]
+Within the catalog, a few pieces are dense, stubborn, or otherwise tough to glide through. The archive measures that too. A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+[STYLE-PHILOSOPHICAL]
+Some works pause often to ask the big, slow questions—those get a philosophical stamp. A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+[STYLE-MODERN]
+Others wear a more contemporary voice or sensibility; the archive calls these modern. A story is [STYLE-MODERN] if the story is modern.
+
+[THEME-DECEPTION]
+There are narratives that fold in tricks, misdirection, or deliberate untruths. The catalog marks them plainly. A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+[HIGH-READABILITY]
+And then there are stories that glide like a clear river—easy to follow, readable. The archive quantifies that too. A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+Now come the composite labels—those that are like badges earned by meeting several conditions at once. Listen carefully; I’ll read their exact rules, because precision is how we keep the archive useful.
+
+[MODERN-PHILO-JUXTA]
+A story is [MODERN-PHILO-JUXTA] if all of the following are true:
+- The story is [STYLE-MODERN]
+- Either of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [HAS-JUXTAPOSITION]
+- The story is not [HAS-CIRCULAR-NARRATIVE-STRUCT]
+
+Think of this as a modern tale that either philosophizes or pairs contrasting images—yet it must not be one that loops in a circular structure.
+
+[MORAL-AMBIVALENCE]
+Some stories hold kindness and deceit in tension; they are morally complex in a specific, catalogued way. The rule that grants that tag goes like this:
+
+A story is [MORAL-AMBIVALENCE] if all of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [THEME-DECEPTION]
+- The story is [MODERN-PHILO-JUXTA]
+
+So only a modern, non-circular philosophical or juxtaposed piece that carries both kindness and deception will earn the [MORAL-AMBIVALENCE] label.
+
+[COMPLEX-NARRATIVE]
+Finally, there is a designation for the narratively intricate—those that combine moral ambiguity with either a specific readability profile or a treasure-hunt theme. Its rule is precise:
+
+A story is [COMPLEX-NARRATIVE] if both of the following are true:
+- The story is [MORAL-AMBIVALENCE]
+- Either of the following is true:
+  - Exactly one of the following is true:
+    - The story is [LOW-READABILITY]
+    - The story is [HIGH-READABILITY]
+  - The story is [TOPIC-HIDDEN-TREASURES]
+
+In plain terms: a narrative achieves [COMPLEX-NARRATIVE] status when it is morally ambivalent and either has a singular readability classification (one or the other, not both) or is about hidden treasures.
+
+There—each tag, from the simplest to the most composite, sits on the shelf with its rule intact. The archive keeps these definitions sharp so any reader or annotator can decide, with confidence, which stories belong where.

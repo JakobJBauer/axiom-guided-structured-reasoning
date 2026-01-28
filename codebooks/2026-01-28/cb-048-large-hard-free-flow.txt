@@ -1,0 +1,124 @@
+[TOPIC-TIME-TRAVEL]
+Call a story [TOPIC-TIME-TRAVEL] when it’s about time travel — plain and simple. If the plot centers on moving through time, the tag fits.
+
+[STARTS-WITH-ADJECTIVE]
+If the very first word or opening of the tale is an adjective, the story is [STARTS-WITH-ADJECTIVE].
+
+[USES-PERFECT-ASPECT]
+When the narrative uses the perfect aspect (those have/had/has done constructions), mark the story as [USES-PERFECT-ASPECT].
+
+[STYLE-MODERN]
+If the story feels modern in style, it’s labeled [STYLE-MODERN].
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] when its readability score falls below 86.4 — that threshold determines the tag.
+
+[TOPIC-THE-ARTS]
+If the story’s subject is the arts, assign [TOPIC-THE-ARTS].
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+When the narrative loops back on itself — a circular narrative structure — call it [HAS-CIRCULAR-NARRATIVE-STRUCT].
+
+[TOPIC-CULTURAL-TRADITIONS]
+If the story is about cultural traditions, it should be marked [TOPIC-CULTURAL-TRADITIONS].
+
+[HAS-A-FLASHBACK]
+A story gets [HAS-A-FLASHBACK] if it includes a flashback.
+
+[STYLE-HUMOROUS]
+If the story’s tone is humorous, label it [STYLE-HUMOROUS].
+
+[TOPIC-MAGICAL-LANDS]
+Stories about magical lands receive the [TOPIC-MAGICAL-LANDS] tag.
+
+[STYLE-LIGHTHEARTED]
+When a story has a breezy, lighthearted tone, call it [STYLE-LIGHTHEARTED].
+
+[TOPIC-MYSTICAL-CREATURES]
+If the focus is mystical creatures, the story is [TOPIC-MYSTICAL-CREATURES].
+
+[THEME-PROBLEM-SOLVING]
+When problem-solving is a central theme, the story is [THEME-PROBLEM-SOLVING].
+
+[NARRATIVE-STRUCTURAL]
+A story qualifies as [NARRATIVE-STRUCTURAL] only when both of the following are true:
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- Either of the following is true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is not [STARTS-WITH-ADJECTIVE]
+
+So, to be [NARRATIVE-STRUCTURAL], the tale must loop structurally, and then either include a flashback or it must not begin with an adjective.
+
+[STYLE-AND-TONE]
+Label a story [STYLE-AND-TONE] when both of these conditions hold:
+- Exactly one of the following is true:
+  - The story is [STYLE-HUMOROUS]
+  - The story is [STYLE-LIGHTHEARTED]
+- Either of the following is true:
+  - The story is [STYLE-MODERN]
+  - The story is not [LOW-READABILITY]
+
+In other words: pick a single tone — humorous or lighthearted, but not both — and then the story should be modern, or at least not score as low readability.
+
+[ARTS-TRADITIONAL-PROBLEM]
+A story is [ARTS-TRADITIONAL-PROBLEM] if either of these broader possibilities holds:
+- All of the following are true:
+  - The story is [TOPIC-THE-ARTS]
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+  - The story is [THEME-PROBLEM-SOLVING]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [TOPIC-THE-ARTS]
+    - The story is [THEME-PROBLEM-SOLVING]
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+
+So it’s either a full match of arts + cultural traditions + problem-solving, or it’s about cultural traditions plus exactly one of (the arts or problem-solving).
+
+[FANTASY-CORE]
+A story is [FANTASY-CORE] when both of these conditions are met:
+- Exactly one of the following is true:
+  - The story is [TOPIC-MAGICAL-LANDS]
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+- Either of the following is true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is not [STYLE-MODERN]
+
+So, [FANTASY-CORE] needs a single core fantasy element — magical lands or mystical creatures — and then either time travel is present or the style isn’t modern.
+
+[COMPLEX-PATTERN]
+A story is [COMPLEX-PATTERN] if both of the following are true:
+- The story is [NARRATIVE-STRUCTURAL]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [STYLE-AND-TONE]
+    - The story is not [FANTASY-CORE]
+  - Both of the following are true:
+    - The story is [ARTS-TRADITIONAL-PROBLEM]
+    - The story is [FANTASY-CORE]
+
+So it must be narratively structural, and then either have a single, non-fantastical style-and-tone, or combine arts/tradition/problem themes with a fantasy core.
+
+[SYNDIC-CONJUNCTION]
+A story is [SYNDIC-CONJUNCTION] if all of the following are true:
+- The story is [COMPLEX-PATTERN]
+- The story is [ARTS-TRADITIONAL-PROBLEM] or the story is [FANTASY-CORE]
+- The story is [STYLE-AND-TONE] equals [STYLE-HUMOROUS]
+
+This one is strict: you need the complex pattern, either the arts-tradition-problem axis or a fantasy core, and the style-and-tone must equal humorous (expressed with that exact equality).
+
+[STORY-ARCHETYPE]
+A story is [STORY-ARCHETYPE] if either of the following is true:
+- Both of the following are true:
+  - The story is [SYNDIC-CONJUNCTION]
+  - The story is [COMPLEX-PATTERN] in [COMPLEX-PATTERN, SYNDIC-CONJUNCTION, FANTASY-CORE]
+- Either of the following is true:
+  - The story is [FANTASY-CORE] and the story is not [ARTS-TRADITIONAL-PROBLEM]
+  - The story is [ARTS-TRADITIONAL-PROBLEM] and exactly one of the following is true:
+    - The story is [STYLE-AND-TONE]
+    - The story is [NARRATIVE-STRUCTURAL]
+
+So the archetype can come from a tight conjunction of syndicate and complexity (with that membership check), or from a fantasy core that’s not arts-tradition-problem, or from arts-tradition-problem paired with exactly one of style-and-tone or narrative-structural.
+
+---
+
+That’s the full codebook in plain, conversational terms — the logical skeleton hasn’t changed: every bracketed node, every “both/either/exactly one/not/or” relationship, and every phrase you rely on for annotation remains intact. I’ve just smoothed the language so it reads more naturally while preserving the exact logic you use to reason and label.

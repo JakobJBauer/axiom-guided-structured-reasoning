@@ -1,0 +1,39 @@
+Think of this codebook as an old map kept by a librarian of tales — each label is a lantern, and each lantern only lights up when a story meets the exact signposts written beneath it. I will walk you through these lanterns one by one, keeping every label, every rule, and every logical stitch exactly as it appears on the map.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if The story uses superlative forms
+- Here the librarian pins a simple ribbon: whenever a tale reaches for the extremes — the tallest mountain, the bravest hero, the most terrible storm — the lantern [USES-SUPERLATIVE-FORMS] glows. The rule is plain and direct.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect
+- Another lantern waits for grammar’s echo: if a story speaks in the perfect aspect (things that have happened, have been done, have left traces), then [USES-PERFECT-ASPECT] is lit. It’s a grammatical fingerprint, kept neat and unambiguous.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations
+- This label marks the territory of content: whenever the narrative wanders among ruins, forgotten cities, or cultures that vanished beneath sand and sea, the map declares it [TOPIC-LOST-CIVILIZATIONS].
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if The story has juxtaposition
+- When the tale places two images, ideas, or moments side by side to create contrast or resonance, the [HAS-JUXTAPOSITION] lantern flickers — a sign that comparison is in play.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if The story has fewer than 160 words
+- The librarian keeps a strict measure: if a narrative fits in under 160 words, it is tagged [SHORT-STORY]. Small packages, precise judgments.
+
+[EPICALLY-CONCISE-LOST]
+A story is [EPICALLY-CONCISE-LOST] if both of the following are true:
+- The story is [TOPIC-LOST-CIVILIZATIONS]
+- The story is [SHORT-STORY]
+- Now two lanterns must shine together. Only when a tale is both about lost civilizations and compact enough to be under 160 words does the compound lantern [EPICALLY-CONCISE-LOST] ignite. It’s the meeting of subject and brevity — a tiny epic.
+
+[ORNATE-REFLECTIVE]
+A story is [ORNATE-REFLECTIVE] if either of the following are true:
+- Both of the following are true:
+  - The story is [USES-SUPERLATIVE-FORMS]
+  - The story is [USES-PERFECT-ASPECT]
+- Both of the following are true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [HAS-JUXTAPOSITION]
+- The final lantern is a little more nuanced, like a crossroads with two paths. [ORNATE-REFLECTIVE] lights when either of two paired conditions occurs: either the tale combines lofty, superlative language with the perfect aspect, or it pairs the perfect aspect with deliberate juxtaposition. In both cases the perfect aspect is central, but it shares the stage with different companions to create that ornate, reflective quality.
+
+That is the whole map — each bracketed name, each conditional line, every “both” and “either” preserved exactly as the librarian wrote them. Read it as a set of precise rules and also as a cast of lanterns: each one waits, quietly, for the story to meet the exact combination of signs and step into its light.

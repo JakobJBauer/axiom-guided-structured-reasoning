@@ -1,0 +1,78 @@
+Codebook — Structured version
+
+Purpose
+- Provide a clear, organized reference for annotators to decide which labels apply to a story.
+- Maintain exact node IDs and logical relationships. Do not add, remove, or change any nodes or logical operators.
+
+1) Atomic (single-condition) labels
+- These labels are decided by a single observable property of the story.
+
+  - [attr-6]
+    - Definition: A story is [attr-6] if the story is minimalist.
+
+  - [attr-4]
+    - Definition: A story is [attr-4] if the story has readability score above 96.1.
+
+  - [attr-11]
+    - Definition: A story is [attr-11] if the story uses superlative forms.
+
+  - [attr-8]
+    - Definition: A story is [attr-8] if the story has the theme Growth.
+
+  - [attr-10]
+    - Definition: A story is [attr-10] if the story is about time travel.
+
+  - [attr-9]
+    - Definition: A story is [attr-9] if the story is about hidden treasures.
+
+2) Composite labels (logical combinations)
+- These labels are defined by combining atomic labels with logical operators. Read each composite as: "A story is [attr-5] if ..." followed by the logical conditions.
+
+  - [attr-1]
+    - A story is [attr-1] if both of the following are true:
+      - The story is [attr-6]
+      - The story is [attr-4]
+
+  - [attr-3]
+    - A story is [attr-3] if both of the following are true:
+      - The story is [attr-11]
+      - The story is not [attr-6]
+
+  - [attr-7]
+    - A story is [attr-7] if both of the following are true:
+      - The story is [attr-8]
+      - Either of the following is true:
+        - The story is [attr-10]
+        - The story is [attr-9]
+
+  - [attr-2]
+    - A story is [attr-2] if both of the following are true:
+      - The story is [attr-1]
+      - Either of the following is true:
+        - The story is [attr-3]
+        - The story is [attr-7]
+
+3) Quick annotation checklist (use this in order)
+- Step 1 — Evaluate atomic properties:
+  - Is the story minimalist? → mark [attr-6]
+  - Is readability > 96.1? → mark [attr-4]
+  - Does it use superlative forms? → mark [attr-11]
+  - Is the theme Growth? → mark [attr-8]
+  - Is it about time travel? → mark [attr-10]
+  - Is it about hidden treasures? → mark [attr-9]
+
+- Step 2 — Infer composite labels using the exact logical rules:
+  - [attr-1]: apply when both constituent atomic labels are present.
+  - [attr-3]: apply when [attr-11] is true and [attr-6] is false.
+  - [attr-7]: apply when [attr-8] is true and at least one of the listed topics is true.
+  - [attr-2]: apply when [attr-1] is true and at least one of ([attr-3], [attr-7]) is true.
+
+4) Notes and tips for consistent decisions
+- Preserve the logical operators exactly as stated:
+  - "both of the following are true" = logical AND
+  - "Either of the following is true" = logical OR
+  - "is not" = logical NOT
+- Do not infer a composite label unless all required logical conditions are satisfied.
+- Evaluate atomic labels first; then apply the composite rules to avoid mistakes.
+
+End of codebook — keep this structure during annotation and reasoning.

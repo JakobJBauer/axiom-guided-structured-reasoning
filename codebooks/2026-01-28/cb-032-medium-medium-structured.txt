@@ -1,0 +1,82 @@
+Codebook — Structured definitions for story labels
+
+Notes for annotators
+- All node IDs are shown in [BRACKET] format exactly as required.
+- Logical relations (Not, And, Or, Exactly one, Either, Both) are preserved as written. Do not change these when applying labels.
+- Use the definitions below to decide whether a story satisfies each node.
+
+1) Simple (atomic) labels
+- [MANY-PARAGRAPHS]
+  - Definition: A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+  - Quick check: Count paragraph breaks; label when > 6.
+
+- [STYLE-CLASSIC]
+  - Definition: A story is [STYLE-CLASSIC] if the story is classic.
+  - Quick check: Use your sense of "classic" style (conventional structure, tone, or genre conventions).
+
+- [HAS-A-CLIFFHANGER]
+  - Definition: A story is [HAS-A-CLIFFHANGER] if the story has a cliffhanger.
+  - Quick check: The ending or a chapter leaves a major unresolved tension.
+
+- [STARTS-WITH-PREPOSITION]
+  - Definition: A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+  - Quick check: The very first word is a preposition (e.g., "In", "On", "At", "By", etc.).
+
+- [THEME-DECEPTION]
+  - Definition: A story is [THEME-DECEPTION] if the story has the theme Deception.
+  - Quick check: Central plot or characters revolve around lying, trickery, or betrayal.
+
+- [STYLE-PLAYFUL]
+  - Definition: A story is [STYLE-PLAYFUL] if the story is playful.
+  - Quick check: Tone is light, whimsical, or mischievous.
+
+- [THEME-HELPING-OTHERS]
+  - Definition: A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others.
+  - Quick check: Core motivation or actions emphasize assistance, altruism, or rescue.
+
+- [THEME-AGENCY]
+  - Definition: A story is [THEME-AGENCY] if the story has the theme Agency.
+  - Quick check: Characters take independent action; focus on choice and control.
+
+- [HAS-JUXTAPOSITION]
+  - Definition: A story is [HAS-JUXTAPOSITION] if the story has juxtaposition.
+  - Quick check: Contrasting elements are placed side-by-side for effect.
+
+- [STYLE-PHILOSOPHICAL]
+  - Definition: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+  - Quick check: Reflective, idea-driven tone, exploring questions about meaning or existence.
+
+2) Compound labels (preserve logical structure exactly)
+- [RICH-THEME]
+  - Definition: A story is [RICH-THEME] if either of the following is true:
+    - The story is both [THEME-DECEPTION] and not [THEME-HELPING-OTHERS]
+    - Exactly one of the following is true:
+      - The story is [THEME-AGENCY]
+      - The story is [THEME-HELPING-OTHERS]
+  - Interpretation tips:
+    - First branch: label [RICH-THEME] when Deception is present and Helping Others is absent.
+    - Second branch (Exactly one): label [RICH-THEME] when exactly one of Agency or Helping Others applies (i.e., XOR).
+
+- [COMPLEX-CLASSIC-ARC]
+  - Definition: A story is [COMPLEX-CLASSIC-ARC] if both of the following are true:
+    - The story is [STYLE-CLASSIC]
+    - Either of the following is true:
+      - The story is both [HAS-A-CLIFFHANGER] and not [STYLE-PLAYFUL]
+      - The story is both [STARTS-WITH-PREPOSITION] and [RICH-THEME]
+  - Interpretation tips:
+    - First required condition: the story must be [STYLE-CLASSIC].
+    - Second required condition: at least one of the two sub-conditions must hold:
+      - Sub-condition A: It has a cliffhanger and it is not playful.
+      - Sub-condition B: It begins with a preposition and meets [RICH-THEME].
+
+3) Quick decision flow (how to think through annotations)
+- Step 1: Apply atomic labels (section 1) independently.
+- Step 2: Evaluate [RICH-THEME]:
+  - If Deception present and Helping Others absent → [RICH-THEME] = true.
+  - Else, if exactly one of Agency or Helping Others is true → [RICH-THEME] = true.
+  - Otherwise → [RICH-THEME] = false.
+- Step 3: Evaluate [COMPLEX-CLASSIC-ARC]:
+  - If not [STYLE-CLASSIC] → [COMPLEX-CLASSIC-ARC] = false.
+  - If [STYLE-CLASSIC] and either (Has cliffhanger and not playful) or (Starts with preposition and [RICH-THEME]) → [COMPLEX-CLASSIC-ARC] = true.
+
+End of codebook. Follow these structured definitions exactly when annotating.

@@ -1,0 +1,89 @@
+[attr-9]  
+Call a story [attr-9] when it stretches out beyond six paragraphs—seven or more, and it qualifies.
+
+[attr-4]  
+A story earns [attr-4] if it contains another story nested inside it—a story within the story.
+
+[attr-16]  
+Use [attr-16] when the very first word of the story is a noun.
+
+[attr-29]  
+Mark [attr-29] if the story uses superlative forms—language like “best,” “greatest,” “most,” and similar constructions.
+
+[attr-5]  
+A story is [attr-5] if it includes Chekhov’s gun: an element introduced earlier that later becomes meaningfully important.
+
+[attr-21]  
+Tag [attr-21] when the story’s theme is Magic.
+
+[attr-28]  
+Choose [attr-28] if the story uses conditional mood—phrasing along the lines of “would,” “could,” “might,” “if…then,” and so on.
+
+[attr-30]  
+A story is [attr-30] when it uses wh-questions—questions such as “who,” “what,” “when,” “where,” “why,” or “how.”
+
+[attr-22]  
+Apply [attr-22] if the story is about hidden treasures.
+
+[attr-20]  
+Use [attr-20] when the story’s theme is Innovation.
+
+[attr-24]  
+Label [attr-24] if the story is about seasonal changes.
+
+[attr-25]  
+A story is [attr-25] if it’s about the arts.
+
+[attr-7]  
+Mark [attr-7] when the story runs longer than 375 words.
+
+[attr-18]  
+Tag [attr-18] if the story has the theme Growth.
+
+[attr-23]  
+Use [attr-23] when the story is about magical lands.
+
+[attr-26]  
+Choose [attr-26] if the story is about time travel.
+
+[attr-19]  
+A story is [attr-19] if the story has the theme Hardship.
+
+[attr-14]  
+Mark [attr-14] if the story opens with an adverb.
+
+[attr-3]  
+Use [attr-3] when the story includes a moral lesson.
+
+[attr-8]  
+A story counts as [attr-8] if its readability score is below 86.4.
+
+[attr-13]  
+Apply [attr-13] if the story starts with an adjective.
+
+[attr-15]  
+A story is [attr-15] exactly when it is not [attr-16].
+
+[attr-17]  
+A story becomes [attr-17] only when both conditions land at once: it is [attr-7] and it is [attr-9].
+
+[attr-2]  
+A story fits [attr-2] if either of these paths works out. One option is that exactly one of the following is true: the story is [attr-14] or the story is [attr-13]. The other option is that both of the following are true: the story is [attr-15] and the story is [attr-30].
+
+[attr-11]  
+Call it [attr-11] when two paired ideas are both present. First, either of the following is true: the story is [attr-21] or the story is [attr-23]. Second, either of the following is true: the story is [attr-20] or the story is [attr-26]. Both halves must be satisfied.
+
+[attr-6]  
+A story qualifies as [attr-6] if both of the following are true: the story is [attr-28], and either of the following is true: the story is [attr-30] or the story is [attr-8].
+
+[attr-1]  
+Use [attr-1] when both of the following are true: the story is [attr-4], and either of the following is true—either the story is [attr-5], or (both of the following are true: the story is [attr-29] and it is not [attr-28]).
+
+[attr-27]  
+A story is [attr-27] if both of the following are true: the story is [attr-22], and either of these two bundles holds. Bundle one: both of the following are true—the story is [attr-18] and the story is [attr-3]. Bundle two: both of the following are true—the story is [attr-19] and it is not [attr-3].
+
+[attr-12]  
+Mark [attr-12] when both of the following are true: the story is [attr-24], and either of the following is true—either the story is [attr-25], or (both of the following are true: the story is [attr-29] and it is not [attr-8]).
+
+[attr-10]  
+A story reaches [attr-10] when two big requirements are met. First, either of the following is true: the story is [attr-1], or (both of the following are true: the story is [attr-17] and the story is [attr-6]). Second, exactly one of the following is true: the story is [attr-27] or the story is [attr-12].

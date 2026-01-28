@@ -1,0 +1,193 @@
+{
+  "nodes": [
+    {
+      "id": "theme-agency",
+      "label": "THEME-AGENCY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-noun",
+      "label": "STARTS-WITH-NOUN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-giant-creatures",
+      "label": "TOPIC-GIANT-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-kindness",
+      "label": "THEME-KINDNESS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "high-readability",
+      "label": "HIGH-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-mystical-creatures",
+      "label": "TOPIC-MYSTICAL-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-problem-solving",
+      "label": "THEME-PROBLEM-SOLVING",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "mystical-giants",
+      "label": "MYSTICAL-GIANTS",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-giant-creatures",
+        "topic-mystical-creatures"
+      ]
+    },
+    {
+      "id": "solver-or-agency",
+      "label": "SOLVER-OR-AGENCY",
+      "formula_type": "Xor",
+      "formula_args": [
+        "theme-problem-solving",
+        "theme-agency"
+      ]
+    },
+    {
+      "id": "altruism-solver",
+      "label": "ALTRUISM-SOLVER",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-kindness",
+        "solver-or-agency"
+      ]
+    },
+    {
+      "id": "opening-assertive",
+      "label": "OPENING-ASSERTIVE",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Equal",
+          "formula_args": [
+            "starts-with-noun",
+            "true"
+          ]
+        },
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "theme-agency"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "featured-story",
+      "label": "FEATURED-STORY",
+      "formula_type": "And",
+      "formula_args": [
+        "mystical-giants",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "altruism-solver",
+                {
+                  "formula_type": "Equal",
+                  "formula_args": [
+                    "high-readability",
+                    "true"
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "opening-assertive",
+                {
+                  "formula_type": "In",
+                  "formula_args": [
+                    "topic-giant-creatures",
+                    [
+                      "topic-giant-creatures",
+                      "topic-mystical-creatures"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic-giant-creatures",
+      "target": "mystical-giants"
+    },
+    {
+      "source": "topic-mystical-creatures",
+      "target": "mystical-giants"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "solver-or-agency"
+    },
+    {
+      "source": "theme-agency",
+      "target": "solver-or-agency"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "altruism-solver"
+    },
+    {
+      "source": "solver-or-agency",
+      "target": "altruism-solver"
+    },
+    {
+      "source": "starts-with-noun",
+      "target": "opening-assertive"
+    },
+    {
+      "source": "theme-agency",
+      "target": "opening-assertive"
+    },
+    {
+      "source": "mystical-giants",
+      "target": "featured-story"
+    },
+    {
+      "source": "altruism-solver",
+      "target": "featured-story"
+    },
+    {
+      "source": "high-readability",
+      "target": "featured-story"
+    },
+    {
+      "source": "opening-assertive",
+      "target": "featured-story"
+    },
+    {
+      "source": "topic-giant-creatures",
+      "target": "featured-story"
+    },
+    {
+      "source": "topic-mystical-creatures",
+      "target": "featured-story"
+    }
+  ]
+}

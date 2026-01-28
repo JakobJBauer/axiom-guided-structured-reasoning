@@ -1,0 +1,168 @@
+{
+  "nodes": [
+    {
+      "id": "has-a-moral-lesson",
+      "label": "HAS-A-MORAL-LESSON",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-perfect-aspect",
+      "label": "USES-PERFECT-ASPECT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-cliffhanger",
+      "label": "HAS-A-CLIFFHANGER",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-kindness",
+      "label": "THEME-KINDNESS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "STYLE-MODERN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-flashback",
+      "label": "HAS-A-FLASHBACK",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-classic",
+      "label": "STYLE-CLASSIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "long-story",
+      "label": "LONG-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-juxtaposition",
+      "label": "HAS-JUXTAPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-lighthearted",
+      "label": "STYLE-LIGHTHEARTED",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "rich-narrative",
+      "label": "RICH-NARRATIVE",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "has-a-cliffhanger",
+            "has-a-flashback"
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "has-juxtaposition",
+            "uses-perfect-aspect"
+          ]
+        },
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "style-lighthearted"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "has-a-cliffhanger",
+            "has-a-flashback",
+            "has-juxtaposition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-story",
+      "label": "COMPLEX-STORY",
+      "formula_type": "And",
+      "formula_args": [
+        "rich-narrative",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "theme-kindness",
+                "has-a-moral-lesson"
+              ]
+            },
+            {
+              "formula_type": "Equal",
+              "formula_args": [
+                "style-modern",
+                "style-classic"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "has-a-cliffhanger",
+      "target": "rich-narrative"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "rich-narrative"
+    },
+    {
+      "source": "has-juxtaposition",
+      "target": "rich-narrative"
+    },
+    {
+      "source": "uses-perfect-aspect",
+      "target": "rich-narrative"
+    },
+    {
+      "source": "style-lighthearted",
+      "target": "rich-narrative"
+    },
+    {
+      "source": "rich-narrative",
+      "target": "complex-story"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "complex-story"
+    },
+    {
+      "source": "has-a-moral-lesson",
+      "target": "complex-story"
+    },
+    {
+      "source": "style-modern",
+      "target": "complex-story"
+    },
+    {
+      "source": "style-classic",
+      "target": "complex-story"
+    }
+  ]
+}

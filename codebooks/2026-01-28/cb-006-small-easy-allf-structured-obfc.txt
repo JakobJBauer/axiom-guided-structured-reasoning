@@ -1,0 +1,61 @@
+Structured codebook — clear, hierarchical definitions for annotators
+
+Purpose
+- Provide a compact, organized reference for annotating these story-level labels.
+- Preserve exact node IDs and logical relationships; do not change any IDs, operations, or formulas.
+- Use this as a decision checklist when assigning labels.
+
+Core node definitions
+- [attr-2]
+  - Definition: A story is [attr-2] if the story has a flashback.
+  - Annotator note: Mark this whenever a portion of the narrative explicitly returns to an earlier time or event.
+
+- [attr-6]
+  - Definition: A story is [attr-6] if the story uses wh-questions.
+  - Annotator note: Look for questions beginning with who, what, when, where, why, how, etc.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story uses discourse markers.
+  - Annotator note: Identify explicit connective/organizational words or phrases (e.g., however, then, meanwhile, on the other hand).
+
+Compound and derived labels (logical rules)
+- [attr-3]
+  - Rule: A story is [attr-3] if exactly one of the following is true:
+    - The story is [attr-6]
+    - The story is [attr-5]
+  - Interpretation: Apply [attr-3] only when one of those two source labels is present and the other is absent (this is an exclusive-or condition).
+
+- [attr-1]
+  - Rule: A story is [attr-1] if both of the following are true:
+    - The story is [attr-2]
+    - The story is not [attr-3]
+  - Interpretation: Mark [attr-1] when a flashback occurs and the story does not meet the exclusive-interactive condition above.
+
+- [attr-4]
+  - Rule: A story is [attr-4] if either of the following is true:
+    - The story is in the set { [attr-3], [attr-1] }
+    - The story is equal to [attr-2]
+  - Interpretation: [attr-4] applies when any of these hold:
+    - The story is labeled [attr-3], or
+    - The story is labeled [attr-1], or
+    - The story is labeled [attr-2].
+  - Note: Because [attr-2] alone implies [attr-4] (by the final disjunct), any flashback automatically meets [attr-4], and being [attr-3] or [attr-1] also triggers it.
+
+Quick decision checklist (step-by-step)
+1. Does the story have a flashback?
+   - If yes → assign [attr-2].
+2. Does the story use wh-questions?
+   - If yes → assign [attr-6].
+3. Does the story use discourse markers?
+   - If yes → assign [attr-5].
+4. Determine [attr-3]:
+   - Assign [attr-3] if exactly one of [attr-6] or [attr-5] is true.
+5. Determine [attr-1]:
+   - Assign [attr-1] if [attr-2] is true AND [attr-3] is not true.
+6. Determine [attr-4]:
+   - Assign [attr-4] if any of: [attr-3], [attr-1], or [attr-2] is true.
+
+Final reminders for annotators
+- Do not alter any node IDs or logical operators.
+- Follow the exact logical rules above; the compound nodes depend on the primitive labels.
+- Use the quick checklist to ensure consistent, reproducible labeling.

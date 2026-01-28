@@ -1,0 +1,50 @@
+Codebook — Structured Reference for Annotators
+
+Purpose
+- Provide a clear, step-by-step guide to the node definitions and their relationships.
+- Help annotators think in a structured way while preserving all logical connections and node IDs.
+
+Annotation workflow (recommended)
+1. Identify atomic properties first (each single-node feature).
+2. Record whether each atomic node applies.
+3. Apply composite rules (if any) that require multiple atomic nodes to be true.
+
+Atomic nodes (single-feature definitions)
+- [attr-2]
+  - Definition: A story is [attr-2] if the story starts with a preposition.
+  - Annotator notes: Check the very first word or phrase of the story; label this node true when that initial token is a preposition (e.g., "In", "On", "Under", "With").
+
+- [attr-7]
+  - Definition: A story is [attr-7] if the story uses discourse markers.
+  - Annotator notes: Mark this true when connective or organizational words/phrases appear (e.g., "however", "then", "meanwhile", "on the other hand", "first", "finally").
+
+- [attr-3]
+  - Definition: A story is [attr-3] if the story has the theme Deception.
+  - Annotator notes: Label this true when deception (lying, trickery, fraud, misleading behavior) is a central theme or motif in the story.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story is about magical lands.
+  - Annotator notes: Apply this when the setting or primary focus is a land/realm characterized by magic or fantastical geography.
+
+- [attr-4]
+  - Definition: A story is [attr-4] if the story is about cultural traditions.
+  - Annotator notes: Use this when traditions, rituals, or practices of a culture are the story’s subject.
+
+- [attr-6]
+  - Definition: A story is [attr-6] if the story is about the arts.
+  - Annotator notes: Mark true when the story centers on artistic activity, artists, creative disciplines, or the world of the arts.
+
+Composite nodes (logical combinations)
+- [attr-1]
+  - Definition: A story is [attr-1] if all of the following are true:
+    - The story is [attr-5]
+    - The story is [attr-3]
+    - The story is [attr-6]
+  - Logical interpretation: This node is true only when every listed atomic node is true (logical AND of the three components).
+  - Annotator notes: First confirm each of the three component nodes separately; then set [attr-1] true only if all three component nodes are true.
+
+Quick checklist (practical)
+- Step 1: For each atomic node above, mark True/False based on the story text.
+- Step 2: If [attr-5], [attr-3], and [attr-6] are all True, then mark [attr-1] True; otherwise mark it False.
+
+End of codebook.

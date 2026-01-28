@@ -1,0 +1,156 @@
+{
+  "nodes": [
+    {
+      "id": "many-paragraphs",
+      "label": "Many Paragraphs",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-classic",
+      "label": "Style Classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-cliffhanger",
+      "label": "Has a Cliffhanger",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-preposition",
+      "label": "Starts With Preposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "Theme Deception",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-playful",
+      "label": "Style Playful",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-helping-others",
+      "label": "Theme Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-agency",
+      "label": "Theme Agency",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-juxtaposition",
+      "label": "Has Juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "Style Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "rich-theme",
+      "label": "Rich Theme",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "theme-deception",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "theme-helping-others"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "theme-agency",
+            "theme-helping-others"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-classic-arc",
+      "label": "Complex Classic Arc",
+      "formula_type": "And",
+      "formula_args": [
+        "style-classic",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "has-a-cliffhanger",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "style-playful"
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "starts-with-preposition",
+                "rich-theme"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "theme-deception",
+      "target": "rich-theme"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "rich-theme"
+    },
+    {
+      "source": "theme-agency",
+      "target": "rich-theme"
+    },
+    {
+      "source": "style-classic",
+      "target": "complex-classic-arc"
+    },
+    {
+      "source": "has-a-cliffhanger",
+      "target": "complex-classic-arc"
+    },
+    {
+      "source": "style-playful",
+      "target": "complex-classic-arc"
+    },
+    {
+      "source": "starts-with-preposition",
+      "target": "complex-classic-arc"
+    },
+    {
+      "source": "rich-theme",
+      "target": "complex-classic-arc"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+[attr-7]
+Specification: A story is [attr-7] if the narrative employs superlative forms. This criterion identifies the presence of grammatical superlatives (e.g., syntactic tokens or constructions conveying maximality such as "most," "least," or adjectival/adverbial superlative morphology).
+
+[attr-6]
+Specification: A story is [attr-6] if the narrative uses the perfect aspect. This criterion detects verbal aspectual marking that indicates completed relevance (e.g., present perfect, past perfect constructions).
+
+[attr-5]
+Specification: A story is [attr-5] if the primary topical content of the narrative concerns lost civilizations. This label applies when the subject matter explicitly centers on civilizations that are abandoned, extinct, or otherwise historically lost.
+
+[attr-2]
+Specification: A story is [attr-2] if the narrative contains juxtaposition. That is, the text deliberately places contrasting elements, images, ideas, or scenes in proximity for comparative or rhetorical effect.
+
+[attr-4]
+Specification: A story is [attr-4] if the narrative length is fewer than 160 words. Word count is the operational metric for this classification.
+
+[attr-1]
+Specification: A story is [attr-1] if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+
+[attr-3]
+Specification: A story is [attr-3] if either of the following are true:
+- Both of the following are true:
+  - The story is [attr-7]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-2]

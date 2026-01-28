@@ -1,0 +1,65 @@
+Imagine a small catalog of traits, each one a lantern hung on the wall of a library of stories. Every lantern bears a bracketed name — the exact keys we use when we read or tag a tale. Below, each lantern is introduced in voice and image, but the rules that light them remain unchanged: the same node IDs in [attr-1] form, and the same logical gates (Exactly one, Either, Both, And, Not) that decide whether a lantern glows for a given story.
+
+[attr-3]
+Think of [attr-3] as a weary, dim lamp. A story claims this lamp when its readability score has slipped below 86.4 — a simple threshold that marks prose that needs extra care.
+
+[attr-12]
+The lantern called [attr-12] flickers when a tale bends clocks and corridors: a story is [attr-12] if the story is about time travel.
+
+[attr-11]
+Outside the windows of this library, seasons turn. When a story turns with them, the [attr-11] lantern lights: a story is [attr-11] if the story is about seasonal changes.
+
+[attr-13]
+Some storytellers leave a trail of signposts. The badge [attr-13] is set on a story if the story uses discourse markers — those connective words and phrases that guide a reader’s steps.
+
+[attr-5]
+A story wears [attr-5] when its first step is a description: the story starts with an adjective.
+
+[attr-10]
+There are maps and buried chests in some tales. If a story is about hidden treasures, it carries the [attr-10] mark.
+
+[attr-8]
+When trickery and misdirection thread the plot, the theme of deception appears. A story is [attr-8] if the story has the theme Deception.
+
+[attr-9]
+If a tale turns on kindness, aid, or selfless acts, it earns the [attr-9] badge: the story has the theme Helping Others.
+
+[attr-7]
+Sometimes a tale begins with place or relation: a story is [attr-7] if the story starts with a preposition.
+
+[attr-6]
+If the opening word is an adverb, the story wears [attr-6].
+
+[attr-4]
+Now meet [attr-4], a composite lantern that glows under a particular pattern of openings and signals. Picture it as a gatekeeper that checks two kinds of evidence and decides by strict rules:
+
+- Exactly one of the following is true:
+  - The story is [attr-5]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-13]
+  - Either of the following is true:
+    - The story is [attr-3]
+    - The story is [attr-7]
+
+In other words, [attr-4] is true if either it finds a solitary flourish at the very start (an adjective or an adverb — but not both), or it finds discourse markers paired with either low readability or an opening preposition. The exact logical scaffolding stays as written: an exclusive choice in the first branch, and an "And" combining discourse markers with an "Or" of readability or preposition in the second.
+
+[attr-2]
+Finally, the most intricate lantern, [attr-2], a mysterious fixture that requires two tall pillars to stand. It glows only when both of the following are true:
+
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-12]
+    - Exactly one of the following is true:
+      - The story is [attr-8]
+      - The story is [attr-9]
+  - Both of the following are true:
+    - The story is [attr-11]
+    - Both of the following are true:
+      - The story is [attr-10]
+      - The story is not [attr-12]
+- The story is [attr-4]
+
+Read that slowly like a riddle: the first pillar allows either a time-travel tale that pairs with exactly one of two themes (Deception or Helping Others), or a seasonal-changes tale that also involves hidden treasures and explicitly is not about time travel. The second pillar insists that the piece meet the [attr-4] conditions described above. Only when both pillars stand does [attr-2] shine.
+
+Each of these entries preserves the precise logical relationships they govern — the same nodes in their bracketed names and the same logical operations. What I’ve offered is a stitched-together narrative map of how those lanterns light, so you can travel the library of stories with both clarity and a little imagination.

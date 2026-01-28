@@ -1,0 +1,150 @@
+Codebook — Structured Edition
+
+Purpose: Provide a clear, organized reference for annotators. Each node (ID in [attr-2]) defines a predicate about a story. The logical relationships (And, Or, Not, Xor, Equal) and node IDs are preserved exactly as in the original codebook.
+
+1) Atomic predicates — simple, directly observable tags
+- Themes
+  - [attr-28]
+    - A story is [attr-28] if The story has the theme Innovation
+  - [attr-27]
+    - A story is [attr-27] if The story has the theme Humor
+  - [attr-24]
+    - A story is [attr-24] if The story has the theme Growth
+  - [attr-25]
+    - A story is [attr-25] if The story has the theme Hardship
+  - [attr-26]
+    - A story is [attr-26] if The story has the theme Helping Others
+  - [attr-29]
+    - A story is [attr-29] if The story has the theme Kindness
+  - [attr-30]
+    - A story is [attr-30] if The story has the theme Magic
+
+- Styles (single-style tags)
+  - [attr-18]
+    - A story is [attr-18] if The story is classic
+  - [attr-20]
+    - A story is [attr-20] if The story is modern
+  - [attr-22]
+    - A story is [attr-22] if The story is playful
+  - [attr-19]
+    - A story is [attr-19] if The story is humorous
+  - [attr-21]
+    - A story is [attr-21] if The story is philosophical
+
+- Topics
+  - [attr-32]
+    - A story is [attr-32] if The story is about hidden treasures
+  - [attr-35]
+    - A story is [attr-35] if The story is about mystical creatures
+  - [attr-33]
+    - A story is [attr-33] if The story is about lost civilizations
+  - [attr-34]
+    - A story is [attr-34] if The story is about magical lands
+  - [attr-37]
+    - A story is [attr-37] if The story is about time travel
+
+- Length and readability
+  - [attr-14]
+    - A story is [attr-14] if The story has fewer than 160 words
+  - [attr-9]
+    - A story is [attr-9] if The story has more than 375 words
+  - [attr-10]
+    - A story is [attr-10] if The story has readability score below 86.4
+
+- Structural / narrative features
+  - [attr-5]
+    - A story is [attr-5] if The story has a moral lesson
+  - [attr-7]
+    - A story is [attr-7] if The story has circular narrative structure
+  - [attr-6]
+    - A story is [attr-6] if The story has a story within a story
+  - [attr-8]
+    - A story is [attr-8] if The story has juxtaposition
+
+- Surface/grammar signals
+  - [attr-15]
+    - A story is [attr-15] if The story starts with a adjective
+  - [attr-38]
+    - A story is [attr-38] if The story uses conditional mood
+  - [attr-39]
+    - A story is [attr-39] if The story uses superlative forms
+  - [attr-40]
+    - A story is [attr-40] if The story uses wh-questions
+
+2) Set-style (membership) definitions
+- [attr-17]
+  - A story is [attr-17] if the story's style is In the set { [attr-18], [attr-20], [attr-22], [attr-19], [attr-21] }
+
+- [attr-36]
+  - A story is [attr-36] if the story's topic is In the set { [attr-35], [attr-34], [attr-32], [attr-33], [attr-37] }
+
+3) Composite logical nodes — structured conditions and operators
+- [attr-23]
+  - A story is [attr-23] if either of the following are true (Or):
+    - The story is [attr-28]
+    - The story is [attr-24]
+    - The story is [attr-25]
+    - The story is [attr-26]
+    - The story is [attr-29]
+    - The story is [attr-30]
+    - The story is [attr-27]
+
+- [attr-12]
+  - A story is [attr-12] if exactly one (Xor) of the following is true:
+    - The story is [attr-14]
+    - The story is [attr-9]
+
+- [attr-13]
+  - A story is [attr-13] if both of the following are true (And):
+    - The story is [attr-10]
+    - The story is [attr-15]
+
+- [attr-16]
+  - A story is [attr-16] if either of the following are true (Or):
+    - The story is [attr-6]
+    - The story is [attr-7]
+    - The story is [attr-8]
+
+- [attr-11]
+  - A story is [attr-11] if either of the following are true (Or):
+    - The story is [attr-5]
+    - The story is [attr-24]
+
+- [attr-4]
+  - A story is [attr-4] if Equal(the truth of [attr-24], the truth of [attr-25])
+
+- [attr-1]
+  - A story is [attr-1] if both of the following are true (And):
+    - The story is [attr-4]
+    - Either of the following are true (Or):
+      - The story is [attr-29]
+      - The story is [attr-26]
+
+- [attr-31]
+  - A story is [attr-31] if both of the following are true (And):
+    - The story is [attr-23]
+    - Either of the following are true (Or):
+      - The story is [attr-1]
+      - The story is [attr-28]
+
+4) Final compound type — full conjunction for complex annotation
+- [attr-3]
+  - A story is [attr-3] if all of the following are true:
+    - The story is [attr-31]
+    - The story is [attr-17]
+    - The story is [attr-36]
+    - The story is [attr-16]
+    - Not the story is [attr-18]
+    - The story is [attr-12]
+    - The story is [attr-13]
+    - The story is [attr-11]
+
+Notes for annotators (pragmatic guidance)
+- Read each atomic predicate literally: these are the building blocks used by the composite nodes.
+- For "Or" blocks: satisfying any listed sub-node makes the parent true.
+- For "And" blocks: every listed sub-node must be true for the parent to hold.
+- For "Xor": exactly one of the listed options must be true — not zero, not both.
+- For "Equal(...)": follow the equality of truth values as specified.
+- The phrase "Not the story is [attr-18]" must be interpreted as logical negation (the story must not be [attr-18]) when evaluating [attr-3].
+
+This structured layout preserves all node IDs, logical operations, and relationships unchanged while organizing the content for easier, systematic annotation.

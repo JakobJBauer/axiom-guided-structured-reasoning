@@ -1,0 +1,52 @@
+Codebook — Structured View
+Purpose: Provide a clear, hierarchical representation of each annotation node and its logical relationships. Use this as a checklist when deciding whether a story satisfies a node.
+
+1) Atomic nodes — basic labels
+- [TOPIC-THE-ARTS]
+  - Definition: A story is [TOPIC-THE-ARTS] if the story is about the arts.
+
+- [USES-CONDITIONAL-MOOD]
+  - Definition: A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+- [STARTS-WITH-ADJECTIVE]
+  - Definition: A story is [STARTS-WITH-ADJECTIVE] if the story starts with a adjective.
+
+- [STYLE-PHILOSOPHICAL]
+  - Definition: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+2) Compound nodes — logical combinations
+- [CONDITIONAL-AND-NOT-START]
+  - Qualification rule: A story is [CONDITIONAL-AND-NOT-START] if both of the following are true:
+    - The story is [USES-CONDITIONAL-MOOD]
+    - The story is not [STARTS-WITH-ADJECTIVE]
+
+- [ARTS-XOR-PHILOSOPHICAL]
+  - Qualification rule: A story is [ARTS-XOR-PHILOSOPHICAL] if exactly one of the following is true:
+    - The story is [TOPIC-THE-ARTS]
+    - The story is [STYLE-PHILOSOPHICAL]
+
+- [COMPLEX-CRITERION]
+  - Qualification rule: A story is [COMPLEX-CRITERION] if either of the following is true:
+    - The story is [CONDITIONAL-AND-NOT-START]
+    - Both of the following are true:
+      - The story is in the set of topics that includes [TOPIC-THE-ARTS]
+      - The truth of [STYLE-PHILOSOPHICAL] is equal to the truth of not [USES-CONDITIONAL-MOOD]
+
+3) Quick annotation checklist (how to decide)
+- First, identify atomic properties:
+  - Is the story about the arts? → [TOPIC-THE-ARTS]
+  - Does the story use conditional mood? → [USES-CONDITIONAL-MOOD]
+  - Does the story start with an adjective? → [STARTS-WITH-ADJECTIVE]
+  - Is the story philosophical in style? → [STYLE-PHILOSOPHICAL]
+
+- Then evaluate compounds in order:
+  - If the story both uses conditional mood and does not start with an adjective → tag [CONDITIONAL-AND-NOT-START].
+  - If exactly one of “about the arts” or “philosophical” holds → tag [ARTS-XOR-PHILOSOPHICAL].
+  - For [COMPLEX-CRITERION], mark true if:
+    - the story meets [CONDITIONAL-AND-NOT-START], OR
+    - both (it is within the topics that include [TOPIC-THE-ARTS]) AND (STYLE-PHILOSOPHICAL’s truth equals the truth of not [USES-CONDITIONAL-MOOD]).
+
+Notes and reminders
+- All logical relationships must be preserved exactly as listed above (Not, And, Or / both, exactly one, either).
+- Do not alter node IDs — use the bracketed IDs verbatim when annotating.
+- The phrase “the story is in the set of topics that includes [TOPIC-THE-ARTS]” is intentional: treat it as checking topic membership that covers [TOPIC-THE-ARTS].

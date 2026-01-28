@@ -1,0 +1,27 @@
+[USES-PERFECT-ASPECT]  
+A story SHALL be annotated as [USES-PERFECT-ASPECT] if the narrative employs the perfect grammatical aspect (i.e., uses perfect-aspect constructions to describe events/states with relevance to a reference time).
+
+[TOPIC-CULTURAL-TRADITIONS]  
+A story SHALL be annotated as [TOPIC-CULTURAL-TRADITIONS] if its primary subject matter concerns cultural traditions (e.g., customs, rituals, heritage practices, or intergenerational norms).
+
+[TOPIC-THE-ARTS]  
+A story SHALL be annotated as [TOPIC-THE-ARTS] if its primary subject matter pertains to the arts (e.g., visual arts, music, dance, theater, crafts, or other artistic practice).
+
+[STYLE-LIGHTHEARTED]  
+A story SHALL be annotated as [STYLE-LIGHTHEARTED] if its overall tone is lighthearted (i.e., predominantly playful, humorous, or otherwise non-serious in affect).
+
+[ARTS-TRADITIONAL]  
+A story SHALL be annotated as [ARTS-TRADITIONAL] if both of the following conditions are satisfied (logical AND):  
+- The story is [TOPIC-THE-ARTS]  
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+
+[NOSTALGIC-ARTS]  
+A story SHALL be annotated as [NOSTALGIC-ARTS] if all of the following conditions are satisfied (logical AND), including the explicit negation constraint:  
+- The story is [ARTS-TRADITIONAL]  
+- The story is [USES-PERFECT-ASPECT]  
+- The story is not [STYLE-LIGHTHEARTED]
+
+[LIGHT-ARTS-TRADITION]  
+A story SHALL be annotated as [LIGHT-ARTS-TRADITION] if both of the following conditions are satisfied (logical AND):  
+- The story is [ARTS-TRADITIONAL]  
+- The story is [STYLE-LIGHTHEARTED]

@@ -1,0 +1,146 @@
+Interviewer: Let's go through this codebook together. I'll ask about each label and you explain exactly what it means — including the formal rule. Ready?
+
+Expert: Ready. I'll present the official definition first, then give a short, plain-English clarification. I'll never change the node IDs or the logical structure — I’ll only make the wording easier to follow.
+
+Interviewer: Great. Start with the basics.
+
+Expert: Sure.
+
+Interviewer: What does [attr-6] mean?
+
+Expert: Official definition:
+- A story is [attr-6] if The story is lighthearted
+
+Clarification: This is a simple, single-condition tag. If the story feels lighthearted, tag it [attr-6].
+
+Interviewer: Next?
+
+Expert: [attr-3]
+
+Official definition:
+- A story is [attr-3] if The story has Checkhov's gun
+
+Clarification: If the story includes Chekhov’s gun (an element introduced early that later becomes important), mark this node.
+
+Interviewer: And [attr-2]?
+
+Expert: Official definition:
+- A story is [attr-2] if The story has a cliffhanger
+
+Clarification: Tag this when the story ends (or pauses) on a suspenseful unresolved moment.
+
+Interviewer: Now the theme nodes. What about [attr-9]?
+
+Expert: Official definition:
+- A story is [attr-9] if The story has the theme Hardship
+
+Clarification: Use this when Hardship is a central theme.
+
+Interviewer: [attr-10]?
+
+Expert: Official definition:
+- A story is [attr-10] if The story has the theme Helping Others
+
+Clarification: Use this when the story emphasizes helping or altruism.
+
+Interviewer: [attr-8]?
+
+Expert: Official definition:
+- A story is [attr-8] if The story has the theme Deception
+
+Clarification: Use this when deception, lies, or trickery are a main theme.
+
+Interviewer: [attr-11]?
+
+Expert: Official definition:
+- A story is [attr-11] if The story has the theme Problem-Solving
+
+Clarification: Use this when figuring out solutions, puzzles, or overcoming obstacles is a thematic focus.
+
+Interviewer: Now onto a composite node: [attr-7]. How is that defined?
+
+Expert: Official definition:
+- A story is [attr-7] if exactly one of the following is true:
+  - The story is [attr-9]
+  - The story is [attr-8]
+
+Clarification: This is an exclusive-or between [attr-9] and [attr-8]. The story must have one of those themes, but not both. If it has neither, or if it has both, it does not satisfy [attr-7].
+
+Interviewer: [attr-12] looks nested. Explain it.
+
+Expert: Official definition:
+- A story is [attr-12] if both of the following are true:
+  - The story is [attr-6]
+  - Either of the following is true:
+    - The story is [attr-7]
+    - The story is [attr-11]
+
+Clarification: Two things must hold:
+1) The story must be lighthearted; and
+2) It must either have that exclusive thematic conflict ([attr-7]) or be focused on problem-solving ([attr-11]). Think of a story that’s cheerful in tone but has themes that conflict, or is cheerfully solving problems — that’s [attr-12].
+
+Interviewer: What about [attr-5]?
+
+Expert: Official definition:
+- A story is [attr-5] if both of the following are true:
+  - The story is [attr-3]
+  - Exactly one of the following is true:
+    - The story is [attr-11]
+    - The story is [attr-2]
+
+Clarification: For [attr-5], the story must contain Checkhov’s gun, and then it must have either Problem-Solving or a Cliffhanger — but not both. So it’s Checkhov’s gun plus an exclusive choice between those two narrative aspects.
+
+Interviewer: Next: [attr-4]. That one looks like an OR of two ANDs.
+
+Expert: Official definition:
+- A story is [attr-4] if either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-10]
+    - The story is not [attr-8]
+  - Both of the following are true:
+    - The story is [attr-11]
+    - The story is [attr-10]
+
+Clarification: There are two routes to [attr-4]:
+- Route A: The story is about helping others and does not involve deception.
+- Route B: The story combines problem-solving with helping others.
+If either route applies, mark [attr-4].
+
+Interviewer: Finally, the big one: [attr-1]. Walk me through it slowly.
+
+Expert: Official definition:
+- A story is [attr-1] if either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-12]
+    - Both of the following are true:
+      - The story is [attr-5]
+      - The story is [attr-4]
+  - All of the following are true:
+    - The story is not [attr-12]
+    - Either of the following is true:
+      - The story is [attr-5]
+      - The story is [attr-2]
+    - The story is not both of the following:
+      - The story is [attr-9]
+      - The story is [attr-8]
+
+Clarification: There are two ways a story can be [attr-1]:
+
+Route 1 (the first bullet): The story is [attr-12], and it also satisfies both [attr-5] and [attr-4]. In other words: a lighthearted-but-thematically-conflicted (or problem-solving) story that also has Checkhov’s gun + exclusive plot element and meets the moral-arc criteria.
+
+Route 2 (the second bullet): The story is not [attr-12], but it still meets these three conditions together:
+  - It must be either [attr-5] or have a cliffhanger ([attr-2]).
+  - It must not have both [attr-9] and [attr-8] at the same time (i.e., it cannot contain that pair of themes together).
+So Route 2 captures non-tone-conflicted stories that are plot-forward or cliffhanger-driven, provided they aren’t simultaneously about Hardship and Deception.
+
+Interviewer: That's a lot of nested logic. Any final tips for annotators?
+
+Expert: A few quick pointers:
+- Always check the simple theme/style tags first ([attr-6], theme tags, and the two plot/feature tags). They’re the building blocks.
+- For “exactly one” rules, remember they’re exclusive-or: one and only one must be true.
+- For “not both” constraints, a story fails that check only if both listed conditions hold; having zero or one of them is fine.
+- When applying [attr-1] or [attr-12], follow the nesting exactly: some branches require multiple conditions together (both/and), others allow alternatives (either/or).
+
+Interviewer: Thanks — that makes the structure much clearer while keeping the formal rules intact.
+
+Expert: You're welcome. If you want, I can read back any specific node’s official definition again verbatim while we annotate a real story.

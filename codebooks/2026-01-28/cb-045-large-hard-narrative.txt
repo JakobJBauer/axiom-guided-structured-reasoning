@@ -1,0 +1,133 @@
+[MANY-PARAGRAPHS]  
+Picture a tale that refuses to be brief—one that keeps unfolding scene after scene. A story earns the mark [MANY-PARAGRAPHS] if it stretches beyond 6 paragraphs.
+
+[HAS-A-STORY-WITHIN-A-STORY]  
+Sometimes a narrative opens a secret door and reveals another narrative inside it. A story is [HAS-A-STORY-WITHIN-A-STORY] if it contains a story within a story.
+
+[STARTS-WITH-NOUN]  
+The very first step matters. A story is [STARTS-WITH-NOUN] if its opening word is a noun.
+
+[USES-SUPERLATIVE-FORMS]  
+Some storytellers speak in extremes—the greatest, the smallest, the most impossible. A story is [USES-SUPERLATIVE-FORMS] if it uses superlative forms.
+
+[HAS-CHECKHOVS-GUN]  
+A quiet object placed early, waiting patiently to matter later, can shape everything. A story is [HAS-CHECKHOVS-GUN] if it has Checkhov's gun.
+
+[THEME-MAGIC]  
+When the fabric of reality shimmers—spells, enchantment, the impossible made real—the story carries [THEME-MAGIC]. A story is [THEME-MAGIC] if it has the theme Magic.
+
+[USES-CONDITIONAL-MOOD]  
+In some stories, events hover in the realm of “might,” “could,” and “would.” A story is [USES-CONDITIONAL-MOOD] if it uses conditional mood.
+
+[USES-WH-QUESTIONS]  
+Questions can become footsteps leading deeper into the plot: who, what, when, where, why, how. A story is [USES-WH-QUESTIONS] if it uses wh-questions.
+
+[TOPIC-HIDDEN-TREASURES]  
+A map folded into a pocket, a vault beneath old stone, a secret someone buried and forgot—these tales chase what’s concealed. A story is [TOPIC-HIDDEN-TREASURES] if it is about hidden treasures.
+
+[THEME-INNOVATION]  
+Some narratives hum with invention—new methods, new machines, new ways of seeing. A story is [THEME-INNOVATION] if it has the theme Innovation.
+
+[TOPIC-SEASONAL-CHANGES]  
+Others move with the turning year: thaw to bloom, blaze to fall, hush to snow. A story is [TOPIC-SEASONAL-CHANGES] if it is about seasonal changes.
+
+[TOPIC-THE-ARTS]  
+Paint, music, dance, theater, sculpture—stories can breathe through creativity itself. A story is [TOPIC-THE-ARTS] if it is about the arts.
+
+[LONG-STORY]  
+Some stories are built to linger. A story is [LONG-STORY] if it has more than 375 words.
+
+[THEME-GROWTH]  
+There are stories where someone becomes more than they were—wiser, braver, kinder, changed. A story is [THEME-GROWTH] if it has the theme Growth.
+
+[TOPIC-MAGICAL-LANDS]  
+Beyond the ordinary world lie places with their own strange rules and radiant wonders. A story is [TOPIC-MAGICAL-LANDS] if it is about magical lands.
+
+[TOPIC-TIME-TRAVEL]  
+Then there are tales that slip the leash of time—past and future bending under daring hands. A story is [TOPIC-TIME-TRAVEL] if it is about time travel.
+
+[THEME-HARDSHIP]  
+Some journeys are forged in struggle—loss, scarcity, endurance, pain that must be faced. A story is [THEME-HARDSHIP] if it has the theme Hardship.
+
+[STARTS-WITH-ADVERB]  
+A story is [STARTS-WITH-ADVERB] if it begins with a adverb.
+
+[HAS-A-MORAL-LESSON]  
+Certain stories don’t just entertain; they leave behind a lesson like a final lantern lit in the dark. A story is [HAS-A-MORAL-LESSON] if it has a moral lesson.
+
+[LOW-READABILITY]  
+Sometimes the language is dense, tangled, or demanding. A story is [LOW-READABILITY] if it has readability score below 86.4.
+
+[STARTS-WITH-ADJECTIVE]  
+A story is [STARTS-WITH-ADJECTIVE] if it begins with a adjective.
+
+[STARTS-WITH-NONNOUN]  
+A story is [STARTS-WITH-NONNOUN] if it is not [STARTS-WITH-NOUN].
+
+[STRUCTURAL-EPIC]  
+When length and structure join forces, the story begins to feel monumental. A story is [STRUCTURAL-EPIC] if both of the following are true:  
+- The story is [LONG-STORY]  
+- The story is [MANY-PARAGRAPHS]
+
+[EXPERIMENTAL-VOICE]  
+Some voices don’t walk the straight path—they play with the first step and challenge expectation. A story is [EXPERIMENTAL-VOICE] if either of the following is true:  
+- Exactly one of the following is true: the story is [STARTS-WITH-ADVERB] or the story is [STARTS-WITH-ADJECTIVE]  
+- Both of the following are true:  
+  - The story is [STARTS-WITH-NONNOUN]  
+  - The story is [USES-WH-QUESTIONS]
+
+[MYTHIC-ENGINEERING]  
+Here, wonder meets ingenuity—myth welded to mechanism. A story becomes [MYTHIC-ENGINEERING] if both of the following are true:  
+- Either of the following is true:  
+  - The story is [THEME-MAGIC]  
+  - The story is [TOPIC-MAGICAL-LANDS]  
+- Either of the following is true:  
+  - The story is [THEME-INNOVATION]  
+  - The story is [TOPIC-TIME-TRAVEL]
+
+[INTERROGATIVE-CONDITIONALITY]  
+In this kind of tale, possibility and inquiry travel together: what could happen, and why might it? A story is [INTERROGATIVE-CONDITIONALITY] if both of the following are true:  
+- The story is [USES-CONDITIONAL-MOOD]  
+- Either of the following is true:  
+  - The story is [USES-WH-QUESTIONS]  
+  - The story is [LOW-READABILITY]
+
+[EMBEDDED-FORESHADOWING]  
+A nested tale can carry hidden warnings—signals planted in the inner story that echo outward. A story is [EMBEDDED-FORESHADOWING] if both of the following are true:  
+- The story is [HAS-A-STORY-WITHIN-A-STORY]  
+- Either of the following is true:  
+  - The story is [HAS-CHECKHOVS-GUN]  
+  - Both of the following are true:  
+    - The story is [USES-SUPERLATIVE-FORMS]  
+    - It is not [USES-CONDITIONAL-MOOD]
+
+[TREASURED-TRANSFORMATION]  
+When hidden riches are at the heart of the plot, the true prize might be what the characters become—or what they endure. A story is [TREASURED-TRANSFORMATION] if both of the following are true:  
+- The story is [TOPIC-HIDDEN-TREASURES]  
+- Either of the following is true:  
+  - Both of the following are true:  
+    - The story is [THEME-GROWTH]  
+    - The story is [HAS-A-MORAL-LESSON]  
+  - Both of the following are true:  
+    - The story is [THEME-HARDSHIP]  
+    - It is not [HAS-A-MORAL-LESSON]
+
+[SEASONAL-AESTHETIC]  
+In a world shaped by shifting seasons, beauty can take center stage—through art itself, or through language that dazzles without becoming difficult to follow. A story is [SEASONAL-AESTHETIC] if both of the following are true:  
+- The story is [TOPIC-SEASONAL-CHANGES]  
+- Either of the following is true:  
+  - The story is [TOPIC-THE-ARTS]  
+  - Both of the following are true:  
+    - The story is [USES-SUPERLATIVE-FORMS]  
+    - It is not [LOW-READABILITY]
+
+[MASTER-CLASS-PLOT]  
+At the highest tier, the plot feels like a carefully engineered performance: layered setups, structural ambition, and a final balancing act where only one of two closing signatures may claim the stage. A story is [MASTER-CLASS-PLOT] if both of the following are true:  
+- Either of the following is true:  
+  - The story is [EMBEDDED-FORESHADOWING]  
+  - Both of the following are true:  
+    - The story is [STRUCTURAL-EPIC]  
+    - The story is [INTERROGATIVE-CONDITIONALITY]  
+- Exactly one of the following is true:  
+  - The story is [TREASURED-TRANSFORMATION]  
+  - The story is [SEASONAL-AESTHETIC]

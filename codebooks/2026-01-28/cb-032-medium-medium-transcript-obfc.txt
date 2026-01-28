@@ -1,0 +1,73 @@
+Interviewer: Let's go through this codebook one node at a time. I'll ask, you answer—so anyone can use this as a guided annotation transcript. Ready?
+
+Annotator: Ready. Ask away.
+
+Interviewer: What does [attr-4] mean?
+
+Annotator: A story is [attr-4] if The story has more than 6 paragraphs.
+
+Interviewer: And [attr-7]?
+
+Annotator: A story is [attr-7] if The story is classic.
+
+Interviewer: How about [attr-2]?
+
+Annotator: A story is [attr-2] if The story has a cliffhanger.
+
+Interviewer: [attr-6] — what do we check for?
+
+Annotator: A story is [attr-6] if The story starts with a preposition.
+
+Interviewer: What about thematic nodes like [attr-11]?
+
+Annotator: A story is [attr-11] if The story has the theme Deception.
+
+Interviewer: And [attr-9]?
+
+Annotator: A story is [attr-9] if The story is playful.
+
+Interviewer: [attr-12]?
+
+Annotator: A story is [attr-12] if The story has the theme Helping Others.
+
+Interviewer: [attr-10] — quick answer?
+
+Annotator: A story is [attr-10] if The story has the theme Agency.
+
+Interviewer: [attr-3] — what does that capture?
+
+Annotator: A story is [attr-3] if The story has juxtaposition.
+
+Interviewer: And [attr-8]?
+
+Annotator: A story is [attr-8] if The story is philosophical.
+
+Interviewer: Now the composite node [attr-5] — this one looks logical. How is it defined?
+
+Annotator: A story is [attr-5] if either of the following is true:
+- The story is both [attr-11] and not [attr-12]
+- Exactly one of the following is true:
+  - The story is [attr-10]
+  - The story is [attr-12]
+
+Interviewer: Let me rephrase to check I understand: [attr-5] becomes true when either deception appears without helping-others, or when exactly one of agency or helping-others is present. Correct?
+
+Annotator: Correct. That restates the logic while preserving the structure: either the conjunction with a negation, or an exclusive choice between two themes.
+
+Interviewer: Finally, [attr-1] — walk me through it slowly.
+
+Annotator: A story is [attr-1] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - The story is both [attr-2] and not [attr-9]
+  - The story is both [attr-6] and [attr-5]
+
+Interviewer: So to be a [attr-1], the story must be classic, and additionally either have a cliffhanger but not be playful, or start with a preposition and satisfy the [attr-5] condition. Is that a fair plain-English read?
+
+Annotator: That's exactly it—plain-English interpretation, with the original logical relationships unchanged.
+
+Interviewer: Great. Anything else users should keep in mind when annotating with this transcript?
+
+Annotator: Yes — when you apply these labels, preserve the exact node IDs in brackets and follow the logical operators (both / not / either / exactly one) as stated. The transcript style here is only a presentation layer; the logical structure and node identifiers must remain unchanged for correct reasoning.
+
+Interviewer: Thanks — that should make the codebook easier to follow for annotators.

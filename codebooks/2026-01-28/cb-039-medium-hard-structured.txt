@@ -1,0 +1,94 @@
+Codebook — structured, clear, and ready for annotation
+
+Purpose: Each entry below defines a node by its ID (in [BRACKET] form) and gives the exact, structured logical criteria you should use when labeling a story. Logical operations and all node IDs are preserved exactly as in the original codebook.
+
+Atomic labels (base predicates)
+- [THEME-DECEPTION]
+  - Definition: A story is [THEME-DECEPTION] if:
+    - The story has the theme Deception.
+
+- [THEME-HELPING-OTHERS]
+  - Definition: A story is [THEME-HELPING-OTHERS] if:
+    - The story has the theme Helping Others.
+
+- [STYLE-PHILOSOPHICAL]
+  - Definition: A story is [STYLE-PHILOSOPHICAL] if:
+    - The story is philosophical.
+
+- [HAS-CHECKHOVS-GUN]
+  - Definition: A story is [HAS-CHECKHOVS-GUN] if:
+    - The story has Checkhov's gun.
+
+- [STARTS-WITH-NOUN]
+  - Definition: A story is [STARTS-WITH-NOUN] if:
+    - The story starts with a noun.
+
+- [TOPIC-HIDDEN-TREASURES]
+  - Definition: A story is [TOPIC-HIDDEN-TREASURES] if:
+    - The story is about hidden treasures.
+
+- [THEME-AGENCY]
+  - Definition: A story is [THEME-AGENCY] if:
+    - The story has the theme Agency.
+
+- [STARTS-WITH-ADJECTIVE]
+  - Definition: A story is [STARTS-WITH-ADJECTIVE] if:
+    - The story starts with a adjective.
+
+- [HAS-JUXTAPOSITION]
+  - Definition: A story is [HAS-JUXTAPOSITION] if:
+    - The story has juxtaposition.
+
+Derived labels (composite logical conditions)
+- [OPENING-PRIMACY]
+  - Definition: A story is [OPENING-PRIMACY] if either of the following is true:
+    - The story is [STARTS-WITH-NOUN]
+    - The story is [STARTS-WITH-ADJECTIVE] xor [STARTS-WITH-NOUN]
+  - Notes:
+    - Treat this node as true when either the simpler start-with-noun condition holds, or when an exclusive choice between starting with an adjective and starting with a noun applies.
+
+- [STRUCTURED-DECEPTION]
+  - Definition: A story is [STRUCTURED-DECEPTION] if both of the following are true:
+    1. The story is [OPENING-PRIMACY]
+    2. Either of the following is true:
+       - Both of the following are true:
+         - The story is [THEME-DECEPTION]
+         - The story is [TOPIC-HIDDEN-TREASURES]
+       - Either of the following is true:
+         - The story is [HAS-CHECKHOVS-GUN] xor [THEME-AGENCY]
+         - The story is [THEME-DECEPTION] and not [THEME-AGENCY]
+  - Structure recap:
+    - First require [OPENING-PRIMACY].
+    - Then satisfy one of two branches:
+      - Branch A: both deception theme and hidden-treasures topic; OR
+      - Branch B: either (Checkhov's gun xor Agency) OR (Deception and not Agency).
+
+- [COMPLEX-NARRATIVE]
+  - Definition: A story is [COMPLEX-NARRATIVE] if all of the following are true:
+    1. The story is [STRUCTURED-DECEPTION]
+    2. Not both of the following are true:
+       - The story is [THEME-HELPING-OTHERS]
+       - The story is [STYLE-PHILOSOPHICAL]
+    3. Either of the following is true:
+       - The story is [HAS-JUXTAPOSITION]
+       - Both of the following are true:
+         - The story is [STARTS-WITH-NOUN] equals true
+         - The story is [STARTS-WITH-ADJECTIVE] equals false
+  - Interpretation hints:
+    - [COMPLEX-NARRATIVE] demands a prior [STRUCTURED-DECEPTION] foundation.
+    - It excludes the simultaneous presence of Helping Others and Philosophical style.
+    - It requires either juxtaposition or a precise opening pattern (explicit equality conditions on start-with flags).
+
+Annotation checklist (practical workflow)
+- Step 1: Evaluate atomic predicates (the basic nodes).
+- Step 2: Evaluate [OPENING-PRIMACY] using its two alternatives (observe xor where stated).
+- Step 3: Evaluate [STRUCTURED-DECEPTION] by:
+  - Confirming [OPENING-PRIMACY], then
+  - Checking the two main branches (both-deception+hidden-treasures OR the sub-branch with xor/and-not).
+- Step 4: Evaluate [COMPLEX-NARRATIVE] by:
+  - Confirming [STRUCTURED-DECEPTION],
+  - Ensuring not both Helping-Others and Philosophical hold,
+  - Confirming either juxtaposition OR the exact start-with conditions.
+- Always preserve logical operators exactly as listed (xor, and not, equals true/false, Not both, Both, Either).
+
+End of codebook — use this structured view to make consistent, principled annotations while maintaining the original logical relationships and node IDs.

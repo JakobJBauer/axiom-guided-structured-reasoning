@@ -1,0 +1,165 @@
+{
+  "nodes": [
+    {
+      "id": "attr-8",
+      "label": "Growth theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "Helping others theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Starts with adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "Seasonal changes",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "Perfect aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Readability below 86.4",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Mystical creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "Readability above 96.1",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Seasonal + Growth (not mystical)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-11",
+        "attr-8",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Composite label",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-4",
+            "attr-9"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-7",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-3"
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-6",
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "attr-12",
+                    "attr-2"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-11",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-1"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+Purpose
+- This codebook defines labels (nodes) used to classify stories.
+- Each label is given a clear condition. Composite labels combine simpler labels using logical operations (And, Or, Not).
+- Keep this sheet nearby while annotating so you can apply labels consistently.
+
+I. Atomic (single-condition) labels
+- [attr-10]
+  - Definition: A story is [attr-10] if the story is philosophical.
+
+- [attr-12]
+  - Definition: A story is [attr-12] if the story is about the arts.
+
+- [attr-3]
+  - Definition: A story is [attr-3] if the story has a flashback.
+
+- [attr-6]
+  - Definition: A story is [attr-6] if the story has a story within a story.
+
+- [attr-11]
+  - Definition: A story is [attr-11] if the story has the theme Deception.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story has a Red Herring.
+
+- [attr-4]
+  - Definition: A story is [attr-4] if the story has a moral lesson.
+
+II. Composite (logical) labels — structure and conditions
+- [attr-9]
+  - Logic: AND relationship
+  - A story is [attr-9] if both of the following are true:
+    - The story is [attr-10]
+    - The story is [attr-12]
+
+- [attr-7]
+  - Logic: OR relationship
+  - A story is [attr-7] if either of the following is true:
+    - The story is [attr-3]
+    - The story is [attr-6]
+
+- [attr-8]
+  - Logic: AND relationship
+  - A story is [attr-8] if both of the following are true:
+    - The story is [attr-11]
+    - The story is [attr-5]
+
+- [attr-2]
+  - Logic: AND with a NOT condition
+  - A story is [attr-2] if all of the following are true:
+    - The story is [attr-8]
+    - The story is [attr-4]
+    - The story is not [attr-9]
+
+- [attr-1]
+  - Logic: AND relationship between composite labels
+  - A story is [attr-1] if both of the following are true:
+    - The story is [attr-2]
+    - The story is [attr-7]
+
+Quick annotation checklist (use with each story)
+- Identify atomic properties first:
+  - Is it philosophical? → [attr-10]
+  - Is it about the arts? → [attr-12]
+  - Any flashbacks? → [attr-3]
+  - Any story-within? → [attr-6]
+  - Does deception drive the theme? → [attr-11]
+  - Is there a red herring? → [attr-5]
+  - Is there an explicit moral lesson? → [attr-4]
+- Then derive composite labels using the logical rules above:
+  - Apply AND / OR / NOT exactly as specified for each composite node.
+
+Notes on logical integrity
+- Do not alter node IDs or the logical relationships shown.
+- Composite labels depend strictly on the listed conditions (including negation for [attr-2]).
+- Use this structured view to reason step-by-step from atomic facts to higher-level labels.

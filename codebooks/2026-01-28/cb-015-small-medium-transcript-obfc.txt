@@ -1,0 +1,47 @@
+Interviewer: Let’s walk through this codebook together. I’ll ask about each label and you answer. Sound good?
+
+Expert: Sounds great. I’ll keep the exact definitions and logical structure as written.
+
+Interviewer: First up, what is [attr-4]?
+
+Expert: A story is [attr-4] if the story has fewer than 160 words.
+
+Interviewer: Clear. And [attr-5]?
+
+Expert: A story is [attr-5] if the story has the theme Magic.
+
+Interviewer: What about [attr-7]?
+
+Expert: A story is [attr-7] if the story uses wh-questions.
+
+Interviewer: I see. Explain [attr-1], please.
+
+Expert: A story is [attr-1] if the story has Checkhov's gun.
+
+Interviewer: And [attr-2]?
+
+Expert: A story is [attr-2] if the story has readability score above 96.1.
+
+Interviewer: Now we get to the composite labels. How is [attr-3] defined?
+
+Expert: [attr-3] is true when both of the following are true:
+- The story is [attr-5]
+- The story is not [attr-1]
+
+Interviewer: So it requires the Magic theme and the absence of Checkhov’s gun. Got it. Next: [attr-6] — that sounds more complex.
+
+Expert: It is a bit layered. A story is [attr-6] if both of the following are true:
+- The story is [attr-4]
+- Either of the following is true:
+  - The story is [attr-3]
+  - Exactly one of the following is true:
+    - The story is not [attr-2]
+    - The story is [attr-7]
+
+Interviewer: Let me check I’ve got that right. For [attr-6], first it must be a short story. Then either it qualifies as [attr-3], or, if it doesn’t, exactly one of those two alternatives must hold: either it lacks [attr-2], or it uses [attr-7]. Correct?
+
+Expert: Exactly. The logical relationships — both, either, and exactly one — are preserved just as in the original definitions.
+
+Interviewer: Great. That covers every node, and the logical structure is intact. Anything else to note?
+
+Expert: Just that every node ID — like [attr-4], [attr-5], [attr-3], etc. — is used exactly as given, and no nodes or logical operators were added, removed, or changed. This transcript simply explains the same logic in a conversational Q&A format to make it easier to read and apply during annotation.

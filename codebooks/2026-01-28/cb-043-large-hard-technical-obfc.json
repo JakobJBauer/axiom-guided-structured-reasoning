@@ -1,0 +1,371 @@
+{
+  "nodes": [
+    {
+      "id": "attr-19",
+      "label": "Innovation",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-20",
+      "label": "Magic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Chekhov's gun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "first lexical token is an adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-18",
+      "label": "Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-14",
+      "label": "philosophical stylistic register",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "first lexical token is a noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-21",
+      "label": "hidden treasures (subject matter)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-17",
+      "label": "Growth",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "cliffhanger (unresolved suspenseful ending)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-13",
+      "label": "minimalism (stylistic register)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-24",
+      "label": "regular use of the conditional verbal mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-23",
+      "label": "seasonal changes (subject matter)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-22",
+      "label": "mystical creatures (subject matter)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "embedded secondary narrative (story-within-a-story)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "more than six paragraphs",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-16",
+      "label": "Agency",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "attr-5 is true",
+      "formula_type": "Equal",
+      "formula_args": [
+        "attr-5",
+        true
+      ]
+    },
+    {
+      "id": "attr-12",
+      "label": "exactly one of (first token is adverb, first token is noun) AND style is philosophical or minimalist",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-10",
+            "attr-11"
+          ]
+        },
+        {
+          "formula_type": "In",
+          "formula_args": [
+            "story-style",
+            [
+              "STYLE-PHILOSOPHICAL",
+              "STYLE-MINIMALIST"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-7",
+      "label": "either (hidden treasures AND mystical creatures) OR exactly one of (hidden treasures, seasonal changes)",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-21",
+            "attr-22"
+          ]
+        },
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-21",
+            "attr-23"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-6",
+      "label": "Helping Others OR (exactly one of (Growth, Agency) AND not minimalism)",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-18",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Xor",
+              "formula_args": [
+                "attr-17",
+                "attr-16"
+              ]
+            },
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-13"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-15",
+      "label": "Innovation AND (Helping Others OR (Magic AND conditional mood))",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-19",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-6",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-20",
+                "attr-24"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-8",
+      "label": "either (Chekhov's gun OR cliffhanger) AND (embedded narrative OR not Chekhov's gun)",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-4",
+            "attr-2"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-3",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-4"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "attr-15 AND complex combination of attr-12, attr-8, attr-9, attr-7, attr-13",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-15",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-12",
+                {
+                  "formula_type": "Or",
+                  "formula_args": [
+                    {
+                      "formula_type": "And",
+                      "formula_args": [
+                        "attr-8",
+                        "attr-9"
+                      ]
+                    },
+                    "attr-7"
+                  ]
+                }
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-8",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "attr-13"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-5",
+      "target": "attr-9"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-21",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-22",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-23",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-18",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-17",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-16",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-20",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-15"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-15",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-1"
+    }
+  ]
+}

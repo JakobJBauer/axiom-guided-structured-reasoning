@@ -1,0 +1,32 @@
+Think of this as a little glossary for tagging stories — short, plain, and a bit conversational so it's easier to remember what each label really means.
+
+[attr-4]
+Call a piece [attr-4] when it’s under 160 words. Simple as that: fewer than 160 words makes it a short story.
+
+[attr-5]
+If the story centers on magic, give it the [attr-5] label — the theme is Magic.
+
+[attr-7]
+If the story contains wh-questions — who, what, when, where, why, how — mark it as [attr-7].
+
+[attr-1]
+When some element set up early plays a required role later (Chekhov’s gun), the story is [attr-1].
+
+[attr-2]
+A story earns [attr-2] when its readability score is above 96.1.
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-5]
+- The story is not [attr-1]
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- The story is [attr-4]
+- Either of the following is true:
+  - The story is [attr-3]
+  - Exactly one of the following is true:
+    - The story is not [attr-2]
+    - The story is [attr-7]
+
+That’s it — the labels stay the same, the logical relationships are preserved, and you can use this wording as a friendly checklist while annotating and reasoning about stories.

@@ -1,0 +1,630 @@
+{
+  "nodes": [
+    {
+      "id": "attr-36",
+      "label": "The story has the theme Problem-Solving",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-41",
+      "label": "The story is about mystical creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-24",
+      "label": "The story has fewer than 160 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-42",
+      "label": "The story is about time travel",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-44",
+      "label": "The story uses discourse markers",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-38",
+      "label": "The story is about cultural traditions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-34",
+      "label": "The story has the theme Innovation",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-25",
+      "label": "The story starts with a adverb",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-32",
+      "label": "The story has the theme Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "The story has juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-27",
+      "label": "The story is playful",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "The story has a Red Herring",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-31",
+      "label": "The story has the theme Hardship",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-33",
+      "label": "The story has the theme Humor",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-29",
+      "label": "The story has the theme Agency",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "The story has a flashback",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-45",
+      "label": "The story uses perfect aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-43",
+      "label": "The story uses conditional mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-46",
+      "label": "The story uses wh-questions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-35",
+      "label": "The story has the theme Kindness",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "The story has a moral lesson",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-26",
+      "label": "The story is humorous",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-16",
+      "label": "The story has readability score below 86.4",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-18",
+      "label": "The story has more than 6 paragraphs",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "The story has a cliffhanger",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-40",
+      "label": "The story is about magical lands",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-39",
+      "label": "The story is about giant creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-30",
+      "label": "The story has the theme Growth",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-15",
+      "label": "The story has more than 375 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "The story is in specific topics (mystical creatures, magical lands, giant creatures)",
+      "formula_type": "In",
+      "formula_args": [
+        "topic",
+        [
+          "TOPIC-MYSTICAL-CREATURES",
+          "TOPIC-MAGICAL-LANDS",
+          "TOPIC-GIANT-CREATURES"
+        ]
+      ]
+    },
+    {
+      "id": "attr-17",
+      "label": "Either the story is about magical lands or mystical creatures",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-40",
+        "attr-41"
+      ]
+    },
+    {
+      "id": "attr-5",
+      "label": "Long story about giant or magical creatures with growth theme",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-15",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-39",
+            "attr-40"
+          ]
+        },
+        "attr-30"
+      ]
+    },
+    {
+      "id": "attr-23",
+      "label": "Short story and about magical lands or mystical creatures",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-24",
+        "attr-17"
+      ]
+    },
+    {
+      "id": "attr-37",
+      "label": "Time travel with red herring or flashback",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-42",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-11",
+            "attr-9"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "Many-paragraph story with flashback and cliffhanger",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-18",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-9",
+            "attr-8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-20",
+      "label": "Starts with adverb or uses discourse markers or uses wh-questions",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-25",
+        "attr-44",
+        "attr-46"
+      ]
+    },
+    {
+      "id": "attr-14",
+      "label": "Exactly one of humorous or playful",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-26",
+        "attr-27"
+      ]
+    },
+    {
+      "id": "attr-19",
+      "label": "Has theme Kindness and a moral lesson",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-35",
+        "attr-10"
+      ]
+    },
+    {
+      "id": "attr-13",
+      "label": "Innovation and Helping Others and (Agency or Problem-Solving)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-34",
+        "attr-32",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-29",
+            "attr-36"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-7",
+      "label": "Growth and Hardship",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-30",
+        "attr-31"
+      ]
+    },
+    {
+      "id": "attr-4",
+      "label": "Not low-readability and either short or long",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-16"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-24",
+            "attr-15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Short and exactly one of Humor or Hardship",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-24",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-33",
+            "attr-31"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-22",
+      "label": "Uses wh-questions and discourse markers",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-46",
+        "attr-44"
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Complex combination (see codebook)",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-37",
+            "attr-17"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-3",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "attr-20",
+                "attr-4"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-43",
+            "attr-45"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-28",
+      "label": "Either (Innovation/Helping/Agency or Kindness/moral) and either (Growth/Hardship or Problem-Solving)",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-13",
+            "attr-19"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-7",
+            "attr-36"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-21",
+      "label": "Meets reading-style, not playful, and uses perfect aspect or conditional mood",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-20",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-27"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-45",
+            "attr-43"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-40",
+      "target": "attr-17"
+    },
+    {
+      "source": "attr-41",
+      "target": "attr-17"
+    },
+    {
+      "source": "attr-15",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-39",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-40",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-30",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-23"
+    },
+    {
+      "source": "attr-17",
+      "target": "attr-23"
+    },
+    {
+      "source": "attr-42",
+      "target": "attr-37"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-37"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-37"
+    },
+    {
+      "source": "attr-18",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-25",
+      "target": "attr-20"
+    },
+    {
+      "source": "attr-44",
+      "target": "attr-20"
+    },
+    {
+      "source": "attr-46",
+      "target": "attr-20"
+    },
+    {
+      "source": "attr-26",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-27",
+      "target": "attr-14"
+    },
+    {
+      "source": "attr-35",
+      "target": "attr-19"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-19"
+    },
+    {
+      "source": "attr-34",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-32",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-29",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-36",
+      "target": "attr-13"
+    },
+    {
+      "source": "attr-30",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-31",
+      "target": "attr-7"
+    },
+    {
+      "source": "attr-16",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-15",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-24",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-33",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-31",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-46",
+      "target": "attr-22"
+    },
+    {
+      "source": "attr-44",
+      "target": "attr-22"
+    },
+    {
+      "source": "attr-37",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-17",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-20",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-43",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-45",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-28"
+    },
+    {
+      "source": "attr-19",
+      "target": "attr-28"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-28"
+    },
+    {
+      "source": "attr-36",
+      "target": "attr-28"
+    },
+    {
+      "source": "attr-20",
+      "target": "attr-21"
+    },
+    {
+      "source": "attr-27",
+      "target": "attr-21"
+    },
+    {
+      "source": "attr-45",
+      "target": "attr-21"
+    },
+    {
+      "source": "attr-43",
+      "target": "attr-21"
+    }
+  ]
+}

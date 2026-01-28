@@ -1,0 +1,146 @@
+Codebook — Structured Reference for Annotation
+
+Overview
+- Purpose: Provide a clear, hierarchical presentation of each node and its logical conditions so annotators can reason consistently.
+- Format: Each node ID is shown in [attr-2] form (unchanged). Atomic nodes are listed first; composite nodes follow with their logical structure preserved (Either / Both / Exactly one / Not).
+
+Atomic (single-condition) nodes
+- [attr-4]
+  - Definition: A story is [attr-4] if the story has a cliffhanger.
+
+- [attr-19]
+  - Definition: A story is [attr-19] if the story is modern.
+
+- [attr-26]
+  - Definition: A story is [attr-26] if the story uses discourse markers.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story has a flashback.
+
+- [attr-25]
+  - Definition: A story is [attr-25] if the story has the theme Problem-Solving.
+
+- [attr-13]
+  - Definition: A story is [attr-13] if the story starts with an adjective.
+
+- [attr-27]
+  - Definition: A story is [attr-27] if the story uses wh-questions.
+
+- [attr-6]
+  - Definition: A story is [attr-6] if the story has juxtaposition.
+
+- [attr-14]
+  - Definition: A story is [attr-14] if the story starts with an adverb.
+
+- [attr-24]
+  - Definition: A story is [attr-24] if the story has the theme Humor.
+
+- [attr-8]
+  - Definition: A story is [attr-8] if the story has readability score below 86.4.
+
+- [attr-16]
+  - Definition: A story is [attr-16] if the story is humorous.
+
+- [attr-18]
+  - Definition: A story is [attr-18] if the story is minimalist.
+
+- [attr-17]
+  - Definition: A story is [attr-17] if the story is lighthearted.
+
+- [attr-7]
+  - Definition: A story is [attr-7] if the story has readability score above 96.1.
+
+- [attr-23]
+  - Definition: A story is [attr-23] if the story has the theme Deception.
+
+- [attr-20]
+  - Definition: A story is [attr-20] if the story is philosophical.
+
+Composite (logical) nodes
+- [attr-15]
+  - Condition: A story is [attr-15] if either of the following is true:
+    1. The story is [attr-4]
+    2. Exactly one of the following is true:
+       - The story is [attr-5]
+       - The story is [attr-6]
+    3. Both of the following are true:
+       - The story is [attr-26]
+       - The story is not [attr-4]
+
+- [attr-9]
+  - Condition: A story is [attr-9] if both of the following are true:
+    - Either of the following is true:
+      - The story is [attr-13]
+      - The story is [attr-14]
+    - Exactly one of the following is true:
+      - The story is [attr-27]
+      - The story is [attr-26]
+
+- [attr-21]
+  - Condition: A story is [attr-21] if either of the following is true:
+    1. Both of the following are true:
+       - The story is in [STYLE-MODERN, STYLE-LIGHTHEARTED]
+       - The story is not [attr-18]
+    2. Both of the following are true:
+       - The story is [attr-16]
+       - The story is not [attr-20]
+
+- [attr-22]
+  - Condition: A story is [attr-22] if either of the following is true:
+    1. Both of the following are true:
+       - The story is [attr-25]
+       - The story is [attr-24]
+    2. Exactly one of the following is true:
+       - The story is [attr-23]
+       - The story is [attr-25]
+
+- [attr-11]
+  - Condition: A story is [attr-11] if exactly one of the following is true:
+    - The story is [attr-8]
+    - The story is [attr-7]
+
+- [attr-12]
+  - Condition: A story is [attr-12] if both of the following are true:
+    - The story is [attr-11]
+    - Either of the following is true:
+      - The story is [attr-17]
+      - The story is not [attr-8]
+
+- [attr-3]
+  - Condition: A story is [attr-3] if both of the following are true:
+    - Either of the following is true:
+      1. The story is [attr-15]
+      2. Both of the following are true:
+         - The story is [attr-9]
+         - The story is not [attr-4]
+    - Either of the following is true:
+      1. The story is [attr-21]
+      2. Both of the following are true:
+         - The story is [attr-22]
+         - The story is not [attr-20]
+
+- [attr-1]
+  - Condition: A story is [attr-1] if either of the following is true:
+    1. Both of the following are true:
+       - The story is [attr-12]
+       - The story is [attr-21]
+    2. Exactly one of the following is true:
+       - The story is [attr-16]
+       - The story is [attr-18]
+
+- [attr-10]
+  - Condition: A story is [attr-10] if both of the following are true:
+    - The story is [attr-3]
+    - Either of the following is true:
+      1. The story is [attr-1]
+      2. Both of the following are true:
+         - The story is [attr-22]
+         - The story is not [attr-11]
+
+Quick annotation tips (how to use this codebook)
+- Read atomic nodes first; mark them as true/false for the text.
+- Evaluate composite nodes by following the preserved logical structure exactly: respect "either", "both", and "exactly one".
+- Use the indentation to track nesting: inner bullets represent sub-conditions that affect the parent node.
+- When you see "not", negate only the referenced node as shown.
+
+End — All node IDs, logical relationships, and formulas are preserved.

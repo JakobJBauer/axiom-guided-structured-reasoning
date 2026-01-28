@@ -1,0 +1,41 @@
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if the story is minimalist.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if the story has the theme Growth.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+[CLEAR-CONCISE]
+A story is [CLEAR-CONCISE] if both of the following are true:
+- The story is [STYLE-MINIMALIST]
+- The story is [HIGH-READABILITY]
+
+[EMPHATIC]
+A story is [EMPHATIC] if both of the following are true:
+- The story is [USES-SUPERLATIVE-FORMS]
+- The story is not [STYLE-MINIMALIST]
+
+[THEMATIC-ARC]
+A story is [THEMATIC-ARC] if both of the following are true:
+- The story is [THEME-GROWTH]
+- Either of the following is true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is [TOPIC-HIDDEN-TREASURES]
+
+[COMPELLING]
+A story is [COMPELLING] if both of the following are true:
+- The story is [CLEAR-CONCISE]
+- Either of the following is true:
+  - The story is [EMPHATIC]
+  - The story is [THEMATIC-ARC]

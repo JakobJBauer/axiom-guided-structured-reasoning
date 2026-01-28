@@ -1,0 +1,75 @@
+Interviewer: Okay, let's walk through this codebook together. First up — what does [attr-13] mean?
+
+Expert: A story is [attr-13] if The story is about time travel.
+
+Interviewer: Got it. And [attr-11]?
+
+Expert: A story is [attr-11] if The story is about hidden treasures.
+
+Interviewer: How about the stylistic tags — what is [attr-9]?
+
+Expert: A story is [attr-9] if The story is philosophical.
+
+Interviewer: And what does [attr-5] indicate?
+
+Expert: A story is [attr-5] if The story has more than 6 paragraphs.
+
+Interviewer: Readability — what counts as [attr-4]?
+
+Expert: A story is [attr-4] if The story has readability score above 96.1.
+
+Interviewer: Classic style — explain [attr-7].
+
+Expert: A story is [attr-7] if The story is classic.
+
+Interviewer: And [attr-8]?
+
+Expert: A story is [attr-8] if The story is humorous.
+
+Interviewer: Topic-wise, what is [attr-12]?
+
+Expert: A story is [attr-12] if The story is about mystical creatures.
+
+Interviewer: Now the composite definitions — what defines [attr-10]?
+
+Expert: A story is [attr-10] if both of the following are true:
+- The story is [attr-9]
+- The story is not [attr-8]
+
+Interviewer: So [attr-10] requires philosophical tone and explicitly excludes humor. Clear. Next, what about [attr-6]?
+
+Expert: A story is [attr-6] if both of the following are true:
+- The story is [attr-4]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-8]
+
+Interviewer: That means high readability plus either classic or humorous style — correct.
+
+Interviewer: Tell me about [attr-1].
+
+Expert: A story is [attr-1] if either of the following is true:
+- The story is [attr-11]
+- Both of the following are true:
+  - The story is [attr-13]
+  - The story is not [attr-9]
+
+Interviewer: So an adventure arc can be driven by hidden treasures, or by time travel as long as it’s not philosophical. Clear. Moving on — how is [attr-2] defined?
+
+Expert: A story is [attr-2] if both of the following are true:
+- The story is [attr-10]
+- Either of the following is true:
+  - The story is [attr-1]
+  - The story is [attr-12]
+
+Interviewer: In short, a complex story needs thematic depth plus either an adventure arc or mystical creatures.
+
+Interviewer: Last one — what makes something [attr-3]?
+
+Expert: A story is [attr-3] if both of the following are true:
+- The story is [attr-2]
+- The story is [attr-5]
+
+Interviewer: Great — that wraps it up. Any final notes on using this for annotation?
+
+Expert: Keep the logical relationships exactly as stated: all node IDs in brackets, all "both"/"either"/"not" structures preserved. When you annotate, apply these definitions verbatim so the derived tags (like [attr-2] and [attr-3]) follow logically from the base tags.

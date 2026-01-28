@@ -1,0 +1,81 @@
+[attr-10]
+A story is [attr-10] if the story has fewer than 160 words.
+
+[attr-17]
+A story is [attr-17] if the story has the theme Kindness.
+
+[attr-14]
+A story is [attr-14] if the story has the theme Helping Others.
+
+[attr-18]
+A story is [attr-18] if the story has the theme Problem-Solving.
+
+[attr-12]
+A story is [attr-12] if the story is philosophical.
+
+[attr-5]
+A story is [attr-5] if the story has readability score above 96.1.
+
+[attr-13]
+A story is [attr-13] if the story is playful.
+
+[attr-15]
+A story is [attr-15] if the story has the theme Humor.
+
+[attr-11]
+A story is [attr-11] if the story is humorous.
+
+[attr-4]
+A story is [attr-4] if the story has a story within a story.
+
+[attr-19]
+A story is [attr-19] if the story is about mystical creatures.
+
+[attr-3]
+A story is [attr-3] if the story has a Red Herring.
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- The story is [attr-17]
+- The story is [attr-14]
+(And both must hold simultaneously.)
+
+[attr-7]
+A story is [attr-7] if exactly one of the following is true (Xor):
+- The story is [attr-13]
+- The story is [attr-11]
+
+[attr-16]
+A story is [attr-16] if the story's dominant theme is In the following set:
+- [attr-17], [attr-14], [attr-18]
+(Use In to check membership among those theme nodes.)
+
+[attr-1]
+A story is [attr-1] if the following Equal relationship holds:
+- The presence of [attr-12] Equal the presence of [attr-11]
+(They are Equal when either both are present or both are absent.)
+
+[attr-8]
+A story is [attr-8] if both of the following are true:
+- The story is [attr-19]
+- The story is [attr-4] And the story is [attr-12]
+(This nests an And inside an And to form an allegorical structure.)
+
+[attr-2]
+A story is [attr-2] if all of the following are true:
+- Either of the following is true (Or):
+  - The story is [attr-6]
+  - The story is [attr-18]
+- Exactly one of the following is true (Xor):
+  - The story is [attr-3]
+  - The story is [attr-4]
+- The story is Not [attr-10] Or the story is [attr-5]
+(Uses Not to exclude short stories unless they also meet HIGH-READABILITY; combines Or and Xor for nuanced arc structure.)
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- The story is [attr-2] And the story is [attr-1]
+- The story is [attr-16] And either of the following is true (Or):
+  - The story is [attr-7]
+  - The story is [attr-8]
+(This node nests multiple logical operators to form a deep, recommendable composition: And at the top level, Or inside a branch, and references In, Equal, Not, and Xor through its subordinate nodes.)

@@ -1,0 +1,127 @@
+In a sunlit archive where librarians sip tea and measure syllables like petals, this little codebook was born: a charted map of how tales are felt, counted, and named. Below each ordained label you will find the unchanged logical rule that binds it — followed, ever so gently, by a verdant explanation that sings the rule into life. The formal skeleton remains untouched; only the robes have been embroidered.
+
+[HIGH-READABILITY]
+A story is HIGH-READABILITY if The story has readability score above 96.1
+- In plainer, poetic terms: this flag flutters for tales whose clarity and ease of comprehension sparkle above the exact threshold of 96.1 — a luminous measure that tells readers the prose will glide like sunlight across a pond.
+
+[LOW-READABILITY]
+A story is LOW-READABILITY if The story has readability score below 86.4
+- This banner marks stories whose measured accessibility dips under 86.4, suggesting denser phrasing or a labyrinthine cadence that invites slower, more deliberate reading.
+
+[STARTS-WITH-NOUN]
+A story is STARTS-WITH-NOUN if The story starts with a noun
+- A tiny hinge on the narrative door: this token is set when the very first breath of the story names a thing — a person, place, or object that anchors what follows.
+
+[STARTS-WITH-ADVERB]
+A story is STARTS-WITH-ADVERB if The story starts with a adverb
+- Here the tale begins with motion or manner, an adverb that colors the opening with how something is done — the wind’s quietly, stubbornly, immediately pressing the first word forward.
+
+[USES-PERFECT-ASPECT]
+A story is USES-PERFECT-ASPECT if The story uses perfect aspect
+- This tells you that the narrative employs the perfect aspect (has/have + past participle), a grammatical loom that weaves past events into the present tapestry of the telling.
+
+[USES-DISCOURSE-MARKERS]
+A story is USES-DISCOURSE-MARKERS if The story uses discourse markers
+- When the story sprinkles signposts like "however," "therefore," or "meanwhile," this marker is lit — it signals a guiding voice arranging ideas and transitions.
+
+[HAS-A-CLIFFHANGER]
+A story is HAS-A-CLIFFHANGER if The story has a cliffhanger
+- This declares a story that ends upon an edge, a suspenseful precipice that leaves the reader poised and breathless for what may come.
+
+[HAS-JUXTAPOSITION]
+A story is HAS-JUXTAPOSITION if The story has juxtaposition
+- This flag denotes that the tale places contrasting images, ideas, or scenes side by side, letting their differences sing in tension.
+
+[HAS-A-RED-HERRING]
+A story is HAS-A-RED-HERRING if The story has a Red Herring
+- Here lies the storyteller’s sly diversion: an intentional false trail or misleading clue that tempts the reader away from the true path.
+
+[SHORT-STORY]
+A story is SHORT-STORY if The story has fewer than 160 words
+- Set this label for those compact blossoms of narrative that bloom in under 160 words — brief enough to be read in a single breath, dense with meaning.
+
+[STYLE-PHILOSOPHICAL]
+A story is STYLE-PHILOSOPHICAL if The story is philosophical
+- This attests that the story dwells in thought and reflection, carrying an air of inquiry about existence, meaning, or the nature of things.
+
+[STYLE-PLAYFUL]
+A story is STYLE-PLAYFUL if The story is playful
+- Affix this when the tale toys with tone and delight, when whimsy, lightness, or mischievous energy pervades the prose.
+
+[STYLE-HUMOROUS]
+A story is STYLE-HUMOROUS if The story is humorous
+- This label shines upon narratives crafted to amuse, where wit and comedic timing steer the reader toward laughter.
+
+[THEME-AGENCY]
+A story is THEME-AGENCY if The story has the theme Agency
+- This marks a central concern with agency: characters making choices, exerting will, and feeling the consequences of action.
+
+[OPENING-TONE]
+A story is OPENING-TONE if both of the following are true:
+- Either of the following is true:
+  - The story is [STARTS-WITH-NOUN]
+  - The story is [STARTS-WITH-ADVERB]
+- Either of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [STYLE-PLAYFUL]
+- Imagine this as the doorway tone of the tale: the opening voice is set when the story both begins with a noun or an adverb and carries either a philosophical hush or a playful wink. Both aspects must hold for the opening’s character to be declared.
+
+[NARRATIVE-PACE]
+A story is NARRATIVE-PACE if either of the following is true:
+- Both of the following are true:
+  - The story is [SHORT-STORY]
+  - The story is [HIGH-READABILITY]
+- Both of the following are true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is not [LOW-READABILITY]
+- This criterion catches tales that move with a particular tempo: either brief and brilliantly legible, or threaded with perfect aspect while avoiding low readability. Either path grants the story its paced identity.
+
+[COMEDIC-STRUCTURE]
+A story is COMEDIC-STRUCTURE if both of the following are true:
+- Either of the following is true:
+  - The story is [STYLE-PLAYFUL]
+  - The story is [STYLE-HUMOROUS]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [SHORT-STORY]
+    - The story is [USES-DISCOURSE-MARKERS]
+  - Either of the following is true:
+    - The story is [HAS-A-RED-HERRING]
+    - The story is [HAS-JUXTAPOSITION]
+- In the theatre of comedy, this label is raised only when the tale carries a playful or humorous style and, in addition, satisfies a precise structural duet: it must have exactly one of being short or using discourse markers, and it must also feature either a red herring or a juxtaposition. The result is a witty architecture built to provoke amusement.
+
+[THEMATIC-FUSION]
+A story is THEMATIC-FUSION if both of the following are true:
+- The story is [THEME-AGENCY]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [STYLE-PHILOSOPHICAL]
+    - The story is [OPENING-TONE]
+  - Exactly one of the following is true:
+    - The story is [HAS-JUXTAPOSITION]
+    - The story is [HAS-A-RED-HERRING]
+- This designation crowns stories where agency is central and then, like a delicate alchemy, merges either a philosophical style plus a defined opening tone, or exactly one of juxtaposition or red herring — producing a fusion of theme and technique.
+
+[RAPTURE-ENDING]
+A story is RAPTURE-ENDING if either of the following is true:
+- Both of the following are true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is not [SHORT-STORY]
+- Exactly one of the following is true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is [HAS-A-RED-HERRING]
+- This label settles on endings that lift the reader into a sense of rapture: either a cliffhanger that embellishes a longer form, or the presence of exactly one dramatic device — a cliffhanger or a red herring — that crafts a final, electrifying cadence.
+
+[COMPLEX-STORY]
+A story is COMPLEX-STORY if both of the following are true:
+- All of the following are true:
+  - The story is [THEMATIC-FUSION]
+  - The story is [COMEDIC-STRUCTURE]
+- Either of the following is true:
+  - The story is [NARRATIVE-PACE]
+  - Both of the following are true:
+    - The story is [RAPTURE-ENDING]
+    - The story is not [HIGH-READABILITY]
+- The throne of complexity is reserved for tales that wear both thematic fusion and comedic structure like twin crowns, and then also either move with a distinct narrative pace or combine a rapturous ending with readability that does not sit in the highest tier. These stories are the ornate tapestries in our archive — intricate, layered, and rewarding to unravel.
+
+Thus finished, the catalogue rests: each label an incantation, each rule a clasp that fastens meaning to form. Read, annotate, and wander these corridors with care — the formal bones are unchanged, but the language here invites you to linger beneath the gilded lamplight of understanding.

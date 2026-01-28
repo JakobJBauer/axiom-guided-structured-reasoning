@@ -1,0 +1,86 @@
+{
+  "nodes": [
+    {
+      "id": "attr-5",
+      "label": "Attr 5 (Helping Others theme)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "central-action-aid-rescue",
+      "label": "Protagonist central action in {aid, rescue}",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "central-action-donate-teach",
+      "label": "Protagonist central action in {donate, teach}",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "Attr 2 (Protagonist performs helpful action)",
+      "formula_type": "Or",
+      "formula_args": [
+        "central-action-aid-rescue",
+        "central-action-donate-teach"
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "Attr 3 (Protagonist motive = personal gain)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Attr 4 (Selfless Arc)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-2",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Attr 1 (Exactly one of Attr 5 or Attr 4)",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-5",
+        "attr-4"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "central-action-aid-rescue",
+      "target": "attr-2"
+    },
+    {
+      "source": "central-action-donate-teach",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    }
+  ]
+}

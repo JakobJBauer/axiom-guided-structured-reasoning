@@ -1,0 +1,50 @@
+[attr-9]
+A story is [attr-9] if the story exhibits the theme Humor.
+
+[attr-11]
+A story is [attr-11] if the story concerns lost civilizations.
+
+[attr-7]
+A story is [attr-7] if the story’s style is playful.
+
+[attr-8]
+A story is [attr-8] if the story’s style is surreal.
+
+[attr-12]
+A story is [attr-12] if the text employs discourse markers.
+
+[attr-2]
+A story is [attr-2] if the story’s readability score is below 86.4.
+
+[attr-5]
+A story is [attr-5] if the story’s style is classic.
+
+[attr-6]
+A story is [attr-6] if the story’s style is philosophical.
+
+[attr-1]
+A story is [attr-1] if the narrative contains a cliffhanger ending.
+
+[attr-4]
+A story is [attr-4] if the first lexical token of the story is a preposition.
+
+[attr-10]
+A story is [attr-10] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-8]
+  - The story is not [attr-5]
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is in the following set:
+  - [attr-9]
+  - [attr-11]
+- Either of the following is true:
+  - The story is [attr-1]
+  - Both of the following are true:
+    - The story is equal to [attr-9]
+    - The story is not [attr-2]
+- Or the story is [attr-10]

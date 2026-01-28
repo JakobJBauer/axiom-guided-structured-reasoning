@@ -1,0 +1,50 @@
+Codebook — Structured format
+Purpose: Provide clear, hierarchical definitions of annotation nodes and their logical relationships. Use this as a checklist when labeling stories.
+
+1) Atomic attributes (basic, directly observable)
+- [attr-6]
+  - Definition: A story is [attr-6] when the story is playful.
+  - Annotation cue: Mark this if the overall tone or approach of the story is playful.
+
+- [attr-5]
+  - Definition: A story is [attr-5] when the story is modern.
+  - Annotation cue: Mark this if the story uses contemporary style, references, or sensibilities.
+
+- [attr-4]
+  - Definition: A story is [attr-4] when the story starts with an adjective.
+  - Annotation cue: Mark this when the very first word (or opening token) is an adjective.
+
+- [attr-7]
+  - Definition: A story is [attr-7] when the story uses discourse markers.
+  - Annotation cue: Mark this if the text contains discourse markers (e.g., however, therefore, meanwhile, etc.).
+
+- [attr-2]
+  - Definition: A story is [attr-2] when the story has Checkhov's gun.
+  - Annotation cue: Mark this if an element introduced early is later used in the plot (Chekhov’s gun principle).
+
+2) Composite attributes (logical combinations of atomic attributes)
+- [attr-3]
+  - Definition: A story is [attr-3] if both of the following are true:
+    - The story is [attr-5]
+    - The story is [attr-4]
+  - Logical structure: AND([attr-5], [attr-4])
+
+- [attr-1]
+  - Definition: A story is [attr-1] if both of the following are true:
+    - The story is either [attr-6] or [attr-7]
+    - The story is [attr-2]
+  - Logical structure: AND( OR([attr-6], [attr-7]) , [attr-2] )
+
+3) Quick annotation workflow (practical steps)
+- Step 1: Check atomic attributes first (STYLE-PLAYFUL, STYLE-MODERN, STARTS-WITH-ADJECTIVE, USES-DISCOURSE-MARKERS, HAS-CHECKHOVS-GUN).
+- Step 2: Apply composite rules:
+  - If both [attr-5] and [attr-4] are true, label [attr-3].
+  - If [attr-2] is true and at least one of [attr-6] or [attr-7] is true, label [attr-1].
+- Step 3: Double-check that each composite label reflects the exact logical combination defined above.
+
+Notes and reminders
+- Do not invent or delete nodes — use only the exact labels in brackets.
+- Preserve the logical relationships when deciding composite labels.
+- Treat the OR in [attr-1] as inclusive: either or both of the listed options may be present alongside [attr-2].
+
+End of codebook.

@@ -1,0 +1,68 @@
+Interviewer: Let's walk through this codebook together. Can you start with the simplest entries?
+
+Expert: Sure. I'll read the formal line and then explain it in plain terms.
+
+Expert: [HAS-A-FLASHBACK]
+- Formal: A story is [HAS-A-FLASHBACK] if The story has a flashback
+- Explanation: That one is straightforward — if the story contains a flashback, you mark it as [HAS-A-FLASHBACK].
+
+Interviewer: And the next two?
+
+Expert: Yes.
+
+Expert: [USES-WH-QUESTIONS]
+- Formal: A story is [USES-WH-QUESTIONS] if The story uses wh-questions
+- Explanation: Mark [USES-WH-QUESTIONS] when the narrative includes wh-questions (who, what, where, when, why, how).
+
+Expert: [USES-DISCOURSE-MARKERS]
+- Formal: A story is [USES-DISCOURSE-MARKERS] if The story uses discourse markers
+- Explanation: Use [USES-DISCOURSE-MARKERS] when the story employs discourse markers — words or phrases that organize or connect the flow of the text (for example transitions, signpost words, and similar devices).
+
+Interviewer: Now the codebook defines [INTERACTIVE]. How should we read that?
+
+Expert: Read exactly as written, then I'll unpack it.
+
+Expert: [INTERACTIVE]
+- Formal: A story is [INTERACTIVE] if exactly one of the following is true:
+  - The story is [USES-WH-QUESTIONS]
+  - The story is [USES-DISCOURSE-MARKERS]
+- Explanation: This says [INTERACTIVE] holds when exactly one of those two conditions is true — that is, the story either uses wh-questions or uses discourse markers, but not both. (The phrase "exactly one" enforces that exclusivity.)
+
+Interviewer: Got it. How about [COMPLEX-NARRATIVE]?
+
+Expert: Again, here's the formal definition first.
+
+Expert: [COMPLEX-NARRATIVE]
+- Formal: A story is [COMPLEX-NARRATIVE] if both of the following are true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is not [INTERACTIVE]
+- Explanation: So to classify a story as [COMPLEX-NARRATIVE], two things must hold at the same time: it must have a flashback, and it must not satisfy the [INTERACTIVE] condition. In other words, a flashback plus the absence of that exclusive-interaction pattern equals [COMPLEX-NARRATIVE].
+
+Interviewer: And the last node, [SPECIAL-CASE]?
+
+Expert: Yes — here's the formal entry and then a plain-language reading.
+
+Expert: [SPECIAL-CASE]
+- Formal: A story is [SPECIAL-CASE] if either of the following is true:
+  - The story is in the set { [INTERACTIVE], [COMPLEX-NARRATIVE] }
+  - The story is equal to [HAS-A-FLASHBACK]
+- Explanation: This declares that a story is a [SPECIAL-CASE] if at least one of these holds: it belongs to the set containing [INTERACTIVE] or [COMPLEX-NARRATIVE], or it is exactly [HAS-A-FLASHBACK]. Practically, that means any story that is interactive or complex-narrative qualifies, and any story that is simply marked [HAS-A-FLASHBACK] also qualifies. (The formal bullets are preserved verbatim to keep the logic explicit.)
+
+Interviewer: To be clear — you preserved all the exact relationships and logical words like "exactly one," "both," "not," and "either," right?
+
+Expert: Absolutely. The node IDs are unchanged ([HAS-A-FLASHBACK], [USES-WH-QUESTIONS], [USES-DISCOURSE-MARKERS], [INTERACTIVE], [COMPLEX-NARRATIVE], [SPECIAL-CASE]), and the logical structure is preserved exactly as written:
+- [INTERACTIVE] uses "exactly one" between [USES-WH-QUESTIONS] and [USES-DISCOURSE-MARKERS].
+- [COMPLEX-NARRATIVE] requires both [HAS-A-FLASHBACK] and "The story is not [INTERACTIVE]".
+- [SPECIAL-CASE] uses "either of the following is true" with one bullet being the set { [INTERACTIVE], [COMPLEX-NARRATIVE] } and the other being equality with [HAS-A-FLASHBACK].
+
+Interviewer: Any practical tips for annotators using this codebook?
+
+Expert: Yes — when you mark stories:
+- First note whether there's a flashback: that determines [HAS-A-FLASHBACK].
+- Then check for wh-questions and discourse markers. Use the "exactly one" rule to decide [INTERACTIVE].
+- Apply the "both" plus "not" rule for [COMPLEX-NARRATIVE].
+- Finally, use the two bullets under [SPECIAL-CASE] — membership in { [INTERACTIVE], [COMPLEX-NARRATIVE] } or equality to [HAS-A-FLASHBACK] — to decide [SPECIAL-CASE].
+
+Interviewer: Thanks — that keeps the logical flow clear while making the rules easy to follow.
+
+Expert: You're welcome. The formal statements are preserved verbatim in each node; the Q&A just aims to make them easier to apply in practice.

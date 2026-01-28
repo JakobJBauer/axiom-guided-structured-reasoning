@@ -1,0 +1,168 @@
+{
+  "nodes": [
+    {
+      "id": "attr-4",
+      "label": "Starts with adjective",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Starts with noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "Lighthearted",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "Surreal",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Humorous",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-11",
+      "label": "Problem-solving theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Deception theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Exclusive start-type",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-4",
+        "attr-5"
+      ]
+    },
+    {
+      "id": "attr-12",
+      "label": "Playful tone",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-8",
+            "attr-7"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-9",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-10"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Deception or problem-solving",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-10",
+        "attr-11"
+      ]
+    },
+    {
+      "id": "attr-6",
+      "label": "Style equality",
+      "formula_type": "Equal",
+      "formula_args": [
+        "attr-8",
+        "attr-7"
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Complex story indicator",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-3",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-12",
+            "attr-2"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-4",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-12"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-6"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-1"
+    }
+  ]
+}

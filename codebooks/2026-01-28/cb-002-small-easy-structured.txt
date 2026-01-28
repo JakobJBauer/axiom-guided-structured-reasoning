@@ -1,0 +1,50 @@
+Codebook — Structured format
+Purpose: Provide clear, hierarchical definitions of annotation nodes and their logical relationships. Use this as a checklist when labeling stories.
+
+1) Atomic attributes (basic, directly observable)
+- [STYLE-PLAYFUL]
+  - Definition: A story is [STYLE-PLAYFUL] when the story is playful.
+  - Annotation cue: Mark this if the overall tone or approach of the story is playful.
+
+- [STYLE-MODERN]
+  - Definition: A story is [STYLE-MODERN] when the story is modern.
+  - Annotation cue: Mark this if the story uses contemporary style, references, or sensibilities.
+
+- [STARTS-WITH-ADJECTIVE]
+  - Definition: A story is [STARTS-WITH-ADJECTIVE] when the story starts with an adjective.
+  - Annotation cue: Mark this when the very first word (or opening token) is an adjective.
+
+- [USES-DISCOURSE-MARKERS]
+  - Definition: A story is [USES-DISCOURSE-MARKERS] when the story uses discourse markers.
+  - Annotation cue: Mark this if the text contains discourse markers (e.g., however, therefore, meanwhile, etc.).
+
+- [HAS-CHECKHOVS-GUN]
+  - Definition: A story is [HAS-CHECKHOVS-GUN] when the story has Checkhov's gun.
+  - Annotation cue: Mark this if an element introduced early is later used in the plot (Chekhov’s gun principle).
+
+2) Composite attributes (logical combinations of atomic attributes)
+- [MODERN-OPENING]
+  - Definition: A story is [MODERN-OPENING] if both of the following are true:
+    - The story is [STYLE-MODERN]
+    - The story is [STARTS-WITH-ADJECTIVE]
+  - Logical structure: AND([STYLE-MODERN], [STARTS-WITH-ADJECTIVE])
+
+- [ENGAGING-STRUCTURE]
+  - Definition: A story is [ENGAGING-STRUCTURE] if both of the following are true:
+    - The story is either [STYLE-PLAYFUL] or [USES-DISCOURSE-MARKERS]
+    - The story is [HAS-CHECKHOVS-GUN]
+  - Logical structure: AND( OR([STYLE-PLAYFUL], [USES-DISCOURSE-MARKERS]) , [HAS-CHECKHOVS-GUN] )
+
+3) Quick annotation workflow (practical steps)
+- Step 1: Check atomic attributes first (STYLE-PLAYFUL, STYLE-MODERN, STARTS-WITH-ADJECTIVE, USES-DISCOURSE-MARKERS, HAS-CHECKHOVS-GUN).
+- Step 2: Apply composite rules:
+  - If both [STYLE-MODERN] and [STARTS-WITH-ADJECTIVE] are true, label [MODERN-OPENING].
+  - If [HAS-CHECKHOVS-GUN] is true and at least one of [STYLE-PLAYFUL] or [USES-DISCOURSE-MARKERS] is true, label [ENGAGING-STRUCTURE].
+- Step 3: Double-check that each composite label reflects the exact logical combination defined above.
+
+Notes and reminders
+- Do not invent or delete nodes — use only the exact labels in brackets.
+- Preserve the logical relationships when deciding composite labels.
+- Treat the OR in [ENGAGING-STRUCTURE] as inclusive: either or both of the listed options may be present alongside [HAS-CHECKHOVS-GUN].
+
+End of codebook.

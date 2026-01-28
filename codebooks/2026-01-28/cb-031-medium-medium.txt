@@ -1,0 +1,43 @@
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if the story has readability score below 86.4
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if the story is modern
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if the story has the theme Magic
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving
+
+[TIME-MAGIC-NEXUS]
+A story is [TIME-MAGIC-NEXUS] if exactly one of the following is true:
+- The story is [TOPIC-TIME-TRAVEL]
+- The story is [THEME-MAGIC]
+
+[DIDACTIC-BYGONE]
+A story is [DIDACTIC-BYGONE] if all of the following are true:
+- The story is [TOPIC-BYGONE-ERAS]
+- The story is [HAS-A-MORAL-LESSON]
+- The story is not [USES-SUPERLATIVE-FORMS]
+
+[COMPLEX-ARC]
+A story is [COMPLEX-ARC] if all of the following are true:
+- The story is [TIME-MAGIC-NEXUS]
+- The story is [THEME-PROBLEM-SOLVING]
+- The story is not [LOW-READABILITY]

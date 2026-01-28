@@ -1,0 +1,116 @@
+[HAS-A-RED-HERRING]
+A story is [HAS-A-RED-HERRING] if The story has a Red Herring.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if The story is lighthearted.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if The story has the theme Magic.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if The story is about the arts.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if The story has the theme Innovation.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if The story has the theme Growth.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if The story starts with a preposition.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if The story is about cultural traditions.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if The story has the theme Deception.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if The story uses wh-questions.
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] if The story is about bygone eras.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if The story is modern.
+
+[NARRATIVE-SURPRISE]
+A story is [NARRATIVE-SURPRISE] if both of the following are true:
+- Either of the following is true:
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [HAS-CHECKHOVS-GUN]
+- Either of the following is true:
+  - Exactly one of [THEME-DECEPTION] and [USES-WH-QUESTIONS] is true
+  - The story is [MANY-PARAGRAPHS]
+
+[RICH-LENGTH]
+A story is [RICH-LENGTH] if both of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- The story is [USES-PERFECT-ASPECT]
+
+[CLASSIC-VS-MODERN]
+A story is [CLASSIC-VS-MODERN] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [STYLE-MODERN]
+- The story is not [STYLE-LIGHTHEARTED]
+- Either of the following is true:
+  - The story is [STARTS-WITH-PREPOSITION]
+  - The story is [STARTS-WITH-ADJECTIVE]
+
+[CULTURAL-PAST-THEME]
+A story is [CULTURAL-PAST-THEME] if either of the following is true:
+- Both of the following are true:
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+  - The story is [TOPIC-BYGONE-ERAS]
+- Both of the following are true:
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+  - Exactly one of [THEME-GROWTH] and [THEME-DECEPTION] is true
+
+[INNOVATION-GROWTH-MIX]
+A story is [INNOVATION-GROWTH-MIX] if either of the following is true:
+- Both of the following are true:
+  - The story is [THEME-INNOVATION]
+  - The story is [THEME-GROWTH]
+- All of the following are true:
+  - The story is [THEME-INNOVATION]
+  - The story is [TOPIC-THE-ARTS]
+  - The story is not [THEME-GROWTH]
+
+[ARTS-ROOT]
+A story is [ARTS-ROOT] if both of the following are true:
+- The story is [TOPIC-THE-ARTS]
+- Either of the following is true:
+  - The story is [INNOVATION-GROWTH-MIX]
+  - The story is [CULTURAL-PAST-THEME]
+
+[EPIC-ARTS-MYSTERY]
+A story is [EPIC-ARTS-MYSTERY] if both of the following are true:
+- Either of the following is true:
+  - The story is [ARTS-ROOT]
+  - Both of the following are true:
+    - The story is [NARRATIVE-SURPRISE]
+    - The story is [RICH-LENGTH]
+- Either of the following is true:
+  - The story is [CLASSIC-VS-MODERN]
+  - Both of the following are true:
+    - The story is [CULTURAL-PAST-THEME]
+    - The story is [INNOVATION-GROWTH-MIX]

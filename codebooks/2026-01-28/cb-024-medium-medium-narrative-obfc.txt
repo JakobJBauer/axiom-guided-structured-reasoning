@@ -1,0 +1,76 @@
+Imagine a small village of labels, each one a tiny lantern that glows when a story meets its mark. Walk with me down the main street of this codebook and meet them—one by one—first in plain, lively words, then in precise, honest form so your annotating hand knows exactly when each light should shine.
+
+A playful lantern bobs on a string, eager for mischief and lightness. When a tale jokes, twirls, or delights with mischief, that lantern turns on.
+
+[attr-8]
+A story is [attr-8] if the story is playful.
+
+A minimalist lantern sits almost hidden—clean lines, spare words. If the tale trims away ornament and speaks simply, this quiet light glows.
+
+[attr-7]
+A story is [attr-7] if the story is minimalist.
+
+A lantern for lessons hangs near the town square. It catches stories that intend to teach, to leave the reader with a moral compass turned a degree or two.
+
+[attr-3]
+A story is [attr-3] if the story has a moral lesson.
+
+There’s a brass, slightly whirring lantern that ticks through eras—this one awakens whenever the plot bends time, when characters hop between past and future.
+
+[attr-11]
+A story is [attr-11] if the story is about time travel.
+
+At the gate, a simple rule: does the very first word stand still as a noun? If so, a tidy marker is raised.
+
+[attr-6]
+A story is [attr-6] if the story starts with a noun.
+
+A column of pages marks length. When a tale spreads beyond six paragraphs—when it breathes in many chambers—that marker is set.
+
+[attr-4]
+A story is [attr-4] if the story has more than 6 paragraphs.
+
+A mood-scented lantern dims or brightens with conditionals—if, were, might. If the story uses that conditional mood, this one lights.
+
+[attr-12]
+A story is [attr-12] if the story uses conditional mood.
+
+A weathered banner flutters for hardship. If the narrative carries struggle—hardship as its theme—this flag waves.
+
+[attr-9]
+A story is [attr-9] if the story has the theme Hardship.
+
+Some lights only come on together. A compound ribbon ties two neighboring lanterns: playful and minimalist must both be glowing for this ribbon to exist.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-8]
+- The story is [attr-7]
+
+There’s a more intricate constellation for deeper narratives. When a tale starts with a noun, stretches into many paragraphs, and speaks in conditional mood, a complex pattern appears—three points of light that must all align.
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-12]
+- The story is [attr-6]
+
+A special pocket-watch light blinks when time travel and a moral lesson share the same story—two conditions that together form a distinct sign.
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-3]
+
+At last, there’s the grand, multifaceted lamp: the rich-style narrative. It requires the complexity of the three-point constellation, and on top of that it needs either the neat twinning of playful and minimalist styles, or the single spark of playfulness provided hardship is absent. The rule is exact—follow it like a map.
+
+[attr-5]
+A story is [attr-5] if both of the following are true:
+- The story is [attr-1]
+- Either of the following is true:
+  - The story is [attr-2]
+  - Both of the following are true:
+    - The story is [attr-8]
+    - The story is not [attr-9]
+
+So stroll the streets of this codebook with confidence: each narrative description here is the friendly guide, and each bracketed line is the scholar’s rule—unchanged, exact, and ready for annotation.

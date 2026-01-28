@@ -1,0 +1,71 @@
+Imagine a dimly lit archive where each tale arrives like a traveler, and the curator—your steady-handed annotator—decides which label will cling to its spine. Walk with me through the stacks. I’ll whisper the rules the curator follows, and then state the formal tag that must be applied when those rules are met.
+
+The curator first checks how easily the story reads. If its sentences stumble and the numbers on the readability meter sag under a threshold, the story is marked with a practical, unromantic tag.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if the story has readability score below 86.4
+
+Some stories wear a reflective cloak. When a narrative leans into big questions, into "why" and "what it means," the curator pins a small label that signals thoughtfulness.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical
+
+Others dress in the trappings of the present—fast, sleek, and of-the-moment. Those are given a different badge.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if the story is modern
+
+When an author reaches for extremes—"the best," "the greatest," "the most"—the curator notices the superlative heartbeat and tacks on a clear marker.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms
+
+Some tales are echoes of distant centuries, full of dust, courtship, and vanished streets. These histories—real or imagined—receive a label that announces their era.
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras
+
+Magic hums in other volumes—spells, enchantments, impossible rules folded into the world. Those are set apart by a sign that glows faintly.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if the story has the theme Magic
+
+And then there are stories that bend time itself—portals, paradoxes, travelers stepping out of clocks. Time travel tales are cataloged accordingly.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel
+
+Sometimes a story is meant to teach. When a narrative carries a guiding lesson, a moral stitched into its end, the curator ties on a small moral warrant.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson
+
+Other tales are puzzles: problems to be solved, riddles unwound by wit and method. Those receive a thematic tag for problem-solving.
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving
+
+There is a special crossroads in the archive, a nexus where time and magic meet. The rule here is precise and exclusive: a story may pass through this gate only if it belongs to exactly one of the two realms—time travel or magic, but never both at once.
+
+[TIME-MAGIC-NEXUS]
+A story is [TIME-MAGIC-NEXUS] if exactly one of the following is true:
+- The story is [TOPIC-TIME-TRAVEL]
+- The story is [THEME-MAGIC]
+
+Some books teach history with intent—bygone eras paired with a lesson. Yet, the curator prefers restraint: if such a tale deploys superlatives, it doesn’t earn the didactic badge. All conditions must line up: era, moral, and the absence of overblown comparative language.
+
+[DIDACTIC-BYGONE]
+A story is [DIDACTIC-BYGONE] if all of the following are true:
+- The story is [TOPIC-BYGONE-ERAS]
+- The story is [HAS-A-MORAL-LESSON]
+- The story is not [USES-SUPERLATIVE-FORMS]
+
+Finally, certain narratives are the curator’s favorites—rich arcs that combine a single-minded strange element (time or magic, but not both), a problem-solving heart, and enough clarity to avoid the low-readability flag. Only when all three criteria are satisfied is the label granted.
+
+[COMPLEX-ARC]
+A story is [COMPLEX-ARC] if all of the following are true:
+- The story is [TIME-MAGIC-NEXUS]
+- The story is [THEME-PROBLEM-SOLVING]
+- The story is not [LOW-READABILITY]
+
+And so the archive grows, each label applied by these rules. The narrative voice here has told you the story of the classifier—the precise criteria remain unchanged, but now they live in a little world where each node is a tag, and each tag a small verdict on the journeys stories take.

@@ -1,0 +1,45 @@
+[MANY-PARAGRAPHS]
+Definition: A story is classified as [MANY-PARAGRAPHS] if the narrative contains more than 6 paragraphs.
+
+[STYLE-CLASSIC]
+Definition: A story is classified as [STYLE-CLASSIC] if the narrative exhibits a classic style.
+
+[HAS-A-CLIFFHANGER]
+Definition: A story is classified as [HAS-A-CLIFFHANGER] if the narrative terminates with a cliffhanger.
+
+[STARTS-WITH-PREPOSITION]
+Definition: A story is classified as [STARTS-WITH-PREPOSITION] if the initial token (or starting word) of the narrative is a preposition.
+
+[THEME-DECEPTION]
+Definition: A story is classified as [THEME-DECEPTION] if the narrative contains the theme Deception.
+
+[STYLE-PLAYFUL]
+Definition: A story is classified as [STYLE-PLAYFUL] if the narrative adopts a playful style.
+
+[THEME-HELPING-OTHERS]
+Definition: A story is classified as [THEME-HELPING-OTHERS] if the narrative contains the theme Helping Others.
+
+[THEME-AGENCY]
+Definition: A story is classified as [THEME-AGENCY] if the narrative contains the theme Agency.
+
+[HAS-JUXTAPOSITION]
+Definition: A story is classified as [HAS-JUXTAPOSITION] if the narrative contains juxtaposition.
+
+[STYLE-PHILOSOPHICAL]
+Definition: A story is classified as [STYLE-PHILOSOPHICAL] if the narrative adopts a philosophical style.
+
+[RICH-THEME]
+Definition: A story is classified as [RICH-THEME] if either of the following conditions holds:
+- The story is both [THEME-DECEPTION] and not [THEME-HELPING-OTHERS].
+- Exactly one of the following is true (exclusive disjunction):
+  - The story is [THEME-AGENCY].
+  - The story is [THEME-HELPING-OTHERS].
+
+[COMPLEX-CLASSIC-ARC]
+Definition: A story is classified as [COMPLEX-CLASSIC-ARC] if both of the following conditions hold:
+- The story is [STYLE-CLASSIC].
+- Either of the following is true:
+  - The story is both [HAS-A-CLIFFHANGER] and not [STYLE-PLAYFUL].
+  - The story is both [STARTS-WITH-PREPOSITION] and [RICH-THEME].
+
+Notes: Each definition above specifies a binary predicate on narratives. Composite classifications ([RICH-THEME], [COMPLEX-CLASSIC-ARC]) are defined via Boolean combinations of primitive predicates using conjunction, negation, disjunction, and exclusive disjunction as explicitly stated.

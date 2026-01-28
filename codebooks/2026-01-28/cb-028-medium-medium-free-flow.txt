@@ -1,0 +1,53 @@
+Think of this as a friendly map for tagging stories. I’ll walk through each label, keeping the exact logical rules intact while making the language flow a bit more naturally. Every tag is shown by its ID in brackets — those IDs don’t change — and the logical relationships are preserved exactly as stated.
+
+[HAS-A-MORAL-LESSON]
+If a story carries a moral lesson, we give it the tag [HAS-A-MORAL-LESSON]. In short: a story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+[MANY-PARAGRAPHS]
+When a story stretches beyond six paragraphs, we mark it as [MANY-PARAGRAPHS]. Formally: a story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+
+[STARTS-WITH-ADVERB]
+If the very first word of the story is an adverb, it’s labeled [STARTS-WITH-ADVERB]. Put simply: a story is [STARTS-WITH-ADVERB] if the story starts with an adverb.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+If the story loops back on itself — a circular narrative structure — we call it [HAS-CIRCULAR-NARRATIVE-STRUCT]. That is: a story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+[USES-PERFECT-ASPECT]
+We use [USES-PERFECT-ASPECT] when the story employs perfect aspect. Concretely: a story is [USES-PERFECT-ASPECT] if the story uses perfect aspect.
+
+[USES-SUPERLATIVE-FORMS]
+If the language includes superlatives — the “-est” forms or equivalents — the tag is [USES-SUPERLATIVE-FORMS]. In other words: a story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+[STYLISTIC-CHOICE]
+Call a story [STYLISTIC-CHOICE] when both of the following are true:
+- The story is [STARTS-WITH-ADVERB]
+- Exactly one of the following is true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-SUPERLATIVE-FORMS]
+
+So, to earn [STYLISTIC-CHOICE] it must begin with an adverb and then have exactly one of those other stylistic features — either perfect aspect or superlatives, but not both.
+
+[NARRATIVE-TYPE]
+A story is [NARRATIVE-TYPE] if either of the following is true:
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- Both of the following are true:
+  - The story is not [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - The story is [MANY-PARAGRAPHS]
+
+In short: a circular narrative qualifies immediately; otherwise, being a long (many-paragraph) piece makes it a [NARRATIVE-TYPE].
+
+[MORAL-OR-LONG]
+This label, [MORAL-OR-LONG], applies when exactly one of the following is true:
+- The story is [HAS-A-MORAL-LESSON]
+- The story is [MANY-PARAGRAPHS]
+
+So the story is tagged [MORAL-OR-LONG] if it has a moral or is long — but not both.
+
+[COMPLEXITY-HIGH]
+Finally, a story is [COMPLEXITY-HIGH] if both of the following are true:
+- Either of the following is true:
+  - The story is [STYLISTIC-CHOICE]
+  - The story is not [MORAL-OR-LONG]
+- The story is [NARRATIVE-TYPE]
+
+Put another way: to be [COMPLEXITY-HIGH], a story must be a [NARRATIVE-TYPE] and also either meet the [STYLISTIC-CHOICE] condition or fail to be [MORAL-OR-LONG]. The logical relationships above remain exactly as written, just explained in conversational terms to make the rules easier to follow.

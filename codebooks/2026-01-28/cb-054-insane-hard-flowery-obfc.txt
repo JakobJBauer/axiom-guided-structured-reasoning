@@ -1,0 +1,283 @@
+[attr-44]
+A story is [attr-44] if The story is about magical lands
+Beneath this concise decree lives a wider image: any tale that unfurls its scenes within realms threaded with enchantment, fairy-light geography, or terrains that hum with impossible rules is claimed by this name. Think of emerald valleys that float in the sky, cities carved from moonlight, or forests that rearrange themselves by whim — such landscapes answer to [attr-44].
+
+[attr-14]
+A story is [attr-14] if The story has readability score below 86.4
+In other words, if the prose ventures into labyrinths of ornate sentences or dense phrasing so that mechanical measures fall beneath the threshold of 86.4, the story is marked with this gentle caution: its clarity is low by that numeric standard.
+
+[attr-33]
+A story is [attr-33] if The story has the theme Deception
+This label is bestowed when deception is a loom upon which the plot weaves—when dupes, masks, secrets, betrayals, or cunning deception are central strands in the narrative tapestry.
+
+[attr-16]
+A story is [attr-16] if The story has more than 6 paragraphs
+When a tale unfurls beyond half a dozen paragraphs, staking multiple breaths and beats across whitespace, it carries the [attr-16] signature.
+
+[attr-20]
+A story is [attr-20] if The story starts with a adjective
+If the very first word that opens the narrative is an adjective — a color, a mood, an attribute — the story claims this beginning-mark.
+
+[attr-30]
+A story is [attr-30] if The story is surreal
+When the tale dissolves the borders of ordinary causality and logic, sashaying into dreamlike incongruities and marvelous distortions, it is adorned with the [attr-30] banner.
+
+[attr-22]
+A story is [attr-22] if The story starts with a noun
+Should the inaugural word of the piece be a noun — a person, place, thing, or concept standing proud at the threshold — then the story is counted among those that [attr-22].
+
+[attr-46]
+A story is [attr-46] if The story is about the arts
+When the arts themselves — painting, music, dance, theater, sculpture, and their kin — form the center of concern, the tale bears the [attr-46] hallmark.
+
+[attr-42]
+A story is [attr-42] if The story is about hidden treasures
+If the narrative revolves around objects of secret value, buried fortunes, or caches of wonder concealed from prying eyes, it is rightly cataloged here.
+
+[attr-35]
+A story is [attr-35] if The story has the theme Hardship
+When struggle, adversity, and the labor of endurance thread the emotional heart of the tale, it is described by this theme.
+
+[attr-25]
+A story is [attr-25] if The story is classic
+This mark is for works that wear the poise of tradition, narrative architectures and tones that echo the canon or classic modes of storytelling.
+
+[attr-10]
+A story is [attr-10] if The story has Checkhov's gun
+When an element is introduced with a purposeful presence that promises later pay-off — a hanging detail destined to return — the story bears the name of this dramatic instrument.
+
+[attr-48]
+A story is [attr-48] if The story uses discourse markers
+If the prose habitually employs signposts and connectors — however, therefore, meanwhile, moreover — to guide the reader through argument and flow, it is counted here.
+
+[attr-50]
+A story is [attr-50] if The story uses superlative forms
+When language reaches for extremes — the tallest, the most luminous, the least forgiving — and superlatives pepper the text, this attribute applies.
+
+[attr-41]
+A story is [attr-41] if The story is about giant creatures
+Tales that stage leviathans, colossi, titanic beasts, or otherwise outsized fauna are clasped under this heading.
+
+[attr-9]
+A story is [attr-9] if The story has a flashback
+If the narrative turns its gaze backward into memory within its present flow — a temporal detour that reveals past events — it qualifies as having a flashback.
+
+[attr-28]
+A story is [attr-28] if The story is modern
+Works that carry contemporary sensibilities, modernist touches, or present-day stylistic choices are gathered here.
+
+[attr-34]
+A story is [attr-34] if The story has the theme Growth
+When personal transformation, maturation, or developmental arcs form a core concern, the story is marked for growth.
+
+[attr-45]
+A story is [attr-45] if The story is about seasonal changes
+If the passage of seasons, cyclical metamorphoses of weather and time, or the symbolism of seasonal shift are central topics, this label applies.
+
+[attr-27]
+A story is [attr-27] if The story is minimalist
+When the language is pared down to essentials, a lean architecture of words and silences, the tale qualifies as minimalist in style.
+
+[attr-21]
+A story is [attr-21] if The story starts with a adverb
+Should the very first word be an adverb — softly, suddenly, curiously — the story is noted as beginning thus.
+
+[attr-43]
+A story is [attr-43] if The story is about lost civilizations
+Narratives that excavate the ruins of forgotten peoples, vanished polities, or antiquated societies receive this evocative descriptor.
+
+[attr-36]
+A story is [attr-36] if The story has the theme Helping Others
+When acts of assistance, altruism, compassion, or communal aid form the moral spine of the story, it is classified under this theme.
+
+[attr-38]
+A story is [attr-38] if The story has the theme Magic
+If supernatural art, spellcraft, mystic laws, or the wondrous faculty called magic propel the story’s concerns, this theme is declared.
+
+[attr-29]
+A story is [attr-29] if The story is playful
+When the tone frolics, indulges in whimsy, mischief, or lighthearted inversion, the style is playful.
+
+[attr-47]
+A story is [attr-47] if The story uses conditional mood
+If the prose frequently entertains hypotheticals — would, could, might — weaving conditional moods into its fabric, it carries this notation.
+
+[attr-49]
+A story is [attr-49] if The story uses perfect aspect
+When the narrative repeatedly employs perfect tenses (has done, had seen, will have been) to relate action, this feature is present.
+
+[attr-37]
+A story is [attr-37] if The story has the theme Humor
+If humor — laughter, wit, comic circumstance — is a theme the tale cultivates, it receives this emblem.
+
+[attr-40]
+A story is [attr-40] if The story is about cultural traditions
+Stories that delve into rituals, rites, folkways, and the inherited customs of communities are embraced by this topic.
+
+[attr-11]
+A story is [attr-11] if The story has juxtaposition
+When contrasts are deliberately placed side by side — light against shadow, old against new — to provoke meaning, the story is marked for juxtaposition.
+
+[attr-8]
+A story is [attr-8] if The story has a cliffhanger
+If the narrative arrests itself at a suspenseful edge, leaving questions poised and breath suspended, it is counted as containing a cliffhanger.
+
+[attr-12]
+A story is [attr-12] if The story has readability score above 96.1
+When the text achieves a lofty readability metric above 96.1, gliding easily for readers, it is rewarded with this label.
+
+[attr-26]
+A story is [attr-26] if The story is lighthearted
+If the tone is buoyant, easygoing, and free of heavy solemnity, the style is lighthearted.
+
+[attr-19]
+A story is [attr-19] if exactly one of the following is true:
+- The story is [attr-20]
+- The story is [attr-21]
+- The story is [attr-22]
+This rule is an exacting triad: the story’s opening word must claim precisely one of these identities — an adjective, an adverb, or a noun — no more, no less. It champions the singular character of an opening word.
+
+[attr-24]
+A story is [attr-24] if the story is in [STYLE-SURREAL, STYLE-PLAYFUL, STYLE-LIGHTHEARTED]
+When a work inhabits the shared aesthetic terrain of surreal whimsy and buoyant play, or lighthearted surreal playfulness, it is gathered under this collective style label.
+
+[attr-39]
+A story is [attr-39] if both of the following are true:
+- The story is [attr-43]
+- Either of the following is true:
+  - The story is [attr-42]
+  - The story is [attr-40]
+Here the codebook binds two strands: the tale must concern lost civilizations, and in addition it must fold in either hidden treasure or cultural traditions — thus invoking the aura of antiquity and the secrets it keeps.
+
+[attr-15]
+A story is [attr-15] if both of the following are true:
+- The story is [attr-44]
+- The story is [attr-38]
+A dual covenant: the setting is magical in geography and the story’s theme is magic itself, together invoking realms expressly attuned to sorcery and wonder.
+
+[attr-5]
+A story is [attr-5] if both of the following are true:
+- The story is [attr-41]
+- The story is [attr-44]
+This label applies when giant beings inhabit enchanted territories — titans made of starlight roaming fairy-meadows, colossi stirring beneath mystic mountains.
+
+[attr-17]
+A story is [attr-17] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-9]
+- Both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-8]
+- Both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-11]
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-8]
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-11]
+- Both of the following are true:
+  - The story is [attr-8]
+  - The story is [attr-11]
+Here a constellation of rhetorical mechanics is enumerated: the presence of classic devices — Chekhovian setups, flashback excursions, cliffhanging perches, and contrapuntal juxtapositions — in various pairings qualifies a story as rich in narrative devices.
+
+[attr-23]
+A story is [attr-23] if both of the following are true:
+- The story is [attr-16]
+- Both of the following are true:
+  - The story is [attr-48]
+  - Either of the following is true:
+    - The story is [attr-47]
+    - The story is [attr-49]
+Structured form emerges when a story is expansive in paragraphing and also scaffolds itself with discourse markers plus either conditional phrasing or perfect aspect — a design that signals intentional architecture and editorial shape.
+
+[attr-4]
+A story is [attr-4] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-38]
+  - The story is [attr-34]
+- Either of the following is true:
+  - The story is [attr-33]
+  - The story is [attr-35]
+  - The story is [attr-36]
+  - The story is [attr-37]
+This label marks thematic richness: the tale must embrace at least one of magic or growth, and at the same time at least one of deception, hardship, helping others, or humor — a braided thematic loom.
+
+[attr-13]
+A story is [attr-13] if both of the following are true:
+- The story is [attr-37]
+- Both of the following are true:
+  - The story is [attr-26]
+  - The story is [attr-29]
+When humor is paired with a lighthearted, playful execution, the result is a breezy, comedic temperament captured by this tag.
+
+[attr-18]
+A story is [attr-18] if both of the following are true:
+- The story is [attr-27]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [attr-25]
+    - The story is [attr-28]
+  - The story is not [attr-30]
+This precise condition names the paradox of sparseness married to poetic lineage: minimalist form coupled with either classic or modern sensibility, and expressly excluding surrealism.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-34]
+- The story is [attr-36]
+When a narrative charts growth that is bound up with acts of helping others — transformation realized through service — it fits this compassionate arc.
+
+[attr-31]
+A story is [attr-31] if both of the following are true:
+- The story is [attr-10]
+- The story is [attr-8]
+A surprising finale arises when a planted element (Chekhov’s gun) meets a suspended ending (a cliffhanger), promising startling resolution or withheld revelation.
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-17]
+- The story is [attr-23]
+Complex structure blooms where a story combines a wealth of narrative devices with an organized, multi-paragraph, marker-supported form — a richly built architecture.
+
+[attr-7]
+A story is [attr-7] if both of the following are true:
+- The story is [attr-39]
+- Either of the following is true:
+  - The story is [attr-41]
+  - The story is [attr-45]
+Epic mystery is invoked when ancient enigmas of lost worlds meet either the presence of titanic beings or the grand rhythms of seasonal change — a vast and uncanny tale.
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- The story is [attr-15]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [attr-42]
+    - The story is [attr-43]
+  - Either of the following is true:
+    - The story is [attr-35]
+    - The story is [attr-34]
+An enchanted odyssey requires a magical setting and, in addition, either a quest for hidden treasures or excavation of lost civilizations, paired with either hardship or growth — thus framing a heroic, mystical journey.
+
+[attr-32]
+A story is [attr-32] if both of the following are true:
+- The story is [attr-24]
+- Both of the following are true:
+  - The story is [attr-31]
+  - The story is [attr-1]
+This label crowns narratives that are aesthetically surreal and playful while delivering a surprising finale and a growth-help arc — a dreamlike yet emotionally generous surprise.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- Both of the following are true:
+  - The story is [attr-3]
+  - The story is [attr-4]
+- Either of the following is true:
+  - The story is [attr-6]
+  - Both of the following are true:
+    - The story is [attr-7]
+    - The story is [attr-5]
+- The story is [attr-19]
+To earn the exalted title [attr-2], a story must weave complex structure with a compound theme, and in addition either present an enchanted odyssey or pair epic mystery with creatures in magical lands; finally, it must satisfy the strict starting-word condition. The result is an elaborate, layered saga whose form, theme, scope, and very first word align to produce an epic of many dimensions.

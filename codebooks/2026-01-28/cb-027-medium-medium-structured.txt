@@ -1,0 +1,96 @@
+Purpose
+- This codebook defines labels (nodes) that annotators apply to stories.  
+- Each node below is stated as: "A story is [NODE-ID] if ..." followed by the precise conditions you must check.
+- Logical relationships (AND, OR, NOT, XOR / "exactly one") are preserved exactly as given; conditions are arranged hierarchically to help you annotate consistently.
+
+Nodes
+
+- [STARTS-WITH-ADVERB]
+  - Definition:
+    - A story is [STARTS-WITH-ADVERB] if the story starts with an adverb.
+  - Quick check:
+    - Look at the first word of the story. If it is an adverb, assign this label.
+
+- [STYLE-CLASSIC]
+  - Definition:
+    - A story is [STYLE-CLASSIC] if the story is classic.
+  - Quick check:
+    - Determine whether the story’s style fits classic conventions; if so, assign this label.
+
+- [LONG-STORY]
+  - Definition:
+    - A story is [LONG-STORY] if the story has more than 375 words.
+  - Quick check:
+    - Count words; if > 375, assign this label.
+
+- [TOPIC-GIANT-CREATURES]
+  - Definition:
+    - A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures.
+  - Quick check:
+    - Check whether giant creatures are a central subject; if yes, assign.
+
+- [THEME-DECEPTION]
+  - Definition:
+    - A story is [THEME-DECEPTION] if the story has the theme Deception.
+  - Quick check:
+    - Identify deception as a core theme; if present, assign.
+
+- [TOPIC-HIDDEN-TREASURES]
+  - Definition:
+    - A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+  - Quick check:
+    - If hidden treasures are central to the plot, assign this label.
+
+Composite nodes (combinations of other nodes)
+
+- [AMPHIBIOUS-EPIC]
+  - Definition:
+    - A story is [AMPHIBIOUS-EPIC] if all of the following are true:
+      - The story is [LONG-STORY]
+      - The story is [TOPIC-GIANT-CREATURES]
+      - The story is not [STYLE-CLASSIC]
+  - Interpretation:
+    - Requires every listed condition to hold: long length, giant creatures topic, and explicitly not classic style.
+
+- [MISLEADING-QUEST]
+  - Definition:
+    - A story is [MISLEADING-QUEST] if all of the following are true:
+      - The story is [THEME-DECEPTION]
+      - The story is [TOPIC-HIDDEN-TREASURES]
+      - Either of the following is true:
+        - The story is [STARTS-WITH-ADVERB]
+        - The story is not [STYLE-CLASSIC]
+  - Interpretation:
+    - Both theme (deception) and topic (hidden treasures) must hold, plus at least one of the two alternative conditions (starts with an adverb OR is not classic).
+
+- [HYBRID-TALE]
+  - Definition:
+    - A story is [HYBRID-TALE] if exactly one of the following is true:
+      - The story is [AMPHIBIOUS-EPIC]
+      - The story is [MISLEADING-QUEST]
+  - Interpretation:
+    - This is an exclusive-or: assign [HYBRID-TALE] only when exactly one of those composite labels applies.
+
+- [COMPLEX-ARTIFACT]
+  - Definition:
+    - A story is [COMPLEX-ARTIFACT] if all of the following are true:
+      - The story is [HYBRID-TALE]
+      - Either of the following is true:
+        - The story is [STYLE-CLASSIC]
+        - The story is [LONG-STORY]
+      - The story is not [STARTS-WITH-ADVERB]
+  - Interpretation:
+    - Requires: the story to be a HYBRID-TALE; additionally it must be either classic in style or long in length; and it must not start with an adverb.
+
+Annotator guidance (practical workflow)
+- Evaluate simple nodes first (e.g., [LONG-STORY], [STARTS-WITH-ADVERB], topic/theme, style).
+- Use those basic labels to determine composite labels in the order given (AMPHIBIOUS-EPIC, MISLEADING-QUEST → HYBRID-TALE → COMPLEX-ARTIFACT).
+- When you see nested conditions, read them as written:
+  - "All of the following are true" = logical AND of the listed items.
+  - "Either of the following is true" = logical OR of the listed alternatives.
+  - "Exactly one of the following is true" = exclusive OR (XOR).
+  - "The story is not [NODE]" = logical NOT of that label.
+- Keep each node ID exactly as shown (e.g., [AMPHIBIOUS-EPIC]) when recording labels.
+
+End note
+- Logical structure and node IDs are preserved exactly; the above layout is intended to help you reason step-by-step while annotating.

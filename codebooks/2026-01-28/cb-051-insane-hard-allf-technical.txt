@@ -1,0 +1,148 @@
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if the story's central theme is Innovation.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if the story conforms to a classic stylistic register.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if the story's subject matter concerns hidden treasures.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if the story's length is fewer than 160 words.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if the first token of the narrative is an adjective.
+
+[THEME-HUMOR]
+A story is [THEME-HUMOR] if the story's primary theme is Humor.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if the story's readability score is below 86.4.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if the story conforms to a modern stylistic register.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if the story's subject matter concerns mystical creatures.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if the story's primary theme is Growth.
+
+[LONG-STORY]
+A story is [LONG-STORY] if the story's length exceeds 375 words.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the narrative conveys an explicit moral lesson.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the narrative structure is circular.
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if the story's primary theme is Hardship.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if the text employs the conditional grammatical mood.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the text contains superlative morphological forms.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if the story's primary theme is Helping Others.
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if the story exhibits a playful stylistic register.
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if the narrative contains explicit juxtaposition of elements.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if the story's primary theme is Kindness.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if the story's primary theme is Magic.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if the narrative embeds a subordinate story (a story-within-a-story).
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story's subject matter concerns time travel.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the text contains WH-questions (who, what, when, where, why, how).
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if the story's stylistic register is humorous.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if the story's subject matter concerns lost civilizations.
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] if the story's subject matter concerns magical lands.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story's stylistic register is philosophical.
+
+[STYLE-CATEGORY]
+A story is [STYLE-CATEGORY] if the story's style is In the set { [STYLE-CLASSIC], [STYLE-MODERN], [STYLE-PLAYFUL], [STYLE-HUMOROUS], [STYLE-PHILOSOPHICAL] }
+
+[TOPIC-MYSTICAL-SET]
+A story is [TOPIC-MYSTICAL-SET] if the story's topic is In the set { [TOPIC-MYSTICAL-CREATURES], [TOPIC-MAGICAL-LANDS], [TOPIC-HIDDEN-TREASURES], [TOPIC-LOST-CIVILIZATIONS], [TOPIC-TIME-TRAVEL] }
+
+[THEME-CLUSTER]
+A story is [THEME-CLUSTER] if either of the following are true (Or):
+- The story is [THEME-INNOVATION]
+- The story is [THEME-GROWTH]
+- The story is [THEME-HARDSHIP]
+- The story is [THEME-HELPING-OTHERS]
+- The story is [THEME-KINDNESS]
+- The story is [THEME-MAGIC]
+- The story is [THEME-HUMOR]
+
+[NARRATIVE-LENGTH-XOR]
+A story is [NARRATIVE-LENGTH-XOR] if exactly one (Xor) of the following is true:
+- The story is [SHORT-STORY]
+- The story is [LONG-STORY]
+
+[READABILITY-AND-START]
+A story is [READABILITY-AND-START] if both of the following are true (And):
+- The story is [LOW-READABILITY]
+- The story is [STARTS-WITH-ADJECTIVE]
+
+[STRUCTURAL-DEVICE]
+A story is [STRUCTURAL-DEVICE] if either of the following are true (Or):
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- The story is [HAS-JUXTAPOSITION]
+
+[MORAL-OR-GROWTH]
+A story is [MORAL-OR-GROWTH] if either of the following are true (Or):
+- The story is [HAS-A-MORAL-LESSON]
+- The story is [THEME-GROWTH]
+
+[EQUAL-THEME-PRESENCE]
+A story is [EQUAL-THEME-PRESENCE] if Equal(the truth of [THEME-GROWTH], the truth of [THEME-HARDSHIP])
+
+[BALANCED-THEME]
+A story is [BALANCED-THEME] if both of the following are true (And):
+- The story is [EQUAL-THEME-PRESENCE]
+- Either of the following are true (Or):
+  - The story is [THEME-KINDNESS]
+  - The story is [THEME-HELPING-OTHERS]
+
+[THEME-SYNDROME]
+A story is [THEME-SYNDROME] if both of the following are true (And):
+- The story is [THEME-CLUSTER]
+- Either of the following are true (Or):
+  - The story is [BALANCED-THEME]
+  - The story is [THEME-INNOVATION]
+
+[COMPLEX-STORY-TYPE]
+A story is [COMPLEX-STORY-TYPE] if all of the following are true:
+- The story is [THEME-SYNDROME]
+- The story is [STYLE-CATEGORY]
+- The story is [TOPIC-MYSTICAL-SET]
+- The story is [STRUCTURAL-DEVICE]
+- Not the story is [STYLE-CLASSIC]
+- The story is [NARRATIVE-LENGTH-XOR]
+- The story is [READABILITY-AND-START]
+- The story is [MORAL-OR-GROWTH]

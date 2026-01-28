@@ -1,0 +1,30 @@
+A quick note before we dive in: the bracketed IDs like [attr-6] are the exact labels you'll use when annotating, and the logical links between them must stay just as they are. I'm just making the descriptions easier to read and a bit more conversational — nothing about the logic or the node names has been changed.
+
+[attr-6]
+Use this tag when a story actually uses superlatives — words like “biggest,” “best,” or “most legendary.” If those kinds of highest-degree expressions appear, mark the story with [attr-6].
+
+[attr-5]
+Tag a story with [attr-5] when its subject matter is lost civilizations — think sunken cities, vanished empires, or forgotten cultures at the center of the plot.
+
+[attr-3]
+If the very first word of the story is a noun, apply [attr-3]. It’s simply a check on how the story begins.
+
+[attr-4]
+When the story’s tone or theme is comedic — when humor is a defining organizing element — use [attr-4].
+
+[attr-1]
+A story counts as [attr-1] when all of these things hold true:
+- The story is [attr-3]
+- The story is [attr-4]
+- The story is not [attr-6]
+
+In plain words: a lighthearted intro needs a noun-start, a humorous theme, and no superlatives.
+
+[attr-2]
+Call a story [attr-2] when both of the following are true:
+- The story is [attr-5]
+- Exactly one of the following is true:
+  - The story is [attr-1]
+  - The story is [attr-6]
+
+So, for mythic satire you need the lost-civilizations topic, and then either a lighthearted intro or the presence of superlative language — but not both.

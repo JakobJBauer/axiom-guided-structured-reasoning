@@ -1,0 +1,49 @@
+Think of this as a friendly guide to the labels we use when annotating stories. I’ll walk through each tag and what triggers it, keeping the exact logic you rely on — every bracketed node stays the same, and the logical words (both, either, not) remain intact.
+
+[attr-5]
+A story is [attr-5] if the story is minimalist — in other words, it leans into simplicity, pared-down language, and an economy of detail.
+
+[attr-4]
+A story is [attr-4] if the story has readability score above 96.1 — a clear numerical cutoff that marks extremely easy-to-read prose.
+
+[attr-10]
+A story is [attr-10] if the story uses superlative forms — language that goes to the top: best, strongest, most, and the like.
+
+[attr-7]
+A story is [attr-7] if the story has the theme Growth — whenever change, development, or personal/plot expansion is central.
+
+[attr-9]
+A story is [attr-9] if the story is about time travel — any narrative element that involves moving through time.
+
+[attr-8]
+A story is [attr-8] if the story is about hidden treasures — whether literal caches or metaphorical discoveries.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+So [attr-1] happens when simplicity and very high readability come together.
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-10]
+- The story is not [attr-5]
+Here, emphasis through superlatives counts only when the piece is not minimalist — it’s loud, not spare.
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - The story is [attr-9]
+  - The story is [attr-8]
+So a growth-focused tale becomes a [attr-6] when it pairs that theme with either time travel or hidden treasures.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-1]
+- Either of the following is true:
+  - The story is [attr-3]
+  - The story is [attr-6]
+In short, to be [attr-2] a story needs to be clear and concise, plus either strikingly emphatic (without being minimalist) or carrying that growth-oriented thematic arc described above.
+
+That’s the set — same logical structure, just explained in a conversational flow so it’s easier to read and apply.

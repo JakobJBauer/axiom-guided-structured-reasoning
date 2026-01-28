@@ -1,0 +1,35 @@
+Interviewer: Let's go through the codebook entries one by one. First, what do we mean by [TOPIC-SEASONAL-CHANGES]?
+
+Expert: A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+
+Interviewer: Clear. Next, how about [USES-WH-QUESTIONS]?
+
+Expert: A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+Interviewer: And [STARTS-WITH-NOUN] — what does that specify?
+
+Expert: A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+Interviewer: Moving on, what does [TOPIC-CULTURAL-TRADITIONS] cover?
+
+Expert: A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+Interviewer: And [TOPIC-TIME-TRAVEL]?
+
+Expert: A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+Interviewer: Now, there are a couple of composite labels. Explain [SEASONAL-QUESTION-STORY].
+
+Expert: A story is [SEASONAL-QUESTION-STORY] if both of the following are true:
+- The story is [TOPIC-SEASONAL-CHANGES]
+- The story is [USES-WH-QUESTIONS]
+
+Interviewer: So to annotate [SEASONAL-QUESTION-STORY], both conditions must hold — it has to be about seasonal changes and it has to use wh-questions. Understood. What about the other composite, [TRADITION-OR-TIME-STORY]?
+
+Expert: A story is [TRADITION-OR-TIME-STORY] if either of the following is true:
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+- The story is [TOPIC-TIME-TRAVEL]
+
+Interviewer: That means if a story is about cultural traditions or about time travel (one or the other, or both), it qualifies as [TRADITION-OR-TIME-STORY]. Anything else to note?
+
+Expert: No changes to the labels or logic—these are the exact annotation rules. Use the bracketed node IDs as-is and apply the "both" and "either" conditions exactly as stated when deciding annotations.

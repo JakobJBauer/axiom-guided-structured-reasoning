@@ -1,0 +1,49 @@
+Imagine a library where each shelf murmurs a rule about stories, and a quiet guide walks you through them, naming the characters and the laws that bind them. He points first to the simple truths—the names that cling to a tale like a scent—and then to the compound rules that stitch those truths together.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others.
+
+The guide smiles and waves his hand toward a familiar archetype: the helper, the healer, the neighbor who lifts a fallen stranger. That scent of goodwill is what earns a tale the tag above.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if The story is philosophical.
+
+He taps the books of thought and reflection. When a story pauses to ask why, to weigh ideas more than events, it wears the [STYLE-PHILOSOPHICAL] label.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic.
+
+He gestures to the re-bound leather volumes — steady, time-tested forms and conventions. Those are the [STYLE-CLASSIC] stories.
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if The story has juxtaposition.
+
+Near a shelf where contrasts face each other—light and dark, old and new—the guide points out [HAS-JUXTAPOSITION]: tales that place opposites side by side to reveal their shape.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if The story is modern.
+
+Across the room, a neon spine declares the contemporary pulse: experiments in form, voice that breathes now—these are the [STYLE-MODERN] stories.
+
+[MIXED-STYLE-JUXTAPOSE]
+A story is [MIXED-STYLE-JUXTAPOSE] if both of the following are true:
+- The story is [HAS-JUXTAPOSITION]
+- Exactly one of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [STYLE-MODERN]
+
+Then the guide points to a curious alcove where styles collide. He explains the rule for a hybrid badge: [MIXED-STYLE-JUXTAPOSE]. It belongs to a tale only when both conditions line up—the tale must stage juxtaposition, and it must be anchored in exactly one of the two style camps, classic or modern, but not both.
+
+[PHILOSOPHICAL-HELPING-OTHERS-DRAMATIC]
+A story is [PHILOSOPHICAL-HELPING-OTHERS-DRAMATIC] if either of the following is true:
+- All of the following are true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [THEME-HELPING-OTHERS]
+  - The story is not [MIXED-STYLE-JUXTAPOSE]
+- Both of the following are true:
+  - The story is [MIXED-STYLE-JUXTAPOSE]
+  - The story is not [THEME-HELPING-OTHERS]
+
+Finally he lowers his voice and traces the outline of a rare, dramatic species: [PHILOSOPHICAL-HELPING-OTHERS-DRAMATIC]. It can arrive by two distinct routes. One path is quiet and pure: a philosophical story about helping others that is not a mixed-style juxtaposition. The other path is paradoxical and dramatic: a tale that is a mixed-style juxtaposition but surprisingly not about helping others. Either way, when a story satisfies one of these precise combinations, it earns that resonant name.
+
+The guide closes his notebook. The rules are clear and the tags precise—each a little map so readers and annotators can find the shape of any tale in the stacks.

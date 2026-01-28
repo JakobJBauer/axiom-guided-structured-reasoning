@@ -1,0 +1,480 @@
+{
+  "nodes": [
+    {
+      "id": "innovation",
+      "label": "Innovation",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "classic",
+      "label": "Classic",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "hidden-treasures",
+      "label": "Hidden treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "fewer-than-160-words",
+      "label": "Fewer than 160 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adjective",
+      "label": "Starts with an adjective",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "humor-theme",
+      "label": "Humor (theme)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "readability-below-86.4",
+      "label": "Readability below 86.4",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "modern",
+      "label": "Modern",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "mystical-creatures",
+      "label": "Mystical creatures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "growth",
+      "label": "Growth",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "more-than-375-words",
+      "label": "More than 375 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "contains-moral-lesson",
+      "label": "Contains a moral lesson",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "circular-narrative",
+      "label": "Circular narrative structure",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "hardship",
+      "label": "Hardship",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-conditional-mood",
+      "label": "Uses the conditional mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-superlative-forms",
+      "label": "Uses superlative forms",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "helping-others",
+      "label": "Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "playful",
+      "label": "Playful",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "juxtaposition",
+      "label": "Contains juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "kindness",
+      "label": "Kindness",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "magic-theme",
+      "label": "Magic (theme)",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "story-within-story",
+      "label": "Story within a story",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "time-travel",
+      "label": "Time travel",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "Uses wh-questions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "humorous",
+      "label": "Humorous",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "lost-civilizations",
+      "label": "Lost civilizations",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "magical-lands",
+      "label": "Magical lands",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "philosophical",
+      "label": "Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-in-set",
+      "label": "Style in set {classic, modern, playful, humorous, philosophical}",
+      "formula_type": "In",
+      "formula_args": [
+        "classic",
+        "modern",
+        "playful",
+        "humorous",
+        "philosophical"
+      ]
+    },
+    {
+      "id": "topic-in-set",
+      "label": "Topic in set {mystical creatures, magical lands, hidden treasures, lost civilizations, time travel}",
+      "formula_type": "In",
+      "formula_args": [
+        "mystical-creatures",
+        "magical-lands",
+        "hidden-treasures",
+        "lost-civilizations",
+        "time-travel"
+      ]
+    },
+    {
+      "id": "themes-or",
+      "label": "Themes (Or)",
+      "formula_type": "Or",
+      "formula_args": [
+        "innovation",
+        "growth",
+        "hardship",
+        "helping-others",
+        "kindness",
+        "magic-theme",
+        "humor-theme"
+      ]
+    },
+    {
+      "id": "length-xor",
+      "label": "Length (Xor fewer-than-160-words, more-than-375-words)",
+      "formula_type": "Xor",
+      "formula_args": [
+        "fewer-than-160-words",
+        "more-than-375-words"
+      ]
+    },
+    {
+      "id": "readability-and-start",
+      "label": "Readability below 86.4 AND starts with adjective",
+      "formula_type": "And",
+      "formula_args": [
+        "readability-below-86.4",
+        "starts-with-adjective"
+      ]
+    },
+    {
+      "id": "narrative-features-or",
+      "label": "Narrative features (Or)",
+      "formula_type": "Or",
+      "formula_args": [
+        "story-within-story",
+        "circular-narrative",
+        "juxtaposition"
+      ]
+    },
+    {
+      "id": "moral-or-growth",
+      "label": "Contains moral lesson OR Growth",
+      "formula_type": "Or",
+      "formula_args": [
+        "contains-moral-lesson",
+        "growth"
+      ]
+    },
+    {
+      "id": "growth-equals-hardship",
+      "label": "Growth equals Hardship",
+      "formula_type": "Equal",
+      "formula_args": [
+        "growth",
+        "hardship"
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Attr 1 (growth-equals-hardship AND (kindness OR helping-others))",
+      "formula_type": "And",
+      "formula_args": [
+        "growth-equals-hardship",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "kindness",
+            "helping-others"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-30",
+      "label": "Attr 30 (themes-or AND (attr-1 OR innovation))",
+      "formula_type": "And",
+      "formula_args": [
+        "themes-or",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-1",
+            "innovation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Attr 2 (combined conditions)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-30",
+        "style-in-set",
+        "topic-in-set",
+        "narrative-features-or",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "classic"
+          ]
+        },
+        "length-xor",
+        "readability-and-start",
+        "moral-or-growth"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "innovation",
+      "target": "themes-or"
+    },
+    {
+      "source": "growth",
+      "target": "themes-or"
+    },
+    {
+      "source": "hardship",
+      "target": "themes-or"
+    },
+    {
+      "source": "helping-others",
+      "target": "themes-or"
+    },
+    {
+      "source": "kindness",
+      "target": "themes-or"
+    },
+    {
+      "source": "magic-theme",
+      "target": "themes-or"
+    },
+    {
+      "source": "humor-theme",
+      "target": "themes-or"
+    },
+    {
+      "source": "fewer-than-160-words",
+      "target": "length-xor"
+    },
+    {
+      "source": "more-than-375-words",
+      "target": "length-xor"
+    },
+    {
+      "source": "readability-below-86.4",
+      "target": "readability-and-start"
+    },
+    {
+      "source": "starts-with-adjective",
+      "target": "readability-and-start"
+    },
+    {
+      "source": "story-within-story",
+      "target": "narrative-features-or"
+    },
+    {
+      "source": "circular-narrative",
+      "target": "narrative-features-or"
+    },
+    {
+      "source": "juxtaposition",
+      "target": "narrative-features-or"
+    },
+    {
+      "source": "contains-moral-lesson",
+      "target": "moral-or-growth"
+    },
+    {
+      "source": "growth",
+      "target": "moral-or-growth"
+    },
+    {
+      "source": "growth",
+      "target": "growth-equals-hardship"
+    },
+    {
+      "source": "hardship",
+      "target": "growth-equals-hardship"
+    },
+    {
+      "source": "growth-equals-hardship",
+      "target": "attr-1"
+    },
+    {
+      "source": "kindness",
+      "target": "attr-1"
+    },
+    {
+      "source": "helping-others",
+      "target": "attr-1"
+    },
+    {
+      "source": "themes-or",
+      "target": "attr-30"
+    },
+    {
+      "source": "attr-1",
+      "target": "attr-30"
+    },
+    {
+      "source": "innovation",
+      "target": "attr-30"
+    },
+    {
+      "source": "classic",
+      "target": "style-in-set"
+    },
+    {
+      "source": "modern",
+      "target": "style-in-set"
+    },
+    {
+      "source": "playful",
+      "target": "style-in-set"
+    },
+    {
+      "source": "humorous",
+      "target": "style-in-set"
+    },
+    {
+      "source": "philosophical",
+      "target": "style-in-set"
+    },
+    {
+      "source": "mystical-creatures",
+      "target": "topic-in-set"
+    },
+    {
+      "source": "magical-lands",
+      "target": "topic-in-set"
+    },
+    {
+      "source": "hidden-treasures",
+      "target": "topic-in-set"
+    },
+    {
+      "source": "lost-civilizations",
+      "target": "topic-in-set"
+    },
+    {
+      "source": "time-travel",
+      "target": "topic-in-set"
+    },
+    {
+      "source": "themes-or",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-30",
+      "target": "attr-2"
+    },
+    {
+      "source": "style-in-set",
+      "target": "attr-2"
+    },
+    {
+      "source": "topic-in-set",
+      "target": "attr-2"
+    },
+    {
+      "source": "narrative-features-or",
+      "target": "attr-2"
+    },
+    {
+      "source": "classic",
+      "target": "attr-2"
+    },
+    {
+      "source": "length-xor",
+      "target": "attr-2"
+    },
+    {
+      "source": "readability-and-start",
+      "target": "attr-2"
+    },
+    {
+      "source": "moral-or-growth",
+      "target": "attr-2"
+    }
+  ]
+}

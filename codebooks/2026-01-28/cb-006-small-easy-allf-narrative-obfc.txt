@@ -1,0 +1,33 @@
+Imagine a quiet archive where every story waits to be known by a handful of precise names. In that archive, each label is a small charm that a tale earns by doing something very specific. Below I tell the tale of those labels — a little story about how a story can become one thing or another — and then, to keep the rules sharp and dependable, I restate the exact definitions that govern them.
+
+The flashback charm is simple and ancient: when a narrative tilts its gaze backward and lets us live a past scene again, it wears the [attr-2] token. It’s a single, unmistakable sign that the timeline has been folded.
+
+A story is [attr-2] if The story has a flashback
+
+Some stories invite us into a conversation. When a narrator or character asks the classic who/what/where/when/why/how questions — the wh-questions that probe and poke — the tale carries the [attr-6] badge.
+
+A story is [attr-6] if The story uses wh-questions
+
+Other stories steer us with signposts — words and phrases that stitch sentences and ideas together, guiding our attention and signaling shifts. When a narrative leans on those connective cues, it earns the [attr-5] mark.
+
+A story is [attr-5] if The story uses discourse markers
+
+Sometimes a story chooses a single conversational trick: it either peppers itself with wh-questions, or it threads the flow with discourse markers — but not both. When exactly one of those two features appears, the story is called [attr-3]. It’s a tidy, exclusive decision: one path or the other.
+
+A story is [attr-3] if exactly one of the following is true:
+- The story is [attr-6]
+- The story is [attr-5]
+
+Other tales are layered in a different way. If a story reaches backward with a flashback and, importantly, it is not wearing that conversational [attr-3] badge, then it becomes something more complex: [attr-1]. Here the two requirements must hold together — the presence of a flashback and the absence of interaction — forming a distinct narrative class.
+
+A story is [attr-1] if both of the following are true:
+- The story is [attr-2]
+- The story is not [attr-3]
+
+Finally, there’s a special shelf for tales that stand apart for simple, clear reasons. A story belongs to [attr-4] if it falls into one of two situations: it is either one of the two named categories { [attr-3], [attr-1] }, or it is simply the kind that reaches back in time on its own, equal to [attr-2]. That set of circumstances collects the defined outliers and gives them a tidy home.
+
+A story is [attr-4] if either of the following is true:
+- The story is in the set { [attr-3], [attr-1] }
+- The story is equal to [attr-2]
+
+And so the archive remains organized: each story wears its label honestly, according to these exact rules. The narrative above should help you remember the relationships; the lines that follow each paragraph keep the logic precise and ready for annotation.

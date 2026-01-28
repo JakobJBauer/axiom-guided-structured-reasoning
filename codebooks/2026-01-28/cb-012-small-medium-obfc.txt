@@ -1,0 +1,18 @@
+[attr-4]  
+A story is [attr-4] if The story has the theme Helping Others.
+
+[attr-5]  
+A story is [attr-5] if The story is about mystical creatures.
+
+[attr-3]  
+A story is [attr-3] if The story starts with a preposition.
+
+[attr-2]  
+A story is [attr-2] if both of the following are true:
+- The story is [attr-5]
+- The story is not [attr-4]
+
+[attr-1]  
+A story is [attr-1] if both of the following are true:
+- The story is [attr-3]
+- The story is not [attr-2]

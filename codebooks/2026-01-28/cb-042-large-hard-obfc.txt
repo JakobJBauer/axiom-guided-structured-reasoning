@@ -1,0 +1,121 @@
+[attr-18]
+A story is [attr-18] if The story has the theme Problem-Solving.
+
+[attr-21]
+A story is [attr-21] if The story is about hidden treasures.
+
+[attr-11]
+A story is [attr-11] if The story is lighthearted.
+
+[attr-3]
+A story is [attr-3] if The story has a Red Herring.
+
+[attr-8]
+A story is [attr-8] if The story starts with a preposition.
+
+[attr-20]
+A story is [attr-20] if The story is about giant creatures.
+
+[attr-25]
+A story is [attr-25] if The story uses superlative forms.
+
+[attr-17]
+A story is [attr-17] if The story has the theme Magic.
+
+[attr-12]
+A story is [attr-12] if The story is modern.
+
+[attr-7]
+A story is [attr-7] if The story starts with a adverb.
+
+[attr-22]
+A story is [attr-22] if The story is about magical lands.
+
+[attr-4]
+A story is [attr-4] if The story has readability score below 86.4.
+
+[attr-10]
+A story is [attr-10] if The story is humorous.
+
+[attr-15]
+A story is [attr-15] if The story has the theme Innovation.
+
+[attr-9]
+A story is [attr-9] if The story is classic.
+
+[attr-23]
+A story is [attr-23] if The story is about mystical creatures.
+
+[attr-16]
+A story is [attr-16] if The story has the theme Kindness.
+
+[attr-14]
+A story is [attr-14] if The story has the theme Humor.
+
+[attr-6]
+A story is [attr-6] if The story has fewer than 160 words.
+
+[attr-24]
+A story is [attr-24] if The story is about the arts.
+
+[attr-5]
+A story is [attr-5] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - The story is [attr-21]
+    - The story is [attr-22]
+  - either of the following is true:
+    - The story is [attr-23]
+    - The story is [attr-20] xor The story is [attr-24]
+- both of the following are true:
+  - The story is [attr-3]
+  - The story is [attr-6]
+
+[attr-19]
+A story is [attr-19] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-10] xor The story is [attr-9]
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-CLASSIC]
+  - not both of the following are true:
+    - The story is [attr-4]
+    - The story starts with a preposition: The story is [attr-8]
+
+[attr-13]
+A story is [attr-13] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-18]
+  - either of the following is true:
+    - The story is [attr-15]
+    - The story is [attr-17]
+- exactly one of the following is true:
+  - The story is [attr-16]
+  - The story is [attr-14]
+- both of the following are true:
+  - The story is in [THEME-MAGIC, THEME-INNOVATION, THEME-PROBLEM-SOLVING]
+  - The story is [attr-16] equals false
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-5]
+- either of the following is true:
+  - The story is [attr-19]
+  - both of the following are true:
+    - The story is [attr-25]
+    - The story is not [attr-3]
+
+[attr-2]
+A story is [attr-2] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-13]
+  - exactly one of the following is true:
+    - The story is [attr-1]
+    - both of the following are true:
+      - The story is [attr-6]
+      - either of the following is true:
+        - The story is [attr-24]
+        - The story is [attr-21]
+- not both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-14]

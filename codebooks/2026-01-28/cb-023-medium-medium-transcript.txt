@@ -1,0 +1,62 @@
+Interviewer: Let's go through this codebook step by step. First, what does [STYLE-PHILOSOPHICAL] mean?
+
+Expert: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+Interviewer: And [TOPIC-THE-ARTS]?
+
+Expert: A story is [TOPIC-THE-ARTS] if the story is about the arts.
+
+Interviewer: Simple enough. How about [HAS-A-FLASHBACK]?
+
+Expert: A story is [HAS-A-FLASHBACK] if the story has a flashback.
+
+Interviewer: [HAS-A-STORY-WITHIN-A-STORY]?
+
+Expert: A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+Interviewer: Moving on to themes and devices: what is [THEME-DECEPTION]?
+
+Expert: A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+Interviewer: And [HAS-A-RED-HERRING]?
+
+Expert: A story is [HAS-A-RED-HERRING] if the story has a Red Herring.
+
+Interviewer: [HAS-A-MORAL-LESSON]?
+
+Expert: A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+Interviewer: Now the codebook defines some combined categories. Explain [REFLECTIVE-ARTS].
+
+Expert: A story is [REFLECTIVE-ARTS] if both of the following are true:
+- The story is [STYLE-PHILOSOPHICAL]
+- The story is [TOPIC-THE-ARTS]
+
+Interviewer: So that requires both philosophical style and an arts topic. Got it. What does [META-STRUCTURE] capture?
+
+Expert: A story is [META-STRUCTURE] if either of the following is true:
+- The story is [HAS-A-FLASHBACK]
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+
+Interviewer: Okay—either device qualifies the story as meta-structured. Explain [MISDIRECTION].
+
+Expert: A story is [MISDIRECTION] if both of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is [HAS-A-RED-HERRING]
+
+Interviewer: So misdirection needs deception plus a red herring. Next, what's [DIDACTIC-MISDIRECT]?
+
+Expert: A story is [DIDACTIC-MISDIRECT] if all of the following are true:
+- The story is [MISDIRECTION]
+- The story is [HAS-A-MORAL-LESSON]
+- The story is not [REFLECTIVE-ARTS]
+
+Interviewer: Important detail there—the story must not be [REFLECTIVE-ARTS]. Finally, define [COMPLEX-PARABLE].
+
+Expert: A story is [COMPLEX-PARABLE] if both of the following are true:
+- The story is [DIDACTIC-MISDIRECT]
+- The story is [META-STRUCTURE]
+
+Interviewer: Thanks — that preserves the exact logical structure while making the relationships clear. Any last clarifications?
+
+Expert: The definitions are literal: each bracketed node is a label, and where the codebook says "both," "either," or "all," those indicate logical And / Or / And conditions respectively; the single negation appears exactly as "The story is not [REFLECTIVE-ARTS]." All node IDs and their relationships remain unchanged.

@@ -1,0 +1,87 @@
+Imagine a curious librarian who catalogs stories not by shelf number but by the qualities that make each tale sparkle. She whispers each label like a charm, and the labels — our nodes — stick to a story when it meets the precise criteria below. Read them as signposts in a living map; the logic is strict, but the path is meant to be read like a tale.
+
+[attr-10]
+Think of a tiny fable told over a single breath: a story becomes [attr-10] when it fits into fewer than 160 words.
+
+[attr-17]
+When kindness is the heart beating beneath the plot, the tale wears the badge [attr-17].
+
+[attr-14]
+If the plot or characters turn their hands toward aiding another, the tale is called [attr-14].
+
+[attr-18]
+When the story revolves around puzzles, obstacles, and the clever means to overcome them, it is labeled [attr-18].
+
+[attr-12]
+A tale that leans into big questions, reflection, and contemplative tones earns the title [attr-12].
+
+[attr-5]
+Some stories glide effortlessly off the page; those with a readability score above 96.1 are marked [attr-5].
+
+[attr-13]
+If the narrative skips along with a light, mischievous step, it is [attr-13].
+
+[attr-15]
+When humor threads the theme and drives the story’s meaning, the label is [attr-15].
+
+[attr-11]
+A story that uses wit and comedic style to shape its voice is [attr-11].
+
+[attr-4]
+Sometimes a tale tells another tale inside it; when it does, it is [attr-4].
+
+[attr-19]
+If mystical creatures populate the narrative — dragons, fae, or other enchanted beings — the story falls under [attr-19].
+
+[attr-3]
+When the tale plants a misleading clue to divert the reader, it carries the mark [attr-3].
+
+Now the librarian points to combinations where labels must occur together, like constellations aligning.
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- The story is [attr-17]
+- The story is [attr-14]
+(And both must hold simultaneously.)
+
+[attr-7]
+A story is [attr-7] if exactly one of the following is true (Xor):
+- The story is [attr-13]
+- The story is [attr-11]
+
+[attr-16]
+The librarian keeps a core set of three themes. A story is [attr-16] if the story's dominant theme is In the following set:
+- [attr-17], [attr-14], [attr-18]
+(Use In to check membership among those theme nodes.)
+
+[attr-1]
+She loves balance. A story is [attr-1] if the following Equal relationship holds:
+- The presence of [attr-12] Equal the presence of [attr-11]
+(They are Equal when either both are present or both are absent.)
+
+[attr-8]
+Some tales are layered like a painted shell. A story is [attr-8] if both of the following are true:
+- The story is [attr-19]
+- The story is [attr-4] And the story is [attr-12]
+(This nests an And inside an And to form an allegorical structure.)
+
+[attr-2]
+Here the librarian’s rulebook gets intricate. A story is [attr-2] if all of the following are true:
+- Either of the following is true (Or):
+  - The story is [attr-6]
+  - The story is [attr-18]
+- Exactly one of the following is true (Xor):
+  - The story is [attr-3]
+  - The story is [attr-4]
+- The story is Not [attr-10] Or the story is [attr-5]
+(Uses Not to exclude short stories unless they also meet HIGH-READABILITY; combines Or and Xor for nuanced arc structure.)
+
+[attr-9]
+Finally, the librarian sets aside the rarest scrolls as truly recommendable. A story is [attr-9] if both of the following are true:
+- The story is [attr-2] And the story is [attr-1]
+- The story is [attr-16] And either of the following is true (Or):
+  - The story is [attr-7]
+  - The story is [attr-8]
+(This node nests multiple logical operators to form a deep, recommendable composition: And at the top level, Or inside a branch, and references In, Equal, Not, and Xor through its subordinate nodes.)
+
+Read these labels as the librarian does: as both rules and invitations. Each node is a description and a doorway — strict in logic, generous in storytelling — guiding annotators and thinkers through a world where meaning is precise and every story can be placed on the map.

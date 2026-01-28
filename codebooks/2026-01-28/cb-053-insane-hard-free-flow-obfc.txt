@@ -1,0 +1,191 @@
+[attr-16]
+When we tag a story as [attr-16], it simply means the opening word is an adverb — the story begins with an adverb.
+
+[attr-37]
+Call a story [attr-37] when its subject is cultural traditions.
+
+[attr-32]
+A story earns the label [attr-32] when Innovation is a clear theme.
+
+[attr-31]
+Use [attr-31] for stories whose central thread is Humor.
+
+[attr-39]
+If the tale revolves around hidden treasure, it’s [attr-39].
+
+[attr-19]
+Label a piece [attr-19] when it reads as classic in style.
+
+[attr-20]
+A story is [attr-20] if its tone or style is humorous.
+
+[attr-23]
+When a story feels contemporary in voice or technique, mark it [attr-23].
+
+[attr-38]
+Stories about giant creatures get the tag [attr-38].
+
+[attr-48]
+If the narrative makes use of the perfect aspect in its verb forms, it’s [attr-48].
+
+[attr-3]
+A story is [attr-3] when it contains a flashback sequence.
+
+[attr-29]
+If hardship is a central theme, label the story [attr-29].
+
+[attr-2]
+When a story ends on a suspenseful unresolved note, mark it [attr-2].
+
+[attr-4]
+A story that teaches or illustrates a moral lesson is [attr-4].
+
+[attr-40]
+If the plot concerns lost civilizations, use [attr-40].
+
+[attr-25]
+Tag a story [attr-25] when it conveys a playful tone.
+
+[attr-43]
+Stories about seasonal change get [attr-43].
+
+[attr-18]
+If the very first word is a preposition, the story is [attr-18].
+
+[attr-9]
+Use [attr-9] when the piece deliberately places contrasting elements side by side.
+
+[attr-35]
+When problem-solving drives the narrative, label it [attr-35].
+
+[attr-45]
+Stories about time travel are [attr-45].
+
+[attr-36]
+If the focus is on bygone eras, tag the story [attr-36].
+
+[attr-8]
+A tale that loops back to its starting point is [attr-8].
+
+[attr-47]
+When the writing uses discourse markers (those signposting words and phrases), it’s [attr-47].
+
+[attr-50]
+If wh-questions (who, what, where, when, why, how) play a part in the text, mark it [attr-50].
+
+[attr-44]
+Stories centered on the arts get the label [attr-44].
+
+[attr-34]
+When Magic is a central theme, it’s [attr-34].
+
+[attr-24]
+If the story reads like it’s pondering big ideas, tag it [attr-24].
+
+[attr-22]
+A spare, minimalist style earns the [attr-22] label.
+
+[attr-6]
+Use [attr-6] when a narrative contains another story embedded inside it.
+
+[attr-11]
+A piece longer than 375 words is [attr-11].
+
+[attr-42]
+Stories about mystical creatures are [attr-42].
+
+[attr-12]
+Mark a story [attr-12] when its readability score falls below 86.4.
+
+[attr-7]
+If the story includes Chekhov’s gun — an introduced element that later becomes significant — label it [attr-7].
+
+[attr-13]
+When a story has more than six paragraphs, it’s [attr-13].
+
+[attr-28]
+If deception is a theme, tag it [attr-28].
+
+[attr-27]
+When agency (characters making meaningful choices) is central, mark the story [attr-27].
+
+[attr-41]
+If the setting is a magical land, label it [attr-41].
+
+[attr-49]
+Stories that use superlative forms (the best, the worst, the largest, etc.) get [attr-49].
+
+[attr-15]
+If the opening word is an adjective, the story is [attr-15].
+
+[attr-33]
+When kindness is a central theme, tag it [attr-33].
+
+[attr-10]
+A story with a readability score above 96.1 is [attr-10].
+
+[attr-17]
+If the first word is a noun, the story is [attr-17].
+
+[attr-46]
+Use [attr-46] for stories that employ conditional verb moods.
+
+[attr-5]
+When the narrative includes a red herring — a misleading clue — label it [attr-5].
+
+[attr-14]
+A story under 160 words is [attr-14].
+
+[attr-26]
+If the story reads surreal, mark it [attr-26].
+
+[attr-30]
+When helping others is a theme, use [attr-30].
+
+[attr-21]
+Tag a lightly playful, carefree piece [attr-21].
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is in [attr-40], [attr-36], [attr-45]
+      - The story is [attr-8]
+    - either of the following is true:
+      - The story is [attr-6]
+      - both of the following are true:
+        - The story is [attr-3]
+        - It is not the case that both of the following are true:
+          - The story is [attr-5]
+          - The story is [attr-7]
+  - both of the following are true:
+    - exactly one of the following is true:
+      - The story is [attr-19]
+      - The story is [attr-23]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [attr-34]
+        - It is not the case that the story is [attr-42]
+      - both of the following are true:
+        - The story is [attr-35]
+        - The story is [attr-47]
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [attr-28]
+      - It is not both of the following are true:
+        - The story is [attr-33]
+        - The story is [attr-30]
+    - The story is [attr-5]
+  - either of the following is true:
+    - exactly one of the following is true:
+      - The story is [attr-11]
+      - The story is [attr-14]
+    - both of the following are true:
+      - The story is [attr-7]
+      - It is not the case that the story is [attr-2]
+
+--- 
+
+That’s the guide. Each bracketed label is a concise tag you attach when the described condition holds — straightforward definitions up top, and the full formal rule for [attr-1] beneath, preserved exactly so you can apply it mechanically when deciding whether a story fits that complex classification.

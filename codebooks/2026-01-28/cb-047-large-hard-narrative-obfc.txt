@@ -1,0 +1,127 @@
+Think of this codebook as a gallery of labeled doors. Each door bears a bracketed name and a precise lock — a rule that tells you when the door opens. Walk with me through the hall: I will whisper a short story about each door, and then place the exact key beside it so you can test it yourself.
+
+[attr-6]
+Sometimes a tale reads like a glass of clean water — effortless and bright. The rule for this door is simple and unyielding:
+A story is HIGH-READABILITY if The story has readability score above 96.1
+
+[attr-7]
+Other tales are misty and dense, where the path grows narrow and you must strain to see. This door registers that fog:
+A story is LOW-READABILITY if The story has readability score below 86.4
+
+[attr-13]
+Some stories open on a solid object, a person, or a place — a noun standing at the threshold. That’s the sign on this door:
+A story is STARTS-WITH-NOUN if The story starts with a noun
+
+[attr-12]
+Others begin in motion or manner, with an adverb nudging the sentence forward like a gust of wind. This is its marker:
+A story is STARTS-WITH-ADVERB if The story starts with a adverb
+
+[attr-20]
+There are stories that look back with a completed glance — sentences shaped by the perfect aspect, which gives memory its architecture:
+A story is USES-PERFECT-ASPECT if The story uses perfect aspect
+
+[attr-19]
+Some narrators guide you with signposts — however, therefore, meanwhile — the discourse markers that stitch scenes together:
+A story is USES-DISCOURSE-MARKERS if The story uses discourse markers
+
+[attr-3]
+And then there are endings that leave you hanging, perched on the lip of a sentence and unable to breathe until the next page:
+A story is HAS-A-CLIFFHANGER if The story has a cliffhanger
+
+[attr-5]
+At times the writer places two images side by side, their contrast humming with meaning — that is juxtaposition, a deliberate pairing:
+A story is HAS-JUXTAPOSITION if The story has juxtaposition
+
+[attr-4]
+Sometimes the path deliberately misleads; a false trail set to divert our expectations — a red herring tucked into the prose:
+A story is HAS-A-RED-HERRING if The story has a Red Herring
+
+[attr-11]
+A compact tale can hit like a pebble — brief, precise, under 160 words. This door measures that brevity:
+A story is SHORT-STORY if The story has fewer than 160 words
+
+[attr-15]
+Some voices weigh questions and palaber — a philosophical style that leans into thought:
+A story is STYLE-PHILOSOPHICAL if The story is philosophical
+
+[attr-16]
+Others smile and flick their wrist, playful in tone and mischievous in rhythm:
+A story is STYLE-PLAYFUL if The story is playful
+
+[attr-14]
+And sometimes humor threads through lines, inviting laughter as a companion:
+A story is STYLE-HUMOROUS if The story is humorous
+
+[attr-18]
+Some tales are built around the notion of agency — characters acting, choosing, reshaping their fate:
+A story is THEME-AGENCY if The story has the theme Agency
+
+[attr-9]
+Picture the opening tone as a hinge that depends on both manner and mood — it swings open only when certain conditions meet. The rule reads like a conditional duet:
+A story is OPENING-TONE if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-13]
+  - The story is [attr-12]
+- Either of the following is true:
+  - The story is [attr-15]
+  - The story is [attr-16]
+
+[attr-8]
+Pace is a creature of two possible births: it can be born from shortness combined with clarity, or it may arise from retrospection that remains lucid. The door’s inscription preserves those twin pathways:
+A story is NARRATIVE-PACE if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-6]
+- Both of the following are true:
+  - The story is [attr-20]
+  - The story is not [attr-7]
+
+[attr-1]
+Comedy here is a carefully assembled contraption — it requires a playful or humorous spirit, a precise exclusivity about brevity or connective markers, and a twist: either a red herring or a juxtaposition. The mechanism is spelled out exactly:
+A story is COMEDIC-STRUCTURE if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-16]
+  - The story is [attr-14]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [attr-11]
+    - The story is [attr-19]
+  - Either of the following is true:
+    - The story is [attr-4]
+    - The story is [attr-5]
+
+[attr-17]
+When theme and tone entwine — agency braided with philosophical opening or a clever one-off twist between juxtaposition and red herring — you witness thematic fusion. Its blueprint reads like a choice between two distinct partnerships:
+A story is THEMATIC-FUSION if both of the following are true:
+- The story is [attr-18]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-15]
+    - The story is [attr-9]
+  - Exactly one of the following is true:
+    - The story is [attr-5]
+    - The story is [attr-4]
+
+[attr-10]
+A rapture ending sings with tension: either an unresolved cliffhanger that stretches across a longer work, or the dramatic flip where exactly one of cliffhanger or red herring is present. The law of this threshold is precise:
+A story is RAPTURE-ENDING if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-3]
+  - The story is not [attr-11]
+- Exactly one of the following is true:
+  - The story is [attr-3]
+  - The story is [attr-4]
+
+[attr-2]
+Finally, imagine a tapestry woven from thematic fusion and comedic machinery, capped by either a fleet narrative pace or a rapture ending that sacrifices high readability. That combined pattern defines the most intricate door in the corridor:
+A story is COMPLEX-STORY if both of the following are true:
+- All of the following are true:
+  - The story is [attr-17]
+  - The story is [attr-1]
+- Either of the following is true:
+  - The story is [attr-8]
+  - Both of the following are true:
+    - The story is [attr-10]
+    - The story is not [attr-6]
+
+You’ve walked the hall and can now see each lock and key. Keep the bracketed names and these exact rules beside you when you annotate — they are the map, and the map must remain unchanged even as the stories themselves roam free.

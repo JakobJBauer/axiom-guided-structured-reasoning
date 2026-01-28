@@ -1,0 +1,304 @@
+Interviewer: Let’s walk through this codebook together. For each label, I’ll ask what it means and you’ll explain it precisely. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What does [attr-36] mean?
+
+Expert: A story is [attr-36] if the story has the theme Problem-Solving.
+
+Interviewer: Okay. And [attr-42]?
+
+Expert: A story is [attr-42] if the story is about mystical creatures.
+
+Interviewer: [attr-24]?
+
+Expert: A story is [attr-24] if the story has fewer than 160 words.
+
+Interviewer: [attr-43]?
+
+Expert: A story is [attr-43] if the story is about time travel.
+
+Interviewer: What about [attr-45]?
+
+Expert: A story is [attr-45] if the story uses discourse markers.
+
+Interviewer: [attr-39]?
+
+Expert: A story is [attr-39] if the story is about cultural traditions.
+
+Interviewer: [attr-34]?
+
+Expert: A story is [attr-34] if the story has the theme Innovation.
+
+Interviewer: [attr-25]?
+
+Expert: A story is [attr-25] if the story starts with an adverb.
+
+Interviewer: [attr-32]?
+
+Expert: A story is [attr-32] if the story has the theme Helping Others.
+
+Interviewer: [attr-12]?
+
+Expert: A story is [attr-12] if the story has juxtaposition.
+
+Interviewer: [attr-27]?
+
+Expert: A story is [attr-27] if the story is playful.
+
+Interviewer: [attr-11]?
+
+Expert: A story is [attr-11] if the story has a Red Herring.
+
+Interviewer: [attr-31]?
+
+Expert: A story is [attr-31] if the story has the theme Hardship.
+
+Interviewer: [attr-33]?
+
+Expert: A story is [attr-33] if the story has the theme Humor.
+
+Interviewer: [attr-29]?
+
+Expert: A story is [attr-29] if the story has the theme Agency.
+
+Interviewer: [attr-9]?
+
+Expert: A story is [attr-9] if the story has a flashback.
+
+Interviewer: [attr-46]?
+
+Expert: A story is [attr-46] if the story uses perfect aspect.
+
+Interviewer: [attr-44]?
+
+Expert: A story is [attr-44] if the story uses conditional mood.
+
+Interviewer: [attr-47]?
+
+Expert: A story is [attr-47] if the story uses wh-questions.
+
+Interviewer: [attr-35]?
+
+Expert: A story is [attr-35] if the story has the theme Kindness.
+
+Interviewer: [attr-10]?
+
+Expert: A story is [attr-10] if the story has a moral lesson.
+
+Interviewer: [attr-26]?
+
+Expert: A story is [attr-26] if the story is humorous.
+
+Interviewer: [attr-16]?
+
+Expert: A story is [attr-16] if the story has readability score below 86.4.
+
+Interviewer: [attr-18]?
+
+Expert: A story is [attr-18] if the story has more than 6 paragraphs.
+
+Interviewer: [attr-8]?
+
+Expert: A story is [attr-8] if the story has a cliffhanger.
+
+Interviewer: [attr-41]?
+
+Expert: A story is [attr-41] if the story is about magical lands.
+
+Interviewer: [attr-40]?
+
+Expert: A story is [attr-40] if the story is about giant creatures.
+
+Interviewer: [attr-30]?
+
+Expert: A story is [attr-30] if the story has the theme Growth.
+
+Interviewer: [attr-15]?
+
+Expert: A story is [attr-15] if the story has more than 375 words.
+
+Interviewer: Now, what is [attr-6]? That one looked compact in the original.
+
+Expert: [attr-6] is defined this way: A story is [attr-6] if the story is in [TOPIC-MYSTICAL-CREATURES, TOPIC-MAGICAL-LANDS, TOPIC-GIANT-CREATURES]. In other words, the story falls into that set of three topic categories.
+
+Interviewer: Got it. And [attr-17] — how is that decided?
+
+Expert: A story is [attr-17] if either of the following is true:
+- The story is [attr-41]
+- The story is [attr-42]
+
+Interviewer: So only one of those needs to be true?
+
+Expert: Yes — it's an "either/or" (logical OR).
+
+Interviewer: Explain [attr-5].
+
+Expert: A story is [attr-5] if all of the following are true:
+- The story is [attr-15]
+- The story is either [attr-40] or [attr-41]
+- The story is [attr-30]
+
+Interviewer: In plain terms: long, about giants or magical lands, and has growth as a theme.
+
+Expert: Exactly.
+
+Interviewer: What about [attr-23]?
+
+Expert: A story is [attr-23] if both of the following are true:
+- The story is [attr-24]
+- The story is [attr-17]
+
+Interviewer: [attr-38] sounds tricky. Break it down.
+
+Expert: A story is [attr-38] if both of the following are true:
+- The story is [attr-43]
+- Either of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-9]
+
+Interviewer: So a time-travel story that also has a red herring or a flashback qualifies.
+
+Expert: Correct.
+
+Interviewer: [attr-3]?
+
+Expert: A story is [attr-3] if both of the following are true:
+- The story is [attr-18]
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-8]
+
+Interviewer: That one requires both inner conditions to hold — flashback and cliffhanger — plus many paragraphs.
+
+Expert: Yes.
+
+Interviewer: [attr-20] — what's the rule?
+
+Expert: A story is [attr-20] if either of the following is true:
+- The story is [attr-25]
+- The story is [attr-45]
+- The story is [attr-47]
+
+Interviewer: So any one of those three suffices.
+
+Expert: Exactly.
+
+Interviewer: [attr-14] uses "exactly one." Can you explain?
+
+Expert: A story is [attr-14] if exactly one of the following is true:
+- The story is [attr-26]
+- The story is [attr-27]
+
+Interviewer: So it’s true only when one is present but not both.
+
+Expert: Right — it's an exclusive OR.
+
+Interviewer: [attr-19]?
+
+Expert: A story is [attr-19] if both of the following are true:
+- The story is [attr-35]
+- The story is [attr-10]
+
+Interviewer: [attr-13] sounds like a fusion.
+
+Expert: A story is [attr-13] if all of the following are true:
+- The story is [attr-34]
+- The story is [attr-32]
+- Either of the following is true:
+  - The story is [attr-29]
+  - The story is [attr-36]
+
+Interviewer: So innovation plus helping others plus either agency or problem-solving.
+
+Expert: Exactly.
+
+Interviewer: [attr-7]?
+
+Expert: A story is [attr-7] if both of the following are true:
+- The story is [attr-30]
+- The story is [attr-31]
+
+Interviewer: [attr-4] — there’s a negation in there.
+
+Expert: Yes. A story is [attr-4] if both of the following are true:
+- The story is not [attr-16]
+- Either of the following is true:
+  - The story is [attr-24]
+  - The story is [attr-15]
+
+Interviewer: So it must have acceptable readability and be either short or long.
+
+Expert: Correct.
+
+Interviewer: [attr-1]?
+
+Expert: A story is [attr-1] if both of the following are true:
+- The story is [attr-24]
+- Exactly one of the following is true:
+  - The story is [attr-33]
+  - The story is [attr-31]
+
+Interviewer: Short plus either humor or hardship, but not both.
+
+Expert: Right.
+
+Interviewer: [attr-22]?
+
+Expert: A story is [attr-22] if both of the following are true:
+- The story is [attr-47]
+- The story is [attr-45]
+
+Interviewer: So it needs to use wh-questions and discourse markers.
+
+Expert: Yes.
+
+Interviewer: [attr-2] — this one’s deeply nested.
+
+Expert: It is. A story is [attr-2] if all of the following are true:
+- Either of the following is true:
+  - The story is [attr-38]
+  - The story is [attr-17]
+- Both of the following are true:
+  - The story is [attr-3]
+  - Either of the following is true:
+    - The story is [attr-20]
+    - The story is [attr-4]
+- Either of the following is true:
+  - The story uses [attr-44]
+  - The story uses [attr-46]
+
+Interviewer: So to satisfy [attr-2], you need (time-travel paradox OR magical story) AND complex structure AND (narrative voice OR engaging readability) AND (conditional mood OR perfect aspect).
+
+Expert: Precisely. All those grouped conditions must be met according to the logical structure.
+
+Interviewer: [attr-28]?
+
+Expert: A story is [attr-28] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-13]
+  - The story is [attr-19]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-36]
+
+Interviewer: So it mixes one of those helper/kindness labels with one of those growth/problem labels.
+
+Expert: Yes — one from each list.
+
+Interviewer: Finally, [attr-21]?
+
+Expert: A story is [attr-21] if all of the following are true:
+- The story is [attr-20]
+- The story is not [attr-27]
+- Either of the following is true:
+  - The story is [attr-46]
+  - The story is [attr-44]
+
+Interviewer: So it must show narrative voice, be non-playful, and use perfect aspect or conditional mood.
+
+Expert: Exactly.
+
+Interviewer: Thanks — that was clear and kept the exact logical structure. Any final tip for annotators using this transcript?
+
+Expert: Keep the node IDs exactly as written — like [attr-37] — and follow the logical operators as specified: "both/all" means AND, "either" means OR, "exactly one" means exclusive OR, and "not" is logical negation. Use this transcript as a quick-reference Q&A while annotating.

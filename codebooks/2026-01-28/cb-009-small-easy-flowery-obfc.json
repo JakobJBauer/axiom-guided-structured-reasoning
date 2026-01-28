@@ -1,0 +1,86 @@
+{
+  "nodes": [
+    {
+      "id": "attr-7",
+      "label": "Attribute 7 — uses superlative forms",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Attribute 6 — uses perfect aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Attribute 5 — about lost civilizations",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "Attribute 2 — has juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Attribute 4 — fewer than 160 words",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "Attribute 1 — short and about lost civilizations",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        "attr-4"
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "Attribute 3 — ornate/reflective combinations",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-7",
+            "attr-6"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-6",
+            "attr-2"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-3"
+    }
+  ]
+}

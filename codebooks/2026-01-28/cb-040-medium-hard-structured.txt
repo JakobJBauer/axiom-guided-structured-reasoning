@@ -1,0 +1,65 @@
+Overview
+- Purpose: Provide a clear, structured reference for each annotation label (node).  
+- Format: Each entry states the condition(s) under which a story is considered to have that label. Composite labels explicitly list the logical operations (And / Or / Not / Exactly one) that combine simpler labels.  
+- Note: All node IDs are preserved exactly as written (in [BRACKET] format). Logical relationships and formulas are unchanged.
+
+Atomic labels (base conditions)
+- [THEME-AGENCY]
+  - Definition: A story is [THEME-AGENCY] if the story has the theme Agency.
+
+- [STARTS-WITH-NOUN]
+  - Definition: A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+- [TOPIC-GIANT-CREATURES]
+  - Definition: A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures.
+
+- [THEME-KINDNESS]
+  - Definition: A story is [THEME-KINDNESS] if the story has the theme Kindness.
+
+- [HIGH-READABILITY]
+  - Definition: A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+- [TOPIC-MYSTICAL-CREATURES]
+  - Definition: A story is [TOPIC-MYSTICAL-CREATURES] if the story is about mystical creatures.
+
+Composite labels (built from atomic labels)
+- [MYSTICAL-GIANTS]
+  - Rule: A story is [MYSTICAL-GIANTS] if both of the following are true:
+    - The story is [TOPIC-GIANT-CREATURES]
+    - The story is [TOPIC-MYSTICAL-CREATURES]
+
+- [SOLVER-OR-AGENCY]
+  - Rule: A story is [SOLVER-OR-AGENCY] if exactly one of the following is true:
+    - The story is [THEME-PROBLEM-SOLVING]
+    - The story is [THEME-AGENCY]
+
+- [ALTRUISM-SOLVER]
+  - Rule: A story is [ALTRUISM-SOLVER] if both of the following are true:
+    - The story is [THEME-KINDNESS]
+    - The story is [SOLVER-OR-AGENCY]
+
+- [OPENING-ASSERTIVE]
+  - Rule: A story is [OPENING-ASSERTIVE] if both of the following are true:
+    - [STARTS-WITH-NOUN] equals true
+    - The story is not [THEME-AGENCY]
+
+Featured label (complex nested condition)
+- [FEATURED-STORY]
+  - Rule: A story is [FEATURED-STORY] if both of the following are true:
+    - The story is [MYSTICAL-GIANTS]
+    - either of the following is true:
+      - Branch A — both conditions must hold:
+        - The story is [ALTRUISM-SOLVER]
+        - [HIGH-READABILITY] equals true
+      - Branch B — both conditions must hold:
+        - The story is [OPENING-ASSERTIVE]
+        - [TOPIC-GIANT-CREATURES] is in [TOPIC-GIANT-CREATURES, TOPIC-MYSTICAL-CREATURES]
+
+Usage guidance (how to read these rules)
+- “Both of the following are true” indicates a logical AND: every listed sub-condition must hold.
+- “Exactly one of the following is true” indicates exclusive OR: choose one and only one sub-condition must hold.
+- “Either of the following is true” indicates logical OR: at least one of the branches must hold; each branch may itself require multiple conditions (AND).
+- When a condition uses phrasing like “[LABEL] equals true” or “is not [LABEL],” apply the label’s truth as the boolean check.
+
+End note
+- This structured layout preserves the original logical relationships and node IDs. Use it as a checklist when annotating: evaluate atomic labels first, then apply composite rules in the order shown.

@@ -1,0 +1,48 @@
+[STYLE-PLAYFUL]
+Definition: The predicate [STYLE-PLAYFUL] is true for a narrative iff the narrative exhibits a playful stylistic register.
+
+[STYLE-MINIMALIST]
+Definition: The predicate [STYLE-MINIMALIST] is true for a narrative iff the narrative is written in a minimalist style (economy of language, sparse descriptive detail).
+
+[HAS-A-MORAL-LESSON]
+Definition: The predicate [HAS-A-MORAL-LESSON] is true for a narrative iff the narrative conveys an explicit or implicit moral lesson.
+
+[TOPIC-TIME-TRAVEL]
+Definition: The predicate [TOPIC-TIME-TRAVEL] is true for a narrative iff the narrative’s primary subject matter concerns time travel.
+
+[STARTS-WITH-NOUN]
+Definition: The predicate [STARTS-WITH-NOUN] is true for a narrative iff the first lexical token of the narrative is a noun.
+
+[MANY-PARAGRAPHS]
+Definition: The predicate [MANY-PARAGRAPHS] is true for a narrative iff the narrative contains more than six paragraphs.
+
+[USES-CONDITIONAL-MOOD]
+Definition: The predicate [USES-CONDITIONAL-MOOD] is true for a narrative iff the narrative utilizes grammatical constructions in the conditional mood.
+
+[THEME-HARDSHIP]
+Definition: The predicate [THEME-HARDSHIP] is true for a narrative iff the dominant thematic element is Hardship.
+
+[COMPOUND-STYLE]
+Definition: The predicate [COMPOUND-STYLE] is true for a narrative iff both of the following are true:
+- The narrative is [STYLE-PLAYFUL]
+- The narrative is [STYLE-MINIMALIST]
+
+[COMPLEX-NARRATIVE]
+Definition: The predicate [COMPLEX-NARRATIVE] is true for a narrative iff all of the following are true:
+- The narrative is [MANY-PARAGRAPHS]
+- The narrative is [USES-CONDITIONAL-MOOD]
+- The narrative is [STARTS-WITH-NOUN]
+
+[TIME-MORAL]
+Definition: The predicate [TIME-MORAL] is true for a narrative iff both of the following are true:
+- The narrative is [TOPIC-TIME-TRAVEL]
+- The narrative is [HAS-A-MORAL-LESSON]
+
+[RICH-STYLE-NARRATIVE]
+Definition: The predicate [RICH-STYLE-NARRATIVE] is true for a narrative iff both of the following are true:
+- The narrative is [COMPLEX-NARRATIVE]
+- Either of the following is true:
+  - The narrative is [COMPOUND-STYLE]
+  - Both of the following are true:
+    - The narrative is [STYLE-PLAYFUL]
+    - The narrative is not [THEME-HARDSHIP]

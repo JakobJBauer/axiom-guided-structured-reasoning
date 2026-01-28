@@ -1,0 +1,61 @@
+Structured codebook — clear, hierarchical definitions for annotators
+
+Purpose
+- Provide a compact, organized reference for annotating these story-level labels.
+- Preserve exact node IDs and logical relationships; do not change any IDs, operations, or formulas.
+- Use this as a decision checklist when assigning labels.
+
+Core node definitions
+- [HAS-A-FLASHBACK]
+  - Definition: A story is [HAS-A-FLASHBACK] if the story has a flashback.
+  - Annotator note: Mark this whenever a portion of the narrative explicitly returns to an earlier time or event.
+
+- [USES-WH-QUESTIONS]
+  - Definition: A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+  - Annotator note: Look for questions beginning with who, what, when, where, why, how, etc.
+
+- [USES-DISCOURSE-MARKERS]
+  - Definition: A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers.
+  - Annotator note: Identify explicit connective/organizational words or phrases (e.g., however, then, meanwhile, on the other hand).
+
+Compound and derived labels (logical rules)
+- [INTERACTIVE]
+  - Rule: A story is [INTERACTIVE] if exactly one of the following is true:
+    - The story is [USES-WH-QUESTIONS]
+    - The story is [USES-DISCOURSE-MARKERS]
+  - Interpretation: Apply [INTERACTIVE] only when one of those two source labels is present and the other is absent (this is an exclusive-or condition).
+
+- [COMPLEX-NARRATIVE]
+  - Rule: A story is [COMPLEX-NARRATIVE] if both of the following are true:
+    - The story is [HAS-A-FLASHBACK]
+    - The story is not [INTERACTIVE]
+  - Interpretation: Mark [COMPLEX-NARRATIVE] when a flashback occurs and the story does not meet the exclusive-interactive condition above.
+
+- [SPECIAL-CASE]
+  - Rule: A story is [SPECIAL-CASE] if either of the following is true:
+    - The story is in the set { [INTERACTIVE], [COMPLEX-NARRATIVE] }
+    - The story is equal to [HAS-A-FLASHBACK]
+  - Interpretation: [SPECIAL-CASE] applies when any of these hold:
+    - The story is labeled [INTERACTIVE], or
+    - The story is labeled [COMPLEX-NARRATIVE], or
+    - The story is labeled [HAS-A-FLASHBACK].
+  - Note: Because [HAS-A-FLASHBACK] alone implies [SPECIAL-CASE] (by the final disjunct), any flashback automatically meets [SPECIAL-CASE], and being [INTERACTIVE] or [COMPLEX-NARRATIVE] also triggers it.
+
+Quick decision checklist (step-by-step)
+1. Does the story have a flashback?
+   - If yes → assign [HAS-A-FLASHBACK].
+2. Does the story use wh-questions?
+   - If yes → assign [USES-WH-QUESTIONS].
+3. Does the story use discourse markers?
+   - If yes → assign [USES-DISCOURSE-MARKERS].
+4. Determine [INTERACTIVE]:
+   - Assign [INTERACTIVE] if exactly one of [USES-WH-QUESTIONS] or [USES-DISCOURSE-MARKERS] is true.
+5. Determine [COMPLEX-NARRATIVE]:
+   - Assign [COMPLEX-NARRATIVE] if [HAS-A-FLASHBACK] is true AND [INTERACTIVE] is not true.
+6. Determine [SPECIAL-CASE]:
+   - Assign [SPECIAL-CASE] if any of: [INTERACTIVE], [COMPLEX-NARRATIVE], or [HAS-A-FLASHBACK] is true.
+
+Final reminders for annotators
+- Do not alter any node IDs or logical operators.
+- Follow the exact logical rules above; the compound nodes depend on the primitive labels.
+- Use the quick checklist to ensure consistent, reproducible labeling.

@@ -1,0 +1,80 @@
+Structured Codebook — concise, clear, and ready for annotation
+
+Overview
+- Purpose: Provide a clear, hierarchical reference for annotators. Each node is defined precisely. Logical relationships (And, Or, Exactly one, Both, equality, Not) are preserved exactly as in the original codebook.
+- Usage: For each story, evaluate the atomic properties first, then evaluate composite nodes using the stated logical criteria.
+
+Atomic (basic) labels
+- [attr-4]
+  - Definition: A story is [attr-4] if the story starts with an adjective.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story starts with a noun.
+
+- [attr-8]
+  - Definition: A story is [attr-8] if the story is lighthearted.
+
+- [attr-9]
+  - Definition: A story is [attr-9] if the story is surreal.
+
+- [attr-7]
+  - Definition: A story is [attr-7] if the story is humorous.
+
+- [attr-11]
+  - Definition: A story is [attr-11] if the story has the theme Problem-Solving.
+
+- [attr-10]
+  - Definition: A story is [attr-10] if the story has the theme Deception.
+
+Composite (derived) labels — logical constructions
+- [attr-3]
+  - Meaning: Exclusive start-type.
+  - Rule: A story is [attr-3] if exactly one of the following is true:
+    - The story is [attr-4]
+    - The story is [attr-5]
+
+- [attr-12]
+  - Meaning: Playful tone (derived from style or combination of style + theme absence).
+  - Rule: A story is [attr-12] if either of the following is true:
+    - The story's style is in the set { [attr-8], [attr-7] }
+    - Both of the following are true:
+      - The story is [attr-9]
+      - The story is not [attr-10]
+
+- [attr-2]
+  - Meaning: Presence of either deception or problem-solving theme.
+  - Rule: A story is [attr-2] if either of the following is true:
+    - The story is [attr-10]
+    - The story is [attr-11]
+
+- [attr-6]
+  - Meaning: Style equality constraint.
+  - Rule: A story is [attr-6] if the following equality holds:
+    - [attr-8] = [attr-7]
+
+- [attr-1]
+  - Meaning: Complex story indicator combining start-type exclusivity with a single tonal/theme condition.
+  - Rule: A story is [attr-1] if both of the following are true:
+    - The story is [attr-3]
+    - Exactly one of the following is true:
+      - The story is [attr-12]
+      - The story is [attr-2]
+
+Quick annotator checklist (practical ordering)
+1. Determine atomic labels first:
+   - Check start token: assign [attr-4] or [attr-5] as applicable.
+   - Assign style labels: [attr-8], [attr-9], [attr-7] as appropriate.
+   - Assign theme labels: [attr-11], [attr-10] if present.
+2. Evaluate composite labels in the given sequence:
+   - [attr-3] (check exclusive-start condition)
+   - [attr-12] (use style set membership or the SURR real + not DECEPTION branch)
+   - [attr-2] (either theme)
+   - [attr-6] (verify equality)
+   - [attr-1] (requires both [attr-3] and exactly-one of [attr-12] / [attr-2])
+
+Notes and tips
+- Preserve exact logical operators when reasoning: "exactly one" implies exclusivity; "either" allows one or the other (or both) only when explicitly used; "Both" requires both subconditions to be true.
+- When a composite condition references an atomic node (e.g., [attr-9]), use your atomic annotations as the source of truth.
+- Do not add or remove nodes; use these definitions strictly to maintain consistency across annotations.
+
+End of structured codebook.

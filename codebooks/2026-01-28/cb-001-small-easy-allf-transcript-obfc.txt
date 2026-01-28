@@ -1,0 +1,73 @@
+Interviewer: Let's walk through this codebook step by step. First, what does [attr-5] mean?
+
+Expert: Formally:
+- A story is [attr-5] if The story is classic
+
+Expert (clarifying): That line is the exact rule: if a story is described as "classic," we tag it [attr-5]. It's short and literal — the codebook ties the label to that single condition.
+
+Interviewer: And [attr-6]?
+
+Expert: Formally:
+- A story is [attr-6] if The story is modern
+
+Expert (clarifying): Same pattern as the classic case. If the story is modern in style, it gets the [attr-6] label.
+
+Interviewer: How about cliffhangers?
+
+Expert: Formally:
+- A story is [attr-3] if The story has a cliffhanger
+
+Expert (clarifying): This simply marks whether a story contains a cliffhanger.
+
+Interviewer: What counts as a long story here?
+
+Expert: Formally:
+- A story is [attr-4] if The story has more than 375 words
+
+Expert (clarifying): The threshold is explicit: over 375 words triggers [attr-4].
+
+Interviewer: What does [attr-7] indicate?
+
+Expert: Formally:
+- A story is [attr-7] if The story is about bygone eras
+
+Expert (clarifying): Use this when the subject matter centers on historical, past, or bygone eras.
+
+Interviewer: Now, the compound nodes — let's start with [attr-1]. What's the formal rule?
+
+Expert: Formally:
+- A story is [attr-1] if all of the following are true:
+  - The story is [attr-5]
+  - The story is [attr-4]
+  - The story is [attr-7]
+
+Expert (clarifying): So [attr-1] requires three conditions at once: the story must be classic in style, longer than 375 words, and about bygone eras. All three must hold for the label to apply.
+
+Interviewer: The last node looks more complex: [attr-2]. Can you read the exact rule?
+
+Expert: Formally:
+- A story is [attr-2] if either of the following is true:
+  - Exactly one of the following is true:
+    - The story is [attr-6]
+    - The story is [attr-5]
+  - All of the following are true:
+    - The story is not [attr-5]
+    - The story's style is equal to [attr-6]
+    - The story is [attr-3]
+    - The story's topic is in [attr-7]
+
+Expert (clarifying): Let's unpack that carefully, because the logic is precise.
+
+- First alternative (the "Exactly one" branch): If exactly one of [attr-6] or [attr-5] holds — that is, the story must be either modern or classic, but not both — then [attr-2] applies.
+
+- Second alternative (the "All of the following" branch): If all four listed conditions hold simultaneously — the story is not [attr-5], the story's style equals [attr-6], the story has a cliffhanger ([attr-3]), and its topic is in [attr-7] — then [attr-2] also applies.
+
+Expert (example to illustrate): Imagine a story labeled [attr-6] but not [attr-5]; if that exclusivity is true (modern XOR classic), the first branch is satisfied. Alternatively, if the story is explicitly not classic, explicitly equal to [attr-6], has a cliffhanger, and is about bygone eras, that satisfies the second branch. Either route makes the story [attr-2].
+
+Interviewer: So the node accepts two different logical routes — one based on a simple exclusive choice between styles, and another stricter conjunction that also requires a cliffhanger and a historical topic.
+
+Expert: Exactly. The wording "either of the following is true" preserves that OR between the two alternatives; the nested "Exactly one..." enforces exclusive-or in the first alternative, and the "All of the following are true" enforces conjunction in the second. The codebook's logic is preserved precisely as written.
+
+Interviewer: Anything else we should keep in mind while annotating?
+
+Expert: Keep the node IDs exact and apply the rules verbatim. Wherever a rule says "if The story is X" or uses logical constructs like "Exactly one" or "All of the following are true," treat those as the authoritative criteria. The transcript-style explanations help interpret intent, but the formal lines I read are the actual conditions to implement.

@@ -1,0 +1,58 @@
+In a candlelit archive where words wear garlands and rules wear robes, this little codex records the taxonomy of tales. Each entry below sings its criterion in ornate language, then sets down the precise, unambiguous formula that scholars and annotators must use. The formal lines are preserved exactly so that the music does not alter the meaning.
+
+[STARTS-WITH-ADVERB]
+Like the first breath of morning that whispers "softly" before the world stirs, some stories announce themselves with an adverb, a tiny herald that sets tone and tempo. That delicate initial flourish is all it takes for the tale to be recognized under this banner.
+A story is [STARTS-WITH-ADVERB] if The story starts with a adverb.
+
+[STYLE-CLASSIC]
+There are narratives that wear the patina of time, whose cadence and structure echo the venerable halls of tradition. When a tale carries that venerable, familiar form, we gently place it in the classic category.
+A story is [STYLE-CLASSIC] if The story is classic.
+
+[LONG-STORY]
+Some sagas stretch like braided rivers, winding beyond a common span. When a tale surpasses a set threshold of length, it becomes an ample, sprawling story — a long-story meant for immersion.
+A story is [LONG-STORY] if The story has more than 375 words.
+
+[TOPIC-GIANT-CREATURES]
+In certain chronicles, giants roam the pages: colossal beasts, towering beings, creatures that reshape landscape and fear. Such an elemental focus marks the tale as devoted to the subject of giants.
+A story is [TOPIC-GIANT-CREATURES] if The story is about giant creatures.
+
+[THEME-DECEPTION]
+Some narratives are woven with threads of sly misdirection and masked motives, where appearances deceive and truth is cunningly veiled. When deception is a guiding theme, the story takes on this mantle.
+A story is [THEME-DECEPTION] if The story has the theme Deception.
+
+[TOPIC-HIDDEN-TREASURES]
+There are tales that pulse with the lure of secret hoards and buried maps, where the quest is shaped by treasures that lie concealed. Such stories are devoted to the motif of hidden riches.
+A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures.
+
+[AMPHIBIOUS-EPIC]
+Imagine an epic that walks between land and sea: a lengthy saga about titanic beings, yet one that does not bow to the old classic forms. When these conditions join like tide and wind, the tale earns an amphibious crown.
+A story is [AMPHIBIOUS-EPIC] if all of the following are true:
+- The story is [LONG-STORY]
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is not [STYLE-CLASSIC]
+
+[MISLEADING-QUEST]
+Picture a quest whose map is a riddle and whose glints of gold are traps of illusion — a misleading pilgrimage. When deception and hidden treasures conspire, and when the tale either opens with an adverb or rejects classical styling, it becomes this beguiling quest.
+A story is [MISLEADING-QUEST] if both of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is [TOPIC-HIDDEN-TREASURES]
+- Either of the following is true:
+  - The story is [STARTS-WITH-ADVERB]
+  - The story is not [STYLE-CLASSIC]
+
+[HYBRID-TALE]
+Some narratives are ambidextrous in nature — one or the other of two special kinds, but never both. Exactly one of these identities must hold for a story to be called a hybrid tale: a solitary, decisive membership.
+A story is [HYBRID-TALE] if exactly one of the following is true:
+- The story is [AMPHIBIOUS-EPIC]
+- The story is [MISLEADING-QUEST]
+
+[COMPLEX-ARTIFACT]
+At the summit of classification sits the complex artifact: a refined construct that must be a hybrid, must satisfy either the dignity of the classic or the breadth of length, and must not begin with the quicksilver of an adverb. Only when these precise conditions entwine does a story become a true complex artifact.
+A story is [COMPLEX-ARTIFACT] if all of the following are true:
+- The story is [HYBRID-TALE]
+- Either of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [LONG-STORY]
+- The story is not [STARTS-WITH-ADVERB]
+
+Thus the ledger is both garland and grid: the language gilds the rule, and the rule remains faithful and exact. Use the formal lines as the authoritative compass; let the florid descriptions help you remember each starry condition.

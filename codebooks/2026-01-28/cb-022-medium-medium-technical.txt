@@ -1,0 +1,57 @@
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+Definition: A story is classified as [HAS-CIRCULAR-NARRATIVE-STRUCT] if the narrative employs a circular structure (i.e., the plot returns to or mirrors its starting point).
+
+[THEME-KINDNESS]
+Definition: A story is classified as [THEME-KINDNESS] if the central or significant thematic element of the story is Kindness.
+
+[HAS-JUXTAPOSITION]
+Definition: A story is classified as [HAS-JUXTAPOSITION] if the text contains juxtaposition as a salient structural or stylistic device (placement of contrasting elements in proximity).
+
+[TOPIC-HIDDEN-TREASURES]
+Definition: A story is classified as [TOPIC-HIDDEN-TREASURES] if the subject matter concerns hidden treasures (literal or figurative).
+
+[LOW-READABILITY]
+Definition: A story is classified as [LOW-READABILITY] if its readability metric is below 86.4.
+
+[STYLE-PHILOSOPHICAL]
+Definition: A story is classified as [STYLE-PHILOSOPHICAL] if its stylistic register is philosophical (it foregrounds abstract reflection, conceptual analysis, or existential inquiry).
+
+[STYLE-MODERN]
+Definition: A story is classified as [STYLE-MODERN] if its stylistic register conforms to modern characteristics (contemporary idiom, forms, or aesthetics).
+
+[THEME-DECEPTION]
+Definition: A story is classified as [THEME-DECEPTION] if the story foregrounds Deception as a theme.
+
+[HIGH-READABILITY]
+Definition: A story is classified as [HIGH-READABILITY] if its readability metric is above 96.1.
+
+[MODERN-PHILO-JUXTA]
+Definition: A story is classified as [MODERN-PHILO-JUXTA] if and only if all of the following conditions hold:
+- The story is [STYLE-MODERN].
+- Either of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL].
+  - The story is [HAS-JUXTAPOSITION].
+- The story is not [HAS-CIRCULAR-NARRATIVE-STRUCT].
+
+[MORAL-AMBIVALENCE]
+Definition: A story is classified as [MORAL-AMBIVALENCE] if and only if all of the following conditions hold:
+- The story is [THEME-KINDNESS].
+- The story is [THEME-DECEPTION].
+- The story is [MODERN-PHILO-JUXTA].
+
+[COMPLEX-NARRATIVE]
+Definition: A story is classified as [COMPLEX-NARRATIVE] if and only if both of the following conditions hold:
+- The story is [MORAL-AMBIVALENCE].
+- Either of the following is true:
+  - Exactly one of the following is true:
+    - The story is [LOW-READABILITY].
+    - The story is [HIGH-READABILITY].
+  - The story is [TOPIC-HIDDEN-TREASURES].
+
+Notes on logical operators used:
+- Conjunction (all of the following are true): simultaneous satisfaction of listed predicates.
+- Disjunction (Either of the following is true): inclusive OR unless explicitly stated otherwise.
+- Exclusive disjunction (Exactly one of the following is true): precisely one predicate in the set holds.
+- Negation (The story is not [...]): the predicate does not hold.
+
+Preservation: All node identifiers, logical relations, and threshold values are preserved exactly as specified.

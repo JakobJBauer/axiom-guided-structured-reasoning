@@ -1,0 +1,45 @@
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood — those soft, speculative constructions that conjure possibility, longing, and the graceful dance of "would," "could," and "might" in the heart of a sentence.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if the story starts with a adverb — the opening adverb that sets the pace and mood, a single seed-word that colors the very first breath of the tale.
+
+[THEME-AGENCY]
+A story is [THEME-AGENCY] if the story has the theme Agency — when characters steer their fates, when choices and actions are the engines of the narrative, and the story’s current flows from will and cause.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if the story has fewer than 160 words — a compact bloom of narrative, brief enough to be read in a single, satisfied sitting.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if the story is lighthearted — buoyant in tone, playful or gently amusing, carrying an overall spirit that is bright rather than grave.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect — employing verb forms that fold time inward (has done, had been), marking actions as completed in relation to some reference point.
+
+[MOOD-MIX]
+A story is [MOOD-MIX] if both of the following are true:
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is not [USES-PERFECT-ASPECT]
+In other words, it wears the shawl of conditional possibility but does not cloak itself in the completed-time of the perfect aspect.
+
+[PACING-AND-TONE]
+A story is [PACING-AND-TONE] if both of the following are true:
+- The story is [SHORT-STORY]
+- The story is [STYLE-LIGHTHEARTED]
+This denotes a brief, sprightly composition where compact length and a light touch walk hand in hand.
+
+[AGENCY-START]
+A story is [AGENCY-START] if both of the following are true:
+- The story is [THEME-AGENCY]
+- Exactly one of the following is true:
+  - The story is [STARTS-WITH-ADVERB]
+  - The story is [SHORT-STORY]
+Here we meet a tale of agency that is further distinguished by a single exclusive condition: it either opens with an adverbial flourish or exists as a concise vignette, but not both at once.
+
+[ELEGANT-STORY]
+A story is [ELEGANT-STORY] if both of the following are true:
+- The story is [PACING-AND-TONE]
+- Either of the following are true:
+  - The story is [MOOD-MIX]
+  - The story is [AGENCY-START]
+Thus an elegant story is a short, lighthearted gem that attains additional refinement by either blending conditional mood without perfect aspect or by coupling its agency theme with the exclusive starting condition described above.

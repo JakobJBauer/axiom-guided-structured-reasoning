@@ -1,0 +1,31 @@
+[attr-5]
+A story is [attr-5] if the story is classic.
+
+[attr-6]
+A story is [attr-6] if the story is modern.
+
+[attr-3]
+A story is [attr-3] if the story has a cliffhanger.
+
+[attr-4]
+A story is [attr-4] if the story has more than 375 words.
+
+[attr-7]
+A story is [attr-7] if the story is about bygone eras.
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+- The story is [attr-7]
+
+[attr-2]
+A story is [attr-2] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- All of the following are true:
+  - The story is not [attr-5]
+  - The story's style is equal to [attr-6]
+  - The story is [attr-3]
+  - The story's topic is in [attr-7]

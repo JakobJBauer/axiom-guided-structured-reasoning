@@ -1,0 +1,57 @@
+Think of these tags as simple, clear labels we use when we're describing what a story does or is about.
+
+[attr-10]
+Call a story [attr-10] when it leans into philosophy — when its tone, questions, or structure feel philosophical.
+
+[attr-12]
+Label a story [attr-12] when the subject matter is the arts — when art, artists, or artistic practice are central to the piece.
+
+[attr-3]
+A story is [attr-3] when it includes a flashback.
+
+[attr-6]
+Use [attr-6] for a story that contains another story embedded inside it.
+
+[attr-11]
+Tag a story [attr-11] when deception is a central theme — when trickery, lies, or deliberate misdirection drive the narrative.
+
+[attr-5]
+A story is [attr-5] if it includes a red herring — a distracting clue meant to mislead the reader.
+
+[attr-4]
+Mark a story [attr-4] when it conveys an explicit moral lesson.
+
+Now, some tags combine these basic labels — they’re a way of saying “this plus that equals this new category.”
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- The story is [attr-10]
+- The story is [attr-12]
+In other words, when you have a philosophical approach focused on the arts, that’s [attr-9].
+
+[attr-7]
+A story is [attr-7] if either of the following is true:
+- The story is [attr-3]
+- The story is [attr-6]
+So any kind of layered structure — a flashback or a story inside the story — counts as [attr-7].
+
+[attr-8]
+A story is [attr-8] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-5]
+When deception is the theme and there’s a red herring in play, you’ve got [attr-8].
+
+[attr-2]
+A story is [attr-2] if all of the following are true:
+- The story is [attr-8]
+- The story is [attr-4]
+- The story is not [attr-9]
+So this is a misdirection that also teaches a moral — but it’s explicitly not a reflective-arts piece.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-2]
+- The story is [attr-7]
+When a didactic misdirection is packaged inside a layered, meta structure, you arrive at [attr-1].
+
+That’s the set: simple atomic tags for stylistic features, thematic elements, and structural devices, and then a few composed categories that tie those pieces together.

@@ -1,0 +1,23 @@
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if The story has a flashback
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if The story uses wh-questions
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if The story uses discourse markers
+
+[INTERACTIVE]
+A story is [INTERACTIVE] if exactly one of the following is true:
+- The story is [USES-WH-QUESTIONS]
+- The story is [USES-DISCOURSE-MARKERS]
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if both of the following are true:
+- The story is [HAS-A-FLASHBACK]
+- The story is not [INTERACTIVE]
+
+[SPECIAL-CASE]
+A story is [SPECIAL-CASE] if either of the following is true:
+- The story is in the set { [INTERACTIVE], [COMPLEX-NARRATIVE] }
+- The story is equal to [HAS-A-FLASHBACK]

@@ -1,0 +1,131 @@
+Step into a library of stories where each shelf bears a single, precise label. I’ll walk you through these labels as if we were tracing the fingerprints of a tale—some simple, some woven with rules that latch together like gears. After a small flourish, I’ll show the exact rule that names each label so you can use them without doubt.
+
+[TOPIC-TIME-TRAVEL]
+A story wears the [TOPIC-TIME-TRAVEL] tag when its heartbeat is a jump through the ages—when time travel is the axis around which the plot turns.
+A story is [TOPIC-TIME-TRAVEL] if The story is about time travel.
+
+[STARTS-WITH-ADJECTIVE]
+Imagine opening a book and being greeted by a single word that colours everything that follows; that first word is an adjective, and the tale gets the [STARTS-WITH-ADJECTIVE] label.
+A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective.
+
+[USES-PERFECT-ASPECT]
+Some narrators carry the story in the past’s completed echoes—verbs that speak of actions already finished. When they do, the story receives [USES-PERFECT-ASPECT].
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+
+[STYLE-MODERN]
+When a story wears the dress of the present age—tones, references, or sensibilities of our time—it earns the [STYLE-MODERN] mark.
+A story is [STYLE-MODERN] if The story is modern.
+
+[LOW-READABILITY]
+Not every tale is an open gate; some are intricate enough to score below a readability threshold and thus carry the [LOW-READABILITY] sign.
+A story is [LOW-READABILITY] if The story has readability score below 86.4.
+
+[TOPIC-THE-ARTS]
+There are stories that breathe paint, music, theatre, and craft—these belong to the [TOPIC-THE-ARTS] shelf.
+A story is [TOPIC-THE-ARTS] if The story is about the arts.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+Some narratives trace a circle, returning to where they began—those are the tales stamped with [HAS-CIRCULAR-NARRATIVE-STRUCT].
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if The story has circular narrative structure.
+
+[TOPIC-CULTURAL-TRADITIONS]
+Stories that carry the rituals, customs, and inherited practices of people receive the [TOPIC-CULTURAL-TRADITIONS] label.
+A story is [TOPIC-CULTURAL-TRADITIONS] if The story is about cultural traditions.
+
+[HAS-A-FLASHBACK]
+When memory becomes a scene and the present steps aside to show the past, the tale is marked [HAS-A-FLASHBACK].
+A story is [HAS-A-FLASHBACK] if The story has a flashback.
+
+[STYLE-HUMOROUS]
+If a story’s tone leans toward laughter, wit, or comedic timing, it earns the [STYLE-HUMOROUS] badge.
+A story is [STYLE-HUMOROUS] if The story is humorous.
+
+[TOPIC-MAGICAL-LANDS]
+There are stories that open doors to kingdoms made of wonder—maps to those realms get the [TOPIC-MAGICAL-LANDS] label.
+A story is [TOPIC-MAGICAL-LANDS] if The story is about magical lands.
+
+[STYLE-LIGHTHEARTED]
+Some tales float like a kite—gentle, breezy, and pleasantly undemanding; those are [STYLE-LIGHTHEARTED].
+A story is [STYLE-LIGHTHEARTED] if The story is lighthearted.
+
+[TOPIC-MYSTICAL-CREATURES]
+Creatures of myth and marvel populate certain stories; those are placed under [TOPIC-MYSTICAL-CREATURES].
+A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures.
+
+[THEME-PROBLEM-SOLVING]
+When a story’s engine is a puzzle or a challenge and the characters grind toward a solution, the theme is [THEME-PROBLEM-SOLVING].
+A story is [THEME-PROBLEM-SOLVING] if The story has the theme Problem-Solving.
+
+[NARRATIVE-STRUCTURAL]
+Think of a pattern that demands two things: the tale must loop back on itself, and it must either open a window into its past or refuse the ornament of an opening adjective. When those pieces click together, the story is granted the name [NARRATIVE-STRUCTURAL].
+A story is [NARRATIVE-STRUCTURAL] if both of the following are true:
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- Either of the following is true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is not [STARTS-WITH-ADJECTIVE]
+
+[STYLE-AND-TONE]
+Now imagine a scale where tone and style balance: the story must be one-and-only-one between humorous and lighthearted, and it must either belong to the modern world or be easy enough to read (not low in readability). When those checks pass, it carries the [STYLE-AND-TONE] sign.
+A story is [STYLE-AND-TONE] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [STYLE-HUMOROUS]
+  - The story is [STYLE-LIGHTHEARTED]
+- Either of the following is true:
+  - The story is [STYLE-MODERN]
+  - The story is not [LOW-READABILITY]
+
+[ARTS-TRADITIONAL-PROBLEM]
+Picture an intersection where art, tradition, and the drive to solve a problem meet. A story can be labeled [ARTS-TRADITIONAL-PROBLEM] either when all three—arts, cultural traditions, and problem-solving—stand together, or when cultural traditions anchor the story and exactly one of the pair (arts or problem-solving) joins them.
+A story is [ARTS-TRADITIONAL-PROBLEM] if either of the following is true:
+- All of the following are true:
+  - The story is [TOPIC-THE-ARTS]
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+  - The story is [THEME-PROBLEM-SOLVING]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [TOPIC-THE-ARTS]
+    - The story is [THEME-PROBLEM-SOLVING]
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+
+[FANTASY-CORE]
+Some tales sit at a hinge of fantasy: they must belong to exactly one of two enchanted families—either magical lands or mystical creatures—and then either time travel appears in the plot or the tale refuses the modern label. That precise combination names the [FANTASY-CORE].
+A story is [FANTASY-CORE] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [TOPIC-MAGICAL-LANDS]
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+- Either of the following is true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is not [STYLE-MODERN]
+
+[COMPLEX-PATTERN]
+Here the gears mesh: a story must be [NARRATIVE-STRUCTURAL] and then either pair [STYLE-AND-TONE] with the absence of [FANTASY-CORE], or it must combine [ARTS-TRADITIONAL-PROBLEM] with [FANTASY-CORE]. Together, these give us [COMPLEX-PATTERN].
+A story is [COMPLEX-PATTERN] if both of the following are true:
+- The story is [NARRATIVE-STRUCTURAL]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [STYLE-AND-TONE]
+    - The story is not [FANTASY-CORE]
+  - Both of the following are true:
+    - The story is [ARTS-TRADITIONAL-PROBLEM]
+    - The story is [FANTASY-CORE]
+
+[SYNDIC-CONJUNCTION]
+At the heart of a particular configuration is [SYNDIC-CONJUNCTION]. It requires the story to be a [COMPLEX-PATTERN], to be either an arts-tradition-problem tale or a fantasy-core tale, and to have its [STYLE-AND-TONE] specifically set to humorous.
+A story is [SYNDIC-CONJUNCTION] if all of the following are true:
+- The story is [COMPLEX-PATTERN]
+- The story is [ARTS-TRADITIONAL-PROBLEM] or the story is [FANTASY-CORE]
+- The story is [STYLE-AND-TONE] equals [STYLE-HUMOROUS]
+
+[STORY-ARCHETYPE]
+Finally, imagine the grand label that names a story’s archetype. It arrives by several possible roads: one route asks that [SYNDIC-CONJUNCTION] accompanies a self-reference to [COMPLEX-PATTERN]; another allows a tale to be [FANTASY-CORE] but not an arts-tradition-problem; and yet another accepts an arts-tradition-problem tale that then meets exactly one of two qualities—either it satisfies [STYLE-AND-TONE] or it fits [NARRATIVE-STRUCTURAL]. Any of these paths will crown the story as a [STORY-ARCHETYPE].
+A story is [STORY-ARCHETYPE] if either of the following is true:
+- Both of the following are true:
+  - The story is [SYNDIC-CONJUNCTION]
+  - The story is [COMPLEX-PATTERN] in [COMPLEX-PATTERN, SYNDIC-CONJUNCTION, FANTASY-CORE]
+- Either of the following is true:
+  - The story is [FANTASY-CORE] and the story is not [ARTS-TRADITIONAL-PROBLEM]
+  - The story is [ARTS-TRADITIONAL-PROBLEM] and exactly one of the following is true:
+    - The story is [STYLE-AND-TONE]
+    - The story is [NARRATIVE-STRUCTURAL]
+
+There—the labels stand like constellations. Each one is described with a storyteller’s touch and the exact rule you need to apply when you’re tagging, annotating, or reasoning about a tale. If you want, we can walk through examples and watch these labels spark to life on particular stories.

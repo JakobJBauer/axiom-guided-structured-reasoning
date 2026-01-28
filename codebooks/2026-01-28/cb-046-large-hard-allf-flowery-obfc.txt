@@ -1,0 +1,128 @@
+[attr-14]
+A story is [attr-14] if the story is lighthearted — if its tone skims like sunlit laughter across a pond, the mood buoyant and untroubled.
+
+[attr-16]
+A story is [attr-16] if the story is philosophical — if it lingers over questions of meaning, pondering existence with the slow, patient curiosity of an old oak.
+
+[attr-24]
+A story is [attr-24] if the story is about magical lands — if its setting unfurls into realms where the horizon shimmers with enchantment.
+
+[attr-26]
+A story is [attr-26] if the story uses wh-questions — if it asks who, what, when, where, why, or how, inviting inquiry like a lantern in the dark.
+
+[attr-11]
+A story is [attr-11] if the story has fewer than 160 words — compact as a pressed flower, brief and concentrated.
+
+[attr-18]
+A story is [attr-18] if the story has the theme Kindness — if acts of compassion and gentle hearts are central to its tapestry.
+
+[attr-7]
+A story is [attr-7] if the story has more than 6 paragraphs — a sprawling manuscript of thought and scene, segmented into many breaths.
+
+[attr-25]
+A story is [attr-25] if the story uses conditional mood — if it speaks in coulds and woulds, in the language of possibility and imagined consequence.
+
+[attr-20]
+A story is [attr-20] if the story has the theme Problem-Solving — if challenges are met with cleverness and the spirit of resolution.
+
+[attr-17]
+A story is [attr-17] if the story has the theme Growth — if characters or ideas stretch, transform, or bloom as the plot progresses.
+
+[attr-12]
+A story is [attr-12] if the story starts with a preposition — if the very first word is a prepositional thread that ties the opening to place or relation.
+
+[attr-21]
+A story is [attr-21] if the story is about giant creatures — if colossal beings stride through its landscapes and influence fate by their sheer magnitude.
+
+[attr-15]
+A story is [attr-15] if the story is modern — if it reflects contemporary sensibilities, voice, or settings.
+
+[attr-13]
+A story is [attr-13] if the story is classic — if it resonates with timeless style, form, or archetypal cadence.
+
+[attr-19]
+A story is [attr-19] if the story has the theme Magic — if the weave of the tale is threaded through with sorcery, wonder, or inexplicable power.
+
+[attr-23]
+A story is [attr-23] if the story is about lost civilizations — if it explores ruins, vanished peoples, and the echoes of bygone societies.
+
+[attr-4]
+A story is [attr-4] if the story has a flashback — if a past moment is summoned into the present to shed light on why things are as they are.
+
+[attr-22]
+A story is [attr-22] if the story is about hidden treasures — if secret hoards, buried riches, or concealed wonders drive the narrative.
+
+[attr-9]
+A story is [attr-9] if the story is not [attr-14] — if it lacks that feather-light levity and carries a more serious hue.
+
+[attr-8]
+A story is [attr-8] if exactly one of the following is true:
+- The story is [attr-15]
+- The story is [attr-13]
+Here, the designation blooms only when the tale chooses a single stylistic path — modern or classic, but not both.
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- The story is [attr-24]
+- Either of the following is true:
+  - The story is [attr-19]
+  - Both of the following are true:
+    - The story is [attr-21]
+    - The story is [attr-20]
+This label belongs to those adventures that dwell in enchanted realms and are propelled either by magic itself, or by the interplay of towering beings and inventive problem-solving.
+
+[attr-5]
+A story is [attr-5] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [attr-22]
+  - The story is [attr-23]
+- Both of the following are true:
+  - The story is [attr-22]
+  - The story is [attr-23]
+This designation captures tales of discovery — whether focused on secret hoards, forgotten empires, or the bittersweet confluence of both.
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- [attr-26] is in the set of devices the story uses (it explicitly uses wh-questions)
+- Either of the following is true:
+  - The story is [attr-25]
+  - The story is [attr-12]
+A quest-style tale is one that invites inquiry — it asks its way forward with wh-questions and proceeds either in the register of possibility (conditional mood) or with an opening prepositional step.
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The set of themes in the story is equal to the set containing [attr-18] and [attr-17]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-20]
+    - The story is [attr-4]
+  - Both of the following are true:
+    - The story is [attr-7]
+    - The story is not [attr-11]
+An epic growth arc is a rare bloom: a narrative whose thematic soil is precisely kindness and growth, and which either intertwines problem-solving with remembered past, or unfolds over many paragraphs without being a mere short-story.
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- Both of the following are true:
+  - The story is [attr-21]
+  - The story is [attr-23]
+This label is given when adventures converge — when magic and lost quests entwine, or when giants and ancient ruins share the stage.
+
+[attr-2]
+A story is [attr-2] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-1]
+  - Both of the following are true:
+    - The story is [attr-8]
+    - Either of the following is true:
+      - The story is [attr-18]
+      - The story is [attr-19]
+- Both of the following are true:
+  - The story is [attr-3]
+  - Both of the following are true:
+    - The story is not [attr-9]
+    - The story is [attr-10]
+This final, evocative classification is reserved for tales perched on the cusp of interpretation — adventurous hybrids or epic growth narratives that remain delightfully uncertain, modern or classic in sole identity, suffused with kindness or magic, or questing forward without losing a lightness of heart.

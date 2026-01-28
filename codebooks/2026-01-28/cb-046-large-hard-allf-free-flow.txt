@@ -1,0 +1,125 @@
+I'll walk you through this codebook in a more conversational, free-flow voice while keeping every technical detail exactly where it belongs. The node IDs remain unchanged in [BRACKET] form, and all logical relationships—Not, And, Or, Exactly one, and so on—are preserved exactly as in the original. Think of this as a friendly guide that gently explains what each label means, then repeats the precise logical rules you need for annotation.
+
+[STYLE-LIGHTHEARTED]
+Call a story [STYLE-LIGHTHEARTED] when its overall tone is lighthearted — playful, breezy, or gently amusing. In short: if the story is lighthearted, it gets this tag.
+
+[STYLE-PHILOSOPHICAL]
+Tag a story [STYLE-PHILOSOPHICAL] when it leans into philosophical ideas, reflections, or questions. If the story is philosophical, it’s [STYLE-PHILOSOPHICAL].
+
+[TOPIC-MAGICAL-LANDS]
+Use [TOPIC-MAGICAL-LANDS] for stories that take place in or are centrally about enchanted, uncanny, or distinctly magical lands. If the story is about magical lands, it’s [TOPIC-MAGICAL-LANDS].
+
+[USES-WH-QUESTIONS]
+If a story explicitly uses wh-questions (who, what, where, when, why, how), label it [USES-WH-QUESTIONS].
+
+[SHORT-STORY]
+When the whole piece is concise — under 160 words — mark it [SHORT-STORY].
+
+[THEME-KINDNESS]
+If kindness is a core theme of the tale, assign [THEME-KINDNESS].
+
+[MANY-PARAGRAPHS]
+When the story is broken into more than six paragraphs, use [MANY-PARAGRAPHS].
+
+[USES-CONDITIONAL-MOOD]
+If the narrative makes use of the conditional mood (would, could, might, etc.), give it [USES-CONDITIONAL-MOOD].
+
+[THEME-PROBLEM-SOLVING]
+If problem-solving drives the story’s theme — characters working out puzzles, challenges, or obstacles — mark [THEME-PROBLEM-SOLVING].
+
+[THEME-GROWTH]
+When growth (personal, moral, or otherwise) is a clear theme, label the story [THEME-GROWTH].
+
+[STARTS-WITH-PREPOSITION]
+If the very first word of the story is a preposition (in, on, under, before, etc.), tag it [STARTS-WITH-PREPOSITION].
+
+[TOPIC-GIANT-CREATURES]
+Use [TOPIC-GIANT-CREATURES] when giant creatures are a central subject of the story.
+
+[STYLE-MODERN]
+If the story reads as modern in style — contemporary voice, modern settings or sensibilities — call it [STYLE-MODERN].
+
+[STYLE-CLASSIC]
+If the story has a classic style — timeless structure, older conventions, or a classic voice — mark it [STYLE-CLASSIC].
+
+[THEME-MAGIC]
+When magic itself is an explicit theme, use [THEME-MAGIC].
+
+[TOPIC-LOST-CIVILIZATIONS]
+If the story is about lost civilizations, ancient ruins, or rediscovered cultures, tag [TOPIC-LOST-CIVILIZATIONS].
+
+[HAS-A-FLASHBACK]
+If a flashback appears in the narrative, give it [HAS-A-FLASHBACK].
+
+[TOPIC-HIDDEN-TREASURES]
+Stories centered on hidden treasures, secret hoards, or buried riches should carry [TOPIC-HIDDEN-TREASURES].
+
+[NON-LIGHTHEARTED]
+A story is [NON-LIGHTHEARTED] if the story is not [STYLE-LIGHTHEARTED]. In other words, apply this when the story is explicitly not lighthearted.
+
+[MODERN-XOR-CLASSIC]
+A story is [MODERN-XOR-CLASSIC] if exactly one of the following is true:
+- The story is [STYLE-MODERN]
+- The story is [STYLE-CLASSIC]
+
+[MAGICAL-ADVENTURE]
+Think of [MAGICAL-ADVENTURE] as a special kind of adventure that must meet both of these conditions:
+- The story is [TOPIC-MAGICAL-LANDS]
+- Either of the following is true:
+  - The story is [THEME-MAGIC]
+  - Both of the following are true:
+    - The story is [TOPIC-GIANT-CREATURES]
+    - The story is [THEME-PROBLEM-SOLVING]
+
+[HIDDEN-LOST-ADVENTURE]
+Label a story [HIDDEN-LOST-ADVENTURE] when it fits either of these possibilities:
+- Exactly one of the following is true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+- Both of the following are true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+
+[QUEST-STYLE]
+Use [QUEST-STYLE] for stories that have a wh-question device and either a conditional mood or begin with a preposition:
+- [USES-WH-QUESTIONS] is in the set of devices the story uses (it explicitly uses wh-questions)
+- Either of the following is true:
+  - The story is [USES-CONDITIONAL-MOOD]
+  - The story is [STARTS-WITH-PREPOSITION]
+
+[EPIC-GROWTH-ARC]
+An [EPIC-GROWTH-ARC] is a tightly specified kind of growth story. Two big requirements must both be met:
+- The set of themes in the story is equal to the set containing [THEME-KINDNESS] and [THEME-GROWTH]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [THEME-PROBLEM-SOLVING]
+    - The story is [HAS-A-FLASHBACK]
+  - Both of the following are true:
+    - The story is [MANY-PARAGRAPHS]
+    - The story is not [SHORT-STORY]
+
+[AMALGAM-OF-ADVENTURE]
+An [AMALGAM-OF-ADVENTURE] happens in one of two ways:
+- Both of the following are true:
+  - The story is [MAGICAL-ADVENTURE]
+  - The story is [HIDDEN-LOST-ADVENTURE]
+- Both of the following are true:
+  - The story is [TOPIC-GIANT-CREATURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+
+[AMBIGUOUS-MAGICAL-TALE]
+Finally, [AMBIGUOUS-MAGICAL-TALE] captures a particular, layered combination. A story is this if either of these two larger blocks applies:
+- Both of the following are true:
+  - The story is [AMALGAM-OF-ADVENTURE]
+  - Both of the following are true:
+    - The story is [MODERN-XOR-CLASSIC]
+    - Either of the following is true:
+      - The story is [THEME-KINDNESS]
+      - The story is [THEME-MAGIC]
+- Both of the following are true:
+  - The story is [EPIC-GROWTH-ARC]
+  - Both of the following are true:
+    - The story is not [NON-LIGHTHEARTED]
+    - The story is [QUEST-STYLE]
+
+That’s the whole codebook, rewritten in a friendlier flow but keeping every ID, every logical condition, and every relationship just as originally specified. Use these labels exactly as defined when annotating or reasoning about stories.

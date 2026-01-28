@@ -1,0 +1,68 @@
+{
+  "nodes": [
+    {
+      "id": "theme-helping-others",
+      "label": "THEME-HELPING-OTHERS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-mystical-creatures",
+      "label": "TOPIC-MYSTICAL-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-preposition",
+      "label": "STARTS-WITH-PREPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "mythic-but-not-altruistic",
+      "label": "MYTHIC-BUT-NOT-ALTRUISTIC",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-mystical-creatures",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "theme-helping-others"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inviting-opening",
+      "label": "INVITING-OPENING",
+      "formula_type": "And",
+      "formula_args": [
+        "starts-with-preposition",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "mythic-but-not-altruistic"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic-mystical-creatures",
+      "target": "mythic-but-not-altruistic"
+    },
+    {
+      "source": "theme-helping-others",
+      "target": "mythic-but-not-altruistic"
+    },
+    {
+      "source": "starts-with-preposition",
+      "target": "inviting-opening"
+    },
+    {
+      "source": "mythic-but-not-altruistic",
+      "target": "inviting-opening"
+    }
+  ]
+}

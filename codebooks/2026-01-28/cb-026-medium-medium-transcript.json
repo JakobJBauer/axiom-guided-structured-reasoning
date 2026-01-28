@@ -1,0 +1,179 @@
+{
+  "nodes": [
+    {
+      "id": "topic-time-travel",
+      "label": "TOPIC-TIME-TRAVEL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-hidden-treasures",
+      "label": "TOPIC-HIDDEN-TREASURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "STYLE-PHILOSOPHICAL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "many-paragraphs",
+      "label": "MANY-PARAGRAPHS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "high-readability",
+      "label": "HIGH-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-classic",
+      "label": "STYLE-CLASSIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-humorous",
+      "label": "STYLE-HUMOROUS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-mystical-creatures",
+      "label": "TOPIC-MYSTICAL-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "thematic-depth",
+      "label": "THEMATIC-DEPTH",
+      "formula_type": "And",
+      "formula_args": [
+        "style-philosophical",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "style-humorous"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "narrative-style",
+      "label": "NARRATIVE-STYLE",
+      "formula_type": "And",
+      "formula_args": [
+        "high-readability",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "style-classic",
+            "style-humorous"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adventure-arc",
+      "label": "ADVENTURE-ARC",
+      "formula_type": "Or",
+      "formula_args": [
+        "topic-hidden-treasures",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "topic-time-travel",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "style-philosophical"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-story",
+      "label": "COMPLEX-STORY",
+      "formula_type": "And",
+      "formula_args": [
+        "thematic-depth",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "adventure-arc",
+            "topic-mystical-creatures"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epic",
+      "label": "EPIC",
+      "formula_type": "And",
+      "formula_args": [
+        "complex-story",
+        "many-paragraphs"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "style-philosophical",
+      "target": "thematic-depth"
+    },
+    {
+      "source": "style-humorous",
+      "target": "thematic-depth"
+    },
+    {
+      "source": "high-readability",
+      "target": "narrative-style"
+    },
+    {
+      "source": "style-classic",
+      "target": "narrative-style"
+    },
+    {
+      "source": "style-humorous",
+      "target": "narrative-style"
+    },
+    {
+      "source": "topic-hidden-treasures",
+      "target": "adventure-arc"
+    },
+    {
+      "source": "topic-time-travel",
+      "target": "adventure-arc"
+    },
+    {
+      "source": "style-philosophical",
+      "target": "adventure-arc"
+    },
+    {
+      "source": "thematic-depth",
+      "target": "complex-story"
+    },
+    {
+      "source": "adventure-arc",
+      "target": "complex-story"
+    },
+    {
+      "source": "topic-mystical-creatures",
+      "target": "complex-story"
+    },
+    {
+      "source": "complex-story",
+      "target": "epic"
+    },
+    {
+      "source": "many-paragraphs",
+      "target": "epic"
+    }
+  ]
+}

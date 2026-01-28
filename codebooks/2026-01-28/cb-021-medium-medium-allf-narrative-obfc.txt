@@ -1,0 +1,64 @@
+Think of this codebook as an old map in a storyteller's satchel: each label is a signpost, and each signpost tells you exactly how to recognize a kind of tale. Below, the characters—the tags—introduce themselves and explain, in plain and sometimes playful language, the rules that give them life. The logical bones remain unchanged; only the narration around them is warm and human.
+
+[attr-4]
+A story is [attr-4] if the story starts with an adjective.
+- Picture the very first word of a tale: if it sits there as an adjective, then the label [attr-4] slips quietly onto that story's shoulder.
+
+[attr-5]
+A story is [attr-5] if the story starts with a noun.
+- If the opening word announces itself as a noun, then the tale wears the badge [attr-5].
+
+[attr-8]
+A story is [attr-8] if the story is lighthearted.
+- This is the tag for stories that dance and grin; when a tale's tone keeps things airy and cheerful, it claims [attr-8].
+
+[attr-9]
+A story is [attr-9] if the story is surreal.
+- When a story slips into odd dream-maps and unexpected turns, the [attr-9] name is its companion.
+
+[attr-7]
+A story is [attr-7] if the story is humorous.
+- If a tale invites laughter, irony, or comic timing, it earns the [attr-7] label.
+
+[attr-11]
+A story is [attr-11] if the story has the theme Problem-Solving.
+- When a plot revolves around puzzles, obstacles, or clever fixes, the theme [attr-11] applies.
+
+[attr-10]
+A story is [attr-10] if the story has the theme Deception.
+- If trickery, concealment, or double meanings drive the plot, then the story wears [attr-10].
+
+[attr-3]
+A story is [attr-3] if exactly one of the following is true:
+- The story is [attr-4]
+- The story is [attr-5]
+- Imagine a crossroads where a tale can begin with either an adjective or a noun—but not both. When exactly one of those openings is true, the tale becomes [attr-3].
+
+[attr-12]
+A story is [attr-12] if either of the following is true:
+- The story's style is in the set { [attr-8], [attr-7] }
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is not [attr-10]
+- Think of [attr-12] as a spark of whimsy: it flickers on either when the style is light or funny, or when a surreal story keeps its mischief honest (surreal but not deceptive).
+
+[attr-2]
+A story is [attr-2] if either of the following is true:
+- The story is [attr-10]
+- The story is [attr-11]
+- This tag gathers tales that pivot around cunning or challenges—deception or problem-solving.
+
+[attr-6]
+A story is [attr-6] if the following equality holds:
+- [attr-8] = [attr-7]
+- Here is a strict ledger: the label [attr-6] applies exactly when the two style tags, [attr-8] and [attr-7], are equal—when a story's lightheartedness and humor stand in perfect balance.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-3]
+- Exactly one of the following is true:
+  - The story is [attr-12]
+  - The story is [attr-2]
+- A complex story is a careful construction: it must begin in exactly one recognized way (adjective or noun), and then it must choose precisely one path—either the playful lane or the lane of deception/problem. If the tale fits both layers of this test, it earns the ribbon [attr-1].
+
+And so the map closes but remains ready: each bracketed name is a rule and a promise, guiding annotators and readers to tag stories with clarity—and a touch of storybook charm.

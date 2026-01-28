@@ -1,0 +1,68 @@
+Imagine a small, enchanted manual that knows how to label stories—each label is a little signpost tied to a criterion. Walk with me through its pages; beneath each label I’ll whisper the rule that earns it, but told like a scene so the logic still stands plain and true.
+
+[THEME-HUMOR]
+A story is [THEME-HUMOR] if The story has the theme Humor.
+- In other words: when laughter is the story’s guiding star, the manual hangs the [THEME-HUMOR] tag above the tale.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations.
+- When ruins, vanished empires, and forgotten maps populate the plot, the tale claims the [TOPIC-LOST-CIVILIZATIONS] label.
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if The story is playful.
+- If the narrative winks, toys with tone, and skips along with lightness, it’s recognized as [STYLE-PLAYFUL].
+
+[STYLE-SURREAL]
+A story is [STYLE-SURREAL] if The story is surreal.
+- When reality melts and strange logic blossoms, the story is crowned [STYLE-SURREAL].
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if The story uses discourse markers.
+- If connectors and signposts like “however,” “therefore,” or “meanwhile” pepper the prose, the [USES-DISCOURSE-MARKERS] label is applied.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if The story has readability score below 86.4.
+- The manual measures clarity: when the readability score dips under 86.4, the story is marked [LOW-READABILITY].
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic.
+- If the tale reads with timeless structure and formality, it wears the [STYLE-CLASSIC] badge.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if The story is philosophical.
+- When the prose pauses to question being, meaning, or morality, it earns the [STYLE-PHILOSOPHICAL] distinction.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger.
+- If a chapter ends with breath held and questions dangling, the story receives [HAS-A-CLIFFHANGER].
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if The story starts with a preposition.
+- The book inspects the first word: if a preposition begins the opening line, the story is tagged [STARTS-WITH-PREPOSITION].
+
+[TONE-MIX]
+A story is [TONE-MIX] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [STYLE-PLAYFUL]
+  - The story is [STYLE-PHILOSOPHICAL]
+- Both of the following are true:
+  - The story is [STYLE-SURREAL]
+  - The story is not [STYLE-CLASSIC]
+
+- Picture [TONE-MIX] as a crossroads: the tale qualifies if it sits squarely in exactly one of the two simpler moods (playful or philosophical), or if it lives in the surreal realm while explicitly not being classic.
+
+[PRESENTATION-CRITERIA]
+A story is [PRESENTATION-CRITERIA] if both of the following are true:
+- The story is in the following set:
+  - [THEME-HUMOR]
+  - [TOPIC-LOST-CIVILIZATIONS]
+- Either of the following is true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - Both of the following are true:
+    - The story is equal to [THEME-HUMOR]
+    - The story is not [LOW-READABILITY]
+  - Or the story is [TONE-MIX]
+
+- Think of [PRESENTATION-CRITERIA] as the manual’s showcase: first, the story must be a member of the duo—either [THEME-HUMOR] or [TOPIC-LOST-CIVILIZATIONS]. Then, one of three roads must be true: it’s gripping with a cliffhanger; or it is precisely the same as [THEME-HUMOR] and also avoids [LOW-READABILITY]; or it arrives there by being [TONE-MIX]. When both the membership and one of those options hold, the story earns the [PRESENTATION-CRITERIA] stamp.
+
+That is the enchanted rulebook, narrated: each bracketed sign is anchored to the exact condition that bestows it. The tale-keeper reads these rules and applies them without mercy—but always with a storyteller’s eye.

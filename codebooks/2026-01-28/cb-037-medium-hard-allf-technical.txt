@@ -1,0 +1,49 @@
+[HAS-A-STORY-WITHIN-A-STORY]
+Definition: The predicate [HAS-A-STORY-WITHIN-A-STORY] holds for a story if the narrative includes a nested or embedded story (i.e., the story contains a story within a story).
+
+[THEME-MAGIC]
+Definition: The predicate [THEME-MAGIC] holds for a story if the story’s thematic content is Magic.
+
+[HAS-A-FLASHBACK]
+Definition: The predicate [HAS-A-FLASHBACK] holds for a story if the narrative contains a flashback sequence.
+
+[TOPIC-THE-ARTS]
+Definition: The predicate [TOPIC-THE-ARTS] holds for a story if the story’s subject matter pertains to the arts.
+
+[STYLE-MINIMALIST]
+Definition: The predicate [STYLE-MINIMALIST] holds for a story if the story is written in a minimalist style.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+Definition: The predicate [HAS-CIRCULAR-NARRATIVE-STRUCT] holds for a story if the narrative follows a circular structure.
+
+[DEVICE-XOR]
+Definition: The predicate [DEVICE-XOR] holds for a story if exactly one of the following conditions is true:
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [HAS-A-FLASHBACK]
+
+[DEVICE-EQUAL]
+Definition: The predicate [DEVICE-EQUAL] holds for a story if the truth value of [HAS-A-STORY-WITHIN-A-STORY] is equal to the truth value of [HAS-CIRCULAR-NARRATIVE-STRUCT].
+
+[MAGIC-ART-MEMBER]
+Definition: The predicate [MAGIC-ART-MEMBER] holds for a story if the story’s primary theme or topic is a member of the set {[THEME-MAGIC], [TOPIC-THE-ARTS]}.
+
+[COMPLEX-NARRATIVE-CORE]
+Definition: The predicate [COMPLEX-NARRATIVE-CORE] holds for a story if both of the following conditions are satisfied:
+- Either of the following is true:
+  - The story is [DEVICE-XOR]
+  - The story is [DEVICE-EQUAL]
+- The story is not [STYLE-MINIMALIST] and (the story is [HAS-CIRCULAR-NARRATIVE-STRUCT] or the story is [HAS-A-FLASHBACK])
+
+[ART-MAGIC-NARRATIVE]
+Definition: The predicate [ART-MAGIC-NARRATIVE] holds for a story if both of the following conditions are satisfied:
+- The story is [MAGIC-ART-MEMBER]
+- Either of the following is true:
+  - The story is [COMPLEX-NARRATIVE-CORE]
+  - The story is [STYLE-MINIMALIST]
+
+[COMPLEX-ARTISTIC-NARRATIVE]
+Definition: The predicate [COMPLEX-ARTISTIC-NARRATIVE] holds for a story if both of the following conditions are satisfied:
+- The story is [ART-MAGIC-NARRATIVE]
+- Exactly one of the following is true:
+  - The story is [DEVICE-EQUAL]
+  - The story is not [HAS-A-FLASHBACK]

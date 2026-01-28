@@ -1,0 +1,36 @@
+Preface — The Loom of Labels
+
+Imagine, if you will, a delicate tapestry hung in an old storyteller’s hall: each thread is a rule, each knot a label, and together they form a map by which readers and annotators may wander. This codebook is that tapestry rendered in words — ornate and fragrant, yet precise and serviceable. Below you will find the very same logical threads as before, carefully embroidered with descriptive flourishes so that the meanings sing and the structure remains unimpeachable. The relationships between nodes, the logical connectors (not, exactly one, both, either), and every node identifier remain untouched and in their original places — as steadfast as runes carved into stone.
+
+[STARTS-WITH-ADJECTIVE]
+A story is STARTS-WITH-ADJECTIVE if the story begins by opening its mouth with an adjective — that single descriptive word that leans in first, setting mood and tone before anything else unfurls.
+
+[TOPIC-GIANT-CREATURES]
+A story is TOPIC-GIANT-CREATURES if the tale’s heart is given over to giant creatures — when the narrative orbits those colossal beings, so that they are the central subject around which the story turns.
+
+[GIANT-FOCUSED]
+A story is GIANT-FOCUSED if both of the following are true:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is not [STARTS-WITH-ADJECTIVE]
+
+Think of [GIANT-FOCUSED] as a clear pond: the giant creatures dwell at the center, and the surface was not first disturbed by an opening adjective. Both conditions must be present for the label to settle like a stone.
+
+[DYNAMIC-OPENING]
+A story is DYNAMIC-OPENING if exactly one of the following is true:
+- The story is [STARTS-WITH-ADJECTIVE]
+- The story is [TOPIC-GIANT-CREATURES]
+
+This node captures a singular spark — an either/or that insists on exclusivity. The story may burst forth with a descriptive word, or it may be centered on titanic beasts, but not both at once. Exactly one must hold, neither none nor both.
+
+[ENGAGING-GIANT-STORY]
+A story is ENGAGING-GIANT-STORY if both of the following are true:
+- The story is [GIANT-FOCUSED]
+- Either of the following is true:
+  - The story is [DYNAMIC-OPENING]
+  - The story is not [STARTS-WITH-ADJECTIVE]
+
+At last, [ENGAGING-GIANT-STORY] is a layered blossom: it requires the giants to be the focal point, and additionally demands that the opening possesses a certain narrative vigor. That vigor may be confirmed by the exclusivity of a [DYNAMIC-OPENING], or alternatively by the simple absence of an adjective at the very start. Either path suffices, so long as the tale remains giant-focused.
+
+Epilogue — A Gentle Reminder
+
+These labels are meant to guide careful annotation: treat them as both compass and key. The poetic language here aims to make the criteria memorable, but the underlying logic — the exact nodes, the operators (not, exactly one, both, either), and the relationships between them — is preserved without alteration. May your annotations be precise and your stories vivid.

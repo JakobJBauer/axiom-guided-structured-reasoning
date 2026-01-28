@@ -1,0 +1,64 @@
+Interviewer: Let's walk through this codebook together. First up — what does [attr-6] mean?
+
+Expert: A story is [attr-6] if The story starts with a adverb.
+
+Interviewer: Simple enough. How about [attr-7]?
+
+Expert: A story is [attr-7] if The story is classic.
+
+Interviewer: And [attr-4]?
+
+Expert: A story is [attr-4] if The story has more than 375 words.
+
+Interviewer: Got it. Now the topical nodes — what about [attr-9]?
+
+Expert: A story is [attr-9] if The story is about giant creatures.
+
+Interviewer: And [attr-8]?
+
+Expert: A story is [attr-8] if The story has the theme Deception.
+
+Interviewer: One more basic topic: [attr-10]?
+
+Expert: A story is [attr-10] if The story is about hidden treasures.
+
+Interviewer: Okay, moving to the compound categories. Explain [attr-1] for me.
+
+Expert: A story is [attr-1] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-9]
+- The story is not [attr-7]
+
+Interviewer: So [attr-1] requires all three conditions, including that it must not be classic. Clear. Next: [attr-5]. That one looked a bit nested — can you unpack it?
+
+Expert: Sure. A story is [attr-5] if both of the following are true:
+- The story is [attr-8]
+- The story is [attr-10]
+- Either of the following is true:
+  - The story is [attr-6]
+  - The story is not [attr-7]
+
+Interviewer: I notice you said "both of the following are true" and then listed three top-level items, where the third is an Either. That's intentional — it means the two required truths include that the story fits both THEME-DECEPTION and TOPIC-HIDDEN-TREASURES, and additionally one of those two sub-conditions under the Either must hold. Right?
+
+Expert: Correct. The structure is preserved exactly: the node requires the first two listed conditions and also that one of the two alternatives under the Either holds.
+
+Interviewer: Thanks — that helps. Now [attr-3]?
+
+Expert: A story is [attr-3] if exactly one of the following is true:
+- The story is [attr-1]
+- The story is [attr-5]
+
+Interviewer: So [attr-3] is exclusive OR between those two. Clear. Finally, explain [attr-2].
+
+Expert: A story is [attr-2] if all of the following are true:
+- The story is [attr-3]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-4]
+- The story is not [attr-6]
+
+Interviewer: So to be a [attr-2], a story must be a [attr-3], must either be classic or long, and must not start with an adverb. Makes sense.
+
+Expert: Exactly — and throughout, all node IDs and logical relationships remain as specified: the atomic definitions, the And/All constructs, the Either/Or choices, the Not conditions, and the exclusive condition for [attr-3] are preserved in their original form.
+
+Interviewer: Great — thanks for walking through each node. That transcript keeps the logic intact and makes the codebook easier to follow.

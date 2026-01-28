@@ -1,0 +1,44 @@
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if it begins with an adverb.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if the story is classic.
+
+[LONG-STORY]
+A story is [LONG-STORY] if it has more than 375 words.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if it’s about giant creatures.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if its theme is Deception.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if it’s about hidden treasures.
+
+[AMPHIBIOUS-EPIC]
+A story is [AMPHIBIOUS-EPIC] if all of the following are true:
+- The story is [LONG-STORY]
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is not [STYLE-CLASSIC]
+
+[MISLEADING-QUEST]
+A story is [MISLEADING-QUEST] if both of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is [TOPIC-HIDDEN-TREASURES]
+- Either of the following is true:
+  - The story is [STARTS-WITH-ADVERB]
+  - The story is not [STYLE-CLASSIC]
+
+[HYBRID-TALE]
+A story is [HYBRID-TALE] if exactly one of the following is true:
+- The story is [AMPHIBIOUS-EPIC]
+- The story is [MISLEADING-QUEST]
+
+[COMPLEX-ARTIFACT]
+A story is [COMPLEX-ARTIFACT] if all of the following are true:
+- The story is [HYBRID-TALE]
+- Either of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [LONG-STORY]
+- The story is not [STARTS-WITH-ADVERB]

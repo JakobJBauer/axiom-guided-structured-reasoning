@@ -1,0 +1,116 @@
+{
+  "nodes": [
+    {
+      "id": "attr-7",
+      "label": "Conditional mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-8",
+      "label": "Perfect aspect",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Deception theme",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Cliffhanger ending",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Deception, not cliffhanger, and (conditional or perfect)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-6",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "attr-5"
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-7",
+            "attr-8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Either perfect or conditional, but not both",
+      "formula_type": "Xor",
+      "formula_args": [
+        "attr-8",
+        "attr-7"
+      ]
+    },
+    {
+      "id": "attr-1",
+      "label": "Complex deception: attr-4 and (attr-2 or not attr-5)",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-4",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-2",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-5"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-6",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-4"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-1"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-1"
+    }
+  ]
+}

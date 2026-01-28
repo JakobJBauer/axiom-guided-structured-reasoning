@@ -1,0 +1,35 @@
+Interviewer: Let's go through the codebook entries one by one. First, what do we mean by [attr-4]?
+
+Expert: A story is [attr-4] if the story is about seasonal changes.
+
+Interviewer: Clear. Next, how about [attr-7]?
+
+Expert: A story is [attr-7] if the story uses wh-questions.
+
+Interviewer: And [attr-2] — what does that specify?
+
+Expert: A story is [attr-2] if the story starts with a noun.
+
+Interviewer: Moving on, what does [attr-3] cover?
+
+Expert: A story is [attr-3] if the story is about cultural traditions.
+
+Interviewer: And [attr-5]?
+
+Expert: A story is [attr-5] if the story is about time travel.
+
+Interviewer: Now, there are a couple of composite labels. Explain [attr-1].
+
+Expert: A story is [attr-1] if both of the following are true:
+- The story is [attr-4]
+- The story is [attr-7]
+
+Interviewer: So to annotate [attr-1], both conditions must hold — it has to be about seasonal changes and it has to use wh-questions. Understood. What about the other composite, [attr-6]?
+
+Expert: A story is [attr-6] if either of the following is true:
+- The story is [attr-3]
+- The story is [attr-5]
+
+Interviewer: That means if a story is about cultural traditions or about time travel (one or the other, or both), it qualifies as [attr-6]. Anything else to note?
+
+Expert: No changes to the labels or logic—these are the exact annotation rules. Use the bracketed node IDs as-is and apply the "both" and "either" conditions exactly as stated when deciding annotations.

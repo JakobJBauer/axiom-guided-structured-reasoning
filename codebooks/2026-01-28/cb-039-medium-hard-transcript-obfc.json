@@ -1,0 +1,216 @@
+{
+  "nodes": [
+    {
+      "id": "attr-11",
+      "label": "Theme: Deception",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-12",
+      "label": "Theme: Helping Others",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-9",
+      "label": "Philosophical",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-3",
+      "label": "Has Checkhov's gun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-7",
+      "label": "Starts with a noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-13",
+      "label": "About hidden treasures",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-10",
+      "label": "Theme: Agency",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Starts with an adjective",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Has juxtaposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Either starts-with noun OR (starts-with adjective xor starts-with noun)",
+      "formula_type": "Or",
+      "formula_args": [
+        "attr-7",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-6",
+            "attr-7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-8",
+      "label": "attr-5 AND (deception+hidden-treasures OR (checkhov xor agency) OR (deception AND NOT agency))",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-5",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-11",
+                "attr-13"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                {
+                  "formula_type": "Xor",
+                  "formula_args": [
+                    "attr-3",
+                    "attr-10"
+                  ]
+                },
+                {
+                  "formula_type": "And",
+                  "formula_args": [
+                    "attr-11",
+                    {
+                      "formula_type": "Not",
+                      "formula_args": [
+                        "attr-10"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-2",
+      "label": "Top-level composite (attr-8, not both attr-12 and attr-9, and either attr-4 or (attr-7=true and attr-6=false))",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-8",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "attr-12",
+                "attr-9"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "attr-4",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                {
+                  "formula_type": "Equal",
+                  "formula_args": [
+                    "attr-7",
+                    true
+                  ]
+                },
+                {
+                  "formula_type": "Equal",
+                  "formula_args": [
+                    "attr-6",
+                    false
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-7",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-5"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-11",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-13",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-3",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-10",
+      "target": "attr-8"
+    },
+    {
+      "source": "attr-8",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-12",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-9",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-2"
+    }
+  ]
+}

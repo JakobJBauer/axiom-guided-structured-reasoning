@@ -1,0 +1,31 @@
+Think of these labels as a small set of clear, practical tags you can apply when reading or annotating a story. I’ll name each label by its ID and then say, in plain language, the exact condition under which that label applies — keeping every logical relationship and ID exactly as they appear.
+
+[attr-7]
+A story is [attr-7] if The story uses perfect aspect.
+
+[attr-5]
+A story is [attr-5] if The story is about cultural traditions.
+
+[attr-6]
+A story is [attr-6] if The story is about the arts.
+
+[attr-4]
+A story is [attr-4] if The story is lighthearted.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-6]
+- The story is [attr-5]
+
+[attr-3]
+A story is [attr-3] if all of the following are true:
+- The story is [attr-1]
+- The story is [attr-7]
+- The story is not [attr-4]
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-1]
+- The story is [attr-4]
+
+That’s it — concise labels, each tied to precise conditions. Use them as a checklist when you annotate: check the simple tags first ([attr-7], [TOPIC-*], [STYLE-*]), then derive the composite tags ([attr-1], [attr-3], [attr-2]) by following the listed logical requirements.

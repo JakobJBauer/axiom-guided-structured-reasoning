@@ -1,0 +1,57 @@
+Imagine a library where each label is a little flag waving over a tale — each tells you exactly what to expect. I’ll walk you through those flags like characters in a story, keeping every rule of their relationships intact so you can use them to annotate and reason with confidence.
+
+- [attr-8]
+  In this catalog, a story earns the flag [attr-8] whenever it carries the theme Growth.
+
+- [attr-9]
+  A tale bears the banner [attr-9] if its heart is about Helping Others.
+
+- [attr-5]
+  The label [attr-5] is given to any story that opens with an adverb — that first word sets the scene and takes the lead.
+
+- [attr-7]
+  When a story feels contemporary in voice or form, we mark it as [attr-7].
+
+- [attr-11]
+  If a story is about seasonal changes, it receives the tag [attr-11].
+
+- [attr-12]
+  The label [attr-12] belongs to stories that use the perfect aspect in their verb forms.
+
+- [attr-3]
+  We call a story [attr-3] when its readability score falls below 86.4.
+
+- [attr-6]
+  A story is [attr-6] if it aligns with a classic style.
+
+- [attr-10]
+  The tag [attr-10] is reserved for stories about mystical creatures.
+
+- [attr-2]
+  A story is [attr-2] when its readability score rises above 96.1.
+
+Now meet the composite characters — labels that are born from combinations of those simpler traits. Their identities are strict; they follow precise rules. I’ll tell you the rules like plot twists, but I won’t change the logic.
+
+- [attr-4]
+  A story is [attr-4] if all of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-8]
+  - The story is not [attr-10]
+  Think of [attr-4] as a tale rooted in the rhythms of the seasons and centered on personal or natural growth — but explicitly excluding anything about mystical creatures.
+
+- [attr-1]
+  A story is [attr-1] if either of the following is true:
+  - both of the following are true:
+    - The story is [attr-4]
+    - The story is [attr-9]
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [attr-7]
+      - The story is not [attr-3]
+    - both of the following are true:
+      - The story is [attr-6]
+      - both of the following are true:
+        - The story is [attr-12]
+        - The story is [attr-2]
+
+Read this like a set of storytelling laws: a [attr-1] can arrive in one of three main ways — as a seasonal-growth tale that also helps others, or as a modern piece that remains readable, or as a classic whose perfected verbs and high readability make it shine. Each path follows the exact logical structure above; the relationships and node IDs remain unchanged so you can apply them directly in annotation and reasoning.

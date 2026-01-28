@@ -1,0 +1,146 @@
+{
+  "nodes": [
+    {
+      "id": "has-a-moral-lesson",
+      "label": "HAS-A-MORAL-LESSON",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "many-paragraphs",
+      "label": "MANY-PARAGRAPHS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "STARTS-WITH-ADVERB",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-circular-narrative-struct",
+      "label": "HAS-CIRCULAR-NARRATIVE-STRUCT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-perfect-aspect",
+      "label": "USES-PERFECT-ASPECT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-superlative-forms",
+      "label": "USES-SUPERLATIVE-FORMS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "stylistic-choice",
+      "label": "STYLISTIC-CHOICE",
+      "formula_type": "And",
+      "formula_args": [
+        "starts-with-adverb",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "uses-perfect-aspect",
+            "uses-superlative-forms"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "narrative-type",
+      "label": "NARRATIVE-TYPE",
+      "formula_type": "Or",
+      "formula_args": [
+        "has-circular-narrative-struct",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "has-circular-narrative-struct"
+              ]
+            },
+            "many-paragraphs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moral-or-long",
+      "label": "MORAL-OR-LONG",
+      "formula_type": "Xor",
+      "formula_args": [
+        "has-a-moral-lesson",
+        "many-paragraphs"
+      ]
+    },
+    {
+      "id": "complexity-high",
+      "label": "COMPLEXITY-HIGH",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "stylistic-choice",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "moral-or-long"
+              ]
+            }
+          ]
+        },
+        "narrative-type"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "has-a-moral-lesson",
+      "target": "moral-or-long"
+    },
+    {
+      "source": "many-paragraphs",
+      "target": "moral-or-long"
+    },
+    {
+      "source": "starts-with-adverb",
+      "target": "stylistic-choice"
+    },
+    {
+      "source": "uses-perfect-aspect",
+      "target": "stylistic-choice"
+    },
+    {
+      "source": "uses-superlative-forms",
+      "target": "stylistic-choice"
+    },
+    {
+      "source": "has-circular-narrative-struct",
+      "target": "narrative-type"
+    },
+    {
+      "source": "many-paragraphs",
+      "target": "narrative-type"
+    },
+    {
+      "source": "stylistic-choice",
+      "target": "complexity-high"
+    },
+    {
+      "source": "moral-or-long",
+      "target": "complexity-high"
+    },
+    {
+      "source": "narrative-type",
+      "target": "complexity-high"
+    }
+  ]
+}

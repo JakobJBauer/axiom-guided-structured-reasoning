@@ -1,0 +1,68 @@
+Interviewer: Let's walk through this codebook together. Can you start with the simplest entries?
+
+Expert: Sure. I'll read the formal line and then explain it in plain terms.
+
+Expert: [attr-2]
+- Formal: A story is [attr-2] if The story has a flashback
+- Explanation: That one is straightforward — if the story contains a flashback, you mark it as [attr-2].
+
+Interviewer: And the next two?
+
+Expert: Yes.
+
+Expert: [attr-6]
+- Formal: A story is [attr-6] if The story uses wh-questions
+- Explanation: Mark [attr-6] when the narrative includes wh-questions (who, what, where, when, why, how).
+
+Expert: [attr-5]
+- Formal: A story is [attr-5] if The story uses discourse markers
+- Explanation: Use [attr-5] when the story employs discourse markers — words or phrases that organize or connect the flow of the text (for example transitions, signpost words, and similar devices).
+
+Interviewer: Now the codebook defines [attr-3]. How should we read that?
+
+Expert: Read exactly as written, then I'll unpack it.
+
+Expert: [attr-3]
+- Formal: A story is [attr-3] if exactly one of the following is true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- Explanation: This says [attr-3] holds when exactly one of those two conditions is true — that is, the story either uses wh-questions or uses discourse markers, but not both. (The phrase "exactly one" enforces that exclusivity.)
+
+Interviewer: Got it. How about [attr-1]?
+
+Expert: Again, here's the formal definition first.
+
+Expert: [attr-1]
+- Formal: A story is [attr-1] if both of the following are true:
+  - The story is [attr-2]
+  - The story is not [attr-3]
+- Explanation: So to classify a story as [attr-1], two things must hold at the same time: it must have a flashback, and it must not satisfy the [attr-3] condition. In other words, a flashback plus the absence of that exclusive-interaction pattern equals [attr-1].
+
+Interviewer: And the last node, [attr-4]?
+
+Expert: Yes — here's the formal entry and then a plain-language reading.
+
+Expert: [attr-4]
+- Formal: A story is [attr-4] if either of the following is true:
+  - The story is in the set { [attr-3], [attr-1] }
+  - The story is equal to [attr-2]
+- Explanation: This declares that a story is a [attr-4] if at least one of these holds: it belongs to the set containing [attr-3] or [attr-1], or it is exactly [attr-2]. Practically, that means any story that is interactive or complex-narrative qualifies, and any story that is simply marked [attr-2] also qualifies. (The formal bullets are preserved verbatim to keep the logic explicit.)
+
+Interviewer: To be clear — you preserved all the exact relationships and logical words like "exactly one," "both," "not," and "either," right?
+
+Expert: Absolutely. The node IDs are unchanged ([attr-2], [attr-6], [attr-5], [attr-3], [attr-1], [attr-4]), and the logical structure is preserved exactly as written:
+- [attr-3] uses "exactly one" between [attr-6] and [attr-5].
+- [attr-1] requires both [attr-2] and "The story is not [attr-3]".
+- [attr-4] uses "either of the following is true" with one bullet being the set { [attr-3], [attr-1] } and the other being equality with [attr-2].
+
+Interviewer: Any practical tips for annotators using this codebook?
+
+Expert: Yes — when you mark stories:
+- First note whether there's a flashback: that determines [attr-2].
+- Then check for wh-questions and discourse markers. Use the "exactly one" rule to decide [attr-3].
+- Apply the "both" plus "not" rule for [attr-1].
+- Finally, use the two bullets under [attr-4] — membership in { [attr-3], [attr-1] } or equality to [attr-2] — to decide [attr-4].
+
+Interviewer: Thanks — that keeps the logical flow clear while making the rules easy to follow.
+
+Expert: You're welcome. The formal statements are preserved verbatim in each node; the Q&A just aims to make them easier to apply in practice.

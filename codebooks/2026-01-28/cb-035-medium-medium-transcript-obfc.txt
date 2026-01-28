@@ -1,0 +1,53 @@
+Interviewer: Let's walk through this codebook together. First, what does [attr-5] mean?
+
+Expert: A story is [attr-5] if the story is minimalist.
+
+Interviewer: Got it. And [attr-4]?
+
+Expert: A story is [attr-4] if the story has readability score above 96.1.
+
+Interviewer: How about [attr-10]?
+
+Expert: A story is [attr-10] if the story uses superlative forms.
+
+Interviewer: What does [attr-7] indicate?
+
+Expert: A story is [attr-7] if the story has the theme Growth.
+
+Interviewer: And topics — what does [attr-9] cover?
+
+Expert: A story is [attr-9] if the story is about time travel.
+
+Interviewer: What about [attr-8]?
+
+Expert: A story is [attr-8] if the story is about hidden treasures.
+
+Interviewer: Now the composite categories — explain [attr-1], please.
+
+Expert: Sure. A story is [attr-1] if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-4]
+
+Interviewer: So [attr-1] needs both minimalist style and high readability. Makes sense. What about [attr-3]?
+
+Expert: A story is [attr-3] if both of the following are true:
+- The story is [attr-10]
+- The story is not [attr-5]
+
+Interviewer: Important detail — it requires superlatives and explicitly not being minimalist. Understood. Tell me about [attr-6].
+
+Expert: A story is [attr-6] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - The story is [attr-9]
+  - The story is [attr-8]
+
+Interviewer: So [attr-6] combines the Growth theme with either time travel or hidden treasures as a topic. Clear. Finally, what defines [attr-2]?
+
+Expert: A story is [attr-2] if both of the following are true:
+- The story is [attr-1]
+- Either of the following is true:
+  - The story is [attr-3]
+  - The story is [attr-6]
+
+Interviewer: Perfect — [attr-2] needs clear and concise plus either emphatic language or a growth-themed arc (with the specified topics). Thanks — that preserves all nodes and logical relationships while making the rules easy to ask about and follow.

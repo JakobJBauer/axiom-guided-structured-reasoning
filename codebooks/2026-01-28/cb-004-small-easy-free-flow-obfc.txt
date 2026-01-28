@@ -1,0 +1,23 @@
+Think of this as a friendly guide to the labels you’ll use when annotating stories — short, clear rules that still say exactly the same thing as the original codebook, but in a more natural tone.
+
+A story is [attr-4] if the story is about seasonal changes. In plain terms: whenever a story focuses on how the seasons shift — spring to summer, winter to fall, changes in weather or nature tied to seasons — it gets the [attr-4] tag.
+
+A story is [attr-7] if the story uses wh-questions. That means if the text contains questions beginning with who, what, when, where, why, or how, it should be marked [attr-7].
+
+A story is [attr-2] if the story starts with a noun. If the very first word of the story is a noun, apply the [attr-2] label.
+
+A story is [attr-3] if the story is about cultural traditions. When the narrative explores rituals, ceremonies, customs, or practices tied to a community or culture, use [attr-3].
+
+A story is [attr-5] if the story is about time travel. Any plot that involves moving between different points in time — traveling to the past or future — falls under [attr-5].
+
+A story is [attr-1] if both of the following are true:
+- The story is [attr-4]
+- The story is [attr-7]
+In other words, tag a story [attr-1] only when it is about seasonal changes and it also uses wh-questions.
+
+A story is [attr-6] if either of the following is true:
+- The story is [attr-3]
+- The story is [attr-5]
+So, apply [attr-6] when the story deals with cultural traditions or when it’s about time travel — one or the other (or both) is enough.
+
+That’s the whole set — compact, conversational, and sticking exactly to the same logical relationships and node IDs as before.

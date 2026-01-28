@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "id": "attr-7",
+      "label": "Marks stories whose central theme is helping others.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-6",
+      "label": "Marks stories written in a philosophical style or that emphasize philosophical reflection.",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-4",
+      "label": "Marks stories that present a classic style (traditional conventions, period cadence, or classic storytelling approach).",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-1",
+      "label": "Marks stories that explicitly use juxtaposition (contrasting elements placed together for effect).",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-5",
+      "label": "Marks stories that present a modern style (contemporary techniques, modern voice, or modernist sensibilities).",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "attr-2",
+      "label": "Identifies stories that combine juxtaposition with exactly one of the classic/modern styles (but not both).",
+      "formula_type": "And",
+      "formula_args": [
+        "attr-1",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "attr-4",
+            "attr-5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attr-3",
+      "label": "Flags stories with a philosophical treatment and a helping-others theme, with special handling when mixed-style juxtaposition is present.",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-6",
+            "attr-7",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-2"
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "attr-2",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "attr-7"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "attr-1",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-4",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-5",
+      "target": "attr-2"
+    },
+    {
+      "source": "attr-6",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-7",
+      "target": "attr-3"
+    },
+    {
+      "source": "attr-2",
+      "target": "attr-3"
+    }
+  ]
+}

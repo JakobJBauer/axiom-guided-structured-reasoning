@@ -1,0 +1,64 @@
+In a sunlit conservatory of symbols and meanings, this little codebook blooms like a carefully tended rosebush — each node a petal, each relation a tendril connecting one to another. Below, every entry whispers its purpose in a more ornate tongue, while faithfully preserving the exact logical architecture that gardeners of annotation rely upon. The node identifiers remain as carved stone markers, unchanged and held in brackets, and the logical scaffolding stands firm and clear.
+
+[attr-4]
+A story is [attr-4] if the story begins with an adjective.  
+Imagine the tale opening with a single descriptive word — a shimmering adjective like "lonely," "golden," or "ancient" — that sets the tone at the threshold. This node marks that first fragrant syllable as the defining signal.
+
+[attr-5]
+A story is [attr-5] if the story starts with a noun.  
+Think of the narrative door thrown open by a concrete name — "city," "cat," "map" — a solid anchor that greets the reader. This node records the story whose opening breath is a noun.
+
+[attr-8]
+A story is [attr-8] if the story is lighthearted.  
+This emblem captures tales that skip and hum, whose tenor is buoyant and easy, like a breeze that lifts a ribbon. It clasps those narratives suffused with warmth, play, and an absence of weighty gloom.
+
+[attr-9]
+A story is [attr-9] if the story is surreal.  
+Here lies the badge for dreams made prose — those stories in which the ordinary bends and melts into astonishing, often dreamlike images. This node heralds the uncanny and the imaginatively untethered.
+
+[attr-7]
+A story is [attr-7] if the story is humorous.  
+This marker crowns tales that provoke laughter or wry amusement, narratives woven with comedic thread, ironic turns, and a delight in the absurd that aims to make the reader smile.
+
+[attr-11]
+A story is [attr-11] if the story has the theme Problem-Solving.  
+This node embraces stories whose hearts beat to the rhythm of puzzles and resolutions — characters confronting riddles, obstacles, or mysteries and steering toward solutions.
+
+[attr-10]
+A story is [attr-10] if the story has the theme Deception.  
+This signet denotes narratives threaded with trickery, falsehoods, misdirection, or secrets — plots where truth is masked and appearances can mislead.
+
+[attr-3]
+A story is [attr-3] if exactly one of the following is true:
+- The story is [attr-4]
+- The story is [attr-5]  
+Envision a fork in the path at the very first word: this node captures the exclusive choice between beginning with an adjective or beginning with a noun — one and only one must be the case.
+
+[attr-12]
+A story is [attr-12] if either of the following is true:
+- The story's style is in the set { [attr-8], [attr-7] }
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is not [attr-10]  
+This node gathers tales that wear a light, mischievous hat. Either they are plainly lighthearted or humorous, or they drift into surreal playfulness — but only so long as they are not knitted with deception. It distinguishes genuine play from trickery.
+
+[attr-2]
+A story is [attr-2] if either of the following is true:
+- The story is [attr-10]
+- The story is [attr-11]  
+This node groups together narratives whose engines are either cunning misdirection or the patient labor of solving problems — two flavors of dramatic drive that often push a plot forward.
+
+[attr-6]
+A story is [attr-6] if the following equality holds:
+- [attr-8] = [attr-7]  
+Here is a crisp equality, a mirror placed between two stylistic labels: this node is true only if being lighthearted and being humorous are the same for the story in question.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-3]
+- Exactly one of the following is true:
+  - The story is [attr-12]
+  - The story is [attr-2]  
+At last, the most intricate bloom: a complex story requires the precise starting condition (either adjective or noun, exclusively) and then, like two petals that must not both open, it must satisfy exactly one of these two states — a playful tone, or a narrative driven by deception or problem-solving. It balances structure and thematic thrust to earn this designation.
+
+Thus, with each lyrical description above, the underlying logical skeleton remains untouched — the same nodes in the same relationships — while the language has been encouraged to sing a little more brightly for those who tend the garden of annotation.

@@ -1,0 +1,43 @@
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if The story starts with a preposition
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if The story has the theme Deception
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if The story is playful
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others
+
+[THEME-AGENCY]
+A story is [THEME-AGENCY] if The story has the theme Agency
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if The story has juxtaposition
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if The story is philosophical
+
+[RICH-THEME]
+A story is [RICH-THEME] if either of the following is true:
+- The story is both [THEME-DECEPTION] and not [THEME-HELPING-OTHERS]
+- Exactly one of the following is true:
+  - The story is [THEME-AGENCY]
+  - The story is [THEME-HELPING-OTHERS]
+
+[COMPLEX-CLASSIC-ARC]
+A story is [COMPLEX-CLASSIC-ARC] if both of the following are true:
+- The story is [STYLE-CLASSIC]
+- Either of the following is true:
+  - The story is both [HAS-A-CLIFFHANGER] and not [STYLE-PLAYFUL]
+  - The story is both [STARTS-WITH-PREPOSITION] and [RICH-THEME]

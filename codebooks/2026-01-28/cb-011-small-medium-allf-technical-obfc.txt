@@ -1,0 +1,33 @@
+[attr-6]
+A story is [attr-6] if the story’s principal subject matter concerns the arts (e.g., visual arts, music, theater, dance, literature).
+
+[attr-7]
+A story is [attr-7] if the narrative employs the conditional mood in its verbal or grammatical constructions.
+
+[attr-4]
+A story is [attr-4] if the first lexical token of the story is an adjective.
+
+[attr-5]
+A story is [attr-5] if the story’s style exhibits philosophical content or discourse (e.g., abstract argumentation, metaphysical reflection, ethical inquiry).
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-7]
+- The story is not [attr-4]
+
+[attr-1]
+A story is [attr-1] if exactly one of the following is true:
+- The story is [attr-6]
+- The story is [attr-5]
+
+[attr-2]
+A story is [attr-2] if either of the following conditions holds:
+- The story is [attr-3]
+- Both of the following are true:
+  - The story is in the set of topics that includes [attr-6]
+  - The truth of [attr-5] is equal to the truth of not [attr-7]
+
+Notes on semantics:
+- Each clause above defines a binary predicate on the space of candidate stories; a story satisfies a node when the node’s condition holds.
+- Logical connectives and quantification are propositional and local to the definitions (e.g., “both of the following are true” denotes logical conjunction; “exactly one” denotes exclusive disjunction).
+- The final conjunct in [attr-2] asserts equality of truth values between the proposition [attr-5] and the negation of [attr-7].

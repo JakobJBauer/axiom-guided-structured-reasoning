@@ -1,0 +1,60 @@
+[attr-2]
+Definition: A story is classified as [attr-2] if, and only if, its computed readability score is below 86.4.
+Operational note: The readability metric referenced is the numeric score produced by the chosen readability algorithm; the threshold is strictly < 86.4.
+
+[attr-11]
+Definition: A story is classified as [attr-11] if its primary subject matter concerns time travel.
+
+[attr-10]
+Definition: A story is classified as [attr-10] if its primary subject matter concerns seasonal changes.
+
+[attr-12]
+Definition: A story is classified as [attr-12] if it contains discourse markers (e.g., transitional phrases, connective adverbs) as identifiable linguistic elements.
+
+[attr-4]
+Definition: A story is classified as [attr-4] if its first lexical token is an adjective.
+
+[attr-9]
+Definition: A story is classified as [attr-9] if its primary subject matter concerns hidden treasures.
+
+[attr-7]
+Definition: A story is classified as [attr-7] if deception is a central thematic element within the narrative.
+
+[attr-8]
+Definition: A story is classified as [attr-8] if helping others is a central thematic element within the narrative.
+
+[attr-6]
+Definition: A story is classified as [attr-6] if its first lexical token is a preposition.
+
+[attr-5]
+Definition: A story is classified as [attr-5] if its first lexical token is an adverb.
+
+[attr-3]
+Definition: A story is classified as [attr-3] if and only if one of the following structural conditions holds:
+- Exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+- Both of the following are true:
+  - The story is [attr-12]
+  - Either of the following is true:
+    - The story is [attr-2]
+    - The story is [attr-6]
+
+Interpretation: This node encodes an exclusive-or condition on sentence-initial part-of-speech OR a conjunction that requires presence of discourse markers plus either low readability or a prepositional start.
+
+[attr-1]
+Definition: A story is classified as [attr-1] if and only if both of the following top-level conditions are satisfied:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-11]
+    - Exactly one of the following is true:
+      - The story is [attr-7]
+      - The story is [attr-8]
+  - Both of the following are true:
+    - The story is [attr-10]
+    - Both of the following are true:
+      - The story is [attr-9]
+      - The story is not [attr-11]
+- The story is [attr-3]
+
+Interpretation: This composite node requires the narrative surface conditions to hold and, in addition, requires either a time-travel topic with an exclusive thematic choice between deception and helping-others, or a seasonal-changes topic that co-occurs with hidden-treasures while explicitly excluding time-travel.

@@ -1,0 +1,192 @@
+Here’s a friendlier, more conversational take on the same codebook—same logic, same node IDs, just written to read more smoothly. I’ve kept every ID exactly as written and preserved every logical connective (Not, And, Or, exactly one, all, either, both, etc.), so you can use this for annotation and reasoning without changing the underlying structure.
+
+[attr-30]
+Think of a story as [attr-30] whenever it carries the theme Growth.
+
+[attr-22]
+Label a story [attr-22] if it’s humorous in tone.
+
+[attr-32]
+Call a story [attr-32] when its central theme is Helping Others.
+
+[attr-21]
+A story is [attr-21] if it literally starts with a preposition.
+
+[attr-25]
+Use [attr-25] for a story that feels modern.
+
+[attr-48]
+Tag a story [attr-48] when it employs the perfect aspect.
+
+[attr-23]
+If a story keeps things breezy and upbeat, it’s [attr-23].
+
+[attr-29]
+When the theme is Deception, mark the story as [attr-29].
+
+[attr-35]
+If Kindness is a theme, the story is [attr-35].
+
+[attr-50]
+A story is [attr-50] if it makes use of wh-questions.
+
+[attr-42]
+When the subject is lost civilizations, that’s [attr-42].
+
+[attr-46]
+Stories about time travel should be marked [attr-46].
+
+[attr-6]
+A story is [attr-6] when it contains a Chekhov’s gun—an element introduced earlier that becomes important later.
+
+[attr-4]
+Label a story [attr-4] if it conveys a moral lesson.
+
+[attr-31]
+If the narrative centers on Hardship, it’s [attr-31].
+
+[attr-11]
+Use [attr-11] for any story with more than 375 words.
+
+[attr-45]
+When a story deals with seasonal changes, it’s [attr-45].
+
+[attr-2]
+A story is [attr-2] if it ends on a cliffhanger.
+
+[attr-37]
+If Problem-Solving is a theme, tag it [attr-37].
+
+[attr-34]
+When Innovation is a theme, the story is [attr-34].
+
+[attr-36]
+Mark a story [attr-36] when Magic figures into its themes.
+
+[attr-7]
+A story is [attr-7] if its narrative structure is circular.
+
+[attr-41]
+Stories about giant creatures should be labeled [attr-41].
+
+[attr-47]
+If a story uses discourse markers (those little connectors that guide readers), it’s [attr-47].
+
+[attr-26]
+For a reflective, philosophical tone, use [attr-26].
+
+[attr-19]
+A story is [attr-19] if it begins with an adverb.
+
+[attr-40]
+When cultural traditions are the focus, mark it [attr-40].
+
+[attr-3]
+If the story contains a flashback, it’s [attr-3].
+
+[attr-8]
+A story is [attr-8] if its readability score is above 96.1.
+
+[attr-24]
+When a story embraces minimalism, label it [attr-24].
+
+[attr-49]
+A story is [attr-49] if it employs superlative forms.
+
+[attr-43]
+If the setting or subject is magical lands, that’s [attr-43].
+
+[attr-5]
+Mark the story [attr-5] when it contains a nested tale—a story within the main story.
+
+[attr-27]
+When the style is dreamlike or surreal, use [attr-27].
+
+[attr-20]
+A story is [attr-20] if its first word is a noun.
+
+[attr-39]
+Use [attr-39] for stories about bygone eras.
+
+[attr-12]
+A story is [attr-12] if its readability score is below 86.4.
+
+[attr-33]
+If Humor is a central theme, mark the story [attr-33].
+
+[attr-44]
+When mystical creatures are the topic, tag it [attr-44].
+
+[attr-9]
+A story is [attr-9] if both of the following are true:
+- The story is [attr-22]
+- The story is [attr-23]
+
+[attr-14]
+A story is [attr-14] if either of the following is true:
+- The story is [attr-25]
+- both of the following are true:
+  - The story is [attr-26]
+  - The story is [attr-27]
+
+[attr-18]
+A story is [attr-18] if exactly one of the following is true:
+- The story is [attr-8]
+- The story is [attr-12]
+
+[attr-16]
+A story is [attr-16] if all of the following are true:
+- The story is [attr-5]
+- The story is [attr-3]
+- The story is [attr-7]
+
+[attr-28]
+A story is [attr-28] if both of the following are true:
+- The story is [attr-32]
+- The story is [attr-35]
+
+[attr-13]
+A story is [attr-13] if both of the following are true:
+- The story is [attr-43]
+- either of the following is true:
+  - The story is [attr-44]
+  - The story is [attr-41]
+
+[attr-38]
+A story is [attr-38] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-46]
+  - The story is [attr-42]
+- The story is [attr-39]
+
+[attr-15]
+A story is [attr-15] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-35]
+- The story is not [attr-29]
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- The story is [attr-34]
+- The story is [attr-37]
+
+[attr-17]
+A story is [attr-17] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-2]
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- all of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-15]
+  - either of the following is true:
+    - The story is [attr-16]
+    - The story is [attr-17]
+- exactly one of the following is true:
+  - both of the following are true:
+    - The story is [attr-13]
+    - The story is not [attr-24]
+  - The story is [attr-38]
+
+That’s it—same formal logic, easier phrasing. If you want, I can format this as a compact reference sheet, or expand any definition with examples to aid annotation.

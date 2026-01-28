@@ -1,0 +1,82 @@
+Codebook — Structured definitions for story labels
+
+Notes for annotators
+- All node IDs are shown in [attr-1] format exactly as required.
+- Logical relations (Not, And, Or, Exactly one, Either, Both) are preserved as written. Do not change these when applying labels.
+- Use the definitions below to decide whether a story satisfies each node.
+
+1) Simple (atomic) labels
+- [attr-5]
+  - Definition: A story is [attr-5] if the story has more than 6 paragraphs.
+  - Quick check: Count paragraph breaks; label when > 6.
+
+- [attr-8]
+  - Definition: A story is [attr-8] if the story is classic.
+  - Quick check: Use your sense of "classic" style (conventional structure, tone, or genre conventions).
+
+- [attr-3]
+  - Definition: A story is [attr-3] if the story has a cliffhanger.
+  - Quick check: The ending or a chapter leaves a major unresolved tension.
+
+- [attr-7]
+  - Definition: A story is [attr-7] if the story starts with a preposition.
+  - Quick check: The very first word is a preposition (e.g., "In", "On", "At", "By", etc.).
+
+- [attr-12]
+  - Definition: A story is [attr-12] if the story has the theme Deception.
+  - Quick check: Central plot or characters revolve around lying, trickery, or betrayal.
+
+- [attr-10]
+  - Definition: A story is [attr-10] if the story is playful.
+  - Quick check: Tone is light, whimsical, or mischievous.
+
+- [attr-13]
+  - Definition: A story is [attr-13] if the story has the theme Helping Others.
+  - Quick check: Core motivation or actions emphasize assistance, altruism, or rescue.
+
+- [attr-11]
+  - Definition: A story is [attr-11] if the story has the theme Agency.
+  - Quick check: Characters take independent action; focus on choice and control.
+
+- [attr-4]
+  - Definition: A story is [attr-4] if the story has juxtaposition.
+  - Quick check: Contrasting elements are placed side-by-side for effect.
+
+- [attr-9]
+  - Definition: A story is [attr-9] if the story is philosophical.
+  - Quick check: Reflective, idea-driven tone, exploring questions about meaning or existence.
+
+2) Compound labels (preserve logical structure exactly)
+- [attr-6]
+  - Definition: A story is [attr-6] if either of the following is true:
+    - The story is both [attr-12] and not [attr-13]
+    - Exactly one of the following is true:
+      - The story is [attr-11]
+      - The story is [attr-13]
+  - Interpretation tips:
+    - First branch: label [attr-6] when Deception is present and Helping Others is absent.
+    - Second branch (Exactly one): label [attr-6] when exactly one of Agency or Helping Others applies (i.e., XOR).
+
+- [attr-2]
+  - Definition: A story is [attr-2] if both of the following are true:
+    - The story is [attr-8]
+    - Either of the following is true:
+      - The story is both [attr-3] and not [attr-10]
+      - The story is both [attr-7] and [attr-6]
+  - Interpretation tips:
+    - First required condition: the story must be [attr-8].
+    - Second required condition: at least one of the two sub-conditions must hold:
+      - Sub-condition A: It has a cliffhanger and it is not playful.
+      - Sub-condition B: It begins with a preposition and meets [attr-6].
+
+3) Quick decision flow (how to think through annotations)
+- Step 1: Apply atomic labels (section 1) independently.
+- Step 2: Evaluate [attr-6]:
+  - If Deception present and Helping Others absent → [attr-6] = true.
+  - Else, if exactly one of Agency or Helping Others is true → [attr-6] = true.
+  - Otherwise → [attr-6] = false.
+- Step 3: Evaluate [attr-2]:
+  - If not [attr-8] → [attr-2] = false.
+  - If [attr-8] and either (Has cliffhanger and not playful) or (Starts with preposition and [attr-6]) → [attr-2] = true.
+
+End of codebook. Follow these structured definitions exactly when annotating.

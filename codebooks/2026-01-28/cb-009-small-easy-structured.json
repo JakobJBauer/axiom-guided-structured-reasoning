@@ -1,0 +1,86 @@
+{
+  "nodes": [
+    {
+      "id": "uses-superlative-forms",
+      "label": "USES-SUPERLATIVE-FORMS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-perfect-aspect",
+      "label": "USES-PERFECT-ASPECT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-lost-civilizations",
+      "label": "TOPIC-LOST-CIVILIZATIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-juxtaposition",
+      "label": "HAS-JUXTAPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "short-story",
+      "label": "SHORT-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "epically-concise-lost",
+      "label": "EPICALLY-CONCISE-LOST",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-lost-civilizations",
+        "short-story"
+      ]
+    },
+    {
+      "id": "ornate-reflective",
+      "label": "ORNATE-REFLECTIVE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "uses-superlative-forms",
+            "uses-perfect-aspect"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "uses-perfect-aspect",
+            "has-juxtaposition"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic-lost-civilizations",
+      "target": "epically-concise-lost"
+    },
+    {
+      "source": "short-story",
+      "target": "epically-concise-lost"
+    },
+    {
+      "source": "uses-superlative-forms",
+      "target": "ornate-reflective"
+    },
+    {
+      "source": "uses-perfect-aspect",
+      "target": "ornate-reflective"
+    },
+    {
+      "source": "has-juxtaposition",
+      "target": "ornate-reflective"
+    }
+  ]
+}

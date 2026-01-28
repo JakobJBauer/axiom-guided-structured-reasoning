@@ -1,0 +1,187 @@
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if the story starts with a adverb.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if the story has the theme Innovation.
+
+[THEME-HUMOR]
+A story is [THEME-HUMOR] if the story has the theme Humor.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if the story is classic.
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if the story is humorous.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if the story is modern.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if the story has a flashback.
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if the story has the theme Hardship.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if the story has a cliffhanger.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if the story is about lost civilizations.
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if the story is playful.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if the story has juxtaposition.
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if the story is about the arts.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if the story has the theme Magic.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if the story is minimalist.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+[LONG-STORY]
+A story is [LONG-STORY] if the story has more than 375 words.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if the story is about mystical creatures.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+[THEME-AGENCY]
+A story is [THEME-AGENCY] if the story has the theme Agency.
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] if the story is about magical lands.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if the story starts with a adjective.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if the story has the theme Kindness.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+[HAS-A-RED-HERRING]
+A story is [HAS-A-RED-HERRING] if the story has a Red Herring.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+[STYLE-SURREAL]
+A story is [STYLE-SURREAL] if the story is surreal.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is in [TOPIC-LOST-CIVILIZATIONS], [TOPIC-BYGONE-ERAS], [TOPIC-TIME-TRAVEL]
+      - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+    - either of the following is true:
+      - The story is [HAS-A-STORY-WITHIN-A-STORY]
+      - both of the following are true:
+        - The story is [HAS-A-FLASHBACK]
+        - It is not the case that both of the following are true:
+          - The story is [HAS-A-RED-HERRING]
+          - The story is [HAS-CHECKHOVS-GUN]
+  - both of the following are true:
+    - exactly one of the following is true:
+      - The story is [STYLE-CLASSIC]
+      - The story is [STYLE-MODERN]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [THEME-MAGIC]
+        - It is not the case that the story is [TOPIC-MYSTICAL-CREATURES]
+      - both of the following are true:
+        - The story is [THEME-PROBLEM-SOLVING]
+        - The story is [USES-DISCOURSE-MARKERS]
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [THEME-DECEPTION]
+      - It is not both of the following are true:
+        - The story is [THEME-KINDNESS]
+        - The story is [THEME-HELPING-OTHERS]
+    - The story is [HAS-A-RED-HERRING]
+  - either of the following is true:
+    - exactly one of the following is true:
+      - The story is [LONG-STORY]
+      - The story is [SHORT-STORY]
+    - both of the following are true:
+      - The story is [HAS-CHECKHOVS-GUN]
+      - It is not the case that the story is [HAS-A-CLIFFHANGER]

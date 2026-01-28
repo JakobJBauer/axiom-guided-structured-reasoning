@@ -1,0 +1,135 @@
+Interviewer: Let’s walk through this codebook like a conversation. I’ll ask about each label and you answer with the exact rule. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What does [attr-20] mean?
+
+Expert: A story is [attr-20] if The story is about time travel.
+
+Interviewer: And [attr-8]?
+
+Expert: A story is [attr-8] if The story starts with a adjective.
+
+Interviewer: How about [attr-21]?
+
+Expert: A story is [attr-21] if The story uses perfect aspect.
+
+Interviewer: Define [attr-13].
+
+Expert: A story is [attr-13] if The story is modern.
+
+Interviewer: What does [attr-6] capture?
+
+Expert: A story is [attr-6] if The story has readability score below 86.4.
+
+Interviewer: Tell me about [attr-19].
+
+Expert: A story is [attr-19] if The story is about the arts.
+
+Interviewer: And [attr-5]?
+
+Expert: A story is [attr-5] if The story has circular narrative structure.
+
+Interviewer: What about [attr-16]?
+
+Expert: A story is [attr-16] if The story is about cultural traditions.
+
+Interviewer: Define [attr-4].
+
+Expert: A story is [attr-4] if The story has a flashback.
+
+Interviewer: [attr-11], please.
+
+Expert: A story is [attr-11] if The story is humorous.
+
+Interviewer: And [attr-17]?
+
+Expert: A story is [attr-17] if The story is about magical lands.
+
+Interviewer: [attr-12]?
+
+Expert: A story is [attr-12] if The story is lighthearted.
+
+Interviewer: [attr-18]?
+
+Expert: A story is [attr-18] if The story is about mystical creatures.
+
+Interviewer: What’s [attr-15]?
+
+Expert: A story is [attr-15] if The story has the theme Problem-Solving.
+
+Interviewer: Now the first compound label: [attr-7]. How is that defined?
+
+Expert: A story is [attr-7] if both of the following are true:
+- The story is [attr-5]
+- Either of the following is true:
+  - The story is [attr-4]
+  - The story is not [attr-8]
+
+Interviewer: Clear. Next, [attr-10]?
+
+Expert: A story is [attr-10] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-12]
+- Either of the following is true:
+  - The story is [attr-13]
+  - The story is not [attr-6]
+
+Interviewer: Thanks. Explain [attr-1].
+
+Expert: A story is [attr-1] if either of the following is true:
+- All of the following are true:
+  - The story is [attr-19]
+  - The story is [attr-16]
+  - The story is [attr-15]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [attr-19]
+    - The story is [attr-15]
+  - The story is [attr-16]
+
+Interviewer: Got it. What does [attr-3] mean?
+
+Expert: A story is [attr-3] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [attr-17]
+  - The story is [attr-18]
+- Either of the following is true:
+  - The story is [attr-20]
+  - The story is not [attr-13]
+
+Interviewer: That’s a neat combination. Next: [attr-2].
+
+Expert: A story is [attr-2] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-10]
+    - The story is not [attr-3]
+  - Both of the following are true:
+    - The story is [attr-1]
+    - The story is [attr-3]
+
+Interviewer: And [attr-14]—this one looked a little unusual.
+
+Expert: A story is [attr-14] if all of the following are true:
+- The story is [attr-2]
+- The story is [attr-1] or the story is [attr-3]
+- The story is [attr-10] equals [attr-11]
+
+Interviewer: Noted. Finally, walk me through [attr-9].
+
+Expert: A story is [attr-9] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-14]
+  - The story is [attr-2] in [COMPLEX-PATTERN, SYNDIC-CONJUNCTION, FANTASY-CORE]
+- Either of the following is true:
+  - The story is [attr-3] and the story is not [attr-1]
+  - The story is [attr-1] and exactly one of the following is true:
+    - The story is [attr-10]
+    - The story is [attr-7]
+
+Interviewer: That keeps the original logic intact while making each rule feel like a quick exchange. Anything else to add?
+
+Expert: Just this: every rule is preserved exactly in structure and content—node IDs, logical operations, and relationships are unchanged. The transcript style is only a different way of presenting the same codebook for easier reading.

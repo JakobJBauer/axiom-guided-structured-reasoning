@@ -1,0 +1,149 @@
+Interviewer: Let's go through this codebook step by step. First, what is [attr-6]?
+
+Expert: A story is [attr-6] if the story has juxtaposition.
+
+Interviewer: And [attr-16]?
+
+Expert: A story is [attr-16] if the story is philosophical.
+
+Interviewer: How about [attr-18]?
+
+Expert: A story is [attr-18] if the story has the theme Hardship.
+
+Interviewer: [attr-20]?
+
+Expert: A story is [attr-20] if the story has the theme Humor.
+
+Interviewer: [attr-23] — what's that?
+
+Expert: A story is [attr-23] if the story is about the arts.
+
+Interviewer: [attr-5]?
+
+Expert: A story is [attr-5] if the story has circular narrative structure.
+
+Interviewer: [attr-17]?
+
+Expert: A story is [attr-17] if the story has the theme Deception.
+
+Interviewer: [attr-19]?
+
+Expert: A story is [attr-19] if the story has the theme Helping Others.
+
+Interviewer: [attr-4]?
+
+Expert: A story is [attr-4] if the story has a moral lesson.
+
+Interviewer: [attr-13]?
+
+Expert: A story is [attr-13] if the story is humorous.
+
+Interviewer: [attr-15]?
+
+Expert: A story is [attr-15] if the story is minimalist.
+
+Interviewer: [attr-22]?
+
+Expert: A story is [attr-22] if the story is about giant creatures.
+
+Interviewer: [attr-14]?
+
+Expert: A story is [attr-14] if the story is lighthearted.
+
+Interviewer: [attr-24]?
+
+Expert: A story is [attr-24] if the story is about time travel.
+
+Interviewer: [attr-12]?
+
+Expert: A story is [attr-12] if the story starts with a preposition.
+
+Interviewer: [attr-11]?
+
+Expert: A story is [attr-11] if the story has fewer than 160 words.
+
+Interviewer: [attr-25]?
+
+Expert: A story is [attr-25] if the story uses superlative forms.
+
+Interviewer: [attr-21]?
+
+Expert: A story is [attr-21] if the story has the theme Kindness.
+
+Interviewer: [attr-7]?
+
+Expert: A story is [attr-7] if the story has readability score above 96.1.
+
+Interviewer: Now let's move to compound definitions. Start with [attr-9]. How is that defined?
+
+Expert: A story is [attr-9] if both of the following are true:
+- The story is [attr-6]
+- Either of the following is true:
+  - The story is [attr-12]
+  - The story is [attr-11]
+
+Interviewer: So it needs juxtaposition plus either a preposition start or short length. Clear. What about [attr-10]?
+
+Expert: A story is [attr-10] if both of the following are true:
+- The story is [attr-9]
+- Exactly one of the following is true:
+  - The story is [attr-25]
+  - The story is [attr-15]
+
+Interviewer: That "exactly one" is important — it rules out both or neither. Next, [attr-2]?
+
+Expert: A story is [attr-2] if both of the following are true:
+- The story is [attr-23]
+- Either of the following is true:
+  - The story is [attr-16]
+  - The story is [attr-10]
+
+Interviewer: So it's arts plus either philosophical style or that specific juxtapositional/superlative condition. Got it. Now [attr-8] — this one looks more layered.
+
+Expert: A story is [attr-8] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-20]
+  - The story is [attr-13]
+- All of the following are true:
+  - The story is not [attr-15]
+  - Exactly one of the following is true:
+    - The story is [attr-14]
+    - The story is [attr-25]
+
+Interviewer: To paraphrase: it must be humorous by theme or style, must not be minimalist, and must have exactly one of lighthearted style or superlatives. Correct. Let's continue: [attr-1]?
+
+Expert: A story is [attr-1] if either of the following is true:
+- Both of the following are true:
+  - The story is [attr-4]
+  - Either of the following is true:
+    - The story is [attr-19]
+    - The story is [attr-21]
+- Exactly one of the following is true:
+  - The story is [attr-17]
+  - The story is [attr-18]
+
+Interviewer: So it can be a moral lesson tied to helping or kindness, or exactly one of deception or hardship. The name hints at tension between altruism and contraction. Good. Finally, [attr-3] — the big one.
+
+Expert: A story is [attr-3] if both of the following are true:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-2]
+    - The story is [attr-1]
+  - Exactly one of the following is true:
+    - The story is [attr-8]
+    - The story is [attr-22]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [attr-24]
+    - The story is [attr-5]
+  - Both of the following are true:
+    - The story is [attr-11]
+    - The story is [attr-7]
+
+Interviewer: Let me restate that to ensure I have the logic right. For [attr-3], you need one of two higher-level clusters on the first axis: either both [attr-2] and [attr-1], or exactly one of [attr-8] or [attr-22]. And on the second axis, you need either time-travel with circular narrative, or a short story with very high readability. Is that accurate?
+
+Expert: Exactly. You captured the logical structure precisely.
+
+Interviewer: Thanks — that walkthrough makes the codebook much easier to follow. Any final tips for annotators using these definitions?
+
+Expert: Yes — always check each atomic node first (the simple labels like [attr-20] or [attr-11]) and then apply the compound rules exactly as written: pay careful attention to "Either," "Both," "All," "Exactly one," and negations like "The story is not [attr-15]." Those words determine the logical flow and must be treated literally when annotating.

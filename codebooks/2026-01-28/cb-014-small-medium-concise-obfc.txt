@@ -1,0 +1,22 @@
+[attr-4]
+True if the story begins with an adjective.
+
+[attr-5]
+True if the story is about giant creatures.
+
+[attr-3]
+True when both are true:
+- The story is [attr-5]
+- The story is not [attr-4]
+
+[attr-1]
+True if exactly one of these is true:
+- The story is [attr-4]
+- The story is [attr-5]
+
+[attr-2]
+True when both are true:
+- The story is [attr-3]
+- Either of the following is true:
+  - The story is [attr-1]
+  - The story is not [attr-4]

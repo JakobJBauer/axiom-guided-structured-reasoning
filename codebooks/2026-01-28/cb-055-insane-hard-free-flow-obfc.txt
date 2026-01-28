@@ -1,0 +1,202 @@
+Think of this as a friendly map for labeling stories — each little bracketed tag names a condition, and the lines that follow explain, in plain language, when to attach that tag. I’ll walk through each tag in a relaxed, conversational way, but I’ll keep every logical connection exactly as it was: the same node IDs in square brackets, the same “either / both / exactly one / not” relationships, and the same structure you rely on when annotating.
+
+[attr-36]
+A story is [attr-36] if the story has the theme Problem-Solving.
+
+[attr-41]
+A story is [attr-41] if the story is about mystical creatures.
+
+[attr-24]
+A story is [attr-24] if the story has fewer than 160 words.
+
+[attr-42]
+A story is [attr-42] if the story is about time travel.
+
+[attr-44]
+A story is [attr-44] if the story uses discourse markers.
+
+[attr-38]
+A story is [attr-38] if the story is about cultural traditions.
+
+[attr-34]
+A story is [attr-34] if the story has the theme Innovation.
+
+[attr-25]
+A story is [attr-25] if the story starts with an adverb.
+
+[attr-32]
+A story is [attr-32] if the story has the theme Helping Others.
+
+[attr-12]
+A story is [attr-12] if the story has juxtaposition.
+
+[attr-27]
+A story is [attr-27] if the story is playful.
+
+[attr-11]
+A story is [attr-11] if the story has a Red Herring.
+
+[attr-31]
+A story is [attr-31] if the story has the theme Hardship.
+
+[attr-33]
+A story is [attr-33] if the story has the theme Humor.
+
+[attr-29]
+A story is [attr-29] if the story has the theme Agency.
+
+[attr-9]
+A story is [attr-9] if the story has a flashback.
+
+[attr-45]
+A story is [attr-45] if the story uses perfect aspect.
+
+[attr-43]
+A story is [attr-43] if the story uses conditional mood.
+
+[attr-46]
+A story is [attr-46] if the story uses wh-questions.
+
+[attr-35]
+A story is [attr-35] if the story has the theme Kindness.
+
+[attr-10]
+A story is [attr-10] if the story has a moral lesson.
+
+[attr-26]
+A story is [attr-26] if the story is humorous.
+
+[attr-16]
+A story is [attr-16] if the story has readability score below 86.4.
+
+[attr-18]
+A story is [attr-18] if the story has more than 6 paragraphs.
+
+[attr-8]
+A story is [attr-8] if the story has a cliffhanger.
+
+[attr-40]
+A story is [attr-40] if the story is about magical lands.
+
+[attr-39]
+A story is [attr-39] if the story is about giant creatures.
+
+[attr-30]
+A story is [attr-30] if the story has the theme Growth.
+
+[attr-15]
+A story is [attr-15] if the story has more than 375 words.
+
+[attr-6]
+A story is [attr-6] if the story is in [TOPIC-MYSTICAL-CREATURES, TOPIC-MAGICAL-LANDS, TOPIC-GIANT-CREATURES].
+
+[attr-17]
+A story is [attr-17] if either of the following is true:
+- The story is [attr-40]
+- The story is [attr-41]
+
+[attr-5]
+A story is [attr-5] if all of the following are true:
+- The story is [attr-15]
+- The story is either [attr-39] or [attr-40]
+- The story is [attr-30]
+
+[attr-23]
+A story is [attr-23] if both of the following are true:
+- The story is [attr-24]
+- The story is [attr-17]
+
+[attr-37]
+A story is [attr-37] if both of the following are true:
+- The story is [attr-42]
+- Either of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-9]
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-18]
+- Both of the following are true:
+  - The story is [attr-9]
+  - The story is [attr-8]
+
+[attr-20]
+A story is [attr-20] if either of the following is true:
+- The story is [attr-25]
+- The story is [attr-44]
+- The story is [attr-46]
+
+[attr-14]
+A story is [attr-14] if exactly one of the following is true:
+- The story is [attr-26]
+- The story is [attr-27]
+
+[attr-19]
+A story is [attr-19] if both of the following are true:
+- The story is [attr-35]
+- The story is [attr-10]
+
+[attr-13]
+A story is [attr-13] if all of the following are true:
+- The story is [attr-34]
+- The story is [attr-32]
+- Either of the following is true:
+  - The story is [attr-29]
+  - The story is [attr-36]
+
+[attr-7]
+A story is [attr-7] if both of the following are true:
+- The story is [attr-30]
+- The story is [attr-31]
+
+[attr-4]
+A story is [attr-4] if both of the following are true:
+- The story is not [attr-16]
+- Either of the following is true:
+  - The story is [attr-24]
+  - The story is [attr-15]
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-24]
+- Exactly one of the following is true:
+  - The story is [attr-33]
+  - The story is [attr-31]
+
+[attr-22]
+A story is [attr-22] if both of the following are true:
+- The story is [attr-46]
+- The story is [attr-44]
+
+[attr-2]
+A story is [attr-2] if all of the following are true:
+- Either of the following is true:
+  - The story is [attr-37]
+  - The story is [attr-17]
+- Both of the following are true:
+  - The story is [attr-3]
+  - Either of the following is true:
+    - The story is [attr-20]
+    - The story is [attr-4]
+- Either of the following is true:
+  - The story uses [attr-43]
+  - The story uses [attr-45]
+
+[attr-28]
+A story is [attr-28] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-13]
+  - The story is [attr-19]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-36]
+
+[attr-21]
+A story is [attr-21] if all of the following are true:
+- The story is [attr-20]
+- The story is not [attr-27]
+- Either of the following is true:
+  - The story is [attr-45]
+  - The story is [attr-43]
+
+That’s the whole set. I kept every bracketed tag exactly as it appears, preserved each “either / both / exactly one / not” relationship, and left the logical structure and formulas untouched — but I smoothed the wording so it reads like a clear, conversational guide you can actually enjoy while annotating.

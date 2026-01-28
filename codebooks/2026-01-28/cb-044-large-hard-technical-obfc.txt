@@ -1,0 +1,134 @@
+Codebook — Formal definitions for annotation labels
+
+Each entry below specifies the precise criterion under which a narrative (hereafter "story") is assigned the corresponding Boolean label. Use these definitions to determine label truth values for annotation and reasoning tasks. Logical connectives are expressed in plain English but retain their standard Boolean semantics: "Both of the following are true" = logical AND; "Either of the following is true" = logical OR; "Exactly one of the following is true" = exclusive OR; "All of the following are true" = conjunction over listed items; negation is indicated by "not".
+
+Atomic label definitions
+- [attr-6]
+  - A story is [attr-6] iff the story exhibits juxtaposition.
+
+- [attr-16]
+  - A story is [attr-16] iff the story is philosophical in style or content.
+
+- [attr-18]
+  - A story is [attr-18] iff the theme of the story includes hardship.
+
+- [attr-20]
+  - A story is [attr-20] iff the story contains humor as a thematic element.
+
+- [attr-23]
+  - A story is [attr-23] iff the subject matter of the story concerns the arts.
+
+- [attr-5]
+  - A story is [attr-5] iff the narrative structure is circular.
+
+- [attr-17]
+  - A story is [attr-17] iff deception is a theme of the story.
+
+- [attr-19]
+  - A story is [attr-19] iff helping others is a theme of the story.
+
+- [attr-4]
+  - A story is [attr-4] iff the story contains an explicit or implicit moral lesson.
+
+- [attr-13]
+  - A story is [attr-13] iff the story’s style is humorous.
+
+- [attr-15]
+  - A story is [attr-15] iff the story exhibits a minimalist style.
+
+- [attr-22]
+  - A story is [attr-22] iff the story’s subject includes giant creatures.
+
+- [attr-14]
+  - A story is [attr-14] iff the story’s tone is lighthearted.
+
+- [attr-24]
+  - A story is [attr-24] iff the story’s subject includes time travel.
+
+- [attr-12]
+  - A story is [attr-12] iff the first lexeme or token of the story is a preposition.
+
+- [attr-11]
+  - A story is [attr-11] iff the story’s length is fewer than 160 words.
+
+- [attr-25]
+  - A story is [attr-25] iff the text uses superlative morphological forms (e.g., "best", "least", "most").
+
+- [attr-21]
+  - A story is [attr-21] iff kindness is a thematic element of the story.
+
+- [attr-7]
+  - A story is [attr-7] iff the story’s readability score is strictly greater than 96.1.
+
+Composite label definitions
+- [attr-9]
+  - A story is [attr-9] iff the following conditions hold:
+    - The story is [attr-6]; and
+    - Either:
+      - The story is [attr-12]; or
+      - The story is [attr-11].
+
+- [attr-10]
+  - A story is [attr-10] iff the following conditions hold:
+    - The story is [attr-9]; and
+    - Exactly one of:
+      - The story is [attr-25]; or
+      - The story is [attr-15].
+
+- [attr-2]
+  - A story is [attr-2] iff the following conditions hold:
+    - The story is [attr-23]; and
+    - Either:
+      - The story is [attr-16]; or
+      - The story is [attr-10].
+
+- [attr-8]
+  - A story is [attr-8] iff the following conditions hold:
+    - Either:
+      - The story is [attr-20]; or
+      - The story is [attr-13]; and
+    - All of the following:
+      - The story is not [attr-15]; and
+      - Exactly one of:
+        - The story is [attr-14]; or
+        - The story is [attr-25].
+
+  - Note: the first clause is a disjunction; the second clause is a conjunction that includes a non-minimalist constraint and an exclusive choice between lighthearted style and use of superlatives.
+
+- [attr-1]
+  - A story is [attr-1] iff either:
+    - Both:
+      - The story is [attr-4]; and
+      - Either:
+        - The story is [attr-19]; or
+        - The story is [attr-21]; or
+    - Exactly one of:
+      - The story is [attr-17]; or
+      - The story is [attr-18].
+
+  - Clarification: the label is true when either (a) a moral lesson is present together with altruistic thematic content (helping others or kindness), or (b) exactly one of deception or hardship is present.
+
+- [attr-3]
+  - A story is [attr-3] iff both of the following hold:
+    - Either:
+      - Both:
+        - The story is [attr-2]; and
+        - The story is [attr-1]; or
+      - Exactly one of:
+        - The story is [attr-8]; or
+        - The story is [attr-22]; and
+    - Either:
+      - Both:
+        - The story is [attr-24]; and
+        - The story is [attr-5]; or
+      - Both:
+        - The story is [attr-11]; and
+        - The story is [attr-7].
+
+  - Interpretation: [attr-3] requires satisfaction of one of two high-level content/style alternatives (either an artful/philosophical + altruistic conjunction, or an exclusive choice between a humorous hybrid and giant-creature topic), combined with one of two structural/readability alternatives (either time-travel with circular narrative, or a short story with high readability).
+
+Usage notes
+- "iff" in atomic definitions denotes biconditional: the label is true exactly when the condition holds.
+- Maintain exact node identifiers in annotations; do not rename or alter bracketed IDs.
+- Preserve the logical structure when implementing these criteria in code: use AND, OR, XOR, and NOT as specified.
+- For composite labels, evaluate sub-label truth values prior to evaluating higher-level labels to ensure deterministic annotation.

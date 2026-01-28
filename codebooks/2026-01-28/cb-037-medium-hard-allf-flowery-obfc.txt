@@ -1,0 +1,65 @@
+A prefatory whisper before the catalogue: imagine, if you will, a dusty salon of lantern light where scholars and storytellers have gathered to catalogue the secret taxonomy of tales. Each entry below is a labeled strand of that living tapestry. I shall dress the definitions in floral language and conjure a little myth behind the codex, but rest assured—the logical bones, the nodes in their exact [attr-2] forms, and the precise relations between them are untouched and intact. Read as both guide and incantation.
+
+[attr-8]
+A story is [attr-8] if The story has a story within a story.
+- In plain terms and in poetic echo: the tale cradles another tale within its heart — a narrative like a song within a song, a smaller world tucked into the folds of the larger one.
+
+[attr-12]
+A story is [attr-12] if The story has the theme Magic.
+- Rendered in richer language: the narrative’s dominant pulse is the wondrous and the uncanny; sorcery, enchantment, or the marvelous form its central theme.
+
+[attr-7]
+A story is [attr-7] if The story has a flashback.
+- Said with color: the plot bends backward through memory — scenes that turn their gaze to earlier moments, summoning the past into the present action.
+
+[attr-13]
+A story is [attr-13] if The story is about the arts.
+- Ornamented explanation: the tale’s subject is the realm of art — painters, musicians, sculptors, performance — the craft and culture of artistic creation.
+
+[attr-11]
+A story is [attr-11] if The story is minimalist.
+- Flowery restatement: the voice favors deliberate simplicity and restraint, a pared-down aesthetic where every word is counted and nothing extraneous intrudes.
+
+[attr-9]
+A story is [attr-9] if The story has circular narrative structure.
+- In lyrical terms: the plot comes full circle, orbiting back to its beginning in a ringlike motion, forming a structural helix that returns the reader to the start.
+
+[attr-6]
+A story is [attr-6] if exactly one of the following is true:
+- The story is [attr-8]
+- The story is [attr-7]
+- Interpretation embroidered: [attr-6] marks the exquisite exclusivity of devices — either an inner tale blooms within the main tale, or the narrative reveries of a flashback visit, but never both at once; precisely one of those devices holds true.
+
+[attr-5]
+A story is [attr-5] if the truth value of [attr-8] equals the truth value of [attr-9]
+- In poetic clarity: [attr-5] denotes a parity of form — either both the nested-story device and the ringed circular structure are present together, or neither is; their truth values march in step, equal as twin stars.
+
+[attr-10]
+A story is [attr-10] if the story's primary theme or topic is in the set {[attr-12], [attr-13]}
+- Flowery explication: this membership invites tales whose core belongs to the fellowship of the magical and the artistic — if its principal identity is either enchantment or artistry, it joins this set.
+
+[attr-4]
+A story is [attr-4] if both of the following are true:
+- Either of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-5]
+- The story is not [attr-11] and (the story is [attr-9] or the story is [attr-7])
+- Blossomed reading: to be in the [attr-4] is to be a richly woven specimen — first, it must satisfy one of the device conditions (either the exclusive device choice of [attr-6] or the parity condition [attr-5]); and second, it must refuse the austerity of minimalism while embracing cyclical architecture or the backward-turning echo of a flashback. Both of these broad requirements must hold.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-10]
+- Either of the following are true:
+  - The story is [attr-4]
+  - The story is [attr-11]
+- Enchanted elucidation: an [attr-1] lives where motif and method meet — its soul is magical or artistic, and it is either elaborately complex by structural measures or deliberately spare in style. Either condition suffices in concert with the membership.
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-1]
+- Exactly one of the following is true:
+  - The story is [attr-5]
+  - The story is not [attr-7]
+- Final poetic note: to be crowned a [attr-3] the tale must first be an [attr-1], and then it must satisfy an exclusive choice: either it stands in the mirrored relation of [attr-5], or alternatively it stands free of flashback; precisely one of these holds, no more, no less.
+
+Thus ends the codex’s garden-walk: each entry retains its logical scaffolding, but now blooms with description and story. Use these definitions as you would botanical keys — to identify, to classify, and to celebrate the many forms a story may take.

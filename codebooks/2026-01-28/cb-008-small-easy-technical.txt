@@ -1,0 +1,19 @@
+Codebook — Technical Specification for Story Annotation Predicates
+
+[TOPIC-CULTURAL-TRADITIONS]
+Definition: Predicate indicating that the primary topical focus of the story is cultural traditions. A story satisfies [TOPIC-CULTURAL-TRADITIONS] if and only if the narrative content explicitly addresses, depicts, or centers on cultural traditions (rituals, customs, practices, or heritage-related activities).
+
+[HAS-A-MORAL-LESSON]
+Definition: Predicate indicating the presence of an explicit moral or didactic conclusion. A story satisfies [HAS-A-MORAL-LESSON] if and only if the narrative contains a stated or strongly implied moral lesson intended to instruct, guide behavior, or convey ethical principles.
+
+[STARTS-WITH-ADVERB]
+Definition: Predicate indicating that the story text begins with an adverb. A story satisfies [STARTS-WITH-ADVERB] if and only if the initial lexical unit of the text is an adverb (e.g., as determined by standard part-of-speech tagging or equivalent syntactic analysis).
+
+[THEME-MAGIC]
+Definition: Predicate indicating the thematic classification "Magic." A story satisfies [THEME-MAGIC] if and only if magic (supernatural manipulation, sorcery, enchanted phenomena, or related motifs) constitutes a central theme of the narrative.
+
+[TRADITIONAL-MAGIC-TEACHING]
+Definition: Composite predicate. A story satisfies [TRADITIONAL-MAGIC-TEACHING] if all of the following are true:
+- The story is [TOPIC-CULTURAL-TRADITIONS]
+- The story is [THEME-MAGIC]
+- The story is [HAS-A-MORAL-LESSON]

@@ -1,0 +1,135 @@
+I’ll walk you through this codebook in a relaxed, conversational way while keeping every rule, identifier, and logical relationship exactly where they belong. The labels in brackets are unchanged, and the logical structure—every “either,” “both,” “exactly one,” “not both,” and “xor”—remains untouched. Think of this as a guided tour through the rules you’ll use for annotating and reasoning.
+
+[THEME-PROBLEM-SOLVING]
+If a story carries the theme of problem-solving, we tag it as [THEME-PROBLEM-SOLVING]. It’s that clear and direct.
+
+[TOPIC-HIDDEN-TREASURES]
+When the story centers on hidden treasures, give it the label [TOPIC-HIDDEN-TREASURES].
+
+[STYLE-LIGHTHEARTED]
+If the feel of the story is breezy and carefree, it gets [STYLE-LIGHTHEARTED].
+
+[HAS-A-RED-HERRING]
+If there’s a deliberate red herring in the plot—a distraction meant to mislead—mark the story as [HAS-A-RED-HERRING].
+
+[STARTS-WITH-PREPOSITION]
+If the very first word of the story is a preposition, note it as [STARTS-WITH-PREPOSITION]. (Yes, we capture openings like that.)
+
+[TOPIC-GIANT-CREATURES]
+Stories about enormous beasts, oversized fauna, or giant creatures belong under [TOPIC-GIANT-CREATURES].
+
+[USES-SUPERLATIVE-FORMS]
+If the language leans into extremes—“best,” “biggest,” “most”—label it [USES-SUPERLATIVE-FORMS].
+
+[THEME-MAGIC]
+If magic is a core theme, tag the story as [THEME-MAGIC].
+
+[STYLE-MODERN]
+If the style reads contemporary, fresh, and modern, use [STYLE-MODERN].
+
+[STARTS-WITH-ADVERB]
+When the story opens with an adverb, indicate that with [STARTS-WITH-ADVERB].
+
+[TOPIC-MAGICAL-LANDS]
+If the setting or focus is on enchanted realms or magical lands, that’s [TOPIC-MAGICAL-LANDS].
+
+[LOW-READABILITY]
+When the readability score falls below 86.4, mark the story as [LOW-READABILITY].
+
+[STYLE-HUMOROUS]
+If its voice is jokey or comedic, choose [STYLE-HUMOROUS].
+
+[THEME-INNOVATION]
+If the theme revolves around innovation—new ideas or inventive solutions—label it [THEME-INNOVATION].
+
+[STYLE-CLASSIC]
+If the story reads with a timeless, classic tone, that’s [STYLE-CLASSIC].
+
+[TOPIC-MYSTICAL-CREATURES]
+Stories focused on mystical, otherworldly creatures get [TOPIC-MYSTICAL-CREATURES].
+
+[THEME-KINDNESS]
+If kindness is a driving theme, use [THEME-KINDNESS].
+
+[THEME-HUMOR]
+If humor itself is a central theme (not just the style), assign [THEME-HUMOR].
+
+[SHORT-STORY]
+Anything under 160 words is captured by [SHORT-STORY].
+
+[TOPIC-THE-ARTS]
+When the arts—painting, music, theater, dance—are the subject, that’s [TOPIC-THE-ARTS].
+
+[PLOT-STRUCTURE]
+Now for a slightly more complex rule. A story is [PLOT-STRUCTURE] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - The story is [TOPIC-HIDDEN-TREASURES]
+    - The story is [TOPIC-MAGICAL-LANDS]
+  - either of the following is true:
+    - The story is [TOPIC-MYSTICAL-CREATURES]
+    - The story is [TOPIC-GIANT-CREATURES] xor The story is [TOPIC-THE-ARTS]
+- both of the following are true:
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [SHORT-STORY]
+
+So, in plain terms: either it pairs a hidden-treasure or magical-land focus with mystical creatures or a mutual exclusivity between giant creatures and the arts, or it’s a short piece that includes a red herring. The structure stays exactly like that.
+
+[TONE-AND-STYLE]
+A story qualifies as [TONE-AND-STYLE] when both of these conditions hold:
+- either of the following is true:
+  - The story is [STYLE-LIGHTHEARTED]
+  - The story is [STYLE-HUMOROUS] xor The story is [STYLE-CLASSIC]
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-CLASSIC]
+  - not both of the following are true:
+    - The story is [LOW-READABILITY]
+    - The story starts with a preposition: The story is [STARTS-WITH-PREPOSITION]
+
+So the tone-and-style label combines a light, humorous, or classically tinged feel with the story being modern or classic in form, and it excludes the case where low readability coincides with an opening preposition.
+
+[THEMATIC-CORE]
+The label [THEMATIC-CORE] applies if any one of these three paths is satisfied:
+- both of the following are true:
+  - The story is [THEME-PROBLEM-SOLVING]
+  - either of the following is true:
+    - The story is [THEME-INNOVATION]
+    - The story is [THEME-MAGIC]
+- exactly one of the following is true:
+  - The story is [THEME-KINDNESS]
+  - The story is [THEME-HUMOR]
+- both of the following are true:
+  - The story is in [THEME-MAGIC, THEME-INNOVATION, THEME-PROBLEM-SOLVING]
+  - The story is [THEME-KINDNESS] equals false
+
+In short: thematic core can come from a blend of problem-solving with innovation or magic, an exclusive choice between kindness and humor as theme, or being squarely in the set of magic/innovation/problem-solving while explicitly not being kindness.
+
+[COMBINED-PLOT-TONE]
+We call a story [COMBINED-PLOT-TONE] when both of these hold:
+- The story is [PLOT-STRUCTURE]
+- either of the following is true:
+  - The story is [TONE-AND-STYLE]
+  - both of the following are true:
+    - The story is [USES-SUPERLATIVE-FORMS]
+    - The story is not [HAS-A-RED-HERRING]
+
+So it’s a plot-structured piece that either fits the tone-and-style pattern or uses superlatives and lacks a red herring.
+
+[COMPLEX-STORY-TYPE]
+Finally, a story becomes [COMPLEX-STORY-TYPE] under either of these two options:
+- both of the following are true:
+  - The story is [THEMATIC-CORE]
+  - exactly one of the following is true:
+    - The story is [COMBINED-PLOT-TONE]
+    - both of the following are true:
+      - The story is [SHORT-STORY]
+      - either of the following is true:
+        - The story is [TOPIC-THE-ARTS]
+        - The story is [TOPIC-HIDDEN-TREASURES]
+- not both of the following are true:
+  - The story is [STYLE-HUMOROUS]
+  - The story is [THEME-HUMOR]
+
+So a complex story type either combines a thematic core with a unique choice between combined plot/tone or being a short arts- or treasure-focused story, or it avoids the simultaneous presence of humorous style and a humor theme.
+
+That’s the whole codebook, restated in a more natural, conversational voice. Every node ID, every logical operator, and every relationship has been kept intact—just presented in a way that’s easier to read and think with. If you’d like, I can also produce a compact checklist version for annotators or an annotated example to show these rules in action.

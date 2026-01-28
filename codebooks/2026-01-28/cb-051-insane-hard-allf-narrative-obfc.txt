@@ -1,0 +1,150 @@
+[attr-27]
+Imagine a story wearing a bright badge of invention — that tale is [attr-27]. A story is [attr-27] if The story has the theme Innovation.
+
+[attr-17]
+Picture a story shaped by the weight of tradition and the lines of time — that is [attr-17]. A story is [attr-17] if The story is classic.
+
+[attr-31]
+Think of secret maps and whispers in the dark; when a narrative is about hidden riches and secret hoards, it becomes [attr-31]. A story is [attr-31] if The story is about hidden treasures.
+
+[attr-13]
+When a tale is compact enough to be read in a single breath, it earns the tag [attr-13]. A story is [attr-13] if The story has fewer than 160 words.
+
+[attr-14]
+If the very first word of the tale dresses itself as an adjective, the story is marked [attr-14]. A story is [attr-14] if The story starts with a adjective.
+
+[attr-26]
+When laughter threads through the plot and levity guides the arc, the story is [attr-26]. A story is [attr-26] if The story has the theme Humor.
+
+[attr-9]
+Some stories wear dense cloaks of language; if the readability score dips below a threshold, we call that [attr-9]. A story is [attr-9] if The story has readability score below 86.4.
+
+[attr-19]
+A tale that moves with the tempo of now, with contemporary angles and fresh cadences, is [attr-19]. A story is [attr-19] if The story is modern.
+
+[attr-34]
+When dragons, sprites, or beasts of legend populate the pages, the story is [attr-34]. A story is [attr-34] if The story is about mystical creatures.
+
+[attr-23]
+If the arc charts change, learning, and personal expansion, the story carries [attr-23]. A story is [attr-23] if The story has the theme Growth.
+
+[attr-8]
+Some narratives unfurl into epics; when a story stretches beyond the page count, it's [attr-8]. A story is [attr-8] if The story has more than 375 words.
+
+[attr-4]
+When a tale leaves a clear lesson behind like a footprint in the sand, we label it [attr-4]. A story is [attr-4] if The story has a moral lesson.
+
+[attr-6]
+If a story loops back to its beginning or circles its own trajectory, that structural echo is [attr-6]. A story is [attr-6] if The story has circular narrative structure.
+
+[attr-24]
+When trials, struggle, and endurance form the backbone of the plot, the tale is [attr-24]. A story is [attr-24] if The story has the theme Hardship.
+
+[attr-37]
+If the narrative speaks in woulds and coulds and constructs its possibilities in conditional tones, it is [attr-37]. A story is [attr-37] if The story uses conditional mood.
+
+[attr-38]
+When the language reaches for the extremes — the biggest, the most, the rarest — the story is [attr-38]. A story is [attr-38] if The story uses superlative forms.
+
+[attr-25]
+A story that turns outward to acts of aid and compassion carries [attr-25]. A story is [attr-25] if The story has the theme Helping Others.
+
+[attr-21]
+If a tale bounces and toys with tone, winking at the reader, we call it [attr-21]. A story is [attr-21] if The story is playful.
+
+[attr-7]
+When opposing images or ideas sit side by side to highlight contrast, the story bears [attr-7]. A story is [attr-7] if The story has juxtaposition.
+
+[attr-28]
+If kindness guides choices and becomes a recurring thread, the story is [attr-28]. A story is [attr-28] if The story has the theme Kindness.
+
+[attr-29]
+When enchantment and supernatural agency shape events, the narrative is marked as [attr-29]. A story is [attr-29] if The story has the theme Magic.
+
+[attr-5]
+If a tale contains another tale nested inside it, it earns [attr-5]. A story is [attr-5] if The story has a story within a story.
+
+[attr-36]
+When the plot bends through years and decades, carrying characters across time, the subject is [attr-36]. A story is [attr-36] if The story is about time travel.
+
+[attr-39]
+If the voice asks who, what, where, when, why, or how — reaching for information in WH form — then it is [attr-39]. A story is [attr-39] if The story uses wh-questions.
+
+[attr-18]
+A narrative that deliberately provokes amusement and comedic rhythm is [attr-18]. A story is [attr-18] if The story is humorous.
+
+[attr-32]
+When the plot explores ruins, vanished cities, and civilizations swallowed by time, it is [attr-32]. A story is [attr-32] if The story is about lost civilizations.
+
+[attr-33]
+When the stage itself is a fantastical realm — forests of light, mountains that sing — the story fits [attr-33]. A story is [attr-33] if The story is about magical lands.
+
+[attr-20]
+If the narrative lingers over ideas, asking the big questions in reflective prose, it is [attr-20]. A story is [attr-20] if The story is philosophical.
+
+[attr-16]
+Imagine a gallery labeled "Style" that contains a finite set of portraits. A story is [attr-16] if the story's style is In the set { [attr-17], [attr-19], [attr-21], [attr-18], [attr-20] }.
+
+[attr-35]
+Envision a map of mystical topics — a curated constellation. A story is [attr-35] if the story's topic is In the set { [attr-34], [attr-33], [attr-31], [attr-32], [attr-36] }.
+
+[attr-22]
+A cluster of themes gathers like stars around a central idea. A story is [attr-22] if either of the following are true (Or):
+- The story is [attr-27]
+- The story is [attr-23]
+- The story is [attr-24]
+- The story is [attr-25]
+- The story is [attr-28]
+- The story is [attr-29]
+- The story is [attr-26]
+
+[attr-11]
+Some stories sit cleanly in one bucket or the other — short or long — but never both. A story is [attr-11] if exactly one (Xor) of the following is true:
+- The story is [attr-13]
+- The story is [attr-8]
+
+[attr-12]
+Two small traits can define the surface of a tale: its reading ease and its first word. A story is [attr-12] if both of the following are true (And):
+- The story is [attr-9]
+- The story is [attr-14]
+
+[attr-15]
+Stories may carry structural tricks — devices that alter how we experience them. A story is [attr-15] if either of the following are true (Or):
+- The story is [attr-5]
+- The story is [attr-6]
+- The story is [attr-7]
+
+[attr-10]
+Sometimes the heart of a tale is a lesson or a journey outward. A story is [attr-10] if either of the following are true (Or):
+- The story is [attr-4]
+- The story is [attr-23]
+
+[attr-3]
+Picture a balance scale checking two themes for equal weight. A story is [attr-3] if Equal(the truth of [attr-23], the truth of [attr-24]).
+
+[attr-1]
+A truly balanced tale combines equal measures and compassionate direction. A story is [attr-1] if both of the following are true (And):
+- The story is [attr-3]
+- Either of the following are true (Or):
+  - The story is [attr-28]
+  - The story is [attr-25]
+
+[attr-30]
+When a story accumulates a constellation of related themes and then aligns them with a balance or a flash of invention, it becomes [attr-30]. A story is [attr-30] if both of the following are true (And):
+- The story is [attr-22]
+- Either of the following are true (Or):
+  - The story is [attr-1]
+  - The story is [attr-27]
+
+[attr-2]
+At the summit sits a classification for stories that meet many demanding conditions — a title reserved for the most intricately woven narratives. A story is [attr-2] if all of the following are true:
+- The story is [attr-30]
+- The story is [attr-16]
+- The story is [attr-35]
+- The story is [attr-15]
+- Not the story is [attr-17]
+- The story is [attr-11]
+- The story is [attr-12]
+- The story is [attr-10]
+
+Thus, each bracketed tag reads like a character in a larger myth — some simple, some composite — and together they form the rules by which any tale in this taxonomy is told, tested, and known.

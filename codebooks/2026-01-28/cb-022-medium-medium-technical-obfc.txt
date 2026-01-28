@@ -1,0 +1,57 @@
+[attr-2]
+Definition: A story is classified as [attr-2] if the narrative employs a circular structure (i.e., the plot returns to or mirrors its starting point).
+
+[attr-11]
+Definition: A story is classified as [attr-11] if the central or significant thematic element of the story is Kindness.
+
+[attr-3]
+Definition: A story is classified as [attr-3] if the text contains juxtaposition as a salient structural or stylistic device (placement of contrasting elements in proximity).
+
+[attr-12]
+Definition: A story is classified as [attr-12] if the subject matter concerns hidden treasures (literal or figurative).
+
+[attr-5]
+Definition: A story is classified as [attr-5] if its readability metric is below 86.4.
+
+[attr-9]
+Definition: A story is classified as [attr-9] if its stylistic register is philosophical (it foregrounds abstract reflection, conceptual analysis, or existential inquiry).
+
+[attr-8]
+Definition: A story is classified as [attr-8] if its stylistic register conforms to modern characteristics (contemporary idiom, forms, or aesthetics).
+
+[attr-10]
+Definition: A story is classified as [attr-10] if the story foregrounds Deception as a theme.
+
+[attr-4]
+Definition: A story is classified as [attr-4] if its readability metric is above 96.1.
+
+[attr-6]
+Definition: A story is classified as [attr-6] if and only if all of the following conditions hold:
+- The story is [attr-8].
+- Either of the following is true:
+  - The story is [attr-9].
+  - The story is [attr-3].
+- The story is not [attr-2].
+
+[attr-7]
+Definition: A story is classified as [attr-7] if and only if all of the following conditions hold:
+- The story is [attr-11].
+- The story is [attr-10].
+- The story is [attr-6].
+
+[attr-1]
+Definition: A story is classified as [attr-1] if and only if both of the following conditions hold:
+- The story is [attr-7].
+- Either of the following is true:
+  - Exactly one of the following is true:
+    - The story is [attr-5].
+    - The story is [attr-4].
+  - The story is [attr-12].
+
+Notes on logical operators used:
+- Conjunction (all of the following are true): simultaneous satisfaction of listed predicates.
+- Disjunction (Either of the following is true): inclusive OR unless explicitly stated otherwise.
+- Exclusive disjunction (Exactly one of the following is true): precisely one predicate in the set holds.
+- Negation (The story is not [...]): the predicate does not hold.
+
+Preservation: All node identifiers, logical relations, and threshold values are preserved exactly as specified.

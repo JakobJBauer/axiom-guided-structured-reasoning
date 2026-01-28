@@ -1,0 +1,18 @@
+[THEME-HELPING-OTHERS]  
+A story is classified as [THEME-HELPING-OTHERS] iff the narrative’s primary thematic content is **Helping Others** (i.e., altruism-oriented assistance or support is a central theme).
+
+[TOPIC-MYSTICAL-CREATURES]  
+A story is classified as [TOPIC-MYSTICAL-CREATURES] iff the narrative content is **about mystical creatures** (i.e., supernatural, legendary, or fantastical beings constitute a primary subject).
+
+[STARTS-WITH-PREPOSITION]  
+A story is classified as [STARTS-WITH-PREPOSITION] iff the first lexical token of the story is a **preposition** (e.g., “in,” “on,” “under,” “through,” etc.).
+
+[MYTHIC-BUT-NOT-ALTRUISTIC]  
+A story is classified as [MYTHIC-BUT-NOT-ALTRUISTIC] iff **both** of the following constraints are satisfied (logical AND):
+- The story is [TOPIC-MYSTICAL-CREATURES]
+- The story is not [THEME-HELPING-OTHERS]
+
+[INVITING-OPENING]  
+A story is classified as [INVITING-OPENING] iff **both** of the following constraints are satisfied (logical AND):
+- The story is [STARTS-WITH-PREPOSITION]
+- The story is not [MYTHIC-BUT-NOT-ALTRUISTIC]

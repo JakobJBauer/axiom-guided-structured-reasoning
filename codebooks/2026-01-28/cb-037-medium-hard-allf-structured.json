@@ -1,0 +1,204 @@
+{
+  "nodes": [
+    {
+      "id": "has-a-story-within-a-story",
+      "label": "HAS-A-STORY-WITHIN-A-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-magic",
+      "label": "THEME-MAGIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-flashback",
+      "label": "HAS-A-FLASHBACK",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-the-arts",
+      "label": "TOPIC-THE-ARTS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-minimalist",
+      "label": "STYLE-MINIMALIST",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-circular-narrative-struct",
+      "label": "HAS-CIRCULAR-NARRATIVE-STRUCT",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "device-xor",
+      "label": "DEVICE-XOR",
+      "formula_type": "Xor",
+      "formula_args": [
+        "has-a-story-within-a-story",
+        "has-a-flashback"
+      ]
+    },
+    {
+      "id": "device-equal",
+      "label": "DEVICE-EQUAL",
+      "formula_type": "Equal",
+      "formula_args": [
+        "has-a-story-within-a-story",
+        "has-circular-narrative-struct"
+      ]
+    },
+    {
+      "id": "magic-art-member",
+      "label": "MAGIC-ART-MEMBER",
+      "formula_type": "In",
+      "formula_args": [
+        "theme-magic",
+        "topic-the-arts"
+      ]
+    },
+    {
+      "id": "complex-narrative-core",
+      "label": "COMPLEX-NARRATIVE-CORE",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "device-xor",
+            "device-equal"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "style-minimalist"
+              ]
+            },
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "has-circular-narrative-struct",
+                "has-a-flashback"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "art-magic-narrative",
+      "label": "ART-MAGIC-NARRATIVE",
+      "formula_type": "And",
+      "formula_args": [
+        "magic-art-member",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "complex-narrative-core",
+            "style-minimalist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complex-artistic-narrative",
+      "label": "COMPLEX-ARTISTIC-NARRATIVE",
+      "formula_type": "And",
+      "formula_args": [
+        "art-magic-narrative",
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "device-equal",
+            {
+              "formula_type": "Not",
+              "formula_args": [
+                "has-a-flashback"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "has-a-story-within-a-story",
+      "target": "device-xor"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "device-xor"
+    },
+    {
+      "source": "has-a-story-within-a-story",
+      "target": "device-equal"
+    },
+    {
+      "source": "has-circular-narrative-struct",
+      "target": "device-equal"
+    },
+    {
+      "source": "theme-magic",
+      "target": "magic-art-member"
+    },
+    {
+      "source": "topic-the-arts",
+      "target": "magic-art-member"
+    },
+    {
+      "source": "device-xor",
+      "target": "complex-narrative-core"
+    },
+    {
+      "source": "device-equal",
+      "target": "complex-narrative-core"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "complex-narrative-core"
+    },
+    {
+      "source": "has-circular-narrative-struct",
+      "target": "complex-narrative-core"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "complex-narrative-core"
+    },
+    {
+      "source": "magic-art-member",
+      "target": "art-magic-narrative"
+    },
+    {
+      "source": "complex-narrative-core",
+      "target": "art-magic-narrative"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "art-magic-narrative"
+    },
+    {
+      "source": "art-magic-narrative",
+      "target": "complex-artistic-narrative"
+    },
+    {
+      "source": "device-equal",
+      "target": "complex-artistic-narrative"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "complex-artistic-narrative"
+    }
+  ]
+}

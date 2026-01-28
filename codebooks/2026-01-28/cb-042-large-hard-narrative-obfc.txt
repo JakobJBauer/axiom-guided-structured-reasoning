@@ -1,0 +1,160 @@
+Imagine a dimly lit archive where every story wears a label and waits to be read. Walk with me through the stacks: I will introduce each label as a little portrait of what a tale can be. I’ll tell you the charm and then point to the exact way the archivists decide who belongs where—word for word, rule for rule—so you can use these labels to sort, tag, and reason without losing a single logical thread.
+
+[attr-18]
+A tale earns the badge [attr-18] the moment its heartbeat is a puzzle being solved.
+A story is [attr-18] if The story has the theme Problem-Solving.
+
+[attr-21]
+There’s always a trunk somewhere in the stacks for stories of secret maps and buried chests.
+A story is [attr-21] if The story is about hidden treasures.
+
+[attr-11]
+Some stories float like balloons; these get the lighthearted label.
+A story is [attr-11] if The story is lighthearted.
+
+[attr-3]
+A cunning false trail is a beloved prop in mysteries and misdirections.
+A story is [attr-3] if The story has a Red Herring.
+
+[attr-8]
+The archivists note beginnings carefully—those that open with "In," "On," "Under," or another preposition get a mark.
+A story is [attr-8] if The story starts with a preposition.
+
+[attr-20]
+When titans stomp across a page, the label is obvious.
+A story is [attr-20] if The story is about giant creatures.
+
+[attr-25]
+If a narrator insists on the biggest, the brightest, the most extraordinary, that’s a linguistic habit worth tagging.
+A story is [attr-25] if The story uses superlative forms.
+
+[attr-17]
+Spells, enchantments, and the unexplainable live under this banner.
+A story is [attr-17] if The story has the theme Magic.
+
+[attr-12]
+Stories that wear contemporary clothes—references, pacing, and tone—sit here.
+A story is [attr-12] if The story is modern.
+
+[attr-7]
+Some tales stride out with a manner—boldly, quietly, suddenly—and that opening adverb earns a note.
+A story is [attr-7] if The story starts with a adverb.
+
+[attr-22]
+When the map fans out into kingdoms of impossible terrain, they join this shelf.
+A story is [attr-22] if The story is about magical lands.
+
+[attr-4]
+The archivists measure clarity, and certain pages fall below the readability threshold.
+A story is [attr-4] if The story has readability score below 86.4.
+
+[attr-10]
+If the story’s aim is to make you laugh, it’s here—light jests, sharp wit, or silly antics.
+A story is [attr-10] if The story is humorous.
+
+[attr-15]
+When invention, invention’s leap, or new solutions form the center, we place the story here.
+A story is [attr-15] if The story has the theme Innovation.
+
+[attr-9]
+Stories that read like timeless tales—timeless cadences, tradition, and form—belong under classic.
+A story is [attr-9] if The story is classic.
+
+[attr-23]
+Dragons, sprites, and beings of legend are catalogued here.
+A story is [attr-23] if The story is about mystical creatures.
+
+[attr-16]
+When acts of care and compassion drive the plot, the story wears the kindness badge.
+A story is [attr-16] if The story has the theme Kindness.
+
+[attr-14]
+If humor itself—its structure or theme—is central, it gets this tag.
+A story is [attr-14] if The story has the theme Humor.
+
+[attr-6]
+Small parcels of fiction—concise and compact—are measured and labeled.
+A story is [attr-6] if The story has fewer than 160 words.
+
+[attr-24]
+Paintings, music, dance, and the lives of artists populate this corner.
+A story is [attr-24] if The story is about the arts.
+
+[attr-5]
+Now we come to a carved door with two locks. To be granted entry as [attr-5], a story need only satisfy either lock. The door’s decisions are precise:
+A story is [attr-5] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - The story is [attr-21]
+    - The story is [attr-22]
+  - either of the following is true:
+    - The story is [attr-23]
+    - The story is [attr-20] xor The story is [attr-24]
+- both of the following are true:
+  - The story is [attr-3]
+  - The story is [attr-6]
+
+Picture the first lock as a double condition: a map to hidden riches or a doorway to magical lands, paired with either mystical beings or a mutually exclusive choice between giant creatures and the arts. The second lock is simpler but strict: a red herring and a short form together open the door.
+
+[attr-19]
+Tone and style is a salon where manners and mood mingle. The rules for admission read like choreography—either a light touch or a clever balance, and the work must live in modern or classic clothes without failing a readability and opening test.
+A story is [attr-19] if both of the following are true:
+- either of the following is true:
+  - The story is [attr-11]
+  - The story is [attr-10] xor The story is [attr-9]
+- both of the following are true:
+  - The story is in [STYLE-MODERN, STYLE-CLASSIC]
+  - not both of the following are true:
+    - The story is [attr-4]
+    - The story starts with a preposition: The story is [attr-8]
+
+So the salon admits either outright lightness or a witty/classic interplay, then checks that it’s wearing modern or classic attire—and makes sure it doesn’t simultaneously suffer low readability and begin with a preposition.
+
+[attr-13]
+At the heart of our library sits the thematic core, a tri-fold gem. It may shine by solving problems and daring invention or magic, by holding exactly one of the virtues of kindness or humor, or by being a trio of themes without kindness.
+A story is [attr-13] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-18]
+  - either of the following is true:
+    - The story is [attr-15]
+    - The story is [attr-17]
+- exactly one of the following is true:
+  - The story is [attr-16]
+  - The story is [attr-14]
+- both of the following are true:
+  - The story is in [THEME-MAGIC, THEME-INNOVATION, THEME-PROBLEM-SOLVING]
+  - The story is [attr-16] equals false
+
+Read each branch carefully: first, problem-solving together with either innovation or magic; second, an exclusive choice between kindness and humor; third, a full trio of magic, innovation, and problem-solving—but only if kindness is explicitly not present.
+
+[attr-1]
+Think of this as a meeting where plot and tone shake hands. To earn [attr-1], a story must be allowed through the plot-structure door, and then either it fits the tone-and-style salon or it carries superlatives while not being distracted by a red herring.
+A story is [attr-1] if both of the following are true:
+- The story is [attr-5]
+- either of the following is true:
+  - The story is [attr-19]
+  - both of the following are true:
+    - The story is [attr-25]
+    - The story is not [attr-3]
+
+So a story with the right plot architecture plus either the right tonal dress or a bravado of superlatives (without the misdirection of a red herring) earns this combined badge.
+
+[attr-2]
+Finally, the most selective shelf: [attr-2]. It is a mirror of the whole archive, reflecting theme, plot, tone, and constraints about humor. The rules are careful and layered—listen as the archivist recites them exactly:
+A story is [attr-2] if either of the following is true:
+- both of the following are true:
+  - The story is [attr-13]
+  - exactly one of the following is true:
+    - The story is [attr-1]
+    - both of the following are true:
+      - The story is [attr-6]
+      - either of the following is true:
+        - The story is [attr-24]
+        - The story is [attr-21]
+- not both of the following are true:
+  - The story is [attr-10]
+  - The story is [attr-14]
+
+To restate the shelf’s temperament: a story can be complex by combining a thematic core with exactly one of two possibilities—either it also fits the combined plot-and-tone label, or it is a short story that centers on either the arts or hidden treasures. Alternatively, a story belongs here so long as it’s not guilty of being both humorous in style and humor as a theme.
+
+Closing the catalog, remember: these labels are companions, not cages. They let you trace the logic of a tale—what it cares about, how it dresses, what it hides. I’ve walked you through their faces and their rules, keeping every bracket, every connective, and every decision exactly as the archivists wrote them. Use this narrative map to find, tag, and reason about stories with both precision and a little delight.

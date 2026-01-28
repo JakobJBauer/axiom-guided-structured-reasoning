@@ -1,0 +1,34 @@
+Think of this as a little handbook you can skim casually, but rely on precisely—every label in brackets below matters exactly as written.
+
+If a tale opens with an adjective, we tag it [attr-4]. If it begins with a noun instead, it gets [attr-5].
+
+When the mood is breezy and easygoing, call that [attr-8]. If the scene tilts toward the dreamlike and unexpected, that's [attr-9]. When the writing aims to make you laugh, label it [attr-7].
+
+Some stories are built around puzzles and fixes; those carry the theme [attr-11]. Others hinge on tricks or misleading appearances and are marked [attr-10].
+
+Now for the combined rules—these preserve logical relationships exactly as stated:
+
+- A story is [attr-3] if exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+
+- A story is [attr-12] if either of the following is true:
+  - The story's style is in the set { [attr-8], [attr-7] }
+  - Both of the following are true:
+    - The story is [attr-9]
+    - The story is not [attr-10]
+
+- A story is [attr-2] if either of the following is true:
+  - The story is [attr-10]
+  - The story is [attr-11]
+
+- A story is [attr-6] if the following equality holds:
+  - [attr-8] = [attr-7]
+
+Finally, a story earns the label [attr-1] only when two things line up together:
+- The story is [attr-3]
+- Exactly one of the following is true:
+  - The story is [attr-12]
+  - The story is [attr-2]
+
+That’s the whole map—phrased in plain language but with the same exact nodes and logical wiring intact. Use the bracketed tags and the rules above when annotating or reasoning; they’re the canonical guide.

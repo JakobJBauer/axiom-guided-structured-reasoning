@@ -1,0 +1,78 @@
+Codebook — Structured version
+
+Purpose
+- Provide a clear, organized reference for annotators to decide which labels apply to a story.
+- Maintain exact node IDs and logical relationships. Do not add, remove, or change any nodes or logical operators.
+
+1) Atomic (single-condition) labels
+- These labels are decided by a single observable property of the story.
+
+  - [STYLE-MINIMALIST]
+    - Definition: A story is [STYLE-MINIMALIST] if the story is minimalist.
+
+  - [HIGH-READABILITY]
+    - Definition: A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+  - [USES-SUPERLATIVE-FORMS]
+    - Definition: A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+  - [THEME-GROWTH]
+    - Definition: A story is [THEME-GROWTH] if the story has the theme Growth.
+
+  - [TOPIC-TIME-TRAVEL]
+    - Definition: A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+  - [TOPIC-HIDDEN-TREASURES]
+    - Definition: A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+2) Composite labels (logical combinations)
+- These labels are defined by combining atomic labels with logical operators. Read each composite as: "A story is [LABEL] if ..." followed by the logical conditions.
+
+  - [CLEAR-CONCISE]
+    - A story is [CLEAR-CONCISE] if both of the following are true:
+      - The story is [STYLE-MINIMALIST]
+      - The story is [HIGH-READABILITY]
+
+  - [EMPHATIC]
+    - A story is [EMPHATIC] if both of the following are true:
+      - The story is [USES-SUPERLATIVE-FORMS]
+      - The story is not [STYLE-MINIMALIST]
+
+  - [THEMATIC-ARC]
+    - A story is [THEMATIC-ARC] if both of the following are true:
+      - The story is [THEME-GROWTH]
+      - Either of the following is true:
+        - The story is [TOPIC-TIME-TRAVEL]
+        - The story is [TOPIC-HIDDEN-TREASURES]
+
+  - [COMPELLING]
+    - A story is [COMPELLING] if both of the following are true:
+      - The story is [CLEAR-CONCISE]
+      - Either of the following is true:
+        - The story is [EMPHATIC]
+        - The story is [THEMATIC-ARC]
+
+3) Quick annotation checklist (use this in order)
+- Step 1 — Evaluate atomic properties:
+  - Is the story minimalist? → mark [STYLE-MINIMALIST]
+  - Is readability > 96.1? → mark [HIGH-READABILITY]
+  - Does it use superlative forms? → mark [USES-SUPERLATIVE-FORMS]
+  - Is the theme Growth? → mark [THEME-GROWTH]
+  - Is it about time travel? → mark [TOPIC-TIME-TRAVEL]
+  - Is it about hidden treasures? → mark [TOPIC-HIDDEN-TREASURES]
+
+- Step 2 — Infer composite labels using the exact logical rules:
+  - [CLEAR-CONCISE]: apply when both constituent atomic labels are present.
+  - [EMPHATIC]: apply when [USES-SUPERLATIVE-FORMS] is true and [STYLE-MINIMALIST] is false.
+  - [THEMATIC-ARC]: apply when [THEME-GROWTH] is true and at least one of the listed topics is true.
+  - [COMPELLING]: apply when [CLEAR-CONCISE] is true and at least one of ([EMPHATIC], [THEMATIC-ARC]) is true.
+
+4) Notes and tips for consistent decisions
+- Preserve the logical operators exactly as stated:
+  - "both of the following are true" = logical AND
+  - "Either of the following is true" = logical OR
+  - "is not" = logical NOT
+- Do not infer a composite label unless all required logical conditions are satisfied.
+- Evaluate atomic labels first; then apply the composite rules to avoid mistakes.
+
+End of codebook — keep this structure during annotation and reasoning.
