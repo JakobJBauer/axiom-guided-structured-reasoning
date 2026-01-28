@@ -7,12 +7,12 @@ This script runs the entire pipeline:
 3. Rewrite codebooks in different styles
 4. Obfuscate rewritten codebooks
 5. Parse all codebooks into graphs
-6. Serialize all graphs (pickle + JSON)
+6. Serialize all graphs as JSON
 7. Visualize all graphs (save images to images/ subdirectory)
 8. Verify graph equality across variants (logs unequal graphs to graph_equality_log.txt)
 
 Files that cannot be parsed are moved to a "corrupted" subdirectory along with
-all their associated files (.txt, .pkl, .json).
+all their associated files (.txt, .json).
 
 All files are saved in the same directory with appropriate suffixes.
 """
@@ -323,8 +323,8 @@ class CodebookPipeline:
         associated_files = []
         base_stem = base_file.stem
         
-        # Common extensions to look for
-        extensions = ['.txt', '.pkl', '.json']
+        # Common extensions to look for (pickle has been removed)
+        extensions = ['.txt', '.json']
         
         for ext in extensions:
             associated_file = base_file.parent / f"{base_stem}{ext}"
@@ -356,13 +356,12 @@ class CodebookPipeline:
             print("No codebook files to parse.")
             return
         
-        # Filter out files that already have both .pkl and .json
+        # Filter out files that already have a serialized graph (.json)
         files_to_process = []
         skipped = 0
         for codebook_file in codebook_files:
-            pkl_file = codebook_file.with_suffix('.pkl')
             json_file = codebook_file.with_suffix('.json')
-            if pkl_file.exists() and json_file.exists():
+            if json_file.exists():
                 skipped += 1
             else:
                 files_to_process.append(codebook_file)
@@ -385,7 +384,7 @@ class CodebookPipeline:
                 codebook_texts.append(codebook_text)
                 codebook_metadata.append({
                     "codebook_file": codebook_file,
-                    "output_path": codebook_file.with_suffix('.pkl')
+                    "json_path": codebook_file.with_suffix('.json')
                 })
             except Exception as e:
                 print(f"\nError reading {codebook_file.name}: {e}")
@@ -400,9 +399,6 @@ class CodebookPipeline:
         successful = 0
         failed = 0
 
-        # Define callback to save immediately when each graph is parsed
-        from serializer import save_graph
-
         def save_parse_callback(index: int, result: Any):
             if isinstance(result, Exception):
                 return  # Skip errors, they'll be handled later
@@ -410,14 +406,12 @@ class CodebookPipeline:
             try:
                 metadata = codebook_metadata[index]
                 graph_data = json.loads(result)
+                from serializer import save_graph
                 graph = self.parser._create_graph_from_data(graph_data)
 
-                # Save pickle file immediately
-                save_graph(graph, str(metadata["output_path"]))
-
-                # Save JSON file immediately using parser's method
-                json_path = metadata["output_path"].with_suffix('.json')
-                self.parser._save_graph_json(graph_data, str(json_path))
+                # Save JSON graph immediately
+                json_path = metadata["json_path"]
+                save_graph(graph, str(json_path))
             except Exception:
                 # Any issues are handled in the main loop; don't crash callback
                 return
@@ -458,12 +452,11 @@ class CodebookPipeline:
                         self._move_to_corrupted(codebook_file, output_path)
                         continue
 
-                    # Check if files exist, re-save if needed
-                    if not metadata["output_path"].exists():
-                        save_graph(graph, str(metadata["output_path"]))
-                    json_path = metadata["output_path"].with_suffix('.json')
+                    # Check if JSON exists, re-save if needed
+                    from serializer import save_graph
+                    json_path = metadata["json_path"]
                     if not json_path.exists():
-                        self.parser._save_graph_json(graph_data, str(json_path))
+                        save_graph(graph, str(json_path))
 
                     successful += 1
                 except Exception as e:
@@ -501,13 +494,16 @@ class CodebookPipeline:
         print(f"\nParsing complete: {successful} successful, {failed} failed")
     
     def _visualize_all_graphs(self, output_path: Path):
-        # Find all .pkl files (these are the serialized graphs)
-        pkl_files = list(output_path.glob("*.pkl"))
+        # Find all graph JSON files (these are the serialized graphs)
+        json_files = list(output_path.glob("*.json"))
         
-        # Exclude files in corrupted directory
-        pkl_files = [f for f in pkl_files if "corrupted" not in str(f)]
+        # Exclude files in corrupted directory or logs
+        json_files = [
+            f for f in json_files
+            if "corrupted" not in str(f) and "/logs/" not in str(f)
+        ]
         
-        if not pkl_files:
+        if not json_files:
             print("No graph files to visualize.")
             return
         
@@ -518,12 +514,12 @@ class CodebookPipeline:
         # Filter out files that already have images
         files_to_process = []
         skipped = 0
-        for pkl_file in pkl_files:
-            image_file = images_dir / f"{pkl_file.stem}.png"
+        for json_file in json_files:
+            image_file = images_dir / f"{json_file.stem}.png"
             if image_file.exists():
                 skipped += 1
             else:
-                files_to_process.append(pkl_file)
+                files_to_process.append(json_file)
         
         if skipped > 0:
             print(f"Skipping {skipped} already visualized graphs.")
@@ -537,14 +533,14 @@ class CodebookPipeline:
         failed = 0
         
         with tqdm(total=len(files_to_process), desc="Visualizing") as pbar:
-            for pkl_file in files_to_process:
+            for json_file in files_to_process:
                 try:
-                    # Load graph
+                    # Load graph from JSON
                     from serializer import load_graph
-                    graph = load_graph(str(pkl_file))
+                    graph = load_graph(str(json_file))
                     
                     # Create output path in images directory
-                    image_path = images_dir / f"{pkl_file.stem}.png"
+                    image_path = images_dir / f"{json_file.stem}.png"
                     
                     # Visualize
                     visualize_graph(
@@ -555,13 +551,13 @@ class CodebookPipeline:
                     
                     successful += 1
                     pbar.set_postfix({
-                        'file': pkl_file.name[:25],
+                        'file': json_file.name[:25],
                         'success': successful,
                         'failed': failed
                     })
                 except Exception as e:
                     failed += 1
-                    print(f"\nError visualizing {pkl_file.name}: {e}")
+                    print(f"\nError visualizing {json_file.name}: {e}")
                 finally:
                     pbar.update(1)
         
@@ -570,7 +566,7 @@ class CodebookPipeline:
     
     def _get_base_codebook_name(self, filename: str) -> str:
         """Extract base codebook name from filename (removes style and obfc suffixes)."""
-        # Remove .pkl extension
+        # Remove file extension
         stem = Path(filename).stem
         
         # Remove obfc suffix first (it's always last if present)
@@ -602,13 +598,16 @@ class CodebookPipeline:
     
     def _verify_graph_equality(self, output_path: Path):
         """Verify that graphs from rephrased codebooks are equal."""
-        # Find all .pkl files
-        pkl_files = list(output_path.glob("*.pkl"))
+        # Find all graph JSON files
+        json_files = list(output_path.glob("*.json"))
         
-        # Exclude files in corrupted directory
-        pkl_files = [f for f in pkl_files if "corrupted" not in str(f)]
+        # Exclude files in corrupted directory or logs
+        json_files = [
+            f for f in json_files
+            if "corrupted" not in str(f) and "/logs/" not in str(f)
+        ]
         
-        if not pkl_files:
+        if not json_files:
             print("No graph files to verify.")
             return
         
@@ -617,9 +616,9 @@ class CodebookPipeline:
         from serializer import load_graph
         
         codebook_groups = defaultdict(list)
-        for pkl_file in pkl_files:
-            base_name = self._get_base_codebook_name(pkl_file.name)
-            codebook_groups[base_name].append(pkl_file)
+        for json_file in json_files:
+            base_name = self._get_base_codebook_name(json_file.name)
+            codebook_groups[base_name].append(json_file)
         
         # Filter to only groups with multiple variants (base + rewritten + obfuscated)
         groups_to_check = {
@@ -642,13 +641,13 @@ class CodebookPipeline:
                 try:
                     # Load all graphs for this codebook
                     graphs = {}
-                    for pkl_file in files:
+                    for json_file in files:
                         try:
-                            graph = load_graph(str(pkl_file))
-                            variant = self._get_variant_name(pkl_file.name)
+                            graph = load_graph(str(json_file))
+                            variant = self._get_variant_name(json_file.name)
                             graphs[variant] = graph
                         except Exception as e:
-                            print(f"\nWarning: Could not load {pkl_file.name}: {e}")
+                            print(f"\nWarning: Could not load {json_file.name}: {e}")
                             continue
                     
                     if len(graphs) < 2:

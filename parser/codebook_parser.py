@@ -51,19 +51,16 @@ class CodebookParser:
         with open(codebook_path, 'r', encoding='utf-8') as f:
             codebook_text = f.read()
 
-        if output_path is None: output_path = self._get_output_path(codebook_path)
+        # Default output path for the serialized graph (JSON)
+        if output_path is None:
+            output_path = self._get_output_path(codebook_path)
         
         graph_data = self._extract_graph_structure(codebook_text)
         graph = self._create_graph_from_data(graph_data)
         
-        # Save pickle file
+        # Save graph using the central JSON serializer
         save_graph(graph, output_path)
         print(f"Graph saved to {output_path}")
-        
-        # Save JSON file (same name/location, different extension)
-        json_path = self._get_json_output_path(output_path)
-        self._save_graph_json(graph_data, json_path)
-        print(f"Graph JSON saved to {json_path}")
         
         return graph
     
@@ -377,12 +374,4 @@ Return only valid JSON, no additional text."""
     
     def _get_output_path(self, codebook_path: str) -> str:
         path = Path(codebook_path)
-        return str(path.with_suffix('.pkl'))
-    
-    def _get_json_output_path(self, pickle_path: str) -> str:
-        path = Path(pickle_path)
         return str(path.with_suffix('.json'))
-    
-    def _save_graph_json(self, graph_data: Dict[str, Any], json_path: str) -> None:
-        with open(json_path, 'w', encoding='utf-8') as f:
-            json.dump(graph_data, f, indent=2, ensure_ascii=False)

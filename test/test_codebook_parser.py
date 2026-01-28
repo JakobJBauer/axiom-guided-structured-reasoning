@@ -71,7 +71,7 @@ class TestCodebookParser(unittest.TestCase):
         
         # Parse codebook
         parser = CodebookParser()
-        output_path = os.path.join(self.temp_dir, "cb-1.pkl")
+        output_path = os.path.join(self.temp_dir, "cb-1.json")
         parsed_graph = parser.parse_codebook(self.codebook_path, output_path)
         
         # Check that all expected nodes exist
@@ -126,7 +126,7 @@ class TestCodebookParser(unittest.TestCase):
             self.skipTest("OPENAI_API_KEY not set in environment")
         
         parser = CodebookParser()
-        output_path = os.path.join(self.temp_dir, "cb-1.pkl")
+        output_path = os.path.join(self.temp_dir, "cb-1.json")
         parsed_graph = parser.parse_codebook(self.codebook_path, output_path)
         
         # Test specific formulas
@@ -157,7 +157,7 @@ class TestCodebookParser(unittest.TestCase):
             self.skipTest("OPENAI_API_KEY not set in environment")
         
         parser = CodebookParser()
-        output_path = os.path.join(self.temp_dir, "cb-1.pkl")
+        output_path = os.path.join(self.temp_dir, "cb-1.json")
         parsed_graph = parser.parse_codebook(self.codebook_path, output_path)
         
         # Get all leaf nodes from the parsed graph and set values for the ones we care about
@@ -227,14 +227,10 @@ class TestCodebookParser(unittest.TestCase):
             self.skipTest("OPENAI_API_KEY not set in environment")
         
         parser = CodebookParser()
-        output_path = os.path.join(self.temp_dir, "cb-1.pkl")
-        parsed_graph = parser.parse_codebook(self.codebook_path, output_path)
-        
-        # Check pickle file exists
-        self.assertTrue(os.path.exists(output_path), "Pickle file not created")
+        json_path = os.path.join(self.temp_dir, "cb-1.json")
+        parsed_graph = parser.parse_codebook(self.codebook_path, json_path)
         
         # Check JSON file exists
-        json_path = os.path.join(self.temp_dir, "cb-1.json")
         self.assertTrue(os.path.exists(json_path), "JSON file not created")
         
         # Verify JSON file is valid

@@ -22,7 +22,7 @@ class TestGraphSerializer(unittest.TestCase):
         """Set up test fixtures"""
         # Create a temporary directory for test files
         self.temp_dir = tempfile.mkdtemp()
-        self.test_file = os.path.join(self.temp_dir, "test_graph.pkl")
+        self.test_file = os.path.join(self.temp_dir, "test_graph.json")
     
     def tearDown(self):
         """Clean up test files"""
