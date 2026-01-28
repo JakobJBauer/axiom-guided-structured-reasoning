@@ -193,6 +193,8 @@ Extract the following structure and return as JSON:
       "label": "Node Label",  // human-readable label
       "formula_type": "Not|And|Or|Xor|Equal|In|null",  // null for leaf nodes
       "formula_args": ["arg1", "arg2"]  // arguments for the formula, or [] for leaf nodes
+      // IMPORTANT: For nested formulas, use nested objects:
+      // "formula_args": ["node1", {{"formula_type": "Or", "formula_args": ["node2", "node3"]}}]
     }}
   ],
   "edges": [
@@ -210,6 +212,11 @@ Rules:
 4. For "X or Y", create edges from both X and Y to the node
 5. Node IDs should be lowercase with hyphens (e.g., "non-noun", "well-selling")
 6. Only include nodes that are explicitly defined in the codebook
+7. CRITICAL: For nested formulas (e.g., "X and (Y or Z)"), represent them as nested JSON objects:
+   - Do NOT use string representations like "And(X, Or(Y, Z))"
+   - Instead use: ["X", {{"formula_type": "Or", "formula_args": ["Y", "Z"]}}]
+   - Example: "A is B and (C or D)" should be:
+     {{"formula_type": "And", "formula_args": ["b", {{"formula_type": "Or", "formula_args": ["c", "d"]}}]}}
 
 Codebook:
 {codebook_text}
@@ -262,60 +269,68 @@ Return only valid JSON, no additional text."""
         
         Args:
             formula_type: Type of formula (Not, And, Or, etc.)
-            args: Arguments for the formula (node IDs should be lowercase)
+            args: Arguments for the formula (node IDs should be lowercase, or nested formula dicts)
         
         Returns:
             Formula object
         """
-        # Normalize node IDs to lowercase (for all string args except values in Equal/In)
-        normalized_args = []
+        # Process arguments: handle nested formulas and normalize node IDs
+        processed_args = []
         for i, arg in enumerate(args):
-            if isinstance(arg, str) and formula_type not in ["Equal", "In"]:
-                normalized_args.append(arg.lower())
+            if isinstance(arg, dict) and "formula_type" in arg:
+                # This is a nested formula - recursively create it
+                nested_formula = self._create_formula(
+                    arg["formula_type"],
+                    arg.get("formula_args", [])
+                )
+                processed_args.append(nested_formula)
+            elif isinstance(arg, str) and formula_type not in ["Equal", "In"]:
+                # Normalize node IDs to lowercase
+                processed_args.append(arg.lower())
             elif isinstance(arg, str) and formula_type in ["Equal", "In"]:
                 # For Equal/In, first arg is node ID (normalize), rest are values (don't normalize)
                 if i == 0:
-                    normalized_args.append(arg.lower())
+                    processed_args.append(arg.lower())
                 else:
-                    normalized_args.append(arg)
+                    processed_args.append(arg)
             else:
-                normalized_args.append(arg)
+                processed_args.append(arg)
         
         if formula_type == "Not":
-            if len(normalized_args) != 1:
-                raise ValueError(f"Not formula requires 1 argument, got {len(normalized_args)}")
-            return Not(normalized_args[0])
+            if len(processed_args) != 1:
+                raise ValueError(f"Not formula requires 1 argument, got {len(processed_args)}")
+            return Not(processed_args[0])
         
         elif formula_type == "And":
-            if len(normalized_args) < 1:
-                raise ValueError(f"And formula requires at least 1 argument, got {len(normalized_args)}")
-            return And(*normalized_args)
+            if len(processed_args) < 1:
+                raise ValueError(f"And formula requires at least 1 argument, got {len(processed_args)}")
+            return And(*processed_args)
         
         elif formula_type == "Or":
-            if len(normalized_args) < 1:
-                raise ValueError(f"Or formula requires at least 1 argument, got {len(normalized_args)}")
-            return Or(*normalized_args)
+            if len(processed_args) < 1:
+                raise ValueError(f"Or formula requires at least 1 argument, got {len(processed_args)}")
+            return Or(*processed_args)
         
         elif formula_type == "Xor":
-            if len(normalized_args) < 1:
-                raise ValueError(f"Xor formula requires at least 1 argument, got {len(normalized_args)}")
-            return Xor(*normalized_args)
+            if len(processed_args) < 1:
+                raise ValueError(f"Xor formula requires at least 1 argument, got {len(processed_args)}")
+            return Xor(*processed_args)
         
         elif formula_type == "Equal":
-            if len(normalized_args) != 2:
-                raise ValueError(f"Equal formula requires 2 arguments, got {len(normalized_args)}")
+            if len(processed_args) != 2:
+                raise ValueError(f"Equal formula requires 2 arguments, got {len(processed_args)}")
             # First arg is node ID (normalized), second is value (parse)
-            value = self._parse_value(normalized_args[1])
-            return Equal(normalized_args[0], value)
+            value = self._parse_value(processed_args[1])
+            return Equal(processed_args[0], value)
         
         elif formula_type == "In":
-            if len(normalized_args) < 2:
-                raise ValueError(f"In formula requires at least 2 arguments, got {len(normalized_args)}")
-            key = normalized_args[0]  # Node ID (normalized)
-            if isinstance(normalized_args[1], list):
-                values = self._parse_value(normalized_args[1])
+            if len(processed_args) < 2:
+                raise ValueError(f"In formula requires at least 2 arguments, got {len(processed_args)}")
+            key = processed_args[0]  # Node ID (normalized)
+            if isinstance(processed_args[1], list):
+                values = self._parse_value(processed_args[1])
             else:
-                values = [self._parse_value(v) for v in normalized_args[1:]]
+                values = [self._parse_value(v) for v in processed_args[1:]]
             return In(key, values)
         
         else:
