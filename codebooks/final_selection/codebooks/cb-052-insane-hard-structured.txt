@@ -1,0 +1,174 @@
+Overview
+- Purpose: This codebook defines annotation labels (nodes) for stories. Each node is written as [NODE-ID].
+- How to read rules:
+  - Simple definitions: “A story is [NODE] if …” gives the direct criterion.
+  - Composite rules use precise logical phrases:
+    - “both of the following are true” = logical AND of all listed items.
+    - “either of the following is true” = logical OR of listed items.
+    - “all of the following are true” = logical AND across the group.
+    - “exactly one of the following is true” = exclusive OR (XOR).
+    - “not” = logical negation; written as “The story is not [NODE]”.
+- Node IDs are preserved exactly in [BRACKET] form. Logical structure and relationships are unchanged.
+
+Atomic (single-condition) nodes
+- Themes
+  - A story is [THEME-GROWTH] if:
+    - The story has the theme Growth.
+  - A story is [THEME-HELPING-OTHERS] if:
+    - The story has the theme Helping Others.
+  - A story is [THEME-DECEPTION] if:
+    - The story has the theme Deception.
+  - A story is [THEME-KINDNESS] if:
+    - The story has the theme Kindness.
+  - A story is [THEME-HARDSHIP] if:
+    - The story has the theme Hardship.
+  - A story is [THEME-PROBLEM-SOLVING] if:
+    - The story has the theme Problem-Solving.
+  - A story is [THEME-INNOVATION] if:
+    - The story has the theme Innovation.
+  - A story is [THEME-MAGIC] if:
+    - The story has the theme Magic.
+  - A story is [THEME-HUMOR] if:
+    - The story has the theme Humor.
+
+- Styles
+  - A story is [STYLE-HUMOROUS] if:
+    - The story is humorous.
+  - A story is [STYLE-MODERN] if:
+    - The story is modern.
+  - A story is [STYLE-LIGHTHEARTED] if:
+    - The story is lighthearted.
+  - A story is [STYLE-PHILOSOPHICAL] if:
+    - The story is philosophical.
+  - A story is [STYLE-MINIMALIST] if:
+    - The story is minimalist.
+  - A story is [STYLE-SURREAL] if:
+    - The story is surreal.
+
+- Topics
+  - A story is [TOPIC-LOST-CIVILIZATIONS] if:
+    - The story is about lost civilizations.
+  - A story is [TOPIC-TIME-TRAVEL] if:
+    - The story is about time travel.
+  - A story is [TOPIC-SEASONAL-CHANGES] if:
+    - The story is about seasonal changes.
+  - A story is [TOPIC-GIANT-CREATURES] if:
+    - The story is about giant creatures.
+  - A story is [TOPIC-CULTURAL-TRADITIONS] if:
+    - The story is about cultural traditions.
+  - A story is [TOPIC-MAGICAL-LANDS] if:
+    - The story is about magical lands.
+  - A story is [TOPIC-BYGONE-ERAS] if:
+    - The story is about bygone eras.
+  - A story is [TOPIC-MYSTICAL-CREATURES] if:
+    - The story is about mystical creatures.
+
+- Structural / Syntactic markers
+  - A story is [STARTS-WITH-PREPOSITION] if:
+    - The story starts with a preposition.
+  - A story is [STARTS-WITH-ADVERB] if:
+    - The story starts with an adverb.
+  - A story is [STARTS-WITH-NOUN] if:
+    - The story starts with a noun.
+  - A story is [USES-PERFECT-ASPECT] if:
+    - The story uses perfect aspect.
+  - A story is [USES-WH-QUESTIONS] if:
+    - The story uses wh-questions.
+  - A story is [USES-DISCOURSE-MARKERS] if:
+    - The story uses discourse markers.
+  - A story is [USES-SUPERLATIVE-FORMS] if:
+    - The story uses superlative forms.
+
+- Narrative devices and devices
+  - A story is [HAS-CHECKHOVS-GUN] if:
+    - The story has Checkhov's gun.
+  - A story is [HAS-A-MORAL-LESSON] if:
+    - The story has a moral lesson.
+  - A story is [HAS-A-CLIFFHANGER] if:
+    - The story has a cliffhanger.
+  - A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if:
+    - The story has circular narrative structure.
+  - A story is [HAS-A-FLASHBACK] if:
+    - The story has a flashback.
+  - A story is [HAS-A-STORY-WITHIN-A-STORY] if:
+    - The story has a story within a story.
+
+- Readability and length
+  - A story is [HIGH-READABILITY] if:
+    - The story has readability score above 96.1.
+  - A story is [LOW-READABILITY] if:
+    - The story has readability score below 86.4.
+  - A story is [LONG-STORY] if:
+    - The story has more than 375 words.
+
+Composite (multi-condition) nodes
+- Simple combinations
+  - A story is [HUMOROUS-LIGHTHEARTED] if both of the following are true:
+    - The story is [STYLE-HUMOROUS]
+    - The story is [STYLE-LIGHTHEARTED]
+
+  - A story is [MAGIC-LANDS-CREATURES] if both of the following are true:
+    - The story is [TOPIC-MAGICAL-LANDS]
+    - either of the following is true:
+      - The story is [TOPIC-MYSTICAL-CREATURES]
+      - The story is [TOPIC-GIANT-CREATURES]
+
+  - A story is [INNOVATION-PROBLEM-SOLVE] if both of the following are true:
+    - The story is [THEME-INNOVATION]
+    - The story is [THEME-PROBLEM-SOLVING]
+
+  - A story is [PACING-LONG-CLIFF] if both of the following are true:
+    - The story is [LONG-STORY]
+    - The story is [HAS-A-CLIFFHANGER]
+
+- OR / Either combinations
+  - A story is [MODERN-PHILOSOPHICAL-SURREAL] if either of the following is true:
+    - The story is [STYLE-MODERN]
+    - both of the following are true:
+      - The story is [STYLE-PHILOSOPHICAL]
+      - The story is [STYLE-SURREAL]
+
+  - A story is [TIME-LOST-BYGONE] if either of the following is true:
+    - both of the following are true:
+      - The story is [TOPIC-TIME-TRAVEL]
+      - The story is [TOPIC-LOST-CIVILIZATIONS]
+    - The story is [TOPIC-BYGONE-ERAS]
+
+- ALL / AND combinations
+  - A story is [NARRATIVE-COMPLEXITY] if all of the following are true:
+    - The story is [HAS-A-STORY-WITHIN-A-STORY]
+    - The story is [HAS-A-FLASHBACK]
+    - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+
+  - A story is [MORALITY-FILTER] if all of the following are true:
+    - The story is [HAS-A-MORAL-LESSON]
+    - The story is [THEME-KINDNESS]
+    - The story is not [THEME-DECEPTION]
+
+  - A story is [THEMATIC-HELP-KIND] if both of the following are true:
+    - The story is [THEME-HELPING-OTHERS]
+    - The story is [THEME-KINDNESS]
+
+- EXACTLY ONE (exclusive) conditions
+  - A story is [READABILITY-EXTREMES] if exactly one of the following is true:
+    - The story is [HIGH-READABILITY]
+    - The story is [LOW-READABILITY]
+
+- Multi-level composite: [COMPLEX-ARCHETYPE]
+  - A story is [COMPLEX-ARCHETYPE] if either of the following is true:
+    1) All of the following are true:
+      - The story is [HUMOROUS-LIGHTHEARTED]
+      - The story is [MORALITY-FILTER]
+      - either of the following is true:
+        - The story is [NARRATIVE-COMPLEXITY]
+        - The story is [PACING-LONG-CLIFF]
+    2) Exactly one of the following is true:
+      - both of the following are true:
+        - The story is [MAGIC-LANDS-CREATURES]
+        - The story is not [STYLE-MINIMALIST]
+      - The story is [TIME-LOST-BYGONE]
+
+Final notes for annotators
+- Follow the exact logical phrasing provided when deciding whether a label applies.
+- For composite nodes, evaluate the inner nodes first (atomic definitions and intermediate composites) and then apply the outer logical operator.
+- Do not alter node IDs or logical operators; use them exactly as shown above.

@@ -1,0 +1,36 @@
+Technical Codebook — Formal Definitions for Annotation
+
+Purpose: This document specifies the formal node definitions and logical compositions used for annotating short narrative texts. Each node is defined precisely. Logical compositions preserve original operators and structure to support deterministic reasoning.
+
+[SHORT-STORY]
+Specification: A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+[THEME-MAGIC]
+Specification: A story is [THEME-MAGIC] if the story has the theme Magic.
+
+[USES-WH-QUESTIONS]
+Specification: A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+[HAS-CHECKHOVS-GUN]
+Specification: A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun.
+
+[HIGH-READABILITY]
+Specification: A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+[MYSTERIOUS-MAGIC]
+Specification: A story is [MYSTERIOUS-MAGIC] if both of the following are true:
+- The story is [THEME-MAGIC]
+- The story is not [HAS-CHECKHOVS-GUN]
+
+[TIGHT-MAGIC-CRAFT]
+Specification: A story is [TIGHT-MAGIC-CRAFT] if both of the following are true:
+- The story is [SHORT-STORY]
+- Either of the following is true:
+  - The story is [MYSTERIOUS-MAGIC]
+  - Exactly one of the following is true:
+    - The story is not [HIGH-READABILITY]
+    - The story is [USES-WH-QUESTIONS]
+
+Notes:
+- Logical operators are explicit in the structure above: "both of the following are true" denotes conjunction; "Either of the following is true" denotes disjunction; "Exactly one of the following is true" denotes exclusive disjunction (XOR); negation is represented by "is not".
+- All node identifiers are literal and must remain unchanged when applied in annotation workflows.

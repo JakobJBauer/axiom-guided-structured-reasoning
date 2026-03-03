@@ -1,0 +1,150 @@
+Codebook — Structured Edition
+
+Purpose: Provide a clear, organized reference for annotators. Each node (ID in [BRACKET]) defines a predicate about a story. The logical relationships (And, Or, Not, Xor, Equal) and node IDs are preserved exactly as in the original codebook.
+
+1) Atomic predicates — simple, directly observable tags
+- Themes
+  - [THEME-INNOVATION]
+    - A story is [THEME-INNOVATION] if The story has the theme Innovation
+  - [THEME-HUMOR]
+    - A story is [THEME-HUMOR] if The story has the theme Humor
+  - [THEME-GROWTH]
+    - A story is [THEME-GROWTH] if The story has the theme Growth
+  - [THEME-HARDSHIP]
+    - A story is [THEME-HARDSHIP] if The story has the theme Hardship
+  - [THEME-HELPING-OTHERS]
+    - A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others
+  - [THEME-KINDNESS]
+    - A story is [THEME-KINDNESS] if The story has the theme Kindness
+  - [THEME-MAGIC]
+    - A story is [THEME-MAGIC] if The story has the theme Magic
+
+- Styles (single-style tags)
+  - [STYLE-CLASSIC]
+    - A story is [STYLE-CLASSIC] if The story is classic
+  - [STYLE-MODERN]
+    - A story is [STYLE-MODERN] if The story is modern
+  - [STYLE-PLAYFUL]
+    - A story is [STYLE-PLAYFUL] if The story is playful
+  - [STYLE-HUMOROUS]
+    - A story is [STYLE-HUMOROUS] if The story is humorous
+  - [STYLE-PHILOSOPHICAL]
+    - A story is [STYLE-PHILOSOPHICAL] if The story is philosophical
+
+- Topics
+  - [TOPIC-HIDDEN-TREASURES]
+    - A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures
+  - [TOPIC-MYSTICAL-CREATURES]
+    - A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures
+  - [TOPIC-LOST-CIVILIZATIONS]
+    - A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations
+  - [TOPIC-MAGICAL-LANDS]
+    - A story is [TOPIC-MAGICAL-LANDS] if The story is about magical lands
+  - [TOPIC-TIME-TRAVEL]
+    - A story is [TOPIC-TIME-TRAVEL] if The story is about time travel
+
+- Length and readability
+  - [SHORT-STORY]
+    - A story is [SHORT-STORY] if The story has fewer than 160 words
+  - [LONG-STORY]
+    - A story is [LONG-STORY] if The story has more than 375 words
+  - [LOW-READABILITY]
+    - A story is [LOW-READABILITY] if The story has readability score below 86.4
+
+- Structural / narrative features
+  - [HAS-A-MORAL-LESSON]
+    - A story is [HAS-A-MORAL-LESSON] if The story has a moral lesson
+  - [HAS-CIRCULAR-NARRATIVE-STRUCT]
+    - A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if The story has circular narrative structure
+  - [HAS-A-STORY-WITHIN-A-STORY]
+    - A story is [HAS-A-STORY-WITHIN-A-STORY] if The story has a story within a story
+  - [HAS-JUXTAPOSITION]
+    - A story is [HAS-JUXTAPOSITION] if The story has juxtaposition
+
+- Surface/grammar signals
+  - [STARTS-WITH-ADJECTIVE]
+    - A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective
+  - [USES-CONDITIONAL-MOOD]
+    - A story is [USES-CONDITIONAL-MOOD] if The story uses conditional mood
+  - [USES-SUPERLATIVE-FORMS]
+    - A story is [USES-SUPERLATIVE-FORMS] if The story uses superlative forms
+  - [USES-WH-QUESTIONS]
+    - A story is [USES-WH-QUESTIONS] if The story uses wh-questions
+
+2) Set-style (membership) definitions
+- [STYLE-CATEGORY]
+  - A story is [STYLE-CATEGORY] if the story's style is In the set { [STYLE-CLASSIC], [STYLE-MODERN], [STYLE-PLAYFUL], [STYLE-HUMOROUS], [STYLE-PHILOSOPHICAL] }
+
+- [TOPIC-MYSTICAL-SET]
+  - A story is [TOPIC-MYSTICAL-SET] if the story's topic is In the set { [TOPIC-MYSTICAL-CREATURES], [TOPIC-MAGICAL-LANDS], [TOPIC-HIDDEN-TREASURES], [TOPIC-LOST-CIVILIZATIONS], [TOPIC-TIME-TRAVEL] }
+
+3) Composite logical nodes — structured conditions and operators
+- [THEME-CLUSTER]
+  - A story is [THEME-CLUSTER] if either of the following are true (Or):
+    - The story is [THEME-INNOVATION]
+    - The story is [THEME-GROWTH]
+    - The story is [THEME-HARDSHIP]
+    - The story is [THEME-HELPING-OTHERS]
+    - The story is [THEME-KINDNESS]
+    - The story is [THEME-MAGIC]
+    - The story is [THEME-HUMOR]
+
+- [NARRATIVE-LENGTH-XOR]
+  - A story is [NARRATIVE-LENGTH-XOR] if exactly one (Xor) of the following is true:
+    - The story is [SHORT-STORY]
+    - The story is [LONG-STORY]
+
+- [READABILITY-AND-START]
+  - A story is [READABILITY-AND-START] if both of the following are true (And):
+    - The story is [LOW-READABILITY]
+    - The story is [STARTS-WITH-ADJECTIVE]
+
+- [STRUCTURAL-DEVICE]
+  - A story is [STRUCTURAL-DEVICE] if either of the following are true (Or):
+    - The story is [HAS-A-STORY-WITHIN-A-STORY]
+    - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+    - The story is [HAS-JUXTAPOSITION]
+
+- [MORAL-OR-GROWTH]
+  - A story is [MORAL-OR-GROWTH] if either of the following are true (Or):
+    - The story is [HAS-A-MORAL-LESSON]
+    - The story is [THEME-GROWTH]
+
+- [EQUAL-THEME-PRESENCE]
+  - A story is [EQUAL-THEME-PRESENCE] if Equal(the truth of [THEME-GROWTH], the truth of [THEME-HARDSHIP])
+
+- [BALANCED-THEME]
+  - A story is [BALANCED-THEME] if both of the following are true (And):
+    - The story is [EQUAL-THEME-PRESENCE]
+    - Either of the following are true (Or):
+      - The story is [THEME-KINDNESS]
+      - The story is [THEME-HELPING-OTHERS]
+
+- [THEME-SYNDROME]
+  - A story is [THEME-SYNDROME] if both of the following are true (And):
+    - The story is [THEME-CLUSTER]
+    - Either of the following are true (Or):
+      - The story is [BALANCED-THEME]
+      - The story is [THEME-INNOVATION]
+
+4) Final compound type — full conjunction for complex annotation
+- [COMPLEX-STORY-TYPE]
+  - A story is [COMPLEX-STORY-TYPE] if all of the following are true:
+    - The story is [THEME-SYNDROME]
+    - The story is [STYLE-CATEGORY]
+    - The story is [TOPIC-MYSTICAL-SET]
+    - The story is [STRUCTURAL-DEVICE]
+    - Not the story is [STYLE-CLASSIC]
+    - The story is [NARRATIVE-LENGTH-XOR]
+    - The story is [READABILITY-AND-START]
+    - The story is [MORAL-OR-GROWTH]
+
+Notes for annotators (pragmatic guidance)
+- Read each atomic predicate literally: these are the building blocks used by the composite nodes.
+- For "Or" blocks: satisfying any listed sub-node makes the parent true.
+- For "And" blocks: every listed sub-node must be true for the parent to hold.
+- For "Xor": exactly one of the listed options must be true — not zero, not both.
+- For "Equal(...)": follow the equality of truth values as specified.
+- The phrase "Not the story is [STYLE-CLASSIC]" must be interpreted as logical negation (the story must not be [STYLE-CLASSIC]) when evaluating [COMPLEX-STORY-TYPE].
+
+This structured layout preserves all node IDs, logical operations, and relationships unchanged while organizing the content for easier, systematic annotation.

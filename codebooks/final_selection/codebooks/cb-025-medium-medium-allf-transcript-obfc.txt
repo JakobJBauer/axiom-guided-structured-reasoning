@@ -1,0 +1,81 @@
+Interviewer: Let's go through this codebook together. Can you define the simple labels first?
+
+Expert: Sure.
+
+Interviewer: What does [attr-4] mean?
+
+Expert: A story is [attr-4] if The story has a moral lesson.
+
+Interviewer: And [attr-12]?
+
+Expert: A story is [attr-12] if The story uses perfect aspect.
+
+Interviewer: How about [attr-2]?
+
+Expert: A story is [attr-2] if The story has a cliffhanger.
+
+Interviewer: [attr-11]?
+
+Expert: A story is [attr-11] if The story has the theme Kindness.
+
+Interviewer: [attr-10]?
+
+Expert: A story is [attr-10] if The story is modern.
+
+Interviewer: [attr-3]?
+
+Expert: A story is [attr-3] if The story has a flashback.
+
+Interviewer: [attr-8]?
+
+Expert: A story is [attr-8] if The story is classic.
+
+Interviewer: [attr-6]?
+
+Expert: A story is [attr-6] if The story has more than 375 words.
+
+Interviewer: [attr-5]?
+
+Expert: A story is [attr-5] if The story has juxtaposition.
+
+Interviewer: [attr-9]?
+
+Expert: A story is [attr-9] if The story is lighthearted.
+
+Interviewer: Great. Now the composite definitions get more detailed. Explain [attr-7].
+
+Expert: Of course. A story is [attr-7] if all of the following are true:
+- Either of the following is true:
+  - The story is [attr-2]
+  - The story is [attr-3]
+- Exactly one of the following is true:
+  - The story is [attr-5]
+  - The story is [attr-12]
+- The story is not [attr-9]
+- At least one of the story's structural features is in the set { [attr-2], [attr-3], [attr-5] }
+
+Interviewer: Let me pause you—why list both the first and the last condition? Aren't they similar?
+
+Expert: They are related but not redundant. The first condition requires the presence of either a cliffhanger or a flashback. The last condition broadens structural features to include juxtaposition as well, ensuring at least one of those three is present. The middle condition then forces an exclusive choice between juxtaposition and perfect aspect. All of these together create the exact logical profile of [attr-7].
+
+Interviewer: That helps. Now explain [attr-1].
+
+Expert: A story is [attr-1] if both of the following are true:
+- The story is [attr-7]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [attr-11]
+    - The story is [attr-4]
+  - The presence of [attr-10] equals the presence of [attr-8]
+
+Interviewer: Can you clarify "The presence of [attr-10] equals the presence of [attr-8]"?
+
+Expert: That line means modern style and classic style must either both be present or both be absent. The code requires that their presence matches exactly.
+
+Interviewer: So to summarize, [attr-1] builds on [attr-7] and then adds a thematic/moral requirement plus a parity condition between modern and classic styles?
+
+Expert: Exactly. You need the narrative richness as defined earlier, plus either a kindness theme or a moral lesson, and you must have modern and classic styles either both present or both absent.
+
+Interviewer: Thank you. This transcript preserves the exact logical relationships and node identifiers, but puts them in a conversational form for easier reading.
+
+Expert: You're welcome. If you want, we can walk through example stories and check which nodes they'd trigger, step by step.

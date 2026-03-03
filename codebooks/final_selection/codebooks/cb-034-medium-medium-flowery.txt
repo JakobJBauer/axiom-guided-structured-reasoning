@@ -1,0 +1,66 @@
+Once upon a ledger, where labels bloom like roses on a trellis of logic, this codebook lives — a careful garden of tags tended so that readers and annotators may wander, understanding each pathway and branch without losing the map. Below, each rule keeps its exact scaffold of identities and operations; around that scaffold I have dressed words in petals and woven gentle stories that illuminate their meaning without changing their truth.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if The story has the theme Growth.
+- In plain and poetic terms: bestow this mark upon any tale whose central arc celebrates increase, maturation, renewal, or the inward journey toward greater being. Think of it as the laurel for narratives where characters, ideas, or worlds deepen and expand.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others.
+- Apply this label to stories that place compassion, aid, or altruism at their heart — where characters lift one another, build bridges of kindness, or place communal welfare above solitary pursuits.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if The story starts with a adverb.
+- Use this tag for any tale whose very first word is an adverb: a grammatical herald that sets tone, tempo, or manner right from the opening breath.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if The story is modern.
+- This marker crowns narratives that bear the hallmarks of modernity — contemporary voice, present-day sensibilities, or stylistic choices that feel of this era. Think sleek timbres, current idioms, and the air of now.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if The story is about seasonal changes.
+- Tag tales whose subject is the turning of seasons: the wheel of spring, summer, autumn, and winter, and the transformations they bring to landscapes, life cycles, and moods.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+- Assign this label when the narrative employs perfect verb forms (has/have/had + past participle), a grammatical weave that ties actions to completed contexts or states viewed from a particular vantage.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if The story has readability score below 86.4.
+- Pin this badge on works whose measured readability falls beneath the threshold of 86.4 — texts that require a bit more effort from readers, perhaps due to complex structure, dense diction, or intricate syntax.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic.
+- Use this classification for narratives that evoke the timeless: formal cadence, traditional structure, or resonances of older literary customs that recall the great past.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures.
+- Apply when the tale concerns beings of myth and magic — dragons, sprites, or otherworldly denizens that populate the realm of the uncanny.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if The story has readability score above 96.1.
+- This label graces texts that are exceptionally clear and accessible, with readability exceeding 96.1 — prose that flows like a gentle stream, easily navigated by most readers.
+
+[SEASONAL-GROWTH]
+A story is [SEASONAL-GROWTH] if all of the following are true:
+- The story is [TOPIC-SEASONAL-CHANGES]
+- The story is [THEME-GROWTH]
+- The story is not [TOPIC-MYSTICAL-CREATURES]
+- In florid terms: this composite bloom appears when a tale is about the turning seasons and carries growth as its central theme, yet remains grounded — free of mystical beings. It’s the label for naturalistic, seasonal narratives that trace development without invoking fantastical creatures.
+
+[COMPOSED-STORY]
+A story is [COMPOSED-STORY] if either of the following is true:
+- both of the following are true:
+  - The story is [SEASONAL-GROWTH]
+  - The story is [THEME-HELPING-OTHERS]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [STYLE-MODERN]
+    - The story is not [LOW-READABILITY]
+  - both of the following are true:
+    - The story is [STYLE-CLASSIC]
+    - both of the following are true:
+      - The story is [USES-PERFECT-ASPECT]
+      - The story is [HIGH-READABILITY]
+- To crown a tale [COMPOSED-STORY] is to recognize a variety of harmonious forms. A narrative may earn this honor by combining seasonal natural growth with altruistic themes; or it may arrive by craft — if it is modern and crisply readable; or by venerable polish — if it is classic, uses the perfect aspect, and attains very high readability. These are alternative pathways to the same distinguished designation.
+
+Thus this garden of tags stands both precise and poetic: every bracketed name remains inviolate, each logical hinge intact. Read and apply these labels with the delight of a botanist cataloguing blossoms — informed by rhyme, guided by reason.

@@ -1,0 +1,44 @@
+Codebook — Technical Specification
+
+Purpose
+This codebook specifies precise annotation criteria for a set of topic and theme labels used in story-level analysis. Each label is defined as a binary predicate: a story either satisfies the label or it does not. The definitions below describe the exact conditions under which a story should be assigned each label.
+
+Atomic labels
+
+- [THEME-INNOVATION]
+  - Definition: Assign [THEME-INNOVATION] if and only if the primary thematic content of the story concerns innovation. This includes narratives that center on the introduction, development, adaptation, or effects of new ideas, technologies, methods, or practices.
+
+- [TOPIC-CULTURAL-TRADITIONS]
+  - Definition: Assign [TOPIC-CULTURAL-TRADITIONS] if and only if the story’s subject matter concerns cultural traditions. This includes descriptions, explanations, depictions, or discussions of customary practices, rituals, heritage activities, or socially transmitted cultural norms.
+
+- [TOPIC-BYGONE-ERAS]
+  - Definition: Assign [TOPIC-BYGONE-ERAS] if and only if the story’s subject matter pertains to bygone eras. This includes content focused on historical periods, past societies, or timeframes predominantly situated in the past.
+
+- [USES-WH-QUESTIONS]
+  - Definition: Assign [USES-WH-QUESTIONS] if and only if the text of the story contains one or more wh-questions (e.g., who, what, when, where, why, how). The presence of at least one explicit wh-question is sufficient.
+
+- [STARTS-WITH-NOUN]
+  - Definition: Assign [STARTS-WITH-NOUN] if and only if the first token of the story’s text is a noun (including proper nouns and nominalized forms). Tokenization and part-of-speech tagging should be applied according to the project’s standard NLP preprocessing pipeline.
+
+- [STARTS-WITH-PREPOSITION]
+  - Definition: Assign [STARTS-WITH-PREPOSITION] if and only if the first token of the story’s text is a preposition. Use the same tokenization/POS-tagging standards as above.
+
+Composite label (Boolean composition)
+
+- [CULTURAL-INNOVATION-QUESTIONS]
+  - Definition: Assign [CULTURAL-INNOVATION-QUESTIONS] if and only if all of the following conditions hold concurrently:
+    - The story is [THEME-INNOVATION]
+    - Either of the following is true:
+      - The story is [TOPIC-CULTURAL-TRADITIONS]
+      - The story is [TOPIC-BYGONE-ERAS]
+    - The story is [USES-WH-QUESTIONS]
+
+  - Formal interpretation: [CULTURAL-INNOVATION-QUESTIONS] = [THEME-INNOVATION] AND ([TOPIC-CULTURAL-TRADITIONS] OR [TOPIC-BYGONE-ERAS]) AND [USES-WH-QUESTIONS].
+
+Annotation notes and guidance
+- Maintain the exact label IDs when tagging content; do not modify or abbreviate the bracketed identifiers.
+- Apply labels independently for atomic criteria; composite labels are derived only after atomic annotations are complete and evaluated per the Boolean formula above.
+- Use consistent preprocessing (tokenization and POS tagging) as specified by project standards when determining [STARTS-WITH-NOUN] and [STARTS-WITH-PREPOSITION].
+- For ambiguous cases (e.g., metaphorical uses of “innovation” or rhetorical mentions), prioritize contextual intent: assign [THEME-INNOVATION] only when innovation is a central thematic element rather than a passing reference.
+
+End of specification.

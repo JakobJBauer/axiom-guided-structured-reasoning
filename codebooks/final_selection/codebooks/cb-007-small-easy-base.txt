@@ -1,0 +1,21 @@
+[STYLE-LIGHTHEARTED]
+A story is STYLE-LIGHTHEARTED if the story is lighthearted.
+
+[STARTS-WITH-ADVERB]
+A story is STARTS-WITH-ADVERB if the story starts with a adverb.
+
+[LONG-STORY]
+A story is LONG-STORY if the story has more than 375 words.
+
+[THEME-HUMOR]
+A story is THEME-HUMOR if the story has the theme Humor.
+
+[TOPIC-BYGONE-ERAS]
+A story is TOPIC-BYGONE-ERAS if the story is about bygone eras.
+
+[WHIMSY-RETRO-COMEDY]
+A story is WHIMSY-RETRO-COMEDY if both of the following are true:
+- The story is [STYLE-LIGHTHEARTED]
+- The story is [THEME-HUMOR] and either of the following is true:
+  - The story is [TOPIC-BYGONE-ERAS]
+  - The story is [STARTS-WITH-ADVERB]

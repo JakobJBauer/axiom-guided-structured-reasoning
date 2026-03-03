@@ -1,0 +1,42 @@
+Imagine a dimly lit archive where every story is a creature to be classified. As you wander the stacks, you meet labels that whisper what makes a tale tick. Below, the labels are written plainly—each one exact and unambiguous—while I walk you through them like a guide telling the origin tale of this taxonomy.
+
+[attr-7]
+A story is USES-DISCOURSE-MARKERS if the story uses discourse markers
+
+Think of this as a little flag that rises whenever a narrator threads the tale together with signposts—“however,” “meanwhile,” “on the other hand.” It’s the storyteller’s glue.
+
+[attr-4]
+A story is HAS-JUXTAPOSITION if the story has juxtaposition
+
+This label marks the moments when two images or ideas are set side by side, letting the contrast sing.
+
+[attr-6]
+A story is TOPIC-MYSTICAL-CREATURES if the story is about mystical creatures
+
+When a plot revolves around beings of myth and magic—dragons that whisper, spirits at crossroads—this tag comes alive.
+
+[attr-3]
+A story is HAS-A-RED-HERRING if the story has a Red Herring
+
+This one points to a deliberate misdirection, a gleaming false clue that sends readers down a sidetrack.
+
+[attr-5]
+A story is TOPIC-GIANT-CREATURES if the story is about giant creatures
+
+When the narrative’s heartbeat belongs to creatures of immense size—colossal footsteps that reshape the horizon—this marker applies.
+
+[attr-1]
+A story is FANTASTICAL-JUXTAPOSITION if both of the following are true:
+- The story is [attr-6]
+- The story is [attr-4]
+
+Here the archive places two tokens together: a story about mystical beings that also uses juxtaposition. Imagine a scene where an ethereal phoenix is described next to an ordinary streetlamp—the magical and the mundane contrasted—this combined label is exactly when both are present.
+
+[attr-2]
+A story is GIANT-MISDIRECTION if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-3]
+
+And finally, when a tale about gargantuan beings deliberately plants a misleading clue—maybe a trembling ground blamed on tectonics instead of a titan’s approach—that confluence earns the GIANT-MISDIRECTION tag.
+
+Walk away from this archive with the certainty that every label is precise and every relationship intact. The nodes remain as written; the logic that binds them is the map by which you’ll annotate and reason.

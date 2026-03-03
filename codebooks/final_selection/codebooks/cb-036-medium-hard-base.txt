@@ -1,0 +1,55 @@
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if the story has readability score below 86.4
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if the story starts with a adjective
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if the story has the theme Deception
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if the story starts with a adverb
+
+[NARRATIVE-SURFACE]
+A story is [NARRATIVE-SURFACE] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [STARTS-WITH-ADJECTIVE]
+  - The story is [STARTS-WITH-ADVERB]
+- Both of the following are true:
+  - The story is [USES-DISCOURSE-MARKERS]
+  - Either of the following is true:
+    - The story is [LOW-READABILITY]
+    - The story is [STARTS-WITH-PREPOSITION]
+
+[INSCRUTABLE-THEME-STRUCTURE]
+A story is [INSCRUTABLE-THEME-STRUCTURE] if both of the following are true:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [TOPIC-TIME-TRAVEL]
+    - Exactly one of the following is true:
+      - The story is [THEME-DECEPTION]
+      - The story is [THEME-HELPING-OTHERS]
+  - Both of the following are true:
+    - The story is [TOPIC-SEASONAL-CHANGES]
+    - Both of the following are true:
+      - The story is [TOPIC-HIDDEN-TREASURES]
+      - The story is not [TOPIC-TIME-TRAVEL]
+- The story is [NARRATIVE-SURFACE]

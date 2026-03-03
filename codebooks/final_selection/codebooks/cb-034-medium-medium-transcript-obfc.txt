@@ -1,0 +1,130 @@
+Interviewer: Let’s go through this codebook together. Can you explain each node one by one, starting with the simple ones?
+
+Expert: Sure — I’ll read the rule and then briefly clarify it in plain terms.
+
+Interviewer: What is [attr-9]?
+
+Expert: A story is [attr-9] if The story has the theme Growth.
+- In plain terms: tag a story [attr-9] when its central theme is about growth.
+
+Interviewer: And [attr-10]?
+
+Expert: A story is [attr-10] if The story has the theme Helping Others.
+- Clarification: use this tag when the story’s theme centers on helping other people or characters.
+
+Interviewer: What does [attr-6] indicate?
+
+Expert: A story is [attr-6] if The story starts with a adverb.
+- In other words: the very first word of the story is an adverb.
+
+Interviewer: Explain [attr-8].
+
+Expert: A story is [attr-8] if The story is modern.
+- That means the story’s style or setting is modern.
+
+Interviewer: What about [attr-12]?
+
+Expert: A story is [attr-12] if The story is about seasonal changes.
+- So tag it when the plot or subject matter deals with seasons changing.
+
+Interviewer: How about [attr-13]?
+
+Expert: A story is [attr-13] if The story uses perfect aspect.
+- That means the narrative uses grammatical perfect aspect (e.g., “has eaten,” “had seen”).
+
+Interviewer: What does [attr-4] mean?
+
+Expert: A story is [attr-4] if The story has readability score below 86.4.
+- Practically: if the computed readability metric is under 86.4, apply this tag.
+
+Interviewer: And [attr-7]?
+
+Expert: A story is [attr-7] if The story is classic.
+- Use this when the story’s style is classical rather than modern.
+
+Interviewer: What is [attr-11]?
+
+Expert: A story is [attr-11] if The story is about mystical creatures.
+- Tag stories focused on mythical or magical beings.
+
+Interviewer: Finally among the simple ones, [attr-3]?
+
+Expert: A story is [attr-3] if The story has readability score above 96.1.
+- So if that readability metric exceeds 96.1, this tag applies.
+
+Interviewer: Great. Now the composite nodes — can we unpack [attr-5]?
+
+Expert: Yes. Here’s the rule and then I’ll unpack it:
+- [attr-5]
+  A story is [attr-5] if all of the following are true:
+  - The story is [attr-12]
+  - The story is [attr-9]
+  - The story is not [attr-11]
+
+Interviewer: What does “all of the following are true” imply here?
+
+Expert: It means every one of those three conditions must hold simultaneously.
+- So a story must be about seasonal changes, must have Growth as its theme, and must NOT be about mystical creatures. If any one of those fails, you do not label it [attr-5].
+
+Interviewer: Clear. Now [attr-2] looks more complex — walk me through it.
+
+Expert: Certainly. I’ll present the rule exactly and then explain each branch:
+- [attr-2]
+  A story is [attr-2] if either of the following is true:
+  - both of the following are true:
+    - The story is [attr-5]
+    - The story is [attr-10]
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [attr-8]
+      - The story is not [attr-4]
+    - both of the following are true:
+      - The story is [attr-7]
+      - both of the following are true:
+        - The story is [attr-13]
+        - The story is [attr-3]
+
+Interviewer: That’s nested. Can you translate the logical structure into stepwise logic?
+
+Expert: Yes — there are three distinct ways for a story to satisfy [attr-2], but they’re organized under an outer “either/or”:
+
+1) First branch (simple AND):
+   - Both must hold:
+     - The story is [attr-5]
+     - The story is [attr-10]
+   - So if a story is seasonal-growth and also about helping others, it qualifies.
+
+2) Second branch (either/or with two sub-branches):
+   - Either of the two sub-branches can make the story a [attr-2].
+
+   Sub-branch A:
+   - Both must hold:
+     - The story is [attr-8]
+     - The story is not [attr-4]
+   - So a modern story with readability at or above the LOW-READABILITY threshold (i.e., not below 86.4) qualifies.
+
+   Sub-branch B:
+   - Both must hold:
+     - The story is [attr-7]
+     - And both of the following must also hold:
+       - The story is [attr-13]
+       - The story is [attr-3]
+   - So a classic story qualifies only if it uses perfect aspect and has high readability (>96.1).
+
+Interviewer: To be explicit: the outer operator is “either of the following is true,” so satisfying any one of the two top-level bullets is enough, correct?
+
+Expert: Exactly. And where the phrase “both of the following are true” appears, both subconditions inside that bullet must be true. Where “either of the following is true” appears, satisfying any one sub-bullet is sufficient.
+
+Interviewer: Any special pitfalls annotators should watch for?
+
+Expert: A few reminders:
+- Do not change node IDs — keep them exactly as [attr-1]ed here.
+- Preserve the logical operators: “both” = AND, “either” = OR, and explicit “not” must be enforced.
+- For [attr-5], remember the negative condition: being about mystical creatures disqualifies it.
+- For [attr-2], note the nesting: classic-style requires two additional conditions (perfect aspect and high readability), while modern style only requires not being low-readability.
+
+Interviewer: That helps. Anything else?
+
+Expert: That’s the full codebook restated conversationally. If you want, I can walk through a few example stories and demonstrate how to apply these tags step by step.
+
+Interviewer: Not right now—this is clear. Thanks.

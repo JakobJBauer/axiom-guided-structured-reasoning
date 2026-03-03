@@ -1,0 +1,36 @@
+Interviewer: Let's go through this codebook together. First, what does [THEME-INNOVATION] mean?
+
+Expert: A story is [THEME-INNOVATION] if the story has the theme Innovation.
+
+Interviewer: Got it. And what about [TOPIC-CULTURAL-TRADITIONS]?
+
+Expert: A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+Interviewer: How about [TOPIC-BYGONE-ERAS]?
+
+Expert: A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras.
+
+Interviewer: I see. There's also [USES-WH-QUESTIONS] — what does that denote?
+
+Expert: A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+Interviewer: And these start-with tags — what do they indicate?
+
+Expert: A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+
+Interviewer: Now the important composite node — tell me how [CULTURAL-INNOVATION-QUESTIONS] is defined.
+
+Expert: Sure. Here's the exact logical definition you should use:
+
+[CULTURAL-INNOVATION-QUESTIONS]
+A story is [CULTURAL-INNOVATION-QUESTIONS] if all of the following are true:
+- The story is [THEME-INNOVATION]
+- Either of the following is true:
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+  - The story is [TOPIC-BYGONE-ERAS]
+- The story is [USES-WH-QUESTIONS]
+
+Interviewer: So to confirm, a story must have the Innovation theme, must be either about cultural traditions or bygone eras, and must use wh-questions — all three together — to be marked as [CULTURAL-INNOVATION-QUESTIONS]?
+
+Expert: Exactly. All those conditions together form the label [CULTURAL-INNOVATION-QUESTIONS].

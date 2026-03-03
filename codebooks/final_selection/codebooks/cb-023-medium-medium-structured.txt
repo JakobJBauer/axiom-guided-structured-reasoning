@@ -1,0 +1,75 @@
+Purpose
+- This codebook defines labels (nodes) used to classify stories.
+- Each label is given a clear condition. Composite labels combine simpler labels using logical operations (And, Or, Not).
+- Keep this sheet nearby while annotating so you can apply labels consistently.
+
+I. Atomic (single-condition) labels
+- [STYLE-PHILOSOPHICAL]
+  - Definition: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+- [TOPIC-THE-ARTS]
+  - Definition: A story is [TOPIC-THE-ARTS] if the story is about the arts.
+
+- [HAS-A-FLASHBACK]
+  - Definition: A story is [HAS-A-FLASHBACK] if the story has a flashback.
+
+- [HAS-A-STORY-WITHIN-A-STORY]
+  - Definition: A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+- [THEME-DECEPTION]
+  - Definition: A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+- [HAS-A-RED-HERRING]
+  - Definition: A story is [HAS-A-RED-HERRING] if the story has a Red Herring.
+
+- [HAS-A-MORAL-LESSON]
+  - Definition: A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+II. Composite (logical) labels — structure and conditions
+- [REFLECTIVE-ARTS]
+  - Logic: AND relationship
+  - A story is [REFLECTIVE-ARTS] if both of the following are true:
+    - The story is [STYLE-PHILOSOPHICAL]
+    - The story is [TOPIC-THE-ARTS]
+
+- [META-STRUCTURE]
+  - Logic: OR relationship
+  - A story is [META-STRUCTURE] if either of the following is true:
+    - The story is [HAS-A-FLASHBACK]
+    - The story is [HAS-A-STORY-WITHIN-A-STORY]
+
+- [MISDIRECTION]
+  - Logic: AND relationship
+  - A story is [MISDIRECTION] if both of the following are true:
+    - The story is [THEME-DECEPTION]
+    - The story is [HAS-A-RED-HERRING]
+
+- [DIDACTIC-MISDIRECT]
+  - Logic: AND with a NOT condition
+  - A story is [DIDACTIC-MISDIRECT] if all of the following are true:
+    - The story is [MISDIRECTION]
+    - The story is [HAS-A-MORAL-LESSON]
+    - The story is not [REFLECTIVE-ARTS]
+
+- [COMPLEX-PARABLE]
+  - Logic: AND relationship between composite labels
+  - A story is [COMPLEX-PARABLE] if both of the following are true:
+    - The story is [DIDACTIC-MISDIRECT]
+    - The story is [META-STRUCTURE]
+
+Quick annotation checklist (use with each story)
+- Identify atomic properties first:
+  - Is it philosophical? → [STYLE-PHILOSOPHICAL]
+  - Is it about the arts? → [TOPIC-THE-ARTS]
+  - Any flashbacks? → [HAS-A-FLASHBACK]
+  - Any story-within? → [HAS-A-STORY-WITHIN-A-STORY]
+  - Does deception drive the theme? → [THEME-DECEPTION]
+  - Is there a red herring? → [HAS-A-RED-HERRING]
+  - Is there an explicit moral lesson? → [HAS-A-MORAL-LESSON]
+- Then derive composite labels using the logical rules above:
+  - Apply AND / OR / NOT exactly as specified for each composite node.
+
+Notes on logical integrity
+- Do not alter node IDs or the logical relationships shown.
+- Composite labels depend strictly on the listed conditions (including negation for [DIDACTIC-MISDIRECT]).
+- Use this structured view to reason step-by-step from atomic facts to higher-level labels.

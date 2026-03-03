@@ -1,0 +1,152 @@
+{
+  "nodes": [
+    {
+      "id": "style-playful",
+      "label": "Style Playful",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-minimalist",
+      "label": "Style Minimalist",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-moral-lesson",
+      "label": "Has a Moral Lesson",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-time-travel",
+      "label": "Topic Time Travel",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-noun",
+      "label": "Starts With Noun",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "many-paragraphs",
+      "label": "Many Paragraphs",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-conditional-mood",
+      "label": "Uses Conditional Mood",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-hardship",
+      "label": "Theme Hardship",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "compound-style",
+      "label": "Compound Style",
+      "formula_type": "And",
+      "formula_args": [
+        "style-playful",
+        "style-minimalist"
+      ]
+    },
+    {
+      "id": "complex-narrative",
+      "label": "Complex Narrative",
+      "formula_type": "And",
+      "formula_args": [
+        "many-paragraphs",
+        "uses-conditional-mood",
+        "starts-with-noun"
+      ]
+    },
+    {
+      "id": "time-moral",
+      "label": "Time Moral",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-time-travel",
+        "has-a-moral-lesson"
+      ]
+    },
+    {
+      "id": "rich-style-narrative",
+      "label": "Rich Style Narrative",
+      "formula_type": "And",
+      "formula_args": [
+        "complex-narrative",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "compound-style",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "style-playful",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "theme-hardship"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "style-playful",
+      "target": "compound-style"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "compound-style"
+    },
+    {
+      "source": "many-paragraphs",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "uses-conditional-mood",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "starts-with-noun",
+      "target": "complex-narrative"
+    },
+    {
+      "source": "topic-time-travel",
+      "target": "time-moral"
+    },
+    {
+      "source": "has-a-moral-lesson",
+      "target": "time-moral"
+    },
+    {
+      "source": "complex-narrative",
+      "target": "rich-style-narrative"
+    },
+    {
+      "source": "compound-style",
+      "target": "rich-style-narrative"
+    },
+    {
+      "source": "style-playful",
+      "target": "rich-style-narrative"
+    },
+    {
+      "source": "theme-hardship",
+      "target": "rich-style-narrative"
+    }
+  ]
+}

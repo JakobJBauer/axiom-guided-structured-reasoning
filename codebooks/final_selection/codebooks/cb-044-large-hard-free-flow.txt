@@ -1,0 +1,81 @@
+[HAS-JUXTAPOSITION]
+Whenever a story places contrasting elements side by side — that feeling of two things rubbing up against each other to create meaning — we call it [HAS-JUXTAPOSITION]. In short: if the story has juxtaposition, tag it as [HAS-JUXTAPOSITION].
+
+[STYLE-PHILOSOPHICAL]
+If a story leans into big ideas, reflection, or philosophical inquiry, it falls under [STYLE-PHILOSOPHICAL]. When the tone or intent is contemplative, use this label.
+
+[THEME-HARDSHIP]
+When struggle, suffering, or challenge is a core theme, the story is [THEME-HARDSHIP]. If hardship drives the narrative or its message, mark it so.
+
+[THEME-HUMOR]
+If humor is a defining theme — jokes, comedic situations, or an overall funny thrust — the story is [THEME-HUMOR].
+
+[TOPIC-THE-ARTS]
+Stories that are centered on the arts — painters, music, theater, craft, creative practice — are grouped under [TOPIC-THE-ARTS].
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+When the narrative loops back on itself or follows a circular arc, label it [HAS-CIRCULAR-NARRATIVE-STRUCT]. If the structure returns to its starting point, that’s the cue.
+
+[THEME-DECEPTION]
+If deception — lying, trickery, or hidden motives — is a theme in the story, it should be marked [THEME-DECEPTION].
+
+[THEME-HELPING-OTHERS]
+When the story emphasizes helping others, acts of assistance, or altruistic deeds, it qualifies as [THEME-HELPING-OTHERS].
+
+[HAS-A-MORAL-LESSON]
+If the story conveys a clear moral lesson — an explicit ethical takeaway — tag it as [HAS-A-MORAL-LESSON].
+
+[STYLE-HUMOROUS]
+When the way a story is told is humorous — its style itself aims for laughs or wit — use [STYLE-HUMOROUS].
+
+[STYLE-MINIMALIST]
+A story that keeps things sparse, pared down, and economical in language is [STYLE-MINIMALIST]. If it’s stripped to essentials, that’s the sign.
+
+[TOPIC-GIANT-CREATURES]
+If giant creatures are central to the story — huge beasts or enormous entities — label it [TOPIC-GIANT-CREATURES].
+
+[STYLE-LIGHTHEARTED]
+When a story carries a breezy, upbeat, or carefree tone, it fits [STYLE-LIGHTHEARTED].
+
+[TOPIC-TIME-TRAVEL]
+Stories that involve moving through time or time-travel concepts should be marked [TOPIC-TIME-TRAVEL].
+
+[STARTS-WITH-PREPOSITION]
+If a story’s opening word is a preposition, tag it [STARTS-WITH-PREPOSITION].
+
+[SHORT-STORY]
+Use [SHORT-STORY] for pieces that are under 160 words — brief, compact stories.
+
+[USES-SUPERLATIVE-FORMS]
+When a story uses superlatives (biggest, best, worst, most, etc.), mark it as [USES-SUPERLATIVE-FORMS].
+
+[THEME-KINDNESS]
+If kindness — generosity, compassion, or benevolence — is a theme, label the story [THEME-KINDNESS].
+
+[HIGH-READABILITY]
+When a story scores above 96.1 on readability, it meets the threshold for [HIGH-READABILITY].
+
+[JUX-PREP-CLASH]
+A story is [JUX-PREP-CLASH] when two conditions hold together: first, it must be [HAS-JUXTAPOSITION]; and second, either it [STARTS-WITH-PREPOSITION] or it’s a [SHORT-STORY]. In other words, juxtaposition plus either a prepositional start or brevity makes a JUX-PREP-CLASH.
+
+[JUXTAPOSED-SUPERLATIVE]
+We call a story [JUXTAPOSED-SUPERLATIVE] when it meets these requirements: it is a [JUX-PREP-CLASH], and exactly one of the following is true — either it [USES-SUPERLATIVE-FORMS] or it is [STYLE-MINIMALIST]. Precisely one, not both.
+
+[ARTISTIC-PHILOSOPHY]
+A story becomes [ARTISTIC-PHILOSOPHY] when it is rooted in [TOPIC-THE-ARTS] and, in addition, it either embraces [STYLE-PHILOSOPHICAL] or qualifies as [JUXTAPOSED-SUPERLATIVE]. So art + (philosophical style or that juxtaposed-superlative pattern) defines this node.
+
+[HUMOROUS-HYBRID]
+Label a story [HUMOROUS-HYBRID] when these two things are true at once. First, it must satisfy at least one of these: it has the theme [THEME-HUMOR] or the style [STYLE-HUMOROUS]. Second, it must meet all of the following: it is not [STYLE-MINIMALIST], and exactly one of these holds — it is [STYLE-LIGHTHEARTED] or it [USES-SUPERLATIVE-FORMS]. Both conditions together create the humorous hybrid.
+
+[ALTRUISTIC-CONTRACTION]
+A story is [ALTRUISTIC-CONTRACTION] in either of these ways. Option one: both of these are true — it [HAS-A-MORAL-LESSON] and, additionally, it is either [THEME-HELPING-OTHERS] or [THEME-KINDNESS]. Option two: exactly one of these themes is present — either [THEME-DECEPTION] or [THEME-HARDSHIP]. So it’s either moral plus altruistic theme, or a single presence of deception or hardship.
+
+[COMPLEX-ARTFUL-STORY]
+Finally, [COMPLEX-ARTFUL-STORY] requires two broad conditions to be met together. First, either:
+- both [ARTISTIC-PHILOSOPHY] and [ALTRUISTIC-CONTRACTION] are true, or
+- exactly one of these is true: [HUMOROUS-HYBRID] or [TOPIC-GIANT-CREATURES].
+And second, either:
+- both [TOPIC-TIME-TRAVEL] and [HAS-CIRCULAR-NARRATIVE-STRUCT] are true, or
+- both [SHORT-STORY] and [HIGH-READABILITY] are true.
+
+Put simply: a Complex Artful Story is a careful blend — an artistic or hybrid element together with either time-travel circularity or a short, highly readable form — arranged exactly as above.

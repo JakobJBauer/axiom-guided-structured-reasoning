@@ -1,0 +1,77 @@
+Codebook — Technical Definitions
+
+This document specifies node definitions and their logical composition for story annotation. Each entry defines a predicate over a story. Node identifiers are shown in [attr-1] format and must remain unchanged. Logical composition uses the original phrasings: "Both of the following are true", "Either of the following is true", and "Exactly one of the following is true". Negation is expressed as "not". These definitions are intended for deterministic annotation and logical reasoning.
+
+Atomic predicates
+- [attr-7]
+  - Definition: A story is [attr-7] if the story is lighthearted.
+
+- [attr-4]
+  - Definition: A story is [attr-4] if the story contains Chekhov's gun (an element introduced earlier that becomes significant later).
+
+- [attr-3]
+  - Definition: A story is [attr-3] if the story includes a cliffhanger (an unresolved ending or suspenseful interruption).
+
+- [attr-10]
+  - Definition: A story is [attr-10] if the story has the theme Hardship.
+
+- [attr-11]
+  - Definition: A story is [attr-11] if the story has the theme Helping Others.
+
+- [attr-9]
+  - Definition: A story is [attr-9] if the story has the theme Deception.
+
+- [attr-12]
+  - Definition: A story is [attr-12] if the story has the theme Problem-Solving.
+
+Composed predicates
+- [attr-8]
+  - Definition: A story is [attr-8] if exactly one of the following is true:
+    - The story is [attr-10]
+    - The story is [attr-9]
+  - Note: This is an exclusive OR over the two thematic predicates.
+
+- [attr-13]
+  - Definition: A story is [attr-13] if both of the following are true:
+    - The story is [attr-7]
+    - Either of the following is true:
+      - The story is [attr-8]
+      - The story is [attr-12]
+  - Logical form: STYLE-LIGHTHEARTED ∧ (THEMATIC-CONFLICT ∨ THEME-PROBLEM-SOLVING).
+
+- [attr-6]
+  - Definition: A story is [attr-6] if both of the following are true:
+    - The story is [attr-4]
+    - Exactly one of the following is true:
+      - The story is [attr-12]
+      - The story is [attr-3]
+  - Note: This is a conjunction that includes an exclusive disjunction on plot-related features.
+
+- [attr-5]
+  - Definition: A story is [attr-5] if either of the following is true:
+    - Both of the following are true:
+      - The story is [attr-11]
+      - The story is not [attr-9]
+    - Both of the following are true:
+      - The story is [attr-12]
+      - The story is [attr-11]
+  - Interpretation: MORAL-ARC holds when Helping Others occurs without Deception, or when Helping Others co-occurs with Problem-Solving.
+
+- [attr-2]
+  - Definition: A story is [attr-2] if either of the following is true:
+    - Both of the following are true:
+      - The story is [attr-13]
+      - Both of the following are true:
+        - The story is [attr-6]
+        - The story is [attr-5]
+    - All of the following are true:
+      - The story is not [attr-13]
+      - Either of the following is true:
+        - The story is [attr-6]
+        - The story is [attr-3]
+      - The story is not both of the following:
+        - The story is [attr-10]
+        - The story is [attr-9]
+  - Logical structure: COMPLEX-NARRATIVE is satisfied either by the conjunction of TONE-CONFLICTED, PLOT-DRIVEN, and MORAL-ARC, or by a non-conflicted route that requires plot- or cliffhanger-related conditions while excluding simultaneous HARDSHIP and DECEPTION.
+
+End of codebook.

@@ -1,0 +1,35 @@
+In the hushed alcoves of a library that smells of old paper and moonlight, someone has transcribed a little grimoire for those who catalogue tales. The pages that follow keep their mappings and reasoning as precise as the constellations, but they are dressed now in garlands of language—each entry a lantern-lit description meant to delight the mind while preserving the exact logical scaffolding beneath.
+
+[USES-DISCOURSE-MARKERS]
+A story is USES-DISCOURSE-MARKERS if the story uses discourse markers
+- In plainer terms, this tag is bestowed upon any tale that adorns its sentences with the little signposts—therefore, however, meanwhile, on the other hand—that show the reader how to travel from one thought to the next. Imagine a storyteller who places luminous milestones along the road of narration: that is what this label captures. The essence is technical and simple, yet one can picture the markers as tiny lanterns guiding the reader through the story’s winding lanes.
+
+[HAS-JUXTAPOSITION]
+A story is HAS-JUXTAPOSITION if the story has juxtaposition
+- This marker denotes a narrative that sets images, ideas, or scenes side by side so that their contrast or harmony is revealed. Like two portraits hung together in a gallery to spark conversation, juxtaposition in a story creates meaning through proximity. The definition remains uncompromisingly functional: if the story contains such side-by-side placing, it earns this name.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is TOPIC-MYSTICAL-CREATURES if the story is about mystical creatures
+- This is the banner raised for tales whose subject is the extraordinary beings of myth and wonder—sprites, dragons, spirits, and other creatures that live where the map’s ink fades. The label is applied whenever these mythical presences are central to the narrative’s subject matter, nothing more, nothing less.
+
+[HAS-A-RED-HERRING]
+A story is HAS-A-RED-HERRING if the story has a Red Herring
+- This tag marks the presence of deliberate misdirection: an alluring clue or detail planted to lead the reader’s thoughts away from the truth. Think of a crimson fish tossed into the trail of a sleuth—an artful diversion. Practically speaking, the story is marked whenever such misleading elements are present.
+
+[TOPIC-GIANT-CREATURES]
+A story is TOPIC-GIANT-CREATURES if the story is about giant creatures
+- Reserved for narratives whose focus is on beings of enormous scale—colossal titans, towering beasts, and creatures that make mountains feel like pebbles—the tag identifies stories where gargantuan lifeforms are the topic under discussion.
+
+[FANTASTICAL-JUXTAPOSITION]
+A story is FANTASTICAL-JUXTAPOSITION if both of the following are true:
+- The story is [TOPIC-MYSTICAL-CREATURES]
+- The story is [HAS-JUXTAPOSITION]
+- Here the codebook weaves two threads into a single tapestry. A tale earns the FANTASTICAL-JUXTAPOSITION name only when it simultaneously belongs to the realm of mystical beings and deliberately sets contrasting or complementary elements side by side. Picture enchanted creatures placed beside mundane realities or opposite mythical types arranged to illuminate difference—the conjunction of those two qualities is what this composite label precisely captures.
+
+[GIANT-MISDIRECTION]
+A story is GIANT-MISDIRECTION if both of the following are true:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is [HAS-A-RED-HERRING]
+- This final emblem hangs where enormity and guile meet. A narrative is called GIANT-MISDIRECTION only when it both centers on gigantic creatures and contains a red herring—a deliberate diversion meant to mislead. Envision vast beasts stomping the stage while a clever false trail distracts the audience; both conditions must hold for this classification to apply.
+
+May this bewitching yet exact codebook guide annotators as they wander through forests of fiction—each entry a faithful signpost wrapped in ribboned language, preserving the precise logic that scholars and storytellers rely upon.

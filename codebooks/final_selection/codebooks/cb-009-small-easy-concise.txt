@@ -1,0 +1,28 @@
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if it uses superlative forms.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if it uses the perfect aspect.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if it is about lost civilizations.
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if it has juxtaposition.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if it has fewer than 160 words.
+
+[EPICALLY-CONCISE-LOST]
+A story is [EPICALLY-CONCISE-LOST] if both of the following are true:
+- The story is [TOPIC-LOST-CIVILIZATIONS]
+- The story is [SHORT-STORY]
+
+[ORNATE-REFLECTIVE]
+A story is [ORNATE-REFLECTIVE] if either of the following are true:
+- Both of the following are true:
+  - The story is [USES-SUPERLATIVE-FORMS]
+  - The story is [USES-PERFECT-ASPECT]
+- Both of the following are true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [HAS-JUXTAPOSITION]

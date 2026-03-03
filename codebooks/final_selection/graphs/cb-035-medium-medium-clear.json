@@ -1,0 +1,135 @@
+{
+  "nodes": [
+    {
+      "id": "style-minimalist",
+      "label": "STYLE-MINIMALIST",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "high-readability",
+      "label": "HIGH-READABILITY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-superlative-forms",
+      "label": "USES-SUPERLATIVE-FORMS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-growth",
+      "label": "THEME-GROWTH",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-time-travel",
+      "label": "TOPIC-TIME-TRAVEL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-hidden-treasures",
+      "label": "TOPIC-HIDDEN-TREASURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "clear-concise",
+      "label": "CLEAR-CONCISE",
+      "formula_type": "And",
+      "formula_args": [
+        "style-minimalist",
+        "high-readability"
+      ]
+    },
+    {
+      "id": "emphatic",
+      "label": "EMPHATIC",
+      "formula_type": "And",
+      "formula_args": [
+        "uses-superlative-forms",
+        {
+          "formula_type": "Not",
+          "formula_args": [
+            "style-minimalist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thematic-arc",
+      "label": "THEMATIC-ARC",
+      "formula_type": "And",
+      "formula_args": [
+        "theme-growth",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "topic-time-travel",
+            "topic-hidden-treasures"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compelling",
+      "label": "COMPELLING",
+      "formula_type": "And",
+      "formula_args": [
+        "clear-concise",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "emphatic",
+            "thematic-arc"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "style-minimalist",
+      "target": "clear-concise"
+    },
+    {
+      "source": "high-readability",
+      "target": "clear-concise"
+    },
+    {
+      "source": "uses-superlative-forms",
+      "target": "emphatic"
+    },
+    {
+      "source": "style-minimalist",
+      "target": "emphatic"
+    },
+    {
+      "source": "theme-growth",
+      "target": "thematic-arc"
+    },
+    {
+      "source": "topic-time-travel",
+      "target": "thematic-arc"
+    },
+    {
+      "source": "topic-hidden-treasures",
+      "target": "thematic-arc"
+    },
+    {
+      "source": "clear-concise",
+      "target": "compelling"
+    },
+    {
+      "source": "emphatic",
+      "target": "compelling"
+    },
+    {
+      "source": "thematic-arc",
+      "target": "compelling"
+    }
+  ]
+}

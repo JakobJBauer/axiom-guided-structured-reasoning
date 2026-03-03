@@ -1,0 +1,49 @@
+Imagine a library where each shelf murmurs a rule about stories, and a quiet guide walks you through them, naming the characters and the laws that bind them. He points first to the simple truths—the names that cling to a tale like a scent—and then to the compound rules that stitch those truths together.
+
+[attr-7]
+A story is [attr-7] if The story has the theme Helping Others.
+
+The guide smiles and waves his hand toward a familiar archetype: the helper, the healer, the neighbor who lifts a fallen stranger. That scent of goodwill is what earns a tale the tag above.
+
+[attr-6]
+A story is [attr-6] if The story is philosophical.
+
+He taps the books of thought and reflection. When a story pauses to ask why, to weigh ideas more than events, it wears the [attr-6] label.
+
+[attr-4]
+A story is [attr-4] if The story is classic.
+
+He gestures to the re-bound leather volumes — steady, time-tested forms and conventions. Those are the [attr-4] stories.
+
+[attr-1]
+A story is [attr-1] if The story has juxtaposition.
+
+Near a shelf where contrasts face each other—light and dark, old and new—the guide points out [attr-1]: tales that place opposites side by side to reveal their shape.
+
+[attr-5]
+A story is [attr-5] if The story is modern.
+
+Across the room, a neon spine declares the contemporary pulse: experiments in form, voice that breathes now—these are the [attr-5] stories.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-1]
+- Exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+
+Then the guide points to a curious alcove where styles collide. He explains the rule for a hybrid badge: [attr-2]. It belongs to a tale only when both conditions line up—the tale must stage juxtaposition, and it must be anchored in exactly one of the two style camps, classic or modern, but not both.
+
+[attr-3]
+A story is [attr-3] if either of the following is true:
+- All of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-7]
+  - The story is not [attr-2]
+- Both of the following are true:
+  - The story is [attr-2]
+  - The story is not [attr-7]
+
+Finally he lowers his voice and traces the outline of a rare, dramatic species: [attr-3]. It can arrive by two distinct routes. One path is quiet and pure: a philosophical story about helping others that is not a mixed-style juxtaposition. The other path is paradoxical and dramatic: a tale that is a mixed-style juxtaposition but surprisingly not about helping others. Either way, when a story satisfies one of these precise combinations, it earns that resonant name.
+
+The guide closes his notebook. The rules are clear and the tags precise—each a little map so readers and annotators can find the shape of any tale in the stacks.

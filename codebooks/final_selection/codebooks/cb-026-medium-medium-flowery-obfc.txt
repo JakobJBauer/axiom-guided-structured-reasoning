@@ -1,0 +1,79 @@
+In a quiet alcove of an old library of tales, where dust motes dance like wayward thoughts and candles breathe soft light over brittle pages, there lives a codebook. It is not merely a ledger of labels but a map — a delicate filigree of rules and relationships that helps readers and annotators discern the soul of a story. Treat this as that venerable manuscript rephrased for a more lyrical audience: the logic remains steadfast, the node names remain written as runes in brackets, and the connections between them are preserved exactly as they were carved. Read on, and let each entry bloom into description and meaning without altering a single structural thread.
+
+[attr-13]
+A story is [attr-13] if The story is about time travel. 
+- In other words, the tale involves journeys through the river of time — characters who step backward or forward across eras, or plots that hinge on the marvelous rearrangement of moments.
+
+[attr-11]
+A story is [attr-11] if The story is about hidden treasures. 
+- This embraces narratives where secret hoards, buried chests, or metaphorical troves of value are sought, revealed, or guarded — the thrill of discovery woven into the plot.
+
+[attr-9]
+A story is [attr-9] if The story is philosophical. 
+- These are meditative works that dwell on meaning, existence, ethics, or the human condition, inviting the reader to linger in thought as much as in plot.
+
+[attr-5]
+A story is [attr-5] if The story has more than 6 paragraphs. 
+- Practically, this marks narratives that unfold in a more extended written form, where ideas and scenes have room to breathe across multiple paragraphs.
+
+[attr-4]
+A story is [attr-4] if The story has readability score above 96.1. 
+- Technically grounded, this denotes prose that flows with exceptional clarity and ease, inviting quick comprehension without sacrificing nuance.
+
+[attr-7]
+A story is [attr-7] if The story is classic. 
+- Classic here evokes timeless modes and conventions of storytelling — forms and tones that echo the canons or beloved traditions of literature.
+
+[attr-8]
+A story is [attr-8] if The story is humorous. 
+- These tales uplift with wit, irony, or playful mischief; the purpose of amusement threads through their scenes.
+
+[attr-12]
+A story is [attr-12] if The story is about mystical creatures. 
+- That is, narratives featuring beings of wonder — dragons, sprites, or otherworldly entities — whose presence shapes the world of the tale.
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- The story is [attr-9]
+  — meaning it leans into reflection and thought.
+- The story is not [attr-8]
+  — specifically excluding works whose dominant mode is jocularity, so that earnest philosophical weight remains unblunted.
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- The story is [attr-4]
+  — clear, accessible prose that guides the reader smoothly.
+- Either of the following is true:
+  - The story is [attr-7]
+    — aligning with enduring storytelling manners.
+  - The story is [attr-8]
+    — or else it achieves readability through spirited humor.
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- The story is [attr-11]
+  — when the pursuit of secrets or treasure drives the narrative’s momentum.
+- Both of the following are true:
+  - The story is [attr-13]
+    — when the mechanics of moving through time form part of the adventure.
+  - The story is not [attr-9]
+    — signifying that this form of adventurous time travel prefers action and intrigue over contemplative rumination.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-10]
+  — it carries thoughtful, philosophical substance without lampooning itself.
+- Either of the following is true:
+  - The story is [attr-1]
+    — complexity married to the forward thrust of an adventure.
+  - The story is [attr-12]
+    — or complexity arising from interactions with beings of myth and wonder.
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-2]
+  — a tapestry of depth and layered motifs.
+- The story is [attr-5]
+  — and told across an abundance of paragraphs, allowing the tale to sprawl with grandeur.
+
+Thus this annotated ledger—part taxonomy, part poetic guide—remains faithful to its logical architecture, each bracketed node standing in the same place as before, each condition preserved in form. Read it as you would a map by lantern-light: the relationships are precise, the descriptions are fragrant, and the purpose is to help you recognize the nature of any tale that crosses your path.

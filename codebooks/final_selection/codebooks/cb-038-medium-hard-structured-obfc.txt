@@ -1,0 +1,91 @@
+Codebook — Structured View
+
+Below is a clear, organized presentation of the codebook. Each node is shown with its ID, a short definition, and an explicit, hierarchical listing of the logical conditions that determine when a story meets that node. Logical operators (Both / Either / Exactly one / All / Not / And / Or) and all node IDs are preserved exactly as in the original.
+
+- Node: [attr-6]
+  - Definition: A story is [attr-6] if:
+    - The story is lighthearted
+
+- Node: [attr-3]
+  - Definition: A story is [attr-3] if:
+    - The story has Checkhov's gun
+
+- Node: [attr-2]
+  - Definition: A story is [attr-2] if:
+    - The story has a cliffhanger
+
+- Node: [attr-9]
+  - Definition: A story is [attr-9] if:
+    - The story has the theme Hardship
+
+- Node: [attr-10]
+  - Definition: A story is [attr-10] if:
+    - The story has the theme Helping Others
+
+- Node: [attr-8]
+  - Definition: A story is [attr-8] if:
+    - The story has the theme Deception
+
+- Node: [attr-11]
+  - Definition: A story is [attr-11] if:
+    - The story has the theme Problem-Solving
+
+- Node: [attr-7]
+  - Definition: A story is [attr-7] if exactly one of the following is true:
+    - The story is [attr-9]
+    - The story is [attr-8]
+  - Notes:
+    - Exactly one = exclusive choice: the story cannot be both [attr-9] and [attr-8]; it must be one or the other.
+
+- Node: [attr-12]
+  - Definition: A story is [attr-12] if both of the following are true:
+    - The story is [attr-6]
+    - Either of the following is true:
+      - The story is [attr-7]
+      - The story is [attr-11]
+  - Structure:
+    - Requirement 1: lighthearted style is present.
+    - Requirement 2: either a thematic exclusivity between hardship and deception, or a problem-solving theme.
+
+- Node: [attr-5]
+  - Definition: A story is [attr-5] if both of the following are true:
+    - The story is [attr-3]
+    - Exactly one of the following is true:
+      - The story is [attr-11]
+      - The story is [attr-2]
+  - Structure:
+    - Must have Checkhov's gun.
+    - Must have either problem-solving or a cliffhanger, but not both.
+
+- Node: [attr-4]
+  - Definition: A story is [attr-4] if either of the following is true:
+    - Both of the following are true:
+      - The story is [attr-10]
+      - The story is not [attr-8]
+    - Both of the following are true:
+      - The story is [attr-11]
+      - The story is [attr-10]
+  - Structure:
+    - Option A: Helping Others theme, and explicitly not Deception.
+    - Option B: Helping Others together with Problem-Solving.
+
+- Node: [attr-1]
+  - Definition: A story is [attr-1] if either of the following is true:
+    - Both of the following are true:
+      - The story is [attr-12]
+      - Both of the following are true:
+        - The story is [attr-5]
+        - The story is [attr-4]
+    - All of the following are true:
+      - The story is not [attr-12]
+      - Either of the following is true:
+        - The story is [attr-5]
+        - The story is [attr-2]
+      - The story is not both of the following:
+        - The story is [attr-9]
+        - The story is [attr-8]
+  - Interpreting the branches:
+    - Branch 1 (conjunctive): The story must be tone-conflicted, and simultaneously both plot-driven and carrying a moral arc.
+    - Branch 2 (constrained alternative): The story must not be tone-conflicted, but must be either plot-driven or have a cliffhanger, and it cannot simultaneously have both Hardship and Deception themes.
+
+End of codebook — all node IDs, logical operations, and relationships are preserved exactly.

@@ -1,0 +1,191 @@
+Interviewer: Let's go through this codebook node by node. Start simple — what is [HIGH-READABILITY]?
+
+Expert: Formally:
+[HIGH-READABILITY]
+A story is HIGH-READABILITY if The story has readability score above 96.1
+
+Expert (plain): That means we mark a story as [HIGH-READABILITY] only when its readability score exceeds 96.1.
+
+Interviewer: And [LOW-READABILITY]?
+
+Expert: Formally:
+[LOW-READABILITY]
+A story is LOW-READABILITY if The story has readability score below 86.4
+
+Expert (plain): So [LOW-READABILITY] is the opposite-range label: score under 86.4.
+
+Interviewer: How about the start-of-text categories — [STARTS-WITH-NOUN] and [STARTS-WITH-ADVERB]?
+
+Expert: Formally:
+[STARTS-WITH-NOUN]
+A story is STARTS-WITH-NOUN if The story starts with a noun
+
+[STARTS-WITH-ADVERB]
+A story is STARTS-WITH-ADVERB if The story starts with a adverb
+
+Expert (plain): Use [STARTS-WITH-NOUN] when the first token is a noun; use [STARTS-WITH-ADVERB] when the first token is an adverb. (Keep the exact node IDs when tagging.)
+
+Interviewer: What about grammatical features like aspect and discourse markers?
+
+Expert: Formally:
+[USES-PERFECT-ASPECT]
+A story is USES-PERFECT-ASPECT if The story uses perfect aspect
+
+[USES-DISCOURSE-MARKERS]
+A story is USES-DISCOURSE-MARKERS if The story uses discourse markers
+
+Expert (plain): Mark [USES-PERFECT-ASPECT] if the story uses perfect verbs (e.g., "has done"). Mark [USES-DISCOURSE-MARKERS] if it contains words like "however", "therefore", "meanwhile", etc.
+
+Interviewer: And plot devices or stylistic elements like cliffhangers, juxtaposition, and red herrings?
+
+Expert: Formally:
+[HAS-A-CLIFFHANGER]
+A story is HAS-A-CLIFFHANGER if The story has a cliffhanger
+
+[HAS-JUXTAPOSITION]
+A story is HAS-JUXTAPOSITION if The story has juxtaposition
+
+[HAS-A-RED-HERRING]
+A story is HAS-A-RED-HERRING if The story has a Red Herring
+
+Expert (plain): Use these nodes when the text contains those narrative techniques. They are atomic labels used later in compound rules.
+
+Interviewer: The codebook also has a length label [SHORT-STORY] and style labels. What are they?
+
+Expert: Formally:
+[SHORT-STORY]
+A story is SHORT-STORY if The story has fewer than 160 words
+
+[STYLE-PHILOSOPHICAL]
+A story is STYLE-PHILOSOPHICAL if The story is philosophical
+
+[STYLE-PLAYFUL]
+A story is STYLE-PLAYFUL if The story is playful
+
+[STYLE-HUMOROUS]
+A story is STYLE-HUMOROUS if The story is humorous
+
+[THEME-AGENCY]
+A story is THEME-AGENCY if The story has the theme Agency
+
+Expert (plain): [SHORT-STORY] is a strict word-count cutoff. The STYLE-* nodes and [THEME-AGENCY] are content/style annotations you apply when the story fits those categories.
+
+Interviewer: Now the compound nodes — they look more complex. Explain [OPENING-TONE].
+
+Expert: Formally:
+[OPENING-TONE]
+A story is OPENING-TONE if both of the following are true:
+- Either of the following is true:
+  - The story is [STARTS-WITH-NOUN]
+  - The story is [STARTS-WITH-ADVERB]
+- Either of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [STYLE-PLAYFUL]
+
+Expert (plain): Read this carefully: For [OPENING-TONE] to hold, two conditions must both be true. First, the story must start with either a noun or an adverb. Second, the story must be either philosophical or playful. Both of those top-level requirements must be satisfied.
+
+Interviewer: Okay. What about [NARRATIVE-PACE]?
+
+Expert: Formally:
+[NARRATIVE-PACE]
+A story is NARRATIVE-PACE if either of the following is true:
+- Both of the following are true:
+  - The story is [SHORT-STORY]
+  - The story is [HIGH-READABILITY]
+- Both of the following are true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is not [LOW-READABILITY]
+
+Expert (plain): [NARRATIVE-PACE] is true if either:
+1) It's a short story with high readability, or
+2) It uses perfect aspect and is not low-readability. Note the "not" is explicit in the second clause — being non-[LOW-READABILITY] is required there.
+
+Interviewer: The comedic structure rule seems subtle. Walk me through [COMEDIC-STRUCTURE].
+
+Expert: Formally:
+[COMEDIC-STRUCTURE]
+A story is COMEDIC-STRUCTURE if both of the following are true:
+- Either of the following is true:
+  - The story is [STYLE-PLAYFUL]
+  - The story is [STYLE-HUMOROUS]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [SHORT-STORY]
+    - The story is [USES-DISCOURSE-MARKERS]
+  - Either of the following is true:
+    - The story is [HAS-A-RED-HERRING]
+    - The story is [HAS-JUXTAPOSITION]
+
+Expert (plain): For [COMEDIC-STRUCTURE], two top conditions must hold.
+1) The story must be playful or humorous.
+2) Two sub-conditions must both be true:
+   a) Exactly one of these is true — either it's short or it uses discourse markers, but not both.
+   b) The story must contain either a red herring or juxtaposition.
+So it's a conjunction of style, an exclusive choice about length/markers, and the presence of a misdirection or juxtaposition.
+
+Interviewer: Tell me about [THEMATIC-FUSION].
+
+Expert: Formally:
+[THEMATIC-FUSION]
+A story is THEMATIC-FUSION if both of the following are true:
+- The story is [THEME-AGENCY]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [STYLE-PHILOSOPHICAL]
+    - The story is [OPENING-TONE]
+  - Exactly one of the following is true:
+    - The story is [HAS-JUXTAPOSITION]
+    - The story is [HAS-A-RED-HERRING]
+
+Expert (plain): [THEMATIC-FUSION] requires that the story has the theme Agency. In addition, it needs either:
+- Both philosophical style and [OPENING-TONE]; or
+- Exactly one of {has juxtaposition, has a red herring} — meaning one of those narrative devices but not both.
+
+Interviewer: What about [RAPTURE-ENDING]?
+
+Expert: Formally:
+[RAPTURE-ENDING]
+A story is RAPTURE-ENDING if either of the following is true:
+- Both of the following are true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is not [SHORT-STORY]
+- Exactly one of the following is true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is [HAS-A-RED-HERRING]
+
+Expert (plain): [RAPTURE-ENDING] is satisfied if either:
+1) The story has a cliffhanger and is not a short story; or
+2) Exactly one of {has a cliffhanger, has a red herring} — again an exclusive-or on those two devices.
+
+Interviewer: Finally, the top-level [COMPLEX-STORY]—this ties many things together. Explain it precisely.
+
+Expert: Formally:
+[COMPLEX-STORY]
+A story is COMPLEX-STORY if both of the following are true:
+- All of the following are true:
+  - The story is [THEMATIC-FUSION]
+  - The story is [COMEDIC-STRUCTURE]
+- Either of the following is true:
+  - The story is [NARRATIVE-PACE]
+  - Both of the following are true:
+    - The story is [RAPTURE-ENDING]
+    - The story is not [HIGH-READABILITY]
+
+Expert (plain): To tag [COMPLEX-STORY], you need:
+1) Both [THEMATIC-FUSION] and [COMEDIC-STRUCTURE] to be true (the "All of the following are true" block).
+2) Plus either:
+   - [NARRATIVE-PACE] is true; or
+   - Both [RAPTURE-ENDING] is true and the story is not [HIGH-READABILITY].
+So complexity requires thematic fusion and comedic structure, and then one of two pacing/ending conditions.
+
+Interviewer: Quick checklist — am I allowed to change any node IDs or the logical operators when I rephrase this for others?
+
+Expert: No. You must keep all node IDs in [BRACKET] format exactly as they appear, preserve all logical operations (Not, And, Or, Exactly one, Both, Either, All), and preserve the formula structures and relationships. Your rewording can clarify and make things more natural, but it cannot change the logic or add/remove nodes.
+
+Interviewer: Anything else annotators should keep in mind?
+
+Expert: Yes — treat the formal blocks (the lines starting with the node ID) as authoritative. When you apply a composite node, verify every listed subcondition exactly as written: "both of the following," "either of the following," "exactly one," and negations like "not [LOW-READABILITY]" are decisive. Use the plain-language clarifications only to aid judgment — they don't change the formal criteria.
+
+Interviewer: Great — that helps a lot. Thanks for walking through every node.
+
+Expert: You're welcome. If you want, we can run example stories through these criteria step-by-step to practice tagging.

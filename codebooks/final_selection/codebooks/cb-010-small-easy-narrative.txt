@@ -1,0 +1,33 @@
+Imagine a keeper of stories who sorts each tale into neat, glowing jars. Each jar has a name, a simple rule written on its lid, and the keeper speaks those rules like an incantation—clear, precise, and impossible to misread. Here are the lids and their whispered meanings.
+
+[THEME-INNOVATION]
+The keeper smiles and says: a story belongs in [THEME-INNOVATION] when it carries the theme of innovation—when invention, new ideas, or creative change are at its heart.
+
+[TOPIC-CULTURAL-TRADITIONS]
+Another lid reads [TOPIC-CULTURAL-TRADITIONS]. A tale is placed there when it dwells on cultural traditions—rituals, customs, and practices that communities pass down through generations.
+
+[TOPIC-BYGONE-ERAS]
+There is a jar labeled [TOPIC-BYGONE-ERAS]. Stories that live in that jar are those about bygone eras—narratives anchored in times long past, whose settings, sensibilities, or histories belong to earlier ages.
+
+[USES-WH-QUESTIONS]
+The keeper taps a small chime for [USES-WH-QUESTIONS]. A story is given this mark when it uses wh-questions—who, what, when, where, why, or how—to shape its curiosity or structure.
+
+[STARTS-WITH-NOUN]
+A bright tag reads [STARTS-WITH-NOUN]. The keeper slips it on any story that begins with a noun, the way a tale might open with “River,” “King,” or “Festival.”
+
+[STARTS-WITH-PREPOSITION]
+Another tag, [STARTS-WITH-PREPOSITION], goes on stories that begin with a preposition—those that start with “In,” “On,” “Under,” and the like.
+
+Now comes a more intricate charm, a jar for stories that must satisfy several conditions at once.
+
+[CULTURAL-INNOVATION-QUESTIONS]
+A story is [CULTURAL-INNOVATION-QUESTIONS] if all of the following are true:
+- The story is [THEME-INNOVATION]
+- Either of the following is true:
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+  - The story is [TOPIC-BYGONE-ERAS]
+- The story is [USES-WH-QUESTIONS]
+
+In other words, the keeper explains, to earn the [CULTURAL-INNOVATION-QUESTIONS] mark a tale must wear the innovation theme, must be about either cultural traditions or bygone eras, and must ask its questions with wh-words. It is a precise combination—three conditions bound together, one of them allowing two alternative paths—so the jar opens only for stories that meet every requirement exactly as described.
+
+The jars stand in a row, each label a promise: the logic is strict, the rules unchanged, and the keeper’s storytelling registry remains both exact and delightfully human.

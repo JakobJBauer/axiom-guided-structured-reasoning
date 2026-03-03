@@ -1,0 +1,143 @@
+Interviewer: Let's walk through this codebook together, one rule at a time. I'll ask about each node and you explain what it means. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What does [THEME-INNOVATION] mean?
+
+Expert: A story is [THEME-INNOVATION] if The story has the theme Innovation
+
+Interviewer: And [THEME-MAGIC]?
+
+Expert: A story is [THEME-MAGIC] if The story has the theme Magic
+
+Interviewer: How about [HAS-CHECKHOVS-GUN]?
+
+Expert: A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun
+
+Interviewer: What about [STARTS-WITH-ADVERB]?
+
+Expert: A story is [STARTS-WITH-ADVERB] if The story starts with a adverb
+
+Interviewer: [THEME-HELPING-OTHERS]?
+
+Expert: A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others
+
+Interviewer: [STYLE-PHILOSOPHICAL] — what's the rule?
+
+Expert: A story is [STYLE-PHILOSOPHICAL] if The story is philosophical
+
+Interviewer: And [STARTS-WITH-NOUN]?
+
+Expert: A story is [STARTS-WITH-NOUN] if The story starts with a noun
+
+Interviewer: [TOPIC-HIDDEN-TREASURES]?
+
+Expert: A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures
+
+Interviewer: [THEME-GROWTH] — what does that denote?
+
+Expert: A story is [THEME-GROWTH] if The story has the theme Growth
+
+Interviewer: [HAS-A-CLIFFHANGER]?
+
+Expert: A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+
+Interviewer: [STYLE-MINIMALIST]?
+
+Expert: A story is [STYLE-MINIMALIST] if The story is minimalist
+
+Interviewer: [USES-CONDITIONAL-MOOD]?
+
+Expert: A story is [USES-CONDITIONAL-MOOD] if The story uses conditional mood
+
+Interviewer: [TOPIC-SEASONAL-CHANGES]?
+
+Expert: A story is [TOPIC-SEASONAL-CHANGES] if The story is about seasonal changes
+
+Interviewer: [TOPIC-MYSTICAL-CREATURES]?
+
+Expert: A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures
+
+Interviewer: [HAS-A-STORY-WITHIN-A-STORY] — what triggers this?
+
+Expert: A story is [HAS-A-STORY-WITHIN-A-STORY] if The story has a story within a story
+
+Interviewer: [MANY-PARAGRAPHS] — how is that defined?
+
+Expert: A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs
+
+Interviewer: [THEME-AGENCY]?
+
+Expert: A story is [THEME-AGENCY] if The story has the theme Agency
+
+Interviewer: [PARAGRAPH-DENSITY] — this one looks different. Explain it.
+
+Expert: A story is [PARAGRAPH-DENSITY] if [MANY-PARAGRAPHS] equals true
+
+Interviewer: Now for a compound one: [STRUCTURAL-START]. What exactly must be true?
+
+Expert: A story is [STRUCTURAL-START] if both of the following are true:
+- exactly one of the following is true:
+  - The story is [STARTS-WITH-ADVERB]
+  - The story is [STARTS-WITH-NOUN]
+- The story is in [STYLE-PHILOSOPHICAL, STYLE-MINIMALIST]
+
+Interviewer: That keeps the structure strict. Next: [MOTIF-MYSTERY]. Walk me through the logic.
+
+Expert: A story is [MOTIF-MYSTERY] if either of the following is true:
+- both of the following are true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+- exactly one of the following is true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-SEASONAL-CHANGES]
+
+Interviewer: [MORAL-TENSION] seems nuanced. How do we decide that?
+
+Expert: A story is [MORAL-TENSION] if either of the following is true:
+- The story is [THEME-HELPING-OTHERS]
+- both of the following are true:
+  - exactly one of the following is true:
+    - The story is [THEME-GROWTH]
+    - The story is [THEME-AGENCY]
+  - The story is not [STYLE-MINIMALIST]
+
+Interviewer: I appreciate that conditional. Now [THEMATIC-CORE] — what's required?
+
+Expert: A story is [THEMATIC-CORE] if both of the following are true:
+- The story is [THEME-INNOVATION]
+- either of the following is true:
+  - The story is [MORAL-TENSION]
+  - both of the following are true:
+    - The story is [THEME-MAGIC]
+    - The story is [USES-CONDITIONAL-MOOD]
+
+Interviewer: [NARRATIVE-DEVICES] — how is that defined?
+
+Expert: A story is [NARRATIVE-DEVICES] if both of the following are true:
+- either of the following is true:
+  - The story is [HAS-CHECKHOVS-GUN]
+  - The story is [HAS-A-CLIFFHANGER]
+- either of the following is true:
+  - The story is [HAS-A-STORY-WITHIN-A-STORY]
+  - The story is not [HAS-CHECKHOVS-GUN]
+
+Interviewer: And finally, the big one: [COMPLEX-STORY-TYPE]. What's the full rule?
+
+Expert: A story is [COMPLEX-STORY-TYPE] if both of the following are true:
+- The story is [THEMATIC-CORE]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [STRUCTURAL-START]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [NARRATIVE-DEVICES]
+        - The story is [PARAGRAPH-DENSITY]
+      - The story is [MOTIF-MYSTERY]
+  - both of the following are true:
+    - The story is [NARRATIVE-DEVICES]
+    - The story is not [STYLE-MINIMALIST]
+
+Interviewer: That preserves everything neatly. Any final notes?
+
+Expert: Just this: each node and logical connector here is preserved exactly as written. Think of this transcript as an annotated walkthrough — questions you might ask while annotating, with answers that repeat the precise rules you must follow.

@@ -1,0 +1,88 @@
+Interviewer: Let’s walk through this codebook together. I’ll ask about each node and you can read the rule. Ready?
+
+Explainer: Ready.
+
+Interviewer: What does [LOW-READABILITY] mean?
+
+Explainer: A story is [LOW-READABILITY] if the story has readability score below 86.4
+
+Interviewer: And [TOPIC-TIME-TRAVEL]?
+
+Explainer: A story is [TOPIC-TIME-TRAVEL] if the story is about time travel
+
+Interviewer: How about [TOPIC-SEASONAL-CHANGES]?
+
+Explainer: A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes
+
+Interviewer: What does [USES-DISCOURSE-MARKERS] indicate?
+
+Explainer: A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers
+
+Interviewer: Explain [STARTS-WITH-ADJECTIVE].
+
+Explainer: A story is [STARTS-WITH-ADJECTIVE] if the story starts with a adjective
+
+Interviewer: And [TOPIC-HIDDEN-TREASURES]?
+
+Explainer: A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures
+
+Interviewer: What about [THEME-DECEPTION]?
+
+Explainer: A story is [THEME-DECEPTION] if the story has the theme Deception
+
+Interviewer: [THEME-HELPING-OTHERS] — what’s that?
+
+Explainer: A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others
+
+Interviewer: [STARTS-WITH-PREPOSITION], please.
+
+Explainer: A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition
+
+Interviewer: And [STARTS-WITH-ADVERB]?
+
+Explainer: A story is [STARTS-WITH-ADVERB] if the story starts with a adverb
+
+Interviewer: Now the more complex ones. How is [NARRATIVE-SURFACE] defined?
+
+Explainer: A story is [NARRATIVE-SURFACE] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [STARTS-WITH-ADJECTIVE]
+  - The story is [STARTS-WITH-ADVERB]
+- Both of the following are true:
+  - The story is [USES-DISCOURSE-MARKERS]
+  - Either of the following is true:
+    - The story is [LOW-READABILITY]
+    - The story is [STARTS-WITH-PREPOSITION]
+
+Interviewer: Let me make sure I understand—so [NARRATIVE-SURFACE] is true if either it starts with exactly one of adjective/adverb, or if it uses discourse markers and additionally is either low-readability or starts with a preposition. Correct?
+
+Explainer: Correct. That restatement preserves the same logical structure.
+
+Interviewer: Finally, the big one: [INSCRUTABLE-THEME-STRUCTURE]. How is that specified?
+
+Explainer: A story is [INSCRUTABLE-THEME-STRUCTURE] if both of the following are true:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [TOPIC-TIME-TRAVEL]
+    - Exactly one of the following is true:
+      - The story is [THEME-DECEPTION]
+      - The story is [THEME-HELPING-OTHERS]
+  - Both of the following are true:
+    - The story is [TOPIC-SEASONAL-CHANGES]
+    - Both of the following are true:
+      - The story is [TOPIC-HIDDEN-TREASURES]
+      - The story is not [TOPIC-TIME-TRAVEL]
+- The story is [NARRATIVE-SURFACE]
+
+Interviewer: So to confirm: [INSCRUTABLE-THEME-STRUCTURE] requires two things at once — first, one of two complex topic-theme combinations (either time travel with exactly one of Deception/Helping Others, or seasonal changes combined with hidden treasures while explicitly not being time travel); and second, it must satisfy the [NARRATIVE-SURFACE] condition. Right?
+
+Explainer: Exactly. That explanation keeps the same logical relationships and operators.
+
+Interviewer: That’s very clear. Is there anything else we should note about how to use these nodes?
+
+Explainer: Just the practical reminders:
+- Keep every node ID exactly as shown in brackets (for example, [LOW-READABILITY]).
+- Preserve the logical operators and the structure when annotating or reasoning (Not, And, Or, Exactly one, Either, Both).
+- Do not add or remove nodes — use this set as-is for consistent annotation.
+
+Interviewer: Great — thanks for the walkthrough. That transcript-style presentation keeps the original logic intact and makes it easier to follow.

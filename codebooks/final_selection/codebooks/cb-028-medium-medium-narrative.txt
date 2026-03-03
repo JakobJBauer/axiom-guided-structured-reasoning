@@ -1,0 +1,57 @@
+Picture a quiet library at midnight, where each shelf holds a different way of recognizing what a story truly is. Each placard is stamped with a bracketed name — a little law that decides whether a tale belongs to a certain club. Below, I’ll walk you past those placards. I’ll keep every sign exactly as it hangs, including the bracketed names and the precise rules that govern them; I’ll only tell you the tale behind each rule so the logic reads like a story.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if The story has a moral lesson.
+Think of this as the sign by the hearth: any tale that hands you a clear lesson, a rule for life folded into its ending, earns this mark.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs.
+This is the measure of length and breath — when a tale stretches past six paragraphs, it steps into the “many” territory and gets this label.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if The story starts with a adverb.
+This badge is for openings that begin with the adverbial whisper — a “quickly,” “suddenly,” or “silently” that launches the narrative.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if The story has circular narrative structure.
+Some stories orbit back to their beginning like a roundabout, and when they do, this is the structure they wear.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+When a tale makes use of the grammatical lens that looks back — the perfect aspect — it ticks this box.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if The story uses superlative forms.
+If a narrator calls something “the greatest,” “the smallest,” or otherwise crowns it with a superlative, the story carries this mark.
+
+[STYLISTIC-CHOICE]
+A story is [STYLISTIC-CHOICE] if both of the following are true:
+- The story is [STARTS-WITH-ADVERB]
+- Exactly one of the following is true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-SUPERLATIVE-FORMS]
+This is a little salon for stylistic flair: a story must open with an adverb, and then choose exactly one kind of flourish — either the reflective perfect aspect or the boastful superlative — but not both. Think of it as an exclusive taste test where only one of the two accents pairs with the adverbial start.
+
+[NARRATIVE-TYPE]
+A story is [NARRATIVE-TYPE] if either of the following is true:
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- Both of the following are true:
+  - The story is not [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - The story is [MANY-PARAGRAPHS]
+This placard describes what makes something a narrative type: it’s either circular in structure, or, if it isn’t circular, it must be long enough — more than six paragraphs — to qualify. In other words, circular stories claim the label outright; non-circular ones must prove their length.
+
+[MORAL-OR-LONG]
+A story is [MORAL-OR-LONG] if exactly one of the following is true:
+- The story is [HAS-A-MORAL-LESSON]
+- The story is [MANY-PARAGRAPHS]
+This is the exclusive fork: a tale is either moral or long, but it can’t be both. It must belong to exactly one of these camps.
+
+[COMPLEXITY-HIGH]
+A story is [COMPLEXITY-HIGH] if both of the following are true:
+- Either of the following is true:
+  - The story is [STYLISTIC-CHOICE]
+  - The story is not [MORAL-OR-LONG]
+- The story is [NARRATIVE-TYPE]
+Here is the summit for complexity. To reach it, a story must first be a recognized narrative type (so it’s circular or sufficiently long). Then, on top of that, it must either bear the distinctive stylistic choice (that adverb-plus-exactly-one-flourish pattern) or deliberately not belong to the mutual-exclusion of moral or long (that is, it fails to be exactly one of moral or long). Only when both conditions are satisfied does the tale earn the [COMPLEXITY-HIGH] designation.
+
+Walk away with this map in your head: each bracketed name is a gate; the bullets beneath are the locks. Read the locks exactly as they’re written, and you can sort any story into its rightful place on the shelves.

@@ -1,0 +1,59 @@
+Preface — A small tale about this codebook:
+Wander, if you will, into a walled garden of rules where each bracketed sigil is a carved stone, faithful and unyielding. This codebook is that garden: a careful map for those who annotate and reason, its pathways laid out with exacting logic. Below, each node is first shown in its precise, functional form — unchanged in wording, structure, and symbols — and then accompanied by a florid, explanatory flourish to illuminate its meaning and make the work of annotation feel less like bookkeeping and more like listening to a story that has been taught to walk in shoes of reason.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if The story has a moral lesson.
+- A gentle elaboration: Imagine a tale that turns its pages toward wisdom, closing with a lesson that lingers like the last light at dusk. When a story bears such an explicit lesson—an instructive gleam intended for the reader's conscience—we place the [HAS-A-MORAL-LESSON] stone.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs.
+- A gentle elaboration: Count the little chambers of the narrative—the paragraphs—as one might count lanterns along a garden path. If they number more than six, the story is considered ample in length and is thus adorned with [MANY-PARAGRAPHS].
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if The story starts with a adverb.
+- A gentle elaboration: Picture the very first word stepping onto the stage with a posture of manner or time—an adverb. When a story opens with such a word, it is declared [STARTS-WITH-ADVERB], the doorway hinting at tone before any characters arrive.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if The story has circular narrative structure.
+- A gentle elaboration: Some tales fold back upon themselves like ivy curling around a column. If the narrative returns to its beginning, echoing its opening in structure or event, we recognize that circular choreography as [HAS-CIRCULAR-NARRATIVE-STRUCT].
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+- A gentle elaboration: Notice the grammar that reaches back—the perfect aspect that speaks of completion or of actions woven into pastness. When a story employs this knit of tense, we mark it [USES-PERFECT-ASPECT], a subtle thread in the tale’s fabric.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if The story uses superlative forms.
+- A gentle elaboration: When the language climbs to extremes—brightest, most sorrowful, least expected—when it crowns some quality as the utmost, we note it as [USES-SUPERLATIVE-FORMS], where rhetoric reaches for the summit.
+
+[STYLISTIC-CHOICE]
+A story is [STYLISTIC-CHOICE] if both of the following are true:
+- The story is [STARTS-WITH-ADVERB]
+- Exactly one of the following is true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-SUPERLATIVE-FORMS]
+- A gentle elaboration: Consider [STYLISTIC-CHOICE] as a particular bloom that opens only when two conditions sing in harmony: the tale must begin with an adverb, and then—like choosing between two colors—exactly one of two mannered linguistic traits must be present: either the tale wears the perfect aspect’s subtle sheen, or it dons the bold robe of superlatives, but never both. This is a conjunctive gate that requires both an opening flourish and a single, decisive stylistic feature.
+
+[NARRATIVE-TYPE]
+A story is [NARRATIVE-TYPE] if either of the following is true:
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- Both of the following are true:
+  - The story is not [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - The story is [MANY-PARAGRAPHS]
+- A gentle elaboration: The label [NARRATIVE-TYPE] captures two pathways to belonging. One path is direct: the narrative loops back on itself and is circular. The other path is conditional: even if it does not loop (explicitly not circular), the tale may still be grand in scale—long enough in paragraphs—to qualify. Thus the node honors either the architectural turn of a circular structure or the breadth of a longer composition.
+
+[MORAL-OR-LONG]
+A story is [MORAL-OR-LONG] if exactly one of the following is true:
+- The story is [HAS-A-MORAL-LESSON]
+- The story is [MANY-PARAGRAPHS]
+- A gentle elaboration: [MORAL-OR-LONG] is a dichotomous lantern—lit by either moral instruction or generous length, but never by both at once. If the story offers a moral, it stands as one half of the coin; if instead it is long in paragraphs, it is the other. Exactly one must be true for this name to be given.
+
+[COMPLEXITY-HIGH]
+A story is [COMPLEXITY-HIGH] if both of the following are true:
+- Either of the following is true:
+  - The story is [STYLISTIC-CHOICE]
+  - The story is not [MORAL-OR-LONG]
+- The story is [NARRATIVE-TYPE]
+- A gentle elaboration: Think of [COMPLEXITY-HIGH] as a majestic archway that requires two pillars. The first pillar is flexible: the tale is either adorned with the particular flourish of [STYLISTIC-CHOICE] or it refuses to belong to the simpler dual of [MORAL-OR-LONG] (that is, it is not in that exclusive either/or). The second pillar is firm: the tale must belong to [NARRATIVE-TYPE] by the circular-or-expansive criterion. When both pillars stand side by side, the story is acknowledged as [COMPLEXITY-HIGH], worthy of careful annotation and thoughtful reasoning.
+
+Final note:
+Each of the bracketed names above remains a fixed stone in our garden. Their relationships—ANDs and ORs, exact exclusions and negations—are the pathways that connect them. The ornate language offered here is meant only to illuminate and to make the act of classification more pleasurable; it does not alter the structure, the IDs, or the logical scaffolding. Use this map with confidence: the rules are unchanged, and now they come with a little more light.

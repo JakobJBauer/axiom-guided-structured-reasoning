@@ -1,0 +1,68 @@
+[LOW-READABILITY]  
+In the grand library where stories are weighed not by their heft but by their ease upon the mind, a tale is deemed [LOW-READABILITY] when its readability score sinks below 86.4—like a lantern dimming in a fog, making each sentence a little harder to follow.
+
+[TOPIC-TIME-TRAVEL]  
+A story earns the crest [TOPIC-TIME-TRAVEL] when it turns its gaze toward time travel—when hours fold like paper, yesterdays reappear in the doorway, and the future speaks too soon.
+
+[TOPIC-SEASONAL-CHANGES]  
+A story wears [TOPIC-SEASONAL-CHANGES] when it is truly about seasonal changes—when spring’s tenderness, summer’s blaze, autumn’s sigh, and winter’s hush shape the very heartbeat of the narrative.
+
+[USES-DISCOURSE-MARKERS]  
+A story is marked [USES-DISCOURSE-MARKERS] if it uses discourse markers—those small guiding signposts (however, therefore, meanwhile, and their kin) that shepherd a reader through the turning paths of thought.
+
+[STARTS-WITH-ADJECTIVE]  
+A story is [STARTS-WITH-ADJECTIVE] if it starts with a adjective—opening on a painted word, a descriptive flourish that arrives before anything else, like color spilled onto the first line.
+
+[TOPIC-HIDDEN-TREASURES]  
+A story is [TOPIC-HIDDEN-TREASURES] when it is about hidden treasures—buried coins, secret maps, locked chests, or riches concealed not only in earth and stone but sometimes in memory and meaning.
+
+[THEME-DECEPTION]  
+A story bears [THEME-DECEPTION] if it has the theme Deception—where masks are worn, truth is bent, and appearances lure the unwary away from what is real.
+
+[THEME-HELPING-OTHERS]  
+A story glows with [THEME-HELPING-OTHERS] if it has the theme Helping Others—where compassion moves characters to lift, mend, guide, or protect someone beyond themselves.
+
+[STARTS-WITH-PREPOSITION]  
+A story is [STARTS-WITH-PREPOSITION] if it starts with a preposition—beginning with a word of relation and placement, as if setting the scene by pointing: in, on, under, beyond.
+
+[STARTS-WITH-ADVERB]  
+A story is [STARTS-WITH-ADVERB] if it starts with a adverb—opening in motion or manner, like a footstep heard before the traveler is seen: softly, suddenly, boldly.
+
+[NARRATIVE-SURFACE]  
+A story is [NARRATIVE-SURFACE] if either of the following is true:  
+- Exactly one of the following is true:  
+  - The story is [STARTS-WITH-ADJECTIVE]  
+  - The story is [STARTS-WITH-ADVERB]  
+- Both of the following are true:  
+  - The story is [USES-DISCOURSE-MARKERS]  
+  - Either of the following is true:  
+    - The story is [LOW-READABILITY]  
+    - The story is [STARTS-WITH-PREPOSITION]  
+
+In the scribe’s atelier, [NARRATIVE-SURFACE] is the name given to the tale’s outward shimmer—the way it greets the reader at the threshold. This surface-sign appears in one of two lawful ways:  
+First, the gate may open with *exactly one* kind of flourish—*either* an adjectival brushstroke *or* an adverbial gust, but not both together.  
+Or else, the story may guide the reader with discourse markers, and alongside that guidance it must carry *either* the haze of [LOW-READABILITY] *or* the scene-setting step of beginning with a preposition.
+
+[INSCRUTABLE-THEME-STRUCTURE]  
+A story is [INSCRUTABLE-THEME-STRUCTURE] if both of the following are true:  
+- Either of the following is true:  
+  - Both of the following are true:  
+    - The story is [TOPIC-TIME-TRAVEL]  
+    - Exactly one of the following is true:  
+      - The story is [THEME-DECEPTION]  
+      - The story is [THEME-HELPING-OTHERS]  
+  - Both of the following are true:  
+    - The story is [TOPIC-SEASONAL-CHANGES]  
+    - Both of the following are true:  
+      - The story is [TOPIC-HIDDEN-TREASURES]  
+      - The story is not [TOPIC-TIME-TRAVEL]  
+- The story is [NARRATIVE-SURFACE]  
+
+And then there is the rarer seal, [INSCRUTABLE-THEME-STRUCTURE], whispered about by annotators as though it were a constellation only some nights reveal. A story may claim this intricate designation only when **both** conditions below are satisfied:
+
+1) **Either** the tale follows one of these two deep patterns:  
+   - It is about [TOPIC-TIME-TRAVEL], and within that temporal sorcery it holds *exactly one* guiding theme—*either* [THEME-DECEPTION] *or* [THEME-HELPING-OTHERS], but never both at once;  
+   **or**  
+   - It is about [TOPIC-SEASONAL-CHANGES], and also—like a second secret stitched into the hem—it is about [TOPIC-HIDDEN-TREASURES], and, crucially, it is not [TOPIC-TIME-TRAVEL].  
+
+2) And, like a visible tide beneath the moon, the story must also display [NARRATIVE-SURFACE]—that outward manner of beginning and guiding language exactly as defined above.

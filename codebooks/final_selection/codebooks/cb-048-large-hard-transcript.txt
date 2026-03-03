@@ -1,0 +1,135 @@
+Interviewer: Let’s walk through this codebook like a conversation. I’ll ask about each label and you answer with the exact rule. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What does [TOPIC-TIME-TRAVEL] mean?
+
+Expert: A story is [TOPIC-TIME-TRAVEL] if The story is about time travel.
+
+Interviewer: And [STARTS-WITH-ADJECTIVE]?
+
+Expert: A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective.
+
+Interviewer: How about [USES-PERFECT-ASPECT]?
+
+Expert: A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect.
+
+Interviewer: Define [STYLE-MODERN].
+
+Expert: A story is [STYLE-MODERN] if The story is modern.
+
+Interviewer: What does [LOW-READABILITY] capture?
+
+Expert: A story is [LOW-READABILITY] if The story has readability score below 86.4.
+
+Interviewer: Tell me about [TOPIC-THE-ARTS].
+
+Expert: A story is [TOPIC-THE-ARTS] if The story is about the arts.
+
+Interviewer: And [HAS-CIRCULAR-NARRATIVE-STRUCT]?
+
+Expert: A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if The story has circular narrative structure.
+
+Interviewer: What about [TOPIC-CULTURAL-TRADITIONS]?
+
+Expert: A story is [TOPIC-CULTURAL-TRADITIONS] if The story is about cultural traditions.
+
+Interviewer: Define [HAS-A-FLASHBACK].
+
+Expert: A story is [HAS-A-FLASHBACK] if The story has a flashback.
+
+Interviewer: [STYLE-HUMOROUS], please.
+
+Expert: A story is [STYLE-HUMOROUS] if The story is humorous.
+
+Interviewer: And [TOPIC-MAGICAL-LANDS]?
+
+Expert: A story is [TOPIC-MAGICAL-LANDS] if The story is about magical lands.
+
+Interviewer: [STYLE-LIGHTHEARTED]?
+
+Expert: A story is [STYLE-LIGHTHEARTED] if The story is lighthearted.
+
+Interviewer: [TOPIC-MYSTICAL-CREATURES]?
+
+Expert: A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures.
+
+Interviewer: What’s [THEME-PROBLEM-SOLVING]?
+
+Expert: A story is [THEME-PROBLEM-SOLVING] if The story has the theme Problem-Solving.
+
+Interviewer: Now the first compound label: [NARRATIVE-STRUCTURAL]. How is that defined?
+
+Expert: A story is [NARRATIVE-STRUCTURAL] if both of the following are true:
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- Either of the following is true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is not [STARTS-WITH-ADJECTIVE]
+
+Interviewer: Clear. Next, [STYLE-AND-TONE]?
+
+Expert: A story is [STYLE-AND-TONE] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [STYLE-HUMOROUS]
+  - The story is [STYLE-LIGHTHEARTED]
+- Either of the following is true:
+  - The story is [STYLE-MODERN]
+  - The story is not [LOW-READABILITY]
+
+Interviewer: Thanks. Explain [ARTS-TRADITIONAL-PROBLEM].
+
+Expert: A story is [ARTS-TRADITIONAL-PROBLEM] if either of the following is true:
+- All of the following are true:
+  - The story is [TOPIC-THE-ARTS]
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+  - The story is [THEME-PROBLEM-SOLVING]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [TOPIC-THE-ARTS]
+    - The story is [THEME-PROBLEM-SOLVING]
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+
+Interviewer: Got it. What does [FANTASY-CORE] mean?
+
+Expert: A story is [FANTASY-CORE] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [TOPIC-MAGICAL-LANDS]
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+- Either of the following is true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is not [STYLE-MODERN]
+
+Interviewer: That’s a neat combination. Next: [COMPLEX-PATTERN].
+
+Expert: A story is [COMPLEX-PATTERN] if both of the following are true:
+- The story is [NARRATIVE-STRUCTURAL]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [STYLE-AND-TONE]
+    - The story is not [FANTASY-CORE]
+  - Both of the following are true:
+    - The story is [ARTS-TRADITIONAL-PROBLEM]
+    - The story is [FANTASY-CORE]
+
+Interviewer: And [SYNDIC-CONJUNCTION]—this one looked a little unusual.
+
+Expert: A story is [SYNDIC-CONJUNCTION] if all of the following are true:
+- The story is [COMPLEX-PATTERN]
+- The story is [ARTS-TRADITIONAL-PROBLEM] or the story is [FANTASY-CORE]
+- The story is [STYLE-AND-TONE] equals [STYLE-HUMOROUS]
+
+Interviewer: Noted. Finally, walk me through [STORY-ARCHETYPE].
+
+Expert: A story is [STORY-ARCHETYPE] if either of the following is true:
+- Both of the following are true:
+  - The story is [SYNDIC-CONJUNCTION]
+  - The story is [COMPLEX-PATTERN] in [COMPLEX-PATTERN, SYNDIC-CONJUNCTION, FANTASY-CORE]
+- Either of the following is true:
+  - The story is [FANTASY-CORE] and the story is not [ARTS-TRADITIONAL-PROBLEM]
+  - The story is [ARTS-TRADITIONAL-PROBLEM] and exactly one of the following is true:
+    - The story is [STYLE-AND-TONE]
+    - The story is [NARRATIVE-STRUCTURAL]
+
+Interviewer: That keeps the original logic intact while making each rule feel like a quick exchange. Anything else to add?
+
+Expert: Just this: every rule is preserved exactly in structure and content—node IDs, logical operations, and relationships are unchanged. The transcript style is only a different way of presenting the same codebook for easier reading.

@@ -1,0 +1,58 @@
+[TOPIC-TIME-TRAVEL]
+Specification: The predicate [TOPIC-TIME-TRAVEL] evaluates to true if and only if the story’s central subject matter is time travel.
+
+[TOPIC-HIDDEN-TREASURES]
+Specification: The predicate [TOPIC-HIDDEN-TREASURES] evaluates to true if and only if the story’s central subject matter is hidden treasures.
+
+[STYLE-PHILOSOPHICAL]
+Specification: The predicate [STYLE-PHILOSOPHICAL] evaluates to true if and only if the story exhibits a philosophical style.
+
+[MANY-PARAGRAPHS]
+Specification: The predicate [MANY-PARAGRAPHS] evaluates to true if and only if the story contains more than 6 paragraphs.
+
+[HIGH-READABILITY]
+Specification: The predicate [HIGH-READABILITY] evaluates to true if and only if the story attains a readability score strictly greater than 96.1.
+
+[STYLE-CLASSIC]
+Specification: The predicate [STYLE-CLASSIC] evaluates to true if and only if the story conforms to a classic style.
+
+[STYLE-HUMOROUS]
+Specification: The predicate [STYLE-HUMOROUS] evaluates to true if and only if the story is humorous in style.
+
+[TOPIC-MYSTICAL-CREATURES]
+Specification: The predicate [TOPIC-MYSTICAL-CREATURES] evaluates to true if and only if the story’s subject matter concerns mystical creatures.
+
+[THEMATIC-DEPTH]
+Specification: The predicate [THEMATIC-DEPTH] evaluates to true when both of the following conditions hold:
+- The predicate [STYLE-PHILOSOPHICAL] is true.
+- The predicate [STYLE-HUMOROUS] is not true.
+
+[NARRATIVE-STYLE]
+Specification: The predicate [NARRATIVE-STYLE] evaluates to true when both of the following conditions hold:
+- The predicate [HIGH-READABILITY] is true.
+- Either of the following is true:
+  - The predicate [STYLE-CLASSIC] is true.
+  - The predicate [STYLE-HUMOROUS] is true.
+
+[ADVENTURE-ARC]
+Specification: The predicate [ADVENTURE-ARC] evaluates to true if either of the following conditions holds:
+- The predicate [TOPIC-HIDDEN-TREASURES] is true.
+- Both of the following are true:
+  - The predicate [TOPIC-TIME-TRAVEL] is true.
+  - The predicate [STYLE-PHILOSOPHICAL] is not true.
+
+[COMPLEX-STORY]
+Specification: The predicate [COMPLEX-STORY] evaluates to true when both of the following conditions hold:
+- The predicate [THEMATIC-DEPTH] is true.
+- Either of the following is true:
+  - The predicate [ADVENTURE-ARC] is true.
+  - The predicate [TOPIC-MYSTICAL-CREATURES] is true.
+
+[EPIC]
+Specification: The predicate [EPIC] evaluates to true when both of the following conditions hold:
+- The predicate [COMPLEX-STORY] is true.
+- The predicate [MANY-PARAGRAPHS] is true.
+
+Notes:
+- Logical operators used above: "both of the following are true" denotes logical conjunction (AND); "either of the following is true" denotes logical disjunction (OR); "is not" denotes logical negation (NOT).
+- All predicates are binary: true if the specified condition holds for the story, otherwise false.

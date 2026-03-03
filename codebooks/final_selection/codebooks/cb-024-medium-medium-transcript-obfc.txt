@@ -1,0 +1,68 @@
+Interviewer: Let's walk through this codebook together. I'll ask about each entry, and you answer with the exact condition it encodes. Ready?
+
+Responder: Ready.
+
+Interviewer: What does [attr-8] mean?
+
+Responder: A story is [attr-8] if the story is playful.
+
+Interviewer: And [attr-7]?
+
+Responder: A story is [attr-7] if the story is minimalist.
+
+Interviewer: How about [attr-3]?
+
+Responder: A story is [attr-3] if the story has a moral lesson.
+
+Interviewer: [attr-11]?
+
+Responder: A story is [attr-11] if the story is about time travel.
+
+Interviewer: What does [attr-6] indicate?
+
+Responder: A story is [attr-6] if the story starts with a noun.
+
+Interviewer: [attr-4] — what's the cutoff?
+
+Responder: A story is [attr-4] if the story has more than 6 paragraphs.
+
+Interviewer: And [attr-12]?
+
+Responder: A story is [attr-12] if the story uses conditional mood.
+
+Interviewer: What about [attr-9]?
+
+Responder: A story is [attr-9] if the story has the theme Hardship.
+
+Interviewer: Now for a composite: what defines [attr-2]?
+
+Responder: A story is [attr-2] if both of the following are true:
+- The story is [attr-8]
+- The story is [attr-7]
+
+Interviewer: Clear. And [attr-1]?
+
+Responder: A story is [attr-1] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-12]
+- The story is [attr-6]
+
+Interviewer: How is [attr-10] defined?
+
+Responder: A story is [attr-10] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-3]
+
+Interviewer: The last one looks nested. Explain [attr-5].
+
+Responder: A story is [attr-5] if both of the following are true:
+- The story is [attr-1]
+- Either of the following is true:
+  - The story is [attr-2]
+  - Both of the following are true:
+    - The story is [attr-8]
+    - The story is not [attr-9]
+
+Interviewer: Thanks — that preserves the logical structure clearly. Anything else you want to add for someone annotating with this codebook?
+
+Responder: Just a quick note: treat each bracketed label as a strict tag. For composite nodes like [attr-2], [attr-1], [attr-10], and [attr-5], evaluate their listed conditions exactly as written — the logical connectors (both/and/all/either/not) determine whether the composite tag applies.

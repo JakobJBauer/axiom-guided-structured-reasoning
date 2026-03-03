@@ -1,0 +1,65 @@
+Codebook — formal node definitions and logical specifications
+
+Definitions below specify predicate conditions for story-level annotation. Each entry defines the predicate [NODE] such that: a story satisfies [NODE] if and only if the listed conditions hold. All node identifiers are preserved verbatim. Logical operators (Not, And, Or, xor, equals, and not) and the original compositional structure are retained.
+
+[THEME-DECEPTION]
+Definition: A story is [THEME-DECEPTION] if the story exhibits the theme “Deception.”
+
+[THEME-HELPING-OTHERS]
+Definition: A story is [THEME-HELPING-OTHERS] if the story exhibits the theme “Helping Others.”
+
+[STYLE-PHILOSOPHICAL]
+Definition: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical in style.
+
+[HAS-CHECKHOVS-GUN]
+Definition: A story is [HAS-CHECKHOVS-GUN] if the story contains Checkhov's gun.
+
+[STARTS-WITH-NOUN]
+Definition: A story is [STARTS-WITH-NOUN] if the story’s opening token is a noun.
+
+[TOPIC-HIDDEN-TREASURES]
+Definition: A story is [TOPIC-HIDDEN-TREASURES] if the story’s subject matter concerns hidden treasures.
+
+[THEME-AGENCY]
+Definition: A story is [THEME-AGENCY] if the story exhibits the theme “Agency.”
+
+[STARTS-WITH-ADJECTIVE]
+Definition: A story is [STARTS-WITH-ADJECTIVE] if the story’s opening token is an adjective.
+
+[HAS-JUXTAPOSITION]
+Definition: A story is [HAS-JUXTAPOSITION] if the story employs juxtaposition.
+
+[OPENING-PRIMACY]
+Definition: A story is [OPENING-PRIMACY] if either of the following is true:
+- The story is [STARTS-WITH-NOUN]
+- The story is [STARTS-WITH-ADJECTIVE] xor [STARTS-WITH-NOUN]
+
+[STRUCTURED-DECEPTION]
+Definition: A story is [STRUCTURED-DECEPTION] if both of the following are true:
+- The story is [OPENING-PRIMACY]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [THEME-DECEPTION]
+    - The story is [TOPIC-HIDDEN-TREASURES]
+  - Either of the following is true:
+    - The story is [HAS-CHECKHOVS-GUN] xor [THEME-AGENCY]
+    - The story is [THEME-DECEPTION] and not [THEME-AGENCY]
+
+[COMPLEX-NARRATIVE]
+Definition: A story is [COMPLEX-NARRATIVE] if all of the following are true:
+- The story is [STRUCTURED-DECEPTION]
+- Not both of the following are true:
+  - The story is [THEME-HELPING-OTHERS]
+  - The story is [STYLE-PHILOSOPHICAL]
+- Either of the following is true:
+  - The story is [HAS-JUXTAPOSITION]
+  - Both of the following are true:
+    - The story is [STARTS-WITH-NOUN] equals true
+    - The story is [STARTS-WITH-ADJECTIVE] equals false
+
+Notes for annotators and automated systems:
+- Treat each line as a logical predicate: evaluate atomic predicates first (e.g., [STARTS-WITH-NOUN], [THEME-DECEPTION]), then apply the specified boolean composition.
+- The operator “xor” denotes exclusive-or (true when exactly one operand is true).
+- The phrase “and not” denotes conjunction with logical negation of the second operand.
+- The phrases “equals true” and “equals false” are explicit equality checks and must be evaluated as written.
+- Maintain the nesting and ordering of conditions when implementing these predicates to preserve intended semantics.

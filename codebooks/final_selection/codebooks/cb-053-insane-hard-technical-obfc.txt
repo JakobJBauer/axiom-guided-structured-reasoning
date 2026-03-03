@@ -1,0 +1,191 @@
+[attr-16]
+Definition: Assign the label [attr-16] when the narrative's initial lexical token is an adverb.
+
+[attr-37]
+Definition: Assign the label [attr-37] when the narrative's primary subject matter is cultural traditions.
+
+[attr-32]
+Definition: Assign the label [attr-32] when the narrative embodies the theme Innovation.
+
+[attr-31]
+Definition: Assign the label [attr-31] when the narrative embodies the theme Humor.
+
+[attr-39]
+Definition: Assign the label [attr-39] when the narrative concerns hidden treasures.
+
+[attr-19]
+Definition: Assign the label [attr-19] when the narrative exhibits a classic stylistic register.
+
+[attr-20]
+Definition: Assign the label [attr-20] when the narrative employs a humorous style.
+
+[attr-23]
+Definition: Assign the label [attr-23] when the narrative exhibits a modern stylistic register.
+
+[attr-38]
+Definition: Assign the label [attr-38] when the narrative concerns giant creatures.
+
+[attr-48]
+Definition: Assign the label [attr-48] when the narrative uses verbal constructions in the perfect aspect.
+
+[attr-3]
+Definition: Assign the label [attr-3] when the narrative contains a flashback sequence (a scene that depicts events prior to the primary narrative timeline).
+
+[attr-29]
+Definition: Assign the label [attr-29] when the narrative embodies the theme Hardship.
+
+[attr-2]
+Definition: Assign the label [attr-2] when the narrative concludes with an unresolved tension or suspenseful break in continuity.
+
+[attr-4]
+Definition: Assign the label [attr-4] when the narrative communicates an explicit moral lesson.
+
+[attr-40]
+Definition: Assign the label [attr-40] when the narrative concerns lost civilizations.
+
+[attr-25]
+Definition: Assign the label [attr-25] when the narrative tone is playful.
+
+[attr-43]
+Definition: Assign the label [attr-43] when the narrative concerns seasonal changes.
+
+[attr-18]
+Definition: Assign the label [attr-18] when the narrative's initial lexical token is a preposition.
+
+[attr-9]
+Definition: Assign the label [attr-9] when the narrative contains juxtaposition (proximal placement of contrasting elements).
+
+[attr-35]
+Definition: Assign the label [attr-35] when the narrative centers on problem-solving processes or strategies.
+
+[attr-45]
+Definition: Assign the label [attr-45] when the narrative concerns time travel.
+
+[attr-36]
+Definition: Assign the label [attr-36] when the narrative concerns bygone eras.
+
+[attr-8]
+Definition: Assign the label [attr-8] when the narrative structure returns to or repeats its starting point (circular narrative).
+
+[attr-47]
+Definition: Assign the label [attr-47] when the narrative includes discourse markers (e.g., transitional connectors, signposting phrases).
+
+[attr-50]
+Definition: Assign the label [attr-50] when the narrative contains WH-questions (who, what, where, when, why, how).
+
+[attr-44]
+Definition: Assign the label [attr-44] when the narrative concerns the arts.
+
+[attr-34]
+Definition: Assign the label [attr-34] when the narrative embodies the theme Magic.
+
+[attr-24]
+Definition: Assign the label [attr-24] when the narrative adopts a philosophical register.
+
+[attr-22]
+Definition: Assign the label [attr-22] when the narrative exhibits a minimalist style (sparse language, economy of detail).
+
+[attr-6]
+Definition: Assign the label [attr-6] when the narrative explicitly contains an embedded secondary narrative.
+
+[attr-11]
+Definition: Assign the label [attr-11] when the narrative length exceeds 375 words.
+
+[attr-42]
+Definition: Assign the label [attr-42] when the narrative concerns mystical creatures.
+
+[attr-12]
+Definition: Assign the label [attr-12] when the narrative's readability metric is below 86.4.
+
+[attr-7]
+Definition: Assign the label [attr-7] when the narrative contains a Chekhov's gun (an element introduced earlier that becomes significant later).
+
+[attr-13]
+Definition: Assign the label [attr-13] when the narrative contains more than six paragraphs.
+
+[attr-28]
+Definition: Assign the label [attr-28] when the narrative embodies the theme Deception.
+
+[attr-27]
+Definition: Assign the label [attr-27] when the narrative embodies the theme Agency.
+
+[attr-41]
+Definition: Assign the label [attr-41] when the narrative concerns magical lands.
+
+[attr-49]
+Definition: Assign the label [attr-49] when the narrative employs superlative grammatical forms.
+
+[attr-15]
+Definition: Assign the label [attr-15] when the narrative's initial lexical token is an adjective.
+
+[attr-33]
+Definition: Assign the label [attr-33] when the narrative embodies the theme Kindness.
+
+[attr-10]
+Definition: Assign the label [attr-10] when the narrative's readability metric exceeds 96.1.
+
+[attr-17]
+Definition: Assign the label [attr-17] when the narrative's initial lexical token is a noun.
+
+[attr-46]
+Definition: Assign the label [attr-46] when the narrative uses conditional-mood constructions.
+
+[attr-5]
+Definition: Assign the label [attr-5] when the narrative contains a red herring (an intentionally misleading element).
+
+[attr-14]
+Definition: Assign the label [attr-14] when the narrative length is fewer than 160 words.
+
+[attr-26]
+Definition: Assign the label [attr-26] when the narrative exhibits a surreal style.
+
+[attr-30]
+Definition: Assign the label [attr-30] when the narrative embodies the theme Helping Others.
+
+[attr-21]
+Definition: Assign the label [attr-21] when the narrative has a lighthearted tone.
+
+[attr-1]
+Definition: Assign the label [attr-1] when the following Boolean specification evaluates to true. The specification uses standard logical operators (either = OR, both = AND, exactly one = XOR, it is not the case that = NOT).
+
+A story is [attr-1] if either of the following top-level conditions is true:
+
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is in at least one of the topic labels: [attr-40], [attr-36], [attr-45]
+      - The story is [attr-8]
+    - either of the following is true:
+      - The story is [attr-6]
+      - both of the following are true:
+        - The story is [attr-3]
+        - It is not the case that both of the following are true:
+          - The story is [attr-5]
+          - The story is [attr-7]
+  - both of the following are true:
+    - exactly one of the following is true:
+      - The story is [attr-19]
+      - The story is [attr-23]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [attr-34]
+        - It is not the case that the story is [attr-42]
+      - both of the following are true:
+        - The story is [attr-35]
+        - The story is [attr-47]
+
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [attr-28]
+      - It is not the case that both of the following are true:
+        - The story is [attr-33]
+        - The story is [attr-30]
+    - The story is [attr-5]
+  - either of the following is true:
+    - exactly one of the following is true:
+      - The story is [attr-11]
+      - The story is [attr-14]
+    - both of the following are true:
+      - The story is [attr-7]
+      - It is not the case that the story is [attr-2]

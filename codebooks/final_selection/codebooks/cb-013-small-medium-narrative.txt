@@ -1,0 +1,42 @@
+Picture a small, precise catalog kept by a careful archivist: each label is a signpost pointing to a property a story may wear. I’ll walk you through those labels, one by one, like rooms in a house, and tell you how the rooms connect — truthfully, logically, and with a flicker of storytelling warmth. The labels themselves remain unchanged: the bracketed node IDs are the pillars that hold the whole map together.
+
+[USES-CONDITIONAL-MOOD]
+In the first room sits the mood of possibility. A story is [USES-CONDITIONAL-MOOD] if the narrative leans on conditional language — the soft architecture of “would,” “could,” “if only.” If that language threads through the tale, the story bears this label.
+
+[USES-PERFECT-ASPECT]
+Next, there’s the room of completed time. A story is [USES-PERFECT-ASPECT] if it uses the perfect aspect — those constructions that speak of actions completed with a present effect, like “has done” or “had been.” When a tale signals completed actions in this way, it earns this name.
+
+[THEME-DECEPTION]
+Down the corridor is the motif room. A story is [THEME-DECEPTION] if the theme of deception is at its heart — if trickery, misleading appearances, or deliberate concealment drive the plot or the message.
+
+[HAS-A-CLIFFHANGER]
+Near the windows is a perch for suspense. A story is [HAS-A-CLIFFHANGER] if it ends on an unresolved edge — a hanging question, a sudden halt, or a breathless pause that leaves the outcome unknown.
+
+[COMPLEX-DECEPTION]
+Now we arrive at a doorway that requires three locks to open. A story is [COMPLEX-DECEPTION] if all of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is not [HAS-A-CLIFFHANGER]
+- Either of the following is true:
+  - The story is [USES-CONDITIONAL-MOOD]
+  - The story is [USES-PERFECT-ASPECT]
+Only when the tale centers on deception, does not leave us dangling on a cliffhanger, and also uses either conditional mood or perfect aspect, does it step into the room called [COMPLEX-DECEPTION].
+
+[ASPECTUAL-AMBIVALENCE]
+This next chamber holds a double-turned key. A story is [ASPECTUAL-AMBIVALENCE] if both of the following are true:
+- Either of the following is true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-CONDITIONAL-MOOD]
+- The story is not both of the following:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-CONDITIONAL-MOOD]
+In plain terms: the story uses one of those temporal moods (perfect aspect or conditional mood), but it does not use both at once. It sits ambivalently between aspectual choices.
+
+[AMBIGUOUS-DECEPTION-NARRATIVE]
+Finally, we reach the attic where ambiguity and artful deceit mingle. A story is [AMBIGUOUS-DECEPTION-NARRATIVE] if both of the following are true:
+- The story is [COMPLEX-DECEPTION]
+- Either of the following is true:
+  - The story is [ASPECTUAL-AMBIVALENCE]
+  - The story is not [HAS-A-CLIFFHANGER]
+So to enter this attic, the tale must already qualify as [COMPLEX-DECEPTION], and then it must either wear the ambivalent timing of [ASPECTUAL-AMBIVALENCE] or be free of a cliffhanger. When those conditions align, the narrative earns the final, intriguingly named label.
+
+That is the map: each bracketed signpost is fixed, every logical hinge preserved. Walk through it when you annotate a tale, and you’ll know precisely which rooms it inhabits.

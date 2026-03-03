@@ -1,0 +1,410 @@
+{
+  "nodes": [
+    {
+      "id": "style-lighthearted",
+      "label": "STYLE-LIGHTHEARTED",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-philosophical",
+      "label": "STYLE-PHILOSOPHICAL",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-magical-lands",
+      "label": "TOPIC-MAGICAL-LANDS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-wh-questions",
+      "label": "USES-WH-QUESTIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "short-story",
+      "label": "SHORT-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-kindness",
+      "label": "THEME-KINDNESS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "many-paragraphs",
+      "label": "MANY-PARAGRAPHS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-conditional-mood",
+      "label": "USES-CONDITIONAL-MOOD",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-problem-solving",
+      "label": "THEME-PROBLEM-SOLVING",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-growth",
+      "label": "THEME-GROWTH",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-preposition",
+      "label": "STARTS-WITH-PREPOSITION",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-giant-creatures",
+      "label": "TOPIC-GIANT-CREATURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-modern",
+      "label": "STYLE-MODERN",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "style-classic",
+      "label": "STYLE-CLASSIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-magic",
+      "label": "THEME-MAGIC",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-lost-civilizations",
+      "label": "TOPIC-LOST-CIVILIZATIONS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "has-a-flashback",
+      "label": "HAS-A-FLASHBACK",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-hidden-treasures",
+      "label": "TOPIC-HIDDEN-TREASURES",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "non-lighthearted",
+      "label": "NON-LIGHTHEARTED",
+      "formula_type": "Not",
+      "formula_args": [
+        "style-lighthearted"
+      ]
+    },
+    {
+      "id": "modern-xor-classic",
+      "label": "MODERN-XOR-CLASSIC",
+      "formula_type": "Xor",
+      "formula_args": [
+        "style-modern",
+        "style-classic"
+      ]
+    },
+    {
+      "id": "magical-adventure",
+      "label": "MAGICAL-ADVENTURE",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-magical-lands",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "theme-magic",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "topic-giant-creatures",
+                "theme-problem-solving"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hidden-lost-adventure",
+      "label": "HIDDEN-LOST-ADVENTURE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "Xor",
+          "formula_args": [
+            "topic-hidden-treasures",
+            "topic-lost-civilizations"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "topic-hidden-treasures",
+            "topic-lost-civilizations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-style",
+      "label": "QUEST-STYLE",
+      "formula_type": "And",
+      "formula_args": [
+        "uses-wh-questions",
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            "uses-conditional-mood",
+            "starts-with-preposition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epic-growth-arc",
+      "label": "EPIC-GROWTH-ARC",
+      "formula_type": "And",
+      "formula_args": [
+        {
+          "formula_type": "Equal",
+          "formula_args": [
+            "set-of-themes",
+            [
+              "theme-kindness",
+              "theme-growth"
+            ]
+          ]
+        },
+        {
+          "formula_type": "Or",
+          "formula_args": [
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "theme-problem-solving",
+                "has-a-flashback"
+              ]
+            },
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "many-paragraphs",
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "short-story"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amalgam-of-adventure",
+      "label": "AMALGAM-OF-ADVENTURE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "magical-adventure",
+            "hidden-lost-adventure"
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "topic-giant-creatures",
+            "topic-lost-civilizations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ambiguous-magical-tale",
+      "label": "AMBIGUOUS-MAGICAL-TALE",
+      "formula_type": "Or",
+      "formula_args": [
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "amalgam-of-adventure",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                "modern-xor-classic",
+                {
+                  "formula_type": "Or",
+                  "formula_args": [
+                    "theme-kindness",
+                    "theme-magic"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "epic-growth-arc",
+            {
+              "formula_type": "And",
+              "formula_args": [
+                {
+                  "formula_type": "Not",
+                  "formula_args": [
+                    "non-lighthearted"
+                  ]
+                },
+                "quest-style"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "style-lighthearted",
+      "target": "non-lighthearted"
+    },
+    {
+      "source": "style-modern",
+      "target": "modern-xor-classic"
+    },
+    {
+      "source": "style-classic",
+      "target": "modern-xor-classic"
+    },
+    {
+      "source": "topic-magical-lands",
+      "target": "magical-adventure"
+    },
+    {
+      "source": "theme-magic",
+      "target": "magical-adventure"
+    },
+    {
+      "source": "topic-giant-creatures",
+      "target": "magical-adventure"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "magical-adventure"
+    },
+    {
+      "source": "topic-hidden-treasures",
+      "target": "hidden-lost-adventure"
+    },
+    {
+      "source": "topic-lost-civilizations",
+      "target": "hidden-lost-adventure"
+    },
+    {
+      "source": "uses-wh-questions",
+      "target": "quest-style"
+    },
+    {
+      "source": "uses-conditional-mood",
+      "target": "quest-style"
+    },
+    {
+      "source": "starts-with-preposition",
+      "target": "quest-style"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "epic-growth-arc"
+    },
+    {
+      "source": "theme-growth",
+      "target": "epic-growth-arc"
+    },
+    {
+      "source": "theme-problem-solving",
+      "target": "epic-growth-arc"
+    },
+    {
+      "source": "has-a-flashback",
+      "target": "epic-growth-arc"
+    },
+    {
+      "source": "many-paragraphs",
+      "target": "epic-growth-arc"
+    },
+    {
+      "source": "short-story",
+      "target": "epic-growth-arc"
+    },
+    {
+      "source": "magical-adventure",
+      "target": "amalgam-of-adventure"
+    },
+    {
+      "source": "hidden-lost-adventure",
+      "target": "amalgam-of-adventure"
+    },
+    {
+      "source": "topic-giant-creatures",
+      "target": "amalgam-of-adventure"
+    },
+    {
+      "source": "topic-lost-civilizations",
+      "target": "amalgam-of-adventure"
+    },
+    {
+      "source": "amalgam-of-adventure",
+      "target": "ambiguous-magical-tale"
+    },
+    {
+      "source": "modern-xor-classic",
+      "target": "ambiguous-magical-tale"
+    },
+    {
+      "source": "theme-kindness",
+      "target": "ambiguous-magical-tale"
+    },
+    {
+      "source": "theme-magic",
+      "target": "ambiguous-magical-tale"
+    },
+    {
+      "source": "epic-growth-arc",
+      "target": "ambiguous-magical-tale"
+    },
+    {
+      "source": "non-lighthearted",
+      "target": "ambiguous-magical-tale"
+    },
+    {
+      "source": "quest-style",
+      "target": "ambiguous-magical-tale"
+    }
+  ]
+}

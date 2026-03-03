@@ -1,0 +1,62 @@
+Interviewer: Let's go through this codebook step by step. First, what does [attr-10] mean?
+
+Expert: A story is [attr-10] if the story is philosophical.
+
+Interviewer: And [attr-12]?
+
+Expert: A story is [attr-12] if the story is about the arts.
+
+Interviewer: Simple enough. How about [attr-3]?
+
+Expert: A story is [attr-3] if the story has a flashback.
+
+Interviewer: [attr-6]?
+
+Expert: A story is [attr-6] if the story has a story within a story.
+
+Interviewer: Moving on to themes and devices: what is [attr-11]?
+
+Expert: A story is [attr-11] if the story has the theme Deception.
+
+Interviewer: And [attr-5]?
+
+Expert: A story is [attr-5] if the story has a Red Herring.
+
+Interviewer: [attr-4]?
+
+Expert: A story is [attr-4] if the story has a moral lesson.
+
+Interviewer: Now the codebook defines some combined categories. Explain [attr-9].
+
+Expert: A story is [attr-9] if both of the following are true:
+- The story is [attr-10]
+- The story is [attr-12]
+
+Interviewer: So that requires both philosophical style and an arts topic. Got it. What does [attr-7] capture?
+
+Expert: A story is [attr-7] if either of the following is true:
+- The story is [attr-3]
+- The story is [attr-6]
+
+Interviewer: Okay—either device qualifies the story as meta-structured. Explain [attr-8].
+
+Expert: A story is [attr-8] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-5]
+
+Interviewer: So misdirection needs deception plus a red herring. Next, what's [attr-2]?
+
+Expert: A story is [attr-2] if all of the following are true:
+- The story is [attr-8]
+- The story is [attr-4]
+- The story is not [attr-9]
+
+Interviewer: Important detail there—the story must not be [attr-9]. Finally, define [attr-1].
+
+Expert: A story is [attr-1] if both of the following are true:
+- The story is [attr-2]
+- The story is [attr-7]
+
+Interviewer: Thanks — that preserves the exact logical structure while making the relationships clear. Any last clarifications?
+
+Expert: The definitions are literal: each bracketed node is a label, and where the codebook says "both," "either," or "all," those indicate logical And / Or / And conditions respectively; the single negation appears exactly as "The story is not [attr-9]." All node IDs and their relationships remain unchanged.

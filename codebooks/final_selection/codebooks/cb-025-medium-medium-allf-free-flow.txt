@@ -1,0 +1,65 @@
+I’ve rewritten the codebook in a more natural, free-flow voice while leaving every logical piece exactly where it belongs. All node IDs, operators, and formula structures are unchanged — you’ll find the formal definitions intact, but wrapped in friendlier, more readable language.
+
+[HAS-A-MORAL-LESSON]
+Sometimes a story wants to teach you something—if it does, we tag it accordingly.  
+A story is [HAS-A-MORAL-LESSON] if The story has a moral lesson
+
+[USES-PERFECT-ASPECT]
+When the prose leans on perfect tenses—has done, had done, will have done—that’s what this marker catches.  
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect
+
+[HAS-A-CLIFFHANGER]
+If the narrative leaves you hanging at the end, that’s a cliffhanger and this is the label we use.  
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+
+[THEME-KINDNESS]
+Stories that center kindness—whether as a theme or a guiding thread—get this tag.  
+A story is [THEME-KINDNESS] if The story has the theme Kindness
+
+[STYLE-MODERN]
+When the tone, references, or style feel contemporary, we call that modern.  
+A story is [STYLE-MODERN] if The story is modern
+
+[HAS-A-FLASHBACK]
+If the narrative jumps back in time to reveal earlier moments, that’s a flashback and we note it here.  
+A story is [HAS-A-FLASHBACK] if The story has a flashback
+
+[STYLE-CLASSIC]
+When the voice or structure leans toward the traditional, timeless, or classic, this is the label to use.  
+A story is [STYLE-CLASSIC] if The story is classic
+
+[LONG-STORY]
+For anything that stretches beyond a brief vignette into a fuller piece, we count length.  
+A story is [LONG-STORY] if The story has more than 375 words
+
+[HAS-JUXTAPOSITION]
+When elements are placed side-by-side to highlight contrasts or unexpected similarities, that’s juxtaposition.  
+A story is [HAS-JUXTAPOSITION] if The story has juxtaposition
+
+[STYLE-LIGHTHEARTED]
+If the overall mood is breezy, playful, or gently amusing, we mark it as lighthearted.  
+A story is [STYLE-LIGHTHEARTED] if The story is lighthearted
+
+[RICH-NARRATIVE]
+Think of [RICH-NARRATIVE] as a small checklist for stories that feel layered and textured. For a story to qualify, all of the following must be true:
+- Either of the following is true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is [HAS-A-FLASHBACK]
+- Exactly one of the following is true:
+  - The story is [HAS-JUXTAPOSITION]
+  - The story is [USES-PERFECT-ASPECT]
+- The story is not [STYLE-LIGHTHEARTED]
+- At least one of the story's structural features is in the set { [HAS-A-CLIFFHANGER], [HAS-A-FLASHBACK], [HAS-JUXTAPOSITION] }
+
+So, a rich narrative needs either a cliffhanger or a flashback, exactly one of juxtaposition or perfect aspect, it must not be lighthearted, and it must include at least one of those structural features — that combination gives the story its “rich” label.
+
+[COMPLEX-STORY]
+Now, to call a story [COMPLEX-STORY], we stack a couple more conditions on top of richness. Both of the following must be true:
+- The story is [RICH-NARRATIVE]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [THEME-KINDNESS]
+    - The story is [HAS-A-MORAL-LESSON]
+  - The presence of [STYLE-MODERN] equals the presence of [STYLE-CLASSIC]
+
+In plain terms: a complex story has the layered properties of [RICH-NARRATIVE], it must either carry kindness as a theme or include an explicit moral, and its modern/classic styling must be matched (either both are present or both are absent).

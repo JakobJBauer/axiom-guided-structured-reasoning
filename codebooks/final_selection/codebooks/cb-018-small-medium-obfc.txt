@@ -1,0 +1,31 @@
+[attr-7]
+A story is [attr-7] if The story has the theme Helping Others.
+
+[attr-6]
+A story is [attr-6] if The story is philosophical.
+
+[attr-4]
+A story is [attr-4] if The story is classic.
+
+[attr-1]
+A story is [attr-1] if The story has juxtaposition.
+
+[attr-5]
+A story is [attr-5] if The story is modern.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-1]
+- Exactly one of the following is true:
+  - The story is [attr-4]
+  - The story is [attr-5]
+
+[attr-3]
+A story is [attr-3] if either of the following is true:
+- All of the following are true:
+  - The story is [attr-6]
+  - The story is [attr-7]
+  - The story is not [attr-2]
+- Both of the following are true:
+  - The story is [attr-2]
+  - The story is not [attr-7]

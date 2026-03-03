@@ -1,0 +1,84 @@
+Codebook — Structured Reference for Annotation
+
+Purpose
+- This document presents a clear, organized view of the annotation labels (node IDs) and their exact logical definitions.
+- Follow these definitions precisely when deciding whether a story satisfies a label.
+- Node IDs are shown in [BRACKET] format and must be used unchanged.
+
+1) Atomic (single-condition) labels
+- [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - Definition: A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+- [THEME-KINDNESS]
+  - Definition: A story is [THEME-KINDNESS] if the story has the theme Kindness.
+
+- [HAS-JUXTAPOSITION]
+  - Definition: A story is [HAS-JUXTAPOSITION] if the story has juxtaposition.
+
+- [TOPIC-HIDDEN-TREASURES]
+  - Definition: A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+- [LOW-READABILITY]
+  - Definition: A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+- [STYLE-PHILOSOPHICAL]
+  - Definition: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+- [STYLE-MODERN]
+  - Definition: A story is [STYLE-MODERN] if the story is modern.
+
+- [THEME-DECEPTION]
+  - Definition: A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+- [HIGH-READABILITY]
+  - Definition: A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+2) Composite (multi-condition) labels
+- [MODERN-PHILO-JUXTA]
+  - Definition: A story is [MODERN-PHILO-JUXTA] if all of the following are true:
+    - The story is [STYLE-MODERN]
+    - Either of the following is true:
+      - The story is [STYLE-PHILOSOPHICAL]
+      - The story is [HAS-JUXTAPOSITION]
+    - The story is not [HAS-CIRCULAR-NARRATIVE-STRUCT]
+
+- [MORAL-AMBIVALENCE]
+  - Definition: A story is [MORAL-AMBIVALENCE] if all of the following are true:
+    - The story is [THEME-KINDNESS]
+    - The story is [THEME-DECEPTION]
+    - The story is [MODERN-PHILO-JUXTA]
+
+- [COMPLEX-NARRATIVE]
+  - Definition: A story is [COMPLEX-NARRATIVE] if both of the following are true:
+    - The story is [MORAL-AMBIVALENCE]
+    - Either of the following is true:
+      - Exactly one of the following is true:
+        - The story is [LOW-READABILITY]
+        - The story is [HIGH-READABILITY]
+      - The story is [TOPIC-HIDDEN-TREASURES]
+
+3) Quick annotation checklist (use this to reason through each composite label)
+- To decide [MODERN-PHILO-JUXTA]:
+  1. Is [STYLE-MODERN] true?
+  2. Is at least one of [STYLE-PHILOSOPHICAL] or [HAS-JUXTAPOSITION] true?
+  3. Is [HAS-CIRCULAR-NARRATIVE-STRUCT] false?
+  - All three must hold for [MODERN-PHILO-JUXTA] to apply.
+
+- To decide [MORAL-AMBIVALENCE]:
+  - Confirm [THEME-KINDNESS], [THEME-DECEPTION], and [MODERN-PHILO-JUXTA] are all true.
+
+- To decide [COMPLEX-NARRATIVE]:
+  1. Confirm [MORAL-AMBIVALENCE] is true.
+  2. Then confirm at least one of:
+     - Exactly one of [LOW-READABILITY] or [HIGH-READABILITY] is true (but not both).
+     - OR [TOPIC-HIDDEN-TREASURES] is true.
+  - Both step 1 and step 2 must be satisfied.
+
+Notes for annotators
+- Maintain exact logical relationships when labeling.
+- "Either" and "Exactly one" are distinct:
+  - "Either" means one or more of the listed options (at least one).
+  - "Exactly one" means only one of the listed options, not more.
+- "Not" negates the listed condition (the condition must be false).
+
+End of codebook — use these structured rules to guide consistent and accurate annotation.

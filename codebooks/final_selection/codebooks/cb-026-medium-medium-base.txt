@@ -1,0 +1,54 @@
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if The story is about time travel.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if The story is philosophical.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if The story has readability score above 96.1.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic.
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if The story is humorous.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures.
+
+[THEMATIC-DEPTH]
+A story is [THEMATIC-DEPTH] if both of the following are true:
+- The story is [STYLE-PHILOSOPHICAL]
+- The story is not [STYLE-HUMOROUS]
+
+[NARRATIVE-STYLE]
+A story is [NARRATIVE-STYLE] if both of the following are true:
+- The story is [HIGH-READABILITY]
+- Either of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [STYLE-HUMOROUS]
+
+[ADVENTURE-ARC]
+A story is [ADVENTURE-ARC] if either of the following is true:
+- The story is [TOPIC-HIDDEN-TREASURES]
+- Both of the following are true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is not [STYLE-PHILOSOPHICAL]
+
+[COMPLEX-STORY]
+A story is [COMPLEX-STORY] if both of the following are true:
+- The story is [THEMATIC-DEPTH]
+- Either of the following is true:
+  - The story is [ADVENTURE-ARC]
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+
+[EPIC]
+A story is [EPIC] if both of the following are true:
+- The story is [COMPLEX-STORY]
+- The story is [MANY-PARAGRAPHS]

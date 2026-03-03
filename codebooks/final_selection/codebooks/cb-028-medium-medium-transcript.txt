@@ -1,0 +1,79 @@
+Interviewer: Let’s walk through this codebook together. I’ll ask what each node means and how it’s determined. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What does [HAS-A-MORAL-LESSON] mean?
+
+Expert: Simple: A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+Interviewer: And [MANY-PARAGRAPHS]?
+
+Expert: A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+
+Interviewer: How about [STARTS-WITH-ADVERB]?
+
+Expert: A story is [STARTS-WITH-ADVERB] if the story starts with an adverb.
+
+Interviewer: [HAS-CIRCULAR-NARRATIVE-STRUCT]?
+
+Expert: A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+Interviewer: [USES-PERFECT-ASPECT]?
+
+Expert: A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect.
+
+Interviewer: [USES-SUPERLATIVE-FORMS]?
+
+Expert: A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+Interviewer: Now it gets more interesting. Explain [STYLISTIC-CHOICE].
+
+Expert: Sure. A story is [STYLISTIC-CHOICE] if both of the following are true:
+- The story is [STARTS-WITH-ADVERB]
+- Exactly one of the following is true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-SUPERLATIVE-FORMS]
+
+Interviewer: So [STYLISTIC-CHOICE] requires it start with an adverb and then exactly one of those two stylistic features. Clear.
+
+Expert: Exactly—both conditions must hold: the adverb start plus exclusivity between perfect aspect and superlative forms.
+
+Interviewer: Explain [NARRATIVE-TYPE].
+
+Expert: A story is [NARRATIVE-TYPE] if either of the following is true:
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- Both of the following are true:
+  - The story is not [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - The story is [MANY-PARAGRAPHS]
+
+Interviewer: So [NARRATIVE-TYPE] is true if it’s circular, or if it’s not circular but has many paragraphs. That’s a neat way to capture two distinct narrative cases.
+
+Expert: Yes—either explicit circular structure, or else long stories that aren’t circular.
+
+Interviewer: What does [MORAL-OR-LONG] capture?
+
+Expert: A story is [MORAL-OR-LONG] if exactly one of the following is true:
+- The story is [HAS-A-MORAL-LESSON]
+- The story is [MANY-PARAGRAPHS]
+
+Interviewer: So [MORAL-OR-LONG] is exclusive: it’s a moral story or a long story, but not both.
+
+Expert: Correct—exactly one, never both.
+
+Interviewer: Finally, [COMPLEXITY-HIGH] — this looks layered. Break it down.
+
+Expert: A story is [COMPLEXITY-HIGH] if both of the following are true:
+- Either of the following is true:
+  - The story is [STYLISTIC-CHOICE]
+  - The story is not [MORAL-OR-LONG]
+- The story is [NARRATIVE-TYPE]
+
+Interviewer: So to be [COMPLEXITY-HIGH], the story must be a [NARRATIVE-TYPE], and additionally it must either be a [STYLISTIC-CHOICE] or fail to be [MORAL-OR-LONG]. Right?
+
+Expert: Exactly. Both top-level conditions must hold. First, it must satisfy the narrative-type condition. Second, within that, it must either meet the stylistic-choice rule, or it must not be (moral or long). Both lines of logic combine to label the story as high complexity.
+
+Interviewer: That keeps the logical structure intact while making the conditions easier to ask about. Anything else to note?
+
+Expert: Just this: every node here is a precise test. When annotating, check the atomic properties first—like [STARTS-WITH-ADVERB], [USES-PERFECT-ASPECT], [HAS-A-MORAL-LESSON], and [MANY-PARAGRAPHS]—then combine them according to the composite rules I described. That preserves all logical operations and relationships exactly as written.
+
+Interviewer: Great—thanks for walking through the entire codebook in this Q&A format.

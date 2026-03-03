@@ -1,0 +1,25 @@
+[THEME-INNOVATION]  
+Use [THEME-INNOVATION] when the story’s underlying theme is innovation—when it’s clearly centered on new ideas, new approaches, or change driven by inventive thinking.
+
+[TOPIC-CULTURAL-TRADITIONS]  
+Tag a story as [TOPIC-CULTURAL-TRADITIONS] whenever it’s focused on cultural traditions—customs, heritage practices, rituals, or shared ways of life passed through a culture.
+
+[TOPIC-BYGONE-ERAS]  
+Apply [TOPIC-BYGONE-ERAS] if the story is about bygone eras, meaning it’s oriented toward earlier times, past periods, or historical “back then” settings and perspectives.
+
+[USES-WH-QUESTIONS]  
+Mark [USES-WH-QUESTIONS] when the story uses wh-questions—questions that begin with words like who, what, when, where, why, or how.
+
+[STARTS-WITH-NOUN]  
+Choose [STARTS-WITH-NOUN] if the story begins with a noun—its opening word is a person, place, thing, or other noun form.
+
+[STARTS-WITH-PREPOSITION]  
+Choose [STARTS-WITH-PREPOSITION] if the story kicks off with a preposition—an opener like “in,” “on,” “at,” “under,” “between,” and similar.
+
+[CULTURAL-INNOVATION-QUESTIONS]  
+A story qualifies as [CULTURAL-INNOVATION-QUESTIONS] only when all of the following are true:  
+- The story is [THEME-INNOVATION]  
+- Either of the following is true:  
+  - The story is [TOPIC-CULTURAL-TRADITIONS]  
+  - The story is [TOPIC-BYGONE-ERAS]  
+- The story is [USES-WH-QUESTIONS]

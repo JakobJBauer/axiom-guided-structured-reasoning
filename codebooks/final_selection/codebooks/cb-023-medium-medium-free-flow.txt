@@ -1,0 +1,57 @@
+Think of these tags as simple, clear labels we use when we're describing what a story does or is about.
+
+[STYLE-PHILOSOPHICAL]
+Call a story [STYLE-PHILOSOPHICAL] when it leans into philosophy — when its tone, questions, or structure feel philosophical.
+
+[TOPIC-THE-ARTS]
+Label a story [TOPIC-THE-ARTS] when the subject matter is the arts — when art, artists, or artistic practice are central to the piece.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] when it includes a flashback.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+Use [HAS-A-STORY-WITHIN-A-STORY] for a story that contains another story embedded inside it.
+
+[THEME-DECEPTION]
+Tag a story [THEME-DECEPTION] when deception is a central theme — when trickery, lies, or deliberate misdirection drive the narrative.
+
+[HAS-A-RED-HERRING]
+A story is [HAS-A-RED-HERRING] if it includes a red herring — a distracting clue meant to mislead the reader.
+
+[HAS-A-MORAL-LESSON]
+Mark a story [HAS-A-MORAL-LESSON] when it conveys an explicit moral lesson.
+
+Now, some tags combine these basic labels — they’re a way of saying “this plus that equals this new category.”
+
+[REFLECTIVE-ARTS]
+A story is [REFLECTIVE-ARTS] if both of the following are true:
+- The story is [STYLE-PHILOSOPHICAL]
+- The story is [TOPIC-THE-ARTS]
+In other words, when you have a philosophical approach focused on the arts, that’s [REFLECTIVE-ARTS].
+
+[META-STRUCTURE]
+A story is [META-STRUCTURE] if either of the following is true:
+- The story is [HAS-A-FLASHBACK]
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+So any kind of layered structure — a flashback or a story inside the story — counts as [META-STRUCTURE].
+
+[MISDIRECTION]
+A story is [MISDIRECTION] if both of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is [HAS-A-RED-HERRING]
+When deception is the theme and there’s a red herring in play, you’ve got [MISDIRECTION].
+
+[DIDACTIC-MISDIRECT]
+A story is [DIDACTIC-MISDIRECT] if all of the following are true:
+- The story is [MISDIRECTION]
+- The story is [HAS-A-MORAL-LESSON]
+- The story is not [REFLECTIVE-ARTS]
+So this is a misdirection that also teaches a moral — but it’s explicitly not a reflective-arts piece.
+
+[COMPLEX-PARABLE]
+A story is [COMPLEX-PARABLE] if both of the following are true:
+- The story is [DIDACTIC-MISDIRECT]
+- The story is [META-STRUCTURE]
+When a didactic misdirection is packaged inside a layered, meta structure, you arrive at [COMPLEX-PARABLE].
+
+That’s the set: simple atomic tags for stylistic features, thematic elements, and structural devices, and then a few composed categories that tie those pieces together.

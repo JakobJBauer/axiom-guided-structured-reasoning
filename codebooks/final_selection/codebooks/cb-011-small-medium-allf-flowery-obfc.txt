@@ -1,0 +1,46 @@
+In a sunlit study where parchment whispers and ink sighs, a careful scribe once assembled a small atlas of meanings — a codebook that names the secret lives of stories. Below you will find that atlas, its maps preserved in full logical clarity, and yet ornamented with the kind of verdant language that would please a wandering bard. Each entry keeps its original signposts — the bracketed node IDs and their exact logical declarations — intact and unaltered. After each formal rule, I offer a lyrical explication to ease understanding and lend a touch of romance to the hard edges of logic.
+
+[attr-6]
+A story is [attr-6] if The story is about the arts
+
+Explanation: Imagine a tale that breathes color and cadence — a narrative whose very heartbeat is theater, painting, music, or dance. If the story’s subject matter dwells in those luminous realms, it receives the gentle appellation [attr-6].
+
+[attr-7]
+A story is [attr-7] if The story uses conditional mood
+
+Explanation: This label is reserved for tales that often speak in possibilities, wishes, and gentle hypotheticals — sentences that lean on “would,” “could,” or “if.” To wear [attr-7] is to flirt with what might be, rather than fix what is.
+
+[attr-4]
+A story is [attr-4] if The story starts with a adjective
+
+Explanation: Some stories open like a ribbon: “Quiet,” “Luminous,” “Ancient.” When the very first word that unfurls is an adjective — describing before declaring — we crown the piece with [attr-4].
+
+[attr-5]
+A story is [attr-5] if The story is philosophical
+
+Explanation: This mark is given to narratives that ponder, interrogate, and meditate — those that invite readers to stroll through ideas as if along a contemplative garden path. If the story engages with questions of meaning, existence, or thought, it is [attr-5].
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-7]
+- The story is not [attr-4]
+
+Explanation: Picture a tale that murmurs in conditionals yet begins without the immediate perfume of description. For a story to be [attr-3], it must both weave conditional moods through its fabric and, at the same time, avoid opening with an adjective. The two criteria must be met together, like two hands clasping.
+
+[attr-1]
+A story is [attr-1] if exactly one of the following is true:
+- The story is [attr-6]
+- The story is [attr-5]
+
+Explanation: This node is a delicate balance: [attr-1] blossoms only when the tale belongs to one realm but not the other. It is the mark of exclusivity — the story must be either about the arts or philosophical in style, but never both at once. Exactly one of those truths must hold, like a toggle switching light between two lanterns.
+
+[attr-2]
+A story is [attr-2] if either of the following is true:
+- The story is [attr-3]
+- Both of the following are true:
+  - The story is in the set of topics that includes [attr-6]
+  - The truth of [attr-5] is equal to the truth of not [attr-7]
+
+Explanation: This is the most intricate garland in our collection. A story may earn the title [attr-2] in one of two ways. First, it may already bear the simpler badge [attr-3]. Or, in a richer pattern, it may both be counted among the topics that include [attr-6] and satisfy an elegant parity: the story is philosophical exactly when it is not written in the conditional mood. In other words, the truth about its philosophical nature must mirror the negation of its use of conditionals. When these linked conditions align, the story qualifies for [attr-2].
+
+Thus ends the little codex: the bones of reasoning remain unbroken, each bracketed signpost exactly where the original scribe placed it. Around those bones I have braided roses of explanation, so that the map is not only useful, but delightful to read. Use it well when you annotate, judge, or simply admire the many faces of story.

@@ -1,0 +1,24 @@
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if it uses discourse markers (e.g., linking words or phrases).
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if it contains juxtaposition.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if it’s about mystical creatures.
+
+[HAS-A-RED-HERRING]
+A story is [HAS-A-RED-HERRING] if it includes a red herring.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if it’s about giant creatures.
+
+[FANTASTICAL-JUXTAPOSITION]
+A story is [FANTASTICAL-JUXTAPOSITION] if both of the following are true:
+- The story is [TOPIC-MYSTICAL-CREATURES]
+- The story is [HAS-JUXTAPOSITION]
+
+[GIANT-MISDIRECTION]
+A story is [GIANT-MISDIRECTION] if both of the following are true:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is [HAS-A-RED-HERRING]

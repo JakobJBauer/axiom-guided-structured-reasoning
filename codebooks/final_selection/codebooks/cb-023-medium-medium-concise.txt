@@ -1,0 +1,46 @@
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if it's philosophical.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if it's about the arts.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if it has a flashback.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if it has a story within a story.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if it has the theme Deception.
+
+[HAS-A-RED-HERRING]
+A story is [HAS-A-RED-HERRING] if it has a Red Herring.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if it has a moral lesson.
+
+[REFLECTIVE-ARTS]
+A story is [REFLECTIVE-ARTS] if both of the following are true:
+- The story is [STYLE-PHILOSOPHICAL]
+- The story is [TOPIC-THE-ARTS]
+
+[META-STRUCTURE]
+A story is [META-STRUCTURE] if either of the following is true:
+- The story is [HAS-A-FLASHBACK]
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+
+[MISDIRECTION]
+A story is [MISDIRECTION] if both of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is [HAS-A-RED-HERRING]
+
+[DIDACTIC-MISDIRECT]
+A story is [DIDACTIC-MISDIRECT] if all of the following are true:
+- The story is [MISDIRECTION]
+- The story is [HAS-A-MORAL-LESSON]
+- The story is not [REFLECTIVE-ARTS]
+
+[COMPLEX-PARABLE]
+A story is [COMPLEX-PARABLE] if both of the following are true:
+- The story is [DIDACTIC-MISDIRECT]
+- The story is [META-STRUCTURE]

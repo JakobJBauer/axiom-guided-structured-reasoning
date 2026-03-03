@@ -1,0 +1,125 @@
+Picture a library of stories, each spine labeled with a tiny, precise tag. Walk with me as we open each book and listen for the quiet rule that earns it a name. I’ll whisper the name of the tag and then read aloud the rule that crowns the tale with that badge—unchanged, exact, and true—so your annotations and judgments remain rock-solid even as the language around them sings.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] if the story is about magical lands.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if the story has the theme Kindness.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if the story has the theme Growth.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if the story is modern.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if the story is classic.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if the story has the theme Magic.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if the story is about lost civilizations.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if the story has a flashback.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+[NON-LIGHTHEARTED]
+A story is [NON-LIGHTHEARTED] if the story is not [STYLE-LIGHTHEARTED].
+
+[MODERN-XOR-CLASSIC]
+A story is [MODERN-XOR-CLASSIC] if exactly one of the following is true:
+- The story is [STYLE-MODERN]
+- The story is [STYLE-CLASSIC]
+
+[MAGICAL-ADVENTURE]
+A story is [MAGICAL-ADVENTURE] if both of the following are true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- Either of the following is true:
+  - The story is [THEME-MAGIC]
+  - Both of the following are true:
+    - The story is [TOPIC-GIANT-CREATURES]
+    - The story is [THEME-PROBLEM-SOLVING]
+
+[HIDDEN-LOST-ADVENTURE]
+A story is [HIDDEN-LOST-ADVENTURE] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+- Both of the following are true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+
+[QUEST-STYLE]
+A story is [QUEST-STYLE] if both of the following are true:
+- [USES-WH-QUESTIONS] is in the set of devices the story uses (it explicitly uses wh-questions)
+- Either of the following is true:
+  - The story is [USES-CONDITIONAL-MOOD]
+  - The story is [STARTS-WITH-PREPOSITION]
+
+[EPIC-GROWTH-ARC]
+A story is [EPIC-GROWTH-ARC] if both of the following are true:
+- The set of themes in the story is equal to the set containing [THEME-KINDNESS] and [THEME-GROWTH]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [THEME-PROBLEM-SOLVING]
+    - The story is [HAS-A-FLASHBACK]
+  - Both of the following are true:
+    - The story is [MANY-PARAGRAPHS]
+    - The story is not [SHORT-STORY]
+
+[AMALGAM-OF-ADVENTURE]
+A story is [AMALGAM-OF-ADVENTURE] if either of the following is true:
+- Both of the following are true:
+  - The story is [MAGICAL-ADVENTURE]
+  - The story is [HIDDEN-LOST-ADVENTURE]
+- Both of the following are true:
+  - The story is [TOPIC-GIANT-CREATURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+
+[AMBIGUOUS-MAGICAL-TALE]
+A story is [AMBIGUOUS-MAGICAL-TALE] if either of the following is true:
+- Both of the following are true:
+  - The story is [AMALGAM-OF-ADVENTURE]
+  - Both of the following are true:
+    - The story is [MODERN-XOR-CLASSIC]
+    - Either of the following is true:
+      - The story is [THEME-KINDNESS]
+      - The story is [THEME-MAGIC]
+- Both of the following are true:
+  - The story is [EPIC-GROWTH-ARC]
+  - Both of the following are true:
+    - The story is not [NON-LIGHTHEARTED]
+    - The story is [QUEST-STYLE]
+
+And there, like a map in the front of a book, are the rules written plainly. Read them as you would a prophecy: each label a verdict arrived at by these exact conditions. The tale of classification continues to unfold, but these sentences—untouched in their logic—are the compass you carry.

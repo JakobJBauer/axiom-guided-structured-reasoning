@@ -1,0 +1,55 @@
+Prologue — In a sunlit archive where ink sighs and parchment keeps its secrets, there lives a modest codex: the codebook you now hold. Picture a gentle librarian of meaning, arranging concepts like wildflowers in a meadow — each petal labelled with precision, each stem tied to another by silver threads of logic. Below, the formal prescriptions are preserved like heirloom seeds; they are spoken again here in language that blossoms, yet their architecture remains unaltered — the IDs, the operators, the exact relationships are kept as vows.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if the story is minimalist.
+- In plain terms: this designation crowns a tale that pares itself down to essentials, favoring the spare and the essential over ornament — a silent room where every word matters.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+- Here we mark those narratives whose sentences glide like polished stones — measured, clear, and scored above the precise threshold of 96.1, the golden line that separates ease from effort.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+- This label is given to tales that climb to the peaks of comparison, that call things the most, the least, the finest — where language reaches toward extremes.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if the story has the theme Growth.
+- The [THEME-GROWTH] mark is borne by narratives that trace emergence and unfolding, the arc of change from seed to bloom, apprentice to master, smallness to stature.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+- This token is for adventures that fold and refold chronology, where clocks are doors and history becomes a playground.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+- This is the signet of quests for buried gold, secret caches, and the glittering discoveries that alter lives and maps alike.
+
+[CLEAR-CONCISE]
+A story is [CLEAR-CONCISE] if both of the following are true:
+- The story is [STYLE-MINIMALIST]
+- The story is [HIGH-READABILITY]
+- When these two conditions hold together, imagine a finely trimmed hedge and a sunlit path: the story is both spare and effortlessly legible, a concise lantern that guides without excess.
+
+[EMPHATIC]
+A story is [EMPHATIC] if both of the following are true:
+- The story is [USES-SUPERLATIVE-FORMS]
+- The story is not [STYLE-MINIMALIST]
+- This label applies to pieces that swell with superlatives and do so with flourish rather than restraint — the rhetoric is grand, and not confined to the minimalist’s hush.
+
+[THEMATIC-ARC]
+A story is [THEMATIC-ARC] if both of the following are true:
+- The story is [THEME-GROWTH]
+- Either of the following is true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is [TOPIC-HIDDEN-TREASURES]
+- Think of [THEMATIC-ARC] as a story that not only grows but also journeys: growth intertwined with either temporal leaps or the discovery of concealed riches, the twin paths that make a character’s maturation also an adventure.
+
+[COMPELLING]
+A story is [COMPELLING] if both of the following are true:
+- The story is [CLEAR-CONCISE]
+- Either of the following is true:
+  - The story is [EMPHATIC]
+  - The story is [THEMATIC-ARC]
+- In the end, a [COMPELLING] story is one that shines with clarity and economy while also possessing either passionate emphasis or a growth-centered journey (with time travel or treasure at its heart). It is the tale that pulls the reader along with tidy language and irresistible purpose.
+
+Epilogue — Let this rephrased codex be a garden map: vivid in description, faithful in compass. Every bracketed name, every logical conjunction, every negation is held in place like a cornerstone. Use it to annotate, to reason, and to celebrate stories that stand where form and content entwine.

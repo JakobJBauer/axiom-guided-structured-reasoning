@@ -1,0 +1,138 @@
+[attr-16] — Story begins with an adverb.
+
+[attr-37] — Story about cultural traditions.
+
+[attr-32] — Story with the theme Innovation.
+
+[attr-31] — Story with the theme Humor.
+
+[attr-39] — Story about hidden treasures.
+
+[attr-19] — Story in a classic style.
+
+[attr-20] — Story in a humorous style.
+
+[attr-23] — Story in a modern style.
+
+[attr-38] — Story about giant creatures.
+
+[attr-48] — Story uses perfect aspect.
+
+[attr-3] — Story contains a flashback.
+
+[attr-29] — Story with the theme Hardship.
+
+[attr-2] — Story ends with a cliffhanger.
+
+[attr-4] — Story includes a moral lesson.
+
+[attr-40] — Story about lost civilizations.
+
+[attr-25] — Story is playful.
+
+[attr-43] — Story about seasonal changes.
+
+[attr-18] — Story begins with a preposition.
+
+[attr-9] — Story contains juxtaposition.
+
+[attr-35] — Story with the theme Problem-Solving.
+
+[attr-45] — Story about time travel.
+
+[attr-36] — Story about bygone eras.
+
+[attr-8] — Story uses a circular narrative structure.
+
+[attr-47] — Story uses discourse markers.
+
+[attr-50] — Story uses wh-questions.
+
+[attr-44] — Story about the arts.
+
+[attr-34] — Story with the theme Magic.
+
+[attr-24] — Story is philosophical.
+
+[attr-22] — Story is minimalist.
+
+[attr-6] — Story contains a story within a story.
+
+[attr-11] — Story has more than 375 words.
+
+[attr-42] — Story about mystical creatures.
+
+[attr-12] — Story has readability score below 86.4.
+
+[attr-7] — Story contains Checkhov's gun.
+
+[attr-13] — Story has more than 6 paragraphs.
+
+[attr-28] — Story with the theme Deception.
+
+[attr-27] — Story with the theme Agency.
+
+[attr-41] — Story about magical lands.
+
+[attr-49] — Story uses superlatives.
+
+[attr-15] — Story begins with an adjective.
+
+[attr-33] — Story with the theme Kindness.
+
+[attr-10] — Story has readability score above 96.1.
+
+[attr-17] — Story begins with a noun.
+
+[attr-46] — Story uses the conditional mood.
+
+[attr-5] — Story includes a red herring.
+
+[attr-14] — Story has fewer than 160 words.
+
+[attr-26] — Story is surreal.
+
+[attr-30] — Story with the theme Helping Others.
+
+[attr-21] — Story is lighthearted.
+
+[attr-1]
+A story is [attr-1] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is in [attr-40], [attr-36], [attr-45]
+      - The story is [attr-8]
+    - either of the following is true:
+      - The story is [attr-6]
+      - both of the following are true:
+        - The story is [attr-3]
+        - It is not the case that both of the following are true:
+          - The story is [attr-5]
+          - The story is [attr-7]
+  - both of the following are true:
+    - exactly one of the following is true:
+      - The story is [attr-19]
+      - The story is [attr-23]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [attr-34]
+        - It is not the case that the story is [attr-42]
+      - both of the following are true:
+        - The story is [attr-35]
+        - The story is [attr-47]
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [attr-28]
+      - It is not the case that both of the following are true:
+        - The story is [attr-33]
+        - The story is [attr-30]
+    - The story is [attr-5]
+  - either of the following is true:
+    - exactly one of the following is true:
+      - The story is [attr-11]
+      - The story is [attr-14]
+    - both of the following are true:
+      - The story is [attr-7]
+      - It is not the case that the story is [attr-2]

@@ -1,0 +1,59 @@
+Somewhere in the library of stories, each label waits like a lantern hung on a branch, ready to be lit when a tale meets its truth. Let me walk you through those lanterns — each one a rule, each one precise — and tell the little tale of how a story earns its badge. I’ll keep the exact signs in brackets so you can always find them again.
+
+[attr-4]
+A story is [attr-4] if The story has more than 6 paragraphs.
+- Think of this as the threshold for a sprawling chapter: once a tale stretches past six paragraphs, the [attr-4] lantern glows.
+
+[attr-7]
+A story is [attr-7] if The story is classic.
+- This label is for narratives that wear tradition like an old coat—steady, time-honored, unmistakably classic.
+
+[attr-2]
+A story is [attr-2] if The story has a cliffhanger.
+- When a tale snaps its thread at an edge and leaves readers hanging, the [attr-2] flag unfurls.
+
+[attr-6]
+A story is [attr-6] if The story starts with a preposition.
+- Some stories begin by stepping into place: if the opening line opens with a preposition, this marker appears.
+
+[attr-11]
+A story is [attr-11] if The story has the theme Deception.
+- This lantern burns bright for tales of trickery, misdirection, and secrets revealed too late.
+
+[attr-9]
+A story is [attr-9] if The story is playful.
+- When the tone is light, mischievous, or delightfully irreverent, the [attr-9] badge fits snugly.
+
+[attr-12]
+A story is [attr-12] if The story has the theme Helping Others.
+- This sign marks narratives built around generosity, rescue, and compassionate acts.
+
+[attr-10]
+A story is [attr-10] if The story has the theme Agency.
+- When characters act with will and influence—shaping their world rather than being shaped—the [attr-10] lamp is lit.
+
+[attr-3]
+A story is [attr-3] if The story has juxtaposition.
+- Where contrasts stand shoulder to shoulder—light and dark, old and new—the juxtaposition badge is placed.
+
+[attr-8]
+A story is [attr-8] if The story is philosophical.
+- This is the quiet, reflective sign for tales that ask the big questions and linger on meaning.
+
+[attr-5]
+A story is [attr-5] if either of the following is true:
+- The story is both [attr-11] and not [attr-12]
+- Exactly one of the following is true:
+  - The story is [attr-10]
+  - The story is [attr-12]
+- Picture [attr-5] as a layered tapestry: it appears when deception dominates without a helping hand, or when the story’s moral force is decisively one way—either agency or helping others, but not both at once. The rule above states this precisely.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - The story is both [attr-2] and not [attr-9]
+  - The story is both [attr-6] and [attr-5]
+- Imagine the [attr-1] lantern as the grand seal for a classic tale that also carries a twist: it must be classic, and then either it leaves you on an earnest cliffhanger (not playful), or it begins with a preposition and wears the layered identity of [attr-5]. The structure above keeps those possibilities exact.
+
+There — the lanterns are lit and their rules are intact. Each bracketed sign stays where it belongs; each condition still governs when a story earns its light. Read these lines as both map and myth: precise rules dressed in a little storytelling glow.

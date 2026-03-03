@@ -1,0 +1,38 @@
+Purpose
+This codebook defines binary annotation labels for short stories. Each label applies when the specified logical condition(s) are satisfied. Node identifiers are shown in bracketed form and must be preserved exactly. Logical relationships use standard Boolean operators: AND (conjunction), OR (disjunction), NOT (negation), and XOR (exclusive OR — “exactly one true”).
+
+Definitions
+
+[STARTS-WITH-ADJECTIVE]
+Definition: The label [STARTS-WITH-ADJECTIVE] is true for a story if the story’s opening token is an adjective.
+Specification: Apply this label when the first lexical token of the story is an adjective (grammatical category: ADJ).
+
+[TOPIC-GIANT-CREATURES]
+Definition: The label [TOPIC-GIANT-CREATURES] is true for a story that semantically concerns giant creatures.
+Specification: Apply this label when the primary topic or subject matter of the story is giant creatures (e.g., giant animals, kaiju, enormous monsters).
+
+[GIANT-FOCUSED]
+Definition: The label [GIANT-FOCUSED] is true iff both of the following conditions hold:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is NOT [STARTS-WITH-ADJECTIVE]
+Formal expression: [GIANT-FOCUSED] = [TOPIC-GIANT-CREATURES] AND NOT [STARTS-WITH-ADJECTIVE]
+
+[DYNAMIC-OPENING]
+Definition: The label [DYNAMIC-OPENING] is true when exactly one of the following conditions is true (exclusive OR):
+- The story is [STARTS-WITH-ADJECTIVE]
+- The story is [TOPIC-GIANT-CREATURES]
+Specification: This is an exclusive disjunction: the label holds if either the story starts with an adjective or the story is about giant creatures, but not both.
+Formal expression: [DYNAMIC-OPENING] = XOR([STARTS-WITH-ADJECTIVE], [TOPIC-GIANT-CREATURES]) — exactly one true
+
+[ENGAGING-GIANT-STORY]
+Definition: The label [ENGAGING-GIANT-STORY] is true when both of the following are satisfied:
+- The story is [GIANT-FOCUSED]
+- Either of the following is true:
+  - The story is [DYNAMIC-OPENING]
+  - The story is NOT [STARTS-WITH-ADJECTIVE]
+Formal expression: [ENGAGING-GIANT-STORY] = [GIANT-FOCUSED] AND ( [DYNAMIC-OPENING] OR NOT [STARTS-WITH-ADJECTIVE] )
+
+Notes on application
+- All conditions are binary (true/false). Annotators should evaluate each base predicate ([STARTS-WITH-ADJECTIVE], [TOPIC-GIANT-CREATURES]) before deriving composite labels.
+- Preserve the exact bracketed node identifiers when recording annotations.
+- Logical operators must be applied as specified (AND, OR, NOT, XOR). Do not alter the relationships or add intermediary nodes.

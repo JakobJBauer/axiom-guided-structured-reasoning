@@ -1,0 +1,25 @@
+[STARTS-WITH-ADJECTIVE]
+Think of this as a simple check: a story is STARTS-WITH-ADJECTIVE when, literally, it opens with an adjective. If the very first word that kicks the piece off is an adjective, the story meets this tag.
+
+[TOPIC-GIANT-CREATURES]
+A story is TOPIC-GIANT-CREATURES when its subject matter centers on giant creatures — that is, the story is about enormous beasts or colossal entities.
+
+[GIANT-FOCUSED]
+A story is GIANT-FOCUSED if both of the following are true:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is not [STARTS-WITH-ADJECTIVE]
+In other words, the piece must be about giant creatures and it must not begin with an adjective.
+
+[DYNAMIC-OPENING]
+A story is DYNAMIC-OPENING if exactly one of the following is true:
+- The story is [STARTS-WITH-ADJECTIVE]
+- The story is [TOPIC-GIANT-CREATURES]
+So DYNAMIC-OPENING applies when the story has one — and only one — of these attributes: it either starts with an adjective or it’s about giant creatures, but not both.
+
+[ENGAGING-GIANT-STORY]
+A story is ENGAGING-GIANT-STORY if both of the following are true:
+- The story is [GIANT-FOCUSED]
+- Either of the following is true:
+  - The story is [DYNAMIC-OPENING]
+  - The story is not [STARTS-WITH-ADJECTIVE]
+Put simply: to be an ENGAGING-GIANT-STORY the piece must be giant-focused, and in addition it must either qualify as a DYNAMIC-OPENING or simply not start with an adjective.

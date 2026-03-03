@@ -1,0 +1,30 @@
+Think of this as a friendlier, more conversational tour through the same codebook — every label and logical link stays exactly where it was, only the wording around them relaxes into a more natural voice.
+
+[attr-7]
+A story is [attr-7] if the story uses discourse markers. In other words, when a narrative relies on connective words and phrases — “however,” “meanwhile,” “on the other hand,” and the like — we mark it with this label.
+
+[attr-4]
+A story is [attr-4] if the story has juxtaposition. If the story places contrasting elements side by side to highlight differences or surprising similarities, that’s what this tag captures.
+
+[attr-6]
+A story is [attr-6] if the story is about mystical creatures. Use this whenever the narrative centers on beings of myth, magic, or the supernatural.
+
+[attr-3]
+A story is [attr-3] if the story has a Red Herring. This one flags a deliberate misdirection or false lead woven into the plot.
+
+[attr-5]
+A story is [attr-5] if the story is about giant creatures. When enormous beings are a primary focus — that’s when this label applies.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-6]
+- The story is [attr-4]
+So, when mystical creatures are central and the narrative explicitly sets contrasting elements side by side, the story fits this combined category.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-3]
+This label goes on tales that focus on giant creatures and also include a red herring — the large-scale focus plus an intentional plot mislead.
+
+That’s it — same precise structure and logic, just written in a smoother, more conversational tone so it’s easier to read and use while you annotate.

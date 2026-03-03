@@ -1,0 +1,33 @@
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if the story’s principal subject matter concerns the arts (e.g., visual arts, music, theater, dance, literature).
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if the narrative employs the conditional mood in its verbal or grammatical constructions.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if the first lexical token of the story is an adjective.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story’s style exhibits philosophical content or discourse (e.g., abstract argumentation, metaphysical reflection, ethical inquiry).
+
+[CONDITIONAL-AND-NOT-START]
+A story is [CONDITIONAL-AND-NOT-START] if both of the following are true:
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is not [STARTS-WITH-ADJECTIVE]
+
+[ARTS-XOR-PHILOSOPHICAL]
+A story is [ARTS-XOR-PHILOSOPHICAL] if exactly one of the following is true:
+- The story is [TOPIC-THE-ARTS]
+- The story is [STYLE-PHILOSOPHICAL]
+
+[COMPLEX-CRITERION]
+A story is [COMPLEX-CRITERION] if either of the following conditions holds:
+- The story is [CONDITIONAL-AND-NOT-START]
+- Both of the following are true:
+  - The story is in the set of topics that includes [TOPIC-THE-ARTS]
+  - The truth of [STYLE-PHILOSOPHICAL] is equal to the truth of not [USES-CONDITIONAL-MOOD]
+
+Notes on semantics:
+- Each clause above defines a binary predicate on the space of candidate stories; a story satisfies a node when the node’s condition holds.
+- Logical connectives and quantification are propositional and local to the definitions (e.g., “both of the following are true” denotes logical conjunction; “exactly one” denotes exclusive disjunction).
+- The final conjunct in [COMPLEX-CRITERION] asserts equality of truth values between the proposition [STYLE-PHILOSOPHICAL] and the negation of [USES-CONDITIONAL-MOOD].

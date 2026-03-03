@@ -1,0 +1,52 @@
+[attr-8]
+A story is [attr-8] if the story is playful. Imagine a tale that skips like a pebble across a sunlit pond, full of mischief and lightness — a narrative that delights in surprise, wit, and the gentle tug of whimsy while still meeting the simple, exacting criterion above.
+
+[attr-7]
+A story is [attr-7] if the story is minimalist. Picture prose pared to its essential bones, elegant in its restraint and spare in ornament — the unmistakable hush and clarity of a tale that accomplishes much with very little, exactly as this definition requires.
+
+[attr-3]
+A story is [attr-3] if the story has a moral lesson. Envision a narrative that quietly bends toward meaning, leaving a talisman of wisdom or a guiding truth in the reader’s hand — a lesson woven deliberately into the fabric of the plot, fulfilling the straightforward condition above.
+
+[attr-11]
+A story is [attr-11] if the story is about time travel. Think of corridors of seasons and clocks that lean and sigh, tales that fold past into present and present into future — yet, for our purposes, the classification depends simply on whether time travel is central to the story.
+
+[attr-6]
+A story is [attr-6] if the story starts with a noun. The smallest of formalities — the opener anchored by a noun — becomes a stylistic lodestar here, like the first stone set in a mosaic that determines the pattern to follow.
+
+[attr-4]
+A story is [attr-4] if the story has more than 6 paragraphs. Imagine a composition that unfurls across multiple breaths and stanzas — more than six paragraphs, a measured unfolding that signals breadth and cadence, and thus satisfies this numeric threshold.
+
+[attr-12]
+A story is [attr-12] if the story uses conditional mood. Picture sentences that lean on possibility and hypothesis — a language of “would,” “could,” and “if” that opens doors of contingency; this presence of conditional mood is the criterion that defines the node.
+
+[attr-9]
+A story is [attr-9] if the story has the theme Hardship. Visualize a narrative that traces trials, grit, and the sculpting force of adversity — a theme of hardship that shapes characters and plot and thereby fulfills this exact classification.
+
+[attr-2]
+A story is [attr-2] if both of the following are true:
+- The story is [attr-8]
+- The story is [attr-7]
+Imagine, for the sake of the reader’s imagination, a rare floral creature of style that is at once sprightly and spare: the playfulness of a wink contained within the discipline of minimalism. Yet the definition stands precise and unaltered — [attr-2] is true only when both of the listed conditions above hold.
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-4]
+- The story is [attr-12]
+- The story is [attr-6]
+Think of a narrative tapestry rich in structure: a work that spans many paragraphs, speaks in the hush of conditional possibilities, and opens boldly with a noun. Only when all three threads are woven together does the label [attr-1] apply.
+
+[attr-10]
+A story is [attr-10] if both of the following are true:
+- The story is [attr-11]
+- The story is [attr-3]
+Envision a clockwork parable: a tale that journeys through time and arrives bearing a moral, its temporal twists serving to illuminate an ethical heart. The node [attr-10] precisely captures this conjunction of subject and lesson.
+
+[attr-5]
+A story is [attr-5] if both of the following are true:
+- The story is [attr-1]
+- Either of the following is true:
+  - The story is [attr-2]
+  - Both of the following are true:
+    - The story is [attr-8]
+    - The story is not [attr-9]
+Imagine a luxuriant narrative bloom: complex in form, and rich in stylistic hue. To earn the name [attr-5], a tale must first be a [attr-1]; beyond that, it must either combine playful and minimalist virtues as a [attr-2], or else be playful without bearing the burden of hardship as a theme. Note the careful exclusion in the last branch — the story is not [attr-9] — a precise negative that ensures the richness here favors lightness over trials.

@@ -1,0 +1,34 @@
+Think of this as a little handbook you can skim casually, but rely on precisely—every label in brackets below matters exactly as written.
+
+If a tale opens with an adjective, we tag it [STARTS-WITH-ADJECTIVE]. If it begins with a noun instead, it gets [STARTS-WITH-NOUN].
+
+When the mood is breezy and easygoing, call that [STYLE-LIGHTHEARTED]. If the scene tilts toward the dreamlike and unexpected, that's [STYLE-SURREAL]. When the writing aims to make you laugh, label it [STYLE-HUMOROUS].
+
+Some stories are built around puzzles and fixes; those carry the theme [THEME-PROBLEM-SOLVING]. Others hinge on tricks or misleading appearances and are marked [THEME-DECEPTION].
+
+Now for the combined rules—these preserve logical relationships exactly as stated:
+
+- A story is [START-TYPE-XOR] if exactly one of the following is true:
+  - The story is [STARTS-WITH-ADJECTIVE]
+  - The story is [STARTS-WITH-NOUN]
+
+- A story is [TONE-PLAYFUL] if either of the following is true:
+  - The story's style is in the set { [STYLE-LIGHTHEARTED], [STYLE-HUMOROUS] }
+  - Both of the following are true:
+    - The story is [STYLE-SURREAL]
+    - The story is not [THEME-DECEPTION]
+
+- A story is [DECEPTION-OR-PROBLEM] if either of the following is true:
+  - The story is [THEME-DECEPTION]
+  - The story is [THEME-PROBLEM-SOLVING]
+
+- A story is [STYLE-EQUALITY] if the following equality holds:
+  - [STYLE-LIGHTHEARTED] = [STYLE-HUMOROUS]
+
+Finally, a story earns the label [COMPLEX-STORY] only when two things line up together:
+- The story is [START-TYPE-XOR]
+- Exactly one of the following is true:
+  - The story is [TONE-PLAYFUL]
+  - The story is [DECEPTION-OR-PROBLEM]
+
+That’s the whole map—phrased in plain language but with the same exact nodes and logical wiring intact. Use the bracketed tags and the rules above when annotating or reasoning; they’re the canonical guide.

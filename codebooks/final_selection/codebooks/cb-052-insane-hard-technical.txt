@@ -1,0 +1,190 @@
+[THEME-GROWTH]
+Definition: The predicate [THEME-GROWTH] evaluates to true for a story if and only if the story’s thematic content includes Growth.
+
+[STYLE-HUMOROUS]
+Definition: The predicate [STYLE-HUMOROUS] evaluates to true for a story if and only if the story is humorous in style.
+
+[THEME-HELPING-OTHERS]
+Definition: The predicate [THEME-HELPING-OTHERS] evaluates to true for a story if and only if the story’s theme concerns Helping Others.
+
+[STARTS-WITH-PREPOSITION]
+Definition: The predicate [STARTS-WITH-PREPOSITION] evaluates to true for a story if and only if the story begins with a preposition.
+
+[STYLE-MODERN]
+Definition: The predicate [STYLE-MODERN] evaluates to true for a story if and only if the story is modern in style.
+
+[USES-PERFECT-ASPECT]
+Definition: The predicate [USES-PERFECT-ASPECT] evaluates to true for a story if and only if the story employs the perfect grammatical aspect.
+
+[STYLE-LIGHTHEARTED]
+Definition: The predicate [STYLE-LIGHTHEARTED] evaluates to true for a story if and only if the story is lighthearted in tone.
+
+[THEME-DECEPTION]
+Definition: The predicate [THEME-DECEPTION] evaluates to true for a story if and only if the story’s theme includes Deception.
+
+[THEME-KINDNESS]
+Definition: The predicate [THEME-KINDNESS] evaluates to true for a story if and only if the story’s theme includes Kindness.
+
+[USES-WH-QUESTIONS]
+Definition: The predicate [USES-WH-QUESTIONS] evaluates to true for a story if and only if the story contains WH-questions (who, what, when, where, why, how).
+
+[TOPIC-LOST-CIVILIZATIONS]
+Definition: The predicate [TOPIC-LOST-CIVILIZATIONS] evaluates to true for a story if and only if the story’s subject matter concerns lost civilizations.
+
+[TOPIC-TIME-TRAVEL]
+Definition: The predicate [TOPIC-TIME-TRAVEL] evaluates to true for a story if and only if the story’s subject matter concerns time travel.
+
+[HAS-CHECKHOVS-GUN]
+Definition: The predicate [HAS-CHECKHOVS-GUN] evaluates to true for a story if and only if the story contains an instance of Chekhov's gun (an initially-presented element that becomes significant later).
+
+[HAS-A-MORAL-LESSON]
+Definition: The predicate [HAS-A-MORAL-LESSON] evaluates to true for a story if and only if the story conveys an explicit moral lesson.
+
+[THEME-HARDSHIP]
+Definition: The predicate [THEME-HARDSHIP] evaluates to true for a story if and only if the story’s theme includes Hardship.
+
+[LONG-STORY]
+Definition: The predicate [LONG-STORY] evaluates to true for a story if and only if the story contains more than 375 words.
+
+[TOPIC-SEASONAL-CHANGES]
+Definition: The predicate [TOPIC-SEASONAL-CHANGES] evaluates to true for a story if and only if the story’s subject matter concerns seasonal changes.
+
+[HAS-A-CLIFFHANGER]
+Definition: The predicate [HAS-A-CLIFFHANGER] evaluates to true for a story if and only if the story ends with a cliffhanger.
+
+[THEME-PROBLEM-SOLVING]
+Definition: The predicate [THEME-PROBLEM-SOLVING] evaluates to true for a story if and only if the story’s theme includes Problem-Solving.
+
+[THEME-INNOVATION]
+Definition: The predicate [THEME-INNOVATION] evaluates to true for a story if and only if the story’s theme includes Innovation.
+
+[THEME-MAGIC]
+Definition: The predicate [THEME-MAGIC] evaluates to true for a story if and only if the story’s theme includes Magic.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+Definition: The predicate [HAS-CIRCULAR-NARRATIVE-STRUCT] evaluates to true for a story if and only if the story’s narrative structure is circular.
+
+[TOPIC-GIANT-CREATURES]
+Definition: The predicate [TOPIC-GIANT-CREATURES] evaluates to true for a story if and only if the story’s subject matter concerns giant creatures.
+
+[USES-DISCOURSE-MARKERS]
+Definition: The predicate [USES-DISCOURSE-MARKERS] evaluates to true for a story if and only if the story employs discourse markers (e.g., however, therefore, meanwhile).
+
+[STYLE-PHILOSOPHICAL]
+Definition: The predicate [STYLE-PHILOSOPHICAL] evaluates to true for a story if and only if the story is philosophical in style.
+
+[STARTS-WITH-ADVERB]
+Definition: The predicate [STARTS-WITH-ADVERB] evaluates to true for a story if and only if the story begins with an adverb.
+
+[TOPIC-CULTURAL-TRADITIONS]
+Definition: The predicate [TOPIC-CULTURAL-TRADITIONS] evaluates to true for a story if and only if the story’s subject matter concerns cultural traditions.
+
+[HAS-A-FLASHBACK]
+Definition: The predicate [HAS-A-FLASHBACK] evaluates to true for a story if and only if the story includes at least one flashback.
+
+[HIGH-READABILITY]
+Definition: The predicate [HIGH-READABILITY] evaluates to true for a story if and only if the story’s readability score is greater than 96.1.
+
+[STYLE-MINIMALIST]
+Definition: The predicate [STYLE-MINIMALIST] evaluates to true for a story if and only if the story exhibits a minimalist style.
+
+[USES-SUPERLATIVE-FORMS]
+Definition: The predicate [USES-SUPERLATIVE-FORMS] evaluates to true for a story if and only if the story uses superlative adjective/adverb forms (e.g., best, most).
+
+[TOPIC-MAGICAL-LANDS]
+Definition: The predicate [TOPIC-MAGICAL-LANDS] evaluates to true for a story if and only if the story’s subject matter concerns magical lands.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+Definition: The predicate [HAS-A-STORY-WITHIN-A-STORY] evaluates to true for a story if and only if the narrative contains an embedded story (a story within the story).
+
+[STYLE-SURREAL]
+Definition: The predicate [STYLE-SURREAL] evaluates to true for a story if and only if the story is surreal in style.
+
+[STARTS-WITH-NOUN]
+Definition: The predicate [STARTS-WITH-NOUN] evaluates to true for a story if and only if the story begins with a noun.
+
+[TOPIC-BYGONE-ERAS]
+Definition: The predicate [TOPIC-BYGONE-ERAS] evaluates to true for a story if and only if the story’s subject matter concerns bygone eras.
+
+[LOW-READABILITY]
+Definition: The predicate [LOW-READABILITY] evaluates to true for a story if and only if the story’s readability score is less than 86.4.
+
+[THEME-HUMOR]
+Definition: The predicate [THEME-HUMOR] evaluates to true for a story if and only if the story’s thematic content includes Humor.
+
+[TOPIC-MYSTICAL-CREATURES]
+Definition: The predicate [TOPIC-MYSTICAL-CREATURES] evaluates to true for a story if and only if the story’s subject matter concerns mystical creatures.
+
+[HUMOROUS-LIGHTHEARTED]
+Definition: The predicate [HUMOROUS-LIGHTHEARTED] evaluates to true for a story if both of the following are true:
+- The story is [STYLE-HUMOROUS]
+- The story is [STYLE-LIGHTHEARTED]
+
+[MODERN-PHILOSOPHICAL-SURREAL]
+Definition: The predicate [MODERN-PHILOSOPHICAL-SURREAL] evaluates to true for a story if either of the following is true:
+- The story is [STYLE-MODERN]
+- both of the following are true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [STYLE-SURREAL]
+
+[READABILITY-EXTREMES]
+Definition: The predicate [READABILITY-EXTREMES] evaluates to true for a story if exactly one of the following is true:
+- The story is [HIGH-READABILITY]
+- The story is [LOW-READABILITY]
+
+[NARRATIVE-COMPLEXITY]
+Definition: The predicate [NARRATIVE-COMPLEXITY] evaluates to true for a story if all of the following are true:
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [HAS-A-FLASHBACK]
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+
+[THEMATIC-HELP-KIND]
+Definition: The predicate [THEMATIC-HELP-KIND] evaluates to true for a story if both of the following are true:
+- The story is [THEME-HELPING-OTHERS]
+- The story is [THEME-KINDNESS]
+
+[MAGIC-LANDS-CREATURES]
+Definition: The predicate [MAGIC-LANDS-CREATURES] evaluates to true for a story if both of the following are true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- either of the following is true:
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+  - The story is [TOPIC-GIANT-CREATURES]
+
+[TIME-LOST-BYGONE]
+Definition: The predicate [TIME-LOST-BYGONE] evaluates to true for a story if either of the following is true:
+- both of the following are true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+- The story is [TOPIC-BYGONE-ERAS]
+
+[MORALITY-FILTER]
+Definition: The predicate [MORALITY-FILTER] evaluates to true for a story if all of the following are true:
+- The story is [HAS-A-MORAL-LESSON]
+- The story is [THEME-KINDNESS]
+- The story is not [THEME-DECEPTION]
+
+[INNOVATION-PROBLEM-SOLVE]
+Definition: The predicate [INNOVATION-PROBLEM-SOLVE] evaluates to true for a story if both of the following are true:
+- The story is [THEME-INNOVATION]
+- The story is [THEME-PROBLEM-SOLVING]
+
+[PACING-LONG-CLIFF]
+Definition: The predicate [PACING-LONG-CLIFF] evaluates to true for a story if both of the following are true:
+- The story is [LONG-STORY]
+- The story is [HAS-A-CLIFFHANGER]
+
+[COMPLEX-ARCHETYPE]
+Definition: The predicate [COMPLEX-ARCHETYPE] evaluates to true for a story if either of the following is true:
+- all of the following are true:
+  - The story is [HUMOROUS-LIGHTHEARTED]
+  - The story is [MORALITY-FILTER]
+  - either of the following is true:
+    - The story is [NARRATIVE-COMPLEXITY]
+    - The story is [PACING-LONG-CLIFF]
+- exactly one of the following is true:
+  - both of the following are true:
+    - The story is [MAGIC-LANDS-CREATURES]
+    - The story is not [STYLE-MINIMALIST]
+  - The story is [TIME-LOST-BYGONE]
+
+Notes on usage: Each bracketed identifier denotes a boolean predicate over story instances. Composite predicates are specified using standard logical composition: conjunctions ("both"/"all of the following are true"), disjunctions ("either of the following is true"), negation ("not"), and exclusive disjunction ("exactly one of the following is true"). Apply these rules deterministically during annotation and automated reasoning.

@@ -1,0 +1,121 @@
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if it’s lighthearted.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if it’s philosophical.
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] if it’s about magical lands.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if it uses wh-questions.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if it has fewer than 160 words.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if its theme is Kindness.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if it has more than 6 paragraphs.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if it uses the conditional mood.
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if its theme is Problem-Solving.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if its theme is Growth.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if it starts with a preposition.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if it’s about giant creatures.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if it’s modern.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if it’s classic.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if its theme is Magic.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if it’s about lost civilizations.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if it contains a flashback.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if it’s about hidden treasures.
+
+[NON-LIGHTHEARTED]
+A story is [NON-LIGHTHEARTED] if the story is not [STYLE-LIGHTHEARTED].
+
+[MODERN-XOR-CLASSIC]
+A story is [MODERN-XOR-CLASSIC] if exactly one of the following is true:
+- The story is [STYLE-MODERN]
+- The story is [STYLE-CLASSIC]
+
+[MAGICAL-ADVENTURE]
+A story is [MAGICAL-ADVENTURE] if both of the following are true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- Either of the following is true:
+  - The story is [THEME-MAGIC]
+  - Both of the following are true:
+    - The story is [TOPIC-GIANT-CREATURES]
+    - The story is [THEME-PROBLEM-SOLVING]
+
+[HIDDEN-LOST-ADVENTURE]
+A story is [HIDDEN-LOST-ADVENTURE] if either of the following is true:
+- Exactly one of the following is true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+- Both of the following are true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+
+[QUEST-STYLE]
+A story is [QUEST-STYLE] if both of the following are true:
+- [USES-WH-QUESTIONS] is in the set of devices the story uses (it explicitly uses wh-questions)
+- Either of the following is true:
+  - The story is [USES-CONDITIONAL-MOOD]
+  - The story is [STARTS-WITH-PREPOSITION]
+
+[EPIC-GROWTH-ARC]
+A story is [EPIC-GROWTH-ARC] if both of the following are true:
+- The set of themes in the story is equal to the set containing [THEME-KINDNESS] and [THEME-GROWTH]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [THEME-PROBLEM-SOLVING]
+    - The story is [HAS-A-FLASHBACK]
+  - Both of the following are true:
+    - The story is [MANY-PARAGRAPHS]
+    - The story is not [SHORT-STORY]
+
+[AMALGAM-OF-ADVENTURE]
+A story is [AMALGAM-OF-ADVENTURE] if either of the following is true:
+- Both of the following are true:
+  - The story is [MAGICAL-ADVENTURE]
+  - The story is [HIDDEN-LOST-ADVENTURE]
+- Both of the following are true:
+  - The story is [TOPIC-GIANT-CREATURES]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+
+[AMBIGUOUS-MAGICAL-TALE]
+A story is [AMBIGUOUS-MAGICAL-TALE] if either of the following is true:
+- Both of the following are true:
+  - The story is [AMALGAM-OF-ADVENTURE]
+  - Both of the following are true:
+    - The story is [MODERN-XOR-CLASSIC]
+    - Either of the following is true:
+      - The story is [THEME-KINDNESS]
+      - The story is [THEME-MAGIC]
+- Both of the following are true:
+  - The story is [EPIC-GROWTH-ARC]
+  - Both of the following are true:
+    - The story is not [NON-LIGHTHEARTED]
+    - The story is [QUEST-STYLE]

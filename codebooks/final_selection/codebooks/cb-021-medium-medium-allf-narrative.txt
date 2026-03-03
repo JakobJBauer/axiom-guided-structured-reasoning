@@ -1,0 +1,52 @@
+Imagine a tiny library of labels — each one a lantern that lights a different corner of a tale. Below, each lantern is named by its bracketed tag and then explained. Read them like a map: the relationships and logical rules that bind these tags are preserved exactly, but told with a little narrative warmth so the map is easier and more pleasurable to follow.
+
+[STARTS-WITH-ADJECTIVE]
+Think of the first paragraph as the moment a story opens the curtain. A story is [STARTS-WITH-ADJECTIVE] if the story starts with a adjective.
+
+[STARTS-WITH-NOUN]
+Sometimes the curtain rises on a thing or person instead. A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+[STYLE-LIGHTHEARTED]
+There are moods that make reading feel like a stroll in the sun. A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+[STYLE-SURREAL]
+Other moods bend reality and make the familiar feel strange. A story is [STYLE-SURREAL] if the story is surreal.
+
+[STYLE-HUMOROUS]
+And some moods coax laughter and wit from the page. A story is [STYLE-HUMOROUS] if the story is humorous.
+
+[THEME-PROBLEM-SOLVING]
+Plot can have a driving engine: the puzzle to be solved. A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+[THEME-DECEPTION]
+Or it can spin webs of misdirection and masks. A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+[START-TYPE-XOR]
+Now imagine a fork in the road that allows exactly one entrance. A story is [START-TYPE-XOR] if exactly one of the following is true:
+- The story is [STARTS-WITH-ADJECTIVE]
+- The story is [STARTS-WITH-NOUN]
+
+[TONE-PLAYFUL]
+Playfulness can arrive in different costumes. A story is [TONE-PLAYFUL] if either of the following is true:
+- The story's style is in the set { [STYLE-LIGHTHEARTED], [STYLE-HUMOROUS] }
+- Both of the following are true:
+  - The story is [STYLE-SURREAL]
+  - The story is not [THEME-DECEPTION]
+
+[DECEPTION-OR-PROBLEM]
+Sometimes a story carries a single heavy theme or two different ones that both press forward. A story is [DECEPTION-OR-PROBLEM] if either of the following is true:
+- The story is [THEME-DECEPTION]
+- The story is [THEME-PROBLEM-SOLVING]
+
+[STYLE-EQUALITY]
+Some labels are only applied when two styles line up perfectly. A story is [STYLE-EQUALITY] if the following equality holds:
+- [STYLE-LIGHTHEARTED] = [STYLE-HUMOROUS]
+
+[COMPLEX-STORY]
+Finally, imagine a more intricate tapestry — one that requires a particular beginning and then a single tonal or thematic direction. A story is [COMPLEX-STORY] if both of the following are true:
+- The story is [START-TYPE-XOR]
+- Exactly one of the following is true:
+  - The story is [TONE-PLAYFUL]
+  - The story is [DECEPTION-OR-PROBLEM]
+
+Walk this map when you label a tale: each bracketed name is a lantern, and the rules above tell you when to light it.

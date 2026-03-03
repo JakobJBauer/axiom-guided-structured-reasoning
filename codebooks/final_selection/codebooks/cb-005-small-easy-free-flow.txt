@@ -1,0 +1,30 @@
+Think of this as a friendlier, more conversational tour through the same codebook — every label and logical link stays exactly where it was, only the wording around them relaxes into a more natural voice.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers. In other words, when a narrative relies on connective words and phrases — “however,” “meanwhile,” “on the other hand,” and the like — we mark it with this label.
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if the story has juxtaposition. If the story places contrasting elements side by side to highlight differences or surprising similarities, that’s what this tag captures.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if the story is about mystical creatures. Use this whenever the narrative centers on beings of myth, magic, or the supernatural.
+
+[HAS-A-RED-HERRING]
+A story is [HAS-A-RED-HERRING] if the story has a Red Herring. This one flags a deliberate misdirection or false lead woven into the plot.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures. When enormous beings are a primary focus — that’s when this label applies.
+
+[FANTASTICAL-JUXTAPOSITION]
+A story is [FANTASTICAL-JUXTAPOSITION] if both of the following are true:
+- The story is [TOPIC-MYSTICAL-CREATURES]
+- The story is [HAS-JUXTAPOSITION]
+So, when mystical creatures are central and the narrative explicitly sets contrasting elements side by side, the story fits this combined category.
+
+[GIANT-MISDIRECTION]
+A story is [GIANT-MISDIRECTION] if both of the following are true:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is [HAS-A-RED-HERRING]
+This label goes on tales that focus on giant creatures and also include a red herring — the large-scale focus plus an intentional plot mislead.
+
+That’s it — same precise structure and logic, just written in a smoother, more conversational tone so it’s easier to read and use while you annotate.

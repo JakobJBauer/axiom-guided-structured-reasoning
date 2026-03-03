@@ -1,0 +1,45 @@
+[attr-4]
+Definition: A story is classified as [attr-4] if the narrative contains more than 6 paragraphs.
+
+[attr-7]
+Definition: A story is classified as [attr-7] if the narrative exhibits a classic style.
+
+[attr-2]
+Definition: A story is classified as [attr-2] if the narrative terminates with a cliffhanger.
+
+[attr-6]
+Definition: A story is classified as [attr-6] if the initial token (or starting word) of the narrative is a preposition.
+
+[attr-11]
+Definition: A story is classified as [attr-11] if the narrative contains the theme Deception.
+
+[attr-9]
+Definition: A story is classified as [attr-9] if the narrative adopts a playful style.
+
+[attr-12]
+Definition: A story is classified as [attr-12] if the narrative contains the theme Helping Others.
+
+[attr-10]
+Definition: A story is classified as [attr-10] if the narrative contains the theme Agency.
+
+[attr-3]
+Definition: A story is classified as [attr-3] if the narrative contains juxtaposition.
+
+[attr-8]
+Definition: A story is classified as [attr-8] if the narrative adopts a philosophical style.
+
+[attr-5]
+Definition: A story is classified as [attr-5] if either of the following conditions holds:
+- The story is both [attr-11] and not [attr-12].
+- Exactly one of the following is true (exclusive disjunction):
+  - The story is [attr-10].
+  - The story is [attr-12].
+
+[attr-1]
+Definition: A story is classified as [attr-1] if both of the following conditions hold:
+- The story is [attr-7].
+- Either of the following is true:
+  - The story is both [attr-2] and not [attr-9].
+  - The story is both [attr-6] and [attr-5].
+
+Notes: Each definition above specifies a binary predicate on narratives. Composite classifications ([attr-5], [attr-1]) are defined via Boolean combinations of primitive predicates using conjunction, negation, disjunction, and exclusive disjunction as explicitly stated.

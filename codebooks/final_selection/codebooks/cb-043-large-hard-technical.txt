@@ -1,0 +1,111 @@
+[THEME-INNOVATION]
+Definition: The predicate [THEME-INNOVATION] is true for a story if the story contains the thematic element denoted as Innovation.
+
+[THEME-MAGIC]
+Definition: The predicate [THEME-MAGIC] is true for a story if the story contains the thematic element denoted as Magic.
+
+[HAS-CHECKHOVS-GUN]
+Definition: The predicate [HAS-CHECKHOVS-GUN] is true for a story if the narrative includes an instance of Chekhov's gun (a foreshadowed, later-significant object or detail).
+
+[STARTS-WITH-ADVERB]
+Definition: The predicate [STARTS-WITH-ADVERB] is true for a story if the first lexical token of the text is an adverb.
+
+[THEME-HELPING-OTHERS]
+Definition: The predicate [THEME-HELPING-OTHERS] is true for a story if the narrative expresses the theme Helping Others.
+
+[STYLE-PHILOSOPHICAL]
+Definition: The predicate [STYLE-PHILOSOPHICAL] is true for a story if the story's stylistic register aligns with a philosophical mode.
+
+[STARTS-WITH-NOUN]
+Definition: The predicate [STARTS-WITH-NOUN] is true for a story if the first lexical token of the text is a noun.
+
+[TOPIC-HIDDEN-TREASURES]
+Definition: The predicate [TOPIC-HIDDEN-TREASURES] is true for a story if the story's subject matter concerns hidden treasures.
+
+[THEME-GROWTH]
+Definition: The predicate [THEME-GROWTH] is true for a story if the narrative communicates the theme Growth.
+
+[HAS-A-CLIFFHANGER]
+Definition: The predicate [HAS-A-CLIFFHANGER] is true for a story if the narrative ends or pauses with an unresolved, suspenseful situation (a cliffhanger).
+
+[STYLE-MINIMALIST]
+Definition: The predicate [STYLE-MINIMALIST] is true for a story if the story's stylistic register aligns with minimalism.
+
+[USES-CONDITIONAL-MOOD]
+Definition: The predicate [USES-CONDITIONAL-MOOD] is true for a story if the text makes regular use of the conditional verbal mood.
+
+[TOPIC-SEASONAL-CHANGES]
+Definition: The predicate [TOPIC-SEASONAL-CHANGES] is true for a story if the subject matter addresses seasonal changes.
+
+[TOPIC-MYSTICAL-CREATURES]
+Definition: The predicate [TOPIC-MYSTICAL-CREATURES] is true for a story if the subject matter involves mystical creatures.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+Definition: The predicate [HAS-A-STORY-WITHIN-A-STORY] is true for a story if the narrative contains an embedded secondary narrative (a story-within-a-story).
+
+[MANY-PARAGRAPHS]
+Definition: The predicate [MANY-PARAGRAPHS] is true for a story if the document contains more than six paragraphs.
+
+[THEME-AGENCY]
+Definition: The predicate [THEME-AGENCY] is true for a story if the narrative foregrounds the theme Agency.
+
+[PARAGRAPH-DENSITY]
+Definition: The predicate [PARAGRAPH-DENSITY] is true for a story if [MANY-PARAGRAPHS] equals true.
+
+[STRUCTURAL-START]
+Definition: The predicate [STRUCTURAL-START] is true for a story if both of the following are true:
+- exactly one of the following is true:
+  - The story is [STARTS-WITH-ADVERB]
+  - The story is [STARTS-WITH-NOUN]
+- The story is in [STYLE-PHILOSOPHICAL, STYLE-MINIMALIST]
+
+[MOTIF-MYSTERY]
+Definition: The predicate [MOTIF-MYSTERY] is true for a story if either of the following is true:
+- both of the following are true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+- exactly one of the following is true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-SEASONAL-CHANGES]
+
+[MORAL-TENSION]
+Definition: The predicate [MORAL-TENSION] is true for a story if either of the following is true:
+- The story is [THEME-HELPING-OTHERS]
+- both of the following are true:
+  - exactly one of the following is true:
+    - The story is [THEME-GROWTH]
+    - The story is [THEME-AGENCY]
+  - The story is not [STYLE-MINIMALIST]
+
+[THEMATIC-CORE]
+Definition: The predicate [THEMATIC-CORE] is true for a story if both of the following are true:
+- The story is [THEME-INNOVATION]
+- either of the following is true:
+  - The story is [MORAL-TENSION]
+  - both of the following are true:
+    - The story is [THEME-MAGIC]
+    - The story is [USES-CONDITIONAL-MOOD]
+
+[NARRATIVE-DEVICES]
+Definition: The predicate [NARRATIVE-DEVICES] is true for a story if both of the following are true:
+- either of the following is true:
+  - The story is [HAS-CHECKHOVS-GUN]
+  - The story is [HAS-A-CLIFFHANGER]
+- either of the following is true:
+  - The story is [HAS-A-STORY-WITHIN-A-STORY]
+  - The story is not [HAS-CHECKHOVS-GUN]
+
+[COMPLEX-STORY-TYPE]
+Definition: The predicate [COMPLEX-STORY-TYPE] is true for a story if both of the following are true:
+- The story is [THEMATIC-CORE]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [STRUCTURAL-START]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [NARRATIVE-DEVICES]
+        - The story is [PARAGRAPH-DENSITY]
+      - The story is [MOTIF-MYSTERY]
+  - both of the following are true:
+    - The story is [NARRATIVE-DEVICES]
+    - The story is not [STYLE-MINIMALIST]

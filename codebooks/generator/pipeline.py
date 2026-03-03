@@ -100,6 +100,10 @@ class CodebookPipeline:
         print("-" * 80)
         self._verify_graph_equality(output_path)
         
+        print("\nStep 8: Selecting final graphs from majority agreements...")
+        print("-" * 80)
+        self._select_final_graphs(output_path)
+        
         print("\n" + "=" * 80)
         print("✓ PIPELINE COMPLETE!")
         print("=" * 80)
@@ -753,6 +757,216 @@ class CodebookPipeline:
             equal_groups.append((graph1, equal_variants))
         
         return equal_groups
+
+    def _select_final_graphs(
+        self,
+        output_path: Path,
+        log_path: Optional[Path] = None,
+        min_fraction: float = 0.75,
+        min_agreements: int = 6,
+    ) -> None:
+        """
+        Select a canonical graph per codebook based on clear majority groups.
+        
+        For each codebook base name we:
+        - Split variants into clearname graphs (no 'obfc' in variant name) and
+          obfuscated graphs (variant name contains 'obfc').
+        - Within each subset, look for a group with a clear majority, defined as:
+          group_size >= max(min_agreements, ceil(min_fraction * total_subset_size)).
+        - If exactly one such majority group exists, we keep it; otherwise the
+          subset is treated as controversial and dropped.
+        
+        The selected representative graphs are written to a 'final_selection'
+        subdirectory inside output_path as:
+        - '<base_name>-clear.json' for clearname graphs
+        - '<base_name>-obfc.json' for obfuscated graphs
+        """
+        from math import ceil
+        from collections import defaultdict
+        import shutil
+        
+        logs_dir = output_path / "logs"
+        if log_path is None:
+            if not logs_dir.exists():
+                print("No logs directory found; skipping final graph selection.")
+                return
+            log_files = sorted(logs_dir.glob("graph_equality_log_*.txt"))
+            if not log_files:
+                print("No graph equality logs found; skipping final graph selection.")
+                return
+            log_path = log_files[-1]
+        
+        if not log_path.exists():
+            print(f"Graph equality log '{log_path}' not found; skipping final selection.")
+            return
+        
+        # Parse the log file into {base_name: [ [variants_in_group], ... ]}
+        codebook_groups: dict[str, list[list[str]]] = defaultdict(list)
+        
+        with open(log_path, "r", encoding="utf-8") as f:
+            lines = [line.rstrip("\n") for line in f]
+        
+        in_unequal_section = False
+        current_base: Optional[str] = None
+        
+        for line in lines:
+            if not in_unequal_section:
+                if line.strip() == "UNEQUAL CODEBOOKS:":
+                    in_unequal_section = True
+                continue
+            
+            if not line.strip():
+                # Blank line separates entries; reset current base
+                current_base = None
+                continue
+            
+            if not line.startswith("  "):
+                # Base codebook name
+                current_base = line.strip()
+                continue
+            
+            # Group line for current base
+            if current_base is None:
+                continue
+            if "Group:" not in line:
+                continue
+            
+            # Example: "  Group: 15 (base, concise, ...)"
+            try:
+                # Extract the parenthesized variant list
+                before_paren, after_paren = line.split("(", 1)
+                variants_part = after_paren.rsplit(")", 1)[0]
+                variants = [v.strip() for v in variants_part.split(",") if v.strip()]
+                if variants:
+                    codebook_groups[current_base].append(variants)
+            except ValueError:
+                continue
+        
+        if not codebook_groups:
+            print("No unequal groups parsed from log; nothing to select.")
+            return
+        
+        # Map variant names back to their JSON files
+        json_files = list(output_path.glob("*.json"))
+        json_groups: dict[str, dict[str, Path]] = defaultdict(dict)
+        for json_file in json_files:
+            base_name = self._get_base_codebook_name(json_file.name)
+            variant = self._get_variant_name(json_file.name)
+            json_groups[base_name][variant] = json_file
+        
+        # Prepare final selection directories
+        final_root = output_path / "final_selection"
+        graphs_dir = final_root / "graphs"
+        codebooks_dir = final_root / "codebooks"
+        graphs_dir.mkdir(parents=True, exist_ok=True)
+        codebooks_dir.mkdir(parents=True, exist_ok=True)
+        
+        selected_clear = 0
+        selected_obf = 0
+        
+        for base_name, group_variants in codebook_groups.items():
+            variant_to_json = json_groups.get(base_name, {})
+            if not variant_to_json:
+                continue
+            
+            # Build per-type group sizes
+            clear_groups: list[tuple[list[str], int]] = []
+            obf_groups: list[tuple[list[str], int]] = []
+            
+            total_clear = 0
+            total_obf = 0
+            for variants in group_variants:
+                clear_members = [v for v in variants if not self._is_obfuscated(v)]
+                obf_members = [v for v in variants if self._is_obfuscated(v)]
+                
+                if clear_members:
+                    clear_groups.append((clear_members, len(clear_members)))
+                    total_clear += len(clear_members)
+                if obf_members:
+                    obf_groups.append((obf_members, len(obf_members)))
+                    total_obf += len(obf_members)
+            
+            # Helper to select a majority group
+            def pick_majority_group(
+                groups: list[tuple[list[str], int]],
+                total: int,
+            ) -> Optional[list[str]]:
+                if total == 0:
+                    return None
+                threshold = max(min_agreements, ceil(min_fraction * total))
+                candidates = [
+                    members
+                    for members, size in groups
+                    if size >= threshold
+                ]
+                if len(candidates) == 1:
+                    return candidates[0]
+                # If multiple candidate groups or none, treat as controversial
+                return None
+            
+            clear_majority = pick_majority_group(clear_groups, total_clear)
+            obf_majority = pick_majority_group(obf_groups, total_obf)
+            
+            # Select representative clear graph
+            if clear_majority:
+                # Prefer 'base' if present, else first clear variant with a JSON file
+                representative: Optional[Path] = None
+                preferred_order = ["base"] + sorted(
+                    [v for v in clear_majority if v != "base"]
+                )
+                for variant in preferred_order:
+                    src = variant_to_json.get(variant)
+                    if src is not None:
+                        representative = src
+                        break
+                
+                if representative is not None:
+                    # Copy representative graph JSON
+                    dst_graph = graphs_dir / f"{base_name}-clear.json"
+                    shutil.copyfile(representative, dst_graph)
+                    # Copy all codebooks that belong to the clear majority group
+                    for variant in clear_majority:
+                        if variant == "base":
+                            src_txt = output_path / f"{base_name}.txt"
+                        else:
+                            src_txt = output_path / f"{base_name}-{variant}.txt"
+                        if src_txt.exists():
+                            dst_txt = codebooks_dir / f"{base_name}-{variant}.txt"
+                            shutil.copyfile(src_txt, dst_txt)
+                    selected_clear += 1
+            
+            # Select representative obfuscated graph
+            if obf_majority:
+                # Prefer the plain 'obfc' variant if present, else any obfuscated variant
+                representative = None
+                preferred_order = ["obfc"] + sorted(
+                    [v for v in obf_majority if v != "obfc"]
+                )
+                for variant in preferred_order:
+                    src = variant_to_json.get(variant)
+                    if src is not None:
+                        representative = src
+                        break
+                
+                if representative is not None:
+                    # Copy representative graph JSON
+                    dst_graph = graphs_dir / f"{base_name}-obfc.json"
+                    shutil.copyfile(representative, dst_graph)
+                    # Copy all codebooks that belong to the obfuscated majority group
+                    for variant in obf_majority:
+                        if variant == "base":
+                            src_txt = output_path / f"{base_name}.txt"
+                        else:
+                            src_txt = output_path / f"{base_name}-{variant}.txt"
+                        if src_txt.exists():
+                            dst_txt = codebooks_dir / f"{base_name}-{variant}.txt"
+                            shutil.copyfile(src_txt, dst_txt)
+                    selected_obf += 1
+        
+        print(
+            f"Selected {selected_clear} clear and {selected_obf} obfuscated graphs "
+            f"into '{final_root.name}' (subdirs 'graphs' and 'codebooks') based on majority agreements."
+        )
 
 
 def main():

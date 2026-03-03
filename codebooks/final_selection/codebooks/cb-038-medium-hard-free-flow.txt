@@ -1,0 +1,82 @@
+Here’s the same codebook, rewritten in a more natural, conversational flow while keeping every logical connection and every node ID exactly as they were.
+
+[STYLE-LIGHTHEARTED]
+We call a story [STYLE-LIGHTHEARTED] when it simply reads as lighthearted.
+
+[HAS-CHECKHOVS-GUN]
+A story is tagged [HAS-CHECKHOVS-GUN] if it contains Chekhov’s gun — that detail or object that was planted earlier and becomes important later.
+
+[HAS-A-CLIFFHANGER]
+If a story leaves you hanging at the end, it’s marked [HAS-A-CLIFFHANGER].
+
+[THEME-HARDSHIP]
+When a story’s central theme is hardship, it gets the label [THEME-HARDSHIP].
+
+[THEME-HELPING-OTHERS]
+If the story revolves around helping others, we call it [THEME-HELPING-OTHERS].
+
+[THEME-DECEPTION]
+A story that centers on deception is tagged [THEME-DECEPTION].
+
+[THEME-PROBLEM-SOLVING]
+When the driving theme is figuring things out and overcoming puzzles or obstacles, the story is [THEME-PROBLEM-SOLVING].
+
+[THEMATIC-CONFLICT]
+A story is [THEMATIC-CONFLICT] when exactly one of these is true:
+- The story is [THEME-HARDSHIP]
+- The story is [THEME-DECEPTION]
+
+So, pick one of those themes and only one — that exclusive choice is what makes the conflict thematic.
+
+[TONE-CONFLICTED]
+Call a story [TONE-CONFLICTED] when both of these things happen:
+- The story is [STYLE-LIGHTHEARTED]
+- Either of the following is true:
+  - The story is [THEMATIC-CONFLICT]
+  - The story is [THEME-PROBLEM-SOLVING]
+
+In plain terms: it feels lighthearted on the surface, yet it either carries a single-theme conflict (hardship vs. deception) or it’s driven by problem-solving — and both conditions together create that tonal tension.
+
+[PLOT-DRIVEN]
+A story is [PLOT-DRIVEN] when both of these hold:
+- The story is [HAS-CHECKHOVS-GUN]
+- Exactly one of the following is true:
+  - The story is [THEME-PROBLEM-SOLVING]
+  - The story is [HAS-A-CLIFFHANGER]
+
+So a plot-driven tale uses planted elements like Chekhov’s gun and pairs that with one — and only one — of problem-solving or a cliffhanger.
+
+[MORAL-ARC]
+We call a story [MORAL-ARC] if either of these two situations applies:
+- Both of the following are true:
+  - The story is [THEME-HELPING-OTHERS]
+  - The story is not [THEME-DECEPTION]
+- Both of the following are true:
+  - The story is [THEME-PROBLEM-SOLVING]
+  - The story is [THEME-HELPING-OTHERS]
+
+In short: the moral arc shows up when helping others is central and not paired with deception, or when helping others and problem-solving come together.
+
+[COMPLEX-NARRATIVE]
+A story qualifies as [COMPLEX-NARRATIVE] if either of these broader configurations is met:
+
+- Both of the following are true:
+  - The story is [TONE-CONFLICTED]
+  - Both of the following are true:
+    - The story is [PLOT-DRIVEN]
+    - The story is [MORAL-ARC]
+
+  (So one path to complexity is a tone that’s conflicted, combined with plot-driven mechanics and a moral arc.)
+
+- All of the following are true:
+  - The story is not [TONE-CONFLICTED]
+  - Either of the following is true:
+    - The story is [PLOT-DRIVEN]
+    - The story is [HAS-A-CLIFFHANGER]
+  - The story is not both of the following:
+    - The story is [THEME-HARDSHIP]
+    - The story is [THEME-DECEPTION]
+
+  (The other path: even without tonal conflict, the story is either plot-driven or ends on a cliffhanger, and it does not simultaneously carry both hardship and deception as themes.)
+
+That’s the full set — the same logical structure and node IDs, expressed in a smoother, conversational way so it’s easier to read while remaining precise for annotation and reasoning.

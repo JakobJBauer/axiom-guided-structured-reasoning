@@ -1,0 +1,50 @@
+Technical codebook — categorical definitions and logical composition rules
+
+Notation: Each bracketed token [NODE-ID] denotes a categorical label assigned to a narrative (hereafter "story"). The schema uses propositional classification: atomic predicates define base properties; compound predicates specify Boolean combinations of those atomic predicates. The connective language (both of the following are true / either of the following is true / all of the following are true / not) encodes logical AND, OR, universal conjunction, and negation, respectively. Node identifiers and logical relationships are fixed and must not be altered.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the narrative foregrounds philosophical inquiry, reflection, or argumentation as a principal stylistic or thematic feature.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if the primary subject matter or sustained topical focus of the narrative concerns the arts (e.g., visual art, music, theatre, literature, or other artistic practice).
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if the narrative includes at least one flashback sequence — a scene that returns the narrative temporally to prior events for the purpose of exposition or character development.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if the narrative contains an embedded diegetic narrative (a secondary story told within the primary story).
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if deception functions as an explicit thematic element; that is, the plot or character dynamics centrally involve acts or motifs of deceit, concealment, or misrepresentation.
+
+[HAS-A-RED-HERRING]
+A story is [HAS-A-RED-HERRING] if the narrative deliberately introduces misleading information or distractors intended to divert inference or expectation (a red herring).
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the narrative conveys an explicit or clearly inferable moral lesson, ethical prescription, or didactic point.
+
+[REFLECTIVE-ARTS]
+A story is [REFLECTIVE-ARTS] if both of the following are true:
+- The story is [STYLE-PHILOSOPHICAL]
+- The story is [TOPIC-THE-ARTS]
+
+[META-STRUCTURE]
+A story is [META-STRUCTURE] if either of the following is true:
+- The story is [HAS-A-FLASHBACK]
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+
+[MISDIRECTION]
+A story is [MISDIRECTION] if both of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is [HAS-A-RED-HERRING]
+
+[DIDACTIC-MISDIRECT]
+A story is [DIDACTIC-MISDIRECT] if all of the following are true:
+- The story is [MISDIRECTION]
+- The story is [HAS-A-MORAL-LESSON]
+- The story is not [REFLECTIVE-ARTS]
+
+[COMPLEX-PARABLE]
+A story is [COMPLEX-PARABLE] if both of the following are true:
+- The story is [DIDACTIC-MISDIRECT]
+- The story is [META-STRUCTURE]

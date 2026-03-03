@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "id": "style-lighthearted",
+      "label": "STYLE-LIGHTHEARTED",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "starts-with-adverb",
+      "label": "STARTS-WITH-ADVERB",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "long-story",
+      "label": "LONG-STORY",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-humor",
+      "label": "THEME-HUMOR",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-bygone-eras",
+      "label": "TOPIC-BYGONE-ERAS",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "whimsy-retro-comedy",
+      "label": "WHIMSY-RETRO-COMEDY",
+      "formula_type": "And",
+      "formula_args": [
+        "style-lighthearted",
+        {
+          "formula_type": "And",
+          "formula_args": [
+            "theme-humor",
+            {
+              "formula_type": "Or",
+              "formula_args": [
+                "topic-bygone-eras",
+                "starts-with-adverb"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "style-lighthearted",
+      "target": "whimsy-retro-comedy"
+    },
+    {
+      "source": "theme-humor",
+      "target": "whimsy-retro-comedy"
+    },
+    {
+      "source": "topic-bygone-eras",
+      "target": "whimsy-retro-comedy"
+    },
+    {
+      "source": "starts-with-adverb",
+      "target": "whimsy-retro-comedy"
+    }
+  ]
+}

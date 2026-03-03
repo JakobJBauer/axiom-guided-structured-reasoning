@@ -1,0 +1,63 @@
+Imagine a hall of storytellers where each tale wears a small label on its chest — not a dry tag, but a living sigil that tells you at a glance what the story is about, how it begins, and what tricks it might hide. Walk with me through that hall. I will point to each sigil, tell you its little legend, and then show you the exact rule that the archivists use to mark it. I promise: every bracketed token stays exactly where it belongs, and the logical threads that bind them remain untouched.
+
+- Some stories wear the mask of trickery. When a tale’s heart is built from misdirection and concealment, the archivists name it with a single, precise label:
+  A story is [THEME-DECEPTION] if The story has the theme Deception.
+
+- Others are warmed by the glow of kindness, those narratives that spend their breath on helping the weak or lifting a neighbor. For those, the label is simple and direct:
+  A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others.
+
+- There are tales that stop you mid-sentence to ask what it all means, stories that philosophize and stretch their questions across the page. Those receive a contemplative stamp:
+  A story is [STYLE-PHILOSOPHICAL] if The story is philosophical.
+
+- Some storytellers are economical: they plant an object early whose presence later pays off — a Chekhov's gun. When that economy is present, the mark is applied:
+  A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun.
+
+- Pay attention to first words. If the story opens by naming a thing — a bell, a castle, a stranger — we place a label upon that starting noun:
+  A story is [STARTS-WITH-NOUN] if The story starts with a noun.
+
+- Certain narratives are treasure maps in disguise, their plots circling hidden riches, buried chests, and secret caches. Those are catalogued like this:
+  A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures.
+
+- When characters push back against circumstance, exerting will and choosing paths, their tales earn a label for agency:
+  A story is [THEME-AGENCY] if The story has the theme Agency.
+
+- If the tale begins with an adjective — foggy, tired, bright — that initial color becomes a defining trait:
+  A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective.
+
+- Some stories delight in contrast, setting two images or ideas side-by-side so their differences sing. Those are the juxtapositions the archivists mark:
+  A story is [HAS-JUXTAPOSITION] if The story has juxtaposition.
+
+Now the archivists begin to weave these simple labels into more complex patterns — rules that look like recipes, combining ingredients to define entire narrative species.
+
+- There is a rule about how a story opens. The archivists call it Opening Primacy, and they apply it anytime either of two conditions is met:
+  [OPENING-PRIMACY]
+  A story is [OPENING-PRIMACY] if either of the following is true:
+  - The story is [STARTS-WITH-NOUN]
+  - The story is [STARTS-WITH-ADJECTIVE] xor [STARTS-WITH-NOUN]
+
+- Then there is a particular kind of deception that the archivists regard as structured and deliberate. It arises when an opening claim combines with certain thematic or plot mechanics — a deliberate lattice of beginnings and tricks:
+  [STRUCTURED-DECEPTION]
+  A story is [STRUCTURED-DECEPTION] if both of the following are true:
+  - The story is [OPENING-PRIMACY]
+  - Either of the following is true:
+    - Both of the following are true:
+      - The story is [THEME-DECEPTION]
+      - The story is [TOPIC-HIDDEN-TREASURES]
+    - Either of the following is true:
+      - The story is [HAS-CHECKHOVS-GUN] xor [THEME-AGENCY]
+      - The story is [THEME-DECEPTION] and not [THEME-AGENCY]
+
+Finally, the archivists identify a rarer, more textured form — a complex narrative. This is a story that carries the structured deception badge, resists being flattened into simple moralizing or purely philosophical reflection, and shows a certain pattern at its start or a formal juxtaposition. In plain terms, all these pieces must fit together for the tale to be entered as [COMPLEX-NARRATIVE]:
+  [COMPLEX-NARRATIVE]
+  A story is [COMPLEX-NARRATIVE] if all of the following are true:
+  - The story is [STRUCTURED-DECEPTION]
+  - Not both of the following are true:
+    - The story is [THEME-HELPING-OTHERS]
+    - The story is [STYLE-PHILOSOPHICAL]
+  - Either of the following is true:
+    - The story is [HAS-JUXTAPOSITION]
+    - Both of the following are true:
+      - The story is [STARTS-WITH-NOUN] equals true
+      - The story is [STARTS-WITH-ADJECTIVE] equals false
+
+And that is the map hung in the hall: small tokens, clear rules, and a logic you can follow like footsteps on a trail. Read the labels, and you will know not only what a story is wearing on the surface, but how its arrangement of themes, openings, and devices combine to form the narrative creatures the archivists care about.

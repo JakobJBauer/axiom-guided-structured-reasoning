@@ -1,0 +1,28 @@
+[attr-3]
+A story is [attr-3] if the story is lighthearted.
+In the annals of our little atlas, this node names those tales that wear a smile like a sunlit cloak — narratives that dance with buoyant steps, shed weight like autumn leaves, and invite the reader to tread lightly on feathered laughter. Yet, for the purposes of precise annotation, remember the simple rule: this label applies when the story’s tone is plainly lighthearted.
+
+[attr-2]
+A story is [attr-2] if the story starts with a adverb.
+Imagine a tale that opens not with a person or a place but with the swift caress of a word that modifies action — "gently," "suddenly," "happily" — the very kind of adverb that thrusts the reader immediately into motion or mood. This node marks those glances at beginnings that begin with such an adverbial flourish; in practical terms, tag [attr-2] when the first word of the story is an adverb.
+
+[attr-1]
+A story is [attr-1] if the story has more than 375 words.
+This label is the measure of expansiveness: any tale whose woven fabric surpasses three hundred seventy-five words earns the [attr-1] badge. Think of it as the lengthwise thread that tells you when a story is substantial enough to unfold at leisure.
+
+[attr-4]
+A story is [attr-4] if the story has the theme Humor.
+Here we name the stories that carry humor as their central motif — those whose throughline is laughter, irony, playful observation, or comedic intent. When humor is the theme anchoring the piece, bestow upon it the tag [attr-4].
+
+[attr-5]
+A story is [attr-5] if the story is about bygone eras.
+This node collects narratives that gaze backward: tales centered on epochs past, antiquated customs, and the wistful artifacts of time. If a story’s subject is the age that has already slipped away — a bygone era — then it is rightly cataloged as [attr-5].
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- The story is [attr-3]
+- The story is [attr-4] and either of the following is true:
+  - The story is [attr-5]
+  - The story is [attr-2]
+
+Finally, the most felicitous bloom in this garden: [attr-6]. It is a compound, a delicate embroidery of conditions. To wear this label, a tale must first be lighthearted, and it must also be a humorous story that satisfies one of two further criteria — either it is about eras that have slipped into sepia, lent their charm to nostalgia, and wink from the past; or it begins with the airy entrance of an adverb, the very hinge that tips mood into merriment. Only when both strands of this pattern entwine may a story be crowned [attr-6].

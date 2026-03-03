@@ -1,0 +1,28 @@
+[SHORT-STORY]
+A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if the story has the theme Magic.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if the story has readability score above 96.1
+
+[MYSTERIOUS-MAGIC]
+A story is [MYSTERIOUS-MAGIC] if both of the following are true:
+- The story is [THEME-MAGIC]
+- The story is not [HAS-CHECKHOVS-GUN]
+
+[TIGHT-MAGIC-CRAFT]
+A story is [TIGHT-MAGIC-CRAFT] if both of the following are true:
+- The story is [SHORT-STORY]
+- Either of the following is true:
+  - The story is [MYSTERIOUS-MAGIC]
+  - Exactly one of the following is true:
+    - The story is not [HIGH-READABILITY]
+    - The story is [USES-WH-QUESTIONS]

@@ -1,0 +1,87 @@
+Overview — How to read this codebook
+- Each entry is labeled by its node ID in [BRACKET] form. Do not modify these IDs.
+- Definitions state the condition under which a story should be assigned the node.
+- Composite nodes list their logical conditions using the same phrasing and logical structure as the original (e.g., "both of the following are true", "Either of the following is true", "not both of the following").
+- Preserve all logical relationships and operators exactly. Use the nested checklist to evaluate stories step by step.
+
+Nodes (organized, annotated, and checklist-ready)
+
+1) [USES-CONDITIONAL-MOOD]
+- Definition
+  - A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+- Quick annotator checklist
+  - Does the story use conditional mood? If yes → assign [USES-CONDITIONAL-MOOD].
+
+2) [USES-PERFECT-ASPECT]
+- Definition
+  - A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect.
+- Quick annotator checklist
+  - Does the story use perfect aspect? If yes → assign [USES-PERFECT-ASPECT].
+
+3) [THEME-DECEPTION]
+- Definition
+  - A story is [THEME-DECEPTION] if the story has the theme Deception.
+- Quick annotator checklist
+  - Is Deception a theme in the story? If yes → assign [THEME-DECEPTION].
+
+4) [HAS-A-CLIFFHANGER]
+- Definition
+  - A story is [HAS-A-CLIFFHANGER] if the story has a cliffhanger.
+- Quick annotator checklist
+  - Does the story end (or present a moment) with unresolved tension or an explicit cliffhanger? If yes → assign [HAS-A-CLIFFHANGER].
+
+5) [COMPLEX-DECEPTION]
+- Definition
+  - A story is [COMPLEX-DECEPTION] if all of the following are true:
+- Logical structure (preserved exactly)
+  - The story is [THEME-DECEPTION]
+  - The story is not [HAS-A-CLIFFHANGER]
+  - Either of the following is true:
+    - The story is [USES-CONDITIONAL-MOOD]
+    - The story is [USES-PERFECT-ASPECT]
+- Annotator checklist (step-by-step)
+  1. Confirm the story is [THEME-DECEPTION].
+  2. Confirm the story is not [HAS-A-CLIFFHANGER].
+  3. Confirm at least one of:
+     - [USES-CONDITIONAL-MOOD], or
+     - [USES-PERFECT-ASPECT].
+  4. If 1, 2, and 3 are satisfied → assign [COMPLEX-DECEPTION].
+
+6) [ASPECTUAL-AMBIVALENCE]
+- Definition
+  - A story is [ASPECTUAL-AMBIVALENCE] if both of the following are true:
+- Logical structure (preserved exactly)
+  - Either of the following is true:
+    - The story is [USES-PERFECT-ASPECT]
+    - The story is [USES-CONDITIONAL-MOOD]
+  - The story is not both of the following:
+    - The story is [USES-PERFECT-ASPECT]
+    - The story is [USES-CONDITIONAL-MOOD]
+- Clarified interpretation (keeps logic unchanged)
+  - This node captures cases where at least one of the two aspect/mood signals is present, but not both simultaneously.
+- Annotator checklist (step-by-step)
+  1. Confirm at least one of these is true:
+     - [USES-PERFECT-ASPECT], or
+     - [USES-CONDITIONAL-MOOD].
+  2. Confirm it is not the case that both [USES-PERFECT-ASPECT] and [USES-CONDITIONAL-MOOD] hold.
+  3. If 1 and 2 are satisfied → assign [ASPECTUAL-AMBIVALENCE].
+
+7) [AMBIGUOUS-DECEPTION-NARRATIVE]
+- Definition
+  - A story is [AMBIGUOUS-DECEPTION-NARRATIVE] if both of the following are true:
+- Logical structure (preserved exactly)
+  - The story is [COMPLEX-DECEPTION]
+  - Either of the following is true:
+    - The story is [ASPECTUAL-AMBIVALENCE]
+    - The story is not [HAS-A-CLIFFHANGER]
+- Annotator checklist (step-by-step)
+  1. Confirm the story is [COMPLEX-DECEPTION].
+  2. Confirm at least one of:
+     - The story is [ASPECTUAL-AMBIVALENCE], or
+     - The story is not [HAS-A-CLIFFHANGER].
+  3. If 1 and 2 are satisfied → assign [AMBIGUOUS-DECEPTION-NARRATIVE].
+
+Final notes for annotators
+- Follow the checklists in order: evaluate atomic nodes ([USES-CONDITIONAL-MOOD], [USES-PERFECT-ASPECT], [THEME-DECEPTION], [HAS-A-CLIFFHANGER]) first. Then evaluate composite nodes using those atomic labels.
+- Do not change node IDs, logical phrases, or the nesting/order of conditions. The phrasing "both of the following are true", "Either of the following is true", and "not both of the following" must be respected exactly in your reasoning.
+- When in doubt, apply the checklist step-by-step to ensure each logical clause is satisfied before assigning a composite node.

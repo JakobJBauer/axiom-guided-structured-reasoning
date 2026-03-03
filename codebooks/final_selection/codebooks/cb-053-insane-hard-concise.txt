@@ -1,0 +1,138 @@
+[STARTS-WITH-ADVERB] — Story begins with an adverb.
+
+[TOPIC-CULTURAL-TRADITIONS] — Story about cultural traditions.
+
+[THEME-INNOVATION] — Story with the theme Innovation.
+
+[THEME-HUMOR] — Story with the theme Humor.
+
+[TOPIC-HIDDEN-TREASURES] — Story about hidden treasures.
+
+[STYLE-CLASSIC] — Story in a classic style.
+
+[STYLE-HUMOROUS] — Story in a humorous style.
+
+[STYLE-MODERN] — Story in a modern style.
+
+[TOPIC-GIANT-CREATURES] — Story about giant creatures.
+
+[USES-PERFECT-ASPECT] — Story uses perfect aspect.
+
+[HAS-A-FLASHBACK] — Story contains a flashback.
+
+[THEME-HARDSHIP] — Story with the theme Hardship.
+
+[HAS-A-CLIFFHANGER] — Story ends with a cliffhanger.
+
+[HAS-A-MORAL-LESSON] — Story includes a moral lesson.
+
+[TOPIC-LOST-CIVILIZATIONS] — Story about lost civilizations.
+
+[STYLE-PLAYFUL] — Story is playful.
+
+[TOPIC-SEASONAL-CHANGES] — Story about seasonal changes.
+
+[STARTS-WITH-PREPOSITION] — Story begins with a preposition.
+
+[HAS-JUXTAPOSITION] — Story contains juxtaposition.
+
+[THEME-PROBLEM-SOLVING] — Story with the theme Problem-Solving.
+
+[TOPIC-TIME-TRAVEL] — Story about time travel.
+
+[TOPIC-BYGONE-ERAS] — Story about bygone eras.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT] — Story uses a circular narrative structure.
+
+[USES-DISCOURSE-MARKERS] — Story uses discourse markers.
+
+[USES-WH-QUESTIONS] — Story uses wh-questions.
+
+[TOPIC-THE-ARTS] — Story about the arts.
+
+[THEME-MAGIC] — Story with the theme Magic.
+
+[STYLE-PHILOSOPHICAL] — Story is philosophical.
+
+[STYLE-MINIMALIST] — Story is minimalist.
+
+[HAS-A-STORY-WITHIN-A-STORY] — Story contains a story within a story.
+
+[LONG-STORY] — Story has more than 375 words.
+
+[TOPIC-MYSTICAL-CREATURES] — Story about mystical creatures.
+
+[LOW-READABILITY] — Story has readability score below 86.4.
+
+[HAS-CHECKHOVS-GUN] — Story contains Checkhov's gun.
+
+[MANY-PARAGRAPHS] — Story has more than 6 paragraphs.
+
+[THEME-DECEPTION] — Story with the theme Deception.
+
+[THEME-AGENCY] — Story with the theme Agency.
+
+[TOPIC-MAGICAL-LANDS] — Story about magical lands.
+
+[USES-SUPERLATIVE-FORMS] — Story uses superlatives.
+
+[STARTS-WITH-ADJECTIVE] — Story begins with an adjective.
+
+[THEME-KINDNESS] — Story with the theme Kindness.
+
+[HIGH-READABILITY] — Story has readability score above 96.1.
+
+[STARTS-WITH-NOUN] — Story begins with a noun.
+
+[USES-CONDITIONAL-MOOD] — Story uses the conditional mood.
+
+[HAS-A-RED-HERRING] — Story includes a red herring.
+
+[SHORT-STORY] — Story has fewer than 160 words.
+
+[STYLE-SURREAL] — Story is surreal.
+
+[THEME-HELPING-OTHERS] — Story with the theme Helping Others.
+
+[STYLE-LIGHTHEARTED] — Story is lighthearted.
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is in [TOPIC-LOST-CIVILIZATIONS], [TOPIC-BYGONE-ERAS], [TOPIC-TIME-TRAVEL]
+      - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+    - either of the following is true:
+      - The story is [HAS-A-STORY-WITHIN-A-STORY]
+      - both of the following are true:
+        - The story is [HAS-A-FLASHBACK]
+        - It is not the case that both of the following are true:
+          - The story is [HAS-A-RED-HERRING]
+          - The story is [HAS-CHECKHOVS-GUN]
+  - both of the following are true:
+    - exactly one of the following is true:
+      - The story is [STYLE-CLASSIC]
+      - The story is [STYLE-MODERN]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [THEME-MAGIC]
+        - It is not the case that the story is [TOPIC-MYSTICAL-CREATURES]
+      - both of the following are true:
+        - The story is [THEME-PROBLEM-SOLVING]
+        - The story is [USES-DISCOURSE-MARKERS]
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [THEME-DECEPTION]
+      - It is not the case that both of the following are true:
+        - The story is [THEME-KINDNESS]
+        - The story is [THEME-HELPING-OTHERS]
+    - The story is [HAS-A-RED-HERRING]
+  - either of the following is true:
+    - exactly one of the following is true:
+      - The story is [LONG-STORY]
+      - The story is [SHORT-STORY]
+    - both of the following are true:
+      - The story is [HAS-CHECKHOVS-GUN]
+      - It is not the case that the story is [HAS-A-CLIFFHANGER]

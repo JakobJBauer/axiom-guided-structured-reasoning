@@ -1,0 +1,198 @@
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if it has the theme Problem-Solving.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if it’s about mystical creatures.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if it has fewer than 160 words.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if it’s about time travel.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if it uses discourse markers.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if it’s about cultural traditions.
+
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if it has the theme Innovation.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if it starts with an adverb.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if it has the theme Helping Others.
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if it contains a juxtaposition.
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if it’s playful.
+
+[HAS-A-RED-HERRING]
+A story is [HAS-A-RED-HERRING] if it has a red herring.
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if it has the theme Hardship.
+
+[THEME-HUMOR]
+A story is [THEME-HUMOR] if it has the theme Humor.
+
+[THEME-AGENCY]
+A story is [THEME-AGENCY] if it has the theme Agency.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if it contains a flashback.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if it uses perfect aspect.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if it uses conditional mood.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if it uses wh-questions.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if it has the theme Kindness.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if it has a moral lesson.
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if it’s humorous.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if its readability score is below 86.4.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if it has more than 6 paragraphs.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if it ends with a cliffhanger.
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] if it’s about magical lands.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if it’s about giant creatures.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if it has the theme Growth.
+
+[LONG-STORY]
+A story is [LONG-STORY] if it has more than 375 words.
+
+[FANTASY-TOPICS]
+A story is [FANTASY-TOPICS] if the story is in [TOPIC-MYSTICAL-CREATURES, TOPIC-MAGICAL-LANDS, TOPIC-GIANT-CREATURES].
+
+[MAGICAL-STORY]
+A story is [MAGICAL-STORY] if either of the following is true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- The story is [TOPIC-MYSTICAL-CREATURES]
+
+[EPIC-TALE]
+A story is [EPIC-TALE] if all of the following are true:
+- The story is [LONG-STORY]
+- The story is either [TOPIC-GIANT-CREATURES] or [TOPIC-MAGICAL-LANDS]
+- The story is [THEME-GROWTH]
+
+[SHORT-MAGICAL]
+A story is [SHORT-MAGICAL] if both of the following are true:
+- The story is [SHORT-STORY]
+- The story is [MAGICAL-STORY]
+
+[TIME-TRAVEL-PARADOX]
+A story is [TIME-TRAVEL-PARADOX] if both of the following are true:
+- The story is [TOPIC-TIME-TRAVEL]
+- Either of the following is true:
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [HAS-A-FLASHBACK]
+
+[COMPLEX-STRUCTURE]
+A story is [COMPLEX-STRUCTURE] if both of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- Both of the following are true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is [HAS-A-CLIFFHANGER]
+
+[NARRATIVE-VOICE]
+A story is [NARRATIVE-VOICE] if either of the following is true:
+- The story is [STARTS-WITH-ADVERB]
+- The story is [USES-DISCOURSE-MARKERS]
+- The story is [USES-WH-QUESTIONS]
+
+[HUMOROUS-PLAYFUL]
+A story is [HUMOROUS-PLAYFUL] if exactly one of the following is true:
+- The story is [STYLE-HUMOROUS]
+- The story is [STYLE-PLAYFUL]
+
+[MORAL-KINDNESS]
+A story is [MORAL-KINDNESS] if both of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [HAS-A-MORAL-LESSON]
+
+[HELPFUL-INNOVATOR]
+A story is [HELPFUL-INNOVATOR] if all of the following are true:
+- The story is [THEME-INNOVATION]
+- The story is [THEME-HELPING-OTHERS]
+- Either of the following is true:
+  - The story is [THEME-AGENCY]
+  - The story is [THEME-PROBLEM-SOLVING]
+
+[GROWTH-FROM-HARDSHIP]
+A story is [GROWTH-FROM-HARDSHIP] if both of the following are true:
+- The story is [THEME-GROWTH]
+- The story is [THEME-HARDSHIP]
+
+[ENGAGING-READABILITY]
+A story is [ENGAGING-READABILITY] if both of the following are true:
+- The story is not [LOW-READABILITY]
+- Either of the following is true:
+  - The story is [SHORT-STORY]
+  - The story is [LONG-STORY]
+
+[BRIEF-CHOICE]
+A story is [BRIEF-CHOICE] if both of the following are true:
+- The story is [SHORT-STORY]
+- Exactly one of the following is true:
+  - The story is [THEME-HUMOR]
+  - The story is [THEME-HARDSHIP]
+
+[QUESTION-DRIVEN]
+A story is [QUESTION-DRIVEN] if both of the following are true:
+- The story is [USES-WH-QUESTIONS]
+- The story is [USES-DISCOURSE-MARKERS]
+
+[COMPLEX-LOGIC-STORY]
+A story is [COMPLEX-LOGIC-STORY] if all of the following are true:
+- Either of the following is true:
+  - The story is [TIME-TRAVEL-PARADOX]
+  - The story is [MAGICAL-STORY]
+- Both of the following are true:
+  - The story is [COMPLEX-STRUCTURE]
+  - Either of the following is true:
+    - The story is [NARRATIVE-VOICE]
+    - The story is [ENGAGING-READABILITY]
+- Either of the following is true:
+  - The story uses [USES-CONDITIONAL-MOOD]
+  - The story uses [USES-PERFECT-ASPECT]
+
+[THEMATIC-FUSION]
+A story is [THEMATIC-FUSION] if both of the following are true:
+- Either of the following is true:
+  - The story is [HELPFUL-INNOVATOR]
+  - The story is [MORAL-KINDNESS]
+- Either of the following is true:
+  - The story is [GROWTH-FROM-HARDSHIP]
+  - The story is [THEME-PROBLEM-SOLVING]
+
+[PRAGMATIC-VOICE]
+A story is [PRAGMATIC-VOICE] if all of the following are true:
+- The story is [NARRATIVE-VOICE]
+- The story is not [STYLE-PLAYFUL]
+- Either of the following is true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-CONDITIONAL-MOOD]

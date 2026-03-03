@@ -1,0 +1,103 @@
+[HIGH-READABILITY]  
+Picture a story that glides along so smoothly the words almost read themselves. A story is HIGH-READABILITY if The story has readability score above 96.1
+
+[LOW-READABILITY]  
+Now imagine the opposite: a tale that feels heavier to parse, where the sentences slow the reader down. A story is LOW-READABILITY if The story has readability score below 86.4
+
+[STARTS-WITH-NOUN]  
+Some stories kick open the door with a solid thing—an object, a person, a place—named right away. A story is STARTS-WITH-NOUN if The story starts with a noun
+
+[STARTS-WITH-ADVERB]  
+Other stories begin in motion, with a mood or manner—swiftly, quietly, suddenly—setting the scene by how events unfold. A story is STARTS-WITH-ADVERB if The story starts with a adverb
+
+[USES-PERFECT-ASPECT]  
+In certain narratives, the timeline has layers: what has happened, what had been done, what has already shifted before the present moment arrives. A story is USES-PERFECT-ASPECT if The story uses perfect aspect
+
+[USES-DISCOURSE-MARKERS]  
+And sometimes the storyteller leaves a trail of signposts—however, therefore, meanwhile—guiding the reader through turns in thought. A story is USES-DISCOURSE-MARKERS if The story uses discourse markers
+
+[HAS-A-CLIFFHANGER]  
+Then there’s the classic hook: the scene cuts at the worst (best) possible moment, leaving the reader teetering at the edge. A story is HAS-A-CLIFFHANGER if The story has a cliffhanger
+
+[HAS-JUXTAPOSITION]  
+Some tales love contrast—placing two things side by side so their differences spark meaning. A story is HAS-JUXTAPOSITION if The story has juxtaposition
+
+[HAS-A-RED-HERRING]  
+Others are tricksters, tossing in a tempting distraction that pulls the reader’s attention away from what really matters. A story is HAS-A-RED-HERRING if The story has a Red Herring
+
+[SHORT-STORY]  
+Occasionally, the entire adventure is a sprint: brief, sharp, and over before you expect it. A story is SHORT-STORY if The story has fewer than 160 words
+
+[STYLE-PHILOSOPHICAL]  
+Some narrators don’t just tell what happened—they wonder what it means, circling questions about life, choice, and truth. A story is STYLE-PHILOSOPHICAL if The story is philosophical
+
+[STYLE-PLAYFUL]  
+Others dance: light on their feet, mischievous, enjoying language and surprise. A story is STYLE-PLAYFUL if The story is playful
+
+[STYLE-HUMOROUS]  
+And some aim straight for laughter, shaping moments to amuse. A story is STYLE-HUMOROUS if The story is humorous
+
+[THEME-AGENCY]  
+In certain stories, the beating heart is Agency—the power to choose, to act, to steer fate rather than be dragged by it. A story is THEME-AGENCY if The story has the theme Agency
+
+[OPENING-TONE]  
+At the very beginning, tone is destiny: it’s forged from how the first step is taken and what style colors it. A story is OPENING-TONE if both of the following are true:  
+- Either of the following is true:  
+  - The story is [STARTS-WITH-NOUN]  
+  - The story is [STARTS-WITH-ADVERB]  
+- Either of the following is true:  
+  - The story is [STYLE-PHILOSOPHICAL]  
+  - The story is [STYLE-PLAYFUL]
+
+[NARRATIVE-PACE]  
+Pace, too, has its own rules—sometimes it’s a clean rush, sometimes a controlled unfolding that never dips into murkiness. A story is NARRATIVE-PACE if either of the following is true:  
+- Both of the following are true:  
+  - The story is [SHORT-STORY]  
+  - The story is [HIGH-READABILITY]  
+- Both of the following are true:  
+  - The story is [USES-PERFECT-ASPECT]  
+  - The story is not [LOW-READABILITY]
+
+[COMEDIC-STRUCTURE]  
+Comedy isn’t just a joke—it’s architecture. First, the story must wear the right mask, then it must obey a precise set of gears and levers to make the humor land. A story is COMEDIC-STRUCTURE if both of the following are true:  
+- Either of the following is true:  
+  - The story is [STYLE-PLAYFUL]  
+  - The story is [STYLE-HUMOROUS]  
+- Both of the following are true:  
+  - Exactly one of the following is true:  
+    - The story is [SHORT-STORY]  
+    - The story is [USES-DISCOURSE-MARKERS]  
+  - Either of the following is true:  
+    - The story is [HAS-A-RED-HERRING]  
+    - The story is [HAS-JUXTAPOSITION]
+
+[THEMATIC-FUSION]  
+When theme and technique fuse, the story begins to feel like it’s running on two kinds of fire at once: purpose and pattern. A story is THEMATIC-FUSION if both of the following are true:  
+- The story is [THEME-AGENCY]  
+- Either of the following is true:  
+  - Both of the following are true:  
+    - The story is [STYLE-PHILOSOPHICAL]  
+    - The story is [OPENING-TONE]  
+  - Exactly one of the following is true:  
+    - The story is [HAS-JUXTAPOSITION]  
+    - The story is [HAS-A-RED-HERRING]
+
+[RAPTURE-ENDING]  
+Endings can be cruelly beautiful: sometimes they slam a door and leave you outside; sometimes they toy with certainty, making you doubt what you thought you saw. A story is RAPTURE-ENDING if either of the following is true:  
+- Both of the following are true:  
+  - The story is [HAS-A-CLIFFHANGER]  
+  - The story is not [SHORT-STORY]  
+- Exactly one of the following is true:  
+  - The story is [HAS-A-CLIFFHANGER]  
+  - The story is [HAS-A-RED-HERRING]
+
+[COMPLEX-STORY]  
+Finally comes the kind of tale that feels like a clockwork labyrinth—theme interlocked with comedy, and then either propelled by pace or darkened by an ending that resists easy reading. A story is COMPLEX-STORY if both of the following are true:  
+- All of the following are true:  
+  - The story is [THEMATIC-FUSION]  
+  - The story is [COMEDIC-STRUCTURE]  
+- Either of the following is true:  
+  - The story is [NARRATIVE-PACE]  
+  - Both of the following are true:  
+    - The story is [RAPTURE-ENDING]  
+    - The story is not [HIGH-READABILITY]

@@ -1,0 +1,67 @@
+[attr-4]
+A story is [attr-4] if The story has more than 6 paragraphs
+
+In the quiet garden of prose, this label blooms for tales that unfurl across more than six paragraphs — a generous unfolding of scenes and sentiments, where ideas have room to stretch their limbs and breathe.
+
+[attr-7]
+A story is [attr-7] if The story is classic
+
+Affixed to narratives that wear the garb of time-honored formality and familiar structure, this mantle honors stories that echo tradition and the steady cadence of the canon.
+
+[attr-2]
+A story is [attr-2] if The story has a cliffhanger
+
+This tag is whispered to those chapters that leave the reader dangling on a precipice of suspense, hearts aloft, awaiting the next turn of fate.
+
+[attr-6]
+A story is [attr-6] if The story starts with a preposition
+
+A small syntactic flourish at the very threshold — a preposition leading the opening line — marks the tale with a subtle grammatical signature, a doorway begun in relation.
+
+[attr-11]
+A story is [attr-11] if The story has the theme Deception
+
+Here lies the veil of cunning and hidden truths: stories that weave deception into their marrow, where appearances and reality slip and twine.
+
+[attr-9]
+A story is [attr-9] if The story is playful
+
+This label is reserved for narratives that gambol and frolic in language and tone, where wit and lightness skip through the paragraphs like children in a sunlit meadow.
+
+[attr-12]
+A story is [attr-12] if The story has the theme Helping Others
+
+Bestowed upon tales that center generosity and aid, this theme celebrates acts of assistance and the moral gravity of reaching out.
+
+[attr-10]
+A story is [attr-10] if The story has the theme Agency
+
+This marker honors stories of volition and action, where characters seize their choices and steer the currents of their destinies.
+
+[attr-3]
+A story is [attr-3] if The story has juxtaposition
+
+Tagged for contrast and counterpoint, these stories set elements side by side so their differences sing — a deliberate pairing that amplifies meaning.
+
+[attr-8]
+A story is [attr-8] if The story is philosophical
+
+Reserved for works that ponder and probe, this style leans into reflection and inquiry, turning every scene into a mirror for thought.
+
+[attr-5]
+A story is [attr-5] if either of the following is true:
+- The story is both [attr-11] and not [attr-12]
+- Exactly one of the following is true:
+  - The story is [attr-10]
+  - The story is [attr-12]
+
+In the grand tapestry of motifs, [attr-5] crowns stories that possess a certain thematic depth. It catches those cloaked in deception yet absent the balm of helpfulness, as well as those that carry precisely one of two virtues: either the determined heartbeat of agency or the gentle hand of aiding others — but not both together in that specific toggle. Think of it as a spectrum where particular combinations of motive and moral hue create an especially resonant thematic color.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - The story is both [attr-2] and not [attr-9]
+  - The story is both [attr-6] and [attr-5]
+
+This label unfolds like an ornate reliquary around tales that wear classic form yet hide multifaceted structure within. They are traditional in bearing and either end with poignant suspense while remaining serious rather than playful, or begin with a relational prepositional doorway and carry the dense coloration of a [attr-5]. In short, a refined classic exterior wrapped around a layered, intricate arc.

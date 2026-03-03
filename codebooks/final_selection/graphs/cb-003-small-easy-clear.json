@@ -1,0 +1,64 @@
+{
+  "nodes": [
+    {
+      "id": "starts-with-preposition",
+      "label": "Starts With Preposition",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "uses-discourse-markers",
+      "label": "Uses Discourse Markers",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "theme-deception",
+      "label": "Theme Deception",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-magical-lands",
+      "label": "Topic Magical Lands",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-cultural-traditions",
+      "label": "Topic Cultural Traditions",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "topic-the-arts",
+      "label": "Topic The Arts",
+      "formula_type": null,
+      "formula_args": []
+    },
+    {
+      "id": "artful-deception-in-fantasy",
+      "label": "Artful Deception In Fantasy",
+      "formula_type": "And",
+      "formula_args": [
+        "topic-magical-lands",
+        "theme-deception",
+        "topic-the-arts"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic-magical-lands",
+      "target": "artful-deception-in-fantasy"
+    },
+    {
+      "source": "theme-deception",
+      "target": "artful-deception-in-fantasy"
+    },
+    {
+      "source": "topic-the-arts",
+      "target": "artful-deception-in-fantasy"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+[STARTS-WITH-ADVERB]
+Definition: Assign the label [STARTS-WITH-ADVERB] when the narrative's initial lexical token is an adverb.
+
+[TOPIC-CULTURAL-TRADITIONS]
+Definition: Assign the label [TOPIC-CULTURAL-TRADITIONS] when the narrative's primary subject matter is cultural traditions.
+
+[THEME-INNOVATION]
+Definition: Assign the label [THEME-INNOVATION] when the narrative embodies the theme Innovation.
+
+[THEME-HUMOR]
+Definition: Assign the label [THEME-HUMOR] when the narrative embodies the theme Humor.
+
+[TOPIC-HIDDEN-TREASURES]
+Definition: Assign the label [TOPIC-HIDDEN-TREASURES] when the narrative concerns hidden treasures.
+
+[STYLE-CLASSIC]
+Definition: Assign the label [STYLE-CLASSIC] when the narrative exhibits a classic stylistic register.
+
+[STYLE-HUMOROUS]
+Definition: Assign the label [STYLE-HUMOROUS] when the narrative employs a humorous style.
+
+[STYLE-MODERN]
+Definition: Assign the label [STYLE-MODERN] when the narrative exhibits a modern stylistic register.
+
+[TOPIC-GIANT-CREATURES]
+Definition: Assign the label [TOPIC-GIANT-CREATURES] when the narrative concerns giant creatures.
+
+[USES-PERFECT-ASPECT]
+Definition: Assign the label [USES-PERFECT-ASPECT] when the narrative uses verbal constructions in the perfect aspect.
+
+[HAS-A-FLASHBACK]
+Definition: Assign the label [HAS-A-FLASHBACK] when the narrative contains a flashback sequence (a scene that depicts events prior to the primary narrative timeline).
+
+[THEME-HARDSHIP]
+Definition: Assign the label [THEME-HARDSHIP] when the narrative embodies the theme Hardship.
+
+[HAS-A-CLIFFHANGER]
+Definition: Assign the label [HAS-A-CLIFFHANGER] when the narrative concludes with an unresolved tension or suspenseful break in continuity.
+
+[HAS-A-MORAL-LESSON]
+Definition: Assign the label [HAS-A-MORAL-LESSON] when the narrative communicates an explicit moral lesson.
+
+[TOPIC-LOST-CIVILIZATIONS]
+Definition: Assign the label [TOPIC-LOST-CIVILIZATIONS] when the narrative concerns lost civilizations.
+
+[STYLE-PLAYFUL]
+Definition: Assign the label [STYLE-PLAYFUL] when the narrative tone is playful.
+
+[TOPIC-SEASONAL-CHANGES]
+Definition: Assign the label [TOPIC-SEASONAL-CHANGES] when the narrative concerns seasonal changes.
+
+[STARTS-WITH-PREPOSITION]
+Definition: Assign the label [STARTS-WITH-PREPOSITION] when the narrative's initial lexical token is a preposition.
+
+[HAS-JUXTAPOSITION]
+Definition: Assign the label [HAS-JUXTAPOSITION] when the narrative contains juxtaposition (proximal placement of contrasting elements).
+
+[THEME-PROBLEM-SOLVING]
+Definition: Assign the label [THEME-PROBLEM-SOLVING] when the narrative centers on problem-solving processes or strategies.
+
+[TOPIC-TIME-TRAVEL]
+Definition: Assign the label [TOPIC-TIME-TRAVEL] when the narrative concerns time travel.
+
+[TOPIC-BYGONE-ERAS]
+Definition: Assign the label [TOPIC-BYGONE-ERAS] when the narrative concerns bygone eras.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+Definition: Assign the label [HAS-CIRCULAR-NARRATIVE-STRUCT] when the narrative structure returns to or repeats its starting point (circular narrative).
+
+[USES-DISCOURSE-MARKERS]
+Definition: Assign the label [USES-DISCOURSE-MARKERS] when the narrative includes discourse markers (e.g., transitional connectors, signposting phrases).
+
+[USES-WH-QUESTIONS]
+Definition: Assign the label [USES-WH-QUESTIONS] when the narrative contains WH-questions (who, what, where, when, why, how).
+
+[TOPIC-THE-ARTS]
+Definition: Assign the label [TOPIC-THE-ARTS] when the narrative concerns the arts.
+
+[THEME-MAGIC]
+Definition: Assign the label [THEME-MAGIC] when the narrative embodies the theme Magic.
+
+[STYLE-PHILOSOPHICAL]
+Definition: Assign the label [STYLE-PHILOSOPHICAL] when the narrative adopts a philosophical register.
+
+[STYLE-MINIMALIST]
+Definition: Assign the label [STYLE-MINIMALIST] when the narrative exhibits a minimalist style (sparse language, economy of detail).
+
+[HAS-A-STORY-WITHIN-A-STORY]
+Definition: Assign the label [HAS-A-STORY-WITHIN-A-STORY] when the narrative explicitly contains an embedded secondary narrative.
+
+[LONG-STORY]
+Definition: Assign the label [LONG-STORY] when the narrative length exceeds 375 words.
+
+[TOPIC-MYSTICAL-CREATURES]
+Definition: Assign the label [TOPIC-MYSTICAL-CREATURES] when the narrative concerns mystical creatures.
+
+[LOW-READABILITY]
+Definition: Assign the label [LOW-READABILITY] when the narrative's readability metric is below 86.4.
+
+[HAS-CHECKHOVS-GUN]
+Definition: Assign the label [HAS-CHECKHOVS-GUN] when the narrative contains a Chekhov's gun (an element introduced earlier that becomes significant later).
+
+[MANY-PARAGRAPHS]
+Definition: Assign the label [MANY-PARAGRAPHS] when the narrative contains more than six paragraphs.
+
+[THEME-DECEPTION]
+Definition: Assign the label [THEME-DECEPTION] when the narrative embodies the theme Deception.
+
+[THEME-AGENCY]
+Definition: Assign the label [THEME-AGENCY] when the narrative embodies the theme Agency.
+
+[TOPIC-MAGICAL-LANDS]
+Definition: Assign the label [TOPIC-MAGICAL-LANDS] when the narrative concerns magical lands.
+
+[USES-SUPERLATIVE-FORMS]
+Definition: Assign the label [USES-SUPERLATIVE-FORMS] when the narrative employs superlative grammatical forms.
+
+[STARTS-WITH-ADJECTIVE]
+Definition: Assign the label [STARTS-WITH-ADJECTIVE] when the narrative's initial lexical token is an adjective.
+
+[THEME-KINDNESS]
+Definition: Assign the label [THEME-KINDNESS] when the narrative embodies the theme Kindness.
+
+[HIGH-READABILITY]
+Definition: Assign the label [HIGH-READABILITY] when the narrative's readability metric exceeds 96.1.
+
+[STARTS-WITH-NOUN]
+Definition: Assign the label [STARTS-WITH-NOUN] when the narrative's initial lexical token is a noun.
+
+[USES-CONDITIONAL-MOOD]
+Definition: Assign the label [USES-CONDITIONAL-MOOD] when the narrative uses conditional-mood constructions.
+
+[HAS-A-RED-HERRING]
+Definition: Assign the label [HAS-A-RED-HERRING] when the narrative contains a red herring (an intentionally misleading element).
+
+[SHORT-STORY]
+Definition: Assign the label [SHORT-STORY] when the narrative length is fewer than 160 words.
+
+[STYLE-SURREAL]
+Definition: Assign the label [STYLE-SURREAL] when the narrative exhibits a surreal style.
+
+[THEME-HELPING-OTHERS]
+Definition: Assign the label [THEME-HELPING-OTHERS] when the narrative embodies the theme Helping Others.
+
+[STYLE-LIGHTHEARTED]
+Definition: Assign the label [STYLE-LIGHTHEARTED] when the narrative has a lighthearted tone.
+
+[COMPLEX-NARRATIVE]
+Definition: Assign the label [COMPLEX-NARRATIVE] when the following Boolean specification evaluates to true. The specification uses standard logical operators (either = OR, both = AND, exactly one = XOR, it is not the case that = NOT).
+
+A story is [COMPLEX-NARRATIVE] if either of the following top-level conditions is true:
+
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is in at least one of the topic labels: [TOPIC-LOST-CIVILIZATIONS], [TOPIC-BYGONE-ERAS], [TOPIC-TIME-TRAVEL]
+      - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+    - either of the following is true:
+      - The story is [HAS-A-STORY-WITHIN-A-STORY]
+      - both of the following are true:
+        - The story is [HAS-A-FLASHBACK]
+        - It is not the case that both of the following are true:
+          - The story is [HAS-A-RED-HERRING]
+          - The story is [HAS-CHECKHOVS-GUN]
+  - both of the following are true:
+    - exactly one of the following is true:
+      - The story is [STYLE-CLASSIC]
+      - The story is [STYLE-MODERN]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [THEME-MAGIC]
+        - It is not the case that the story is [TOPIC-MYSTICAL-CREATURES]
+      - both of the following are true:
+        - The story is [THEME-PROBLEM-SOLVING]
+        - The story is [USES-DISCOURSE-MARKERS]
+
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [THEME-DECEPTION]
+      - It is not the case that both of the following are true:
+        - The story is [THEME-KINDNESS]
+        - The story is [THEME-HELPING-OTHERS]
+    - The story is [HAS-A-RED-HERRING]
+  - either of the following is true:
+    - exactly one of the following is true:
+      - The story is [LONG-STORY]
+      - The story is [SHORT-STORY]
+    - both of the following are true:
+      - The story is [HAS-CHECKHOVS-GUN]
+      - It is not the case that the story is [HAS-A-CLIFFHANGER]

@@ -1,0 +1,60 @@
+Title: Codebook — Structured Definitions and Annotation Guidance
+
+Overview
+- Purpose: Provide clear, structured definitions for each annotation node and the exact conditions that make a story satisfy composite nodes.
+- Use: Annotators should mark atomic features first, then evaluate composite nodes based on those markings.
+- Constraint reminders:
+  - All node IDs are shown exactly as [BRACKETED] identifiers and must not be altered.
+  - Logical relationships (e.g., AND) are preserved; composite nodes require the specified constituent nodes to be true.
+
+Atomic (single-condition) Nodes
+- [USES-DISCOURSE-MARKERS]
+  - Definition: A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers.
+  - Quick check: Look for words or phrases that signal structure or transitions (e.g., however, meanwhile, on the other hand).
+
+- [HAS-JUXTAPOSITION]
+  - Definition: A story is [HAS-JUXTAPOSITION] if the story has juxtaposition.
+  - Quick check: Identify clear placing of contrasting or side-by-side scenes, ideas, or images.
+
+- [TOPIC-MYSTICAL-CREATURES]
+  - Definition: A story is [TOPIC-MYSTICAL-CREATURES] if the story is about mystical creatures.
+  - Quick check: The theme or central subject concerns creatures with supernatural or mythical qualities.
+
+- [HAS-A-RED-HERRING]
+  - Definition: A story is [HAS-A-RED-HERRING] if the story has a Red Herring.
+  - Quick check: Spot misleading clues or elements intended to distract from the true explanation.
+
+- [TOPIC-GIANT-CREATURES]
+  - Definition: A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures.
+  - Quick check: The narrative centers on very large creatures as a primary topic.
+
+Composite (multi-condition) Nodes
+- [FANTASTICAL-JUXTAPOSITION]
+  - Definition: A story is [FANTASTICAL-JUXTAPOSITION] if both of the following are true:
+    - The story is [TOPIC-MYSTICAL-CREATURES]
+    - The story is [HAS-JUXTAPOSITION]
+  - Logical form: [FANTASTICAL-JUXTAPOSITION] = AND([TOPIC-MYSTICAL-CREATURES], [HAS-JUXTAPOSITION])
+  - Annotator action: Only mark this node when both constituent nodes have been independently marked true.
+
+- [GIANT-MISDIRECTION]
+  - Definition: A story is [GIANT-MISDIRECTION] if both of the following are true:
+    - The story is [TOPIC-GIANT-CREATURES]
+    - The story is [HAS-A-RED-HERRING]
+  - Logical form: [GIANT-MISDIRECTION] = AND([TOPIC-GIANT-CREATURES], [HAS-A-RED-HERRING])
+  - Annotator action: Only mark this node when both constituent nodes have been independently marked true.
+
+Annotation Workflow (ordered, practical)
+1. Read the story fully.
+2. Mark atomic nodes first:
+   - Evaluate and set truth for each of: [USES-DISCOURSE-MARKERS], [HAS-JUXTAPOSITION], [TOPIC-MYSTICAL-CREATURES], [HAS-A-RED-HERRING], [TOPIC-GIANT-CREATURES].
+3. Evaluate composite nodes:
+   - For [FANTASTICAL-JUXTAPOSITION], confirm both [TOPIC-MYSTICAL-CREATURES] and [HAS-JUXTAPOSITION] are true.
+   - For [GIANT-MISDIRECTION], confirm both [TOPIC-GIANT-CREATURES] and [HAS-A-RED-HERRING] are true.
+4. Record results; do not alter node IDs or logical relationships.
+
+Notes and Tips for Consistency
+- Composite nodes only become true when all listed constituent nodes are true (logical AND).
+- Do not infer composite truth without first verifying each component independently.
+- Keep labels exact: use the bracketed node IDs as given when recording or reporting annotations.
+
+End of codebook.

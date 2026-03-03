@@ -1,0 +1,36 @@
+Preface: In a little garden of signs and meanings, this codebook blooms like a careful herbarium—a lovingly arranged compendium where each label is a petal, every rule a stem that ties the bouquet together. Imagine an archivist-poet who tends to stories like rare flowers, cataloging their scents and colors so that future gardeners may pick them with certainty. Below, each node is presented with the exact logical petals intact; I have only coaxed each definition into more fragrant prose and offered gentle clarifications so that annotators may wander the labyrinth of criteria with delight and confidence. The logical structure—every connective, negation, and exclusivity—remains as steadfast as roots beneath the soil.
+
+[STYLE-HUMOROUS]
+A story is STYLE-HUMOROUS if The story is humorous
+
+Explanation: Let this label be the sunlit laugh in our garden. Apply [STYLE-HUMOROUS] when the tale plainly delights in humor—when wit, comic timing, or playful absurdity are central. This is the tag for stories that wear a grin and invite the reader to chuckle, snort, or smile at the cleverness within.
+
+[STYLE-LIGHTHEARTED]
+A story is STYLE-LIGHTHEARTED if The story is lighthearted
+
+Explanation: This label is the soft breeze across the petals. Use [STYLE-LIGHTHEARTED] for stories that tread lightly, that favor gentle tones, buoyant moods, or an absence of heavy gloom. They lift rather than weigh, offering a sense of ease and pleasantness.
+
+[THEME-KINDNESS]
+A story is THEME-KINDNESS if The story has the theme Kindness
+
+Explanation: Consider [THEME-KINDNESS] the fragrant jasmine of intent. Tag a story with this node when kindness—acts of compassion, generosity, empathy, or caring—forms a recognizable theme. It is the moral aroma that pervades the narrative, not merely a passing gesture but a discernible thread.
+
+[STYLE-EXCLUSIVE]
+A story is STYLE-EXCLUSIVE if exactly one of the following is true:
+- The story is [STYLE-HUMOROUS]
+- The story is [STYLE-LIGHTHEARTED]
+
+Explanation: Here lies a carefully pruned hedge: [STYLE-EXCLUSIVE] blooms only when precisely one of the two style-flowers stands alone. If a tale is humorous but not lighthearted, or lighthearted but not humorous, then the exclusivity holds. If both or neither apply, the hedge does not yield this blossom. The rule of “exactly one” preserves a clear and unambiguous distinction between the two stylistic qualifications.
+
+[GENRE-GENTLE]
+A story is GENRE-GENTLE if both of the following are true:
+- The story is [THEME-KINDNESS]
+- Either of the following are true:
+  - The story is [STYLE-EXCLUSIVE]
+  - Both of the following are true:
+    - The story is [STYLE-LIGHTHEARTED]
+    - The story is not [STYLE-HUMOROUS]
+
+Explanation: To grant a story the title [GENRE-GENTLE] is to crown it with a wreath of tenderness, but only when two conditions bloom together. First, kindness must be woven through the narrative ([THEME-KINDNESS]). Second, the atmosphere must tilt toward a singular, gentle style: either the story meets the precise separateness required by [STYLE-EXCLUSIVE], or it is specifically lighthearted while explicitly not humorous. In plainer garden terms: a gentle genre arises when kindness is present and the tone is serenely light—without the sharper edge of humor—unless that lightness is distinctly exclusive from humor under the exclusivity rule above.
+
+Final note: The logical scaffolding—every "exactly one," "both," "either," and "not"—remains untouched, as if carved into the wooden signposts of this botanical archive. Use these labels with confidence: their rules are exact, and their poetic explanations simply help you recognize the flowers when you see them.

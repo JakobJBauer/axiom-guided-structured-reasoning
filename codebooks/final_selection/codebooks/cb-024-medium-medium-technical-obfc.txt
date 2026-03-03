@@ -1,0 +1,48 @@
+[attr-8]
+Definition: The predicate [attr-8] is true for a narrative iff the narrative exhibits a playful stylistic register.
+
+[attr-7]
+Definition: The predicate [attr-7] is true for a narrative iff the narrative is written in a minimalist style (economy of language, sparse descriptive detail).
+
+[attr-3]
+Definition: The predicate [attr-3] is true for a narrative iff the narrative conveys an explicit or implicit moral lesson.
+
+[attr-11]
+Definition: The predicate [attr-11] is true for a narrative iff the narrative’s primary subject matter concerns time travel.
+
+[attr-6]
+Definition: The predicate [attr-6] is true for a narrative iff the first lexical token of the narrative is a noun.
+
+[attr-4]
+Definition: The predicate [attr-4] is true for a narrative iff the narrative contains more than six paragraphs.
+
+[attr-12]
+Definition: The predicate [attr-12] is true for a narrative iff the narrative utilizes grammatical constructions in the conditional mood.
+
+[attr-9]
+Definition: The predicate [attr-9] is true for a narrative iff the dominant thematic element is Hardship.
+
+[attr-2]
+Definition: The predicate [attr-2] is true for a narrative iff both of the following are true:
+- The narrative is [attr-8]
+- The narrative is [attr-7]
+
+[attr-1]
+Definition: The predicate [attr-1] is true for a narrative iff all of the following are true:
+- The narrative is [attr-4]
+- The narrative is [attr-12]
+- The narrative is [attr-6]
+
+[attr-10]
+Definition: The predicate [attr-10] is true for a narrative iff both of the following are true:
+- The narrative is [attr-11]
+- The narrative is [attr-3]
+
+[attr-5]
+Definition: The predicate [attr-5] is true for a narrative iff both of the following are true:
+- The narrative is [attr-1]
+- Either of the following is true:
+  - The narrative is [attr-2]
+  - Both of the following are true:
+    - The narrative is [attr-8]
+    - The narrative is not [attr-9]

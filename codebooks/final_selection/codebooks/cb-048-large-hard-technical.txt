@@ -1,0 +1,111 @@
+[TOPIC-TIME-TRAVEL]
+Definition: A story is [TOPIC-TIME-TRAVEL] if the narrative concerns time travel.
+
+[STARTS-WITH-ADJECTIVE]
+Definition: A story is [STARTS-WITH-ADJECTIVE] if the story begins with an adjective.
+
+[USES-PERFECT-ASPECT]
+Definition: A story is [USES-PERFECT-ASPECT] if the text employs the perfect aspect.
+
+[STYLE-MODERN]
+Definition: A story is [STYLE-MODERN] if the story is modern in style or setting.
+
+[LOW-READABILITY]
+Definition: A story is [LOW-READABILITY] if the story’s readability score is below 86.4.
+
+[TOPIC-THE-ARTS]
+Definition: A story is [TOPIC-THE-ARTS] if the narrative is about the arts.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+Definition: A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story exhibits a circular narrative structure.
+
+[TOPIC-CULTURAL-TRADITIONS]
+Definition: A story is [TOPIC-CULTURAL-TRADITIONS] if the subject matter concerns cultural traditions.
+
+[HAS-A-FLASHBACK]
+Definition: A story is [HAS-A-FLASHBACK] if the narrative contains a flashback.
+
+[STYLE-HUMOROUS]
+Definition: A story is [STYLE-HUMOROUS] if the story’s tone is humorous.
+
+[TOPIC-MAGICAL-LANDS]
+Definition: A story is [TOPIC-MAGICAL-LANDS] if the narrative is set in or about magical lands.
+
+[STYLE-LIGHTHEARTED]
+Definition: A story is [STYLE-LIGHTHEARTED] if the story’s tone is lighthearted.
+
+[TOPIC-MYSTICAL-CREATURES]
+Definition: A story is [TOPIC-MYSTICAL-CREATURES] if the narrative concerns mystical creatures.
+
+[THEME-PROBLEM-SOLVING]
+Definition: A story is [THEME-PROBLEM-SOLVING] if the thematic focus is problem-solving.
+
+[NARRATIVE-STRUCTURAL]
+Definition: A story is [NARRATIVE-STRUCTURAL] if both of the following are true:
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- Either of the following is true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is not [STARTS-WITH-ADJECTIVE]
+
+[STYLE-AND-TONE]
+Definition: A story is [STYLE-AND-TONE] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [STYLE-HUMOROUS]
+  - The story is [STYLE-LIGHTHEARTED]
+- Either of the following is true:
+  - The story is [STYLE-MODERN]
+  - The story is not [LOW-READABILITY]
+
+[ARTS-TRADITIONAL-PROBLEM]
+Definition: A story is [ARTS-TRADITIONAL-PROBLEM] if either of the following conditions holds:
+- All of the following are true:
+  - The story is [TOPIC-THE-ARTS]
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+  - The story is [THEME-PROBLEM-SOLVING]
+- Both of the following are true:
+  - Exactly one of the following is true:
+    - The story is [TOPIC-THE-ARTS]
+    - The story is [THEME-PROBLEM-SOLVING]
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+
+[FANTASY-CORE]
+Definition: A story is [FANTASY-CORE] if both of the following are true:
+- Exactly one of the following is true:
+  - The story is [TOPIC-MAGICAL-LANDS]
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+- Either of the following is true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is not [STYLE-MODERN]
+
+[COMPLEX-PATTERN]
+Definition: A story is [COMPLEX-PATTERN] if both of the following are true:
+- The story is [NARRATIVE-STRUCTURAL]
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [STYLE-AND-TONE]
+    - The story is not [FANTASY-CORE]
+  - Both of the following are true:
+    - The story is [ARTS-TRADITIONAL-PROBLEM]
+    - The story is [FANTASY-CORE]
+
+[SYNDIC-CONJUNCTION]
+Definition: A story is [SYNDIC-CONJUNCTION] if all of the following are true:
+- The story is [COMPLEX-PATTERN]
+- The story is [ARTS-TRADITIONAL-PROBLEM] or the story is [FANTASY-CORE]
+- The story is [STYLE-AND-TONE] equals [STYLE-HUMOROUS]
+
+[STORY-ARCHETYPE]
+Definition: A story is [STORY-ARCHETYPE] if either of the following is true:
+- Both of the following are true:
+  - The story is [SYNDIC-CONJUNCTION]
+  - The story is [COMPLEX-PATTERN] in [COMPLEX-PATTERN, SYNDIC-CONJUNCTION, FANTASY-CORE]
+- Either of the following is true:
+  - The story is [FANTASY-CORE] and the story is not [ARTS-TRADITIONAL-PROBLEM]
+  - The story is [ARTS-TRADITIONAL-PROBLEM] and exactly one of the following is true:
+    - The story is [STYLE-AND-TONE]
+    - The story is [NARRATIVE-STRUCTURAL]
+
+Notes for annotators and reasoners:
+- Each node is a predicate evaluated on a story instance; composite nodes combine predicates using the explicit logical constructs shown above (Exactly one, Either, Both, All, Not, Or, And).
+- Numeric thresholds (e.g., readability score 86.4) are concrete and must be applied as specified.
+- Maintain these definitions as formal constraints when classifying or inferring node membership.

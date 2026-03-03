@@ -1,0 +1,71 @@
+Imagine a small catalog where every story wears a set of labels — little badges that tell you, at a glance, what the tale contains. Walk with me through that catalog. For each badge I describe, I’ll also give the exact rule that pins it onto a story, so nothing important is lost in the telling.
+
+- [HAS-A-MORAL-LESSON]
+  In this library, a story earns the badge [HAS-A-MORAL-LESSON] whenever it carries a moral lesson — a guiding truth tucked into its scenes and lines.
+  A story is [HAS-A-MORAL-LESSON] if The story has a moral lesson
+
+- [USES-PERFECT-ASPECT]
+  Some stories keep time in a certain way; when they use the perfect aspect to show actions already completed or consequences that linger, they receive the label [USES-PERFECT-ASPECT].
+  A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect
+
+- [HAS-A-CLIFFHANGER]
+  When a tale cuts off with breath held and questions unanswered, that suspenseful snap earns it [HAS-A-CLIFFHANGER].
+  A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+
+- [THEME-KINDNESS]
+  Stories that weave kindness into their heart — where compassion shapes choices and outcomes — are given the [THEME-KINDNESS] tag.
+  A story is [THEME-KINDNESS] if The story has the theme Kindness
+
+- [STYLE-MODERN]
+  If the story’s voice or setting feels of the present, contemporary and tuned to modern sensibilities, it is marked [STYLE-MODERN].
+  A story is [STYLE-MODERN] if The story is modern
+
+- [HAS-A-FLASHBACK]
+  Some narratives fold their timeline back on itself with memories or past events laid bare; such stories are marked [HAS-A-FLASHBACK].
+  A story is [HAS-A-FLASHBACK] if The story has a flashback
+
+- [STYLE-CLASSIC]
+  Others wear a more timeless or traditional style, and those are cataloged as [STYLE-CLASSIC].
+  A story is [STYLE-CLASSIC] if The story is classic
+
+- [LONG-STORY]
+  The badge [LONG-STORY] is simple and literal: it belongs to anything over 375 words — a tale long enough to wander and settle.
+  A story is [LONG-STORY] if The story has more than 375 words
+
+- [HAS-JUXTAPOSITION]
+  When a narrative places contrasting ideas, scenes, or images side by side to make meaning through contrast, it receives [HAS-JUXTAPOSITION].
+  A story is [HAS-JUXTAPOSITION] if The story has juxtaposition
+
+- [STYLE-LIGHTHEARTED]
+  Finally among the single-feature tags, a story that keeps things buoyant, playful, or cheerfully untroubled is labeled [STYLE-LIGHTHEARTED].
+  A story is [STYLE-LIGHTHEARTED] if The story is lighthearted
+
+Now, some badges are stitched from combinations of these simple threads. They come with precise rules — like recipes — and I’ll tell them in full so the catalog remains exact.
+
+- [RICH-NARRATIVE]
+  Picture a story considered “rich” because it layers structure and technique in a way that rewards attention. The catalog says:
+  A story is [RICH-NARRATIVE] if all of the following are true:
+  - Either of the following is true:
+    - The story is [HAS-A-CLIFFHANGER]
+    - The story is [HAS-A-FLASHBACK]
+  - Exactly one of the following is true:
+    - The story is [HAS-JUXTAPOSITION]
+    - The story is [USES-PERFECT-ASPECT]
+  - The story is not [STYLE-LIGHTHEARTED]
+  - At least one of the story's structural features is in the set { [HAS-A-CLIFFHANGER], [HAS-A-FLASHBACK], [HAS-JUXTAPOSITION] }
+
+  In other words: a rich narrative must present either a cliffhanger or a flashback; it must choose exactly one between juxtaposition and perfect aspect; it must not be lighthearted; and it must include at least one of those named structural features. These conditions stack like chapters that together define a particular depth.
+
+- [COMPLEX-STORY]
+  Now imagine an even more exacting badge: [COMPLEX-STORY]. It’s reserved for stories that not only meet the richness test but also satisfy thematic or stylistic balances. The rule reads:
+  A story is [COMPLEX-STORY] if both of the following are true:
+  - The story is [RICH-NARRATIVE]
+  - Both of the following are true:
+    - Either of the following is true:
+      - The story is [THEME-KINDNESS]
+      - The story is [HAS-A-MORAL-LESSON]
+    - The presence of [STYLE-MODERN] equals the presence of [STYLE-CLASSIC]
+
+  So a complex story is a rich one that either carries kindness as a theme or contains a moral lesson, and it must maintain an exact parity between modern and classic style — the presence of one must equal the presence of the other.
+
+That is the full map: each tag a clear condition, each compound label a small architecture of features. Read this catalogue like a map of DNA for stories — each badge tells you what elements are present and how they combine, while the narrative around them helps you remember why those combinations matter.

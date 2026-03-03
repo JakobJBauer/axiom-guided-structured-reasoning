@@ -1,0 +1,124 @@
+[HAS-A-RED-HERRING]
+Definition: A story satisfies [HAS-A-RED-HERRING] iff the narrative contains a red-herring element (an intentionally misleading clue or false lead).
+
+[MANY-PARAGRAPHS]
+Definition: A story satisfies [MANY-PARAGRAPHS] iff the narrative comprises more than six paragraphs.
+
+[STYLE-LIGHTHEARTED]
+Definition: A story satisfies [STYLE-LIGHTHEARTED] iff the narrative tone is lighthearted.
+
+[HAS-CHECKHOVS-GUN]
+Definition: A story satisfies [HAS-CHECKHOVS-GUN] iff the narrative includes an instance of Chekhov’s gun (a prominent detail introduced early that becomes significant later).
+
+[THEME-MAGIC]
+Definition: A story satisfies [THEME-MAGIC] iff the narrative centrally features the theme of magic.
+
+[TOPIC-THE-ARTS]
+Definition: A story satisfies [TOPIC-THE-ARTS] iff the narrative subject matter pertains to the arts.
+
+[USES-PERFECT-ASPECT]
+Definition: A story satisfies [USES-PERFECT-ASPECT] iff the narrative employs the perfect aspect in its verbal constructions.
+
+[THEME-INNOVATION]
+Definition: A story satisfies [THEME-INNOVATION] iff the narrative centers on the theme of innovation.
+
+[THEME-GROWTH]
+Definition: A story satisfies [THEME-GROWTH] iff the narrative centers on the theme of growth.
+
+[STYLE-CLASSIC]
+Definition: A story satisfies [STYLE-CLASSIC] iff the narrative exemplifies a classic stylistic register.
+
+[STARTS-WITH-PREPOSITION]
+Definition: A story satisfies [STARTS-WITH-PREPOSITION] iff the first token of the narrative is a preposition.
+
+[TOPIC-CULTURAL-TRADITIONS]
+Definition: A story satisfies [TOPIC-CULTURAL-TRADITIONS] iff the narrative concerns cultural traditions.
+
+[TOPIC-LOST-CIVILIZATIONS]
+Definition: A story satisfies [TOPIC-LOST-CIVILIZATIONS] iff the narrative concerns lost civilizations.
+
+[THEME-DECEPTION]
+Definition: A story satisfies [THEME-DECEPTION] iff the narrative embodies the theme of deception.
+
+[USES-WH-QUESTIONS]
+Definition: A story satisfies [USES-WH-QUESTIONS] iff the narrative contains wh‑questions (who, what, when, where, why, how).
+
+[TOPIC-BYGONE-ERAS]
+Definition: A story satisfies [TOPIC-BYGONE-ERAS] iff the narrative concerns bygone eras.
+
+[STARTS-WITH-ADJECTIVE]
+Definition: A story satisfies [STARTS-WITH-ADJECTIVE] iff the first token of the narrative is an adjective.
+
+[STYLE-MODERN]
+Definition: A story satisfies [STYLE-MODERN] iff the narrative exemplifies a modern stylistic register.
+
+[NARRATIVE-SURPRISE]
+Specification: A story satisfies [NARRATIVE-SURPRISE] iff both of the following clauses are satisfied:
+- Clause A (OR): At least one of the following holds:
+  - The story satisfies [HAS-A-RED-HERRING]
+  - The story satisfies [HAS-CHECKHOVS-GUN]
+- Clause B (OR/XOR): At least one of the following holds:
+  - Exactly one of [THEME-DECEPTION] and [USES-WH-QUESTIONS] is true (exclusive OR)
+  - The story satisfies [MANY-PARAGRAPHS]
+
+[RICH-LENGTH]
+Specification: A story satisfies [RICH-LENGTH] iff both of the following are true:
+- The story satisfies [MANY-PARAGRAPHS]
+- The story satisfies [USES-PERFECT-ASPECT]
+
+[CLASSIC-VS-MODERN]
+Specification: A story satisfies [CLASSIC-VS-MODERN] iff all of the following hold:
+- Exclusive style: Exactly one of the following is true (exclusive OR):
+  - The story satisfies [STYLE-CLASSIC]
+  - The story satisfies [STYLE-MODERN]
+- The story does NOT satisfy [STYLE-LIGHTHEARTED] (logical NOT)
+- Initial-token constraint (OR): At least one of the following holds:
+  - The story satisfies [STARTS-WITH-PREPOSITION]
+  - The story satisfies [STARTS-WITH-ADJECTIVE]
+
+[CULTURAL-PAST-THEME]
+Specification: A story satisfies [CULTURAL-PAST-THEME] iff at least one of the following disjuncts is true:
+- Conjunctive pair A (AND):
+  - The story satisfies [TOPIC-CULTURAL-TRADITIONS]
+  - The story satisfies [TOPIC-BYGONE-ERAS]
+- Conjunctive pair B (AND/XOR):
+  - The story satisfies [TOPIC-LOST-CIVILIZATIONS]
+  - Exactly one of [THEME-GROWTH] and [THEME-DECEPTION] is true (exclusive OR)
+
+[INNOVATION-GROWTH-MIX]
+Specification: A story satisfies [INNOVATION-GROWTH-MIX] iff at least one of the following disjuncts holds:
+- Conjunctive case 1 (AND):
+  - The story satisfies [THEME-INNOVATION]
+  - The story satisfies [THEME-GROWTH]
+- Conjunctive case 2 (AND + NOT):
+  - The story satisfies [THEME-INNOVATION]
+  - The story satisfies [TOPIC-THE-ARTS]
+  - The story does NOT satisfy [THEME-GROWTH] (logical NOT)
+
+[ARTS-ROOT]
+Specification: A story satisfies [ARTS-ROOT] iff both of the following conditions are met:
+- The story satisfies [TOPIC-THE-ARTS]
+- Disjunctive condition (OR): At least one of the following holds:
+  - The story satisfies [INNOVATION-GROWTH-MIX]
+  - The story satisfies [CULTURAL-PAST-THEME]
+
+[EPIC-ARTS-MYSTERY]
+Specification: A story satisfies [EPIC-ARTS-MYSTERY] iff both of the following major conditions are met:
+- Major condition 1 (OR/AND): At least one of the following holds:
+  - The story satisfies [ARTS-ROOT]
+  - The story satisfies both of:
+    - [NARRATIVE-SURPRISE]
+    - [RICH-LENGTH]
+- Major condition 2 (OR/AND): At least one of the following holds:
+  - The story satisfies [CLASSIC-VS-MODERN]
+  - The story satisfies both of:
+    - [CULTURAL-PAST-THEME]
+    - [INNOVATION-GROWTH-MIX]
+
+Notes on logical terminology used:
+- AND indicates both subconditions must be true.
+- OR indicates at least one subcondition must be true.
+- XOR (described as “exactly one”) indicates exactly one of the listed subconditions must be true.
+- NOT negates the truth of the referenced node.
+
+All node identifiers and logical relationships are preserved exactly as specified above.

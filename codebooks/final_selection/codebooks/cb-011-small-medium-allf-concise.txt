@@ -1,0 +1,28 @@
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if it’s about the arts.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if it uses the conditional mood.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if it starts with an adjective.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if it is philosophical.
+
+[CONDITIONAL-AND-NOT-START]
+A story is [CONDITIONAL-AND-NOT-START] if both of the following are true:
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is not [STARTS-WITH-ADJECTIVE]
+
+[ARTS-XOR-PHILOSOPHICAL]
+A story is [ARTS-XOR-PHILOSOPHICAL] if exactly one of the following is true:
+- The story is [TOPIC-THE-ARTS]
+- The story is [STYLE-PHILOSOPHICAL]
+
+[COMPLEX-CRITERION]
+A story is [COMPLEX-CRITERION] if either of the following holds:
+- The story is [CONDITIONAL-AND-NOT-START]
+- Both of the following are true:
+  - The story belongs to the topic set that includes [TOPIC-THE-ARTS]
+  - The truth of [STYLE-PHILOSOPHICAL] equals the truth of not [USES-CONDITIONAL-MOOD]

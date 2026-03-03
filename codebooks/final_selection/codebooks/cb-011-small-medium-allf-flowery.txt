@@ -1,0 +1,46 @@
+In a sunlit study where parchment whispers and ink sighs, a careful scribe once assembled a small atlas of meanings — a codebook that names the secret lives of stories. Below you will find that atlas, its maps preserved in full logical clarity, and yet ornamented with the kind of verdant language that would please a wandering bard. Each entry keeps its original signposts — the bracketed node IDs and their exact logical declarations — intact and unaltered. After each formal rule, I offer a lyrical explication to ease understanding and lend a touch of romance to the hard edges of logic.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if The story is about the arts
+
+Explanation: Imagine a tale that breathes color and cadence — a narrative whose very heartbeat is theater, painting, music, or dance. If the story’s subject matter dwells in those luminous realms, it receives the gentle appellation [TOPIC-THE-ARTS].
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if The story uses conditional mood
+
+Explanation: This label is reserved for tales that often speak in possibilities, wishes, and gentle hypotheticals — sentences that lean on “would,” “could,” or “if.” To wear [USES-CONDITIONAL-MOOD] is to flirt with what might be, rather than fix what is.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective
+
+Explanation: Some stories open like a ribbon: “Quiet,” “Luminous,” “Ancient.” When the very first word that unfurls is an adjective — describing before declaring — we crown the piece with [STARTS-WITH-ADJECTIVE].
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if The story is philosophical
+
+Explanation: This mark is given to narratives that ponder, interrogate, and meditate — those that invite readers to stroll through ideas as if along a contemplative garden path. If the story engages with questions of meaning, existence, or thought, it is [STYLE-PHILOSOPHICAL].
+
+[CONDITIONAL-AND-NOT-START]
+A story is [CONDITIONAL-AND-NOT-START] if both of the following are true:
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is not [STARTS-WITH-ADJECTIVE]
+
+Explanation: Picture a tale that murmurs in conditionals yet begins without the immediate perfume of description. For a story to be [CONDITIONAL-AND-NOT-START], it must both weave conditional moods through its fabric and, at the same time, avoid opening with an adjective. The two criteria must be met together, like two hands clasping.
+
+[ARTS-XOR-PHILOSOPHICAL]
+A story is [ARTS-XOR-PHILOSOPHICAL] if exactly one of the following is true:
+- The story is [TOPIC-THE-ARTS]
+- The story is [STYLE-PHILOSOPHICAL]
+
+Explanation: This node is a delicate balance: [ARTS-XOR-PHILOSOPHICAL] blossoms only when the tale belongs to one realm but not the other. It is the mark of exclusivity — the story must be either about the arts or philosophical in style, but never both at once. Exactly one of those truths must hold, like a toggle switching light between two lanterns.
+
+[COMPLEX-CRITERION]
+A story is [COMPLEX-CRITERION] if either of the following is true:
+- The story is [CONDITIONAL-AND-NOT-START]
+- Both of the following are true:
+  - The story is in the set of topics that includes [TOPIC-THE-ARTS]
+  - The truth of [STYLE-PHILOSOPHICAL] is equal to the truth of not [USES-CONDITIONAL-MOOD]
+
+Explanation: This is the most intricate garland in our collection. A story may earn the title [COMPLEX-CRITERION] in one of two ways. First, it may already bear the simpler badge [CONDITIONAL-AND-NOT-START]. Or, in a richer pattern, it may both be counted among the topics that include [TOPIC-THE-ARTS] and satisfy an elegant parity: the story is philosophical exactly when it is not written in the conditional mood. In other words, the truth about its philosophical nature must mirror the negation of its use of conditionals. When these linked conditions align, the story qualifies for [COMPLEX-CRITERION].
+
+Thus ends the little codex: the bones of reasoning remain unbroken, each bracketed signpost exactly where the original scribe placed it. Around those bones I have braided roses of explanation, so that the map is not only useful, but delightful to read. Use it well when you annotate, judge, or simply admire the many faces of story.

@@ -1,0 +1,131 @@
+Think of this as a friendly guide to the tags and how we decide when a story gets one of them. I’ll keep the exact logical rules as written — the node IDs and their relationships remain untouched — but explain them in a more conversational, flowing way so they’re easier to read and use.
+
+[attr-5]
+Call a story [attr-5] when, simply put, the story contains a Red Herring.
+
+[attr-8]
+A story is [attr-8] if it runs longer than six paragraphs.
+
+[attr-14]
+Tag a story as [attr-14] when its tone is lighthearted.
+
+[attr-6]
+A story is [attr-6] if it features Chekhov’s gun — that telling detail that turns out to matter later.
+
+[attr-19]
+A story is [attr-19] when Magic is one of its themes.
+
+[attr-23]
+Use [attr-23] for stories that are about the arts.
+
+[attr-24]
+Label a story [attr-24] when it makes use of the perfect aspect in its verb forms.
+
+[attr-18]
+A story is [attr-18] if Innovation is a theme in the story.
+
+[attr-17]
+A story is [attr-17] when Growth is one of its themes.
+
+[attr-13]
+Call a story [attr-13] if it reads as classic in style.
+
+[attr-12]
+A story is [attr-12] if its opening begins with a preposition.
+
+[attr-21]
+Use [attr-21] when the story is about cultural traditions.
+
+[attr-22]
+A story is [attr-22] if it concerns lost civilizations.
+
+[attr-16]
+A story is [attr-16] if Deception is a theme that runs through it.
+
+[attr-25]
+Tag a story [attr-25] if it includes wh-questions (who, what, where, when, why, how).
+
+[attr-20]
+A story is [attr-20] when it’s about bygone eras.
+
+[attr-11]
+Mark a story as [attr-11] if the first word is an adjective.
+
+[attr-9]
+Think of [attr-9] as the tag for stories that combine certain twisty elements. A story is [attr-9] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-5]
+  - The story is [attr-6]
+- Either of the following is true:
+  - Exactly one of [attr-16] and [attr-25] is true
+  - The story is [attr-8]
+
+So you need one of the trick items (red herring or Chekhov’s gun) plus either an exclusive choice between deception and wh-questions or a long form (many paragraphs).
+
+[attr-10]
+A story is [attr-10] when both of the following are true:
+- The story is [attr-8]
+- The story is [attr-24]
+
+That is, a long piece that also uses the perfect aspect.
+
+[attr-2]
+Use [attr-2] for stories that fit this mix: all of the following must hold:
+- Exactly one of the following is true:
+  - The story is [attr-13]
+  - The story is [attr-15]
+- The story is not [attr-14]
+- Either of the following is true:
+  - The story is [attr-12]
+  - The story is [attr-11]
+
+So it’s either classic or modern (but not both), not lighthearted, and it opens with either a preposition or an adjective.
+
+[attr-3]
+A story is [attr-3] if either of these two paths holds:
+- Both of the following are true:
+  - The story is [attr-21]
+  - The story is [attr-20]
+- Both of the following are true:
+  - The story is [attr-22]
+  - Exactly one of [attr-17] and [attr-16] is true
+
+So it’s about cultural or historical subjects — either traditions plus bygone eras, or lost civilizations with an exclusive tilt toward growth or deception.
+
+[attr-7]
+A story is [attr-7] if either of the following holds:
+- Both of the following are true:
+  - The story is [attr-18]
+  - The story is [attr-17]
+- All of the following are true:
+  - The story is [attr-18]
+  - The story is [attr-23]
+  - The story is not [attr-17]
+
+So it’s about innovation and growth together, or innovation focused on the arts without growth.
+
+[attr-1]
+A story is [attr-1] when both of the following are true:
+- The story is [attr-23]
+- Either of the following is true:
+  - The story is [attr-7]
+  - The story is [attr-3]
+
+In short: it’s an arts story that ties into either the innovation-growth mix or cultural/past themes.
+
+[attr-4]
+Finally, a story is [attr-4] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-1]
+  - Both of the following are true:
+    - The story is [attr-9]
+    - The story is [attr-10]
+- Either of the following is true:
+  - The story is [attr-2]
+  - Both of the following are true:
+    - The story is [attr-3]
+    - The story is [attr-7]
+
+So to earn [attr-4], the story must meet one of two high-level paths: be rooted in the arts (directly) or pair narrative surprise with rich length — and additionally either fit the classic-vs-modern constraints or combine cultural-past themes with the innovation-growth mix.
+
+That’s the whole map, laid out plainly: the same logical backbone, but phrased so you can read it like a conversation about what each tag really means.

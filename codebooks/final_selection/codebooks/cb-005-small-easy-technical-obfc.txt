@@ -1,0 +1,38 @@
+[attr-7]
+Definition: A story satisfies [attr-7] when it incorporates discourse markers.
+Specification: Discourse markers are lexical or phrasal elements (e.g., however, therefore, meanwhile) that explicitly signal rhetorical or connective relations between clauses, sentences, or narrative segments.
+Annotation rule: Mark [attr-7] = true if such markers are present and function to structure the discourse.
+
+[attr-4]
+Definition: A story satisfies [attr-4] when it contains juxtaposition.
+Specification: Juxtaposition denotes the deliberate placement of contrasting or complementary elements (characters, scenes, themes, images, or ideas) in close proximity to highlight differences or relationships.
+Annotation rule: Mark [attr-4] = true if juxtaposed elements are employed as a structural or rhetorical device.
+
+[attr-6]
+Definition: A story satisfies [attr-6] when its subject matter concerns mystical creatures.
+Specification: “Mystical creatures” refers to beings of supernatural, mythic, or magical provenance (e.g., dragons, fairies, spirits) that are central to the narrative’s topic or premise.
+Annotation rule: Mark [attr-6] = true if mystical creatures are a primary topical focus.
+
+[attr-3]
+Definition: A story satisfies [attr-3] when it contains a red herring.
+Specification: A red herring is an intentional misleading cue or false lead introduced to divert attention from the actual explanation, outcome, or perpetrator.
+Annotation rule: Mark [attr-3] = true if the narrative includes an element designed to mislead or distract from the true solution or meaning.
+
+[attr-5]
+Definition: A story satisfies [attr-5] when it is about giant creatures.
+Specification: “Giant creatures” denotes beings characterized primarily by extraordinary size relative to human-scale norms and that constitute the narrative’s central topic.
+Annotation rule: Mark [attr-5] = true if giant-sized beings are the focal topic.
+
+[attr-1]
+Definition: A story satisfies [attr-1] when both of the following are true:
+- The story is [attr-6]
+- The story is [attr-4]
+Logical interpretation: [attr-1] = [attr-6] AND [attr-4]
+Annotation rule: Mark [attr-1] = true only when the narrative simultaneously meets the criteria for mystical-creature topicality and for juxtaposition.
+
+[attr-2]
+Definition: A story satisfies [attr-2] when both of the following are true:
+- The story is [attr-5]
+- The story is [attr-3]
+Logical interpretation: [attr-2] = [attr-5] AND [attr-3]
+Annotation rule: Mark [attr-2] = true only when the narrative simultaneously centers on giant creatures and employs a red herring as a misleading device.

@@ -1,0 +1,49 @@
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if The story has a moral lesson
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if The story has the theme Kindness
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if The story is modern
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if The story has a flashback
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic
+
+[LONG-STORY]
+A story is [LONG-STORY] if The story has more than 375 words
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if The story has juxtaposition
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if The story is lighthearted
+
+[RICH-NARRATIVE]
+A story is [RICH-NARRATIVE] if all of the following are true:
+- Either of the following is true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is [HAS-A-FLASHBACK]
+- Exactly one of the following is true:
+  - The story is [HAS-JUXTAPOSITION]
+  - The story is [USES-PERFECT-ASPECT]
+- The story is not [STYLE-LIGHTHEARTED]
+- At least one of the story's structural features is in the set { [HAS-A-CLIFFHANGER], [HAS-A-FLASHBACK], [HAS-JUXTAPOSITION] }
+
+[COMPLEX-STORY]
+A story is [COMPLEX-STORY] if both of the following are true:
+- The story is [RICH-NARRATIVE]
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [THEME-KINDNESS]
+    - The story is [HAS-A-MORAL-LESSON]
+  - The presence of [STYLE-MODERN] equals the presence of [STYLE-CLASSIC]

@@ -1,0 +1,76 @@
+Imagine a small village of labels, each one a tiny lantern that glows when a story meets its mark. Walk with me down the main street of this codebook and meet them—one by one—first in plain, lively words, then in precise, honest form so your annotating hand knows exactly when each light should shine.
+
+A playful lantern bobs on a string, eager for mischief and lightness. When a tale jokes, twirls, or delights with mischief, that lantern turns on.
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] if the story is playful.
+
+A minimalist lantern sits almost hidden—clean lines, spare words. If the tale trims away ornament and speaks simply, this quiet light glows.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if the story is minimalist.
+
+A lantern for lessons hangs near the town square. It catches stories that intend to teach, to leave the reader with a moral compass turned a degree or two.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+There’s a brass, slightly whirring lantern that ticks through eras—this one awakens whenever the plot bends time, when characters hop between past and future.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+At the gate, a simple rule: does the very first word stand still as a noun? If so, a tidy marker is raised.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+A column of pages marks length. When a tale spreads beyond six paragraphs—when it breathes in many chambers—that marker is set.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+
+A mood-scented lantern dims or brightens with conditionals—if, were, might. If the story uses that conditional mood, this one lights.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+A weathered banner flutters for hardship. If the narrative carries struggle—hardship as its theme—this flag waves.
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if the story has the theme Hardship.
+
+Some lights only come on together. A compound ribbon ties two neighboring lanterns: playful and minimalist must both be glowing for this ribbon to exist.
+
+[COMPOUND-STYLE]
+A story is [COMPOUND-STYLE] if both of the following are true:
+- The story is [STYLE-PLAYFUL]
+- The story is [STYLE-MINIMALIST]
+
+There’s a more intricate constellation for deeper narratives. When a tale starts with a noun, stretches into many paragraphs, and speaks in conditional mood, a complex pattern appears—three points of light that must all align.
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if all of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is [STARTS-WITH-NOUN]
+
+A special pocket-watch light blinks when time travel and a moral lesson share the same story—two conditions that together form a distinct sign.
+
+[TIME-MORAL]
+A story is [TIME-MORAL] if both of the following are true:
+- The story is [TOPIC-TIME-TRAVEL]
+- The story is [HAS-A-MORAL-LESSON]
+
+At last, there’s the grand, multifaceted lamp: the rich-style narrative. It requires the complexity of the three-point constellation, and on top of that it needs either the neat twinning of playful and minimalist styles, or the single spark of playfulness provided hardship is absent. The rule is exact—follow it like a map.
+
+[RICH-STYLE-NARRATIVE]
+A story is [RICH-STYLE-NARRATIVE] if both of the following are true:
+- The story is [COMPLEX-NARRATIVE]
+- Either of the following is true:
+  - The story is [COMPOUND-STYLE]
+  - Both of the following are true:
+    - The story is [STYLE-PLAYFUL]
+    - The story is not [THEME-HARDSHIP]
+
+So stroll the streets of this codebook with confidence: each narrative description here is the friendly guide, and each bracketed line is the scholar’s rule—unchanged, exact, and ready for annotation.

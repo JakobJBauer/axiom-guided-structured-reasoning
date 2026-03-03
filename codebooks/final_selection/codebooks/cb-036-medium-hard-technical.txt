@@ -1,0 +1,60 @@
+[LOW-READABILITY]
+Definition: A story is classified as [LOW-READABILITY] if, and only if, its computed readability score is below 86.4.
+Operational note: The readability metric referenced is the numeric score produced by the chosen readability algorithm; the threshold is strictly < 86.4.
+
+[TOPIC-TIME-TRAVEL]
+Definition: A story is classified as [TOPIC-TIME-TRAVEL] if its primary subject matter concerns time travel.
+
+[TOPIC-SEASONAL-CHANGES]
+Definition: A story is classified as [TOPIC-SEASONAL-CHANGES] if its primary subject matter concerns seasonal changes.
+
+[USES-DISCOURSE-MARKERS]
+Definition: A story is classified as [USES-DISCOURSE-MARKERS] if it contains discourse markers (e.g., transitional phrases, connective adverbs) as identifiable linguistic elements.
+
+[STARTS-WITH-ADJECTIVE]
+Definition: A story is classified as [STARTS-WITH-ADJECTIVE] if its first lexical token is an adjective.
+
+[TOPIC-HIDDEN-TREASURES]
+Definition: A story is classified as [TOPIC-HIDDEN-TREASURES] if its primary subject matter concerns hidden treasures.
+
+[THEME-DECEPTION]
+Definition: A story is classified as [THEME-DECEPTION] if deception is a central thematic element within the narrative.
+
+[THEME-HELPING-OTHERS]
+Definition: A story is classified as [THEME-HELPING-OTHERS] if helping others is a central thematic element within the narrative.
+
+[STARTS-WITH-PREPOSITION]
+Definition: A story is classified as [STARTS-WITH-PREPOSITION] if its first lexical token is a preposition.
+
+[STARTS-WITH-ADVERB]
+Definition: A story is classified as [STARTS-WITH-ADVERB] if its first lexical token is an adverb.
+
+[NARRATIVE-SURFACE]
+Definition: A story is classified as [NARRATIVE-SURFACE] if and only if one of the following structural conditions holds:
+- Exactly one of the following is true:
+  - The story is [STARTS-WITH-ADJECTIVE]
+  - The story is [STARTS-WITH-ADVERB]
+- Both of the following are true:
+  - The story is [USES-DISCOURSE-MARKERS]
+  - Either of the following is true:
+    - The story is [LOW-READABILITY]
+    - The story is [STARTS-WITH-PREPOSITION]
+
+Interpretation: This node encodes an exclusive-or condition on sentence-initial part-of-speech OR a conjunction that requires presence of discourse markers plus either low readability or a prepositional start.
+
+[INSCRUTABLE-THEME-STRUCTURE]
+Definition: A story is classified as [INSCRUTABLE-THEME-STRUCTURE] if and only if both of the following top-level conditions are satisfied:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [TOPIC-TIME-TRAVEL]
+    - Exactly one of the following is true:
+      - The story is [THEME-DECEPTION]
+      - The story is [THEME-HELPING-OTHERS]
+  - Both of the following are true:
+    - The story is [TOPIC-SEASONAL-CHANGES]
+    - Both of the following are true:
+      - The story is [TOPIC-HIDDEN-TREASURES]
+      - The story is not [TOPIC-TIME-TRAVEL]
+- The story is [NARRATIVE-SURFACE]
+
+Interpretation: This composite node requires the narrative surface conditions to hold and, in addition, requires either a time-travel topic with an exclusive thematic choice between deception and helping-others, or a seasonal-changes topic that co-occurs with hidden-treasures while explicitly excluding time-travel.

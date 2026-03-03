@@ -1,0 +1,49 @@
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if it uses a circular narrative structure.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if its theme is kindness.
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if it includes juxtaposition.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if it’s about hidden treasures.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if its readability score is below 86.4.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if it’s philosophical.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if it’s modern.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if its theme is deception.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if its readability score is above 96.1.
+
+[MODERN-PHILO-JUXTA]
+A story is [MODERN-PHILO-JUXTA] if all of the following are true:
+- The story is [STYLE-MODERN]
+- Either of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [HAS-JUXTAPOSITION]
+- The story is not [HAS-CIRCULAR-NARRATIVE-STRUCT]
+
+[MORAL-AMBIVALENCE]
+A story is [MORAL-AMBIVALENCE] if all of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [THEME-DECEPTION]
+- The story is [MODERN-PHILO-JUXTA]
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if both of the following are true:
+- The story is [MORAL-AMBIVALENCE]
+- Either of the following is true:
+  - Exactly one of the following is true:
+    - The story is [LOW-READABILITY]
+    - The story is [HIGH-READABILITY]
+  - The story is [TOPIC-HIDDEN-TREASURES]

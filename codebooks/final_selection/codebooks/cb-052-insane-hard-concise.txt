@@ -1,0 +1,188 @@
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if the story has the theme Growth.
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if the story is humorous.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if the story is modern.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if the story has the theme Kindness.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if the story is about lost civilizations.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if the story has the theme Hardship.
+
+[LONG-STORY]
+A story is [LONG-STORY] if the story has more than 375 words.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if the story has a cliffhanger.
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if the story has the theme Innovation.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if the story has the theme Magic.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if the story starts with an adverb.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if the story has a flashback.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if the story is minimalist.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] if the story is about magical lands.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+[STYLE-SURREAL]
+A story is [STYLE-SURREAL] if the story is surreal.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+[THEME-HUMOR]
+A story is [THEME-HUMOR] if the story has the theme Humor.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if the story is about mystical creatures.
+
+[HUMOROUS-LIGHTHEARTED]
+A story is [HUMOROUS-LIGHTHEARTED] if both of the following are true:
+- The story is [STYLE-HUMOROUS]
+- The story is [STYLE-LIGHTHEARTED]
+
+[MODERN-PHILOSOPHICAL-SURREAL]
+A story is [MODERN-PHILOSOPHICAL-SURREAL] if either of the following is true:
+- The story is [STYLE-MODERN]
+- both of the following are true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [STYLE-SURREAL]
+
+[READABILITY-EXTREMES]
+A story is [READABILITY-EXTREMES] if exactly one of the following is true:
+- The story is [HIGH-READABILITY]
+- The story is [LOW-READABILITY]
+
+[NARRATIVE-COMPLEXITY]
+A story is [NARRATIVE-COMPLEXITY] if all of the following are true:
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [HAS-A-FLASHBACK]
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+
+[THEMATIC-HELP-KIND]
+A story is [THEMATIC-HELP-KIND] if both of the following are true:
+- The story is [THEME-HELPING-OTHERS]
+- The story is [THEME-KINDNESS]
+
+[MAGIC-LANDS-CREATURES]
+A story is [MAGIC-LANDS-CREATURES] if both of the following are true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- either of the following is true:
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+  - The story is [TOPIC-GIANT-CREATURES]
+
+[TIME-LOST-BYGONE]
+A story is [TIME-LOST-BYGONE] if either of the following is true:
+- both of the following are true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+- The story is [TOPIC-BYGONE-ERAS]
+
+[MORALITY-FILTER]
+A story is [MORALITY-FILTER] if all of the following are true:
+- The story is [HAS-A-MORAL-LESSON]
+- The story is [THEME-KINDNESS]
+- The story is not [THEME-DECEPTION]
+
+[INNOVATION-PROBLEM-SOLVE]
+A story is [INNOVATION-PROBLEM-SOLVE] if both of the following are true:
+- The story is [THEME-INNOVATION]
+- The story is [THEME-PROBLEM-SOLVING]
+
+[PACING-LONG-CLIFF]
+A story is [PACING-LONG-CLIFF] if both of the following are true:
+- The story is [LONG-STORY]
+- The story is [HAS-A-CLIFFHANGER]
+
+[COMPLEX-ARCHETYPE]
+A story is [COMPLEX-ARCHETYPE] if either of the following is true:
+- all of the following are true:
+  - The story is [HUMOROUS-LIGHTHEARTED]
+  - The story is [MORALITY-FILTER]
+  - either of the following is true:
+    - The story is [NARRATIVE-COMPLEXITY]
+    - The story is [PACING-LONG-CLIFF]
+- exactly one of the following is true:
+  - both of the following are true:
+    - The story is [MAGIC-LANDS-CREATURES]
+    - The story is not [STYLE-MINIMALIST]
+  - The story is [TIME-LOST-BYGONE]

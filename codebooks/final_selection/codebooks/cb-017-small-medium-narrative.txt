@@ -1,0 +1,22 @@
+[STYLE-HUMOROUS]  
+Picture a tale that can’t help but grin at you from the page—its moments are built to amuse, its lines carry wit, and laughter is part of the journey. A story is STYLE-HUMOROUS if The story is humorous.
+
+[STYLE-LIGHTHEARTED]  
+Now imagine a different kind of ease: a story that feels airy and bright, where the weight of the world doesn’t press down too hard, and the mood stays pleasantly buoyant. A story is STYLE-LIGHTHEARTED if The story is lighthearted.
+
+[THEME-KINDNESS]  
+At the heart of some stories beats a steady, generous pulse—characters choose compassion, small mercies matter, and warmth wins. A story is THEME-KINDNESS if The story has the theme Kindness.
+
+[STYLE-EXCLUSIVE]  
+But here’s a strict gatekeeper of tone: this rule allows only one lantern to be lit at a time. A story is STYLE-EXCLUSIVE if exactly one of the following is true:  
+- The story is [STYLE-HUMOROUS]  
+- The story is [STYLE-LIGHTHEARTED]
+
+[GENRE-GENTLE]  
+Finally, step into the realm of GENRE-GENTLE—where kindness is the non-negotiable foundation, and the style must follow a particular path. A story is GENRE-GENTLE if both of the following are true:  
+- The story is [THEME-KINDNESS]  
+- Either of the following are true:  
+  - The story is [STYLE-EXCLUSIVE]  
+  - Both of the following are true:  
+    - The story is [STYLE-LIGHTHEARTED]  
+    - The story is not [STYLE-HUMOROUS]

@@ -1,0 +1,43 @@
+[attr-4]
+A story is [attr-4] if it has more than 6 paragraphs.
+
+[attr-7]
+A story is [attr-7] if it is classic.
+
+[attr-2]
+A story is [attr-2] if it has a cliffhanger.
+
+[attr-6]
+A story is [attr-6] if it starts with a preposition.
+
+[attr-11]
+A story is [attr-11] if its theme is Deception.
+
+[attr-9]
+A story is [attr-9] if it is playful.
+
+[attr-12]
+A story is [attr-12] if its theme is Helping Others.
+
+[attr-10]
+A story is [attr-10] if its theme is Agency.
+
+[attr-3]
+A story is [attr-3] if it contains juxtaposition.
+
+[attr-8]
+A story is [attr-8] if it is philosophical.
+
+[attr-5]
+A story is [attr-5] if either of the following is true:
+- The story is both [attr-11] and not [attr-12]
+- Exactly one of the following is true:
+  - The story is [attr-10]
+  - The story is [attr-12]
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - The story is both [attr-2] and not [attr-9]
+  - The story is both [attr-6] and [attr-5]

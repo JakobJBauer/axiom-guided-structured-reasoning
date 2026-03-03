@@ -1,0 +1,43 @@
+Codebook — Formal definitions and annotation criteria
+
+Below are the formal predicate definitions used for annotation. Each entry specifies the precise condition(s) under which a story should be assigned the corresponding label. Logical connective phrases ("both of the following are true", "Either of the following is true", "not") are used verbatim to preserve the intended logical structure.
+
+[USES-CONDITIONAL-MOOD]
+Definition: A story is [USES-CONDITIONAL-MOOD] if the narrative employs the conditional grammatical mood. Annotators should mark this predicate when the text contains constructions that express hypotheticality, contingency, or conditions (for example, modal conditional verb forms).
+
+[USES-PERFECT-ASPECT]
+Definition: A story is [USES-PERFECT-ASPECT] if the narrative employs the perfect aspect. Annotators should mark this predicate when the text contains perfect-aspect verbal constructions that indicate completed or resultant states.
+
+[THEME-DECEPTION]
+Definition: A story is [THEME-DECEPTION] if the narrative contains the theme of deception. Annotators should mark this predicate when deception is a central thematic element (e.g., lying, deliberate misleading, concealment of truth).
+
+[HAS-A-CLIFFHANGER]
+Definition: A story is [HAS-A-CLIFFHANGER] if the narrative ends, or is structured to end, on an unresolved situation that creates suspense (i.e., a cliffhanger).
+
+[COMPLEX-DECEPTION]
+Definition: A story is [COMPLEX-DECEPTION] if all of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is not [HAS-A-CLIFFHANGER]
+- Either of the following is true:
+  - The story is [USES-CONDITIONAL-MOOD]
+  - The story is [USES-PERFECT-ASPECT]
+
+[ASPECTUAL-AMBIVALENCE]
+Definition: A story is [ASPECTUAL-AMBIVALENCE] if both of the following are true:
+- Either of the following is true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-CONDITIONAL-MOOD]
+- The story is not both of the following:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-CONDITIONAL-MOOD]
+
+[AMBIGUOUS-DECEPTION-NARRATIVE]
+Definition: A story is [AMBIGUOUS-DECEPTION-NARRATIVE] if both of the following are true:
+- The story is [COMPLEX-DECEPTION]
+- Either of the following is true:
+  - The story is [ASPECTUAL-AMBIVALENCE]
+  - The story is not [HAS-A-CLIFFHANGER]
+
+Annotation notes
+- Apply each predicate independently according to the definitions above.
+- Composite predicates ([COMPLEX-DECEPTION], [ASPECTUAL-AMBIVALENCE], [AMBIGUOUS-DECEPTION-NARRATIVE]) require checking the specified atomic predicates and logical conditions exactly as written.

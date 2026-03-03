@@ -1,0 +1,41 @@
+Interviewer: Let's walk through this codebook step by step. First, what is [attr-6]?
+
+Expert: A story is [attr-6] if The story is about the arts.
+
+Interviewer: Got it. And what about [attr-7]?
+
+Expert: A story is [attr-7] if The story uses conditional mood.
+
+Interviewer: How about [attr-4]?
+
+Expert: A story is [attr-4] if The story starts with a adjective.
+
+Interviewer: And [attr-5]?
+
+Expert: A story is [attr-5] if The story is philosophical.
+
+Interviewer: Now the compound nodes — can you explain [attr-3]?
+
+Expert: Sure. A story is [attr-3] if both of the following are true:
+- The story is [attr-7]
+- The story is not [attr-4]
+
+Interviewer: So that requires the conditional mood and explicitly not starting with an adjective. Clear. What about [attr-1]?
+
+Expert: A story is [attr-1] if exactly one of the following is true:
+- The story is [attr-6]
+- The story is [attr-5]
+
+Interviewer: So it's an exclusive-or: it must be either about the arts or philosophical, but not both. Understood. Finally, explain [attr-2].
+
+Expert: A story is [attr-2] if either of the following is true:
+- The story is [attr-3]
+- Both of the following are true:
+  - The story is in the set of topics that includes [attr-6]
+  - The truth of [attr-5] is equal to the truth of not [attr-7]
+
+Interviewer: That second option is a little dense. Can you restate it briefly?
+
+Expert: Of course. The second option says: the story belongs to the topics that include [attr-6], and at the same time the statement "[attr-5]" has the same truth value as "not [attr-7]". In other words, [attr-5] is true exactly when [attr-7] is false, and vice versa — while the story is also in the topic set containing [attr-6].
+
+Interviewer: Thanks — that keeps the logical structure intact and makes it easier to apply when annotating. That completes the codebook.

@@ -1,0 +1,304 @@
+Interviewer: Let’s walk through this codebook together. For each label, I’ll ask what it means and you’ll explain it precisely. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What does [THEME-PROBLEM-SOLVING] mean?
+
+Expert: A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+Interviewer: Okay. And [TOPIC-MYSTICAL-CREATURES]?
+
+Expert: A story is [TOPIC-MYSTICAL-CREATURES] if the story is about mystical creatures.
+
+Interviewer: [SHORT-STORY]?
+
+Expert: A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+Interviewer: [TOPIC-TIME-TRAVEL]?
+
+Expert: A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+Interviewer: What about [USES-DISCOURSE-MARKERS]?
+
+Expert: A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers.
+
+Interviewer: [TOPIC-CULTURAL-TRADITIONS]?
+
+Expert: A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+Interviewer: [THEME-INNOVATION]?
+
+Expert: A story is [THEME-INNOVATION] if the story has the theme Innovation.
+
+Interviewer: [STARTS-WITH-ADVERB]?
+
+Expert: A story is [STARTS-WITH-ADVERB] if the story starts with an adverb.
+
+Interviewer: [THEME-HELPING-OTHERS]?
+
+Expert: A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others.
+
+Interviewer: [HAS-JUXTAPOSITION]?
+
+Expert: A story is [HAS-JUXTAPOSITION] if the story has juxtaposition.
+
+Interviewer: [STYLE-PLAYFUL]?
+
+Expert: A story is [STYLE-PLAYFUL] if the story is playful.
+
+Interviewer: [HAS-A-RED-HERRING]?
+
+Expert: A story is [HAS-A-RED-HERRING] if the story has a Red Herring.
+
+Interviewer: [THEME-HARDSHIP]?
+
+Expert: A story is [THEME-HARDSHIP] if the story has the theme Hardship.
+
+Interviewer: [THEME-HUMOR]?
+
+Expert: A story is [THEME-HUMOR] if the story has the theme Humor.
+
+Interviewer: [THEME-AGENCY]?
+
+Expert: A story is [THEME-AGENCY] if the story has the theme Agency.
+
+Interviewer: [HAS-A-FLASHBACK]?
+
+Expert: A story is [HAS-A-FLASHBACK] if the story has a flashback.
+
+Interviewer: [USES-PERFECT-ASPECT]?
+
+Expert: A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect.
+
+Interviewer: [USES-CONDITIONAL-MOOD]?
+
+Expert: A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+Interviewer: [USES-WH-QUESTIONS]?
+
+Expert: A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+Interviewer: [THEME-KINDNESS]?
+
+Expert: A story is [THEME-KINDNESS] if the story has the theme Kindness.
+
+Interviewer: [HAS-A-MORAL-LESSON]?
+
+Expert: A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+Interviewer: [STYLE-HUMOROUS]?
+
+Expert: A story is [STYLE-HUMOROUS] if the story is humorous.
+
+Interviewer: [LOW-READABILITY]?
+
+Expert: A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+Interviewer: [MANY-PARAGRAPHS]?
+
+Expert: A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+
+Interviewer: [HAS-A-CLIFFHANGER]?
+
+Expert: A story is [HAS-A-CLIFFHANGER] if the story has a cliffhanger.
+
+Interviewer: [TOPIC-MAGICAL-LANDS]?
+
+Expert: A story is [TOPIC-MAGICAL-LANDS] if the story is about magical lands.
+
+Interviewer: [TOPIC-GIANT-CREATURES]?
+
+Expert: A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures.
+
+Interviewer: [THEME-GROWTH]?
+
+Expert: A story is [THEME-GROWTH] if the story has the theme Growth.
+
+Interviewer: [LONG-STORY]?
+
+Expert: A story is [LONG-STORY] if the story has more than 375 words.
+
+Interviewer: Now, what is [FANTASY-TOPICS]? That one looked compact in the original.
+
+Expert: [FANTASY-TOPICS] is defined this way: A story is [FANTASY-TOPICS] if the story is in [TOPIC-MYSTICAL-CREATURES, TOPIC-MAGICAL-LANDS, TOPIC-GIANT-CREATURES]. In other words, the story falls into that set of three topic categories.
+
+Interviewer: Got it. And [MAGICAL-STORY] — how is that decided?
+
+Expert: A story is [MAGICAL-STORY] if either of the following is true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- The story is [TOPIC-MYSTICAL-CREATURES]
+
+Interviewer: So only one of those needs to be true?
+
+Expert: Yes — it's an "either/or" (logical OR).
+
+Interviewer: Explain [EPIC-TALE].
+
+Expert: A story is [EPIC-TALE] if all of the following are true:
+- The story is [LONG-STORY]
+- The story is either [TOPIC-GIANT-CREATURES] or [TOPIC-MAGICAL-LANDS]
+- The story is [THEME-GROWTH]
+
+Interviewer: In plain terms: long, about giants or magical lands, and has growth as a theme.
+
+Expert: Exactly.
+
+Interviewer: What about [SHORT-MAGICAL]?
+
+Expert: A story is [SHORT-MAGICAL] if both of the following are true:
+- The story is [SHORT-STORY]
+- The story is [MAGICAL-STORY]
+
+Interviewer: [TIME-TRAVEL-PARADOX] sounds tricky. Break it down.
+
+Expert: A story is [TIME-TRAVEL-PARADOX] if both of the following are true:
+- The story is [TOPIC-TIME-TRAVEL]
+- Either of the following is true:
+  - The story is [HAS-A-RED-HERRING]
+  - The story is [HAS-A-FLASHBACK]
+
+Interviewer: So a time-travel story that also has a red herring or a flashback qualifies.
+
+Expert: Correct.
+
+Interviewer: [COMPLEX-STRUCTURE]?
+
+Expert: A story is [COMPLEX-STRUCTURE] if both of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- Both of the following are true:
+  - The story is [HAS-A-FLASHBACK]
+  - The story is [HAS-A-CLIFFHANGER]
+
+Interviewer: That one requires both inner conditions to hold — flashback and cliffhanger — plus many paragraphs.
+
+Expert: Yes.
+
+Interviewer: [NARRATIVE-VOICE] — what's the rule?
+
+Expert: A story is [NARRATIVE-VOICE] if either of the following is true:
+- The story is [STARTS-WITH-ADVERB]
+- The story is [USES-DISCOURSE-MARKERS]
+- The story is [USES-WH-QUESTIONS]
+
+Interviewer: So any one of those three suffices.
+
+Expert: Exactly.
+
+Interviewer: [HUMOROUS-PLAYFUL] uses "exactly one." Can you explain?
+
+Expert: A story is [HUMOROUS-PLAYFUL] if exactly one of the following is true:
+- The story is [STYLE-HUMOROUS]
+- The story is [STYLE-PLAYFUL]
+
+Interviewer: So it’s true only when one is present but not both.
+
+Expert: Right — it's an exclusive OR.
+
+Interviewer: [MORAL-KINDNESS]?
+
+Expert: A story is [MORAL-KINDNESS] if both of the following are true:
+- The story is [THEME-KINDNESS]
+- The story is [HAS-A-MORAL-LESSON]
+
+Interviewer: [HELPFUL-INNOVATOR] sounds like a fusion.
+
+Expert: A story is [HELPFUL-INNOVATOR] if all of the following are true:
+- The story is [THEME-INNOVATION]
+- The story is [THEME-HELPING-OTHERS]
+- Either of the following is true:
+  - The story is [THEME-AGENCY]
+  - The story is [THEME-PROBLEM-SOLVING]
+
+Interviewer: So innovation plus helping others plus either agency or problem-solving.
+
+Expert: Exactly.
+
+Interviewer: [GROWTH-FROM-HARDSHIP]?
+
+Expert: A story is [GROWTH-FROM-HARDSHIP] if both of the following are true:
+- The story is [THEME-GROWTH]
+- The story is [THEME-HARDSHIP]
+
+Interviewer: [ENGAGING-READABILITY] — there’s a negation in there.
+
+Expert: Yes. A story is [ENGAGING-READABILITY] if both of the following are true:
+- The story is not [LOW-READABILITY]
+- Either of the following is true:
+  - The story is [SHORT-STORY]
+  - The story is [LONG-STORY]
+
+Interviewer: So it must have acceptable readability and be either short or long.
+
+Expert: Correct.
+
+Interviewer: [BRIEF-CHOICE]?
+
+Expert: A story is [BRIEF-CHOICE] if both of the following are true:
+- The story is [SHORT-STORY]
+- Exactly one of the following is true:
+  - The story is [THEME-HUMOR]
+  - The story is [THEME-HARDSHIP]
+
+Interviewer: Short plus either humor or hardship, but not both.
+
+Expert: Right.
+
+Interviewer: [QUESTION-DRIVEN]?
+
+Expert: A story is [QUESTION-DRIVEN] if both of the following are true:
+- The story is [USES-WH-QUESTIONS]
+- The story is [USES-DISCOURSE-MARKERS]
+
+Interviewer: So it needs to use wh-questions and discourse markers.
+
+Expert: Yes.
+
+Interviewer: [COMPLEX-LOGIC-STORY] — this one’s deeply nested.
+
+Expert: It is. A story is [COMPLEX-LOGIC-STORY] if all of the following are true:
+- Either of the following is true:
+  - The story is [TIME-TRAVEL-PARADOX]
+  - The story is [MAGICAL-STORY]
+- Both of the following are true:
+  - The story is [COMPLEX-STRUCTURE]
+  - Either of the following is true:
+    - The story is [NARRATIVE-VOICE]
+    - The story is [ENGAGING-READABILITY]
+- Either of the following is true:
+  - The story uses [USES-CONDITIONAL-MOOD]
+  - The story uses [USES-PERFECT-ASPECT]
+
+Interviewer: So to satisfy [COMPLEX-LOGIC-STORY], you need (time-travel paradox OR magical story) AND complex structure AND (narrative voice OR engaging readability) AND (conditional mood OR perfect aspect).
+
+Expert: Precisely. All those grouped conditions must be met according to the logical structure.
+
+Interviewer: [THEMATIC-FUSION]?
+
+Expert: A story is [THEMATIC-FUSION] if both of the following are true:
+- Either of the following is true:
+  - The story is [HELPFUL-INNOVATOR]
+  - The story is [MORAL-KINDNESS]
+- Either of the following is true:
+  - The story is [GROWTH-FROM-HARDSHIP]
+  - The story is [THEME-PROBLEM-SOLVING]
+
+Interviewer: So it mixes one of those helper/kindness labels with one of those growth/problem labels.
+
+Expert: Yes — one from each list.
+
+Interviewer: Finally, [PRAGMATIC-VOICE]?
+
+Expert: A story is [PRAGMATIC-VOICE] if all of the following are true:
+- The story is [NARRATIVE-VOICE]
+- The story is not [STYLE-PLAYFUL]
+- Either of the following is true:
+  - The story is [USES-PERFECT-ASPECT]
+  - The story is [USES-CONDITIONAL-MOOD]
+
+Interviewer: So it must show narrative voice, be non-playful, and use perfect aspect or conditional mood.
+
+Expert: Exactly.
+
+Interviewer: Thanks — that was clear and kept the exact logical structure. Any final tip for annotators using this transcript?
+
+Expert: Keep the node IDs exactly as written — like [THIS-FORMAT] — and follow the logical operators as specified: "both/all" means AND, "either" means OR, "exactly one" means exclusive OR, and "not" is logical negation. Use this transcript as a quick-reference Q&A while annotating.

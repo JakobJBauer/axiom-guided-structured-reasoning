@@ -1,0 +1,52 @@
+Purpose
+- This codebook defines annotation labels (nodes) and the exact logical conditions that make a story qualify for each label.
+- Node IDs are shown in [BRACKET] format and must be used exactly as written.
+- Logical relationships (And / Or / Both / Either) are preserved precisely as structured below.
+
+Atomic (single-condition) nodes
+- [USES-SUPERLATIVE-FORMS]
+  - Definition: A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+  - Quick note: This label flags language that explicitly marks extremes (e.g., "the greatest," "the most ancient").
+
+- [USES-PERFECT-ASPECT]
+  - Definition: A story is [USES-PERFECT-ASPECT] if the story uses the perfect aspect.
+  - Quick note: This label flags use of perfect tenses (e.g., "has seen," "had discovered").
+
+- [TOPIC-LOST-CIVILIZATIONS]
+  - Definition: A story is [TOPIC-LOST-CIVILIZATIONS] if the story is about lost civilizations.
+  - Quick note: This is a topical label (content-focused), not a stylistic one.
+
+- [HAS-JUXTAPOSITION]
+  - Definition: A story is [HAS-JUXTAPOSITION] if the story has juxtaposition.
+  - Quick note: Use this when contrasting images, ideas, or elements are placed side-by-side for effect.
+
+- [SHORT-STORY]
+  - Definition: A story is [SHORT-STORY] if the story has fewer than 160 words.
+  - Quick note: Word count is the only criterion for this node.
+
+Compound (multi-condition) nodes
+- [EPICALLY-CONCISE-LOST]
+  - Condition: A story is [EPICALLY-CONCISE-LOST] if both of the following are true:
+    - The story is [TOPIC-LOST-CIVILIZATIONS]
+    - The story is [SHORT-STORY]
+  - Interpretation: This label marks stories that are both about lost civilizations and extremely short (under 160 words).
+
+- [ORNATE-REFLECTIVE]
+  - Condition: A story is [ORNATE-REFLECTIVE] if either of the following are true:
+    - Both of the following are true:
+      - The story is [USES-SUPERLATIVE-FORMS]
+      - The story is [USES-PERFECT-ASPECT]
+    - Both of the following are true:
+      - The story is [USES-PERFECT-ASPECT]
+      - The story is [HAS-JUXTAPOSITION]
+  - Interpretation: [ORNATE-REFLECTIVE] applies when the story combines perfect aspect with either superlatives or juxtaposition. In other words:
+    - ( [USES-SUPERLATIVE-FORMS] AND [USES-PERFECT-ASPECT] ) OR
+    - ( [USES-PERFECT-ASPECT] AND [HAS-JUXTAPOSITION] )
+
+Annotation guidance (practical reminders)
+- Always refer to node IDs exactly as shown (e.g., [TOPIC-LOST-CIVILIZATIONS]).
+- For compound nodes, verify each required sub-node independently before assigning the compound label.
+- Preserve the logical structure: "both of the following are true" corresponds to logical AND; "either of the following are true" corresponds to logical OR.
+- Do not introduce or remove nodes or alter relationships when annotating.
+
+End of codebook.

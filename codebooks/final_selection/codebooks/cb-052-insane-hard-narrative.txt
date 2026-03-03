@@ -1,0 +1,199 @@
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if the story has the theme Growth — imagine a tale whose heartbeat is transformation, where characters or circumstances ripen into something new.
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if the story is humorous — it leans into laughter, punchlines, and the light wobble of wit.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others — scenes where hands reach out, aid is given, and compassion shapes the plot.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition — the first word sets a grammatical scene like "In," "On," or "After."
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if the story is modern — it carries contemporary tones, references, or sensibilities.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect — the narrative speaks of actions completed before other moments in time.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if the story is lighthearted — it floats, breezy and unburdened by heavy gloom.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if the story has the theme Deception — false faces, hidden motives, and clever misdirection thread through its events.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if the story has the theme Kindness — scenes where generosity alters outcomes, small mercies shifting fates.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the story uses wh-questions — the narrator or characters ask who, what, when, where, why, or how.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] if the story is about lost civilizations — ruins, vanished empires, and the echoes of once-great societies.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel — clocks bend, timelines tangle, and travelers cross eras.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun — an introduced element destined to matter later, promised and fulfilled.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson — the narrative leaves the reader with an explicit or clearly implied ethical takeaway.
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if the story has the theme Hardship — endurance, struggle, and adversity form the spine of the tale.
+
+[LONG-STORY]
+A story is [LONG-STORY] if the story has more than 375 words — its length lets scenes breathe and arcs unfold.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes — the turning of seasons plays a deliberate role in the narrative.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if the story has a cliffhanger — it halts with tension, leaving outcomes suspended until revelation.
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving — puzzles are posed and cleverness prevails.
+
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if the story has the theme Innovation — new ideas, inventions, or creative breakthroughs drive the plot.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if the story has the theme Magic — wonder, spells, and the supernatural are woven into the fabric of the tale.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure — the ending loops back to the beginning, creating a ring of meaning.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures — colossal beings dominate scenes, literal or metaphorical.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers — words like "however," "therefore," or "meanwhile" guide the reader through shifts and pauses.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical — it lingers on big questions, ideas, and reflections about existence.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if the story starts with a adverb — that opening word sets tone: "Suddenly," "Quietly," "Happily."
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions — rituals, customs, and inherited practices shape scenes.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if the story has a flashback — memories break the present to reveal past moments.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if the story has readability score above 96.1 — the prose is exceptionally clear and easy to scan.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if the story is minimalist — it pares language and detail down to essentials.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms — words like "best," "biggest," or "most" crop up to emphasize extremes.
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] if the story is about magical lands — realms where geography itself hums with enchantment.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story — nested narratives unfold like Russian dolls.
+
+[STYLE-SURREAL]
+A story is [STYLE-SURREAL] if the story is surreal — logic bends and strange juxtapositions create dreamlike effects.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun — the first word names an object, person, or place that anchors the opening.
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras — the past looms large, with historical atmospheres and vanished ways of life.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] if the story has readability score below 86.4 — denser prose or complexity makes it harder to read quickly.
+
+[THEME-HUMOR]
+A story is [THEME-HUMOR] if the story has the theme Humor — laughter and comedic intent are central.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if the story is about mystical creatures — fae, dragons, and beings that defy natural law appear.
+
+[HUMOROUS-LIGHTHEARTED]
+A story is [HUMOROUS-LIGHTHEARTED] if both of the following are true:
+- The story is [STYLE-HUMOROUS]
+- The story is [STYLE-LIGHTHEARTED]
+Here a duet of tones: humor paired with a gentle, carefree spirit — both conditions must hold.
+
+[MODERN-PHILOSOPHICAL-SURREAL]
+A story is [MODERN-PHILOSOPHICAL-SURREAL] if either of the following is true:
+- The story is [STYLE-MODERN]
+- both of the following are true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [STYLE-SURREAL]
+This node admits a modern pulse, or alternatively a pairing of thoughtfulness and dream-logic — one path or the other suffices.
+
+[READABILITY-EXTREMES]
+A story is [READABILITY-EXTREMES] if exactly one of the following is true:
+- The story is [HIGH-READABILITY]
+- The story is [LOW-READABILITY]
+It marks the extremes: the story sits at one endpoint of clarity or complexity — but not both.
+
+[NARRATIVE-COMPLEXITY]
+A story is [NARRATIVE-COMPLEXITY] if all of the following are true:
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [HAS-A-FLASHBACK]
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+This label demands layered structure: nesting, memory, and a circular arc all present together.
+
+[THEMATIC-HELP-KIND]
+A story is [THEMATIC-HELP-KIND] if both of the following are true:
+- The story is [THEME-HELPING-OTHERS]
+- The story is [THEME-KINDNESS]
+Two compassionate themes entwine — helping and kindness must co-occur.
+
+[MAGIC-LANDS-CREATURES]
+A story is [MAGIC-LANDS-CREATURES] if both of the following are true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- either of the following is true:
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+  - The story is [TOPIC-GIANT-CREATURES]
+A realm of magic coupled with extraordinary inhabitants: to qualify, the tale must be set in enchanted lands and feature either mystical beings or towering creatures.
+
+[TIME-LOST-BYGONE]
+A story is [TIME-LOST-BYGONE] if either of the following is true:
+- both of the following are true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is [TOPIC-LOST-CIVILIZATIONS]
+- The story is [TOPIC-BYGONE-ERAS]
+This label captures temporal dislocation: either time travel entwined with lost civilizations, or simply a focus on bygone eras.
+
+[MORALITY-FILTER]
+A story is [MORALITY-FILTER] if all of the following are true:
+- The story is [HAS-A-MORAL-LESSON]
+- The story is [THEME-KINDNESS]
+- The story is not [THEME-DECEPTION]
+A moral filter that insists on kindness and an explicit lesson, while excluding deception — all three constraints must be satisfied.
+
+[INNOVATION-PROBLEM-SOLVE]
+A story is [INNOVATION-PROBLEM-SOLVE] if both of the following are true:
+- The story is [THEME-INNOVATION]
+- The story is [THEME-PROBLEM-SOLVING]
+When invention meets the act of solving, the tale earns this dual descriptor.
+
+[PACING-LONG-CLIFF]
+A story is [PACING-LONG-CLIFF] if both of the following are true:
+- The story is [LONG-STORY]
+- The story is [HAS-A-CLIFFHANGER]
+A long-form narrative that leaves its audience hanging — length combined with suspense defines this node.
+
+[COMPLEX-ARCHETYPE]
+A story is [COMPLEX-ARCHETYPE] if either of the following is true:
+- all of the following are true:
+  - The story is [HUMOROUS-LIGHTHEARTED]
+  - The story is [MORALITY-FILTER]
+  - either of the following is true:
+    - The story is [NARRATIVE-COMPLEXITY]
+    - The story is [PACING-LONG-CLIFF]
+- exactly one of the following is true:
+  - both of the following are true:
+    - The story is [MAGIC-LANDS-CREATURES]
+    - The story is not [STYLE-MINIMALIST]
+  - The story is [TIME-LOST-BYGONE]
+Here the archetype blooms in one of two grand ways: either a humorous, lighthearted tale that also passes the morality filter and then deepens into narrative complexity or long suspense, or alternatively a magical-lands story (not minimalist) or a time/lost-era tale — but when the second branch lists two options, precisely one of those options must hold.

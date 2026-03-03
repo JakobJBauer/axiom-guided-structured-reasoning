@@ -1,0 +1,27 @@
+In the little kingdom of Annotation, five curious badges live in plain sight, each with a simple rule that decides when a tale may wear it. Imagine walking through a sunlit fair where these badges gossip about stories — playful, precise, and punctual — and then meet the elder badge that only appears when a specific combination of friends come together. Listen in as their rules are told like small tales, clear as law but told with a wink.
+
+[attr-3]
+A story is [attr-3] if the story is lighthearted.
+
+[attr-2]
+A story is [attr-2] if the story starts with a adverb.
+
+[attr-1]
+A story is [attr-1] if the story has more than 375 words.
+
+[attr-4]
+A story is [attr-4] if the story has the theme Humor.
+
+[attr-5]
+A story is [attr-5] if the story is about bygone eras.
+
+Then there is the elder badge, [attr-6], who sits at the crossroads of mood and theme. It will only crown a tale when a tidy, two-part ritual is satisfied — a ritual that asks for both lightness of tone and a specific brand of humor, and even then it waits for one of two possible finishing touches.
+
+[attr-6]
+A story is [attr-6] if both of the following are true:
+- The story is [attr-3]
+- The story is [attr-4] and either of the following is true:
+  - The story is [attr-5]
+  - The story is [attr-2]
+
+Think of it as a short parable: for the elder to smile, a story must be lighthearted, and it must carry the spirit of humor — plus either a nostalgic nod to bygone eras or the playful flourish of beginning with an adverb. Keep these rules close when you annotate; they are firm, but simple, and they tell the tale as clearly as any fable.

@@ -1,0 +1,187 @@
+[STARTS-WITH-ADVERB]
+A tale is bestowed the mark [STARTS-WITH-ADVERB] when, like a silver wind at dawn, its very first word is an adverb—an adverb that opens the door and sets the tempo for everything that follows.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is labeled [TOPIC-CULTURAL-TRADITIONS] when its heart beats with customs, rites, and rituals—when it speaks of cultural traditions and the ways people pass meaning from generation to generation.
+
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] when it carries the luminous thread of Innovation, celebrating new ideas, inventive turns, or creative breakthroughs as a central theme.
+
+[THEME-HUMOR]
+A story is [THEME-HUMOR] when it dances in the register of Humor, its narrative shaped by wit, amusement, or comic perspective.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] when it revolves around hidden treasures—secret hoards, buried fortunes, or discoveries tucked away from plain sight.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] when it bears the hallmarks of the classic—timeless structure, traditional tone, or enduring stylistic conventions.
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] when it adopts a humorous style, crafted to provoke smiles and laughter through its phrasing and delivery.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] when its voice and manner are modern—contemporary sensibilities, up-to-date style, and present-day idiom.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] when it concerns creatures of immense size—giants that loom, colossal beings that shape the plot.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] when its verbs employ the perfect aspect, weaving completed or resulting actions into the fabric of narration.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] when it pauses the present to glance backward—when it contains a flashback that reveals events from before the current moment.
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] when Hardship hangs at its core—struggle, adversity, and trial drive the emotional current.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] when it leaves the reader suspended on a precipice, ending a section or the tale with a cliffhanger that promises unresolved fate.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] when it imparts a moral lesson—a didactic thread informing right or wrong, guiding reflection after the last line.
+
+[TOPIC-LOST-CIVILIZATIONS]
+A story is [TOPIC-LOST-CIVILIZATIONS] when its plot turns around lost civilizations—ancient societies, forgotten empires, or buried cities of lore.
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] when it adopts a playful style, full of light mischief, spirited tone, and whimsical turns.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] when it contemplates seasonal changes—the ebb and flow of weather, harvests, and the year’s procession.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] when its opening word is a preposition, a little connector that invites the sentence to come alive.
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] when it features juxtaposition—contrasting images, ideas, or scenes placed side by side for emphasis or tension.
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] when Problem-Solving is central—characters employ reasoning, strategy, and cleverness to resolve dilemmas.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] when time travel supplies its engine—movement across eras, temporal loops, or journeys through chronology.
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] when it dwells upon bygone eras—times long past, epochs evoked with historical or nostalgic resonance.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] when its narrative loops back upon itself—when the structure is circular, returning to earlier points or themes.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] when it makes use of discourse markers—words or phrases that guide the reader through argument and transition.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] when it employs wh-questions (who, what, when, where, why, how) as a rhetorical or narrative device.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] when it concerns the arts—painting, music, dance, sculpture, and the creative practices that animate culture.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] when Magic infuses it—sorcery, enchantment, or supernatural elements are integral themes.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] when it takes on a philosophical style, inviting contemplation, abstraction, and probing thought.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] when it embraces minimalism—pared-down prose, economical detail, and restrained expression.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] when it contains a nested narrative—a story within a story that mirrors or informs the main tale.
+
+[LONG-STORY]
+A story is [LONG-STORY] when it extends beyond 375 words, spreading its scenes and ideas at generous length.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] when it centers on mystical creatures—beings of myth, wonder, and supernatural origin.
+
+[LOW-READABILITY]
+A story is [LOW-READABILITY] when its readability score dips below 86.4, meaning the prose is denser or more complex to parse.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] when it includes Chekhov’s gun—a seemingly small detail introduced earlier that later proves crucial.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] when it unfolds in more than six paragraphs, each a stepping-stone along the narrative path.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] when Deception threads through it—lies, concealments, and misleading maneuvers that shape the plot.
+
+[THEME-AGENCY]
+A story is [THEME-AGENCY] when Agency is a central concern—characters exercising choice, autonomy, and the consequences of their actions.
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] when it is set in magical lands—realms of enchantment, strange geography, and wonder.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] when its language reaches for superlatives—the tallest, the most wondrous, the utmost—employing extreme comparative forms.
+
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] when its first word is an adjective, an adjectival banner that colors what follows.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] when Kindness stands at its thematic core—compassion, benevolence, and gentle acts guiding meaning.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] when its readability score rises above 96.1, indicating prose that is notably clear and easy to follow.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] when the very first word is a noun, grounding the opening in someone or something.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] when it uses the conditional mood—phrases of possibility, supposition, or contingent outcomes.
+
+[HAS-A-RED-HERRING]
+A story is [HAS-A-RED-HERRING] when it contains a red herring—an intentional misdirection planted to distract or deceive.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] when it is brief, totaling fewer than 160 words—compact and to the point.
+
+[STYLE-SURREAL]
+A story is [STYLE-SURREAL] when it embraces surrealism—dreamlike imagery, illogical juxtapositions, and a bending of expected reality.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] when Helping Others forms a central theme—acts of assistance, solidarity, and altruism woven through the plot.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] when it adopts a lighthearted style—buoyant, carefree, and pleasantly unburdened.
+
+[COMPLEX-NARRATIVE]
+In the grand loom of classification, a tale is declared [COMPLEX-NARRATIVE] when the following intricate pattern of conditions is met—when the narrative weaves several specified threads together. A story is [COMPLEX-NARRATIVE] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is in [TOPIC-LOST-CIVILIZATIONS], [TOPIC-BYGONE-ERAS], [TOPIC-TIME-TRAVEL]
+      - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+    - either of the following is true:
+      - The story is [HAS-A-STORY-WITHIN-A-STORY]
+      - both of the following are true:
+        - The story is [HAS-A-FLASHBACK]
+        - It is not the case that both of the following are true:
+          - The story is [HAS-A-RED-HERRING]
+          - The story is [HAS-CHECKHOVS-GUN]
+  - both of the following are true:
+    - exactly one of the following is true:
+      - The story is [STYLE-CLASSIC]
+      - The story is [STYLE-MODERN]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [THEME-MAGIC]
+        - It is not the case that the story is [TOPIC-MYSTICAL-CREATURES]
+      - both of the following are true:
+        - The story is [THEME-PROBLEM-SOLVING]
+        - The story is [USES-DISCOURSE-MARKERS]
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [THEME-DECEPTION]
+      - It is not both of the following are true:
+        - The story is [THEME-KINDNESS]
+        - The story is [THEME-HELPING-OTHERS]
+    - The story is [HAS-A-RED-HERRING]
+  - either of the following is true:
+    - exactly one of the following is true:
+      - The story is [LONG-STORY]
+      - The story is [SHORT-STORY]
+    - both of the following are true:
+      - The story is [HAS-CHECKHOVS-GUN]
+      - It is not the case that the story is [HAS-A-CLIFFHANGER]

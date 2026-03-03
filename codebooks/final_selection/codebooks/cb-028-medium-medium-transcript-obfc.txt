@@ -1,0 +1,79 @@
+Interviewer: Let’s walk through this codebook together. I’ll ask what each node means and how it’s determined. Ready?
+
+Expert: Ready. Ask away.
+
+Interviewer: What does [attr-2] mean?
+
+Expert: Simple: A story is [attr-2] if the story has a moral lesson.
+
+Interviewer: And [attr-4]?
+
+Expert: A story is [attr-4] if the story has more than 6 paragraphs.
+
+Interviewer: How about [attr-7]?
+
+Expert: A story is [attr-7] if the story starts with an adverb.
+
+Interviewer: [attr-3]?
+
+Expert: A story is [attr-3] if the story has circular narrative structure.
+
+Interviewer: [attr-9]?
+
+Expert: A story is [attr-9] if the story uses perfect aspect.
+
+Interviewer: [attr-10]?
+
+Expert: A story is [attr-10] if the story uses superlative forms.
+
+Interviewer: Now it gets more interesting. Explain [attr-8].
+
+Expert: Sure. A story is [attr-8] if both of the following are true:
+- The story is [attr-7]
+- Exactly one of the following is true:
+  - The story is [attr-9]
+  - The story is [attr-10]
+
+Interviewer: So [attr-8] requires it start with an adverb and then exactly one of those two stylistic features. Clear.
+
+Expert: Exactly—both conditions must hold: the adverb start plus exclusivity between perfect aspect and superlative forms.
+
+Interviewer: Explain [attr-6].
+
+Expert: A story is [attr-6] if either of the following is true:
+- The story is [attr-3]
+- Both of the following are true:
+  - The story is not [attr-3]
+  - The story is [attr-4]
+
+Interviewer: So [attr-6] is true if it’s circular, or if it’s not circular but has many paragraphs. That’s a neat way to capture two distinct narrative cases.
+
+Expert: Yes—either explicit circular structure, or else long stories that aren’t circular.
+
+Interviewer: What does [attr-5] capture?
+
+Expert: A story is [attr-5] if exactly one of the following is true:
+- The story is [attr-2]
+- The story is [attr-4]
+
+Interviewer: So [attr-5] is exclusive: it’s a moral story or a long story, but not both.
+
+Expert: Correct—exactly one, never both.
+
+Interviewer: Finally, [attr-1] — this looks layered. Break it down.
+
+Expert: A story is [attr-1] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-8]
+  - The story is not [attr-5]
+- The story is [attr-6]
+
+Interviewer: So to be [attr-1], the story must be a [attr-6], and additionally it must either be a [attr-8] or fail to be [attr-5]. Right?
+
+Expert: Exactly. Both top-level conditions must hold. First, it must satisfy the narrative-type condition. Second, within that, it must either meet the stylistic-choice rule, or it must not be (moral or long). Both lines of logic combine to label the story as high complexity.
+
+Interviewer: That keeps the logical structure intact while making the conditions easier to ask about. Anything else to note?
+
+Expert: Just this: every node here is a precise test. When annotating, check the atomic properties first—like [attr-7], [attr-9], [attr-2], and [attr-4]—then combine them according to the composite rules I described. That preserves all logical operations and relationships exactly as written.
+
+Interviewer: Great—thanks for walking through the entire codebook in this Q&A format.

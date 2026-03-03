@@ -1,0 +1,42 @@
+Interviewer: Let's walk through this codebook together. I’ll ask about each label, and you explain what it means. Sound good?
+
+Responder: Sounds perfect — let’s do it.
+
+Interviewer: What does [STYLE-LIGHTHEARTED] mean?
+
+Responder: A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+Interviewer: Simple and clear. Next: [STARTS-WITH-ADVERB] — what is that?
+
+Responder: A story is [STARTS-WITH-ADVERB] if the story starts with a adverb.
+
+Interviewer: Got it. How about [LONG-STORY]?
+
+Responder: A story is [LONG-STORY] if the story has more than 375 words.
+
+Interviewer: And [THEME-HUMOR]?
+
+Responder: A story is [THEME-HUMOR] if the story has the theme Humor.
+
+Interviewer: What about topic labels like [TOPIC-BYGONE-ERAS]?
+
+Responder: A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras.
+
+Interviewer: Okay — now the more complex one. How is [WHIMSY-RETRO-COMEDY] defined?
+
+Responder: This one combines the others with logical structure. I’ll read it exactly as defined:
+
+[WHIMSY-RETRO-COMEDY]
+A story is WHIMSY-RETRO-COMEDY if both of the following are true:
+- The story is [STYLE-LIGHTHEARTED]
+- The story is [THEME-HUMOR] and either of the following is true:
+  - The story is [TOPIC-BYGONE-ERAS]
+  - The story is [STARTS-WITH-ADVERB]
+
+Interviewer: Let me paraphrase to check I understand: For a story to be [WHIMSY-RETRO-COMEDY], it must be lighthearted, and it must have the humor theme plus at least one of these — either be about bygone eras or begin with an adverb. Is that accurate?
+
+Responder: Exactly. The logical relationships are preserved: an AND between lighthearted and the rest, and within the “rest” an AND with the humor theme combined with an OR between the two options (bygone eras or starts-with-adverb).
+
+Interviewer: Thanks — that keeps the structure clear and usable for annotation. Anything else we should note?
+
+Responder: Just that each node label and the exact logical formulation have been preserved. Use those definitions as-is when deciding which labels apply to a story.

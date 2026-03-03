@@ -1,0 +1,62 @@
+In a sunlit library of whispering pages and rustling parchments, this little codex was born — a delicate lattice of meanings, each node a lantern that lights the ways a tale may be seen. Below I present the very rules of that lattice, each logical clasp preserved in its original shape; after each rule I have braided a flourish of explanation, a small fable to help the annotator’s hand and mind. The strict bones remain untouched: every node ID is kept exactly as it was, and every logical connective — Not, And, Or — holds its place like steadfast pillars in a rose-covered archway.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+Explanation: Picture a tale that pauses to ponder — a narrative that lifts its eyes from action to question, that tastes ideas as if they were rare spices. When a story dwells on the nature of being, ethics, knowledge, or the quiet ache of meaning, it takes on this philosophical robe. This label marks stories that invite reflection and discourse rather than merely recount events.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if the story is about the arts.
+Explanation: This node glows for stories whose hearts beat to the rhythm of creation: painters, dancers, musicians, sculptors, playwrights, the craft and critique of beauty. If the plot, conflict, or central subject orbits artistic practice, appreciation, or the lives of artists, then this badge of artistry is deserved.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if the story has a flashback.
+Explanation: Imagine a sudden ripple in the present, a window thrown open onto a memory that shapes what comes next. Any clear, narrated movement backward in time — a scene revisited that informs the plot or character — qualifies the story for this marker.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+Explanation: Some narratives nestle tales within tales — an embedded legend, a character’s recounted fable, a manuscript discovered within the plot. When one story contains another as part of its fabric, this node lights up like a gilded frame around the inner tale.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if the story has the theme Deception.
+Explanation: Here dwell illusions and concealed truths: trickery, lies, betrayal, misdirection as central currents. If deception is thematically crucial — shaping motivations, outcomes, or moral inquiry — the story is rightly claimed by this node.
+
+[HAS-A-RED-HERRING]
+A story is [HAS-A-RED-HERRING] if the story has a Red Herring.
+Explanation: A red herring is the sly fox trotted across the reader’s path to mislead — a clue or subplot intended to divert suspicion. When a narrative plants such a deliberate false trail, this label recognizes that playful or strategic misdirection.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+Explanation: Some tales conclude with more than plot resolution; they offer guidance, an ethical spark or prescriptive teaching. When a story’s arc culminates in an explicit lesson about conduct, values, or virtue, this node is the lantern set upon its threshold.
+
+[REFLECTIVE-ARTS]
+A story is [REFLECTIVE-ARTS] if both of the following are true:
+- The story is [STYLE-PHILOSOPHICAL]
+- The story is [TOPIC-THE-ARTS]
+Explanation: In that rarest confluence — where meditation and the creative life entwine — we find Reflective Arts. These are stories that not only concern art but also philosophize about it: they examine beauty, the artist’s role, aesthetic truth, or the ethics of creation. Both conditions must hold for this refined classification.
+
+[META-STRUCTURE]
+A story is [META-STRUCTURE] if either of the following is true:
+- The story is [HAS-A-FLASHBACK]
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+Explanation: Meta-structure is the architecture of narrative self-awareness: a story that folds time or embeds other stories within its frame. If either a flashback or a nested tale appears, the narrative possesses this structural complexity, like a house with a secret room or a mirror angled to reveal another room.
+
+[MISDIRECTION]
+A story is [MISDIRECTION] if both of the following are true:
+- The story is [THEME-DECEPTION]
+- The story is [HAS-A-RED-HERRING]
+Explanation: When deception is not merely thematic but also enacted through deliberate false leads, the tale delights and confounds in equal measure. This node names stories that pair the theme of deception with the craft of red herrings — a duet of intent and technique.
+
+[DIDACTIC-MISDIRECT]
+A story is [DIDACTIC-MISDIRECT] if all of the following are true:
+- The story is [MISDIRECTION]
+- The story is [HAS-A-MORAL-LESSON]
+- The story is not [REFLECTIVE-ARTS]
+Explanation: Here is a precise bloom: a tale that both misdirects (thematic deception plus red herrings) and teaches a moral, yet does not belong to the contemplative domain of philosophical art. It is didactic because it instructs, misdirective because it deceives along the way, and explicitly set apart from stories that philosophize about art. All three conditions together define this specific strand.
+
+[COMPLEX-PARABLE]
+A story is [COMPLEX-PARABLE] if both of the following are true:
+- The story is [DIDACTIC-MISDIRECT]
+- The story is [META-STRUCTURE]
+Explanation: At the apex stands the Complex Parable: a parable-like tale rich with moral instruction and elegant misdirection, braided into a meta-structural form (flashbacks or stories within stories). It is the layered fable that teaches by trick and reflection, a narrative crafted to both hide and reveal wisdom across nested horizons.
+
+Thus the codex closes its ornate gate: the same logical scaffolding preserved, each node now accompanied by a small tapestry of explanation to guide the reader’s eye. Use these lanterns to annotate and reason — the relationships remain faithful to their original geometry, while the language here seeks only to illuminate, not to alter, the precise architecture beneath.

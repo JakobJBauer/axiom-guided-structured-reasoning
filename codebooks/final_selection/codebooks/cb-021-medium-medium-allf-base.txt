@@ -1,0 +1,48 @@
+[STARTS-WITH-ADJECTIVE]
+A story is [STARTS-WITH-ADJECTIVE] if the story starts with a adjective.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+[STYLE-SURREAL]
+A story is [STYLE-SURREAL] if the story is surreal.
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if the story is humorous.
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+[START-TYPE-XOR]
+A story is [START-TYPE-XOR] if exactly one of the following is true:
+- The story is [STARTS-WITH-ADJECTIVE]
+- The story is [STARTS-WITH-NOUN]
+
+[TONE-PLAYFUL]
+A story is [TONE-PLAYFUL] if either of the following is true:
+- The story's style is in the set { [STYLE-LIGHTHEARTED], [STYLE-HUMOROUS] }
+- Both of the following are true:
+  - The story is [STYLE-SURREAL]
+  - The story is not [THEME-DECEPTION]
+
+[DECEPTION-OR-PROBLEM]
+A story is [DECEPTION-OR-PROBLEM] if either of the following is true:
+- The story is [THEME-DECEPTION]
+- The story is [THEME-PROBLEM-SOLVING]
+
+[STYLE-EQUALITY]
+A story is [STYLE-EQUALITY] if the following equality holds:
+- [STYLE-LIGHTHEARTED] = [STYLE-HUMOROUS]
+
+[COMPLEX-STORY]
+A story is [COMPLEX-STORY] if both of the following are true:
+- The story is [START-TYPE-XOR]
+- Exactly one of the following is true:
+  - The story is [TONE-PLAYFUL]
+  - The story is [DECEPTION-OR-PROBLEM]

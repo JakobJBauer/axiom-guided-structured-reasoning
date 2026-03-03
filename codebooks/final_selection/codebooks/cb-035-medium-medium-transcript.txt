@@ -1,0 +1,53 @@
+Interviewer: Let's walk through this codebook together. First, what does [STYLE-MINIMALIST] mean?
+
+Expert: A story is [STYLE-MINIMALIST] if the story is minimalist.
+
+Interviewer: Got it. And [HIGH-READABILITY]?
+
+Expert: A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+Interviewer: How about [USES-SUPERLATIVE-FORMS]?
+
+Expert: A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+Interviewer: What does [THEME-GROWTH] indicate?
+
+Expert: A story is [THEME-GROWTH] if the story has the theme Growth.
+
+Interviewer: And topics — what does [TOPIC-TIME-TRAVEL] cover?
+
+Expert: A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+Interviewer: What about [TOPIC-HIDDEN-TREASURES]?
+
+Expert: A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+Interviewer: Now the composite categories — explain [CLEAR-CONCISE], please.
+
+Expert: Sure. A story is [CLEAR-CONCISE] if both of the following are true:
+- The story is [STYLE-MINIMALIST]
+- The story is [HIGH-READABILITY]
+
+Interviewer: So [CLEAR-CONCISE] needs both minimalist style and high readability. Makes sense. What about [EMPHATIC]?
+
+Expert: A story is [EMPHATIC] if both of the following are true:
+- The story is [USES-SUPERLATIVE-FORMS]
+- The story is not [STYLE-MINIMALIST]
+
+Interviewer: Important detail — it requires superlatives and explicitly not being minimalist. Understood. Tell me about [THEMATIC-ARC].
+
+Expert: A story is [THEMATIC-ARC] if both of the following are true:
+- The story is [THEME-GROWTH]
+- Either of the following is true:
+  - The story is [TOPIC-TIME-TRAVEL]
+  - The story is [TOPIC-HIDDEN-TREASURES]
+
+Interviewer: So [THEMATIC-ARC] combines the Growth theme with either time travel or hidden treasures as a topic. Clear. Finally, what defines [COMPELLING]?
+
+Expert: A story is [COMPELLING] if both of the following are true:
+- The story is [CLEAR-CONCISE]
+- Either of the following is true:
+  - The story is [EMPHATIC]
+  - The story is [THEMATIC-ARC]
+
+Interviewer: Perfect — [COMPELLING] needs clear and concise plus either emphatic language or a growth-themed arc (with the specified topics). Thanks — that preserves all nodes and logical relationships while making the rules easy to ask about and follow.

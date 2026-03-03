@@ -1,0 +1,60 @@
+Title: Codebook — Structured Definitions and Annotation Guidance
+
+Overview
+- Purpose: Provide clear, structured definitions for each annotation node and the exact conditions that make a story satisfy composite nodes.
+- Use: Annotators should mark atomic features first, then evaluate composite nodes based on those markings.
+- Constraint reminders:
+  - All node IDs are shown exactly as [attr-1] identifiers and must not be altered.
+  - Logical relationships (e.g., AND) are preserved; composite nodes require the specified constituent nodes to be true.
+
+Atomic (single-condition) Nodes
+- [attr-8]
+  - Definition: A story is [attr-8] if the story uses discourse markers.
+  - Quick check: Look for words or phrases that signal structure or transitions (e.g., however, meanwhile, on the other hand).
+
+- [attr-5]
+  - Definition: A story is [attr-5] if the story has juxtaposition.
+  - Quick check: Identify clear placing of contrasting or side-by-side scenes, ideas, or images.
+
+- [attr-7]
+  - Definition: A story is [attr-7] if the story is about mystical creatures.
+  - Quick check: The theme or central subject concerns creatures with supernatural or mythical qualities.
+
+- [attr-4]
+  - Definition: A story is [attr-4] if the story has a Red Herring.
+  - Quick check: Spot misleading clues or elements intended to distract from the true explanation.
+
+- [attr-6]
+  - Definition: A story is [attr-6] if the story is about giant creatures.
+  - Quick check: The narrative centers on very large creatures as a primary topic.
+
+Composite (multi-condition) Nodes
+- [attr-2]
+  - Definition: A story is [attr-2] if both of the following are true:
+    - The story is [attr-7]
+    - The story is [attr-5]
+  - Logical form: [attr-2] = AND([attr-7], [attr-5])
+  - Annotator action: Only mark this node when both constituent nodes have been independently marked true.
+
+- [attr-3]
+  - Definition: A story is [attr-3] if both of the following are true:
+    - The story is [attr-6]
+    - The story is [attr-4]
+  - Logical form: [attr-3] = AND([attr-6], [attr-4])
+  - Annotator action: Only mark this node when both constituent nodes have been independently marked true.
+
+Annotation Workflow (ordered, practical)
+1. Read the story fully.
+2. Mark atomic nodes first:
+   - Evaluate and set truth for each of: [attr-8], [attr-5], [attr-7], [attr-4], [attr-6].
+3. Evaluate composite nodes:
+   - For [attr-2], confirm both [attr-7] and [attr-5] are true.
+   - For [attr-3], confirm both [attr-6] and [attr-4] are true.
+4. Record results; do not alter node IDs or logical relationships.
+
+Notes and Tips for Consistency
+- Composite nodes only become true when all listed constituent nodes are true (logical AND).
+- Do not infer composite truth without first verifying each component independently.
+- Keep labels exact: use the bracketed node IDs as given when recording or reporting annotations.
+
+End of codebook.

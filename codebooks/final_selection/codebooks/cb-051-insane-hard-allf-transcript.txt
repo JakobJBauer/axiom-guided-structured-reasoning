@@ -1,0 +1,291 @@
+Interviewer: Let's go through this codebook together. I'll ask about each label, and you explain. Sound good?
+
+Expert: Sounds great. Ask away.
+
+Interviewer: What does [THEME-INNOVATION] mean?
+
+Expert: Formally: "A story is [THEME-INNOVATION] if The story has the theme Innovation"
+
+In conversational terms: If a story’s central theme is Innovation, we tag it as [THEME-INNOVATION]. Think of inventions, creative breakthroughs, or an emphasis on new ideas.
+
+Interviewer: And [STYLE-CLASSIC]?
+
+Expert: Formally: "A story is [STYLE-CLASSIC] if The story is classic"
+
+Plainly: Use [STYLE-CLASSIC] when the story reads like a classic — traditional structure, timeless tone, familiar conventions.
+
+Interviewer: [TOPIC-HIDDEN-TREASURES]?
+
+Expert: Formally: "A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures"
+
+Simply: This tag is for stories centered on secret hoards, buried riches, or quests that uncover treasure.
+
+Interviewer: [SHORT-STORY]?
+
+Expert: Formally: "A story is [SHORT-STORY] if The story has fewer than 160 words"
+
+Translation: If the whole piece is under 160 words, it qualifies as [SHORT-STORY].
+
+Interviewer: [STARTS-WITH-ADJECTIVE]?
+
+Expert: Formally: "A story is [STARTS-WITH-ADJECTIVE] if The story starts with a adjective"
+
+Explanation: If the very first word of the story is an adjective, mark [STARTS-WITH-ADJECTIVE]. (Yes, that includes words like "Quiet", "Ancient", "Brave".)
+
+Interviewer: [THEME-HUMOR]?
+
+Expert: Formally: "A story is [THEME-HUMOR] if The story has the theme Humor"
+
+Plain: Tag stories whose theme centers on humor, comedy, or making the reader laugh.
+
+Interviewer: [LOW-READABILITY]?
+
+Expert: Formally: "A story is [LOW-READABILITY] if The story has readability score below 86.4"
+
+Clarified: If the readability metric used falls below 86.4, assign [LOW-READABILITY]. This is a numeric threshold.
+
+Interviewer: [STYLE-MODERN]?
+
+Expert: Formally: "A story is [STYLE-MODERN] if The story is modern"
+
+Plain: Use [STYLE-MODERN] when the story has a contemporary voice, references, or sensibilities.
+
+Interviewer: [TOPIC-MYSTICAL-CREATURES]?
+
+Expert: Formally: "A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures"
+
+Plain language: Stories focused on dragons, fae, unicorns, or other mythical beings get this tag.
+
+Interviewer: [THEME-GROWTH]?
+
+Expert: Formally: "A story is [THEME-GROWTH] if The story has the theme Growth"
+
+Explanation: When growth (personal, emotional, skill-based) is the story’s theme, it’s [THEME-GROWTH].
+
+Interviewer: [LONG-STORY]?
+
+Expert: Formally: "A story is [LONG-STORY] if The story has more than 375 words"
+
+So: Anything exceeding 375 words is a [LONG-STORY].
+
+Interviewer: [HAS-A-MORAL-LESSON]?
+
+Expert: Formally: "A story is [HAS-A-MORAL-LESSON] if The story has a moral lesson"
+
+In plain terms: If the story explicitly or implicitly teaches a moral, tag it [HAS-A-MORAL-LESSON].
+
+Interviewer: [HAS-CIRCULAR-NARRATIVE-STRUCT]?
+
+Expert: Formally: "A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if The story has circular narrative structure"
+
+Meaning: The narrative loops back to its starting point or uses repetition that closes the story in a circle.
+
+Interviewer: [THEME-HARDSHIP]?
+
+Expert: Formally: "A story is [THEME-HARDSHIP] if The story has the theme Hardship"
+
+Plain: Stories centered on struggle, suffering, or significant obstacles get this label.
+
+Interviewer: [USES-CONDITIONAL-MOOD]?
+
+Expert: Formally: "A story is [USES-CONDITIONAL-MOOD] if The story uses conditional mood"
+
+Translation: If the text contains conditional constructions (would, could, should in conditional contexts), mark [USES-CONDITIONAL-MOOD].
+
+Interviewer: [USES-SUPERLATIVE-FORMS]?
+
+Expert: Formally: "A story is [USES-SUPERLATIVE-FORMS] if The story uses superlative forms"
+
+Simple: When the language includes superlatives (best, worst, tallest), the tag applies.
+
+Interviewer: [THEME-HELPING-OTHERS]?
+
+Expert: Formally: "A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others"
+
+So: Stories that emphasize aid, altruism, or characters helping one another are [THEME-HELPING-OTHERS].
+
+Interviewer: [STYLE-PLAYFUL]?
+
+Expert: Formally: "A story is [STYLE-PLAYFUL] if The story is playful"
+
+In plain words: A light, whimsical, or mischievous tone — that’s [STYLE-PLAYFUL].
+
+Interviewer: [HAS-JUXTAPOSITION]?
+
+Expert: Formally: "A story is [HAS-JUXTAPOSITION] if The story has juxtaposition"
+
+Meaning: If contrasting elements are placed side by side for effect, tag [HAS-JUXTAPOSITION].
+
+Interviewer: [THEME-KINDNESS]?
+
+Expert: Formally: "A story is [THEME-KINDNESS] if The story has the theme Kindness"
+
+Plain: Stories with kindness as a central theme get this label.
+
+Interviewer: [THEME-MAGIC]?
+
+Expert: Formally: "A story is [THEME-MAGIC] if The story has the theme Magic"
+
+Simple: If magic is a thematic element, use [THEME-MAGIC].
+
+Interviewer: [HAS-A-STORY-WITHIN-A-STORY]?
+
+Expert: Formally: "A story is [HAS-A-STORY-WITHIN-A-STORY] if The story has a story within a story"
+
+Explanation: When characters tell a separate story inside the main narrative, mark this node.
+
+Interviewer: [TOPIC-TIME-TRAVEL]?
+
+Expert: Formally: "A story is [TOPIC-TIME-TRAVEL] if The story is about time travel"
+
+Plain: Time machines, timelines, temporal jumps — tag [TOPIC-TIME-TRAVEL].
+
+Interviewer: [USES-WH-QUESTIONS]?
+
+Expert: Formally: "A story is [USES-WH-QUESTIONS] if The story uses wh-questions"
+
+Clarified: If the text includes who/what/when/where/why/how questions, mark [USES-WH-QUESTIONS].
+
+Interviewer: [STYLE-HUMOROUS]?
+
+Expert: Formally: "A story is [STYLE-HUMOROUS] if The story is humorous"
+
+Plain: Tone that aims at humor — [STYLE-HUMOROUS].
+
+Interviewer: [TOPIC-LOST-CIVILIZATIONS]?
+
+Expert: Formally: "A story is [TOPIC-LOST-CIVILIZATIONS] if The story is about lost civilizations"
+
+Meaning: Stories focusing on ancient, vanished societies are in this category.
+
+Interviewer: [TOPIC-MAGICAL-LANDS]?
+
+Expert: Formally: "A story is [TOPIC-MAGICAL-LANDS] if The story is about magical lands"
+
+Plain: Whole worlds that are magical or enchanted — tag these stories accordingly.
+
+Interviewer: [STYLE-PHILOSOPHICAL]?
+
+Expert: Formally: "A story is [STYLE-PHILOSOPHICAL] if The story is philosophical"
+
+So: If the story is reflective, deals with big ideas, or has a philosophical bent, use this label.
+
+Interviewer: Now for some of the composite labels. What is [STYLE-CATEGORY]?
+
+Expert: Formally: "A story is [STYLE-CATEGORY] if the story's style is In the set { [STYLE-CLASSIC], [STYLE-MODERN], [STYLE-PLAYFUL], [STYLE-HUMOROUS], [STYLE-PHILOSOPHICAL] }"
+
+Interpretation: [STYLE-CATEGORY] holds when the story’s style matches any one of those five listed style nodes. It's a membership test — if the style is one of that set, [STYLE-CATEGORY] is true.
+
+Interviewer: Explain [TOPIC-MYSTICAL-SET].
+
+Expert: Formally: "A story is [TOPIC-MYSTICAL-SET] if the story's topic is In the set { [TOPIC-MYSTICAL-CREATURES], [TOPIC-MAGICAL-LANDS], [TOPIC-HIDDEN-TREASURES], [TOPIC-LOST-CIVILIZATIONS], [TOPIC-TIME-TRAVEL] }"
+
+Translation: This groups mystical or speculative topics. If the story’s topic is any of the listed ones, [TOPIC-MYSTICAL-SET] applies.
+
+Interviewer: What about [THEME-CLUSTER]?
+
+Expert: Formally: "A story is [THEME-CLUSTER] if either of the following are true (Or):
+- The story is [THEME-INNOVATION]
+- The story is [THEME-GROWTH]
+- The story is [THEME-HARDSHIP]
+- The story is [THEME-HELPING-OTHERS]
+- The story is [THEME-KINDNESS]
+- The story is [THEME-MAGIC]
+- The story is [THEME-HUMOR]"
+
+Explanation: [THEME-CLUSTER] is true if the story has any one of those themes. It’s inclusive — any match activates the cluster.
+
+Interviewer: [NARRATIVE-LENGTH-XOR]? That sounds specific.
+
+Expert: Formally: "A story is [NARRATIVE-LENGTH-XOR] if exactly one (Xor) of the following is true:
+- The story is [SHORT-STORY]
+- The story is [LONG-STORY]"
+
+Clarified: Use [NARRATIVE-LENGTH-XOR] when the story is either short or long, but not both. It enforces exclusivity: precisely one of those length categories must hold.
+
+Interviewer: [READABILITY-AND-START]?
+
+Expert: Formally: "A story is [READABILITY-AND-START] if both of the following are true (And):
+- The story is [LOW-READABILITY]
+- The story is [STARTS-WITH-ADJECTIVE]"
+
+Plain: This composite requires both conditions: low readability and that the story begins with an adjective.
+
+Interviewer: [STRUCTURAL-DEVICE]?
+
+Expert: Formally: "A story is [STRUCTURAL-DEVICE] if either of the following are true (Or):
+- The story is [HAS-A-STORY-WITHIN-A-STORY]
+- The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+- The story is [HAS-JUXTAPOSITION]"
+
+Explanation: If the story uses any of those structural devices (a nested story, circular structure, or juxtaposition), then [STRUCTURAL-DEVICE] applies.
+
+Interviewer: [MORAL-OR-GROWTH]?
+
+Expert: Formally: "A story is [MORAL-OR-GROWTH] if either of the following are true (Or):
+- The story is [HAS-A-MORAL-LESSON]
+- The story is [THEME-GROWTH]"
+
+In everyday terms: This marker is true when the story has a moral lesson or centers on growth.
+
+Interviewer: [EQUAL-THEME-PRESENCE] — what's that formal part mean?
+
+Expert: Formally: "A story is [EQUAL-THEME-PRESENCE] if Equal(the truth of [THEME-GROWTH], the truth of [THEME-HARDSHIP])"
+
+Translation: This uses the Equal operator: [EQUAL-THEME-PRESENCE] is true when [THEME-GROWTH] and [THEME-HARDSHIP] are either both true or both false — i.e., they have equal truth values.
+
+Interviewer: [BALANCED-THEME]?
+
+Expert: Formally: "A story is [BALANCED-THEME] if both of the following are true (And):
+- The story is [EQUAL-THEME-PRESENCE]
+- Either of the following are true (Or):
+  - The story is [THEME-KINDNESS]
+  - The story is [THEME-HELPING-OTHERS]"
+
+Explanation: For [BALANCED-THEME] you need equality between growth and hardship (per [EQUAL-THEME-PRESENCE]) and also at least one of kindness or helping-others themes.
+
+Interviewer: [THEME-SYNDROME]?
+
+Expert: Formally: "A story is [THEME-SYNDROME] if both of the following are true (And):
+- The story is [THEME-CLUSTER]
+- Either of the following are true (Or):
+  - The story is [BALANCED-THEME]
+  - The story is [THEME-INNOVATION]"
+
+Plain: [THEME-SYNDROME] requires the story to match the theme cluster (one of the listed themes) and also either be balanced between growth/hardship plus kindness/helping-others, or specifically have the innovation theme.
+
+Interviewer: And finally, the big one: [COMPLEX-STORY-TYPE]?
+
+Expert: Formally: "A story is [COMPLEX-STORY-TYPE] if all of the following are true:
+- The story is [THEME-SYNDROME]
+- The story is [STYLE-CATEGORY]
+- The story is [TOPIC-MYSTICAL-SET]
+- The story is [STRUCTURAL-DEVICE]
+- Not the story is [STYLE-CLASSIC]
+- The story is [NARRATIVE-LENGTH-XOR]
+- The story is [READABILITY-AND-START]
+- The story is [MORAL-OR-GROWTH]"
+
+Translation and checklist: This label is strict — all those conditions must hold simultaneously.
+- The story must satisfy [THEME-SYNDROME] (thematic requirements we discussed).
+- Its style must be one of the styles in [STYLE-CATEGORY].
+- Its topic must be in [TOPIC-MYSTICAL-SET].
+- It must use at least one structural device from [STRUCTURAL-DEVICE].
+- It must NOT be [STYLE-CLASSIC] (explicit negation).
+- It must be either short or long, exclusively ([NARRATIVE-LENGTH-XOR]).
+- It must have low readability and start with an adjective ([READABILITY-AND-START]).
+- And it must have a moral lesson or be about growth ([MORAL-OR-GROWTH]).
+
+Interviewer: That helps a lot. A couple quick clarifying questions: when you recite the formal lines you’re keeping the exact wording, right?
+
+Expert: Yes. Each formal definition I quoted is verbatim from the codebook. Those lines are the authoritative logical formulas. My plain-language explanations are just to make them easier to apply, but they do not alter any of the logical structure or node IDs.
+
+Interviewer: Great. Anything else the annotators should keep in mind?
+
+Expert: Two practical tips:
+1. Always check the atomic tags first (those single-condition nodes like [THEME-MAGIC], [SHORT-STORY], etc.). They feed into composites.
+2. When you evaluate composite nodes, match the logical operators exactly — Or means inclusive OR, And requires both, Xor requires exclusivity, Not negates, and Equal compares truth values. The composite definitions are deterministic if you compute them from the atomic truths.
+
+Interviewer: Thanks — this transcript style makes the rules much more approachable while keeping the logic solid.
+
+Expert: My pleasure. If you want, we can walk through an example story and apply the tags step by step.

@@ -1,0 +1,124 @@
+[attr-5]
+Definition: A story satisfies [attr-5] iff the narrative contains a red-herring element (an intentionally misleading clue or false lead).
+
+[attr-8]
+Definition: A story satisfies [attr-8] iff the narrative comprises more than six paragraphs.
+
+[attr-14]
+Definition: A story satisfies [attr-14] iff the narrative tone is lighthearted.
+
+[attr-6]
+Definition: A story satisfies [attr-6] iff the narrative includes an instance of Chekhov’s gun (a prominent detail introduced early that becomes significant later).
+
+[attr-19]
+Definition: A story satisfies [attr-19] iff the narrative centrally features the theme of magic.
+
+[attr-23]
+Definition: A story satisfies [attr-23] iff the narrative subject matter pertains to the arts.
+
+[attr-24]
+Definition: A story satisfies [attr-24] iff the narrative employs the perfect aspect in its verbal constructions.
+
+[attr-18]
+Definition: A story satisfies [attr-18] iff the narrative centers on the theme of innovation.
+
+[attr-17]
+Definition: A story satisfies [attr-17] iff the narrative centers on the theme of growth.
+
+[attr-13]
+Definition: A story satisfies [attr-13] iff the narrative exemplifies a classic stylistic register.
+
+[attr-12]
+Definition: A story satisfies [attr-12] iff the first token of the narrative is a preposition.
+
+[attr-21]
+Definition: A story satisfies [attr-21] iff the narrative concerns cultural traditions.
+
+[attr-22]
+Definition: A story satisfies [attr-22] iff the narrative concerns lost civilizations.
+
+[attr-16]
+Definition: A story satisfies [attr-16] iff the narrative embodies the theme of deception.
+
+[attr-25]
+Definition: A story satisfies [attr-25] iff the narrative contains wh‑questions (who, what, when, where, why, how).
+
+[attr-20]
+Definition: A story satisfies [attr-20] iff the narrative concerns bygone eras.
+
+[attr-11]
+Definition: A story satisfies [attr-11] iff the first token of the narrative is an adjective.
+
+[attr-15]
+Definition: A story satisfies [attr-15] iff the narrative exemplifies a modern stylistic register.
+
+[attr-9]
+Specification: A story satisfies [attr-9] iff both of the following clauses are satisfied:
+- Clause A (OR): At least one of the following holds:
+  - The story satisfies [attr-5]
+  - The story satisfies [attr-6]
+- Clause B (OR/XOR): At least one of the following holds:
+  - Exactly one of [attr-16] and [attr-25] is true (exclusive OR)
+  - The story satisfies [attr-8]
+
+[attr-10]
+Specification: A story satisfies [attr-10] iff both of the following are true:
+- The story satisfies [attr-8]
+- The story satisfies [attr-24]
+
+[attr-2]
+Specification: A story satisfies [attr-2] iff all of the following hold:
+- Exclusive style: Exactly one of the following is true (exclusive OR):
+  - The story satisfies [attr-13]
+  - The story satisfies [attr-15]
+- The story does NOT satisfy [attr-14] (logical NOT)
+- Initial-token constraint (OR): At least one of the following holds:
+  - The story satisfies [attr-12]
+  - The story satisfies [attr-11]
+
+[attr-3]
+Specification: A story satisfies [attr-3] iff at least one of the following disjuncts is true:
+- Conjunctive pair A (AND):
+  - The story satisfies [attr-21]
+  - The story satisfies [attr-20]
+- Conjunctive pair B (AND/XOR):
+  - The story satisfies [attr-22]
+  - Exactly one of [attr-17] and [attr-16] is true (exclusive OR)
+
+[attr-7]
+Specification: A story satisfies [attr-7] iff at least one of the following disjuncts holds:
+- Conjunctive case 1 (AND):
+  - The story satisfies [attr-18]
+  - The story satisfies [attr-17]
+- Conjunctive case 2 (AND + NOT):
+  - The story satisfies [attr-18]
+  - The story satisfies [attr-23]
+  - The story does NOT satisfy [attr-17] (logical NOT)
+
+[attr-1]
+Specification: A story satisfies [attr-1] iff both of the following conditions are met:
+- The story satisfies [attr-23]
+- Disjunctive condition (OR): At least one of the following holds:
+  - The story satisfies [attr-7]
+  - The story satisfies [attr-3]
+
+[attr-4]
+Specification: A story satisfies [attr-4] iff both of the following major conditions are met:
+- Major condition 1 (OR/AND): At least one of the following holds:
+  - The story satisfies [attr-1]
+  - The story satisfies both of:
+    - [attr-9]
+    - [attr-10]
+- Major condition 2 (OR/AND): At least one of the following holds:
+  - The story satisfies [attr-2]
+  - The story satisfies both of:
+    - [attr-3]
+    - [attr-7]
+
+Notes on logical terminology used:
+- AND indicates both subconditions must be true.
+- OR indicates at least one subcondition must be true.
+- XOR (described as “exactly one”) indicates exactly one of the listed subconditions must be true.
+- NOT negates the truth of the referenced node.
+
+All node identifiers and logical relationships are preserved exactly as specified above.

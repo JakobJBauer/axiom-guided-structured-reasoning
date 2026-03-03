@@ -1,0 +1,23 @@
+[STYLE-LIGHTHEARTED]  
+A story is STYLE-LIGHTHEARTED if the tale wears a bright, buoyant spirit—its scenes lifted by a gentle breeze of ease, its moments unburdened, its tone unmistakably lighthearted.
+
+[STARTS-WITH-ADVERB]  
+A story is STARTS-WITH-ADVERB if, at the very threshold of its first line, it steps forward with a adverb—an opening flourish that sets the manner of motion before anything else is named.
+
+[LONG-STORY]  
+A story is LONG-STORY if it unfurls beyond 375 words, stretching like a long, ribboned road where the telling has room to linger, wander, and bloom.
+
+[THEME-HUMOR]  
+A story is THEME-HUMOR if Humor is its guiding lantern—if laughter, wit, and playful amusement are not mere ornaments, but the theme that threads through the narrative’s heart.
+
+[TOPIC-BYGONE-ERAS]  
+A story is TOPIC-BYGONE-ERAS if it turns its gaze toward bygone eras—dwelling in earlier times, evoking the textures of the past, and letting yesterday’s world provide the setting or subject of the telling.
+
+[WHIMSY-RETRO-COMEDY]  
+A story is WHIMSY-RETRO-COMEDY if both of the following are true:  
+- The story is [STYLE-LIGHTHEARTED]  
+- The story is [THEME-HUMOR] and either of the following is true:  
+  - The story is [TOPIC-BYGONE-ERAS]  
+  - The story is [STARTS-WITH-ADVERB]  
+
+And here, for those who like their rules dressed in narrative finery, imagine a little clockwork theater tucked behind a velvet curtain: the troupe can only perform the grand act called [WHIMSY-RETRO-COMEDY] when the stage is already warmed by [STYLE-LIGHTHEARTED], and when [THEME-HUMOR] plays the lead role—*plus* one special charm must be present, either the sepia glow of [TOPIC-BYGONE-ERAS] or the brisk, dancing entrance of [STARTS-WITH-ADVERB]. The spell is precise; the whimsy is abundant.

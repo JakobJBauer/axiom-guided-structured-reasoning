@@ -1,0 +1,111 @@
+Structured Codebook (preserving all node IDs and logical relations)
+
+Overview
+- This document restates each node and its exact logical conditions in a clear, hierarchical layout.
+- Atomic predicates are listed first (simple labels about a story). Composite predicates follow, using the same logical operators as the original: both of the following are true, either of the following is true, exactly one of the following is true, The story is not [NODE], and equality checks (equals true).
+- All node IDs are unchanged and all logical relationships and operations are preserved exactly.
+
+A. Atomic labels (simple one-line definitions)
+- [THEME-INNOVATION]
+  - A story is [THEME-INNOVATION] if The story has the theme Innovation
+- [THEME-MAGIC]
+  - A story is [THEME-MAGIC] if The story has the theme Magic
+- [HAS-CHECKHOVS-GUN]
+  - A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun
+- [STARTS-WITH-ADVERB]
+  - A story is [STARTS-WITH-ADVERB] if The story starts with a adverb
+- [THEME-HELPING-OTHERS]
+  - A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others
+- [STYLE-PHILOSOPHICAL]
+  - A story is [STYLE-PHILOSOPHICAL] if The story is philosophical
+- [STARTS-WITH-NOUN]
+  - A story is [STARTS-WITH-NOUN] if The story starts with a noun
+- [TOPIC-HIDDEN-TREASURES]
+  - A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures
+- [THEME-GROWTH]
+  - A story is [THEME-GROWTH] if The story has the theme Growth
+- [HAS-A-CLIFFHANGER]
+  - A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+- [STYLE-MINIMALIST]
+  - A story is [STYLE-MINIMALIST] if The story is minimalist
+- [USES-CONDITIONAL-MOOD]
+  - A story is [USES-CONDITIONAL-MOOD] if The story uses conditional mood
+- [TOPIC-SEASONAL-CHANGES]
+  - A story is [TOPIC-SEASONAL-CHANGES] if The story is about seasonal changes
+- [TOPIC-MYSTICAL-CREATURES]
+  - A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures
+- [HAS-A-STORY-WITHIN-A-STORY]
+  - A story is [HAS-A-STORY-WITHIN-A-STORY] if The story has a story within a story
+- [MANY-PARAGRAPHS]
+  - A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs
+
+B. Simple derived label
+- [PARAGRAPH-DENSITY]
+  - A story is [PARAGRAPH-DENSITY] if [MANY-PARAGRAPHS] equals true
+
+C. Composite predicates (preserve original logical constructs)
+
+- [STRUCTURAL-START]
+  - A story is [STRUCTURAL-START] if both of the following are true:
+    - exactly one of the following is true:
+      - The story is [STARTS-WITH-ADVERB]
+      - The story is [STARTS-WITH-NOUN]
+    - The story is in [STYLE-PHILOSOPHICAL, STYLE-MINIMALIST]
+
+- [MOTIF-MYSTERY]
+  - A story is [MOTIF-MYSTERY] if either of the following is true:
+    - both of the following are true:
+      - The story is [TOPIC-HIDDEN-TREASURES]
+      - The story is [TOPIC-MYSTICAL-CREATURES]
+    - exactly one of the following is true:
+      - The story is [TOPIC-HIDDEN-TREASURES]
+      - The story is [TOPIC-SEASONAL-CHANGES]
+
+- [MORAL-TENSION]
+  - A story is [MORAL-TENSION] if either of the following is true:
+    - The story is [THEME-HELPING-OTHERS]
+    - both of the following are true:
+      - exactly one of the following is true:
+        - The story is [THEME-GROWTH]
+        - The story is [THEME-AGENCY]
+      - The story is not [STYLE-MINIMALIST]
+
+- [THEMATIC-CORE]
+  - A story is [THEMATIC-CORE] if both of the following are true:
+    - The story is [THEME-INNOVATION]
+    - either of the following is true:
+      - The story is [MORAL-TENSION]
+      - both of the following are true:
+        - The story is [THEME-MAGIC]
+        - The story is [USES-CONDITIONAL-MOOD]
+
+- [NARRATIVE-DEVICES]
+  - A story is [NARRATIVE-DEVICES] if both of the following are true:
+    - either of the following is true:
+      - The story is [HAS-CHECKHOVS-GUN]
+      - The story is [HAS-A-CLIFFHANGER]
+    - either of the following is true:
+      - The story is [HAS-A-STORY-WITHIN-A-STORY]
+      - The story is not [HAS-CHECKHOVS-GUN]
+
+- [COMPLEX-STORY-TYPE]
+  - A story is [COMPLEX-STORY-TYPE] if both of the following are true:
+    - The story is [THEMATIC-CORE]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [STRUCTURAL-START]
+        - either of the following is true:
+          - both of the following are true:
+            - The story is [NARRATIVE-DEVICES]
+            - The story is [PARAGRAPH-DENSITY]
+          - The story is [MOTIF-MYSTERY]
+      - both of the following are true:
+        - The story is [NARRATIVE-DEVICES]
+        - The story is not [STYLE-MINIMALIST]
+
+Notes for annotators (guidance only; does not change logic)
+- Read each node as a precise label: "A story is [NODE] if <conditions>".
+- Follow the exact logical operators shown (both / either / exactly one / not). The nesting matters—conditions under a given bullet belong to that operator.
+- Use atomic labels (Section A) to evaluate composite nodes (Section C). Do not infer extra relationships beyond what is written here.
+
+End of structured codebook.

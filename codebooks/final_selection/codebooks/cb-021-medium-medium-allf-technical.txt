@@ -1,0 +1,60 @@
+Purpose: This codebook defines binary annotation predicates over narrative texts. Each predicate is identified by a unique node ID in square brackets. A story “is” a predicate when the predicate's condition is satisfied. Logical composition operators (either, both, exactly one, not) indicate Boolean relationships between predicates.
+
+Definition: [STARTS-WITH-ADJECTIVE]
+- A story is [STARTS-WITH-ADJECTIVE] iff the story's initial token is an adjective.
+
+Definition: [STARTS-WITH-NOUN]
+- A story is [STARTS-WITH-NOUN] iff the story's initial token is a noun.
+
+Definition: [STYLE-LIGHTHEARTED]
+- A story is [STYLE-LIGHTHEARTED] iff the story's overall style can be classified as lighthearted.
+
+Definition: [STYLE-SURREAL]
+- A story is [STYLE-SURREAL] iff the story's style exhibits surreal characteristics.
+
+Definition: [STYLE-HUMOROUS]
+- A story is [STYLE-HUMOROUS] iff the story's tone is humorous.
+
+Definition: [THEME-PROBLEM-SOLVING]
+- A story is [THEME-PROBLEM-SOLVING] iff the story contains the theme Problem-Solving.
+
+Definition: [THEME-DECEPTION]
+- A story is [THEME-DECEPTION] iff the story contains the theme Deception.
+
+Definition: [START-TYPE-XOR]
+- A story is [START-TYPE-XOR] if exactly one of the following is true:
+  - The story is [STARTS-WITH-ADJECTIVE]
+  - The story is [STARTS-WITH-NOUN]
+- (Semantically: [START-TYPE-XOR] represents the exclusive disjunction of [STARTS-WITH-ADJECTIVE] and [STARTS-WITH-NOUN].)
+
+Definition: [TONE-PLAYFUL]
+- A story is [TONE-PLAYFUL] if either of the following is true:
+  - The story's style is in the set { [STYLE-LIGHTHEARTED], [STYLE-HUMOROUS] }
+  - Both of the following are true:
+    - The story is [STYLE-SURREAL]
+    - The story is not [THEME-DECEPTION]
+- (Semantically: [TONE-PLAYFUL] is true when the style is lighthearted or humorous, or when the style is surreal provided deception is absent.)
+
+Definition: [DECEPTION-OR-PROBLEM]
+- A story is [DECEPTION-OR-PROBLEM] if either of the following is true:
+  - The story is [THEME-DECEPTION]
+  - The story is [THEME-PROBLEM-SOLVING]
+- (Semantically: logical disjunction of the two theme predicates.)
+
+Definition: [STYLE-EQUALITY]
+- A story is [STYLE-EQUALITY] if the following equality holds:
+  - [STYLE-LIGHTHEARTED] = [STYLE-HUMOROUS]
+- (Semantically: [STYLE-EQUALITY] is true when [STYLE-LIGHTHEARTED] and [STYLE-HUMOROUS] have identical truth values for the given story.)
+
+Definition: [COMPLEX-STORY]
+- A story is [COMPLEX-STORY] if both of the following are true:
+  - The story is [START-TYPE-XOR]
+  - Exactly one of the following is true:
+    - The story is [TONE-PLAYFUL]
+    - The story is [DECEPTION-OR-PROBLEM]
+- (Semantically: [COMPLEX-STORY] requires that the story's start-token classification is exclusive and that exactly one of the two higher-level conditions (playful tone vs. deception/problem theme) holds.)
+
+Notes for annotators:
+- Treat each predicate as a Boolean property evaluated against the full text.
+- Preserve the exclusivity and equality semantics as specified.
+- Do not alter node IDs, logical operators, or the composition structure when applying or extending these definitions.

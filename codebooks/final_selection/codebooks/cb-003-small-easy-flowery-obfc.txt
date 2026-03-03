@@ -1,0 +1,36 @@
+Prelude — the Curator’s Whisper:
+In a sunlit conservatory of stories, where parchments bloom like flowers and the air tastes faintly of ink and incense, an old curator tends to a codebook: a gentle taxonomy of tales, each label a petal that helps the mind sort the world's narratives. Below, the curator presents these tags with the care of a gardener, weaving explanation and lore around each strict, logical signpost so that those who annotate and reason may do so with both precision and delight.
+
+[attr-2]
+A story is [attr-2] if the story starts with a preposition.
+Like the very first note in a song that sets the key, a tale wears this badge when its opening breath begins with a preposition — a small, guiding word (such as "in," "on," or "beneath") that immediately orients the listener in space, time, or relation. Think of this tag as the mint leaf tucked into the beginning of a narrative cup: modest, yet telling.
+
+[attr-7]
+A story is [attr-7] if the story uses discourse markers.
+This label is bestowed upon stories that lace their sentences with signposts of thought: words and phrases that shepherd transitions, signal contrasts, or stitch paragraphs together — "however," "meanwhile," "therefore," and their kin. They are the bridge-arches within prose that guide a reader from one chamber of meaning to the next.
+
+[attr-3]
+A story is [attr-3] if the story has the theme Deception.
+When the heart of a tale dwells on trickery, misdirection, secrets, or the unveiled illusions of characters and plot, it is clad in this theme. Imagine a moonlit masque in which truth and falsehood waltz; label such a narrative with [attr-3] so the archivist knows deception is the tale’s central motif.
+
+[attr-5]
+A story is [attr-5] if the story is about magical lands.
+Affix this tag to stories that transport readers across thresholds into realms where the ordinary laws bend: enchanted forests, floating archipelagos, kingdoms woven from starlight. These are narratives whose topography itself is a spell, and the label marks them as cartographic marvels of imagination.
+
+[attr-4]
+A story is [attr-4] if the story is about cultural traditions.
+This marker crowns tales that explore rituals, ceremonies, folklore, and the practices that bind people and generations. Whether told as an intimate village rite or an elaborate festival that colors an entire society, the story's attention to inherited practices earns it this classification.
+
+[attr-6]
+A story is [attr-6] if the story is about the arts.
+Apply this tag to narratives that place music, painting, drama, dance, or any creative craft at their center. These stories revel in aesthetic creation, the lives of artists, or the transformative power of beauty; they are paeans to human expression and the making of meaning through form.
+
+[attr-1]
+A story is [attr-1] if all of the following are true:
+- The story is [attr-5]
+- The story is [attr-3]
+- The story is [attr-6]
+When all three of these moons align — a narrative set amid enchanted realms, steeped in the motif of deceit, and concerned with artistic practice or creation — the tale is garlanded with the composite crown [attr-1]. It denotes those rare fictions where illusion is not merely plot but craft: deception woven into the very atelier of magic and art.
+
+Epilogue — how to use these signs:
+Treat each label as both compass and ornament. They are precise beacons for annotation and reasoning, yet they admit a poetic reading that helps annotators remember and recognize patterns. Preserve the logical integrity of each sign as you apply them, and let the curator’s flowery descriptions brighten your work without blurring the strict relationships they codify.

@@ -1,0 +1,64 @@
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if The story is lighthearted
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if The story has the theme Hardship
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if The story has the theme Deception
+
+[THEME-PROBLEM-SOLVING]
+A story is [THEME-PROBLEM-SOLVING] if The story has the theme Problem-Solving
+
+[THEMATIC-CONFLICT]
+A story is [THEMATIC-CONFLICT] if exactly one of the following is true:
+- The story is [THEME-HARDSHIP]
+- The story is [THEME-DECEPTION]
+
+[TONE-CONFLICTED]
+A story is [TONE-CONFLICTED] if both of the following are true:
+- The story is [STYLE-LIGHTHEARTED]
+- Either of the following is true:
+  - The story is [THEMATIC-CONFLICT]
+  - The story is [THEME-PROBLEM-SOLVING]
+
+[PLOT-DRIVEN]
+A story is [PLOT-DRIVEN] if both of the following are true:
+- The story is [HAS-CHECKHOVS-GUN]
+- Exactly one of the following is true:
+  - The story is [THEME-PROBLEM-SOLVING]
+  - The story is [HAS-A-CLIFFHANGER]
+
+[MORAL-ARC]
+A story is [MORAL-ARC] if either of the following is true:
+- Both of the following are true:
+  - The story is [THEME-HELPING-OTHERS]
+  - The story is not [THEME-DECEPTION]
+- Both of the following are true:
+  - The story is [THEME-PROBLEM-SOLVING]
+  - The story is [THEME-HELPING-OTHERS]
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if either of the following is true:
+- Both of the following are true:
+  - The story is [TONE-CONFLICTED]
+  - Both of the following are true:
+    - The story is [PLOT-DRIVEN]
+    - The story is [MORAL-ARC]
+- All of the following are true:
+  - The story is not [TONE-CONFLICTED]
+  - Either of the following is true:
+    - The story is [PLOT-DRIVEN]
+    - The story is [HAS-A-CLIFFHANGER]
+  - The story is not both of the following:
+    - The story is [THEME-HARDSHIP]
+    - The story is [THEME-DECEPTION]

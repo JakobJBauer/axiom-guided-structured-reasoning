@@ -1,0 +1,79 @@
+In a quiet alcove of an old library of tales, where dust motes dance like wayward thoughts and candles breathe soft light over brittle pages, there lives a codebook. It is not merely a ledger of labels but a map — a delicate filigree of rules and relationships that helps readers and annotators discern the soul of a story. Treat this as that venerable manuscript rephrased for a more lyrical audience: the logic remains steadfast, the node names remain written as runes in brackets, and the connections between them are preserved exactly as they were carved. Read on, and let each entry bloom into description and meaning without altering a single structural thread.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if The story is about time travel. 
+- In other words, the tale involves journeys through the river of time — characters who step backward or forward across eras, or plots that hinge on the marvelous rearrangement of moments.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures. 
+- This embraces narratives where secret hoards, buried chests, or metaphorical troves of value are sought, revealed, or guarded — the thrill of discovery woven into the plot.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if The story is philosophical. 
+- These are meditative works that dwell on meaning, existence, ethics, or the human condition, inviting the reader to linger in thought as much as in plot.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs. 
+- Practically, this marks narratives that unfold in a more extended written form, where ideas and scenes have room to breathe across multiple paragraphs.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if The story has readability score above 96.1. 
+- Technically grounded, this denotes prose that flows with exceptional clarity and ease, inviting quick comprehension without sacrificing nuance.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic. 
+- Classic here evokes timeless modes and conventions of storytelling — forms and tones that echo the canons or beloved traditions of literature.
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if The story is humorous. 
+- These tales uplift with wit, irony, or playful mischief; the purpose of amusement threads through their scenes.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures. 
+- That is, narratives featuring beings of wonder — dragons, sprites, or otherworldly entities — whose presence shapes the world of the tale.
+
+[THEMATIC-DEPTH]
+A story is [THEMATIC-DEPTH] if both of the following are true:
+- The story is [STYLE-PHILOSOPHICAL]
+  — meaning it leans into reflection and thought.
+- The story is not [STYLE-HUMOROUS]
+  — specifically excluding works whose dominant mode is jocularity, so that earnest philosophical weight remains unblunted.
+
+[NARRATIVE-STYLE]
+A story is [NARRATIVE-STYLE] if both of the following are true:
+- The story is [HIGH-READABILITY]
+  — clear, accessible prose that guides the reader smoothly.
+- Either of the following is true:
+  - The story is [STYLE-CLASSIC]
+    — aligning with enduring storytelling manners.
+  - The story is [STYLE-HUMOROUS]
+    — or else it achieves readability through spirited humor.
+
+[ADVENTURE-ARC]
+A story is [ADVENTURE-ARC] if either of the following is true:
+- The story is [TOPIC-HIDDEN-TREASURES]
+  — when the pursuit of secrets or treasure drives the narrative’s momentum.
+- Both of the following are true:
+  - The story is [TOPIC-TIME-TRAVEL]
+    — when the mechanics of moving through time form part of the adventure.
+  - The story is not [STYLE-PHILOSOPHICAL]
+    — signifying that this form of adventurous time travel prefers action and intrigue over contemplative rumination.
+
+[COMPLEX-STORY]
+A story is [COMPLEX-STORY] if both of the following are true:
+- The story is [THEMATIC-DEPTH]
+  — it carries thoughtful, philosophical substance without lampooning itself.
+- Either of the following is true:
+  - The story is [ADVENTURE-ARC]
+    — complexity married to the forward thrust of an adventure.
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+    — or complexity arising from interactions with beings of myth and wonder.
+
+[EPIC]
+A story is [EPIC] if both of the following are true:
+- The story is [COMPLEX-STORY]
+  — a tapestry of depth and layered motifs.
+- The story is [MANY-PARAGRAPHS]
+  — and told across an abundance of paragraphs, allowing the tale to sprawl with grandeur.
+
+Thus this annotated ledger—part taxonomy, part poetic guide—remains faithful to its logical architecture, each bracketed node standing in the same place as before, each condition preserved in form. Read it as you would a map by lantern-light: the relationships are precise, the descriptions are fragrant, and the purpose is to help you recognize the nature of any tale that crosses your path.

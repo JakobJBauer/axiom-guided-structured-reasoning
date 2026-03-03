@@ -1,0 +1,51 @@
+Interviewer: Let's go through this codebook together. Start simple — what is [THEME-HELPING-OTHERS]?
+
+Expert: A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others.
+
+Interviewer: Okay. And the style labels?
+
+Expert: Sure.
+
+- A story is [STYLE-PHILOSOPHICAL] if The story is philosophical.
+- A story is [STYLE-CLASSIC] if The story is classic.
+- A story is [STYLE-MODERN] if The story is modern.
+
+Interviewer: There's also something called [HAS-JUXTAPOSITION]. What does that mean here?
+
+Expert: A story is [HAS-JUXTAPOSITION] if The story has juxtaposition.
+
+Interviewer: Now it gets more interesting. What does [MIXED-STYLE-JUXTAPOSE] capture?
+
+Expert: A story is [MIXED-STYLE-JUXTAPOSE] if both of the following are true:
+- The story is [HAS-JUXTAPOSITION]
+- Exactly one of the following is true:
+  - The story is [STYLE-CLASSIC]
+  - The story is [STYLE-MODERN]
+
+Interviewer: When you say "Exactly one of the following is true," you mean the story must be one style or the other, but not both, right?
+
+Expert: Exactly. That phrase enforces an exclusive choice: the story has to be either [STYLE-CLASSIC] or [STYLE-MODERN], but not both.
+
+Interviewer: Got it. Now the big composite: [PHILOSOPHICAL-HELPING-OTHERS-DRAMATIC]. How is that defined?
+
+Expert: A story is [PHILOSOPHICAL-HELPING-OTHERS-DRAMATIC] if either of the following is true:
+- All of the following are true:
+  - The story is [STYLE-PHILOSOPHICAL]
+  - The story is [THEME-HELPING-OTHERS]
+  - The story is not [MIXED-STYLE-JUXTAPOSE]
+- Both of the following are true:
+  - The story is [MIXED-STYLE-JUXTAPOSE]
+  - The story is not [THEME-HELPING-OTHERS]
+
+Interviewer: Let me restate that to check I understand. A story qualifies as [PHILOSOPHICAL-HELPING-OTHERS-DRAMATIC] in two possible ways: either it's philosophical and about helping others while explicitly not being a mixed-style juxtaposition, or it's a mixed-style juxtapositional story but explicitly not about helping others. Correct?
+
+Expert: Correct. Those are the two alternative conditions — the "either" indicates at least one of those branches must hold, and each branch has its own internal requirements.
+
+Interviewer: Anything else I should keep in mind when using these labels for annotation?
+
+Expert: Just the essentials:
+- Keep the node IDs exactly as written (e.g., [STYLE-PHILOSOPHICAL], [MIXED-STYLE-JUXTAPOSE]) — they’re the anchors for these rules.
+- Preserve the logical connectives: "All of the following are true", "Exactly one of the following is true", "Both of the following are true", and negations like "not".
+- Apply the rules literally when deciding labels so the relationships remain accurate for annotation and reasoning.
+
+Interviewer: Perfect — thanks. That clarifies how each node is defined and how they link together.

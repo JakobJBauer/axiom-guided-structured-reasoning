@@ -1,0 +1,75 @@
+Codebook — Structured Reference for Annotation
+Purpose
+- Provide a clear, organized set of labels and their exact logical definitions to guide consistent story annotation.
+- Preserve the original logic: do not change node IDs, logical operators (Not, And, Or, exactly one, all), or formula structure.
+
+How to use this document
+- Evaluate the simple (atomic) labels first, then use those results to evaluate composite labels.
+- When a composite label requires "exactly one" or "all," apply the literal interpretation:
+  - "Exactly one of the following is true" means count exactly one true item from the listed options.
+  - "All of the following are true" means every listed item must be true.
+  - "Not" indicates the negation of the given label.
+
+Atomic labels (single-condition definitions)
+- [LOW-READABILITY]
+  - Definition: A story is [LOW-READABILITY] if the story has readability score below 86.4
+
+- [STYLE-PHILOSOPHICAL]
+  - Definition: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical
+
+- [STYLE-MODERN]
+  - Definition: A story is [STYLE-MODERN] if the story is modern
+
+- [USES-SUPERLATIVE-FORMS]
+  - Definition: A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms
+
+- [TOPIC-BYGONE-ERAS]
+  - Definition: A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras
+
+- [THEME-MAGIC]
+  - Definition: A story is [THEME-MAGIC] if the story has the theme Magic
+
+- [TOPIC-TIME-TRAVEL]
+  - Definition: A story is [TOPIC-TIME-TRAVEL] if the story is about time travel
+
+- [HAS-A-MORAL-LESSON]
+  - Definition: A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson
+
+- [THEME-PROBLEM-SOLVING]
+  - Definition: A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving
+
+Composite labels (logical combinations)
+- [TIME-MAGIC-NEXUS]
+  - Definition: A story is [TIME-MAGIC-NEXUS] if exactly one of the following is true:
+    - The story is [TOPIC-TIME-TRAVEL]
+    - The story is [THEME-MAGIC]
+
+- [DIDACTIC-BYGONE]
+  - Definition: A story is [DIDACTIC-BYGONE] if all of the following are true:
+    - The story is [TOPIC-BYGONE-ERAS]
+    - The story is [HAS-A-MORAL-LESSON]
+    - The story is not [USES-SUPERLATIVE-FORMS]
+
+- [COMPLEX-ARC]
+  - Definition: A story is [COMPLEX-ARC] if all of the following are true:
+    - The story is [TIME-MAGIC-NEXUS]
+    - The story is [THEME-PROBLEM-SOLVING]
+    - The story is not [LOW-READABILITY]
+
+Quick annotation checklist (recommended order)
+1. Compute and record readability score; mark [LOW-READABILITY] accordingly.
+2. Label topical and stylistic atoms:
+   - [TOPIC-TIME-TRAVEL], [THEME-MAGIC], [TOPIC-BYGONE-ERAS]
+   - [STYLE-PHILOSOPHICAL], [STYLE-MODERN], [THEME-PROBLEM-SOLVING]
+   - [HAS-A-MORAL-LESSON], [USES-SUPERLATIVE-FORMS]
+3. Evaluate composite labels using the exact logical rules above:
+   - For [TIME-MAGIC-NEXUS], ensure exactly one of the two listed atoms is true.
+   - For [DIDACTIC-BYGONE] and [COMPLEX-ARC], ensure every listed condition holds (and the negated items are indeed false).
+
+Notes and tips for consistent judgments
+- Binary decisions: Treat each label as true or false; avoid partial assignments.
+- Negations: When a composite requires "not [X]," explicitly confirm that [X] has been judged false.
+- "Exactly one" requires careful counting; if both or neither of the options are true, [TIME-MAGIC-NEXUS] is false.
+- Keep records of which atomic labels led to each composite label — this improves traceability and dispute resolution.
+
+End of codebook — all node IDs and logical relationships preserved exactly as required.

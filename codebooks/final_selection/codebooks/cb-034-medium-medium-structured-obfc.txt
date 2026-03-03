@@ -1,0 +1,62 @@
+Codebook — Structured Version
+
+Purpose
+- Provide a clear, organized reference for annotators.
+- Preserve all original node IDs, logical operators, and relationships exactly as given.
+- Present each node and its conditions in a hierarchical, easy-to-scan layout.
+
+Atomic (single-condition) labels
+- A story is [attr-8] if:
+  - The story has the theme Growth.
+
+- A story is [attr-9] if:
+  - The story has the theme Helping Others.
+
+- A story is [attr-5] if:
+  - The story starts with an adverb.
+
+- A story is [attr-7] if:
+  - The story is modern.
+
+- A story is [attr-11] if:
+  - The story is about seasonal changes.
+
+- A story is [attr-12] if:
+  - The story uses perfect aspect.
+
+- A story is [attr-3] if:
+  - The story has readability score below 86.4.
+
+- A story is [attr-6] if:
+  - The story is classic.
+
+- A story is [attr-10] if:
+  - The story is about mystical creatures.
+
+- A story is [attr-2] if:
+  - The story has readability score above 96.1.
+
+Composite labels (logical combinations)
+- A story is [attr-4] if all of the following are true:
+  - The story is [attr-11]
+  - The story is [attr-8]
+  - The story is not [attr-10]
+
+- A story is [attr-1] if either of the following is true:
+  - both of the following are true:
+    - The story is [attr-4]
+    - The story is [attr-9]
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [attr-7]
+      - The story is not [attr-3]
+    - both of the following are true:
+      - The story is [attr-6]
+      - both of the following are true:
+        - The story is [attr-12]
+        - The story is [attr-2]
+
+Notes for annotators (kept concise)
+- All node IDs must be used exactly as shown (including brackets).
+- Logical words such as "all of the following", "both of the following", "either of the following", and "not" indicate precise boolean relationships — follow them literally.
+- This structured layout mirrors the original logic while making it easier to check conditions step by step.

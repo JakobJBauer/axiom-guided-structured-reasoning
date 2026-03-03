@@ -1,0 +1,22 @@
+[STYLE-HUMOROUS]
+A story is STYLE-HUMOROUS if The story is humorous
+
+[STYLE-LIGHTHEARTED]
+A story is STYLE-LIGHTHEARTED if The story is lighthearted
+
+[THEME-KINDNESS]
+A story is THEME-KINDNESS if The story has the theme Kindness
+
+[STYLE-EXCLUSIVE]
+A story is STYLE-EXCLUSIVE if exactly one of the following is true:
+- The story is [STYLE-HUMOROUS]
+- The story is [STYLE-LIGHTHEARTED]
+
+[GENRE-GENTLE]
+A story is GENRE-GENTLE if both of the following are true:
+- The story is [THEME-KINDNESS]
+- Either of the following are true:
+  - The story is [STYLE-EXCLUSIVE]
+  - Both of the following are true:
+    - The story is [STYLE-LIGHTHEARTED]
+    - The story is not [STYLE-HUMOROUS]

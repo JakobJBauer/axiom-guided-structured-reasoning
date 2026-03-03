@@ -1,0 +1,122 @@
+Prefatory flourish:
+In a sunlit hall of manuscripts where ink sighs like petals and the rules of meaning wear garlands of metaphor, this codebook stands as a lovingly tended map. Each bracketed signpost is a lantern: they illumine qualities of tales and the subtle ways those qualities entwine. Below, the precise logical scaffolding remains unchanged — the architecture of truth is preserved like the bones of an ancient oak — while the language around each node unfurls in a more ornate, lyrical diction. Use these descriptions as you would a garden path: to guide, not to alter, the relationships already carved into the soil.
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if the story has juxtaposition — the deliberate placing of one image beside another, a soft collision of contrasts that makes meaning glitter between them.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if the story is philosophical — steeped in questions, pondering motives and the nature of being as if the narrative itself were a meditative pond.
+
+[THEME-HARDSHIP]
+A story is [THEME-HARDSHIP] if the story has the theme Hardship — the narrative speaks of struggle, endurance, and the rough, honest work of living as though it were a winter road.
+
+[THEME-HUMOR]
+A story is [THEME-HUMOR] if the story has the theme Humor — laughter threaded through plot and voice, a bright ribbon that lightens and refracts otherwise heavy moments.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] if the story is about the arts — where paint, sound, stage, and craft take the center, and creativity itself becomes a character.
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure — a tale that returns upon itself like a river circling an island, beginnings and endings in gentle conversation.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] if the story has the theme Deception — whispers of concealment, masks and clever misdirections that shape the plot’s shadow-play.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others — acts of aid, sacrifice, or community stitched into the heart of the tale.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson — the narrative reaches toward a guiding principle, a lesson given like a lantern to a wandering traveler.
+
+[STYLE-HUMOROUS]
+A story is [STYLE-HUMOROUS] if the story is humorous — the voice and devices of the tale aim to amuse, to make the reader smile or chuckle.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if the story is minimalist — pared down to essentials, the prose breathes in concise, deliberate beats.
+
+[TOPIC-GIANT-CREATURES]
+A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures — leviathans, titans, or colossal beasts that alter scale and perspective.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if the story is lighthearted — buoyant, easy in tone, a breeze that lifts the spirit rather than weighs it.
+
+[TOPIC-TIME-TRAVEL]
+A story is [TOPIC-TIME-TRAVEL] if the story is about time travel — voyages through hours and eras, where chronology is a playful companion.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition — its first word is a small grammatical portal: before, after, between, within.
+
+[SHORT-STORY]
+A story is [SHORT-STORY] if the story has fewer than 160 words — a compact gem, brief enough that every word must sing.
+
+[USES-SUPERLATIVE-FORMS]
+A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms — language that reaches for the utmost: “best,” “most,” “least,” crowning things with extremes.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if the story has the theme Kindness — gentle regard, generosity, and warm-hearted acts woven into the plot.
+
+[HIGH-READABILITY]
+A story is [HIGH-READABILITY] if the story has readability score above 96.1 — the prose is lucid and welcoming, a clear path for any reader to traverse.
+
+[JUX-PREP-CLASH]
+A story is [JUX-PREP-CLASH] if both of the following are true:
+- The story is [HAS-JUXTAPOSITION] (contrasts or pairings arranged to provoke meaning).
+- Either of the following is true:
+  - The story is [STARTS-WITH-PREPOSITION] (it opens with a prepositional gateway).
+  - The story is [SHORT-STORY] (it is a compact piece, under 160 words).
+
+[JUXTAPOSED-SUPERLATIVE]
+A story is [JUXTAPOSED-SUPERLATIVE] if both of the following are true:
+- The story is [JUX-PREP-CLASH] (it pairs juxtaposition with either a prepositional opening or brevity).
+- Exactly one of the following is true:
+  - The story is [USES-SUPERLATIVE-FORMS] (it crowns ideas with extremes).
+  - The story is [STYLE-MINIMALIST] (its language is spare and essential).
+
+[ARTISTIC-PHILOSOPHY]
+A story is [ARTISTIC-PHILOSOPHY] if both of the following are true:
+- The story is [TOPIC-THE-ARTS] (art and craft occupy its center stage).
+- Either of the following is true:
+  - The story is [STYLE-PHILOSOPHICAL] (it meditates on meaning and form).
+  - The story is [JUXTAPOSED-SUPERLATIVE] (it melds contrasting placement with either superlative language or minimalist restraint, precisely one of those).
+
+[HUMOROUS-HYBRID]
+A story is [HUMOROUS-HYBRID] if both of the following are true:
+- Either of the following is true:
+  - The story is [THEME-HUMOR] (humor pervades its theme).
+  - The story is [STYLE-HUMOROUS] (its voice or devices are intended to amuse).
+- All of the following are true:
+  - The story is not [STYLE-MINIMALIST] (it is not spare to the point of austerity).
+  - Exactly one of the following is true:
+    - The story is [STYLE-LIGHTHEARTED] (its tone is airy and cheerful).
+    - The story is [USES-SUPERLATIVE-FORMS] (it employs extreme comparative language).
+
+[ALTRUISTIC-CONTRACTION]
+A story is [ALTRUISTIC-CONTRACTION] if either of the following is true:
+- Both of the following are true:
+  - The story is [HAS-A-MORAL-LESSON] (it imparts a guiding lesson).
+  - Either of the following is true:
+    - The story is [THEME-HELPING-OTHERS] (acts of aid dwell at its core).
+    - The story is [THEME-KINDNESS] (kindness animates its actions).
+- Exactly one of the following is true:
+  - The story is [THEME-DECEPTION] (it contains deceit).
+  - The story is [THEME-HARDSHIP] (it depicts struggle).
+
+[COMPLEX-ARTFUL-STORY]
+A story is [COMPLEX-ARTFUL-STORY] if both of the following are true:
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [ARTISTIC-PHILOSOPHY] (art and philosophical reflection intertwine).
+    - The story is [ALTRUISTIC-CONTRACTION] (moral lessons and themes of kindness/help or a single presence of deception or hardship shape it).
+  - Exactly one of the following is true:
+    - The story is [HUMOROUS-HYBRID] (a hybrid of humor in theme or style, with specified tonal and stylistic constraints).
+    - The story is [TOPIC-GIANT-CREATURES] (the narrative concerns enormous beings).
+- Either of the following is true:
+  - Both of the following are true:
+    - The story is [TOPIC-TIME-TRAVEL] (it engages with temporal voyages).
+    - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT] (its structure loops back on itself).
+  - Both of the following are true:
+    - The story is [SHORT-STORY] (it is beneath 160 words).
+    - The story is [HIGH-READABILITY] (it attains a readability score above 96.1).
+
+Closing flourish:
+Thus the branches and leaves of this codex remain in their appointed places: every bracketed sigil, every logical conjunction and disjunction, stands where it must. The added blossoms of diction merely dress the framework in a garden’s attire, inviting annotators to stroll through meaning with a softer, more imaginative tread — while the map itself stays precise, exact, and fit for careful reasoning.

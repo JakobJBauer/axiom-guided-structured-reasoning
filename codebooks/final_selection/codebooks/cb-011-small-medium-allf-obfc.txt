@@ -1,0 +1,28 @@
+[attr-6]
+A story is [attr-6] if The story is about the arts
+
+[attr-7]
+A story is [attr-7] if The story uses conditional mood
+
+[attr-4]
+A story is [attr-4] if The story starts with a adjective
+
+[attr-5]
+A story is [attr-5] if The story is philosophical
+
+[attr-3]
+A story is [attr-3] if both of the following are true:
+- The story is [attr-7]
+- The story is not [attr-4]
+
+[attr-1]
+A story is [attr-1] if exactly one of the following is true:
+- The story is [attr-6]
+- The story is [attr-5]
+
+[attr-2]
+A story is [attr-2] if either of the following is true:
+- The story is [attr-3]
+- Both of the following are true:
+  - The story is in the set of topics that includes [attr-6]
+  - The truth of [attr-5] is equal to the truth of not [attr-7]

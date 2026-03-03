@@ -1,0 +1,82 @@
+Interviewer: Let's go through this codebook together. I'll ask you about each entry, and you can read the formal definition and then explain it in plain language. Sound good?
+
+Respondent: Perfect — let's do it.
+
+Interviewer: First, what is [STYLE-HUMOROUS]?
+
+Respondent (formal definition):
+[STYLE-HUMOROUS]
+A story is STYLE-HUMOROUS if The story is humorous
+
+Respondent (explanation): 
+So, in plain words, a story gets the label [STYLE-HUMOROUS] exactly when it is humorous — nothing more, nothing less. Think of this as the base rule: if the story makes you laugh or is intended to be funny, it satisfies [STYLE-HUMOROUS].
+
+Interviewer: And [STYLE-LIGHTHEARTED] — how is that defined?
+
+Respondent (formal definition):
+[STYLE-LIGHTHEARTED]
+A story is STYLE-LIGHTHEARTED if The story is lighthearted
+
+Respondent (explanation):
+That one is similarly straightforward. A story is marked [STYLE-LIGHTHEARTED] whenever it is lighthearted in tone — easygoing, cheerful, or not serious. Again, it's a direct one-to-one label: lighthearted content → [STYLE-LIGHTHEARTED].
+
+Interviewer: What about themes? There's one listed here.
+
+Respondent (formal definition):
+[THEME-KINDNESS]
+A story is THEME-KINDNESS if The story has the theme Kindness
+
+Respondent (explanation):
+This labels a story as [THEME-KINDNESS] when its underlying theme is kindness — for example, when acts of generosity, compassion, or caring are central to the story.
+
+Interviewer: Here's a slightly more complex one: [STYLE-EXCLUSIVE]. What's its exact rule?
+
+Respondent (formal definition):
+[STYLE-EXCLUSIVE]
+A story is STYLE-EXCLUSIVE if exactly one of the following is true:
+- The story is [STYLE-HUMOROUS]
+- The story is [STYLE-LIGHTHEARTED]
+
+Respondent (explanation):
+This is an exclusivity condition. [STYLE-EXCLUSIVE] applies only when exactly one of the two style labels — [STYLE-HUMOROUS] or [STYLE-LIGHTHEARTED] — is true. In other words:
+- If the story is humorous but not lighthearted → [STYLE-EXCLUSIVE] holds.
+- If the story is lighthearted but not humorous → [STYLE-EXCLUSIVE] holds.
+- If it's both humorous and lighthearted, or neither, then [STYLE-EXCLUSIVE] does not apply.
+You can think of this as an exclusive-or between the two style labels.
+
+Interviewer: Finally, there's [GENRE-GENTLE], which looks nested. Could you read that formal definition and then unpack it?
+
+Respondent (formal definition):
+[GENRE-GENTLE]
+A story is GENRE-GENTLE if both of the following are true:
+- The story is [THEME-KINDNESS]
+- Either of the following are true:
+  - The story is [STYLE-EXCLUSIVE]
+  - Both of the following are true:
+    - The story is [STYLE-LIGHTHEARTED]
+    - The story is not [STYLE-HUMOROUS]
+
+Respondent (explanation):
+This one requires two top-level conditions to both be true:
+
+1) The story must have the theme of kindness — so it must be [THEME-KINDNESS].
+
+2) In addition, one of two style-related alternatives must hold:
+   - Option A: The story meets [STYLE-EXCLUSIVE] (so exactly one of [STYLE-HUMOROUS] or [STYLE-LIGHTHEARTED] is true), or
+   - Option B: The story is [STYLE-LIGHTHEARTED] and explicitly not [STYLE-HUMOROUS].
+
+Notice how Option B is a stricter, explicit way to say “lighthearted but not humorous.” Option A (the exclusive condition) also covers cases where exactly one of the two styles is true, which includes the same “lighthearted and not humorous” scenario. The structure preserves both alternatives exactly as written.
+
+So, to sum up: [GENRE-GENTLE] applies when a story centers on kindness and also satisfies one of those style constraints (either the exclusive style condition, or the explicit lighthearted-without-humor case).
+
+Interviewer: Anything else we should keep in mind while using this codebook?
+
+Respondent:
+Yes — a few quick points:
+- All node IDs remain exactly as given: [STYLE-HUMOROUS], [STYLE-LIGHTHEARTED], [THEME-KINDNESS], [STYLE-EXCLUSIVE], [GENRE-GENTLE].
+- All logical relationships and operators (exactly one, both, either, not) are preserved exactly as specified.
+- When annotating, apply the labels only when the corresponding formal conditions are satisfied — the conversational explanations are meant to clarify intent, not to change the logic.
+
+Interviewer: Great — that makes the definitions clear and keeps the formal structure intact. Thanks!
+
+Respondent: You're welcome.

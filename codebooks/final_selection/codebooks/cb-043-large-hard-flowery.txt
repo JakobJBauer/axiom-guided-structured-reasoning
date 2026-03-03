@@ -1,0 +1,135 @@
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if The story has the theme Innovation
+In the gentle hush of our catalog, this label is bestowed upon any narrative whose beating heart sings of invention, bright contrivances, and the audacious reshaping of the world — a theme that tastes of copper and new dawns.
+
+[THEME-MAGIC]
+A story is [THEME-MAGIC] if The story has the theme Magic
+Let this marker crown tales steeped in wonder, where hidden forces whisper and improbable charms ripple through the plot like starlight through leaves.
+
+[HAS-CHECKHOVS-GUN]
+A story is [HAS-CHECKHOVS-GUN] if The story has Checkhov's gun
+This token marks the presence of a promise kept: an object or detail introduced with deliberate gravity whose later arrival fulfills fate’s quiet contract.
+
+[STARTS-WITH-ADVERB]
+A story is [STARTS-WITH-ADVERB] if The story starts with a adverb
+We listen for the first breath of the sentence: when it opens with an adverb, the tale is flagged with this subtle stylistic flourish.
+
+[THEME-HELPING-OTHERS]
+A story is [THEME-HELPING-OTHERS] if The story has the theme Helping Others
+Bestow this upon narratives that turn their compass toward compassion, where characters reach outward and the plot is braided with acts of aid.
+
+[STYLE-PHILOSOPHICAL]
+A story is [STYLE-PHILOSOPHICAL] if The story is philosophical
+Use this when a story lingers in the halls of thought, weighing abstractions and asking large, patient questions of existence.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if The story starts with a noun
+This label is given when the tale’s opening is anchored by a noun, a solid first step that names the world before it moves.
+
+[TOPIC-HIDDEN-TREASURES]
+A story is [TOPIC-HIDDEN-TREASURES] if The story is about hidden treasures
+Attach this when the plot turns on secret hoards, buried riches, or valuables waiting beneath the soil of the narrative.
+
+[THEME-GROWTH]
+A story is [THEME-GROWTH] if The story has the theme Growth
+Mark stories where unfolding, maturation, and transformation are the lodestars — the arc of becoming is central.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger
+This badge denotes a tale that leaves breath suspended at the precipice, promising continuation with the delicious ache of uncertainty.
+
+[STYLE-MINIMALIST]
+A story is [STYLE-MINIMALIST] if The story is minimalist
+Assign this to works trimmed to essential lines, where silence and sparse detail carve meaning with surgical precision.
+
+[USES-CONDITIONAL-MOOD]
+A story is [USES-CONDITIONAL-MOOD] if The story uses conditional mood
+We note when a narrative habitually dwells in “ifs” and “mights,” when contingency shapes sentences and possibilities.
+
+[TOPIC-SEASONAL-CHANGES]
+A story is [TOPIC-SEASONAL-CHANGES] if The story is about seasonal changes
+This tag embraces tales that chart the turning of seasons, using the year’s wheel as a stage for mood and moment.
+
+[TOPIC-MYSTICAL-CREATURES]
+A story is [TOPIC-MYSTICAL-CREATURES] if The story is about mystical creatures
+Apply this when the cast includes beings of myth, fey, or otherworldly provenance, whose very presence colors the tale with enchantment.
+
+[HAS-A-STORY-WITHIN-A-STORY]
+A story is [HAS-A-STORY-WITHIN-A-STORY] if The story has a story within a story
+This denotes nesting: the main narrative cradles another tale inside it, a smaller story echoing the larger.
+
+[MANY-PARAGRAPHS]
+A story is [MANY-PARAGRAPHS] if The story has more than 6 paragraphs
+A practical measure of length: when the text blossoms beyond six paragraphs, it earns this descriptor.
+
+[THEME-AGENCY]
+A story is [THEME-AGENCY] if The story has the theme Agency
+Label stories where characters actively steer their fates, exercising choice and will that shape the journey.
+
+[PARAGRAPH-DENSITY]
+A story is [PARAGRAPH-DENSITY] if [MANY-PARAGRAPHS] equals true
+A shorthand: when the tale satisfies the threshold of many paragraphs, we consider its paragraph density to be affirmed.
+
+[STRUCTURAL-START]
+A story is [STRUCTURAL-START] if both of the following are true:
+- exactly one of the following is true:
+  - The story is [STARTS-WITH-ADVERB]
+  - The story is [STARTS-WITH-NOUN]
+- The story is in [STYLE-PHILOSOPHICAL, STYLE-MINIMALIST]
+Think of this as a structural rubric: the beginning’s grammar must choose only one avenue — either an adverbial wind or a noun’s solid footfall — and the whole composition must reside in the stylistic territory of philosophical reflection or austere minimalism.
+
+[MOTIF-MYSTERY]
+A story is [MOTIF-MYSTERY] if either of the following is true:
+- both of the following are true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-MYSTICAL-CREATURES]
+- exactly one of the following is true:
+  - The story is [TOPIC-HIDDEN-TREASURES]
+  - The story is [TOPIC-SEASONAL-CHANGES]
+This motif gathers tales in which the allure of secret riches and the presence of the uncanny cohabit, or where a single thread — buried treasure or the turning seasons — alone suffices to weave an air of enigma.
+
+[MORAL-TENSION]
+A story is [MORAL-TENSION] if either of the following is true:
+- The story is [THEME-HELPING-OTHERS]
+- both of the following are true:
+  - exactly one of the following is true:
+    - The story is [THEME-GROWTH]
+    - The story is [THEME-AGENCY]
+  - The story is not [STYLE-MINIMALIST]
+This label captures ethical strain: it appears when altruism is central, or when the tale balances growth against agency — but only if the narrative is not pared down to minimalist austerity.
+
+[THEMATIC-CORE]
+A story is [THEMATIC-CORE] if both of the following are true:
+- The story is [THEME-INNOVATION]
+- either of the following is true:
+  - The story is [MORAL-TENSION]
+  - both of the following are true:
+    - The story is [THEME-MAGIC]
+    - The story is [USES-CONDITIONAL-MOOD]
+Here we name the heart of a complex idea: a tale driven by innovation that is also braided with moral quandary, or else infused with magic and the soft subjunctive of conditional possibility.
+
+[NARRATIVE-DEVICES]
+A story is [NARRATIVE-DEVICES] if both of the following are true:
+- either of the following is true:
+  - The story is [HAS-CHECKHOVS-GUN]
+  - The story is [HAS-A-CLIFFHANGER]
+- either of the following is true:
+  - The story is [HAS-A-STORY-WITHIN-A-STORY]
+  - The story is not [HAS-CHECKHOVS-GUN]
+This category gathers tales employing striking structural tools: echoes of promise or the breath-held cliff, together with nesting tales or the absence of a previously mentioned device, composing a tapestry of narrative technique.
+
+[COMPLEX-STORY-TYPE]
+A story is [COMPLEX-STORY-TYPE] if both of the following are true:
+- The story is [THEMATIC-CORE]
+- either of the following is true:
+  - both of the following are true:
+    - The story is [STRUCTURAL-START]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [NARRATIVE-DEVICES]
+        - The story is [PARAGRAPH-DENSITY]
+      - The story is [MOTIF-MYSTERY]
+  - both of the following are true:
+    - The story is [NARRATIVE-DEVICES]
+    - The story is not [STYLE-MINIMALIST]
+This final, ornate classification crowns those narratives that dwell at the intersection of inventive core themes and layered form: innovation married to moral or magical depth, then woven through with a particular opening structure plus either dense paragraphs and narrative flourishes or a motif of mystery — or else granted narrative devices without the lean austerity of minimalism. It is the label for stories whose complexity reads like a rich tapestry, every thread intentionally placed.

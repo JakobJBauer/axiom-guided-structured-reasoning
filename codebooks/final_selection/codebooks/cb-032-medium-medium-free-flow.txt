@@ -1,0 +1,49 @@
+Think of this as a friendly cheat-sheet for tagging stories — relaxed in tone but strict in logic. Each entry tells you when to apply a tag; the node IDs in brackets are the exact labels you'll use.
+
+[MANY-PARAGRAPHS]
+Call a story [MANY-PARAGRAPHS] when it stretches beyond six paragraphs.
+
+[STYLE-CLASSIC]
+Tag a story [STYLE-CLASSIC] when its overall style fits the classic mold.
+
+[HAS-A-CLIFFHANGER]
+Use [HAS-A-CLIFFHANGER] for a story that leaves you hanging with a cliffhanger.
+
+[STARTS-WITH-PREPOSITION]
+Mark a story [STARTS-WITH-PREPOSITION] if the very first word is a preposition.
+
+[THEME-DECEPTION]
+Apply [THEME-DECEPTION] when the story carries the theme of deception.
+
+[STYLE-PLAYFUL]
+A story is [STYLE-PLAYFUL] when its tone or approach feels playful.
+
+[THEME-HELPING-OTHERS]
+Use [THEME-HELPING-OTHERS] if the story’s theme centers on helping others.
+
+[THEME-AGENCY]
+Tag [THEME-AGENCY] when the story foregrounds agency — characters acting with control or power.
+
+[HAS-JUXTAPOSITION]
+Mark [HAS-JUXTAPOSITION] when the story uses juxtaposition.
+
+[STYLE-PHILOSOPHICAL]
+Use [STYLE-PHILOSOPHICAL] for stories that take on a philosophical tone.
+
+[RICH-THEME]
+A story is [RICH-THEME] if either of the following is true:
+- The story is both [THEME-DECEPTION] and not [THEME-HELPING-OTHERS]
+- Exactly one of the following is true:
+  - The story is [THEME-AGENCY]
+  - The story is [THEME-HELPING-OTHERS]
+
+In other words: a rich theme can come from deception that isn’t about helping others, or from a situation where exactly one of agency or helping-others is present — but not both.
+
+[COMPLEX-CLASSIC-ARC]
+A story is [COMPLEX-CLASSIC-ARC] if both of the following are true:
+- The story is [STYLE-CLASSIC]
+- Either of the following is true:
+  - The story is both [HAS-A-CLIFFHANGER] and not [STYLE-PLAYFUL]
+  - The story is both [STARTS-WITH-PREPOSITION] and [RICH-THEME]
+
+So, to earn the [COMPLEX-CLASSIC-ARC] label it must be classic in style, and then either end on a non-playful cliffhanger, or begin with a preposition and qualify as a [RICH-THEME].

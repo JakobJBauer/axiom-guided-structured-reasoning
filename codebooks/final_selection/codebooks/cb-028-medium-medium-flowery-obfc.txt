@@ -1,0 +1,59 @@
+Preface — A small tale about this codebook:
+Wander, if you will, into a walled garden of rules where each bracketed sigil is a carved stone, faithful and unyielding. This codebook is that garden: a careful map for those who annotate and reason, its pathways laid out with exacting logic. Below, each node is first shown in its precise, functional form — unchanged in wording, structure, and symbols — and then accompanied by a florid, explanatory flourish to illuminate its meaning and make the work of annotation feel less like bookkeeping and more like listening to a story that has been taught to walk in shoes of reason.
+
+[attr-2]
+A story is [attr-2] if The story has a moral lesson.
+- A gentle elaboration: Imagine a tale that turns its pages toward wisdom, closing with a lesson that lingers like the last light at dusk. When a story bears such an explicit lesson—an instructive gleam intended for the reader's conscience—we place the [attr-2] stone.
+
+[attr-4]
+A story is [attr-4] if The story has more than 6 paragraphs.
+- A gentle elaboration: Count the little chambers of the narrative—the paragraphs—as one might count lanterns along a garden path. If they number more than six, the story is considered ample in length and is thus adorned with [attr-4].
+
+[attr-7]
+A story is [attr-7] if The story starts with a adverb.
+- A gentle elaboration: Picture the very first word stepping onto the stage with a posture of manner or time—an adverb. When a story opens with such a word, it is declared [attr-7], the doorway hinting at tone before any characters arrive.
+
+[attr-3]
+A story is [attr-3] if The story has circular narrative structure.
+- A gentle elaboration: Some tales fold back upon themselves like ivy curling around a column. If the narrative returns to its beginning, echoing its opening in structure or event, we recognize that circular choreography as [attr-3].
+
+[attr-9]
+A story is [attr-9] if The story uses perfect aspect.
+- A gentle elaboration: Notice the grammar that reaches back—the perfect aspect that speaks of completion or of actions woven into pastness. When a story employs this knit of tense, we mark it [attr-9], a subtle thread in the tale’s fabric.
+
+[attr-10]
+A story is [attr-10] if The story uses superlative forms.
+- A gentle elaboration: When the language climbs to extremes—brightest, most sorrowful, least expected—when it crowns some quality as the utmost, we note it as [attr-10], where rhetoric reaches for the summit.
+
+[attr-8]
+A story is [attr-8] if both of the following are true:
+- The story is [attr-7]
+- Exactly one of the following is true:
+  - The story is [attr-9]
+  - The story is [attr-10]
+- A gentle elaboration: Consider [attr-8] as a particular bloom that opens only when two conditions sing in harmony: the tale must begin with an adverb, and then—like choosing between two colors—exactly one of two mannered linguistic traits must be present: either the tale wears the perfect aspect’s subtle sheen, or it dons the bold robe of superlatives, but never both. This is a conjunctive gate that requires both an opening flourish and a single, decisive stylistic feature.
+
+[attr-6]
+A story is [attr-6] if either of the following is true:
+- The story is [attr-3]
+- Both of the following are true:
+  - The story is not [attr-3]
+  - The story is [attr-4]
+- A gentle elaboration: The label [attr-6] captures two pathways to belonging. One path is direct: the narrative loops back on itself and is circular. The other path is conditional: even if it does not loop (explicitly not circular), the tale may still be grand in scale—long enough in paragraphs—to qualify. Thus the node honors either the architectural turn of a circular structure or the breadth of a longer composition.
+
+[attr-5]
+A story is [attr-5] if exactly one of the following is true:
+- The story is [attr-2]
+- The story is [attr-4]
+- A gentle elaboration: [attr-5] is a dichotomous lantern—lit by either moral instruction or generous length, but never by both at once. If the story offers a moral, it stands as one half of the coin; if instead it is long in paragraphs, it is the other. Exactly one must be true for this name to be given.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- Either of the following is true:
+  - The story is [attr-8]
+  - The story is not [attr-5]
+- The story is [attr-6]
+- A gentle elaboration: Think of [attr-1] as a majestic archway that requires two pillars. The first pillar is flexible: the tale is either adorned with the particular flourish of [attr-8] or it refuses to belong to the simpler dual of [attr-5] (that is, it is not in that exclusive either/or). The second pillar is firm: the tale must belong to [attr-6] by the circular-or-expansive criterion. When both pillars stand side by side, the story is acknowledged as [attr-1], worthy of careful annotation and thoughtful reasoning.
+
+Final note:
+Each of the bracketed names above remains a fixed stone in our garden. Their relationships—ANDs and ORs, exact exclusions and negations—are the pathways that connect them. The ornate language offered here is meant only to illuminate and to make the act of classification more pleasurable; it does not alter the structure, the IDs, or the logical scaffolding. Use this map with confidence: the rules are unchanged, and now they come with a little more light.

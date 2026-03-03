@@ -1,0 +1,60 @@
+In a sunlit archive where labels bloom like roses along an ivy-covered trellis, this codebook unfurls its petals. Each bracketed sigil is a guardian of meaning; below you will find the same exact guardians and the same unbroken lattice of logical relationships, now described with the lavishness of a storyteller describing their cherished map. The pragmatics remain untouched — every node ID, every logical connective, every formulaic structure endures exactly as before; only the language that cradles them is dressed in finery.
+
+[HAS-A-MORAL-LESSON]
+A story is [HAS-A-MORAL-LESSON] if The story has a moral lesson — that luminous, guiding precept tucked into the narrative’s weave, a lesson meant to linger like the scent of jasmine after dusk.
+
+[USES-PERFECT-ASPECT]
+A story is [USES-PERFECT-ASPECT] if The story uses perfect aspect — the verb forms that cast events as completed or consequential, the grammatical talismans that tie past actions to present significance.
+
+[HAS-A-CLIFFHANGER]
+A story is [HAS-A-CLIFFHANGER] if The story has a cliffhanger — a breath held on the edge of a precipice, where the tale pauses and the reader’s heartbeat is invited to keep the unanswered question company.
+
+[THEME-KINDNESS]
+A story is [THEME-KINDNESS] if The story has the theme Kindness — a recurring moral current of compassion and benevolence that runs through characters’ choices like a warm, sustaining river.
+
+[STYLE-MODERN]
+A story is [STYLE-MODERN] if The story is modern — fashioned in contemporary idioms or sensibilities, attuned to present-day rhythms and the glass-and-steel light of our era.
+
+[HAS-A-FLASHBACK]
+A story is [HAS-A-FLASHBACK] if The story has a flashback — a temporal bloom backward, where memory unfurls to show what shaped the present, like a sudden shutter revealing an earlier scene.
+
+[STYLE-CLASSIC]
+A story is [STYLE-CLASSIC] if The story is classic — carrying the cadence of traditional forms, timeless motifs, or enduring narrative architectures that feel rooted in the long lineage of storytelling.
+
+[LONG-STORY]
+A story is [LONG-STORY] if The story has more than 375 words — crossing the threshold where a narrative stretches beyond a brief whisper into a fuller, more elaborated utterance.
+
+[HAS-JUXTAPOSITION]
+A story is [HAS-JUXTAPOSITION] if The story has juxtaposition — the deliberate placing of contrasting elements side by side, so their differences sing like complementary colors on a painter’s palette.
+
+[STYLE-LIGHTHEARTED]
+A story is [STYLE-LIGHTHEARTED] if The story is lighthearted — buoyant in tone, playful in spirit, its mood as airy and bright as a breeze through sunlit curtains.
+
+[RICH-NARRATIVE]
+A story is [RICH-NARRATIVE] if all of the following are true:
+- Either of the following is true:
+  - The story is [HAS-A-CLIFFHANGER]
+  - The story is [HAS-A-FLASHBACK]
+  (In other words, the tale must reach backward or cliff-edge outward — at least one of those dramatic gestures must be present.)
+- Exactly one of the following is true:
+  - The story is [HAS-JUXTAPOSITION]
+  - The story is [USES-PERFECT-ASPECT]
+  (Precisely one of these structural choices is in play: either the artful contrast of juxtaposition, or the temporal sheen of perfect aspect — but not both.)
+- The story is not [STYLE-LIGHTHEARTED]
+  (The narrative’s tenor must not be purely carefree; richness here presumes a seriousness of tone.)
+- At least one of the story's structural features is in the set { [HAS-A-CLIFFHANGER], [HAS-A-FLASHBACK], [HAS-JUXTAPOSITION] }
+  (To be considered richly narrated, the story must display at least one of these marked structural traits that give it depth and texture.)
+
+[COMPLEX-STORY]
+A story is [COMPLEX-STORY] if both of the following are true:
+- The story is [RICH-NARRATIVE]
+  (First, it must already wear the mantle of a rich narrative, as defined above.)
+- Both of the following are true:
+  - Either of the following is true:
+    - The story is [THEME-KINDNESS]
+    - The story is [HAS-A-MORAL-LESSON]
+    (Secondly, the tale must embrace an ethical strand — either an explicit moral lesson or a central theme of kindness.)
+  - The presence of [STYLE-MODERN] equals the presence of [STYLE-CLASSIC]
+    (Finally, the existence of modern stylistic traits must be exactly matched by the presence of classic stylistic traits — a balanced equivalence, as if the narrative stands at once in contemporary light and in timeless shadow.)
+
+Thus the garden of criteria stands as before, each rule a labelled vine on the same trellis; the relationships are preserved, the logic unaltered, and the explanations gilded for ease and delight.

@@ -1,0 +1,48 @@
+[STYLE-PLAYFUL]
+Story is playful.
+
+[STYLE-MINIMALIST]
+Story is minimalist.
+
+[HAS-A-MORAL-LESSON]
+Story has a moral lesson.
+
+[TOPIC-TIME-TRAVEL]
+Story is about time travel.
+
+[STARTS-WITH-NOUN]
+Story starts with a noun.
+
+[MANY-PARAGRAPHS]
+Story has more than 6 paragraphs.
+
+[USES-CONDITIONAL-MOOD]
+Story uses conditional mood.
+
+[THEME-HARDSHIP]
+Story's theme is Hardship.
+
+[COMPOUND-STYLE]
+A story is [COMPOUND-STYLE] if both of the following are true:
+- The story is [STYLE-PLAYFUL]
+- The story is [STYLE-MINIMALIST]
+
+[COMPLEX-NARRATIVE]
+A story is [COMPLEX-NARRATIVE] if all of the following are true:
+- The story is [MANY-PARAGRAPHS]
+- The story is [USES-CONDITIONAL-MOOD]
+- The story is [STARTS-WITH-NOUN]
+
+[TIME-MORAL]
+A story is [TIME-MORAL] if both of the following are true:
+- The story is [TOPIC-TIME-TRAVEL]
+- The story is [HAS-A-MORAL-LESSON]
+
+[RICH-STYLE-NARRATIVE]
+A story is [RICH-STYLE-NARRATIVE] if both of the following are true:
+- The story is [COMPLEX-NARRATIVE]
+- Either of the following is true:
+  - The story is [COMPOUND-STYLE]
+  - Both of the following are true:
+    - The story is [STYLE-PLAYFUL]
+    - The story is not [THEME-HARDSHIP]

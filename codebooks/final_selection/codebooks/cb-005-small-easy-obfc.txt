@@ -1,0 +1,24 @@
+[attr-7]
+A story is USES-DISCOURSE-MARKERS if the story uses discourse markers
+
+[attr-4]
+A story is HAS-JUXTAPOSITION if the story has juxtaposition
+
+[attr-6]
+A story is TOPIC-MYSTICAL-CREATURES if the story is about mystical creatures
+
+[attr-3]
+A story is HAS-A-RED-HERRING if the story has a Red Herring
+
+[attr-5]
+A story is TOPIC-GIANT-CREATURES if the story is about giant creatures
+
+[attr-1]
+A story is FANTASTICAL-JUXTAPOSITION if both of the following are true:
+- The story is [attr-6]
+- The story is [attr-4]
+
+[attr-2]
+A story is GIANT-MISDIRECTION if both of the following are true:
+- The story is [attr-5]
+- The story is [attr-3]

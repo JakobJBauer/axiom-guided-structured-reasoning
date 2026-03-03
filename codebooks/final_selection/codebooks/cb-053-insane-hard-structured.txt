@@ -1,0 +1,204 @@
+Overview
+- Purpose: Provide clear, concise definitions for each annotation label (node) and a structured, hierarchical presentation of the complex composite node [COMPLEX-NARRATIVE].
+- How to use: For each story, mark the applicable simple labels. Then evaluate [COMPLEX-NARRATIVE] by following the nested logical rules exactly as shown.
+- Note: All node IDs are preserved exactly as written. Logical operators and their relationships are kept intact.
+
+Simple label definitions
+- [STARTS-WITH-ADVERB]
+  - Definition: A story is [STARTS-WITH-ADVERB] if the story starts with a adverb.
+
+- [TOPIC-CULTURAL-TRADITIONS]
+  - Definition: A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+- [THEME-INNOVATION]
+  - Definition: A story is [THEME-INNOVATION] if the story has the theme Innovation.
+
+- [THEME-HUMOR]
+  - Definition: A story is [THEME-HUMOR] if the story has the theme Humor.
+
+- [TOPIC-HIDDEN-TREASURES]
+  - Definition: A story is [TOPIC-HIDDEN-TREASURES] if the story is about hidden treasures.
+
+- [STYLE-CLASSIC]
+  - Definition: A story is [STYLE-CLASSIC] if the story is classic.
+
+- [STYLE-HUMOROUS]
+  - Definition: A story is [STYLE-HUMOROUS] if the story is humorous.
+
+- [STYLE-MODERN]
+  - Definition: A story is [STYLE-MODERN] if the story is modern.
+
+- [TOPIC-GIANT-CREATURES]
+  - Definition: A story is [TOPIC-GIANT-CREATURES] if the story is about giant creatures.
+
+- [USES-PERFECT-ASPECT]
+  - Definition: A story is [USES-PERFECT-ASPECT] if the story uses perfect aspect.
+
+- [HAS-A-FLASHBACK]
+  - Definition: A story is [HAS-A-FLASHBACK] if the story has a flashback.
+
+- [THEME-HARDSHIP]
+  - Definition: A story is [THEME-HARDSHIP] if the story has the theme Hardship.
+
+- [HAS-A-CLIFFHANGER]
+  - Definition: A story is [HAS-A-CLIFFHANGER] if the story has a cliffhanger.
+
+- [HAS-A-MORAL-LESSON]
+  - Definition: A story is [HAS-A-MORAL-LESSON] if the story has a moral lesson.
+
+- [TOPIC-LOST-CIVILIZATIONS]
+  - Definition: A story is [TOPIC-LOST-CIVILIZATIONS] if the story is about lost civilizations.
+
+- [STYLE-PLAYFUL]
+  - Definition: A story is [STYLE-PLAYFUL] if the story is playful.
+
+- [TOPIC-SEASONAL-CHANGES]
+  - Definition: A story is [TOPIC-SEASONAL-CHANGES] if the story is about seasonal changes.
+
+- [STARTS-WITH-PREPOSITION]
+  - Definition: A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+
+- [HAS-JUXTAPOSITION]
+  - Definition: A story is [HAS-JUXTAPOSITION] if the story has juxtaposition.
+
+- [THEME-PROBLEM-SOLVING]
+  - Definition: A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+- [TOPIC-TIME-TRAVEL]
+  - Definition: A story is [TOPIC-TIME-TRAVEL] if the story is about time travel.
+
+- [TOPIC-BYGONE-ERAS]
+  - Definition: A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras.
+
+- [HAS-CIRCULAR-NARRATIVE-STRUCT]
+  - Definition: A story is [HAS-CIRCULAR-NARRATIVE-STRUCT] if the story has circular narrative structure.
+
+- [USES-DISCOURSE-MARKERS]
+  - Definition: A story is [USES-DISCOURSE-MARKERS] if the story uses discourse markers.
+
+- [USES-WH-QUESTIONS]
+  - Definition: A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+- [TOPIC-THE-ARTS]
+  - Definition: A story is [TOPIC-THE-ARTS] if the story is about the arts.
+
+- [THEME-MAGIC]
+  - Definition: A story is [THEME-MAGIC] if the story has the theme Magic.
+
+- [STYLE-PHILOSOPHICAL]
+  - Definition: A story is [STYLE-PHILOSOPHICAL] if the story is philosophical.
+
+- [STYLE-MINIMALIST]
+  - Definition: A story is [STYLE-MINIMALIST] if the story is minimalist.
+
+- [HAS-A-STORY-WITHIN-A-STORY]
+  - Definition: A story is [HAS-A-STORY-WITHIN-A-STORY] if the story has a story within a story.
+
+- [LONG-STORY]
+  - Definition: A story is [LONG-STORY] if the story has more than 375 words.
+
+- [TOPIC-MYSTICAL-CREATURES]
+  - Definition: A story is [TOPIC-MYSTICAL-CREATURES] if the story is about mystical creatures.
+
+- [LOW-READABILITY]
+  - Definition: A story is [LOW-READABILITY] if the story has readability score below 86.4.
+
+- [HAS-CHECKHOVS-GUN]
+  - Definition: A story is [HAS-CHECKHOVS-GUN] if the story has Checkhov's gun.
+
+- [MANY-PARAGRAPHS]
+  - Definition: A story is [MANY-PARAGRAPHS] if the story has more than 6 paragraphs.
+
+- [THEME-DECEPTION]
+  - Definition: A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+- [THEME-AGENCY]
+  - Definition: A story is [THEME-AGENCY] if the story has the theme Agency.
+
+- [TOPIC-MAGICAL-LANDS]
+  - Definition: A story is [TOPIC-MAGICAL-LANDS] if the story is about magical lands.
+
+- [USES-SUPERLATIVE-FORMS]
+  - Definition: A story is [USES-SUPERLATIVE-FORMS] if the story uses superlative forms.
+
+- [STARTS-WITH-ADJECTIVE]
+  - Definition: A story is [STARTS-WITH-ADJECTIVE] if the story starts with a adjective.
+
+- [THEME-KINDNESS]
+  - Definition: A story is [THEME-KINDNESS] if the story has the theme Kindness.
+
+- [HIGH-READABILITY]
+  - Definition: A story is [HIGH-READABILITY] if the story has readability score above 96.1.
+
+- [STARTS-WITH-NOUN]
+  - Definition: A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+- [USES-CONDITIONAL-MOOD]
+  - Definition: A story is [USES-CONDITIONAL-MOOD] if the story uses conditional mood.
+
+- [HAS-A-RED-HERRING]
+  - Definition: A story is [HAS-A-RED-HERRING] if the story has a Red Herring.
+
+- [SHORT-STORY]
+  - Definition: A story is [SHORT-STORY] if the story has fewer than 160 words.
+
+- [STYLE-SURREAL]
+  - Definition: A story is [STYLE-SURREAL] if the story is surreal.
+
+- [THEME-HELPING-OTHERS]
+  - Definition: A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others.
+
+- [STYLE-LIGHTHEARTED]
+  - Definition: A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+Composite node: [COMPLEX-NARRATIVE]
+- Purpose: Decide whether a story qualifies as [COMPLEX-NARRATIVE] by evaluating two main top-level conjunctions (both must be true). The exact nested logical structure is presented below; follow it step by step.
+
+- [COMPLEX-NARRATIVE]
+  - A story is [COMPLEX-NARRATIVE] if either of the following is true:
+    - both of the following are true:
+      - either of the following is true:
+        - both of the following are true:
+          - The story is in [TOPIC-LOST-CIVILIZATIONS], [TOPIC-BYGONE-ERAS], [TOPIC-TIME-TRAVEL]
+          - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+        - either of the following is true:
+          - The story is [HAS-A-STORY-WITHIN-A-STORY]
+          - both of the following are true:
+            - The story is [HAS-A-FLASHBACK]
+            - It is not the case that both of the following are true:
+              - The story is [HAS-A-RED-HERRING]
+              - The story is [HAS-CHECKHOVS-GUN]
+      - both of the following are true:
+        - exactly one of the following is true:
+          - The story is [STYLE-CLASSIC]
+          - The story is [STYLE-MODERN]
+        - either of the following is true:
+          - both of the following are true:
+            - The story is [THEME-MAGIC]
+            - It is not the case that the story is [TOPIC-MYSTICAL-CREATURES]
+          - both of the following are true:
+            - The story is [THEME-PROBLEM-SOLVING]
+            - The story is [USES-DISCOURSE-MARKERS]
+    - both of the following are true:
+      - either of the following is true:
+        - both of the following are true:
+          - The story is [THEME-DECEPTION]
+          - It is not both of the following are true:
+            - The story is [THEME-KINDNESS]
+            - The story is [THEME-HELPING-OTHERS]
+        - The story is [HAS-A-RED-HERRING]
+      - either of the following is true:
+        - exactly one of the following is true:
+          - The story is [LONG-STORY]
+          - The story is [SHORT-STORY]
+        - both of the following are true:
+          - The story is [HAS-CHECKHOVS-GUN]
+          - It is not the case that the story is [HAS-A-CLIFFHANGER]
+
+Quick annotator checklist (practical steps)
+- Step 1: Mark all simple labels that apply to the story from the Simple label definitions section.
+- Step 2: For [COMPLEX-NARRATIVE], evaluate each nested clause in order. Treat “either”, “both”, and “exactly one” with their usual logical meanings. Pay special attention to the negations: phrases beginning with “It is not the case that” or “It is not both of the following are true” reverse the enclosed condition(s).
+- Step 3: A story is [COMPLEX-NARRATIVE] only if the full top-level condition (the two main "both of the following are true" branches) is satisfied according to the nested structure shown above.
+
+End notes
+- This rewrite keeps every node ID and the full logical structure intact. Use the hierarchical layout to follow the logic stepwise when annotating.

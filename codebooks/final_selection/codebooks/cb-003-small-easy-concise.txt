@@ -1,0 +1,23 @@
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] when it begins with a preposition.
+
+[USES-DISCOURSE-MARKERS]
+A story is [USES-DISCOURSE-MARKERS] when it uses discourse markers.
+
+[THEME-DECEPTION]
+A story is [THEME-DECEPTION] when its theme is deception.
+
+[TOPIC-MAGICAL-LANDS]
+A story is [TOPIC-MAGICAL-LANDS] when it’s about magical lands.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] when it’s about cultural traditions.
+
+[TOPIC-THE-ARTS]
+A story is [TOPIC-THE-ARTS] when it’s about the arts.
+
+[ARTFUL-DECEPTION-IN-FANTASY]
+A story is [ARTFUL-DECEPTION-IN-FANTASY] if all of the following are true:
+- The story is [TOPIC-MAGICAL-LANDS]
+- The story is [THEME-DECEPTION]
+- The story is [TOPIC-THE-ARTS]

@@ -1,0 +1,77 @@
+Codebook — Technical Definitions
+
+This document specifies node definitions and their logical composition for story annotation. Each entry defines a predicate over a story. Node identifiers are shown in [BRACKET] format and must remain unchanged. Logical composition uses the original phrasings: "Both of the following are true", "Either of the following is true", and "Exactly one of the following is true". Negation is expressed as "not". These definitions are intended for deterministic annotation and logical reasoning.
+
+Atomic predicates
+- [STYLE-LIGHTHEARTED]
+  - Definition: A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+- [HAS-CHECKHOVS-GUN]
+  - Definition: A story is [HAS-CHECKHOVS-GUN] if the story contains Chekhov's gun (an element introduced earlier that becomes significant later).
+
+- [HAS-A-CLIFFHANGER]
+  - Definition: A story is [HAS-A-CLIFFHANGER] if the story includes a cliffhanger (an unresolved ending or suspenseful interruption).
+
+- [THEME-HARDSHIP]
+  - Definition: A story is [THEME-HARDSHIP] if the story has the theme Hardship.
+
+- [THEME-HELPING-OTHERS]
+  - Definition: A story is [THEME-HELPING-OTHERS] if the story has the theme Helping Others.
+
+- [THEME-DECEPTION]
+  - Definition: A story is [THEME-DECEPTION] if the story has the theme Deception.
+
+- [THEME-PROBLEM-SOLVING]
+  - Definition: A story is [THEME-PROBLEM-SOLVING] if the story has the theme Problem-Solving.
+
+Composed predicates
+- [THEMATIC-CONFLICT]
+  - Definition: A story is [THEMATIC-CONFLICT] if exactly one of the following is true:
+    - The story is [THEME-HARDSHIP]
+    - The story is [THEME-DECEPTION]
+  - Note: This is an exclusive OR over the two thematic predicates.
+
+- [TONE-CONFLICTED]
+  - Definition: A story is [TONE-CONFLICTED] if both of the following are true:
+    - The story is [STYLE-LIGHTHEARTED]
+    - Either of the following is true:
+      - The story is [THEMATIC-CONFLICT]
+      - The story is [THEME-PROBLEM-SOLVING]
+  - Logical form: STYLE-LIGHTHEARTED ∧ (THEMATIC-CONFLICT ∨ THEME-PROBLEM-SOLVING).
+
+- [PLOT-DRIVEN]
+  - Definition: A story is [PLOT-DRIVEN] if both of the following are true:
+    - The story is [HAS-CHECKHOVS-GUN]
+    - Exactly one of the following is true:
+      - The story is [THEME-PROBLEM-SOLVING]
+      - The story is [HAS-A-CLIFFHANGER]
+  - Note: This is a conjunction that includes an exclusive disjunction on plot-related features.
+
+- [MORAL-ARC]
+  - Definition: A story is [MORAL-ARC] if either of the following is true:
+    - Both of the following are true:
+      - The story is [THEME-HELPING-OTHERS]
+      - The story is not [THEME-DECEPTION]
+    - Both of the following are true:
+      - The story is [THEME-PROBLEM-SOLVING]
+      - The story is [THEME-HELPING-OTHERS]
+  - Interpretation: MORAL-ARC holds when Helping Others occurs without Deception, or when Helping Others co-occurs with Problem-Solving.
+
+- [COMPLEX-NARRATIVE]
+  - Definition: A story is [COMPLEX-NARRATIVE] if either of the following is true:
+    - Both of the following are true:
+      - The story is [TONE-CONFLICTED]
+      - Both of the following are true:
+        - The story is [PLOT-DRIVEN]
+        - The story is [MORAL-ARC]
+    - All of the following are true:
+      - The story is not [TONE-CONFLICTED]
+      - Either of the following is true:
+        - The story is [PLOT-DRIVEN]
+        - The story is [HAS-A-CLIFFHANGER]
+      - The story is not both of the following:
+        - The story is [THEME-HARDSHIP]
+        - The story is [THEME-DECEPTION]
+  - Logical structure: COMPLEX-NARRATIVE is satisfied either by the conjunction of TONE-CONFLICTED, PLOT-DRIVEN, and MORAL-ARC, or by a non-conflicted route that requires plot- or cliffhanger-related conditions while excluding simultaneous HARDSHIP and DECEPTION.
+
+End of codebook.

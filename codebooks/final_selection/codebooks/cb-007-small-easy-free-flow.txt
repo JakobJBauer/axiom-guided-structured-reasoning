@@ -1,0 +1,21 @@
+[STYLE-LIGHTHEARTED]
+Think of [STYLE-LIGHTHEARTED] as a simple label for stories that carry a light, breezy tone — the kind that makes you smile rather than sigh. A story is [STYLE-LIGHTHEARTED] if the story is lighthearted.
+
+[STARTS-WITH-ADVERB]
+When a tale opens with an adverb — "Suddenly," "Happily," "Reluctantly," and the like — we tag it as [STARTS-WITH-ADVERB]. A story is [STARTS-WITH-ADVERB] if the story starts with a adverb.
+
+[LONG-STORY]
+If a piece stretches beyond a modest length — more than 375 words — we call it [LONG-STORY]. A story is [LONG-STORY] if the story has more than 375 words.
+
+[THEME-HUMOR]
+Stories that center on humor, where comedy is the driving theme, get the [THEME-HUMOR] label. A story is [THEME-HUMOR] if the story has the theme Humor.
+
+[TOPIC-BYGONE-ERAS]
+When the subject matter drifts back in time to old-fashioned days and bygone eras, we use [TOPIC-BYGONE-ERAS]. A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras.
+
+[WHIMSY-RETRO-COMEDY]
+We reserve [WHIMSY-RETRO-COMEDY] for stories that combine a sunny tone with comedic intent, especially when they nod to the past or open with a playful adverb. Formally, a story is [WHIMSY-RETRO-COMEDY] if both of the following are true:
+- The story is [STYLE-LIGHTHEARTED]
+- The story is [THEME-HUMOR] and either of the following is true:
+  - The story is [TOPIC-BYGONE-ERAS]
+  - The story is [STARTS-WITH-ADVERB]

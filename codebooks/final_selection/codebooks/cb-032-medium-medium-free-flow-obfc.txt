@@ -1,0 +1,49 @@
+Think of this as a friendly cheat-sheet for tagging stories — relaxed in tone but strict in logic. Each entry tells you when to apply a tag; the node IDs in brackets are the exact labels you'll use.
+
+[attr-4]
+Call a story [attr-4] when it stretches beyond six paragraphs.
+
+[attr-7]
+Tag a story [attr-7] when its overall style fits the classic mold.
+
+[attr-2]
+Use [attr-2] for a story that leaves you hanging with a cliffhanger.
+
+[attr-6]
+Mark a story [attr-6] if the very first word is a preposition.
+
+[attr-11]
+Apply [attr-11] when the story carries the theme of deception.
+
+[attr-9]
+A story is [attr-9] when its tone or approach feels playful.
+
+[attr-12]
+Use [attr-12] if the story’s theme centers on helping others.
+
+[attr-10]
+Tag [attr-10] when the story foregrounds agency — characters acting with control or power.
+
+[attr-3]
+Mark [attr-3] when the story uses juxtaposition.
+
+[attr-8]
+Use [attr-8] for stories that take on a philosophical tone.
+
+[attr-5]
+A story is [attr-5] if either of the following is true:
+- The story is both [attr-11] and not [attr-12]
+- Exactly one of the following is true:
+  - The story is [attr-10]
+  - The story is [attr-12]
+
+In other words: a rich theme can come from deception that isn’t about helping others, or from a situation where exactly one of agency or helping-others is present — but not both.
+
+[attr-1]
+A story is [attr-1] if both of the following are true:
+- The story is [attr-7]
+- Either of the following is true:
+  - The story is both [attr-2] and not [attr-9]
+  - The story is both [attr-6] and [attr-5]
+
+So, to earn the [attr-1] label it must be classic in style, and then either end on a non-playful cliffhanger, or begin with a preposition and qualify as a [attr-5].

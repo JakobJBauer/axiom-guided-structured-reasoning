@@ -1,0 +1,25 @@
+[THEME-INNOVATION]
+A story is [THEME-INNOVATION] if the story has the theme Innovation.
+
+[TOPIC-CULTURAL-TRADITIONS]
+A story is [TOPIC-CULTURAL-TRADITIONS] if the story is about cultural traditions.
+
+[TOPIC-BYGONE-ERAS]
+A story is [TOPIC-BYGONE-ERAS] if the story is about bygone eras.
+
+[USES-WH-QUESTIONS]
+A story is [USES-WH-QUESTIONS] if the story uses wh-questions.
+
+[STARTS-WITH-NOUN]
+A story is [STARTS-WITH-NOUN] if the story starts with a noun.
+
+[STARTS-WITH-PREPOSITION]
+A story is [STARTS-WITH-PREPOSITION] if the story starts with a preposition.
+
+[CULTURAL-INNOVATION-QUESTIONS]
+A story is [CULTURAL-INNOVATION-QUESTIONS] if all of the following are true:
+- The story is [THEME-INNOVATION]
+- Either of the following is true:
+  - The story is [TOPIC-CULTURAL-TRADITIONS]
+  - The story is [TOPIC-BYGONE-ERAS]
+- The story is [USES-WH-QUESTIONS]

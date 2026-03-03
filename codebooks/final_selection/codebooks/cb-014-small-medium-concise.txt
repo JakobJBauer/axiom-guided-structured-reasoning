@@ -1,0 +1,22 @@
+[STARTS-WITH-ADJECTIVE]  
+A story is STARTS-WITH-ADJECTIVE if it begins with an adjective.
+
+[TOPIC-GIANT-CREATURES]  
+A story is TOPIC-GIANT-CREATURES if it’s about giant creatures.
+
+[GIANT-FOCUSED]  
+A story is GIANT-FOCUSED if both are true:  
+- The story is [TOPIC-GIANT-CREATURES]  
+- The story is not [STARTS-WITH-ADJECTIVE]
+
+[DYNAMIC-OPENING]  
+A story is DYNAMIC-OPENING if exactly one is true:  
+- The story is [STARTS-WITH-ADJECTIVE]  
+- The story is [TOPIC-GIANT-CREATURES]
+
+[ENGAGING-GIANT-STORY]  
+A story is ENGAGING-GIANT-STORY if both are true:  
+- The story is [GIANT-FOCUSED]  
+- Either is true:  
+  - The story is [DYNAMIC-OPENING]  
+  - The story is not [STARTS-WITH-ADJECTIVE]

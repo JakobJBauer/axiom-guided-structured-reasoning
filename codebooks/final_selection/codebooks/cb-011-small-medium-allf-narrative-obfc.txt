@@ -1,0 +1,35 @@
+Picture a catalog of stories as if it were a curious museum wing, each label a rule that decides where a tale hangs. Walk with me through these signs — each one is strict about wording and order, but they tell a little tale of their own.
+
+[attr-6]
+In the glass case labeled [attr-6], a story earns its place if The story is about the arts. That simple sentence is the key: any tale that revolves around painters, plays, music, sculpture, or the craft and craftiness of creative life belongs here.
+
+[attr-7]
+A different label, [attr-7], is pinned to stories that speak in possibilities and what-ifs. A story is [attr-7] if The story uses conditional mood — the linguistic thread of might, would, could, and if.
+
+[attr-4]
+Near the entrance, a bright placard reads [attr-4]. To earn this badge, a tale must begin with a descriptive spark: A story is [attr-4] if The story starts with a adjective.
+
+[attr-5]
+In a quieter alcove, the label [attr-5] hangs on narratives that pause to ask and to weigh. A story is [attr-5] if The story is philosophical — seeking meaning, framing questions, and lingering on ideas.
+
+[attr-3]
+Some labels are compound, stitched from smaller truths. [attr-3] is such a patchwork: A story is [attr-3] if both of the following are true:
+- The story is [attr-7]
+- The story is not [attr-4]
+It’s the kind of story that toys with possibilities but doesn’t open with a descriptive lead-in.
+
+[attr-1]
+Then there’s a label for tales that stand on one side or the other, but not both. [attr-1] is given when exactly one of the following is true:
+- The story is [attr-6]
+- The story is [attr-5]
+It’s an exclusive choice: either the story is about artistic worlds, or it dwells in philosophical style — but not both at once.
+
+[attr-2]
+Finally, the most intricate plaque: [attr-2]. It reads like a riddle with two routes. A story is [attr-2] if either of the following is true:
+- The story is [attr-3]
+- Both of the following are true:
+  - The story is in the set of topics that includes [attr-6]
+  - The truth of [attr-5] is equal to the truth of not [attr-7]
+In other words, a story can qualify by being conditional in mood while not starting with an adjective, or by fitting into the arts topics and having a philosophical status that exactly mirrors whether it does not use the conditional mood.
+
+Walk away from this wing knowing each label is precise — every bracketed name, every logical connector — but now imagine them as characters in the same story: topics and moods, openings and styles, each rule a voice that decides where a tale belongs.

@@ -1,0 +1,38 @@
+[USES-DISCOURSE-MARKERS]
+Definition: A story satisfies [USES-DISCOURSE-MARKERS] when it incorporates discourse markers.
+Specification: Discourse markers are lexical or phrasal elements (e.g., however, therefore, meanwhile) that explicitly signal rhetorical or connective relations between clauses, sentences, or narrative segments.
+Annotation rule: Mark [USES-DISCOURSE-MARKERS] = true if such markers are present and function to structure the discourse.
+
+[HAS-JUXTAPOSITION]
+Definition: A story satisfies [HAS-JUXTAPOSITION] when it contains juxtaposition.
+Specification: Juxtaposition denotes the deliberate placement of contrasting or complementary elements (characters, scenes, themes, images, or ideas) in close proximity to highlight differences or relationships.
+Annotation rule: Mark [HAS-JUXTAPOSITION] = true if juxtaposed elements are employed as a structural or rhetorical device.
+
+[TOPIC-MYSTICAL-CREATURES]
+Definition: A story satisfies [TOPIC-MYSTICAL-CREATURES] when its subject matter concerns mystical creatures.
+Specification: “Mystical creatures” refers to beings of supernatural, mythic, or magical provenance (e.g., dragons, fairies, spirits) that are central to the narrative’s topic or premise.
+Annotation rule: Mark [TOPIC-MYSTICAL-CREATURES] = true if mystical creatures are a primary topical focus.
+
+[HAS-A-RED-HERRING]
+Definition: A story satisfies [HAS-A-RED-HERRING] when it contains a red herring.
+Specification: A red herring is an intentional misleading cue or false lead introduced to divert attention from the actual explanation, outcome, or perpetrator.
+Annotation rule: Mark [HAS-A-RED-HERRING] = true if the narrative includes an element designed to mislead or distract from the true solution or meaning.
+
+[TOPIC-GIANT-CREATURES]
+Definition: A story satisfies [TOPIC-GIANT-CREATURES] when it is about giant creatures.
+Specification: “Giant creatures” denotes beings characterized primarily by extraordinary size relative to human-scale norms and that constitute the narrative’s central topic.
+Annotation rule: Mark [TOPIC-GIANT-CREATURES] = true if giant-sized beings are the focal topic.
+
+[FANTASTICAL-JUXTAPOSITION]
+Definition: A story satisfies [FANTASTICAL-JUXTAPOSITION] when both of the following are true:
+- The story is [TOPIC-MYSTICAL-CREATURES]
+- The story is [HAS-JUXTAPOSITION]
+Logical interpretation: [FANTASTICAL-JUXTAPOSITION] = [TOPIC-MYSTICAL-CREATURES] AND [HAS-JUXTAPOSITION]
+Annotation rule: Mark [FANTASTICAL-JUXTAPOSITION] = true only when the narrative simultaneously meets the criteria for mystical-creature topicality and for juxtaposition.
+
+[GIANT-MISDIRECTION]
+Definition: A story satisfies [GIANT-MISDIRECTION] when both of the following are true:
+- The story is [TOPIC-GIANT-CREATURES]
+- The story is [HAS-A-RED-HERRING]
+Logical interpretation: [GIANT-MISDIRECTION] = [TOPIC-GIANT-CREATURES] AND [HAS-A-RED-HERRING]
+Annotation rule: Mark [GIANT-MISDIRECTION] = true only when the narrative simultaneously centers on giant creatures and employs a red herring as a misleading device.

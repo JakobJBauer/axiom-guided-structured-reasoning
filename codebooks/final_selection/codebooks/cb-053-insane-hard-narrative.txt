@@ -1,0 +1,187 @@
+[STARTS-WITH-ADVERB]
+Imagine flipping open a tale and finding it begins with a crisp, telling adverb—"Suddenly," "Quietly," "Bravely." When a story opens that way, we mark it as [STARTS-WITH-ADVERB].
+
+[TOPIC-CULTURAL-TRADITIONS]
+When a story lives in the rituals, ceremonies, and passed-down practices of a people—when it revolves around festivals, rites, or the ways families keep their past alive—it wears the label [TOPIC-CULTURAL-TRADITIONS].
+
+[THEME-INNOVATION]
+If a narrative pulses with invention, new ideas, or the spirit of making things differently—that hunger to change the old into the new—then that story carries [THEME-INNOVATION].
+
+[THEME-HUMOR]
+If laughter, wit, or comic perspective threads through the plot and tone, the story is marked [THEME-HUMOR].
+
+[TOPIC-HIDDEN-TREASURES]
+When a tale turns on secret caches, forgotten riches, or buried things waiting to be found, it is about hidden troves and thus is [TOPIC-HIDDEN-TREASURES].
+
+[STYLE-CLASSIC]
+A story that reads like it belongs to a long lineage—timeless structure, traditional pacing, enduring diction—is given the stamp [STYLE-CLASSIC].
+
+[STYLE-HUMOROUS]
+When the overall voice and craft of the tale aim to amuse and delight, we call that [STYLE-HUMOROUS].
+
+[STYLE-MODERN]
+Stories that feel contemporary—fresh language, present concerns, a modern sensibility—are categorized as [STYLE-MODERN].
+
+[TOPIC-GIANT-CREATURES]
+If colossal beasts, towering animals, or creatures of outsized scale populate the narrative, the story falls under [TOPIC-GIANT-CREATURES].
+
+[USES-PERFECT-ASPECT]
+When the prose leans on constructions like "has done" or "had been," showing actions completed relative to other moments, the story [USES-PERFECT-ASPECT].
+
+[HAS-A-FLASHBACK]
+If the narrative turns back in time within the story—bringing a past scene to light as part of the present telling—it contains [HAS-A-FLASHBACK].
+
+[THEME-HARDSHIP]
+Stories that center on struggle, endurance, and the trials characters must face are suffused with [THEME-HARDSHIP].
+
+[HAS-A-CLIFFHANGER]
+When a tale leaves a vital question unresolved at the end, hanging the reader on a tense edge, that story has [HAS-A-CLIFFHANGER].
+
+[HAS-A-MORAL-LESSON]
+If a narrative clearly offers a lesson about right, wrong, or how to live, then it carries [HAS-A-MORAL-LESSON].
+
+[TOPIC-LOST-CIVILIZATIONS]
+Tales that explore abandoned cities, archaeological mysteries, and civilizations gone from history are labeled [TOPIC-LOST-CIVILIZATIONS].
+
+[STYLE-PLAYFUL]
+When the writing dances—full of light-hearted tricks, mischievous phrasing, and playful turns—it is [STYLE-PLAYFUL].
+
+[TOPIC-SEASONAL-CHANGES]
+Stories that revolve around the turning of seasons, harvests, and the cycle of nature belong to [TOPIC-SEASONAL-CHANGES].
+
+[STARTS-WITH-PREPOSITION]
+If the opening word is a preposition—"In," "On," "Under"—then the story is [STARTS-WITH-PREPOSITION].
+
+[HAS-JUXTAPOSITION]
+When a story places contrasting images, ideas, or scenes side by side to create fresh meaning, it displays [HAS-JUXTAPOSITION].
+
+[THEME-PROBLEM-SOLVING]
+If the heartbeat of the tale is puzzle, strategy, or characters overcoming obstacles through cleverness, it embodies [THEME-PROBLEM-SOLVING].
+
+[TOPIC-TIME-TRAVEL]
+Stories that carry characters between eras, sending them forward or backward through time, are marked [TOPIC-TIME-TRAVEL].
+
+[TOPIC-BYGONE-ERAS]
+When a narrative dwells in days long past—recreating vanished worlds and manners—it belongs to [TOPIC-BYGONE-ERAS].
+
+[HAS-CIRCULAR-NARRATIVE-STRUCT]
+If the plot loops back to its beginning or repeats structure in a ring, the story has [HAS-CIRCULAR-NARRATIVE-STRUCT].
+
+[USES-DISCOURSE-MARKERS]
+When a tale uses connectors like "however," "therefore," or "meanwhile" to guide its reasoning and flow, it [USES-DISCOURSE-MARKERS].
+
+[USES-WH-QUESTIONS]
+If the narrative voice asks who, what, where, when, why, or how within the text, it [USES-WH-QUESTIONS].
+
+[TOPIC-THE-ARTS]
+Stories that center on creation—painting, music, theater, dance, and the lives of artists—are classified as [TOPIC-THE-ARTS].
+
+[THEME-MAGIC]
+When wonder and supernatural forces shape the plot, letting the impossible become possible, the story is suffused with [THEME-MAGIC].
+
+[STYLE-PHILOSOPHICAL]
+If a narrative reflects on meaning, being, and big questions in a contemplative way, it is [STYLE-PHILOSOPHICAL].
+
+[STYLE-MINIMALIST]
+When the prose favors restraint—few words, tight scenes, open spaces—it qualifies as [STYLE-MINIMALIST].
+
+[HAS-A-STORY-WITHIN-A-STORY]
+If one narrative nests inside another, a tale telling another tale, then it contains [HAS-A-STORY-WITHIN-A-STORY].
+
+[LONG-STORY]
+A story that stretches beyond 375 words earns the tag [LONG-STORY].
+
+[TOPIC-MYSTICAL-CREATURES]
+If enchanted beings—fae, spirits, or otherworldly animals—play central roles, the story is [TOPIC-MYSTICAL-CREATURES].
+
+[LOW-READABILITY]
+When a text scores below 86.4 on readability measures and thus is harder to parse, we mark it [LOW-READABILITY].
+
+[HAS-CHECKHOVS-GUN]
+If an apparently minor detail is introduced and later becomes crucial—a classic Chekhov's gun—the story has [HAS-CHECKHOVS-GUN].
+
+[MANY-PARAGRAPHS]
+When a tale is organized into more than six paragraphs, it falls under [MANY-PARAGRAPHS].
+
+[THEME-DECEPTION]
+Stories that weave lies, disguises, and misleading appearances carry the theme [THEME-DECEPTION].
+
+[THEME-AGENCY]
+If characters take decisive action and drive the plot through their choices, the story exhibits [THEME-AGENCY].
+
+[TOPIC-MAGICAL-LANDS]
+When the setting itself is a wondrous realm—forests of enchantment, kingdoms beyond maps—the tale is about [TOPIC-MAGICAL-LANDS].
+
+[USES-SUPERLATIVE-FORMS]
+If the language stretches to extremes—"best," "most," "least"—the story [USES-SUPERLATIVE-FORMS].
+
+[STARTS-WITH-ADJECTIVE]
+When the first word that greets a reader is an adjective—"Ancient," "Lonely," "Bright"—the story is [STARTS-WITH-ADJECTIVE].
+
+[THEME-KINDNESS]
+If generosity, compassion, and caring steer the story’s moral compass, it carries [THEME-KINDNESS].
+
+[HIGH-READABILITY]
+When the prose flows effortlessly and scores above 96.1 on readability metrics, we call it [HIGH-READABILITY].
+
+[STARTS-WITH-NOUN]
+If the opening word names a person, place, or thing—"River," "Captain," "City"—the story is [STARTS-WITH-NOUN].
+
+[USES-CONDITIONAL-MOOD]
+When the narrative frames possibilities with "would," "could," or "if... then," it [USES-CONDITIONAL-MOOD].
+
+[HAS-A-RED-HERRING]
+If the plot deliberately misleads the reader with a distracting clue, that device is [HAS-A-RED-HERRING].
+
+[SHORT-STORY]
+A tale shorter than 160 words belongs to [SHORT-STORY].
+
+[STYLE-SURREAL]
+When a story bends reality into dreamlike, illogical, or bizarre shapes, it is [STYLE-SURREAL].
+
+[THEME-HELPING-OTHERS]
+If acts of assistance, solidarity, and altruism form the story’s heart, it has [THEME-HELPING-OTHERS].
+
+[STYLE-LIGHTHEARTED]
+When the tone is breezy, cheerful, and undemanding, the story reads as [STYLE-LIGHTHEARTED].
+
+[COMPLEX-NARRATIVE]
+Some stories are labyrinths—complex in structure and theme—and when they meet a particular pattern, we call them [COMPLEX-NARRATIVE]. Formally, a story is [COMPLEX-NARRATIVE] if either of the following is true:
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is in [TOPIC-LOST-CIVILIZATIONS], [TOPIC-BYGONE-ERAS], [TOPIC-TIME-TRAVEL]
+      - The story is [HAS-CIRCULAR-NARRATIVE-STRUCT]
+    - either of the following is true:
+      - The story is [HAS-A-STORY-WITHIN-A-STORY]
+      - both of the following are true:
+        - The story is [HAS-A-FLASHBACK]
+        - It is not the case that both of the following are true:
+          - The story is [HAS-A-RED-HERRING]
+          - The story is [HAS-CHECKHOVS-GUN]
+  - both of the following are true:
+    - exactly one of the following is true:
+      - The story is [STYLE-CLASSIC]
+      - The story is [STYLE-MODERN]
+    - either of the following is true:
+      - both of the following are true:
+        - The story is [THEME-MAGIC]
+        - It is not the case that the story is [TOPIC-MYSTICAL-CREATURES]
+      - both of the following are true:
+        - The story is [THEME-PROBLEM-SOLVING]
+        - The story is [USES-DISCOURSE-MARKERS]
+- both of the following are true:
+  - either of the following is true:
+    - both of the following are true:
+      - The story is [THEME-DECEPTION]
+      - It is not both of the following are true:
+        - The story is [THEME-KINDNESS]
+        - The story is [THEME-HELPING-OTHERS]
+    - The story is [HAS-A-RED-HERRING]
+  - either of the following is true:
+    - exactly one of the following is true:
+      - The story is [LONG-STORY]
+      - The story is [SHORT-STORY]
+    - both of the following are true:
+      - The story is [HAS-CHECKHOVS-GUN]
+      - It is not the case that the story is [HAS-A-CLIFFHANGER]
