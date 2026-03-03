@@ -12,7 +12,7 @@ from pathlib import Path
 import sys
 
 # Ensure project root is on sys.path so we can import local modules
-REPO_ROOT = Path(__file__).resolve().parents[2]
+REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
@@ -62,17 +62,13 @@ def main() -> None:
         gradient_accumulation_steps=8,
         num_train_epochs=3,
         learning_rate=2e-5,
-        logging_steps=10,
         save_steps=200,
-        report_to="none",
+        report_to="wandb",
         gradient_checkpointing=True,
         warmup_steps=5,
         max_grad_norm=1.0,
         logging_steps=5,
         save_strategy="epoch",
-        report_to="wandb",
-        evaluation_strategy="steps",
-        eval_steps=10,
         dataset_text_field="text",
         seed=42,
     )
@@ -90,7 +86,6 @@ def main() -> None:
         model=args.model,
         args=training_args,
         train_dataset=dataset,
-        dataset_text_field="text",
         peft_config=peft_config,
     )
 

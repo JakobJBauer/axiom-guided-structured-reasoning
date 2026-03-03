@@ -5,3 +5,4 @@ __pycache__
 codebooks/
 !codebooks/generator/
 !codebooks/final_selection/
+wandb/

@@ -125,6 +125,15 @@ def main() -> None:
         help="Random seed for sampling the dataset.",
     )
     parser.add_argument(
+        "--split",
+        type=str,
+        default="train",
+        help=(
+            "Logical split to draw stories from "
+            "(train, validation, test; validation maps to the dataset's test split)."
+        ),
+    )
+    parser.add_argument(
         "--max-workers",
         type=int,
         default=4,
@@ -147,6 +156,7 @@ def main() -> None:
         stories=None,
         stories_story_key="story",
         codebooks_root=Path("codebooks") / "final_selection",
+        simplestories_split=args.split,
         seed=args.seed,
     )
 

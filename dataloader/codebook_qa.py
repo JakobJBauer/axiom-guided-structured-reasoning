@@ -40,6 +40,7 @@ class CodebookQADataset:
         stories: Optional[Sequence[Mapping[str, Any]]] = None,
         stories_story_key: str = "story",
         codebooks_root: Path | str = Path("codebooks") / "final_selection",
+        simplestories_split: str = "train",
         seed: Optional[int] = None,
     ) -> None:
         """
@@ -54,6 +55,8 @@ class CodebookQADataset:
                 - codebooks/  (text codebooks)
             seed: Optional RNG seed for reproducibility.
         """
+        self._simplestories_split = simplestories_split
+
         if seed is not None:
             random.seed(seed)
 
@@ -174,8 +177,12 @@ class CodebookQADataset:
 
             pip install datasets
 
-        The dataset ID is \"SimpleStories/SimpleStories\" and we use the
-        default `train` split.
+        The dataset ID is \"SimpleStories/SimpleStories\" and we map our
+        requested split onto the underlying dataset's available splits.
+        Currently, SimpleStories exposes \"train\" and \"test\"; we support:
+        - \"train\" -> \"train\"
+        - \"test\"  -> \"test\"
+        - \"validation\" / \"val\" / \"eval\" / \"seval\" -> \"test\"
         """
         try:
             from datasets import load_dataset
@@ -186,7 +193,20 @@ class CodebookQADataset:
                 "story rows explicitly."
             ) from exc
 
-        ds = load_dataset("SimpleStories/SimpleStories", split="train")
+        requested = (self._simplestories_split or "train").lower()
+        if requested in {"train"}:
+            hf_split = "train"
+        elif requested in {"test"}:
+            hf_split = "test"
+        elif requested in {"validation", "val", "eval", "seval"}:
+            hf_split = "test"
+        else:
+            raise ValueError(
+                f"Unsupported SimpleStories split '{self._simplestories_split}'. "
+                "Expected one of: train, test, validation, val, eval, seval."
+            )
+
+        ds = load_dataset("SimpleStories/SimpleStories", split=hf_split)
         return ds
 
     def _infer_base_from_stem(self, stem: str) -> str:
