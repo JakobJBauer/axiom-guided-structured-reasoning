@@ -2,7 +2,11 @@ import os
 from pathlib import Path
 from typing import Optional, Dict, List, Tuple
 import warnings
-import graphviz
+
+try:  # Optional dependency
+    import graphviz
+except ImportError:  # pragma: no cover
+    graphviz = None
 
 
 def visualize_graph(
@@ -28,6 +32,11 @@ def _visualize_with_graphviz(
     node_shape: str,
     engine: str
 ) -> Optional[str]:
+    if graphviz is None:
+        raise RuntimeError(
+            "graphviz python package is required for visualization but is not installed."
+        )
+
     # Create a directed graph
     dot = graphviz.Digraph(format=format, engine=engine)
     dot.attr(rankdir='TB')  # Top to bottom

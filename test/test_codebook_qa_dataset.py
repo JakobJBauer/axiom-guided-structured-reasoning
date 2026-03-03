@@ -16,6 +16,7 @@ from dataloader.leaf_values import (  # noqa: E402
     compute_leaf_values_for_graph,
     load_leaf_specs,
 )
+from dataloader.codebook_qa import CodebookQADataset  # noqa: E402
 
 
 def test_all_final_graph_leaves_have_specs():
@@ -108,5 +109,73 @@ def test_compute_leaf_values_for_obfuscated_graph_smoke():
     for k, v in values.items():
         assert isinstance(k, str)
         assert isinstance(v, bool)
+
+
+def test_codebook_qa_dataset_sample_smoke():
+    """Smoke test: sampling from CodebookQADataset returns a coherent sample."""
+    # Minimal simplestory row; leaf population only requires feature keys, not text content.
+    stories = [
+        {
+            "story": "This is a dummy story used only for testing the dataloader.",
+            # All other features are optional for the smoke test; they default to None
+            # inside compute_leaf_values_for_graph and simply yield False leaves.
+        }
+    ]
+
+    dataset = CodebookQADataset(
+        stories=stories,
+        stories_story_key="story",
+        codebooks_root=REPO_ROOT / "codebooks" / "final_selection",
+        seed=123,
+    )
+
+    sample = dataset.sample()
+
+    # Basic structure checks
+    assert isinstance(sample.story, str) and sample.story
+    assert isinstance(sample.codebook_text, str) and sample.codebook_text
+    assert sample.graph is not None
+    assert sample.sink_id in {n.id for n in sample.graph.get_nodes()}
+    assert isinstance(sample.question, str) and "Is the story" in sample.question
+
+    # Reasoning graph should contain the sink and have values set on leaves
+    sink_in_reasoning = any(
+        n.id == sample.sink_id for n in sample.reasoning_graph.get_nodes()
+    )
+    assert sink_in_reasoning
+    assert sample.reasoning_graph.leaf_values_set()
+
+    # --- Check that leaf auto-population matches a fresh call to compute_leaf_values_for_graph ---
+    # Reconstruct a minimal JSON-like graph dict from the sampled full graph
+    graph_dict = {
+        "nodes": [
+            {
+                "id": n.id,
+                "label": n.label,
+                "formula_type": None if n.formula is None else "Formula",
+                "formula_args": [],
+            }
+            for n in sample.graph.get_nodes()
+        ],
+        "edges": [
+            {"source": e.source, "target": e.target}
+            for e in sample.graph.get_edges()
+        ],
+    }
+
+    clear_graph_data = getattr(sample.graph, "_clear_graph_data", None)
+    leaf_specs = load_leaf_specs()
+
+    recomputed_leaf_values = compute_leaf_values_for_graph(
+        row=sample.story_row,
+        graph=graph_dict,
+        leaf_specs=leaf_specs,
+        clear_graph=clear_graph_data,
+    )
+
+    # On the reasoning graph, each leaf node's value should match the recomputed one
+    for leaf in sample.reasoning_graph.get_leaf_nodes():
+        assert leaf.id in recomputed_leaf_values
+        assert leaf.value == recomputed_leaf_values[leaf.id]
 
 
