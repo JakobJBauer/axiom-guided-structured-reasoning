@@ -54,6 +54,7 @@ class CodebookQADataset:
                 - graphs/  (JSON graphs)
                 - codebooks/  (text codebooks)
             seed: Optional RNG seed for reproducibility.
+            simplestories_split: Split of the SimpleStories dataset to load. Can be "train", "test" and "validation".
         """
         self._simplestories_split = simplestories_split
 

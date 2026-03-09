@@ -123,7 +123,7 @@ def load_model_for_grpo(base_model_name_or_path: str, adapter_model_name_or_path
     tokenizer = AutoTokenizer.from_pretrained(
         base_model_name_or_path, trust_remote_code=True
     )
-    # GRPOTrainer expects left-padded inputs.
+
     tokenizer.padding_side = "left"
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
@@ -261,6 +261,8 @@ def run_grpo_training(train_dataset, base_model_name_or_path, adapter_model_name
     )
 
     trainer.train()
+    trainer.save_model(output_dir)
+    tokenizer.save_pretrained(output_dir)
 
 
 def main() -> None:
