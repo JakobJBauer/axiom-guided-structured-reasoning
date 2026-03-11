@@ -10,6 +10,7 @@ annotate_codebook_qa_sft.py (JSONL with a 'text' field).
 
 from pathlib import Path
 import sys
+from dotenv import load_dotenv
 
 # Ensure project root is on sys.path so we can import local modules
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -19,6 +20,8 @@ if str(REPO_ROOT) not in sys.path:
 from datasets import load_dataset
 from trl import SFTConfig, SFTTrainer
 from peft import LoraConfig
+
+load_dotenv()
 
 
 def main() -> None:
@@ -57,6 +60,7 @@ def main() -> None:
     dataset = load_dataset("json", data_files=str(data_path), split="train")
 
     training_args = SFTConfig(
+        run_name=f"sft-{Path(args.model).name}-{Path(args.output_dir).name}",
         output_dir=args.output_dir,
         per_device_train_batch_size=4,
         gradient_accumulation_steps=8,

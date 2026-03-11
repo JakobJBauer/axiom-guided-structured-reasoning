@@ -25,88 +25,78 @@ from dataloader.codebook_qa import CodebookQADataset
 from trl import GRPOConfig, GRPOTrainer
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
+from dotenv import load_dotenv
 
 
-THINKING_OPEN = "<thinking>"
-THINKING_CLOSE = "</thinking>"
+load_dotenv()
 
+THINKING_OPEN, THINKING_CLOSE = "<thinking>", "</thinking>"
 
-def reward_structure(completions, **kwargs):
-    """
-    Reward adherence to the desired output structure.
-
-    Components:
-    - +1.0 if there is a <thinking>...</thinking> block in correct order.
-    - +1.0 if the final non-empty line after </thinking> is a yes/no answer
-      of the form:
-         "Yes, the story is ..." or "No, the story is not ..."
-    - +0.5 if there is at least one predicate verdict like
-      "(ATTR : True)" or "(ATTR : False)" inside the thinking block.
-    - +0.5 if:
-        * There is at least one [ATTR] citation in the thinking block, and
-        * For every (ATTR : ...) verdict inside the thinking block, that ATTR
-          also appears as [ATTR] somewhere in the thinking block.
-    """
-    rewards = []
-
+def extract_responses(completions):
+    responses = []
     for completion in completions:
-        # TRL GRPO passes a list of message dicts per completion; we assume
-        # the first element is the assistant content string.
         if isinstance(completion, list) and completion and isinstance(
             completion[0], dict
         ):
             text = completion[0].get("content", "") or ""
         else:
             text = str(completion)
+        responses.append(text)
+    return responses
 
-        r = 0.0
-        lower = text.lower()
+def thinking_tags_reward(completions, **kwargs):
+    # 0 - 1 reward depending on the presence of <thinking>...</thinking> tags
+    responses = extract_responses(completions)
+    rewards = []
+    for response in responses:
+        response = response.lower()
+        reward = 0.0
+        if response.count(THINKING_OPEN) == 1 and response.count(THINKING_CLOSE) == 1:
+            if response.index(THINKING_OPEN) < response.index(THINKING_CLOSE):
+                reward += 1.0
+        elif response.count(THINKING_OPEN) == 1:
+            reward += 0.5;
+        elif response.count(THINKING_CLOSE) == 1:
+            reward += 0.5;
+        rewards.append(reward)
+    return rewards
 
-        # 1) Check thinking block structure
-        start = lower.find(THINKING_OPEN)
-        end = lower.find(THINKING_CLOSE)
-        if start != -1 and end != -1 and end > start:
-            r += 1.0
+def citation_format_reward(completions, **kwargs):
+    # 0 - 0.5 reward depending on the presence of (ATTR : True) or (ATTR : False) tags
+    responses = extract_responses(completions)
+    rewards = []
+    for response in responses:
+        response = response.lower()
+        reward = 0.0
+        start = response.find(THINKING_OPEN)
+        end = response.rfind(THINKING_CLOSE)
+        if start == -1 or end == -1: reasoning = response
+        else: reasoning = response[start + len(THINKING_OPEN):end].strip()
+        
+        # Here we check whether each argument ends with a citation of the form (ATTR : True) or (ATTR : False)
+        # For now we just check presence
+        if reasoning.count("(ATTR : True)") + reasoning.count("(ATTR : False)") > 0: reward = 0.5
+        else: reward = 0.0
 
-            thinking_block = text[start + len(THINKING_OPEN) : end]
-            # 3) Check for predicate verdict patterns inside thinking block
-            verdict_pattern = r"\(([A-Z0-9\-_]+)\s*:\s*(True|False)\)"
-            verdict_matches = re.findall(verdict_pattern, thinking_block)
-            if verdict_matches:
-                r += 0.5
 
-            # Check for [ATTR] citations and alignment with (ATTR : ...) verdicts
-            citation_pattern = r"\[([A-Z0-9\-_]+)\]"
-            citations = re.findall(citation_pattern, thinking_block)
-            citation_set = {c.upper() for c in citations}
+        rewards.append(reward)
+    return rewards
+        
+def answer_format_reward(completions, **kwargs):
+    # 0 - 0.5 reward depending on the presence of yes/no answer
+    responses = extract_responses(completions)
+    rewards = []
+    for response in responses:
+        response = response.lower()
+        reward = 0.0
 
-            if citation_set and verdict_matches:
-                # All verdict ATTRs must also appear as [ATTR] somewhere
-                verdict_attrs = {name.upper() for name, _ in verdict_matches}
-                if verdict_attrs.issubset(citation_set):
-                    r += 0.5
-
-            # 2) Check final answer line after </thinking>
-            after = text[end + len(THINKING_CLOSE) :].strip().splitlines()
-            # take last non-empty line
-            last_non_empty = ""
-            for line in reversed(after):
-                line = line.strip()
-                if line:
-                    last_non_empty = line
-                    break
-
-            ans = last_non_empty.lower()
-            if ans.startswith("yes, the story is") or ans.startswith(
-                "no, the story is"
-            ):
-                r += 1.0
-        else:
-            # If no thinking block, small penalty
-            r -= 0.5
-
-        rewards.append(float(r))
-
+        # cut to after the last </thinking> tag. Fallback use the whole response.
+        end = response.rfind(THINKING_CLOSE)
+        if end == -1: answer = response
+        else: answer = response[end + len(THINKING_CLOSE):].strip()
+        if answer.startswith("yes, the story is") or answer.startswith("no, the story is not"):
+            reward += 0.5
+        rewards.append(reward)
     return rewards
 
 
@@ -238,7 +228,13 @@ def run_grpo_training(train_dataset, base_model_name_or_path, adapter_model_name
         base_model_name_or_path, adapter_model_name_or_path
     )
 
+    from pathlib import Path
+
+    base_name = Path(str(base_model_name_or_path)).name
+    adapter_name = Path(str(adapter_model_name_or_path)).name
+
     training_args = GRPOConfig(
+        run_name=f"grpo-{base_name}-{adapter_name}",
         output_dir=output_dir,
         per_device_train_batch_size=8,
         gradient_accumulation_steps=4,
@@ -255,7 +251,7 @@ def run_grpo_training(train_dataset, base_model_name_or_path, adapter_model_name
     trainer = GRPOTrainer(
         model=model,
         processing_class=tokenizer,
-        reward_funcs=reward_structure,
+        reward_funcs=[thinking_tags_reward, citation_format_reward, answer_format_reward],
         args=training_args,
         train_dataset=train_dataset,
     )
