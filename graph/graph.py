@@ -314,3 +314,6 @@ class Graph:
         "\n".join([f"Node {node.id}: {node.label} ({node.value})" for node in self.nodes]) + "\n" +\
         "\n".join([f"Edge {edge.source} -> {edge.target}" for edge in self.edges]) + "\n" +\
         "="*50 + "\n"
+
+    def generate_codebok_representation(self):
+        raise NotImplementedError("Generating codebook representation is not implemented yet")
