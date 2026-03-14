@@ -2,7 +2,7 @@ venv/
 .venv/
 __pycache__
 .env
-codebooks/
+codebooks/*
 !codebooks/generator/
 !codebooks/final_selection/
 wandb/
