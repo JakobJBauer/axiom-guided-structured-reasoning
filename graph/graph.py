@@ -1,3 +1,6 @@
+import string
+import random
+
 class Node:
     def __init__(self, id, label=None, value=None, formula=None, valid_path_parents=None):
         """
@@ -325,9 +328,25 @@ class Graph:
     def rename_nodes(self, node_map):
         for node in self.nodes:
             if node.id in node_map: node.id = node_map[node.id]
+            if node.formula is not None: node.formula.rename_node_ids(node_map)
         for edge in self.edges:
             if edge.source in node_map: edge.source = node_map[edge.source]
             if edge.target in node_map: edge.target = node_map[edge.target]
 
     def generate_codebok_representation(self):
         raise NotImplementedError("Generating codebook representation is not implemented yet")
+
+    def obfuscate(self):
+        """
+        Obfuscate the graph by renaming node IDs to random strings.
+        Returns a new graph instance with obfuscated node IDs, edges, and formulas.
+        """
+        new_graph = self.copy()
+
+        node_map = {}
+        for node in new_graph.get_nodes():
+            new_id = "".join(random.choices(string.ascii_letters + string.digits, k=8))
+            node_map[node.id] = new_id
+
+        new_graph.rename_nodes(node_map)
+        return new_graph

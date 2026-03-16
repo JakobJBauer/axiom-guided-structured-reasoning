@@ -26,7 +26,7 @@ class ReasoningTreeGenerator:
         self.min_branching_factor = min_branching_factor
         self.max_branching_factor = max_branching_factor
         self.branch_density_factor = branch_density_factor
-        self.available_formulas = available_formulas or [Not, And, Or, Xor, Equal, In]
+        self.available_formulas = available_formulas or [Not, And, Or, Xor] # [Not, And, Or, Xor, Equal, In]
         self.randomness_factor = randomness_factor
         self.max_leaf_nodes = max_leaf_nodes
         self.rng = random.Random(seed)
@@ -119,22 +119,24 @@ class ReasoningTreeGenerator:
     
     def _populate_formulas(self, graph: Graph) -> Graph:
         non_leaf_nodes = [node for node in graph.get_nodes() if not graph.is_leaf_node(node)]
+
         formula_candidates = {}
-        for formula in self.available_formulas:
-            required_parameters = formula.min_parameter_count()
-            if required_parameters not in formula_candidates: formula_candidates[required_parameters] = []
-            formula_candidates[required_parameters].append(formula)
+        for formula_cls in self.available_formulas:
+            required_parameters = formula_cls.min_parameter_count()
+            formula_candidates.setdefault(required_parameters, []).append(formula_cls)
         
         for node in non_leaf_nodes:
-            parameter_count = len(graph.get_incoming_nodes(node))
-            if parameter_count == 1:
-                formula = self.rng.choice(formula_candidates[1])
-                node.formula = formula(node.id)
-            elif parameter_count >= 2:
-                formula = self.rng.choice(formula_candidates[2])
-                node.formula = formula(node.id)
+            child_ids = [child.id for child in graph.get_incoming_nodes(node)]
+            parameter_count = len(child_ids)
+
+            if parameter_count == 0: raise ValueError(f"Node {node.id} has 0 children; cannot assign a formula")
+            elif parameter_count == 1:
+                formula_cls = self.rng.choice(formula_candidates[1])
+                node.formula = formula_cls(child_ids[0])
             else:
-                raise ValueError(f"Node {node.id} has {parameter_count} parameters, but only 1 and 2 are supported")
+                formula_cls = self.rng.choice(formula_candidates[2])
+                node.formula = formula_cls(*child_ids)
+
         return graph
 
     def _fill_leaf_nodes(self, graph: Graph) -> Graph:
@@ -152,5 +154,12 @@ class ReasoningTreeGenerator:
         return graph
 
     def _fill_non_leaf_nodes(self, graph: Graph) -> Graph:
-        # ToDo: Rename nodes and insert descriptions here
+        non_leaf_nodes = [node for node in graph.get_nodes() if not graph.is_leaf_node(node)]
+        rename_map = {}
+        for i, node in enumerate(non_leaf_nodes):
+            rename_map[node.id] = f"NODE_{i+1}"
+            node.label = f"Node {i+1} label" # ToDo: Generate nice descriptions and select better names
+        
+        graph.rename_nodes(rename_map)
+        
         return graph

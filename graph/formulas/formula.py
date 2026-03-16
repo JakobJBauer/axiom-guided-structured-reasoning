@@ -57,3 +57,32 @@ class Formula(ABC):
     def __call__(self, incoming_values):
         return self.compute(incoming_values)
 
+    def rename_node_ids(self, node_map):
+        """
+        In-place rename of any node-id string references inside this Formula.
+
+        This is used when graphs are renamed (node IDs change) and we need all
+        formulas to keep referencing the correct nodes.
+        """
+
+        def transform(obj):
+            if isinstance(obj, str):
+                return node_map.get(obj, obj)
+            if isinstance(obj, Formula):
+                obj.rename_node_ids(node_map)
+                return obj
+            if isinstance(obj, list):
+                return [transform(x) for x in obj]
+            if isinstance(obj, tuple):
+                return tuple(transform(x) for x in obj)
+            if isinstance(obj, dict):
+                return {transform(k): transform(v) for k, v in obj.items()}
+            if isinstance(obj, set):
+                return {transform(x) for x in obj}
+                
+            return obj
+
+        # Rewrite any string references stored on this object
+        for k, v in list(self.__dict__.items()):
+            self.__dict__[k] = transform(v)
+
