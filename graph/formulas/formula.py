@@ -9,6 +9,16 @@ class Formula(ABC):
     Formulas compute values from incoming node values and can auto-infer
     their valid_path_parents based on their structure.
     """
+
+    @abstractmethod
+    def min_parameter_count(self):
+        """
+        Return the minimum number of parameters required for this formula.
+            
+        Returns:
+            Minimum number of parameters required
+        """
+        pass
     
     @abstractmethod
     def compute(self, incoming_values):

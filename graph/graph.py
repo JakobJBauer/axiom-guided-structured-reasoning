@@ -323,7 +323,11 @@ class Graph:
         "="*50 + "\n"
 
     def rename_nodes(self, node_map):
-        raise NotImplementedError("Renaming nodes is not implemented yet")
+        for node in self.nodes:
+            if node.id in node_map: node.id = node_map[node.id]
+        for edge in self.edges:
+            if edge.source in node_map: edge.source = node_map[edge.source]
+            if edge.target in node_map: edge.target = node_map[edge.target]
 
     def generate_codebok_representation(self):
         raise NotImplementedError("Generating codebook representation is not implemented yet")

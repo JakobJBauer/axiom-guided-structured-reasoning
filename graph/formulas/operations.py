@@ -10,6 +10,9 @@ class Not(Formula):
         """
         self.key_or_formula = key_or_formula
     
+    def min_parameter_count(self):
+        return 1
+    
     def _get_value(self, incoming_values):
         if isinstance(self.key_or_formula, Formula):
             return self.key_or_formula(incoming_values)
@@ -45,6 +48,9 @@ class And(Formula):
             *keys_or_formulas: Variable number of node IDs (strings) or Formula objects to AND together
         """
         self.keys_or_formulas = list(keys_or_formulas)
+    
+    def min_parameter_count(self):
+        return 2
     
     def _get_value(self, key_or_formula, incoming_values):
         if isinstance(key_or_formula, Formula):
@@ -88,6 +94,9 @@ class Or(Formula):
             *keys_or_formulas: Variable number of node IDs (strings) or Formula objects to OR together
         """
         self.keys_or_formulas = list(keys_or_formulas)
+    
+    def min_parameter_count(self):
+        return 2
     
     def _get_value(self, key_or_formula, incoming_values):
         if isinstance(key_or_formula, Formula):
@@ -136,6 +145,9 @@ class Xor(Formula):
             *keys_or_formulas: Variable number of node IDs (strings) or Formula objects to XOR together
         """
         self.keys_or_formulas = list(keys_or_formulas)
+    
+    def min_parameter_count(self):
+        return 2
     
     def _get_value(self, key_or_formula, incoming_values):
         if isinstance(key_or_formula, Formula):
@@ -188,6 +200,9 @@ class Equal(Formula):
         self.key = key
         self.value = value
     
+    def min_parameter_count(self):
+        return 1
+    
     def compute(self, incoming_values):
         node_value = incoming_values.get(self.key)
         if node_value is None:
@@ -216,6 +231,9 @@ class In(Formula):
         """
         self.key = key
         self.values = list(values) if not isinstance(values, str) else [values]
+    
+    def min_parameter_count(self):
+        return 1
     
     def compute(self, incoming_values):
         node_value = incoming_values.get(self.key)

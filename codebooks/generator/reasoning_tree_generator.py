@@ -35,7 +35,14 @@ class ReasoningTreeGenerator:
         with open(leaf_node_json_path, "r") as f:
             self.available_leaf_nodes = json.load(f)
 
-    def generate_structure(self) -> Graph:
+    def generate(self) -> Graph:
+        graph = self._generate_structure()
+        graph = self._populate_formulas(graph)
+        graph = self._fill_leaf_nodes(graph)
+        graph = self._rename_nodes(graph)
+        return graph
+
+    def _generate_structure(self) -> Graph:
         """
             Generates a structural reasoning tree.
             Formula population and id/label updates have to be done in a further step.
@@ -108,3 +115,30 @@ class ReasoningTreeGenerator:
         graph.remove_nodes(remaining_leaf_nodes)
 
         return graph
+
+    
+    def _populate_formulas(self, graph: Graph) -> Graph:
+        non_leaf_nodes = [node for node in graph.get_nodes() if not graph.is_leaf_node(node)]
+        formula_candidates = {}
+        for formula in self.available_formulas:
+            required_parameters = formula.min_parameter_count()
+            if required_parameters not in formula_candidates: formula_candidates[required_parameters] = []
+            formula_candidates[required_parameters].append(formula)
+        
+        for node in non_leaf_nodes:
+            parameter_count = len(graph.get_incoming_nodes(node))
+            if parameter_count == 1:
+                formula = self.rng.choice(formula_candidates[1])
+                node.formula = formula(node.id)
+            elif parameter_count >= 2:
+                formula = self.rng.choice(formula_candidates[2])
+                node.formula = formula(node.id)
+            else:
+                raise ValueError(f"Node {node.id} has {parameter_count} parameters, but only 1 and 2 are supported")
+        return graph
+
+    def _fill_leaf_nodes(self, graph: Graph) -> Graph:
+        raise NotImplementedError("Not implemented yet")
+
+    def _rename_nodes(self, graph: Graph) -> Graph:
+        raise NotImplementedError("Not implemented yet")
