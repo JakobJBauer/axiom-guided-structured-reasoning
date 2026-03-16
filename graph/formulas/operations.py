@@ -10,7 +10,8 @@ class Not(Formula):
         """
         self.key_or_formula = key_or_formula
     
-    def min_parameter_count(self):
+    @classmethod
+    def min_parameter_count(cls):
         return 1
     
     def _get_value(self, incoming_values):
@@ -49,7 +50,8 @@ class And(Formula):
         """
         self.keys_or_formulas = list(keys_or_formulas)
     
-    def min_parameter_count(self):
+    @classmethod
+    def min_parameter_count(cls):
         return 2
     
     def _get_value(self, key_or_formula, incoming_values):
@@ -95,7 +97,8 @@ class Or(Formula):
         """
         self.keys_or_formulas = list(keys_or_formulas)
     
-    def min_parameter_count(self):
+    @classmethod
+    def min_parameter_count(cls):
         return 2
     
     def _get_value(self, key_or_formula, incoming_values):
@@ -146,7 +149,8 @@ class Xor(Formula):
         """
         self.keys_or_formulas = list(keys_or_formulas)
     
-    def min_parameter_count(self):
+    @classmethod
+    def min_parameter_count(cls):
         return 2
     
     def _get_value(self, key_or_formula, incoming_values):
@@ -191,7 +195,7 @@ class Xor(Formula):
 
 
 class Equal(Formula):
-    def __init__(self, key, value):
+    def __init__(self, key, value=True):
         """
         Args:
             key: Node ID to check
@@ -200,7 +204,8 @@ class Equal(Formula):
         self.key = key
         self.value = value
     
-    def min_parameter_count(self):
+    @classmethod
+    def min_parameter_count(cls):
         return 1
     
     def compute(self, incoming_values):
@@ -223,7 +228,7 @@ class Equal(Formula):
 
 
 class In(Formula):
-    def __init__(self, key, values):
+    def __init__(self, key, values=[True]):
         """
         Args:
             key: Node ID to check
@@ -232,7 +237,8 @@ class In(Formula):
         self.key = key
         self.values = list(values) if not isinstance(values, str) else [values]
     
-    def min_parameter_count(self):
+    @classmethod
+    def min_parameter_count(cls):
         return 1
     
     def compute(self, incoming_values):

@@ -10,8 +10,9 @@ class Formula(ABC):
     their valid_path_parents based on their structure.
     """
 
+    @classmethod
     @abstractmethod
-    def min_parameter_count(self):
+    def min_parameter_count(cls):
         """
         Return the minimum number of parameters required for this formula.
             

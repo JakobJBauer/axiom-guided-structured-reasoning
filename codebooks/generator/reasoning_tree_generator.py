@@ -138,7 +138,7 @@ class ReasoningTreeGenerator:
         return graph
 
     def _fill_leaf_nodes(self, graph: Graph) -> Graph:
-        self.available_leaf_nodes.shuffle(self.rng)
+        self.rng.shuffle(self.available_leaf_nodes)
         leaf_nodes = graph.get_leaf_nodes()
         if len(leaf_nodes) > len(self.available_leaf_nodes): raise ValueError(f"More leaf nodes than available leaf nodes: {len(leaf_nodes)} > {len(self.available_leaf_nodes)}")
             
@@ -151,5 +151,6 @@ class ReasoningTreeGenerator:
         
         return graph
 
-    def __fill_non_leaf_nodes(self, graph: Graph) -> Graph:
-        raise NotImplementedError("Not implemented yet")
+    def _fill_non_leaf_nodes(self, graph: Graph) -> Graph:
+        # ToDo: Rename nodes and insert descriptions here
+        return graph
