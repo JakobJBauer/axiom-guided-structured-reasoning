@@ -32,6 +32,9 @@ class Node:
     def __eq__(self, other):
         if not isinstance(other, Node): return False
         return self.id == other.id
+
+    def __str__(self) -> str:
+        return f"Node {self.id}: {self.label} ({self.value if self.value is not None else ''}) {self.formula if self.formula is not None else ''}"
     
     def copy(self):
         """Create a copy of this node with the same attributes."""
@@ -64,6 +67,10 @@ class Graph:
 
     def add_edge(self, edge):
         self.edges.append(edge)
+
+    def remove_nodes(self, nodes):
+        self.nodes = [n for n in self.nodes if all(n.id != node.id for node in nodes)]
+        self.edges = [e for e in self.edges if all(e.source != node.id and e.target != node.id for node in nodes)]
 
     def get_nodes(self):
         return self.nodes

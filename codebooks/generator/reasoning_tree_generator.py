@@ -13,6 +13,7 @@ class ReasoningTreeGenerator:
         available_formulas: "list[type[Formula]] | None" = None,
         leaf_node_json_path: Path | None = None,
         randomness_factor: float = 0.1, # skip nodes and introduce mix edges randomly
+        max_leaf_nodes: int = None, 
         seed=None,
     ):
         if goal_depth <= 0: raise ValueError("goal_depth must be positive")
@@ -27,6 +28,7 @@ class ReasoningTreeGenerator:
         self.branch_density_factor = branch_density_factor
         self.available_formulas = available_formulas or [Not, And, Or, Xor, Equal, In]
         self.randomness_factor = randomness_factor
+        self.max_leaf_nodes = max_leaf_nodes
         self.rng = random.Random(seed)
 
         leaf_node_json_path = leaf_node_json_path or Path(__file__).parent / "proposed_leaf_nodes.json"
@@ -79,5 +81,30 @@ class ReasoningTreeGenerator:
             # add nodes to the tree and update last_row
             last_row = sum(new_row, [])
             all_nodes.extend(last_row)
+        
+        graph = Graph(nodes=all_nodes, edges=all_edges)
+        graph = self._reduce_leaf_nodes(graph)
 
-        return Graph(nodes=all_nodes, edges=all_edges)
+        return graph
+
+    
+    def _reduce_leaf_nodes(self, graph: Graph) -> Graph:
+        if self.max_leaf_nodes is None: return graph
+        
+        leaf_nodes = graph.get_leaf_nodes()
+        if len(leaf_nodes) <= self.max_leaf_nodes: return graph
+
+        chosen_leaf_nodes = self.rng.sample(leaf_nodes, k=self.max_leaf_nodes)
+        remaining_leaf_nodes = [n for n in leaf_nodes if n not in chosen_leaf_nodes]
+
+        node_map = {node.id: node for node in chosen_leaf_nodes}
+        
+        for node in remaining_leaf_nodes: node_map[node.id] = self.rng.choice(chosen_leaf_nodes)
+
+        for edge in graph.get_edges():
+            if edge.source in node_map: edge.source = node_map[edge.source].id
+            if edge.target in node_map: edge.target = node_map[edge.target].id
+
+        graph.remove_nodes(remaining_leaf_nodes)
+
+        return graph
