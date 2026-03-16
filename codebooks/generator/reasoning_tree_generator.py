@@ -138,7 +138,18 @@ class ReasoningTreeGenerator:
         return graph
 
     def _fill_leaf_nodes(self, graph: Graph) -> Graph:
-        raise NotImplementedError("Not implemented yet")
+        self.available_leaf_nodes.shuffle(self.rng)
+        leaf_nodes = graph.get_leaf_nodes()
+        if len(leaf_nodes) > len(self.available_leaf_nodes): raise ValueError(f"More leaf nodes than available leaf nodes: {len(leaf_nodes)} > {len(self.available_leaf_nodes)}")
+            
+        rename_map = {}
+        for node, json_node in zip(leaf_nodes, self.available_leaf_nodes):
+            rename_map[node.id] = json_node["id"]
+            node.label = json_node["label"]
+        
+        graph.rename_nodes(rename_map)
+        
+        return graph
 
     def _rename_nodes(self, graph: Graph) -> Graph:
         raise NotImplementedError("Not implemented yet")
