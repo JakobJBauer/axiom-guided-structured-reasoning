@@ -315,5 +315,8 @@ class Graph:
         "\n".join([f"Edge {edge.source} -> {edge.target}" for edge in self.edges]) + "\n" +\
         "="*50 + "\n"
 
+    def rename_nodes(self, node_map):
+        raise NotImplementedError("Renaming nodes is not implemented yet")
+
     def generate_codebok_representation(self):
         raise NotImplementedError("Generating codebook representation is not implemented yet")

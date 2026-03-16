@@ -12,18 +12,21 @@ class ReasoningTreeGenerator:
         branch_density_factor: float = 0.8, # percentage of how many nodes have higher than min branching factors
         available_formulas: "list[type[Formula]] | None" = None,
         leaf_node_json_path: Path | None = None,
+        randomness_factor: float = 0.1, # skip nodes and introduce mix edges randomly
         seed=None,
     ):
         if goal_depth <= 0: raise ValueError("goal_depth must be positive")
         if min_branching_factor < 1: raise ValueError("min_branching_factor must be at least 1")
         if max_branching_factor < min_branching_factor: raise ValueError("max_branching_factor cannot be less than min_branching_factor")
         if not 0.0 <= branch_density_factor <= 1.0: raise ValueError("branch_density_factor must be between 0.0 and 1.0")
+        if not 0.0 <= randomness_factor <= 0.5: raise ValueError("randomness_factor must be between 0.0 and 0.5")
 
         self.goal_depth = goal_depth
         self.min_branching_factor = min_branching_factor
         self.max_branching_factor = max_branching_factor
         self.branch_density_factor = branch_density_factor
         self.available_formulas = available_formulas or [Not, And, Or, Xor, Equal, In]
+        self.randomness_factor = randomness_factor
         self.rng = random.Random(seed)
 
         leaf_node_json_path = leaf_node_json_path or Path(__file__).parent / "proposed_leaf_nodes.json"
@@ -66,7 +69,12 @@ class ReasoningTreeGenerator:
             # add edges between the new nodes and the last row
             for i in range(len(new_row)):
                 for j in range(len(new_row[i])):
-                    all_edges.append(Edge(source=new_row[i][j].id, target=last_row[i].id))
+                    target = last_row[i].id if self.rng.random() >= self.randomness_factor else self.rng.choice(last_row).id # choose random parent
+                    if current_depth > 1 and self.rng.random() < self.randomness_factor: # skip a node. Pick a target from an edge where the current node is the source
+                        relevant_edges = [edge for edge in all_edges if edge.source == target]
+                        if relevant_edges: target = self.rng.choice(relevant_edges).target
+
+                    all_edges.append(Edge(source=new_row[i][j].id, target=target))
 
             # add nodes to the tree and update last_row
             last_row = sum(new_row, [])
