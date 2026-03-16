@@ -39,7 +39,7 @@ class ReasoningTreeGenerator:
         graph = self._generate_structure()
         graph = self._populate_formulas(graph)
         graph = self._fill_leaf_nodes(graph)
-        graph = self._rename_nodes(graph)
+        graph = self._fill_non_leaf_nodes(graph)
         return graph
 
     def _generate_structure(self) -> Graph:
@@ -145,11 +145,11 @@ class ReasoningTreeGenerator:
         rename_map = {}
         for node, json_node in zip(leaf_nodes, self.available_leaf_nodes):
             rename_map[node.id] = json_node["id"]
-            node.label = json_node["label"]
+            node.label = json_node["description"]
         
         graph.rename_nodes(rename_map)
         
         return graph
 
-    def _rename_nodes(self, graph: Graph) -> Graph:
+    def __fill_non_leaf_nodes(self, graph: Graph) -> Graph:
         raise NotImplementedError("Not implemented yet")
