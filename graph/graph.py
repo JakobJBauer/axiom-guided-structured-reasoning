@@ -334,7 +334,8 @@ class Graph:
             if edge.target in node_map: edge.target = node_map[edge.target]
 
     def generate_codebok_representation(self):
-        raise NotImplementedError("Generating codebook representation is not implemented yet")
+        from codebooks.generator.graph_to_codebook import graph_to_codebook
+        return graph_to_codebook(self)
 
     def obfuscate(self):
         """

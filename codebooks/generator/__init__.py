@@ -1,1 +1,2 @@
 from .reasoning_tree_generator import ReasoningTreeGenerator
+from .graph_to_codebook import graph_to_codebook
