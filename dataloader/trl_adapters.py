@@ -12,7 +12,56 @@ from graph.graph import Graph
 THINKING_OPEN, THINKING_CLOSE = "<thinking>", "</thinking>"
 
 
-def build_base_prompt(sample: CodebookSample) -> str:
+PromptStyle = Literal["full", "abbr", "none"]
+
+
+DEFAULT_ABBR_PREFIX = "TASK: CODEBOOK_QA\n\n"
+
+
+def _full_task_prefix() -> str:
+    # Keep this stable across SFT/GRPO when style="full".
+    return (
+        "You are an expert reasoning assistant. Given a story, a codebook, and a "
+        "yes/no question about whether the story satisfies a particular attribute, "
+        "answer using the following STRICT format:\n\n"
+        "<thinking>\n"
+        "- The thinking section consists of multiple PARAGRAPHS.\n"
+        "- Each paragraph is ONE argument.\n"
+        "- Inside each paragraph, refer to attributes in ALL CAPS in square brackets, "
+        "e.g. [SHORT], [NOUN], [NON-NOUN], [DENSE]. These are the nodes/attributes.\n"
+        "- Each paragraph MUST END with a citation of the form:\n"
+        "    (ATTR : True)\n"
+        "  or\n"
+        "    (ATTR : False)\n"
+        "  where ATTR is the (uppercase) attribute name that this paragraph is "
+        "concluding about.\n"
+        "- The cited ATTR at the end of the paragraph MUST appear in square brackets "
+        "somewhere in that paragraph as [ATTR].\n"
+        "- Use one blank line between paragraphs.\n"
+        "- Base your arguments on the story, codebook, and question.\n"
+        "\n"
+        "After the thinking block, output ONLY one final line starting with either:\n"
+        "- \"Yes, the story is ...\"\n"
+        "- \"No, the story is not ...\"\n\n"
+    )
+
+
+def build_task_prefix(style: PromptStyle, abbr_prefix: str = DEFAULT_ABBR_PREFIX) -> str:
+    if style == "none":
+        return ""
+    if style == "abbr":
+        return abbr_prefix
+    if style == "full":
+        return _full_task_prefix()
+    raise ValueError(f"Unknown prompt style: {style!r}")
+
+
+def build_base_prompt(
+    sample: CodebookSample,
+    *,
+    prompt_style: PromptStyle = "none",
+    abbr_prefix: str = DEFAULT_ABBR_PREFIX,
+) -> str:
     """
     Shared prompt shape for SFT/GRPO.
 
@@ -21,7 +70,7 @@ def build_base_prompt(sample: CodebookSample) -> str:
     - Codebook
     - Question
     """
-    return (
+    return build_task_prefix(prompt_style, abbr_prefix=abbr_prefix) + (
         "Story:\n"
         f"{sample.story}\n\n"
         "Codebook:\n"
@@ -80,40 +129,27 @@ def render_reasoning_trace(graph: Graph, sink_id: str) -> str:
     return thinking + "\n" + final_answer + "\n"
 
 
-def build_grpo_prompt(sample: CodebookSample) -> str:
+def build_grpo_prompt(
+    sample: CodebookSample,
+    *,
+    prompt_style: PromptStyle = "full",
+    abbr_prefix: str = DEFAULT_ABBR_PREFIX,
+) -> str:
     """
     GRPO prompt: enforce strict format, but do not include any teacher answer.
     """
-    prefix = (
-        "You are an expert reasoning assistant. Given a story, a codebook, and a "
-        "yes/no question about whether the story satisfies a particular attribute, "
-        "answer using the following STRICT format:\n\n"
-        "<thinking>\n"
-        "- The thinking section consists of multiple PARAGRAPHS.\n"
-        "- Each paragraph is ONE argument.\n"
-        "- Inside each paragraph, refer to attributes in ALL CAPS in square brackets, "
-        "e.g. [SHORT], [NOUN], [NON-NOUN], [DENSE]. These are the nodes/attributes.\n"
-        "- Each paragraph MUST END with a citation of the form:\n"
-        "    (ATTR : True)\n"
-        "  or\n"
-        "    (ATTR : False)\n"
-        "  where ATTR is the (uppercase) attribute name that this paragraph is "
-        "concluding about.\n"
-        "- The cited ATTR at the end of the paragraph MUST appear in square brackets "
-        "somewhere in that paragraph as [ATTR].\n"
-        "- Use one blank line between paragraphs.\n"
-        "- Base your arguments on the story, codebook, and question.\n"
-        "\n"
-        "After the thinking block, output ONLY one final line starting with either:\n"
-        "- \"Yes, the story is ...\"\n"
-        "- \"No, the story is not ...\"\n\n"
+    return build_base_prompt(
+        sample,
+        prompt_style=prompt_style,
+        abbr_prefix=abbr_prefix,
     )
-    return prefix + build_base_prompt(sample)
 
 
 @dataclass(frozen=True)
 class SFTAdapterConfig:
-    mode: Literal["deterministic_trace", "boolean_only"] = "deterministic_trace"
+    prompt_style: PromptStyle = "none"
+    abbr_prefix: str = DEFAULT_ABBR_PREFIX
+    completion_mode: Literal["deterministic_trace", "boolean_only"] = "deterministic_trace"
 
 
 class CodebookQASFTDataset(Dataset):
@@ -138,9 +174,13 @@ class CodebookQASFTDataset(Dataset):
 
     def __getitem__(self, idx: int) -> Dict[str, Any]:
         sample = self._base[idx % len(self._base)]
-        prompt = build_base_prompt(sample)
+        prompt = build_base_prompt(
+            sample,
+            prompt_style=self._config.prompt_style,
+            abbr_prefix=self._config.abbr_prefix,
+        )
 
-        if self._config.mode == "boolean_only":
+        if self._config.completion_mode == "boolean_only":
             completion = ("True" if sample.answer else "False") + "\n"
         else:
             completion = render_reasoning_trace(sample.reasoning_graph, sample.sink_id)
@@ -160,17 +200,27 @@ class CodebookQAGRPODataset(Dataset):
         base_dataset: CodebookQADataset,
         num_examples: int = 1000,
         include_answer: bool = True,
+        prompt_style: PromptStyle = "full",
+        abbr_prefix: str = DEFAULT_ABBR_PREFIX,
     ) -> None:
         self._base = base_dataset
         self._n = int(num_examples)
         self._include_answer = include_answer
+        self._prompt_style = prompt_style
+        self._abbr_prefix = abbr_prefix
 
     def __len__(self) -> int:
         return self._n
 
     def __getitem__(self, idx: int) -> Dict[str, Any]:
         sample = self._base[idx % len(self._base)]
-        out: Dict[str, Any] = {"prompt": build_grpo_prompt(sample)}
+        out: Dict[str, Any] = {
+            "prompt": build_grpo_prompt(
+                sample,
+                prompt_style=self._prompt_style,
+                abbr_prefix=self._abbr_prefix,
+            )
+        }
         if self._include_answer:
             out["answer"] = bool(sample.answer)
         return out

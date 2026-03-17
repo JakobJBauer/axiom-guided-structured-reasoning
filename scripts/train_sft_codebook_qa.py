@@ -23,6 +23,31 @@ from peft import LoraConfig
 
 load_dotenv()
 
+DEFAULT_GPT_JSONL = "data/codebook_qa_sft_gpt_1000.jsonl"
+DEFAULT_DETERMINISTIC_JSONL = "data/codebook_qa_sft_deterministic_1000.jsonl"
+
+
+class _TextPrefixWrapper:
+    """
+    Minimal wrapper that prepends a string to an existing `text` field.
+
+    Works for HF datasets (getitem dict) and torch-style datasets that return dicts.
+    """
+
+    def __init__(self, base, prefix: str):
+        self._base = base
+        self._prefix = prefix
+
+    def __len__(self):
+        return len(self._base)
+
+    def __getitem__(self, idx):
+        item = self._base[idx]
+        text = item.get("text", "")
+        out = dict(item)
+        out["text"] = self._prefix + text
+        return out
+
 
 def main() -> None:
     import argparse
@@ -33,16 +58,31 @@ def main() -> None:
     parser.add_argument(
         "--data-path",
         type=str,
-        default="data/codebook_qa_sft_gpt_1000.jsonl",
+        default=DEFAULT_GPT_JSONL,
         help="Path to JSONL file with SFT data (must have 'text' field).",
     )
     parser.add_argument(
-        "--use-live-dataloader",
-        action="store_true",
+        "--data-source",
+        type=str,
+        default="jsonl",
+        choices=["jsonl", "live"],
+        help="Train from a JSONL snapshot or from the live on-the-fly dataloader.",
+    )
+    parser.add_argument(
+        "--prompt-style",
+        type=str,
+        default="full",
+        choices=["full", "abbr", "none"],
         help=(
-            "Use the on-the-fly CodebookQADataset instead of JSONL. "
-            "This produces deterministic traces from the inferred reasoning graph."
+            "Prompt prefix style. For existing JSONL snapshots: "
+            "GPT JSONL is `full`, deterministic JSONL is `none`."
         ),
+    )
+    parser.add_argument(
+        "--abbr-prefix",
+        type=str,
+        default="TASK: CODEBOOK_QA\n\n",
+        help="Abbreviated prefix string when --prompt-style=abbr.",
     )
     parser.add_argument(
         "--split",
@@ -72,7 +112,7 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    if args.use_live_dataloader:
+    if args.data_source == "live":
         from dataloader import CodebookQADataset, GraphDifficultyConfig
         from dataloader.trl_adapters import CodebookQASFTDataset, SFTAdapterConfig
 
@@ -84,16 +124,28 @@ def main() -> None:
         dataset = CodebookQASFTDataset(
             base_dataset=base,
             num_examples=args.num_examples,
-            config=SFTAdapterConfig(),
+            config=SFTAdapterConfig(
+                prompt_style=args.prompt_style,
+                abbr_prefix=args.abbr_prefix,
+                completion_mode="deterministic_trace",
+            ),
         )
     else:
         data_path = Path(args.data_path)
         if not data_path.exists():
             raise FileNotFoundError(
                 f"SFT data file not found: {data_path}. "
-                "Either pass --data-path to an existing JSONL, or use --use-live-dataloader."
+                "Either pass --data-path to an existing JSONL, or use --data-source=live."
             )
         dataset = load_dataset("json", data_files=str(data_path), split="train")
+        # For JSONL snapshots we cannot reliably *remove* an existing long prefix.
+        # But we can safely *prepend* prefixes if desired.
+        if args.prompt_style != "none":
+            from dataloader.trl_adapters import build_task_prefix
+
+            prefix = build_task_prefix(args.prompt_style, abbr_prefix=args.abbr_prefix)
+            if prefix:
+                dataset = _TextPrefixWrapper(dataset, prefix)
 
     training_args = SFTConfig(
         run_name=f"sft-{Path(args.model).name}-{Path(args.output_dir).name}",

@@ -131,15 +131,6 @@ def load_model_for_grpo(base_model_name_or_path: str, adapter_model_name_or_path
     return model, tokenizer
 
 
-#
-# NOTE: Prompt building now lives in `dataloader/trl_adapters.py`.
-#
-
-
-#
-# NOTE: The GRPO dataset wrapper now lives in `dataloader/trl_adapters.py`.
-#
-
 
 def run_grpo_training(train_dataset, base_model_name_or_path, adapter_model_name_or_path, output_dir: str) -> None:
     """
@@ -220,6 +211,19 @@ def main() -> None:
         help="Number of GRPO training examples to sample from the dataloader.",
     )
     parser.add_argument(
+        "--prompt-style",
+        type=str,
+        default="full",
+        choices=["full", "abbr", "none"],
+        help="Prompt prefix style: full instructions, abbreviated task tag, or none.",
+    )
+    parser.add_argument(
+        "--abbr-prefix",
+        type=str,
+        default="TASK: CODEBOOK_QA\n\n",
+        help="Abbreviated prefix string when --prompt-style=abbr.",
+    )
+    parser.add_argument(
         "--seed",
         type=int,
         default=42,
@@ -239,13 +243,15 @@ def main() -> None:
 
     # Use the shared CodebookQADataset dataloader for stories + codebooks.
     base_dataset = CodebookQADataset(
-        split="train" if args.split == "train" else ("test" if args.split in {"test", "validation"} else "eval"),
+        split=args.split,
         difficulties=[(GraphDifficultyConfig(goal_depth=2, max_leaf_nodes=6), 1.0)],
         seed=args.seed,
     )
     train_dataset = CodebookQAGRPODataset(
         base_dataset=base_dataset,
         num_examples=args.num_examples,
+        prompt_style=args.prompt_style,
+        abbr_prefix=args.abbr_prefix,
     )
     run_grpo_training(
         train_dataset=train_dataset,
