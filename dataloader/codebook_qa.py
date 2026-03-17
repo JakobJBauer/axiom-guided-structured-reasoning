@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import random
 from dataclasses import dataclass
-from pathlib import Path
+from functools import lru_cache
 from typing import Any, Dict, Mapping, Optional, Sequence, Literal
 
 from graph.graph import Graph
@@ -100,7 +100,7 @@ class CodebookQADataset:
         if any(w <= 0 for _, w in self._difficulties): raise ValueError("All difficulty weights must be > 0")
         if sum(w for _, w in self._difficulties) - 1.0 > 1e-9: raise ValueError("Difficulty weights must sum to 1.0")
 
-        self._stories = self._load_simplestories_concat()
+        self._stories = _load_simplestories_concat_shared()
         self._indices_by_split = self._make_split_indices(len(self._stories))
 
         self._leaf_specs = load_leaf_specs()
@@ -156,50 +156,6 @@ class CodebookQADataset:
         """Random sample from the chosen split."""
         return self[self._rng.randrange(len(self))]
 
-    # --- Internal helpers ---------------------------------------------------
-
-    def _load_simplestories_concat(self):
-        """
-        Always load the SimpleStories dataset from Hugging Face, then concatenate
-        train + test to build our own train/test/eval split.
-        """
-        try:
-            from datasets import load_dataset, concatenate_datasets
-        except ImportError as exc:
-            raise ImportError(
-                "Missing dependency `datasets`. Install with `pip install datasets`."
-            ) from exc
-
-        # Use a workspace-local cache dir so we never rely on ~/.cache being writable
-        repo_root = Path(__file__).resolve().parents[1]
-        cache_dir = repo_root / ".hf_cache" / "datasets"
-        cache_dir.mkdir(parents=True, exist_ok=True)
-
-        def load_split(name: str):
-            try:
-                # Preferred path: hit the hub (will still reuse cache if present).
-                return load_dataset(
-                    "SimpleStories/SimpleStories",
-                    split=name,
-                    cache_dir=str(cache_dir),
-                )
-            except Exception:
-                # Fallback for offline / restricted-network environments:
-                # use cached files only (will error if cache is empty).
-                import os
-                os.environ.setdefault("HF_HUB_OFFLINE", "1")
-                os.environ.setdefault("HF_DATASETS_OFFLINE", "1")
-                return load_dataset(
-                    "SimpleStories/SimpleStories",
-                    split=name,
-                    cache_dir=str(cache_dir),
-                    local_files_only=True,
-                )
-
-        train_ds = load_split("train")
-        test_ds = load_split("test")
-        return concatenate_datasets([train_ds, test_ds])
-
     def _make_split_indices(self, n: int) -> dict[SplitName, list[int]]:
         indices = list(range(n))
         self._rng.shuffle(indices)
@@ -240,3 +196,17 @@ class CodebookQADataset:
         _ = graph.get_single_sink_node()
         return graph
 
+
+@lru_cache(maxsize=1)
+def _load_simplestories_concat_shared():
+    from datasets import load_dataset, concatenate_datasets
+
+    def load_split(name: str):
+        return load_dataset(
+            "SimpleStories/SimpleStories",
+            split=name,
+        )
+
+    train_ds = load_split("train")
+    test_ds = load_split("test")
+    return concatenate_datasets([train_ds, test_ds])
