@@ -1,330 +1,242 @@
 from __future__ import annotations
 
-import json
 import random
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, Iterable, Mapping, Optional, Sequence, Tuple
+from typing import Any, Dict, Mapping, Optional, Sequence, Literal
 
 from graph.graph import Graph
-from serializer import load_graph
+from codebooks.generator import ReasoningTreeGenerator
 
-from .leaf_values import compute_leaf_values_for_graph, load_leaf_specs
+from .leaf_values import compute_leaf_values_for_leaf_ids, load_leaf_specs
 
 
 @dataclass
 class CodebookSample:
     story: str
     story_row: Mapping[str, Any]
-    codebook_path: Path
     codebook_text: str
     graph: Graph
     sink_id: str
     question: str
     reasoning_graph: Graph
     leaf_values: Dict[str, bool]
+    answer: bool
+
+
+SplitName = Literal["train", "test", "eval"]
+
+
+@dataclass(frozen=True)
+class GraphDifficultyConfig:
+    """
+    Configuration for how "big/hard" a generated graph/codebook should be.
+    These map directly onto ReasoningTreeGenerator parameters.
+    """
+    goal_depth: int
+    min_branching_factor: int = 1
+    max_branching_factor: int = 2
+    branch_density_factor: float = 0.8
+    randomness_factor: float = 0.05
+    max_leaf_nodes: int | None = 5
 
 
 class CodebookQADataset:
     """
-    Simple dataloader for:
-      - sampling a simplestory
-      - pairing it with one codebook + graph
-      - choosing a sink node as the question target
-      - populating leaf nodes from the story metadata
-      - running graph auto-inference to produce a gold reasoning tree.
+    Dataloader for CodebookQA:
+      - always pulls SimpleStories from Hugging Face
+      - creates train/test/eval splits locally
+      - generates a reasoning graph on-the-fly
+      - generates a codebook from the graph
+      - generates a question from the graph's (single) sink node
+      - populates leaf node values from SimpleStories row metadata
+      - runs auto-inference to get the gold answer
     """
 
     def __init__(
         self,
-        stories: Optional[Sequence[Mapping[str, Any]]] = None,
-        stories_story_key: str = "story",
-        codebooks_root: Path | str = Path("codebooks") / "final_selection",
-        simplestories_split: str = "train",
-        seed: Optional[int] = None,
+        split: SplitName = "train",
+        train_fraction: float = 0.90,
+        test_fraction: float = 0.09,
+        eval_fraction: float = 0.01,
+        difficulties: Optional[Sequence[tuple[GraphDifficultyConfig, float]]] = None,
+        seed: Optional[int] = 42,
+        story_key: str = "story",
     ) -> None:
         """
         Args:
-            stories: Sequence of simplestory rows (e.g. list of dicts, or
-                     something indexable like a pandas DataFrame via .iloc).
-                     If None, the SimpleStories dataset from Hugging Face
-                     (\"SimpleStories/SimpleStories\") is loaded by default.
-            stories_story_key: Key in each row mapping to the story text.
-            codebooks_root: Root directory containing:
-                - graphs/  (JSON graphs)
-                - codebooks/  (text codebooks)
-            seed: Optional RNG seed for reproducibility.
-            simplestories_split: Split of the SimpleStories dataset to load. Can be "train", "test" and "validation".
+            split: One of {"train","test","eval"} selecting which local split to serve.
+            train_fraction/test_fraction/eval_fraction: Fractions for local split.
+                SimpleStories only has train+test upstream, so we concatenate them and
+                re-split locally. Defaults: 0.90 / 0.09 / 0.01.
+            difficulties: Weighted distribution over graph-generation configs.
+                If None, a reasonable default distribution is used.
+            seed: RNG seed controlling both story split shuffling and per-sample graph RNG.
+            story_key: Key in the HF row containing story text.
         """
-        self._simplestories_split = simplestories_split
+        if split not in {"train", "test", "eval"}: raise ValueError(f"split must be one of train/test/eval, got: {split!r}")
+        self._split: SplitName = split
+        self._seed = seed
+        self._rng = random.Random(self._seed)
+        self._story_key = story_key
 
-        if seed is not None:
-            random.seed(seed)
+        # Validate fractions
+        if any(x < 0 for x in (train_fraction, test_fraction, eval_fraction)): raise ValueError("Split fractions must be non-negative")
+        total = train_fraction + test_fraction + eval_fraction
+        if abs(total - 1.0) > 1e-9: raise ValueError(f"Split fractions must sum to 1.0, got {total}")
+        self._train_fraction = train_fraction
+        self._test_fraction = test_fraction
+        self._eval_fraction = eval_fraction
 
-        if stories is None:
-            stories = self._load_default_simplestories()
+        # Default difficulty distribution: small/medium/large with light randomness
+        if difficulties is None:
+            difficulties = [
+                (GraphDifficultyConfig(goal_depth=2, max_leaf_nodes=6, randomness_factor=0.00), 0.45),
+                (GraphDifficultyConfig(goal_depth=3, max_leaf_nodes=8, randomness_factor=0.05), 0.40),
+                (GraphDifficultyConfig(goal_depth=4, max_leaf_nodes=10, randomness_factor=0.10), 0.15),
+            ]
+        self._difficulties = list(difficulties)
+        if not self._difficulties: raise ValueError("difficulties must be non-empty")
+        if any(w <= 0 for _, w in self._difficulties): raise ValueError("All difficulty weights must be > 0")
+        if sum(w for _, w in self._difficulties) - 1.0 > 1e-9: raise ValueError("Difficulty weights must sum to 1.0")
 
-        self._stories = stories
-        self._story_key = stories_story_key
-
-        self._root = Path(codebooks_root)
-        self._graphs_dir = self._root / "graphs"
-        self._codebooks_dir = self._root / "codebooks"
-
-        if not self._graphs_dir.exists():
-            raise FileNotFoundError(f"Graphs directory not found: {self._graphs_dir}")
-        if not self._codebooks_dir.exists():
-            raise FileNotFoundError(
-                f"Codebooks directory not found: {self._codebooks_dir}"
-            )
-
-        # Pre-index graphs by base name and style presence
-        self._base_to_graphs: Dict[str, Dict[str, Path]] = {}
-        for path in sorted(self._graphs_dir.glob("*.json")):
-            stem = path.stem  # e.g. cb-003-small-easy-clear, cb-003-small-easy-obfc
-            if stem.endswith("-clear"):
-                base = stem[: -len("-clear")]
-                variant = "clear"
-            elif stem.endswith("-obfc"):
-                base = stem[: -len("-obfc")]
-                variant = "obfc"
-            else:
-                base = stem
-                variant = "base"
-
-            self._base_to_graphs.setdefault(base, {})[variant] = path
-
-        # Pre-build list of (codebook_path, base_name, is_obfuscated) entries
-        self._codebook_entries: list[Tuple[Path, str, bool]] = []
-        for path in sorted(self._codebooks_dir.glob("*.txt")):
-            stem = path.stem
-            base = self._infer_base_from_stem(stem)
-            if base in self._base_to_graphs:
-                is_obfuscated = "-obfc" in stem
-                self._codebook_entries.append((path, base, is_obfuscated))
-
-        if not self._codebook_entries:
-            raise RuntimeError(
-                f"No codebooks in {self._codebooks_dir} matched any base name "
-                f"from graphs in {self._graphs_dir}"
-            )
+        self._stories = self._load_simplestories_concat()
+        self._indices_by_split = self._make_split_indices(len(self._stories))
 
         self._leaf_specs = load_leaf_specs()
 
     def __len__(self) -> int:
-        return len(self._stories) * len(self._codebook_entries)
+        return len(self._indices_by_split[self._split])
 
-    # --- Public API ---------------------------------------------------------
-
-    def sample(self) -> CodebookSample:
-        """Sample a single (story, codebook, question, reasoning tree) datapoint."""
-        story_row = self._sample_story_row()
+    def __getitem__(self, idx: int) -> CodebookSample:
+        indices = self._indices_by_split[self._split]
+        story_idx = indices[idx]
+        story_row = self._stories[story_idx]
         story_text = story_row[self._story_key]
 
-        codebook_path, base_name, is_obfuscated = random.choice(self._codebook_entries)
-        codebook_text = codebook_path.read_text(encoding="utf-8")
+        graph = self._generate_graph_for_sample(sample_idx=idx)
 
-        graph, sink_id = self._sample_graph_and_sink(base_name, is_obfuscated)
+        codebook_text = graph.generate_codebok_representation()
+        sink_id = graph.get_single_sink_node().id
+        question = graph.generate_question()
 
         # Populate leaf values from story features
-        leaf_values = self._populate_leaf_values(story_row, graph)
+        leaf_ids = [n.id for n in graph.get_leaf_nodes()]
+        leaf_values = compute_leaf_values_for_leaf_ids(
+            row=story_row,
+            leaf_ids=leaf_ids,
+            leaf_specs=self._leaf_specs,
+        )
 
-        # Run auto-inference on a copy so we don't mutate cached graphs
+        # Run auto-inference on a copy so we don't mutate the graph instance returned
         reasoning_graph = graph.copy()
         for node in reasoning_graph.get_leaf_nodes():
-            if node.id in leaf_values:
-                node.set_value(leaf_values[node.id])
+            node.set_value(leaf_values[node.id])
         reasoning_graph.auto_infer_values()
 
-        # Extract the reasoning subgraph that supports the sink node
-        reasoning_subgraph = self._extract_reasoning_subgraph(reasoning_graph, sink_id)
-
-        # Simple natural-language question
-        sink_node = graph.get_node_by_id(sink_id)
-        question = f"Is the story {sink_node.label}?"
+        # Gold answer is the inferred sink value
+        inferred_sink = reasoning_graph.get_node_by_id(sink_id)
+        if inferred_sink is None or inferred_sink.value is None:
+            raise RuntimeError("Failed to infer sink node value")
+        answer = bool(inferred_sink.value)
 
         return CodebookSample(
             story=story_text,
             story_row=story_row,
-            codebook_path=codebook_path,
             codebook_text=codebook_text,
             graph=graph,
             sink_id=sink_id,
             question=question,
-            reasoning_graph=reasoning_subgraph,
+            reasoning_graph=reasoning_graph,
             leaf_values=leaf_values,
+            answer=answer,
         )
+
+    def sample(self) -> CodebookSample:
+        """Random sample from the chosen split."""
+        return self[self._rng.randrange(len(self))]
 
     # --- Internal helpers ---------------------------------------------------
 
-    def _sample_story_row(self) -> Mapping[str, Any]:
-        idx = random.randrange(len(self._stories))
-
-        row = self._stories[idx]
-        # Support pandas DataFrame via .iloc as well as plain sequences of dicts
-        if hasattr(self._stories, "iloc"):
-            row = self._stories.iloc[idx]
-
-        if self._story_key not in row:
-            raise KeyError(f"Story row missing key '{self._story_key}': {row}")
-        return row
-
-    def _load_default_simplestories(self) -> Sequence[Mapping[str, Any]]:
+    def _load_simplestories_concat(self):
         """
-        Load the SimpleStories dataset from Hugging Face as the default source
-        of stories when none are provided explicitly.
-
-        This requires the `datasets` library and internet access:
-
-            pip install datasets
-
-        The dataset ID is \"SimpleStories/SimpleStories\" and we map our
-        requested split onto the underlying dataset's available splits.
-        Currently, SimpleStories exposes \"train\" and \"test\"; we support:
-        - \"train\" -> \"train\"
-        - \"test\"  -> \"test\"
-        - \"validation\" / \"val\" / \"eval\" / \"seval\" -> \"test\"
+        Always load the SimpleStories dataset from Hugging Face, then concatenate
+        train + test to build our own train/test/eval split.
         """
         try:
-            from datasets import load_dataset
+            from datasets import load_dataset, concatenate_datasets
         except ImportError as exc:
             raise ImportError(
-                "To use CodebookQADataset without passing `stories`, install the "
-                "`datasets` library (pip install datasets), or pass a sequence of "
-                "story rows explicitly."
+                "Missing dependency `datasets`. Install with `pip install datasets`."
             ) from exc
 
-        requested = (self._simplestories_split or "train").lower()
-        if requested in {"train"}:
-            hf_split = "train"
-        elif requested in {"test"}:
-            hf_split = "test"
-        elif requested in {"validation", "val", "eval", "seval"}:
-            hf_split = "test"
-        else:
-            raise ValueError(
-                f"Unsupported SimpleStories split '{self._simplestories_split}'. "
-                "Expected one of: train, test, validation, val, eval, seval."
-            )
+        # Use a workspace-local cache dir so we never rely on ~/.cache being writable
+        repo_root = Path(__file__).resolve().parents[1]
+        cache_dir = repo_root / ".hf_cache" / "datasets"
+        cache_dir.mkdir(parents=True, exist_ok=True)
 
-        ds = load_dataset("SimpleStories/SimpleStories", split=hf_split)
-        return ds
+        def load_split(name: str):
+            try:
+                # Preferred path: hit the hub (will still reuse cache if present).
+                return load_dataset(
+                    "SimpleStories/SimpleStories",
+                    split=name,
+                    cache_dir=str(cache_dir),
+                )
+            except Exception:
+                # Fallback for offline / restricted-network environments:
+                # use cached files only (will error if cache is empty).
+                import os
+                os.environ.setdefault("HF_HUB_OFFLINE", "1")
+                os.environ.setdefault("HF_DATASETS_OFFLINE", "1")
+                return load_dataset(
+                    "SimpleStories/SimpleStories",
+                    split=name,
+                    cache_dir=str(cache_dir),
+                    local_files_only=True,
+                )
 
-    def _infer_base_from_stem(self, stem: str) -> str:
-        """
-        Infer a base name for a codebook stem by matching it against known base names
-        from graphs. We pick the longest base that is a prefix of the stem.
-        """
-        candidates = [
-            base for base in self._base_to_graphs.keys() if stem.startswith(base)
-        ]
-        if not candidates:
-            return stem
-        # Longest prefix to disambiguate e.g. ...-allf vs shorter bases
-        return max(candidates, key=len)
+        train_ds = load_split("train")
+        test_ds = load_split("test")
+        return concatenate_datasets([train_ds, test_ds])
 
-    def _sample_graph_and_sink(self, base_name: str, want_obfuscated: bool) -> Tuple[Graph, str]:
-        variants = self._base_to_graphs[base_name]
-        # Choose graph variant consistent with the sampled codebook:
-        # - if the codebook text is obfuscated, we prefer the obfuscated graph
-        # - if the codebook text is clear, we prefer the clear (or base) graph.
-        clear_graph_data = None
+    def _make_split_indices(self, n: int) -> dict[SplitName, list[int]]:
+        indices = list(range(n))
+        self._rng.shuffle(indices)
 
-        if want_obfuscated and "obfc" in variants:
-            graph_path = variants["obfc"]
-            clear_graph_path = variants.get("clear")
-            if clear_graph_path is not None:
-                with clear_graph_path.open("r", encoding="utf-8") as f:
-                    clear_graph_data = json.load(f)
-        elif not want_obfuscated and "clear" in variants:
-            graph_path = variants["clear"]
-        elif not want_obfuscated and "base" in variants:
-            graph_path = variants["base"]
-        else:
-            # Fallbacks: if our preferred variant is missing, use whatever exists
-            graph_path = variants.get("obfc") or variants.get("clear") or variants.get("base")
-            if graph_path is None:
-                raise RuntimeError(f"No graph variants found for base '{base_name}'")
-            if graph_path == variants.get("obfc"):
-                clear_graph_path = variants.get("clear")
-                if clear_graph_path is not None:
-                    with clear_graph_path.open("r", encoding="utf-8") as f:
-                        clear_graph_data = json.load(f)
+        n_train = int(self._train_fraction * n)
+        n_test = int(self._test_fraction * n)
+        n_eval = n - n_train - n_test
 
-        graph = load_graph(str(graph_path))
+        train_idx = indices[:n_train]
+        test_idx = indices[n_train : n_train + n_test]
+        eval_idx = indices[n_train + n_test :]
 
-        # Choose a sink node (no outgoing edges) as the question target
-        sinks = [
-            node
-            for node in graph.get_nodes()
-            if not graph.get_outgoing_edges(node)
-        ]
-        if not sinks:
-            raise RuntimeError(f"No sink nodes found in graph {graph_path}")
-        sink_node = random.choice(sinks)
+        return {"train": train_idx, "test": test_idx, "eval": eval_idx}
 
-        # Attach clear_graph_data to the instance for leaf population if needed
-        # (graph IDs may be obfuscated, but labels align with clear graphs).
-        graph._clear_graph_data = clear_graph_data  # type: ignore[attr-defined]
+    def _sample_difficulty(self, rng: random.Random) -> GraphDifficultyConfig:
+        configs = [c for c, _w in self._difficulties]
+        weights = [w for _c, w in self._difficulties]
+        return rng.choices(configs, weights=weights, k=1)[0]
 
-        return graph, sink_node.id
+    def _generate_graph_for_sample(self, sample_idx: int) -> Graph:
+        # Distinct stream per split so graphs don't overlap across splits
+        split_offset = {"train": 10_000_000, "test": 20_000_000, "eval": 30_000_000}[self._split]
+        rng = random.Random(self._seed + split_offset + sample_idx)
+        diff = self._sample_difficulty(rng)
 
-    def _populate_leaf_values(
-        self,
-        story_row: Mapping[str, Any],
-        graph: Graph,
-    ) -> Dict[str, bool]:
-        # Prepare clear graph dict if we have it
-        clear_graph_data = getattr(graph, "_clear_graph_data", None)
-
-        # For compute_leaf_values_for_graph we pass the raw JSON-like graph dict,
-        # not the Graph object, so reconstruct that minimal structure.
-        graph_dict = {
-            "nodes": [
-                {
-                    "id": node.id,
-                    "label": node.label,
-                    "formula_type": None if node.formula is None else "Formula",
-                    "formula_args": [],
-                }
-                for node in graph.get_nodes()
-            ],
-            "edges": [
-                {"source": e.source, "target": e.target} for e in graph.get_edges()
-            ],
-        }
-
-        return compute_leaf_values_for_graph(
-            row=story_row,
-            graph=graph_dict,
-            leaf_specs=self._leaf_specs,
-            clear_graph=clear_graph_data,
+        generator = ReasoningTreeGenerator(
+            goal_depth=diff.goal_depth,
+            seed=self._seed + split_offset + sample_idx,
+            min_branching_factor=diff.min_branching_factor,
+            max_branching_factor=diff.max_branching_factor,
+            branch_density_factor=diff.branch_density_factor,
+            randomness_factor=diff.randomness_factor,
+            max_leaf_nodes=diff.max_leaf_nodes,
         )
+        graph = generator.generate()
 
-    def _extract_reasoning_subgraph(self, graph: Graph, sink_id: str) -> Graph:
-        """
-        Return the induced subgraph containing the sink node and all its ancestors.
-        """
-        sink = graph.get_node_by_id(sink_id)
-        if sink is None:
-            raise ValueError(f"Sink node '{sink_id}' not found in graph")
-
-        # Backward DFS from sink through incoming edges
-        visited: set[str] = set()
-        stack = [sink]
-        while stack:
-            node = stack.pop()
-            if node.id in visited:
-                continue
-            visited.add(node.id)
-            for parent in graph.get_incoming_nodes(node):
-                stack.append(parent)
-
-        # Build subgraph
-        nodes = [graph.get_node_by_id(nid).copy() for nid in visited]  # type: ignore[arg-type]
-        id_set = set(visited)
-        edges = [
-            e for e in graph.get_edges() if e.source in id_set and e.target in id_set
-        ]
-        return Graph(nodes, edges)
+        # Sanity: we require a single sink node for consistent question generation
+        _ = graph.get_single_sink_node()
+        return graph
 

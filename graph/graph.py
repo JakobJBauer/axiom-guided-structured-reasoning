@@ -337,6 +337,20 @@ class Graph:
         from codebooks.generator.graph_to_codebook import graph_to_codebook
         return graph_to_codebook(self)
 
+    def get_sink_nodes(self):
+        return [n for n in self.nodes if len(self.get_outgoing_edges(n)) == 0]
+
+    def get_single_sink_node(self):
+        sinks = self.get_sink_nodes()
+        if len(sinks) != 1:
+            raise ValueError(f"Expected exactly 1 sink node, found {len(sinks)}: {[n.id for n in sinks]}")
+        return sinks[0]
+
+    def generate_question(self, prefer_id=False) -> str:
+        sink = self.get_single_sink_node()
+        if not prefer_id and sink.label: return f"Does the story satisfy the property '{sink.label}'?"
+        return f"Is this story {sink.id}?"
+
     def obfuscate(self):
         """
         Obfuscate the graph by renaming node IDs to random strings.
