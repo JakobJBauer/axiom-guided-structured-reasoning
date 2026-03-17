@@ -21,7 +21,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataloader.codebook_qa import CodebookQADataset
+from dataloader.codebook_qa import CodebookQADataset, GraphDifficultyConfig
+from dataloader.trl_adapters import CodebookQAGRPODataset
 from trl import GRPOConfig, GRPOTrainer
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
@@ -130,90 +131,14 @@ def load_model_for_grpo(base_model_name_or_path: str, adapter_model_name_or_path
     return model, tokenizer
 
 
-def build_grpo_prompt(sample) -> str:
-    """
-    Build the user-facing prompt for GRPO from a CodebookQADataset sample.
-
-    This mirrors the SFT prompt used in annotate_codebook_qa_sft.py but
-    omits any teacher answer so the model's completion can be evaluated
-    by the reward function.
-    """
-    prefix = (
-        "You are an expert reasoning assistant. Given a story, a codebook, and a "
-        "yes/no question about whether the story satisfies a particular attribute, "
-        "answer using the following STRICT format:\n\n"
-        "<thinking>\n"
-        "- The thinking section consists of multiple PARAGRAPHS.\n"
-        "- Each paragraph is ONE argument.\n"
-        "- Inside each paragraph, refer to attributes in ALL CAPS in square brackets, "
-        "e.g. [SHORT], [NOUN], [NON-NOUN], [DENSE]. These are the nodes/attributes.\n"
-        "- Each paragraph MUST END with a citation of the form:\n"
-        "    (ATTR : True)\n"
-        "  or\n"
-        "    (ATTR : False)\n"
-        "  where ATTR is the (uppercase) attribute name that this paragraph is "
-        "concluding about.\n"
-        "- The cited ATTR at the end of the paragraph MUST appear in square brackets "
-        "somewhere in that paragraph as [ATTR].\n"
-        "- Use one blank line between paragraphs.\n"
-        "- Base your arguments on the story, codebook, and question.\n"
-        "\n"
-        "For example:\n"
-        "<thinking>\n"
-        "The estimated number of characters for this story is 3000. Since 3000 is "
-        "lower than 5000, I conclude that the story is [SHORT]. (SHORT : True)\n"
-        "\n"
-        "Since the story starts with an adjective (\"Wet raindrops fall...\") it is "
-        "not [NOUN]. (NOUN : False)\n"
-        "\n"
-        "The story is also [NON-NOUN] because it is not [NOUN]. (NON-NOUN : True)\n"
-        "\n"
-        "Therefore, the story is [DENSE] because both [SHORT] and [NON-NOUN] are "
-        "true. (DENSE : True)\n"
-        "</thinking>\n"
-        "Yes, the story is dense.\n"
-        "\n"
-        "Now follow exactly this structure for the given story, codebook, and "
-        "question.\n"
-        "</thinking>\n"
-        "Yes, the story is ...\n"
-        "# OR\n"
-        "No, the story is not ...\n\n"
-        "Story:\n"
-        f"{sample.story}\n\n"
-        "Codebook:\n"
-        f"{sample.codebook_text}\n\n"
-        "Question:\n"
-        f"{sample.question}\n\n"
-        "Assistant:\n"
-    )
-    return prefix
+#
+# NOTE: Prompt building now lives in `dataloader/trl_adapters.py`.
+#
 
 
-class CodebookQAGRPODataset:
-    """
-    Lightweight dataset wrapper for GRPO that uses CodebookQADataset as the
-    underlying dataloader and exposes 'text' fields for TRL.
-    """
-
-    def __init__(
-        self,
-        base_dataset: CodebookQADataset,
-        num_examples: int = 1000,
-    ) -> None:
-        self._base = base_dataset
-        self._num_examples = num_examples
-
-    def __len__(self) -> int:
-        return self._num_examples
-
-    def __getitem__(self, idx):
-        # We ignore idx and sample randomly to keep things simple; CodebookQADataset
-        # already handles sampling with its own RNG/seed.
-        sample = self._base.sample()
-        prompt = build_grpo_prompt(sample)
-        # TRL's GRPOTrainer expects a 'prompt' column.
-        return {"prompt": prompt}
+#
+# NOTE: The GRPO dataset wrapper now lives in `dataloader/trl_adapters.py`.
+#
 
 
 def run_grpo_training(train_dataset, base_model_name_or_path, adapter_model_name_or_path, output_dir: str) -> None:
@@ -314,10 +239,8 @@ def main() -> None:
 
     # Use the shared CodebookQADataset dataloader for stories + codebooks.
     base_dataset = CodebookQADataset(
-        stories=None,
-        stories_story_key="story",
-        codebooks_root=Path("codebooks") / "final_selection",
-        simplestories_split=args.split,
+        split="train" if args.split == "train" else ("test" if args.split in {"test", "validation"} else "eval"),
+        difficulties=[(GraphDifficultyConfig(goal_depth=2, max_leaf_nodes=6), 1.0)],
         seed=args.seed,
     )
     train_dataset = CodebookQAGRPODataset(

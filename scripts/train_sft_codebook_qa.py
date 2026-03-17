@@ -33,8 +33,29 @@ def main() -> None:
     parser.add_argument(
         "--data-path",
         type=str,
-        default="data/codebook_qa_sft_1000.jsonl",
+        default="data/codebook_qa_sft_gpt_1000.jsonl",
         help="Path to JSONL file with SFT data (must have 'text' field).",
+    )
+    parser.add_argument(
+        "--use-live-dataloader",
+        action="store_true",
+        help=(
+            "Use the on-the-fly CodebookQADataset instead of JSONL. "
+            "This produces deterministic traces from the inferred reasoning graph."
+        ),
+    )
+    parser.add_argument(
+        "--split",
+        type=str,
+        default="train",
+        choices=["train", "test", "eval"],
+        help="Which split to draw from when using the live dataloader.",
+    )
+    parser.add_argument(
+        "--num-examples",
+        type=int,
+        default=10000,
+        help="Number of SFT examples to serve when using the live dataloader.",
     )
     parser.add_argument(
         "--model",
@@ -51,13 +72,28 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    data_path = Path(args.data_path)
-    if not data_path.exists():
-        raise FileNotFoundError(
-            f"SFT data file not found: {data_path}. Run annotate_codebook_qa_sft.py first."
-        )
+    if args.use_live_dataloader:
+        from dataloader import CodebookQADataset, GraphDifficultyConfig
+        from dataloader.trl_adapters import CodebookQASFTDataset, SFTAdapterConfig
 
-    dataset = load_dataset("json", data_files=str(data_path), split="train")
+        base = CodebookQADataset(
+            split=args.split,
+            difficulties=[(GraphDifficultyConfig(goal_depth=2, max_leaf_nodes=6), 1.0)],
+            seed=42,
+        )
+        dataset = CodebookQASFTDataset(
+            base_dataset=base,
+            num_examples=args.num_examples,
+            config=SFTAdapterConfig(),
+        )
+    else:
+        data_path = Path(args.data_path)
+        if not data_path.exists():
+            raise FileNotFoundError(
+                f"SFT data file not found: {data_path}. "
+                "Either pass --data-path to an existing JSONL, or use --use-live-dataloader."
+            )
+        dataset = load_dataset("json", data_files=str(data_path), split="train")
 
     training_args = SFTConfig(
         run_name=f"sft-{Path(args.model).name}-{Path(args.output_dir).name}",
