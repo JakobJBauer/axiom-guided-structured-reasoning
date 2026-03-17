@@ -36,7 +36,7 @@ from dataloader.trl_adapters import build_base_prompt, render_reasoning_trace
 
 def build_sft_text(sample) -> str:
     reasoning = render_reasoning_trace(sample.reasoning_graph, sample.sink_id)
-    return build_base_prompt(sample) + reasoning
+    return build_base_prompt(sample, prompt_style="none") + reasoning
 
 
 def main() -> None:
