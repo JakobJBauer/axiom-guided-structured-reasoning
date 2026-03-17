@@ -27,71 +27,26 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from dataloader.codebook_qa import CodebookQADataset
+from dataloader.codebook_qa import CodebookQADataset, GraphDifficultyConfig
+from dataloader.trl_adapters import build_base_prompt, build_task_prefix
 
 
 load_dotenv()
 
 
+def build_teacher_prompt(sample) -> str:
+    """
+    Prompt sent to the GPT teacher: full instructions + example content.
+    """
+    task_prefix = build_task_prefix("full")
+    return task_prefix + build_base_prompt(sample, prompt_style="none")
+
+
 def build_sft_text(sample) -> str:
     """
-    Build a single training example string combining:
-    - story
-    - codebook
-    - question
-    - teacher answer (to be filled in by GPT-5-mini)
+    Training example text stored in JSONL (no long prefix).
     """
-    # The teacher will fill in everything after "Assistant:"
-    prefix = (
-        "You are an expert reasoning assistant. Given a story, a codebook, and a "
-        "yes/no question about whether the story satisfies a particular attribute, "
-        "answer using the following STRICT format:\n\n"
-        "<thinking>\n"
-        "- The thinking section consists of multiple PARAGRAPHS.\n"
-        "- Each paragraph is ONE argument.\n"
-        "- Inside each paragraph, refer to attributes in ALL CAPS in square brackets, "
-        "e.g. [SHORT], [NOUN], [NON-NOUN], [DENSE]. These are the nodes/attributes.\n"
-        "- Each paragraph MUST END with a citation of the form:\n"
-        "    (ATTR : True)\n"
-        "  or\n"
-        "    (ATTR : False)\n"
-        "  where ATTR is the (uppercase) attribute name that this paragraph is "
-        "concluding about.\n"
-        "- The cited ATTR at the end of the paragraph MUST appear in square brackets "
-        "somewhere in that paragraph as [ATTR].\n"
-        "- Use one blank line between paragraphs.\n"
-        "- Base your arguments on the story, codebook, and question.\n"
-        "\n"
-        "For example:\n"
-        "<thinking>\n"
-        "The estimated number of characters for this story is 3000. Since 3000 is "
-        "lower than 5000, I conclude that the story is [SHORT]. (SHORT : True)\n"
-        "\n"
-        "Since the story starts with an adjective (\"Wet raindrops fall...\") it is "
-        "not [NOUN]. (NOUN : False)\n"
-        "\n"
-        "The story is also [NON-NOUN] because it is not [NOUN]. (NON-NOUN : True)\n"
-        "\n"
-        "Therefore, the story is [DENSE] because both [SHORT] and [NON-NOUN] are "
-        "true. (DENSE : True)\n"
-        "</thinking>\n"
-        "Yes, the story is dense.\n"
-        "\n"
-        "Now follow exactly this structure for the given story, codebook, and "
-        "question.\n"
-        "</thinking>\n"
-        "Yes, the story is ...\n"
-        "# OR\n"
-        "No, the story is not ...\n\n"
-        "Story:\n"
-        f"{sample.story}\n\n"
-        "Codebook:\n"
-        f"{sample.codebook_text}\n\n"
-        "Question:\n"
-        f"{sample.question}\n\n"
-        "Assistant:\n"
-    )
-    return prefix
+    return build_base_prompt(sample, prompt_style="none")
 
 
 def main() -> None:
@@ -153,17 +108,16 @@ def main() -> None:
 
     # Initialize dataset (uses SimpleStories by default)
     dataset = CodebookQADataset(
-        stories=None,
-        stories_story_key="story",
-        codebooks_root=Path("codebooks") / "final_selection",
-        simplestories_split=args.split,
+        split=args.split,
+        difficulties=[(GraphDifficultyConfig(goal_depth=2, max_leaf_nodes=6), 1.0)],
         seed=args.seed,
     )
 
     def annotate_one(_idx: int) -> Dict[str, Any]:
         """Single annotation job for use in a thread pool."""
         sample = dataset.sample()
-        prompt = build_sft_text(sample)
+        # Prompt the teacher with full instructions
+        teacher_prompt = build_teacher_prompt(sample)
 
         completion = client.chat.completions.create(
             model=args.model,
@@ -177,21 +131,22 @@ def main() -> None:
                 },
                 {
                     "role": "user",
-                    "content": prompt,
+                    "content": teacher_prompt,
                 },
             ],
         )
 
-        answer = completion.choices[0].message.content
+        answer = completion.choices[0].message.content or ""
 
-        # Final SFT text: user context + teacher answer
-        text = prompt + (answer or "")
+        # Final SFT text stored in JSONL: content-only prefix + teacher answer.
+        text = build_sft_text(sample) + answer
 
         record: Dict[str, Any] = {
             "text": text,
             "story": sample.story,
-            "codebook_path": str(sample.codebook_path),
             "question": sample.question,
+            "sink_id": sample.sink_id,
+            "answer": bool(sample.answer),
         }
         return record
 
