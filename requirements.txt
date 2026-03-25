@@ -2,7 +2,7 @@
 trl @ git+https://github.com/huggingface/trl.git@415a4a4ed5df1e3da16eb39ad2db52700b203951
 datasets==4.6.1
 wandb==0.25.1
-transformers==5.2.3
+transformers==5.2.0
 torch==2.10.0
 openai==2.15.0
 python-dotenv==1.2.1
