@@ -32,6 +32,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 THINKING_OPEN, THINKING_CLOSE = "<thinking>", "</thinking>"
+CITATION_PATTERN = re.compile(r'\(([A-Z][A-Z\-]*) : (True|False)\)', re.IGNORECASE)
 
 def extract_responses(completions):
     responses = []
@@ -52,52 +53,65 @@ def thinking_tags_reward(completions, **kwargs):
     for response in responses:
         response = response.lower()
         reward = 0.0
-        if response.count(THINKING_OPEN) == 1 and response.count(THINKING_CLOSE) == 1:
-            if response.index(THINKING_OPEN) < response.index(THINKING_CLOSE):
-                reward += 1.0
-        elif response.count(THINKING_OPEN) == 1:
-            reward += 0.5;
-        elif response.count(THINKING_CLOSE) == 1:
-            reward += 0.5;
+        open_count, closed_count = response.count(THINKING_OPEN), response.count(THINKING_CLOSE)
+        if open_count == 1 and closed_count == 1:
+            open_idx, closed_idx = response.index(THINKING_OPEN), response.index(THINKING_CLOSE)
+            if open_idx < closed_idx:
+                reward += 0.8
+                content = response[open_idx + len(THINKING_OPEN):closed_idx].strip()
+                if len(content.splitlines()) >= 2: reward += 0.2 # Give extra credit for multiple paragraphs.
+            else: reward += 0.6
+        elif open_count == 1 or closed_count == 1: reward += 0.5;
         rewards.append(reward)
     return rewards
 
 def citation_format_reward(completions, **kwargs):
-    # 0 - 0.5 reward depending on the presence of (ATTR : True) or (ATTR : False) tags
+    # 0 - 1 reward depending on the presence of (ATTR : True) or (ATTR : False) tags. Gives partial credit.
     responses = extract_responses(completions)
     rewards = []
     for response in responses:
         response = response.lower()
-        reward = 0.0
         start = response.find(THINKING_OPEN)
         end = response.rfind(THINKING_CLOSE)
-        if start == -1 or end == -1: reasoning = response
-        else: reasoning = response[start + len(THINKING_OPEN):end].strip()
+        if start == -1 or end == -1:
+            rewards.append(0.0)
+            continue
         
-        # Here we check whether each argument ends with a citation of the form (ATTR : True) or (ATTR : False)
-        # For now we just check presence
-        if reasoning.count("(ATTR : True)") + reasoning.count("(ATTR : False)") > 0: reward = 0.5
-        else: reward = 0.0
+        reasoning = response[start + len(THINKING_OPEN):end].strip()
 
+        paragraphs = [p.strip() for p in re.split(r'\n\s*\n', reasoning) if p.strip()]
+        if not paragraphs:
+            rewards.append(0.0)
+            continue
 
-        rewards.append(reward)
+        matching = 0.0
+        for paragraph in paragraphs:
+            last_line = paragraph.splitlines()[-1].strip()
+            citation_match = CITATION_PATTERN.search(last_line) # get the citation
+            if not citation_match: continue
+            matching += 0.3
+            if last_line.endswith(")"): matching += 0.1 # Make sure it actually ends in the citation.
+
+            attr = citation_match.group(1).upper()
+            if f"[{attr}]" in paragraph.upper(): matching += 0.6 # We give extra credit when the citation is relevant to the paragraph
+        
+        rewards.append(matching / len(paragraphs))
     return rewards
         
-def answer_format_reward(completions, **kwargs):
+def answer_format_reward(completions, sink_id, **kwargs):
     # 0 - 0.5 reward depending on the presence of yes/no answer
     responses = extract_responses(completions)
     rewards = []
-    for response in responses:
+    for response, sink in zip(responses, sink_id):
         response = response.lower()
-        reward = 0.0
-
-        # cut to after the last </thinking> tag. Fallback use the whole response.
+        sink = str(sink).lower()
         end = response.rfind(THINKING_CLOSE)
-        if end == -1: answer = response
-        else: answer = response[end + len(THINKING_CLOSE):].strip()
-        if answer.startswith("yes, the story is") or answer.startswith("no, the story is not"):
-            reward += 0.5
-        rewards.append(reward)
+        out = response[end + len(THINKING_CLOSE):].strip() if end != -1 else response
+
+        EXPECTED_RESPONSE = f"yes, the story is {sink}", f"no, the story is not {sink}"
+
+        if any(out.startswith(expected) for expected in EXPECTED_RESPONSE): rewards.append(0.5)
+        else: rewards.append(0.0)
     return rewards
 
 

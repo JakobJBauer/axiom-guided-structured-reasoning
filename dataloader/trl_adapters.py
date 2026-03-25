@@ -219,7 +219,8 @@ class CodebookQAGRPODataset(Dataset):
                 sample,
                 prompt_style=self._prompt_style,
                 abbr_prefix=self._abbr_prefix,
-            )
+            ),
+            "sink_id": sample.sink_id,
         }
         if self._include_answer:
             out["answer"] = bool(sample.answer)
