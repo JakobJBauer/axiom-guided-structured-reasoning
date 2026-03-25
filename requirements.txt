@@ -1,12 +1,14 @@
-trl
-accelerate
-datasets
-wandb
-transformers
-torch
-openai
-python-dotenv
-graphviz
-nest-asyncio
-matplotlib
-peft
+# trl
+trl @ git+https://github.com/huggingface/trl.git@415a4a4ed5df1e3da16eb39ad2db52700b203951
+datasets==4.6.1
+wandb==0.25.1
+transformers==5.2.3
+torch==2.10.0
+openai==2.15.0
+python-dotenv==1.2.1
+graphviz==0.21
+nest-asyncio==1.6.0
+matplotlib==3.10.8
+numpy==2.4.2
+torchvision==0.25.0
+# peft
