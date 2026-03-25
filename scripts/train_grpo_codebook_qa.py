@@ -23,9 +23,9 @@ if str(REPO_ROOT) not in sys.path:
 
 from dataloader.codebook_qa import CodebookQADataset, GraphDifficultyConfig
 from dataloader.trl_adapters import CodebookQAGRPODataset
+from utils import load_model_and_processor
 from trl import GRPOConfig, GRPOTrainer
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from peft import PeftModel
+# from peft import PeftModel
 from dotenv import load_dotenv
 
 
@@ -101,38 +101,7 @@ def answer_format_reward(completions, **kwargs):
     return rewards
 
 
-def load_model_for_grpo(base_model_name_or_path: str, adapter_model_name_or_path: str):
-    """
-    Load a causal LM for GRPO training.
-
-    Supports either:
-    - A base HF model ID or path with a full `config.json`.
-    - A LoRA/PEFT adapter directory (like the SFT output), in which case
-      we load it via `AutoPeftModelForCausalLM` so the base model is
-      automatically resolved and the adapter weights are applied.
-    """
-    tokenizer = AutoTokenizer.from_pretrained(
-        base_model_name_or_path, trust_remote_code=True
-    )
-
-    tokenizer.padding_side = "left"
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
-
-    print(f"Loading Base Model: {base_model_name_or_path}...")
-    base_model = AutoModelForCausalLM.from_pretrained(base_model_name_or_path, trust_remote_code=True)
-
-    print(f"Loading SFT Adapter from {adapter_model_name_or_path} (parameter-efficient)...")
-    model = PeftModel.from_pretrained(base_model, adapter_model_name_or_path)
-
-    # At this point, `model` is a PEFT-wrapped base model where only adapter
-    # parameters are trainable (base weights are frozen), which is exactly
-    # the parameter-efficient GRPO setup we want.
-    return model, tokenizer
-
-
-
-def run_grpo_training(train_dataset, base_model_name_or_path, adapter_model_name_or_path, output_dir: str) -> None:
+def run_grpo_training(train_dataset, model_name_or_path, output_dir: str) -> None:
     """
     Run GRPO training given a pre-built training dataset.
 
@@ -140,17 +109,14 @@ def run_grpo_training(train_dataset, base_model_name_or_path, adapter_model_name
     `CodebookQAGRPODataset`) and loading the model object, so the trainer
     does not depend on any particular data path.
     """
-    model, tokenizer = load_model_for_grpo(
-        base_model_name_or_path, adapter_model_name_or_path
-    )
+    model, processor = load_model_and_processor(model_name_or_path)
 
     from pathlib import Path
 
-    base_name = Path(str(base_model_name_or_path)).name
-    adapter_name = Path(str(adapter_model_name_or_path)).name
+    base_name = Path(str(model_name_or_path)).name
 
     training_args = GRPOConfig(
-        run_name=f"grpo-{base_name}-{adapter_name}",
+        run_name=f"grpo-{base_name}",
         output_dir=output_dir,
         per_device_train_batch_size=8,
         gradient_accumulation_steps=4,
@@ -166,7 +132,7 @@ def run_grpo_training(train_dataset, base_model_name_or_path, adapter_model_name
 
     trainer = GRPOTrainer(
         model=model,
-        processing_class=tokenizer,
+        processing_class=processor,
         reward_funcs=[thinking_tags_reward, citation_format_reward, answer_format_reward],
         args=training_args,
         train_dataset=train_dataset,
@@ -174,7 +140,7 @@ def run_grpo_training(train_dataset, base_model_name_or_path, adapter_model_name
 
     trainer.train()
     trainer.save_model(output_dir)
-    tokenizer.save_pretrained(output_dir)
+    processor.save_pretrained(output_dir)
 
 
 def main() -> None:
@@ -186,22 +152,24 @@ def main() -> None:
     parser.add_argument(
         "--model",
         type=str,
-        default="Qwen/Qwen2-0.5B-Instruct",
+        default="Qwen/Qwen3.5-4B",
         help=(
-            "Base model ID or local checkpoint directory. "
-            "Can also be an SFT LoRA/PEFT adapter directory produced by the SFT script."
+            "Base model ID or local checkpoint directory (full GRPO fine-tuning)."
         ),
     )
-    parser.add_argument(
-        "--adapter-model",
-        type=str,
-        default="Qwen2-CodebookQA-SFT",
-        help="Adapter model ID or local checkpoint directory. ",
-    )
+    # parser.add_argument(
+    #     "--adapter-model",
+    #     type=str,
+    #     default=None,
+    #     help=(
+    #         "(deprecated; ignored in full fine-tuning mode) "
+    #         "LoRA/PEFT adapter directory produced by the SFT script."
+    #     ),
+    # )
     parser.add_argument(
         "--output-dir",
         type=str,
-        default="Qwen2-CodebookQA-GRPO",
+        default="Qwen3.5-4B-CodebookQA-GRPO",
         help="Directory for GRPO fine-tuned model/checkpoints.",
     )
     parser.add_argument(
@@ -240,6 +208,11 @@ def main() -> None:
     )
 
     args = parser.parse_args()
+    # if args.adapter_model:
+    #     print(
+    #         "Warning: --adapter-model is ignored in full fine-tuning mode. "
+    #         "Pass the full SFT checkpoint directory via --model."
+    #     )
 
     # Use the shared CodebookQADataset dataloader for stories + codebooks.
     base_dataset = CodebookQADataset(
@@ -255,8 +228,7 @@ def main() -> None:
     )
     run_grpo_training(
         train_dataset=train_dataset,
-        base_model_name_or_path=args.model,
-        adapter_model_name_or_path=args.adapter_model,
+        model_name_or_path=args.model,
         output_dir=args.output_dir,
     )
 

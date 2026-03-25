@@ -19,7 +19,8 @@ if str(REPO_ROOT) not in sys.path:
 
 from datasets import load_dataset
 from trl import SFTConfig, SFTTrainer
-from peft import LoraConfig
+from utils import load_model_and_processor
+# from peft import LoraConfig
 
 load_dotenv()
 
@@ -100,13 +101,13 @@ def main() -> None:
     parser.add_argument(
         "--model",
         type=str,
-        default="Qwen/Qwen2-0.5B-Instruct",
+        default="Qwen/Qwen3.5-4B",
         help="Base model to fine-tune.",
     )
     parser.add_argument(
         "--output-dir",
         type=str,
-        default="Qwen2-CodebookQA-SFT",
+        default="Qwen3.5-4B-CodebookQA-SFT",
         help="Directory where the fine-tuned model will be saved.",
     )
 
@@ -147,6 +148,8 @@ def main() -> None:
             if prefix:
                 dataset = _TextPrefixWrapper(dataset, prefix)
 
+    model, processor = load_model_and_processor(args.model)
+
     training_args = SFTConfig(
         run_name=f"sft-{Path(args.model).name}-{Path(args.output_dir).name}",
         output_dir=args.output_dir,
@@ -165,24 +168,26 @@ def main() -> None:
         seed=42,
     )
 
-    peft_config = LoraConfig(
-        task_type="CAUSAL_LM",
-        r=8,
-        lora_alpha=64,
-        lora_dropout=0.05,
-        bias="none",
-        target_modules=["q_proj", "k_proj"],
-    )
+    # peft_config = LoraConfig(
+    #     task_type="CAUSAL_LM",
+    #     r=8,
+    #     lora_alpha=64,
+    #     lora_dropout=0.05,
+    #     bias="none",
+    #     target_modules=["q_proj", "k_proj"],
+    # )
 
     trainer = SFTTrainer(
-        model=args.model,
+        model=model,
+        processing_class=processor,
         args=training_args,
         train_dataset=dataset,
-        peft_config=peft_config,
+        # peft_config=peft_config,
     )
 
     trainer.train()
     trainer.save_model(args.output_dir)
+    processor.save_pretrained(args.output_dir)
 
 
 if __name__ == "__main__":
