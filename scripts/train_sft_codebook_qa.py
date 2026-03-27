@@ -149,15 +149,19 @@ def main() -> None:
         save_strategy="epoch",
         dataset_text_field="text",
         seed=42,
+        bf16=True,
     )
 
     peft_config = LoraConfig(
         task_type="CAUSAL_LM",
-        r=8,
+        r=32,
         lora_alpha=64,
         lora_dropout=0.05,
         bias="none",
-        target_modules=["q_proj", "k_proj"],
+        target_modules=[
+            "q_proj", "k_proj", "v_proj", "o_proj",  # attention
+            "gate_proj", "up_proj", "down_proj",       # MLP
+        ],
     )
 
     trainer = SFTTrainer(
@@ -172,21 +176,21 @@ def main() -> None:
     trainer.save_model(args.output_dir)
     processor.save_pretrained(args.output_dir)
 
-    merged_dir = Path(args.output_dir) / "merged"
-    merged_dir.mkdir(parents=True, exist_ok=True)
+    # merged_dir = Path(args.output_dir) / "merged"
+    # merged_dir.mkdir(parents=True, exist_ok=True)
 
-    model_to_merge = trainer.model
+    # model_to_merge = trainer.model
 
-    # Merge on CPU to avoid VRAM spikes / OOM during adapter merge.
-    if torch.cuda.is_available():
-        try:
-            model_to_merge = model_to_merge.to("cpu")
-        finally:
-            torch.cuda.empty_cache()
+    # # Merge on CPU to avoid VRAM spikes / OOM during adapter merge.
+    # if torch.cuda.is_available():
+    #     try:
+    #         model_to_merge = model_to_merge.to("cpu")
+    #     finally:
+    #         torch.cuda.empty_cache()
 
-    merged_model = model_to_merge.merge_and_unload()
-    merged_model.save_pretrained(str(merged_dir))
-    processor.save_pretrained(str(merged_dir))
+    # merged_model = model_to_merge.merge_and_unload()
+    # merged_model.save_pretrained(str(merged_dir))
+    # processor.save_pretrained(str(merged_dir))
 
 
 if __name__ == "__main__":
