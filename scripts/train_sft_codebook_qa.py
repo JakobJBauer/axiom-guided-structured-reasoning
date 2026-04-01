@@ -11,6 +11,7 @@ annotate_codebook_qa_sft.py (JSONL with a 'text' field).
 from pathlib import Path
 import sys
 from dotenv import load_dotenv
+import torch
 
 # Ensure project root is on sys.path so we can import local modules
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -20,35 +21,12 @@ if str(REPO_ROOT) not in sys.path:
 from datasets import load_dataset
 from trl import SFTConfig, SFTTrainer
 from utils import load_model_and_processor
-# from peft import LoraConfig
+from peft import LoraConfig
 
 load_dotenv()
 
 DEFAULT_GPT_JSONL = "data/codebook_qa_sft_gpt_1000.jsonl"
 DEFAULT_DETERMINISTIC_JSONL = "data/codebook_qa_sft_deterministic_1000.jsonl"
-
-
-class _TextPrefixWrapper:
-    """
-    Minimal wrapper that prepends a string to an existing `text` field.
-
-    Works for HF datasets (getitem dict) and torch-style datasets that return dicts.
-    """
-
-    def __init__(self, base, prefix: str):
-        self._base = base
-        self._prefix = prefix
-
-    def __len__(self):
-        return len(self._base)
-
-    def __getitem__(self, idx):
-        item = self._base[idx]
-        text = item.get("text", "")
-        out = dict(item)
-        out["text"] = self._prefix + text
-        return out
-
 
 def main() -> None:
     import argparse
@@ -146,18 +124,23 @@ def main() -> None:
 
             prefix = build_task_prefix(args.prompt_style, abbr_prefix=args.abbr_prefix)
             if prefix:
-                dataset = _TextPrefixWrapper(dataset, prefix)
+                # Keep this as a real HF Dataset so TRL can introspect `column_names`.
+                def _prepend_prefix(ex):
+                    return {"text": prefix + ex.get("text", "")}
+
+                dataset = dataset.map(_prepend_prefix)
 
     model, processor = load_model_and_processor(args.model)
 
     training_args = SFTConfig(
         run_name=f"sft-{Path(args.model).name}-{Path(args.output_dir).name}",
         output_dir=args.output_dir,
-        per_device_train_batch_size=4,
+        per_device_train_batch_size=1,
+        max_length=4096,
         gradient_accumulation_steps=8,
         num_train_epochs=3,
         learning_rate=2e-5,
-        save_steps=200,
+        save_steps=250,
         report_to="wandb",
         gradient_checkpointing=True,
         warmup_steps=5,
@@ -166,28 +149,48 @@ def main() -> None:
         save_strategy="epoch",
         dataset_text_field="text",
         seed=42,
+        bf16=True,
     )
 
-    # peft_config = LoraConfig(
-    #     task_type="CAUSAL_LM",
-    #     r=8,
-    #     lora_alpha=64,
-    #     lora_dropout=0.05,
-    #     bias="none",
-    #     target_modules=["q_proj", "k_proj"],
-    # )
+    peft_config = LoraConfig(
+        task_type="CAUSAL_LM",
+        r=32,
+        lora_alpha=64,
+        lora_dropout=0.05,
+        bias="none",
+        target_modules=[
+            "q_proj", "k_proj", "v_proj", "o_proj",  # attention
+            "gate_proj", "up_proj", "down_proj",       # MLP
+        ],
+    )
 
     trainer = SFTTrainer(
         model=model,
         processing_class=processor,
         args=training_args,
         train_dataset=dataset,
-        # peft_config=peft_config,
+        peft_config=peft_config,
     )
 
     trainer.train()
     trainer.save_model(args.output_dir)
     processor.save_pretrained(args.output_dir)
+
+    # merged_dir = Path(args.output_dir) / "merged"
+    # merged_dir.mkdir(parents=True, exist_ok=True)
+
+    # model_to_merge = trainer.model
+
+    # # Merge on CPU to avoid VRAM spikes / OOM during adapter merge.
+    # if torch.cuda.is_available():
+    #     try:
+    #         model_to_merge = model_to_merge.to("cpu")
+    #     finally:
+    #         torch.cuda.empty_cache()
+
+    # merged_model = model_to_merge.merge_and_unload()
+    # merged_model.save_pretrained(str(merged_dir))
+    # processor.save_pretrained(str(merged_dir))
 
 
 if __name__ == "__main__":

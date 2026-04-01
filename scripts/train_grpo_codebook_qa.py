@@ -25,7 +25,7 @@ from dataloader.codebook_qa import CodebookQADataset, GraphDifficultyConfig
 from dataloader.trl_adapters import CodebookQAGRPODataset
 from utils import load_model_and_processor
 from trl import GRPOConfig, GRPOTrainer
-# from peft import PeftModel
+from peft import LoraConfig
 from dotenv import load_dotenv
 
 
@@ -115,7 +115,13 @@ def answer_format_reward(completions, sink_id, **kwargs):
     return rewards
 
 
-def run_grpo_training(train_dataset, model_name_or_path, output_dir: str) -> None:
+def run_grpo_training(
+    train_dataset,
+    model_name_or_path,
+    output_dir: str,
+    num_examples: int,
+    max_steps: int = -1,
+) -> None:
     """
     Run GRPO training given a pre-built training dataset.
 
@@ -129,20 +135,47 @@ def run_grpo_training(train_dataset, model_name_or_path, output_dir: str) -> Non
 
     base_name = Path(str(model_name_or_path)).name
 
+    per_device_train_batch_size = 8
+    gradient_accumulation_steps = 1
+
+    # HF Trainer requires `max_steps > 0` when dataset has no `__len__`.
+    # The GRPO adapter dataset is iterable, so derive a sensible default.
+    if max_steps <= 0:
+        effective_batch = per_device_train_batch_size * gradient_accumulation_steps
+        max_steps = max(1, num_examples // effective_batch)
+        print(
+            f"Dataset has no static length; setting max_steps={max_steps} "
+            f"(num_examples={num_examples}, effective_batch={effective_batch})."
+        )
+
     training_args = GRPOConfig(
-        run_name=f"grpo-{base_name}",
         output_dir=output_dir,
-        per_device_train_batch_size=8,
-        gradient_accumulation_steps=4,
         num_generations=4,
-        num_train_epochs=1,
+        num_train_epochs=1,  # ignored when max_steps > 0
+        max_steps=max_steps,
         learning_rate=5e-6,
-        logging_steps=10,
+        per_device_train_batch_size=per_device_train_batch_size,
+        gradient_accumulation_steps=gradient_accumulation_steps,
+        
+        # GRPO specific hyperparameters
+        beta=0.1,
+        bf16=True,
+
+        # Tracking info
         report_to="wandb",
         save_strategy="steps",
+        logging_steps=10,
         save_steps=100,
-        beta=0.1,
+        run_name=f"grpo-{base_name}",
+
+        # Fast inference with VLLM
+        # use_vllm=True,
+        # vllm_mode="colocate",
     )
+
+    if not hasattr(model, "peft_config") and bool(getattr(model, "peft_config")):
+        raise ValueError("Model does not have a PEFT config.")
+
 
     trainer = GRPOTrainer(
         model=model,
@@ -168,7 +201,8 @@ def main() -> None:
         type=str,
         default="Qwen/Qwen3.5-4B",
         help=(
-            "Base model ID or local checkpoint directory (full GRPO fine-tuning)."
+            "Base model ID/path, or SFT LoRA checkpoint directory. "
+            "If you pass an SFT PEFT directory, GRPO reuses that adapter."
         ),
     )
     # parser.add_argument(
@@ -220,6 +254,15 @@ def main() -> None:
             "(train, validation, test; validation maps to the dataset's test split)."
         ),
     )
+    parser.add_argument(
+        "--max-steps",
+        type=int,
+        default=-1,
+        help=(
+            "Override GRPO max update steps. If <= 0, auto-compute from "
+            "--num-examples and effective batch size."
+        ),
+    )
 
     args = parser.parse_args()
     # if args.adapter_model:
@@ -244,6 +287,8 @@ def main() -> None:
         train_dataset=train_dataset,
         model_name_or_path=args.model,
         output_dir=args.output_dir,
+        num_examples=args.num_examples,
+        max_steps=args.max_steps,
     )
 
 
