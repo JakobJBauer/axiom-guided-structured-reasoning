@@ -1,4 +1,5 @@
 import torch
+from pathlib import Path
 from transformers import (
     AutoModelForCausalLM,
     AutoModelForImageTextToText,
@@ -9,8 +10,23 @@ from transformers import (
 def load_model_and_processor(model_name_or_path: str):
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
+    # If `model_name_or_path` is a PEFT adapter directory, load base + attach adapter.
+    p = Path(model_name_or_path)
+    if p.exists() and (p / "adapter_config.json").exists():
+        from peft import PeftConfig, PeftModel
+
+        peft_cfg = PeftConfig.from_pretrained(str(p))
+        base_id = peft_cfg.base_model_name_or_path
+        if not base_id: raise ValueError(f"PEFT adapter at {model_name_or_path!r} does not specify base_model_name_or_path.")
+
+        base_model, base_tokenizer = load_model_and_processor(str(base_id))
+        model = PeftModel.from_pretrained(base_model, str(p))
+
+        return model, base_tokenizer
+
+
+    print(f"Loading Full Training Model: {model_name_or_path}...")
     if "Qwen3.5" in model_name_or_path:
-        print(f"Loading Full Training Model: {model_name_or_path}...")
         model = AutoModelForImageTextToText.from_pretrained(
             model_name_or_path, 
             trust_remote_code=True,
@@ -29,7 +45,7 @@ def load_model_and_processor(model_name_or_path: str):
         if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
 
-        print(f"Loading Full Training Model: {model_name_or_path}...")
+        
         model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path, trust_remote_code=True
         ).to(device)
