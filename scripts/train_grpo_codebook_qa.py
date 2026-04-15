@@ -163,14 +163,9 @@ def answer_accuracy_reward(completions, sink_id, answer, **kwargs):
         response = response.lower()
         sink = str(sink).lower()
         out = _final_answer_tail(response)
-        expects_yes = f"yes, the story is {sink}"
-        expects_no = f"no, the story is not {sink}"
-        if gold_bool:
-            if expects_yes in out and expects_no not in out: rewards.append(1.0)
-            else: rewards.append(0.0)
-        else:
-            if expects_no in out and expects_yes not in out: rewards.append(1.0)
-            else: rewards.append(0.0)
+        if gold_bool and any(x in out.lower() for x in ["yes", "true"]): rewards.append(1.0)
+        elif not gold_bool and any(x in out.lower() for x in ["no", "false"]): rewards.append(1.0)
+        else: rewards.append(0.0)
     return rewards
 
 
@@ -205,6 +200,7 @@ def reward_functions_for_mode(mode: RewardMode):
             thinking_tags_reward,
             citation_format_reward,
             intermediate_steps_reward,
+            answer_format_reward,
             answer_accuracy_reward,
         ]
     raise ValueError(f"Unknown reward mode: {mode!r}")
@@ -326,9 +322,12 @@ def main() -> None:
     parser.add_argument(
         "--prompt-style",
         type=str,
-        default="full",
+        default=None,
         choices=["full", "abbr", "none"],
-        help="Prompt prefix style: full instructions, abbreviated task tag, or none.",
+        help=(
+            "Prompt prefix style: full instructions, abbreviated task tag, or none. "
+            "If omitted, defaults to: answer_only -> none, otherwise -> full."
+        ),
     )
     parser.add_argument(
         "--abbr-prefix",
@@ -373,6 +372,9 @@ def main() -> None:
     )
 
     args = parser.parse_args()
+
+    if args.prompt_style is None:
+        args.prompt_style = "none" if args.reward_mode == "answer_only" else "full"
     # if args.adapter_model:
     #     print(
     #         "Warning: --adapter-model is ignored in full fine-tuning mode. "
