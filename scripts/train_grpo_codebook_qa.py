@@ -15,6 +15,7 @@ format adherence rather than teacher matching.
 import re
 from pathlib import Path
 import sys
+from typing import Literal
 
 # Ensure project root is on sys.path so we can import local modules
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -25,14 +26,16 @@ from dataloader.codebook_qa import CodebookQADataset, GraphDifficultyConfig
 from dataloader.trl_adapters import CodebookQAGRPODataset
 from utils import load_model_and_processor
 from trl import GRPOConfig, GRPOTrainer
-from peft import LoraConfig
 from dotenv import load_dotenv
 
 
 load_dotenv()
 
 THINKING_OPEN, THINKING_CLOSE = "<thinking>", "</thinking>"
-CITATION_PATTERN = re.compile(r'\(([A-Z][A-Z\-]*) : (True|False)\)', re.IGNORECASE)
+CITATION_PATTERN = re.compile(r'\(\s?([A-Z][A-Z\-]*)\s?:\s?(True|False)\s?\)', re.IGNORECASE)
+
+RewardMode = Literal["structure", "answer_only", "process"]
+
 
 def extract_responses(completions):
     responses = []
@@ -45,6 +48,43 @@ def extract_responses(completions):
             text = str(completion)
         responses.append(text)
     return responses
+
+
+def _final_answer_tail(response_lower: str) -> str:
+    end = response_lower.rfind(THINKING_CLOSE)
+    if end != -1:
+        return response_lower[end + len(THINKING_CLOSE) :].strip()
+    return response_lower.strip()
+
+
+def _strict_reasoning_citations(response: str) -> dict[str, bool] | None:
+    """
+    If <thinking> is well-formed and every non-empty reasoning paragraph ends with
+    a valid trailing citation, return ATTR_UPPER -> bool (last assignment wins).
+    Otherwise None.
+    """
+    r = response.lower()
+    start = r.find(THINKING_OPEN)
+    end = r.rfind(THINKING_CLOSE)
+    if start == -1 or end == -1 or start >= end:
+        return None
+    reasoning = r[start + len(THINKING_OPEN) : end].strip()
+    paragraphs = [p.strip() for p in re.split(r"\n\s*\n", reasoning) if p.strip()]
+    if not paragraphs:
+        return None
+    pred: dict[str, bool] = {}
+    for paragraph in paragraphs:
+        last_line = paragraph.splitlines()[-1].strip()
+        matches = list(CITATION_PATTERN.finditer(last_line))
+        if not matches:
+            return None
+        citation_match = matches[-1]
+        if last_line[citation_match.end() :].strip():
+            return None
+        attr = citation_match.group(1).upper()
+        pred[attr] = citation_match.group(2).lower() == "true"
+    return pred
+
 
 def thinking_tags_reward(completions, **kwargs):
     # 0 - 1 reward depending on the presence of <thinking>...</thinking> tags
@@ -87,13 +127,14 @@ def citation_format_reward(completions, **kwargs):
         matching = 0.0
         for paragraph in paragraphs:
             last_line = paragraph.splitlines()[-1].strip()
-            citation_match = CITATION_PATTERN.search(last_line) # get the citation
-            if not citation_match: continue
-            matching += 0.3
-            if last_line.endswith(")"): matching += 0.1 # Make sure it actually ends in the citation.
+            matches = list(CITATION_PATTERN.finditer(last_line))
+            if not matches: continue
+            citation_match = matches[-1]
+            if last_line[citation_match.end():].strip(): continue
+            matching += 1.0
 
-            attr = citation_match.group(1).upper()
-            if f"[{attr}]" in paragraph.upper(): matching += 0.6 # We give extra credit when the citation is relevant to the paragraph
+            # attr = citation_match.group(1).upper()
+            # if f"[{attr}]" in paragraph.upper(): matching += 0.5 # We give extra credit when the citation is relevant to the paragraph
         
         rewards.append(matching / len(paragraphs))
     return rewards
@@ -105,8 +146,7 @@ def answer_format_reward(completions, sink_id, **kwargs):
     for response, sink in zip(responses, sink_id):
         response = response.lower()
         sink = str(sink).lower()
-        end = response.rfind(THINKING_CLOSE)
-        out = response[end + len(THINKING_CLOSE):].strip() if end != -1 else response
+        out = _final_answer_tail(response)
 
         EXPECTED_RESPONSE = f"yes, the story is {sink}", f"no, the story is not {sink}"
 
@@ -115,12 +155,68 @@ def answer_format_reward(completions, sink_id, **kwargs):
     return rewards
 
 
+def answer_accuracy_reward(completions, sink_id, answer, **kwargs):
+    """1.0 if the final line matches the gold boolean answer; 0.0 otherwise."""
+    responses = extract_responses(completions)
+    rewards = []
+    for response, sink, gold_bool in zip(responses, sink_id, answer, strict=True):
+        response = response.lower()
+        sink = str(sink).lower()
+        out = _final_answer_tail(response)
+        expects_yes = f"yes, the story is {sink}"
+        expects_no = f"no, the story is not {sink}"
+        if gold_bool:
+            if expects_yes in out and expects_no not in out: rewards.append(1.0)
+            else: rewards.append(0.0)
+        else:
+            if expects_no in out and expects_yes not in out: rewards.append(1.0)
+            else: rewards.append(0.0)
+    return rewards
+
+
+def intermediate_steps_reward(completions, gold_attr_values, **kwargs):
+    """
+    Fraction of gold (attr -> bool) pairs that match parsed citations when the
+    thinking block is fully citation-valid; otherwise None (skipped in GRPO sum).
+    """
+    responses = extract_responses(completions)
+    rewards = []
+    for response, gold in zip(responses, gold_attr_values, strict=True):
+        pred = _strict_reasoning_citations(response)
+        if pred is None:
+            rewards.append(None)
+            continue
+        gold_map = gold or {}
+        if not gold_map:
+            rewards.append(0.0)
+            continue
+        correct = sum(1 for attr, pred_val in pred.items() if pred_val == gold_map.get(attr))
+        rewards.append(correct / len(pred))
+    return rewards
+
+
+def reward_functions_for_mode(mode: RewardMode):
+    if mode == "structure":
+        return [thinking_tags_reward, citation_format_reward, answer_format_reward]
+    if mode == "answer_only":
+        return [answer_accuracy_reward]
+    if mode == "process":
+        return [
+            thinking_tags_reward,
+            citation_format_reward,
+            intermediate_steps_reward,
+            answer_accuracy_reward,
+        ]
+    raise ValueError(f"Unknown reward mode: {mode!r}")
+
+
 def run_grpo_training(
     train_dataset,
     model_name_or_path,
     output_dir: str,
     num_examples: int,
     max_steps: int = -1,
+    reward_mode: RewardMode = "structure",
 ) -> None:
     """
     Run GRPO training given a pre-built training dataset.
@@ -166,21 +262,22 @@ def run_grpo_training(
         save_strategy="steps",
         logging_steps=10,
         save_steps=100,
-        run_name=f"grpo-{base_name}",
+        run_name=f"grpo-{reward_mode}-{base_name}",
 
         # Fast inference with VLLM
         # use_vllm=True,
         # vllm_mode="colocate",
     )
 
-    if not hasattr(model, "peft_config") and bool(getattr(model, "peft_config")):
-        raise ValueError("Model does not have a PEFT config.")
+    # We also support non-peft models
+    # if not hasattr(model, "peft_config") and bool(getattr(model, "peft_config")):
+    #     raise ValueError("Model does not have a PEFT config.")
 
 
     trainer = GRPOTrainer(
         model=model,
         processing_class=processor,
-        reward_funcs=[thinking_tags_reward, citation_format_reward, answer_format_reward],
+        reward_funcs=reward_functions_for_mode(reward_mode),
         args=training_args,
         train_dataset=train_dataset,
     )
@@ -194,7 +291,7 @@ def main() -> None:
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="GRPO training for codebook QA structural adherence."
+        description="GRPO training for codebook QA (structure / answer-only / process rewards)."
     )
     parser.add_argument(
         "--model",
@@ -263,6 +360,17 @@ def main() -> None:
             "--num-examples and effective batch size."
         ),
     )
+    parser.add_argument(
+        "--reward-mode",
+        type=str,
+        default="structure",
+        choices=["structure", "answer_only", "process"],
+        help=(
+            "structure: thinking + citations + template answer line; "
+            "answer_only: final answer correctness only; "
+            "process: structure rewards + intermediate citation accuracy when parseable."
+        ),
+    )
 
     args = parser.parse_args()
     # if args.adapter_model:
@@ -289,6 +397,7 @@ def main() -> None:
         output_dir=args.output_dir,
         num_examples=args.num_examples,
         max_steps=args.max_steps,
+        reward_mode=args.reward_mode,
     )
 
 

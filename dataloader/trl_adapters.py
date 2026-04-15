@@ -12,6 +12,15 @@ from graph.graph import Graph
 THINKING_OPEN, THINKING_CLOSE = "<thinking>", "</thinking>"
 
 
+def gold_attr_values_from_graph(graph: Graph) -> dict[str, bool]:
+    """Uppercase node id -> inferred bool for GRPO process rewards (JSON-serializable)."""
+    return {
+        node.id.upper(): bool(node.value)
+        for node in graph.get_nodes()
+        if node.value is not None
+    }
+
+
 PromptStyle = Literal["full", "abbr", "none"]
 
 
@@ -221,6 +230,7 @@ class CodebookQAGRPODataset(Dataset):
                 abbr_prefix=self._abbr_prefix,
             ),
             "sink_id": sample.sink_id,
+            "gold_attr_values": gold_attr_values_from_graph(sample.reasoning_graph),
         }
         if self._include_answer:
             out["answer"] = bool(sample.answer)
