@@ -35,6 +35,24 @@ def main() -> None:
         description="Train an SFT model on codebook QA reasoning traces."
     )
     parser.add_argument(
+        "--max-length",
+        type=int,
+        default=4096,
+        help="Max sequence length. Lower is faster (often 2048 is plenty).",
+    )
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=1,
+        help="Per-device train batch size. Increase if VRAM allows.",
+    )
+    parser.add_argument(
+        "--grad-accum",
+        type=int,
+        default=8,
+        help="Gradient accumulation steps (keeps effective batch = batch_size * grad_accum).",
+    )
+    parser.add_argument(
         "--data-path",
         type=str,
         default=DEFAULT_GPT_JSONL,
@@ -135,9 +153,9 @@ def main() -> None:
     training_args = SFTConfig(
         run_name=f"sft-{Path(args.model).name}-{Path(args.output_dir).name}",
         output_dir=args.output_dir,
-        per_device_train_batch_size=1,
-        max_length=4096,
-        gradient_accumulation_steps=8,
+        per_device_train_batch_size=args.batch_size,
+        max_length=args.max_length,
+        gradient_accumulation_steps=args.grad_accum,
         num_train_epochs=3,
         learning_rate=2e-5,
         save_steps=250,

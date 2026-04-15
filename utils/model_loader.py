@@ -30,8 +30,7 @@ def load_model_and_processor(model_name_or_path: str):
         model = AutoModelForImageTextToText.from_pretrained(
             model_name_or_path, 
             trust_remote_code=True,
-            dtype=torch.bfloat16 if torch.cuda.is_available() else None,
-            device_map="auto"
+            dtype=torch.bfloat16 if torch.cuda.is_available() else None
         ).to(device)
         processor = AutoProcessor.from_pretrained(model_name_or_path)
         return model, processor
