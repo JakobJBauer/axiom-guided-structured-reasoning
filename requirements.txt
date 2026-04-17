@@ -1,5 +1,5 @@
-# trl
-trl @ git+https://github.com/huggingface/trl.git@415a4a4ed5df1e3da16eb39ad2db52700b203951
+trl
+# trl @ git+https://github.com/huggingface/trl.git@415a4a4ed5df1e3da16eb39ad2db52700b203951
 datasets==4.7.0
 wandb==0.25.1
 transformers==5.2.0

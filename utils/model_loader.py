@@ -13,6 +13,7 @@ def load_model_and_processor(model_name_or_path: str):
     # If `model_name_or_path` is a PEFT adapter directory, load base + attach adapter.
     p = Path(model_name_or_path)
     if p.exists() and (p / "adapter_config.json").exists():
+        print(f"Loading PEFT Adapter: {model_name_or_path}...")
         from peft import PeftConfig, PeftModel
 
         peft_cfg = PeftConfig.from_pretrained(str(p))
@@ -25,7 +26,7 @@ def load_model_and_processor(model_name_or_path: str):
         return model, base_tokenizer
 
 
-    print(f"Loading Full Training Model: {model_name_or_path}...")
+    print(f"Loading Training Model: {model_name_or_path}...")
     if "Qwen3.5" in model_name_or_path:
         model = AutoModelForImageTextToText.from_pretrained(
             model_name_or_path, 

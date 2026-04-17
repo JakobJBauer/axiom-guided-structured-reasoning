@@ -213,6 +213,7 @@ def run_grpo_training(
     num_examples: int,
     max_steps: int = -1,
     reward_mode: RewardMode = "structure",
+    per_device_train_batch_size: int = 8,
 ) -> None:
     """
     Run GRPO training given a pre-built training dataset.
@@ -227,8 +228,9 @@ def run_grpo_training(
 
     base_name = Path(str(model_name_or_path)).name
 
-    per_device_train_batch_size = 8
-    gradient_accumulation_steps = 1
+    per_device_train_batch_size = int(per_device_train_batch_size)
+    # As requested: gradient accumulation is 8, or the batch size if batch size > 8.
+    gradient_accumulation_steps = max(64 // per_device_train_batch_size, 1)
 
     # HF Trainer requires `max_steps > 0` when dataset has no `__len__`.
     # The GRPO adapter dataset is iterable, so derive a sensible default.
@@ -320,6 +322,12 @@ def main() -> None:
         help="Number of GRPO training examples to sample from the dataloader.",
     )
     parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=8,
+        help="Per-device train batch size.",
+    )
+    parser.add_argument(
         "--prompt-style",
         type=str,
         default=None,
@@ -400,6 +408,7 @@ def main() -> None:
         num_examples=args.num_examples,
         max_steps=args.max_steps,
         reward_mode=args.reward_mode,
+        per_device_train_batch_size=args.batch_size,
     )
 
 
