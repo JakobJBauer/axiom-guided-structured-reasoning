@@ -7,6 +7,32 @@ from transformers import (
     AutoTokenizer,
 )
 
+
+def _register_qwen35_rope_delta_batch_guard(model: torch.nn.Module) -> None:
+    """
+    Qwen3_5Model caches `rope_deltas` from the previous forward. GRPO runs
+    generation with batch size (prompts * num_generations), then TRL chunks
+    reference / old-policy logprob forwards with `per_device_train_batch_size`.
+    If the cache is larger than the current batch, `compute_3d_position_ids`
+    uses `repeat_interleave(batch // cache_batch)` which becomes 0 and
+    crashes before reward functions run.
+    """
+    def _pre_hook(module, args, kwargs):
+        input_ids = kwargs.get("input_ids") if kwargs else None
+        if input_ids is None and args:
+            input_ids = args[0]
+        if input_ids is None:
+            return args, kwargs
+        rd = getattr(module, "rope_deltas", None)
+        if rd is not None and rd.shape[0] != input_ids.shape[0]:
+            module.rope_deltas = None
+        return args, kwargs
+
+    for m in model.modules():
+        if type(m).__name__ == "Qwen3_5Model" and hasattr(m, "rope_deltas"):
+            m.register_forward_pre_hook(_pre_hook, with_kwargs=True)
+
+
 def load_model_and_processor(model_name_or_path: str):
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -34,6 +60,7 @@ def load_model_and_processor(model_name_or_path: str):
             dtype=torch.bfloat16 if torch.cuda.is_available() else None
         ).to(device)
         processor = AutoProcessor.from_pretrained(model_name_or_path)
+        _register_qwen35_rope_delta_batch_guard(model)
         return model, processor
 
     elif "Qwen2.5" in model_name_or_path:

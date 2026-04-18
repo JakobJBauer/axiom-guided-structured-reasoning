@@ -103,6 +103,8 @@ def thinking_tags_reward(completions, **kwargs):
             else: reward += 0.6
         elif open_count == 1 or closed_count == 1: reward += 0.5;
         rewards.append(reward)
+
+        print(f"---------------------\nReward: {reward} for thinking tags for response: {response}\nPASSAGE EMD ---------------\n")
     return rewards
 
 def citation_format_reward(completions, **kwargs):
@@ -214,6 +216,8 @@ def run_grpo_training(
     max_steps: int = -1,
     reward_mode: RewardMode = "structure",
     per_device_train_batch_size: int = 8,
+    max_completion_length: int = 2048,
+    use_vllm: bool = False,
 ) -> None:
     """
     Run GRPO training given a pre-built training dataset.
@@ -230,7 +234,7 @@ def run_grpo_training(
 
     per_device_train_batch_size = int(per_device_train_batch_size)
     # As requested: gradient accumulation is 8, or the batch size if batch size > 8.
-    gradient_accumulation_steps = max(64 // per_device_train_batch_size, 1)
+    gradient_accumulation_steps = max(16 // per_device_train_batch_size, 1)
 
     # HF Trainer requires `max_steps > 0` when dataset has no `__len__`.
     # The GRPO adapter dataset is iterable, so derive a sensible default.
@@ -250,8 +254,7 @@ def run_grpo_training(
         learning_rate=5e-6,
         per_device_train_batch_size=per_device_train_batch_size,
         gradient_accumulation_steps=gradient_accumulation_steps,
-        
-        # GRPO specific hyperparameters
+        max_completion_length=max_completion_length,
         beta=0.1,
         bf16=True,
 
@@ -263,8 +266,8 @@ def run_grpo_training(
         run_name=f"grpo-{reward_mode}-{base_name}",
 
         # Fast inference with VLLM
-        # use_vllm=True,
-        # vllm_mode="colocate",
+        use_vllm=use_vllm,
+        vllm_mode="colocate",
     )
 
     # We also support non-peft models
@@ -378,6 +381,21 @@ def main() -> None:
             "process: structure rewards + intermediate citation accuracy when parseable."
         ),
     )
+    parser.add_argument(
+        "--max-completion-length",
+        type=int,
+        default=2048,
+        help=(
+            "Max new tokens per GRPO completion (TRL default 256 is usually too small for "
+            "full thinking traces). Lower if you run out of VRAM during generation/logprob."
+        ),
+    )
+    parser.add_argument(
+        "--use-vllm",
+        action="store_true",
+        default=False,
+        help="Use VLLM for generation.",
+    )
 
     args = parser.parse_args()
 
@@ -409,6 +427,8 @@ def main() -> None:
         max_steps=args.max_steps,
         reward_mode=args.reward_mode,
         per_device_train_batch_size=args.batch_size,
+        max_completion_length=args.max_completion_length,
+        use_vllm=args.use_vllm,
     )
 
 
