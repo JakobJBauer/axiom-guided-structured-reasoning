@@ -154,7 +154,7 @@ def answer_format_reward(completions, sink_id, **kwargs):
 
         sink_esc = re.escape(sink)
         pat = re.compile(
-            rf"^(?:yes,\s*the\s*story\s*is|no,\s*the\s*story\s*is\s*not)\s*[\[\(]?{sink_esc}[\]\)]?\b",
+            rf"^(?:(yes)?,?\s*the\s*story\s*is|(no)?,?\s*the\s*story\s*is\s*not)\s*[\[\(]?{sink_esc}[\]\)]?.*\b",
             re.IGNORECASE,
         )
         rewards.append(0.5 if pat.match(out) else 0.0)
