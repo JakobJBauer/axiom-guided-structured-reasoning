@@ -152,10 +152,12 @@ def answer_format_reward(completions, sink_id, **kwargs):
         sink = str(sink).lower()
         out = _final_answer_tail(response)
 
-        EXPECTED_RESPONSE = f"yes, the story is {sink}", f"no, the story is not {sink}"
-
-        if any(out.lower().startswith(expected.lower()) for expected in EXPECTED_RESPONSE): rewards.append(0.5)
-        else: rewards.append(0.0)
+        sink_esc = re.escape(sink)
+        pat = re.compile(
+            rf"^(?:yes,\s*the\s*story\s*is|no,\s*the\s*story\s*is\s*not)\s*[\[\(]?{sink_esc}[\]\)]?\b",
+            re.IGNORECASE,
+        )
+        rewards.append(0.5 if pat.match(out) else 0.0)
         if os.environ.get("DEBUG_ANSWER_FORMAT", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for answer format. Sink: {sink}.\nPASSAGE END ---------------\n")
     return rewards
 
