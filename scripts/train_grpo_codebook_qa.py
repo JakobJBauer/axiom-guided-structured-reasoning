@@ -431,7 +431,7 @@ def main() -> None:
         "--reward-mode",
         type=str,
         default="structure",
-        choices=["structure", "answer_only", "process"],
+        choices=["structure", "answer_only", "answer-only", "process"],
         help=(
             "structure: thinking + citations + template answer line; "
             "answer_only: final answer correctness only; "
