@@ -13,6 +13,7 @@ import re
 from pathlib import Path
 import sys
 from typing import Literal
+import os
 
 # Ensure project root is on sys.path so we can import local modules
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -99,14 +100,16 @@ def thinking_tags_reward(completions, **kwargs):
                 if len(content.splitlines()) >= 2: reward += 0.1 # Give extra credit for multiple paragraphs.
             else: reward += 0.3
         rewards.append(reward)
+        if os.environ.get("DEBUG_THINKING_TAGS", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for thinking tags.\nPASSAGE END ---------------\n")
 
     return rewards
 
-def citation_format_reward(completions, **kwargs):
-    # 0 - 1 reward depending on the presence of (ATTR : True) or (ATTR : False) tags. Gives partial credit.
+def citation_format_reward(completions, node_ids, **kwargs):
+    # 0 - 2 reward depending on the presence of (ATTR : True) or (ATTR : False) tags. Gives partial credit.
+    # Only gives credit when the cited ATTR exists in this example's codebook graph.
     responses = extract_responses(completions)
     rewards = []
-    for response in responses:
+    for response, valid_nodes in zip(responses, node_ids):
         response = response.lower()
         start = response.find(THINKING_OPEN)
         end = response.rfind(THINKING_CLOSE)
@@ -121,6 +124,7 @@ def citation_format_reward(completions, **kwargs):
             rewards.append(0.0)
             continue
 
+        valid_set = {str(n).upper() for n in (valid_nodes or [])}
         matching = 0.0
         for paragraph in paragraphs:
             last_line = paragraph.splitlines()[-1].strip()
@@ -128,13 +132,15 @@ def citation_format_reward(completions, **kwargs):
             if not matches: continue
             citation_match = matches[-1]
             if last_line[citation_match.end():].strip(): continue
+            cited_attr = citation_match.group(1).upper()
+            if cited_attr not in valid_set: continue
             matching += 1.0
 
             # attr = citation_match.group(1).upper()
             # if f"[{attr}]" in paragraph.upper(): matching += 0.5 # We give extra credit when the citation is relevant to the paragraph
-        reward = matching / len(paragraphs)
+        reward = 2.0 * matching / len(paragraphs)
         rewards.append(reward)
-        print(f"---------------------\nReward: {reward} for citation format for response: {response}\nPASSAGE END ---------------\n")
+        if os.environ.get("DEBUG_CITATION_FORMAT", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for citation format.\nPASSAGE END ---------------\n")
     return rewards
         
 def answer_format_reward(completions, sink_id, **kwargs):
@@ -150,6 +156,7 @@ def answer_format_reward(completions, sink_id, **kwargs):
 
         if any(out.lower().startswith(expected.lower()) for expected in EXPECTED_RESPONSE): rewards.append(0.5)
         else: rewards.append(0.0)
+        if os.environ.get("DEBUG_ANSWER_FORMAT", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for answer format. Sink: {sink}.\nPASSAGE END ---------------\n")
     return rewards
 
 
@@ -183,7 +190,7 @@ def answer_accuracy_reward(completions, sink_id, answer, **kwargs):
         elif final_response == gold_bool: rewards.append(1.0)
         else: rewards.append(0.0)
 
-        print(f"---------------------\nReward: {rewards[-1]} for answer accuracy. Gold answer: {gold_bool}. Sink: {sink}. Response: {response}\nPASSAGE END ---------------\n")
+        if os.environ.get("DEBUG_ANSWER_ACCURACY", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for answer accuracy. Gold answer: {gold_bool}. Sink: {sink}.\nPASSAGE END ---------------\n")
     return rewards
 
 
@@ -191,6 +198,8 @@ def intermediate_steps_reward(completions, gold_attr_values, **kwargs):
     """
     Fraction of gold (attr -> bool) pairs that match parsed citations when the
     thinking block is fully citation-valid; otherwise None (skipped in GRPO sum).
+
+    Maximum reward is 3.0
     """
     responses = extract_responses(completions)
     rewards = []
@@ -204,7 +213,9 @@ def intermediate_steps_reward(completions, gold_attr_values, **kwargs):
             rewards.append(0.0)
             continue
         correct = sum(1 for attr, pred_val in pred.items() if pred_val == gold_map.get(attr))
-        rewards.append(correct / len(pred))
+        rewards.append(3.0 * correct / len(pred))
+
+        if os.environ.get("DEBUG_INTERMEDIATE_STEPS", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for intermediate steps. Gold: {gold}. Pred: {pred}.\nPASSAGE END ---------------\n")
     return rewards
 
 
