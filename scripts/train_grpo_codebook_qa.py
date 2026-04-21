@@ -87,7 +87,7 @@ def _strict_reasoning_citations(response: str) -> dict[str, bool] | None:
 
 
 def thinking_tags_reward(completions, **kwargs):
-    # 0 - 1 reward depending on the presence of <thinking>...</thinking> tags
+    # 0 - 0.5 reward depending on the presence of <thinking>...</thinking> tags
     responses = extract_responses(completions)
     rewards = []
     for response in responses:
@@ -97,14 +97,12 @@ def thinking_tags_reward(completions, **kwargs):
         if open_count == 1 and closed_count == 1:
             open_idx, closed_idx = response.index(THINKING_OPEN), response.index(THINKING_CLOSE)
             if open_idx < closed_idx:
-                reward += 0.8
+                reward += 0.4
                 content = response[open_idx + len(THINKING_OPEN):closed_idx].strip()
-                if len(content.splitlines()) >= 2: reward += 0.2 # Give extra credit for multiple paragraphs.
-            else: reward += 0.6
-        elif open_count == 1 or closed_count == 1: reward += 0.5;
+                if len(content.splitlines()) >= 2: reward += 0.1 # Give extra credit for multiple paragraphs.
+            else: reward += 0.3
         rewards.append(reward)
 
-        print(f"---------------------\nReward: {reward} for thinking tags for response: {response}\nPASSAGE EMD ---------------\n")
     return rewards
 
 def citation_format_reward(completions, **kwargs):
@@ -137,8 +135,9 @@ def citation_format_reward(completions, **kwargs):
 
             # attr = citation_match.group(1).upper()
             # if f"[{attr}]" in paragraph.upper(): matching += 0.5 # We give extra credit when the citation is relevant to the paragraph
-        
-        rewards.append(matching / len(paragraphs))
+        reward = matching / len(paragraphs)
+        rewards.append(reward)
+        print(f"---------------------\nReward: {reward} for citation format for response: {response}\nPASSAGE END ---------------\n")
     return rewards
         
 def answer_format_reward(completions, sink_id, **kwargs):
@@ -152,7 +151,7 @@ def answer_format_reward(completions, sink_id, **kwargs):
 
         EXPECTED_RESPONSE = f"yes, the story is {sink}", f"no, the story is not {sink}"
 
-        if any(out.startswith(expected) for expected in EXPECTED_RESPONSE): rewards.append(0.5)
+        if any(out.lower().startswith(expected.lower()) for expected in EXPECTED_RESPONSE): rewards.append(0.5)
         else: rewards.append(0.0)
     return rewards
 
@@ -218,6 +217,7 @@ def run_grpo_training(
     per_device_train_batch_size: int = 8,
     max_completion_length: int = 2048,
     use_vllm: bool = False,
+    peft: bool = True,
 ) -> None:
     """
     Run GRPO training given a pre-built training dataset.
@@ -270,9 +270,34 @@ def run_grpo_training(
         vllm_mode="colocate",
     )
 
-    # We also support non-peft models
-    # if not hasattr(model, "peft_config") and bool(getattr(model, "peft_config")):
-    #     raise ValueError("Model does not have a PEFT config.")
+    peft_config = None
+    if peft:
+        # If the loader already attached a PEFT adapter (e.g., you passed an SFT LoRA dir),
+        # keep training that adapter. GRPOTrainer will error if we pass both a PeftModel
+        # and a new `peft_config`.
+        model_has_adapter = bool(getattr(model, "peft_config", None))
+        if model_has_adapter:
+            print("Model already has a PEFT adapter attached; continuing PEFT training from it.")
+        else:
+            from peft import LoraConfig
+
+            # Match the SFT script's LoRA config exactly.
+            peft_config = LoraConfig(
+                task_type="CAUSAL_LM",
+                r=32,
+                lora_alpha=64,
+                lora_dropout=0.05,
+                bias="none",
+                target_modules=[
+                    "q_proj",
+                    "k_proj",
+                    "v_proj",
+                    "o_proj",  # attention
+                    "gate_proj",
+                    "up_proj",
+                    "down_proj",  # MLP
+                ],
+            )
 
 
     trainer = GRPOTrainer(
@@ -281,6 +306,7 @@ def run_grpo_training(
         reward_funcs=reward_functions_for_mode(reward_mode),
         args=training_args,
         train_dataset=train_dataset,
+        peft_config=peft_config,
     )
 
     trainer.train()
@@ -302,6 +328,20 @@ def main() -> None:
             "Base model ID/path, or SFT LoRA checkpoint directory. "
             "If you pass an SFT PEFT directory, GRPO reuses that adapter."
         ),
+    )
+    def _str2bool(v: str) -> bool:
+        s = str(v).strip().lower()
+        if s in {"1", "true", "t", "yes", "y", "on"}:
+            return True
+        if s in {"0", "false", "f", "no", "n", "off"}:
+            return False
+        raise argparse.ArgumentTypeError(f"Expected a boolean (true/false), got: {v!r}")
+
+    parser.add_argument(
+        "--peft",
+        type=_str2bool,
+        default=True,
+        help="Train with PEFT/LoRA (True/False). Default: True.",
     )
     # parser.add_argument(
     #     "--adapter-model",
@@ -429,6 +469,7 @@ def main() -> None:
         per_device_train_batch_size=args.batch_size,
         max_completion_length=args.max_completion_length,
         use_vllm=args.use_vllm,
+        peft=args.peft,
     )
 
 
