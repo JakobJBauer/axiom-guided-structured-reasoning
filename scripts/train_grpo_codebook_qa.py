@@ -3,13 +3,10 @@ from __future__ import annotations
 """
 GRPO training script for the codebook QA task.
 
-Uses a reward function that encourages the model to:
-- Produce a <thinking>...</thinking> block.
-- Follow it with a clear yes/no answer of the form:
-  "Yes, the story is ..." or "No, the story is not ...".
-
-The prompts are the same 'text' field used for SFT, but GRPO focuses on
-format adherence rather than teacher matching.
+Reward modes:
+  - structure: encourages <thinking> tags + citation formatting + a template answer line
+  - answer_only: scores ONLY whether the final answer is correct (ignores all other text/format)
+  - process: structure rewards + intermediate citation accuracy when parseable
 """
 
 import re
@@ -158,15 +155,35 @@ def answer_format_reward(completions, sink_id, **kwargs):
 
 def answer_accuracy_reward(completions, sink_id, answer, **kwargs):
     """1.0 if the final line matches the gold boolean answer; 0.0 otherwise."""
+    _BOOL_TOKEN_RE = re.compile(r"\b(yes|no|true|false)\b", re.IGNORECASE)
+    def _parse_final_boolean_answer(response: str) -> bool | None:
+        """
+        Parse the final boolean decision from the model output.
+        We intentionally ignore everything except the *last* yes/no/true/false token
+        in the tail after </thinking> (if present).
+        """
+        tail = _final_answer_tail(response.lower())
+        matches = list(_BOOL_TOKEN_RE.finditer(tail))
+        if not matches:
+            return None
+        token = matches[-1].group(1).lower()
+        if token in {"yes", "true"}:
+            return True
+        if token in {"no", "false"}:
+            return False
+        return None
+
     responses = extract_responses(completions)
     rewards = []
     for response, sink, gold_bool in zip(responses, sink_id, answer, strict=True):
         response = response.lower()
         sink = str(sink).lower()
-        out = _final_answer_tail(response)
-        if gold_bool and any(x in out.lower() for x in ["yes", "true"]): rewards.append(1.0)
-        elif not gold_bool and any(x in out.lower() for x in ["no", "false"]): rewards.append(1.0)
+        final_response = _parse_final_boolean_answer(response)
+        if final_response is None: rewards.append(0.0)
+        elif final_response == gold_bool: rewards.append(1.0)
         else: rewards.append(0.0)
+
+        print(f"---------------------\nReward: {rewards[-1]} for answer accuracy. Gold answer: {gold_bool}. Sink: {sink}. Response: {response}\nPASSAGE END ---------------\n")
     return rewards
 
 
@@ -194,7 +211,7 @@ def intermediate_steps_reward(completions, gold_attr_values, **kwargs):
 def reward_functions_for_mode(mode: RewardMode):
     if mode == "structure":
         return [thinking_tags_reward, citation_format_reward, answer_format_reward]
-    if mode == "answer_only":
+    if mode == "answer_only" or mode == "answer-only":
         return [answer_accuracy_reward]
     if mode == "process":
         return [
