@@ -8,3 +8,4 @@ codebooks/*
 !codebooks/generator/
 !codebooks/final_selection/
 wandb/
+/models/outdated/
