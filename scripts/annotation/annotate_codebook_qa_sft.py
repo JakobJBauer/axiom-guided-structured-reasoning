@@ -8,7 +8,8 @@ This script:
 - For each datapoint, queries a teacher model (GPT-5-mini) to produce:
     - A reasoning trace in <thinking>...</thinking> format
     - A final answer line, e.g. "Yes, the story is dense."
-- Writes results to JSONL with a single 'text' field per row suitable for SFT.
+- Writes results to JSONL with 'text' (prompt + completion) plus structured fields
+  for reward evaluation and debugging.
 """
 
 import json
@@ -28,7 +29,11 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from dataloader.codebook_qa import CodebookQADataset, GraphDifficultyConfig
-from dataloader.trl_adapters import build_base_prompt, build_task_prefix
+from dataloader.trl_adapters import (
+    build_base_prompt,
+    build_task_prefix,
+    gold_attr_values_from_graph,
+)
 
 
 load_dotenv()
@@ -136,17 +141,24 @@ def main() -> None:
             ],
         )
 
-        answer = completion.choices[0].message.content or ""
+        completion_text = completion.choices[0].message.content or ""
+        prompt = build_sft_text(sample)
 
-        # Final SFT text stored in JSONL: content-only prefix + teacher answer.
-        text = build_sft_text(sample) + answer
+        sink_node = sample.reasoning_graph.get_node_by_id(sample.sink_id)
+        sink_label = sink_node.label if sink_node is not None else sample.sink_id
 
         record: Dict[str, Any] = {
-            "text": text,
+            "text": prompt + completion_text,
+            "prompt": prompt,
+            "completion": completion_text,
             "story": sample.story,
+            "codebook": sample.codebook_text,
             "question": sample.question,
             "sink_id": sample.sink_id,
+            "sink_label": sink_label,
             "answer": bool(sample.answer),
+            "node_ids": [node.id.upper() for node in sample.reasoning_graph.get_nodes()],
+            "gold_attr_values": gold_attr_values_from_graph(sample.reasoning_graph),
         }
         return record
 

@@ -224,6 +224,8 @@ class CodebookQAGRPODataset(Dataset):
     def __getitem__(self, idx: int) -> Dict[str, Any]:
         sample = self._base[idx % len(self._base)]
         node_ids = [node.id.upper() for node in sample.reasoning_graph.get_nodes()]
+        sink_node = sample.reasoning_graph.get_node_by_id(sample.sink_id)
+        sink_label = sink_node.label if sink_node is not None else sample.sink_id
         out: Dict[str, Any] = {
             "prompt": build_grpo_prompt(
                 sample,
@@ -231,6 +233,7 @@ class CodebookQAGRPODataset(Dataset):
                 abbr_prefix=self._abbr_prefix,
             ),
             "sink_id": sample.sink_id,
+            "sink_label": sink_label,
             "node_ids": node_ids,
             "gold_attr_values": gold_attr_values_from_graph(sample.reasoning_graph),
         }

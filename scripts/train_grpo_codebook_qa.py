@@ -12,7 +12,7 @@ Reward modes:
 import re
 from pathlib import Path
 import sys
-from typing import Literal
+from typing import Any, Literal
 import os
 
 # Ensure project root is on sys.path so we can import local modules
@@ -30,7 +30,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 THINKING_OPEN, THINKING_CLOSE = "<thinking>", "</thinking>"
-CITATION_PATTERN = re.compile(r'\(\s?([A-Z][A-Z\-]*)\s?:\s?(True|False)\s?\)', re.IGNORECASE)
+CITATION_PATTERN = re.compile(r'\(\s?([A-Z][A-Z0-9_\-]*)\s?:\s?(True|False)\s?\)', re.IGNORECASE)
 
 RewardMode = Literal["structure", "answer_only", "process"]
 
@@ -143,22 +143,31 @@ def citation_format_reward(completions, node_ids, **kwargs):
         if os.environ.get("DEBUG_CITATION_FORMAT", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for citation format.\nPASSAGE END ---------------\n")
     return rewards
         
-def answer_format_reward(completions, sink_id, **kwargs):
+def _matches_answer_format_line(out: str, sink: str, label: str | None = None) -> bool:
+    alts = re.escape(sink.lower()) + "|" + re.escape(label.lower()) if label else re.escape(sink)
+    pat = re.compile(
+        rf"^(?:(yes)?,?\s*the\s*story\s*is|(no)?,?\s*the\s*story\s*is\s*not)\s*[\[\(]?(?:{alts})[\]\)]?.*\b",
+        re.IGNORECASE,
+    )
+    return pat.match(out) is not None
+
+
+def answer_format_reward(completions, sink_id, sink_label=None, **kwargs):
     # 0 - 0.5 reward depending on the presence of yes/no answer
     responses = extract_responses(completions)
+    labels = sink_label
+    if labels is None:
+        labels = [None] * len(sink_id)
     rewards = []
-    for response, sink in zip(responses, sink_id):
-        response = response.lower()
-        sink = str(sink).lower()
-        out = _final_answer_tail(response)
-
-        sink_esc = re.escape(sink)
-        pat = re.compile(
-            rf"^(?:(yes)?,?\s*the\s*story\s*is|(no)?,?\s*the\s*story\s*is\s*not)\s*[\[\(]?{sink_esc}[\]\)]?.*\b",
-            re.IGNORECASE,
-        )
-        rewards.append(0.5 if pat.match(out) else 0.0)
-        if os.environ.get("DEBUG_ANSWER_FORMAT", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for answer format. Sink: {sink}.\nPASSAGE END ---------------\n")
+    for response, sink, label in zip(responses, sink_id, labels, strict=True):
+        out = _final_answer_tail(response.lower())
+        matched = _matches_answer_format_line(out, sink, label)
+        rewards.append(0.5 if matched else 0.0)
+        if os.environ.get("DEBUG_ANSWER_FORMAT", "false").lower() == "true":
+            print(
+                f"---------------------\nResponse: {response}\nReward: {rewards[-1]} "
+                f"for answer format. Sink tokens: {sink_tokens}.\nPASSAGE END ---------------\n"
+            )
     return rewards
 
 
