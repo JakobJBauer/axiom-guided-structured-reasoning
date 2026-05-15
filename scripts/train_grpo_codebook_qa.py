@@ -304,9 +304,15 @@ def run_grpo_training(
         save_steps=100,
         run_name=f"grpo-{reward_mode}-{base_name}",
 
-        # Fast inference with VLLM
+        # Sampling (used for both HF and vLLM generation in GRPOTrainer)
+        temperature=float(os.environ.get("TEMPERATURE", "1.0")),
+        top_p=float(os.environ.get("TOP_P", "1.0")),
+
+        # vLLM colocate (only active when use_vllm=True)
         use_vllm=use_vllm,
         vllm_mode="colocate",
+        vllm_max_model_length=os.environ.get("VLLM_MAX_MODEL_LEN", 16384),
+        vllm_enable_sleep_mode=True
     )
 
     peft_config = None
