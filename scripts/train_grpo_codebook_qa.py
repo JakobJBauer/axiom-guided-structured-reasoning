@@ -12,7 +12,7 @@ Reward modes:
 import re
 from pathlib import Path
 import sys
-from typing import Any, Literal
+from typing import Any, Callable, Literal
 import os
 
 # Ensure project root is on sys.path so we can import local modules
@@ -51,6 +51,16 @@ CORRECTNESS_REWARD_SCHEDULE = {
     "penalty_deactivation": float(os.environ.get("CORRECTNESS_REWARD_PENALTY_DEACTIVATION", "0.4")),
     "scaling_end": float(os.environ.get("CORRECTNESS_REWARD_SCALING_END", "0.6")),
 }
+
+
+def compute_learning_schedule_scale(progress: float, schedule: dict[str, float]) -> float:
+    if progress < schedule["penalty_deactivation"]:
+        return schedule["early_penalty"]
+    if progress < schedule["scaling_end"]:
+        return schedule["early_penalty"] + (1.0 - schedule["early_penalty"]) * (
+            progress - schedule["penalty_deactivation"]
+        ) / (schedule["scaling_end"] - schedule["penalty_deactivation"])
+    return 1.0
 
 
 def extract_responses(completions):
@@ -122,15 +132,13 @@ def thinking_tags_reward(completions, **kwargs):
 
     return rewards
 
-def citation_format_reward(completions, trainer_state, node_ids, **kwargs):
+def citation_format_reward(completions, trainer_state, node_ids, log_metric=None, **kwargs):
     # 0 - 2 reward depending on the presence of (ATTR : True) or (ATTR : False) tags. Gives partial credit.
     # Only gives credit when the cited ATTR exists in this example's codebook graph.
     progress = trainer_state.global_step / trainer_state.max_steps
     schedule = CITATION_FORMAT_REWARD_SCHEDULE
-
-    if progress < schedule["penalty_deactivation"]: learning_schedule_scale = schedule["early_penalty"]
-    elif progress < schedule["scaling_end"]: learning_schedule_scale = schedule["early_penalty"] + (1.0 - schedule["early_penalty"]) * (progress - schedule["penalty_deactivation"]) / (schedule["scaling_end"] - schedule["penalty_deactivation"])
-    else: learning_schedule_scale = 1.0
+    learning_schedule_scale = compute_learning_schedule_scale(progress, schedule)
+    if log_metric is not None: log_metric("reward/citation_learning_schedule_scale", learning_schedule_scale)
 
     responses = extract_responses(completions)
     rewards = []
@@ -177,13 +185,11 @@ def _matches_answer_format_line(out: str, sink: str, label: str | None = None) -
     return pat.match(out) is not None
 
 
-def answer_format_reward(completions, trainer_state, sink_id, sink_label=None, **kwargs):
+def answer_format_reward(completions, trainer_state, sink_id, sink_label=None, log_metric=None, **kwargs):
     progress = trainer_state.global_step / trainer_state.max_steps
     schedule = CORRECTNESS_REWARD_SCHEDULE
-
-    if progress < schedule["penalty_deactivation"]: learning_schedule_scale = schedule["early_penalty"]
-    elif progress < schedule["scaling_end"]: learning_schedule_scale = schedule["early_penalty"] + (1.0 - schedule["early_penalty"]) * (progress - schedule["penalty_deactivation"]) / (schedule["scaling_end"] - schedule["penalty_deactivation"])
-    else: learning_schedule_scale = 1.0
+    learning_schedule_scale = compute_learning_schedule_scale(progress, schedule)
+    if log_metric is not None: log_metric("reward/correctness_learning_schedule_scale", learning_schedule_scale)
 
     responses = extract_responses(completions)
     labels = sink_label
@@ -202,14 +208,12 @@ def answer_format_reward(completions, trainer_state, sink_id, sink_label=None, *
     return rewards
 
 
-def answer_accuracy_reward(completions, trainer_state, sink_id, answer, **kwargs):
+def answer_accuracy_reward(completions, trainer_state, sink_id, answer, log_metric=None, **kwargs):
     """1.0 if the final line matches the gold boolean answer; 0.0 otherwise."""
     progress = trainer_state.global_step / trainer_state.max_steps
     schedule = CORRECTNESS_REWARD_SCHEDULE
-
-    if progress < schedule["penalty_deactivation"]: learning_schedule_scale = schedule["early_penalty"]
-    elif progress < schedule["scaling_end"]: learning_schedule_scale = schedule["early_penalty"] + (1.0 - schedule["early_penalty"]) * (progress - schedule["penalty_deactivation"]) / (schedule["scaling_end"] - schedule["penalty_deactivation"])
-    else: learning_schedule_scale = 1.0
+    learning_schedule_scale = compute_learning_schedule_scale(progress, schedule)
+    if log_metric is not None: log_metric("reward/correctness_learning_schedule_scale", learning_schedule_scale)
 
     _BOOL_TOKEN_RE = re.compile(r"\b(yes|no|true|false)\b", re.IGNORECASE)
     def _parse_final_boolean_answer(response: str) -> bool | None:
