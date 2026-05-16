@@ -34,6 +34,12 @@ CITATION_PATTERN = re.compile(r'\(\s?([A-Z][A-Z0-9_\-]*)\s?:\s?(True|False)\s?\)
 
 RewardMode = Literal["structure", "answer_only", "process", "test"]
 
+CITATION_FORMAT_REWARD = float(os.environ.get("CITATION_FORMAT_REWARD", "1.0"))
+THINKING_TAGS_REWARD = float(os.environ.get("THINKING_TAGS_REWARD", "1.0"))
+ANSWER_FORMAT_REWARD = float(os.environ.get("ANSWER_FORMAT_REWARD", "1.0"))
+ANSWER_ACCURACY_REWARD = float(os.environ.get("ANSWER_ACCURACY_REWARD", "1.0"))
+INTERMEDIATE_STEPS_REWARD = float(os.environ.get("INTERMEDIATE_STEPS_REWARD", "1.0"))
+
 
 def extract_responses(completions):
     responses = []
@@ -95,11 +101,11 @@ def thinking_tags_reward(completions, **kwargs):
         if open_count == 1 and closed_count == 1:
             open_idx, closed_idx = response.index(THINKING_OPEN), response.index(THINKING_CLOSE)
             if open_idx < closed_idx:
-                reward += 0.4
+                reward += 0.8
                 content = response[open_idx + len(THINKING_OPEN):closed_idx].strip()
-                if len(content.splitlines()) >= 2: reward += 0.1 # Give extra credit for multiple paragraphs.
-            else: reward += 0.3
-        rewards.append(reward)
+                if len(content.splitlines()) >= 2: reward += 0.2 # Give extra credit for multiple paragraphs.
+            else: reward += 0.6
+        rewards.append(reward * THINKING_TAGS_REWARD)
         if os.environ.get("DEBUG_THINKING_TAGS", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for thinking tags.\nPASSAGE END ---------------\n")
 
     return rewards
@@ -138,8 +144,8 @@ def citation_format_reward(completions, node_ids, **kwargs):
 
             # attr = citation_match.group(1).upper()
             # if f"[{attr}]" in paragraph.upper(): matching += 0.5 # We give extra credit when the citation is relevant to the paragraph
-        reward = 2.0 * matching / len(paragraphs)
-        rewards.append(reward)
+        reward = matching / len(paragraphs)
+        rewards.append(reward * CITATION_FORMAT_REWARD)
         if os.environ.get("DEBUG_CITATION_FORMAT", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for citation format.\nPASSAGE END ---------------\n")
     return rewards
         
@@ -162,7 +168,7 @@ def answer_format_reward(completions, sink_id, sink_label=None, **kwargs):
     for response, sink, label in zip(responses, sink_id, labels, strict=True):
         out = _final_answer_tail(response.lower())
         matched = _matches_answer_format_line(out, sink, label)
-        rewards.append(0.5 if matched else 0.0)
+        rewards.append((1.0 if matched else 0.0) * ANSWER_FORMAT_REWARD)
         if os.environ.get("DEBUG_ANSWER_FORMAT", "false").lower() == "true":
             print(
                 f"---------------------\nResponse: {response}\nReward: {rewards[-1]} "
@@ -194,13 +200,15 @@ def answer_accuracy_reward(completions, sink_id, answer, **kwargs):
     responses = extract_responses(completions)
     rewards = []
     for response, sink, gold_bool in zip(responses, sink_id, answer, strict=True):
+        reward = 0.0
         response = response.lower()
         sink = str(sink).lower()
         final_response = _parse_final_boolean_answer(response)
-        if final_response is None: rewards.append(0.0)
-        elif final_response == gold_bool: rewards.append(1.0)
-        else: rewards.append(0.0)
+        if final_response is None: reward += 0.0
+        elif final_response == gold_bool: reward += 1.0
+        else: reward += 0.0
 
+        rewards.append(reward * ANSWER_ACCURACY_REWARD)
         if os.environ.get("DEBUG_ANSWER_ACCURACY", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for answer accuracy. Gold answer: {gold_bool}. Sink: {sink}.\nPASSAGE END ---------------\n")
     return rewards
 
@@ -224,7 +232,8 @@ def intermediate_steps_reward(completions, gold_attr_values, **kwargs):
             rewards.append(0.0)
             continue
         correct = sum(1 for attr, pred_val in pred.items() if pred_val == gold_map.get(attr))
-        rewards.append(3.0 * correct / len(pred))
+        reward = correct / len(pred)
+        rewards.append(reward * INTERMEDIATE_STEPS_REWARD)
 
         if os.environ.get("DEBUG_INTERMEDIATE_STEPS", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for intermediate steps. Gold: {gold}. Pred: {pred}.\nPASSAGE END ---------------\n")
     return rewards
@@ -279,6 +288,7 @@ def run_grpo_training(
 
     from pathlib import Path
     world_size = int(os.environ.get("WORLD_SIZE", "1"))
+    num_generations = int(os.environ.get("NUM_GENERATIONS", 4))
 
     base_name = Path(str(model_name_or_path)).name
 
@@ -291,7 +301,7 @@ def run_grpo_training(
     # The GRPO adapter dataset is iterable, so derive a sensible default.
     if max_steps <= 0:
         effective_batch = per_device_train_batch_size * gradient_accumulation_steps * world_size
-        max_steps = max(1, num_examples // effective_batch)
+        max_steps = max(1, (num_examples * num_generations) // effective_batch)
         print(
             f"Dataset has no static length; setting max_steps={max_steps} "
             f"(num_examples={num_examples}, effective_batch={effective_batch})."
@@ -299,8 +309,7 @@ def run_grpo_training(
 
     training_args = GRPOConfig(
         output_dir=output_dir,
-        # num_generations=4,
-        num_generations=8,
+        num_generations=num_generations,
         num_train_epochs=1,  # ignored when max_steps > 0
         max_steps=max_steps,
         # learning_rate=5e-6,
