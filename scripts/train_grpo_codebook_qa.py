@@ -40,6 +40,18 @@ ANSWER_FORMAT_REWARD = float(os.environ.get("ANSWER_FORMAT_REWARD", "1.0"))
 ANSWER_ACCURACY_REWARD = float(os.environ.get("ANSWER_ACCURACY_REWARD", "1.0"))
 INTERMEDIATE_STEPS_REWARD = float(os.environ.get("INTERMEDIATE_STEPS_REWARD", "1.0"))
 
+CITATION_FORMAT_REWARD_SCHEDULE = {
+    "early_penalty": float(os.environ.get("CITATION_FORMAT_REWARD_EARLY_PENALTY", "0.1")),
+    "penalty_deactivation": float(os.environ.get("CITATION_FORMAT_REWARD_PENALTY_DEACTIVATION", "0.3")),
+    "scaling_end": float(os.environ.get("CITATION_FORMAT_REWARD_SCALING_END", "0.5")),
+}
+
+CORRECTNESS_REWARD_SCHEDULE = {
+    "early_penalty": float(os.environ.get("CORRECTNESS_REWARD_EARLY_PENALTY", "0.1")),
+    "penalty_deactivation": float(os.environ.get("CORRECTNESS_REWARD_PENALTY_DEACTIVATION", "0.4")),
+    "scaling_end": float(os.environ.get("CORRECTNESS_REWARD_SCALING_END", "0.6")),
+}
+
 
 def extract_responses(completions):
     responses = []
@@ -110,9 +122,16 @@ def thinking_tags_reward(completions, **kwargs):
 
     return rewards
 
-def citation_format_reward(completions, node_ids, **kwargs):
+def citation_format_reward(completions, trainer_state, node_ids, **kwargs):
     # 0 - 2 reward depending on the presence of (ATTR : True) or (ATTR : False) tags. Gives partial credit.
     # Only gives credit when the cited ATTR exists in this example's codebook graph.
+    progress = trainer_state.global_step / trainer_state.max_steps
+    schedule = CITATION_FORMAT_REWARD_SCHEDULE
+
+    if progress < schedule["penalty_deactivation"]: learning_schedule_scale = schedule["early_penalty"]
+    elif progress < schedule["scaling_end"]: learning_schedule_scale = schedule["early_penalty"] + (1.0 - schedule["early_penalty"]) * (progress - schedule["penalty_deactivation"]) / (schedule["scaling_end"] - schedule["penalty_deactivation"])
+    else: learning_schedule_scale = 1.0
+
     responses = extract_responses(completions)
     rewards = []
     for response, valid_nodes in zip(responses, node_ids):
@@ -145,7 +164,7 @@ def citation_format_reward(completions, node_ids, **kwargs):
             # attr = citation_match.group(1).upper()
             # if f"[{attr}]" in paragraph.upper(): matching += 0.5 # We give extra credit when the citation is relevant to the paragraph
         reward = matching / len(paragraphs)
-        rewards.append(reward * CITATION_FORMAT_REWARD)
+        rewards.append(reward * CITATION_FORMAT_REWARD * learning_schedule_scale)
         if os.environ.get("DEBUG_CITATION_FORMAT", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for citation format.\nPASSAGE END ---------------\n")
     return rewards
         
@@ -158,8 +177,14 @@ def _matches_answer_format_line(out: str, sink: str, label: str | None = None) -
     return pat.match(out) is not None
 
 
-def answer_format_reward(completions, sink_id, sink_label=None, **kwargs):
-    # 0 - 0.5 reward depending on the presence of yes/no answer
+def answer_format_reward(completions, trainer_state, sink_id, sink_label=None, **kwargs):
+    progress = trainer_state.global_step / trainer_state.max_steps
+    schedule = CORRECTNESS_REWARD_SCHEDULE
+
+    if progress < schedule["penalty_deactivation"]: learning_schedule_scale = schedule["early_penalty"]
+    elif progress < schedule["scaling_end"]: learning_schedule_scale = schedule["early_penalty"] + (1.0 - schedule["early_penalty"]) * (progress - schedule["penalty_deactivation"]) / (schedule["scaling_end"] - schedule["penalty_deactivation"])
+    else: learning_schedule_scale = 1.0
+
     responses = extract_responses(completions)
     labels = sink_label
     if labels is None:
@@ -168,7 +193,7 @@ def answer_format_reward(completions, sink_id, sink_label=None, **kwargs):
     for response, sink, label in zip(responses, sink_id, labels, strict=True):
         out = _final_answer_tail(response.lower())
         matched = _matches_answer_format_line(out, sink, label)
-        rewards.append((1.0 if matched else 0.0) * ANSWER_FORMAT_REWARD)
+        rewards.append((1.0 if matched else 0.0) * ANSWER_FORMAT_REWARD * learning_schedule_scale)
         if os.environ.get("DEBUG_ANSWER_FORMAT", "false").lower() == "true":
             print(
                 f"---------------------\nResponse: {response}\nReward: {rewards[-1]} "
@@ -177,8 +202,15 @@ def answer_format_reward(completions, sink_id, sink_label=None, **kwargs):
     return rewards
 
 
-def answer_accuracy_reward(completions, sink_id, answer, **kwargs):
+def answer_accuracy_reward(completions, trainer_state, sink_id, answer, **kwargs):
     """1.0 if the final line matches the gold boolean answer; 0.0 otherwise."""
+    progress = trainer_state.global_step / trainer_state.max_steps
+    schedule = CORRECTNESS_REWARD_SCHEDULE
+
+    if progress < schedule["penalty_deactivation"]: learning_schedule_scale = schedule["early_penalty"]
+    elif progress < schedule["scaling_end"]: learning_schedule_scale = schedule["early_penalty"] + (1.0 - schedule["early_penalty"]) * (progress - schedule["penalty_deactivation"]) / (schedule["scaling_end"] - schedule["penalty_deactivation"])
+    else: learning_schedule_scale = 1.0
+
     _BOOL_TOKEN_RE = re.compile(r"\b(yes|no|true|false)\b", re.IGNORECASE)
     def _parse_final_boolean_answer(response: str) -> bool | None:
         """
@@ -208,7 +240,7 @@ def answer_accuracy_reward(completions, sink_id, answer, **kwargs):
         elif final_response == gold_bool: reward += 1.0
         else: reward += 0.0
 
-        rewards.append(reward * ANSWER_ACCURACY_REWARD)
+        rewards.append(reward * ANSWER_ACCURACY_REWARD * learning_schedule_scale)
         if os.environ.get("DEBUG_ANSWER_ACCURACY", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for answer accuracy. Gold answer: {gold_bool}. Sink: {sink}.\nPASSAGE END ---------------\n")
     return rewards
 
