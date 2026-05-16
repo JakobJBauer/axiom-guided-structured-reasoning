@@ -282,9 +282,10 @@ def run_grpo_training(
 
     base_name = Path(str(model_name_or_path)).name
 
+    global_batch_size = int(os.environ.get("GLOBAL_BATCH_SIZE", "16"))
     per_device_train_batch_size = int(per_device_train_batch_size)
-    # As requested: gradient accumulation is 64, or the batch size if batch size > 64.
-    gradient_accumulation_steps = max(64 // (per_device_train_batch_size * world_size), 1)
+    # As requested: gradient accumulation is global_batch_size, or the batch size if batch size > global_batch_size.
+    gradient_accumulation_steps = max(global_batch_size // (per_device_train_batch_size * world_size), 1)
 
     # HF Trainer requires `max_steps > 0` when dataset has no `__len__`.
     # The GRPO adapter dataset is iterable, so derive a sensible default.
