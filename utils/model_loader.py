@@ -1,3 +1,4 @@
+import os
 import torch
 from pathlib import Path
 from transformers import (
@@ -6,6 +7,9 @@ from transformers import (
     AutoProcessor,
     AutoTokenizer,
 )
+
+def _multi_gpu():
+    return os.environ.get("LOCAL_RANK") is not None
 
 
 def _register_qwen35_rope_delta_batch_guard(model: torch.nn.Module) -> None:
@@ -34,7 +38,8 @@ def _register_qwen35_rope_delta_batch_guard(model: torch.nn.Module) -> None:
 
 
 def load_model_and_processor(model_name_or_path: str):
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = None if _multi_gpu() else "cuda" if torch.cuda.is_available() else "cpu"
+    if device is None: print("Multi-GPU detected. Using CPU for model loading.")
 
     # If `model_name_or_path` is a PEFT adapter directory, load base + attach adapter.
     p = Path(model_name_or_path)
@@ -58,7 +63,8 @@ def load_model_and_processor(model_name_or_path: str):
             model_name_or_path, 
             trust_remote_code=True,
             dtype=torch.bfloat16 if torch.cuda.is_available() else None
-        ).to(device)
+        )
+        if device is not None:  model = model.to(device)
         processor = AutoProcessor.from_pretrained(model_name_or_path)
         _register_qwen35_rope_delta_batch_guard(model)
         return model, processor
@@ -75,7 +81,8 @@ def load_model_and_processor(model_name_or_path: str):
         
         model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path, trust_remote_code=True
-        ).to(device)
+        )
+        if device is not None: model = model.to(device)
 
         # PEFT/LoRA adapter loading (kept as commented-out reference):
         # base_model = AutoModelForCausalLM.from_pretrained(
@@ -88,7 +95,8 @@ def load_model_and_processor(model_name_or_path: str):
         print(f"Generic Fallback. Loading Full Training Model: {model_name_or_path}...")
         model = AutoModelForCausalLM.from_pretrained(
             model_name_or_path, trust_remote_code=True
-        ).to(device)
+        )
+        if device is not None: model = model.to(device)
         tokenizer = AutoTokenizer.from_pretrained(
             model_name_or_path, trust_remote_code=True
         )

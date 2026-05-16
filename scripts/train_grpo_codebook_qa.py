@@ -32,7 +32,7 @@ load_dotenv()
 THINKING_OPEN, THINKING_CLOSE = "<thinking>", "</thinking>"
 CITATION_PATTERN = re.compile(r'\(\s?([A-Z][A-Z0-9_\-]*)\s?:\s?(True|False)\s?\)', re.IGNORECASE)
 
-RewardMode = Literal["structure", "answer_only", "process"]
+RewardMode = Literal["structure", "answer_only", "process", "test"]
 
 
 def extract_responses(completions):
@@ -230,6 +230,14 @@ def intermediate_steps_reward(completions, gold_attr_values, **kwargs):
     return rewards
 
 
+def average_response_length_reward(completions, **kwargs):
+    responses = extract_responses(completions)
+    rewards = []
+    for response in responses:
+        rewards.append(abs(20 - len(response.splitlines()))/10)
+    return rewards
+
+
 def reward_functions_for_mode(mode: RewardMode):
     if mode == "structure":
         return [thinking_tags_reward, citation_format_reward, answer_format_reward]
@@ -243,6 +251,8 @@ def reward_functions_for_mode(mode: RewardMode):
             answer_format_reward,
             answer_accuracy_reward,
         ]
+    if mode == "test":
+        return [average_response_length_reward]
     raise ValueError(f"Unknown reward mode: {mode!r}")
 
 
@@ -268,17 +278,18 @@ def run_grpo_training(
     model, processor = load_model_and_processor(model_name_or_path)
 
     from pathlib import Path
+    world_size = int(os.environ.get("WORLD_SIZE", "1"))
 
     base_name = Path(str(model_name_or_path)).name
 
     per_device_train_batch_size = int(per_device_train_batch_size)
-    # As requested: gradient accumulation is 8, or the batch size if batch size > 8.
-    gradient_accumulation_steps = max(16 // per_device_train_batch_size, 1)
+    # As requested: gradient accumulation is 64, or the batch size if batch size > 64.
+    gradient_accumulation_steps = max(64 // (per_device_train_batch_size * world_size), 1)
 
     # HF Trainer requires `max_steps > 0` when dataset has no `__len__`.
     # The GRPO adapter dataset is iterable, so derive a sensible default.
     if max_steps <= 0:
-        effective_batch = per_device_train_batch_size * gradient_accumulation_steps
+        effective_batch = per_device_train_batch_size * gradient_accumulation_steps * world_size
         max_steps = max(1, num_examples // effective_batch)
         print(
             f"Dataset has no static length; setting max_steps={max_steps} "
@@ -287,15 +298,18 @@ def run_grpo_training(
 
     training_args = GRPOConfig(
         output_dir=output_dir,
-        num_generations=4,
+        # num_generations=4,
+        num_generations=8,
         num_train_epochs=1,  # ignored when max_steps > 0
         max_steps=max_steps,
-        learning_rate=5e-6,
+        # learning_rate=5e-6,
+        learning_rate=2e-5,
         per_device_train_batch_size=per_device_train_batch_size,
         gradient_accumulation_steps=gradient_accumulation_steps,
         max_completion_length=max_completion_length,
         beta=0.1,
         bf16=True,
+        ddp_find_unused_parameters=False,
 
         # Tracking info
         report_to="wandb",
@@ -312,7 +326,7 @@ def run_grpo_training(
         use_vllm=use_vllm,
         vllm_mode="colocate",
         vllm_max_model_length=os.environ.get("VLLM_MAX_MODEL_LEN", 16384),
-        vllm_enable_sleep_mode=True
+        vllm_enable_sleep_mode=False # See if possible
     )
 
     peft_config = None
@@ -355,8 +369,9 @@ def run_grpo_training(
     )
 
     trainer.train()
-    trainer.save_model(output_dir)
-    processor.save_pretrained(output_dir)
+    if trainer.is_world_process_zero():
+        trainer.save_model(output_dir)
+        processor.save_pretrained(output_dir)
 
 
 def main() -> None:
@@ -459,17 +474,18 @@ def main() -> None:
         "--reward-mode",
         type=str,
         default="structure",
-        choices=["structure", "answer_only", "answer-only", "process"],
+        choices=["structure", "answer_only", "answer-only", "process", "test"],
         help=(
             "structure: thinking + citations + template answer line; "
             "answer_only: final answer correctness only; "
-            "process: structure rewards + intermediate citation accuracy when parseable."
+            "process: structure rewards + intermediate citation accuracy when parseable; "
+            "test: average response length. For testing purposes."
         ),
     )
     parser.add_argument(
         "--max-completion-length",
         type=int,
-        default=2048,
+        default=int(os.environ.get("MAX_COMPLETION_LENGTH", 2048)),
         help=(
             "Max new tokens per GRPO completion (TRL default 256 is usually too small for "
             "full thinking traces). Lower if you run out of VRAM during generation/logprob."
