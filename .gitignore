@@ -9,3 +9,7 @@ codebooks/*
 !codebooks/final_selection/
 wandb/
 /models/outdated/
+output/
+models/
+models2/
+data/codebook_qa_sft_gpt_1000_complete_rewards*.jsonl
