@@ -108,6 +108,10 @@ class CodebookQADataset:
     def __len__(self) -> int:
         return len(self._indices_by_split[self._split])
 
+    def story_row_index(self, idx: int) -> int:
+        """Index into the concatenated SimpleStories table for split sample ``idx``."""
+        return self._indices_by_split[self._split][idx]
+
     def __getitem__(self, idx: int) -> CodebookSample:
         indices = self._indices_by_split[self._split]
         story_idx = indices[idx]
