@@ -170,7 +170,7 @@ def main() -> None:
         per_device_train_batch_size=args.batch_size,
         max_length=args.max_length,
         gradient_accumulation_steps=args.grad_accum,
-        num_train_epochs=3,
+        num_train_epochs=1,
         learning_rate=2e-5,
         save_steps=250,
         report_to="wandb",
