@@ -21,7 +21,6 @@ if str(REPO_ROOT) not in sys.path:
 from datasets import load_dataset
 from trl import SFTConfig, SFTTrainer
 from utils import load_model_and_processor
-from peft import LoraConfig
 
 load_dotenv()
 
@@ -107,6 +106,21 @@ def main() -> None:
         help="Directory where the fine-tuned model will be saved.",
     )
 
+    def _str2bool(v: str) -> bool:
+        s = str(v).strip().lower()
+        if s in {"1", "true", "t", "yes", "y", "on"}:
+            return True
+        if s in {"0", "false", "f", "no", "n", "off"}:
+            return False
+        raise argparse.ArgumentTypeError(f"Expected a boolean (true/false), got: {v!r}")
+
+    parser.add_argument(
+        "--peft",
+        type=_str2bool,
+        default=True,
+        help="Train with PEFT/LoRA (true) or full model weights (false). Default: true.",
+    )
+
     args = parser.parse_args()
 
     if args.data_source == "live":
@@ -170,17 +184,27 @@ def main() -> None:
         bf16=True,
     )
 
-    peft_config = LoraConfig(
-        task_type="CAUSAL_LM",
-        r=32,
-        lora_alpha=64,
-        lora_dropout=0.05,
-        bias="none",
-        target_modules=[
-            "q_proj", "k_proj", "v_proj", "o_proj",  # attention
-            "gate_proj", "up_proj", "down_proj",       # MLP
-        ],
-    )
+    peft_config = None
+    if args.peft:
+        model_has_adapter = bool(getattr(model, "peft_config", None))
+        if model_has_adapter:
+            print("Model already has a PEFT adapter attached; continuing PEFT training from it.")
+        else:
+            from peft import LoraConfig
+
+            peft_config = LoraConfig(
+                task_type="CAUSAL_LM",
+                r=32,
+                lora_alpha=64,
+                lora_dropout=0.05,
+                bias="none",
+                target_modules=[
+                    "q_proj", "k_proj", "v_proj", "o_proj",  # attention
+                    "gate_proj", "up_proj", "down_proj",       # MLP
+                ],
+            )
+    else:
+        print("PEFT disabled; training all model parameters.")
 
     trainer = SFTTrainer(
         model=model,
