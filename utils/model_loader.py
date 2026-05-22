@@ -1,7 +1,9 @@
+import json
 import os
 import torch
 from pathlib import Path
 from transformers import (
+    AutoConfig,
     AutoModelForCausalLM,
     AutoModelForImageTextToText,
     AutoProcessor,
@@ -10,6 +12,27 @@ from transformers import (
 
 def _multi_gpu():
     return os.environ.get("LOCAL_RANK") is not None
+
+
+def _read_config_hints(model_name_or_path: str) -> tuple[str | None, list[str]]:
+    """Return (model_type, architectures) from a local or Hub model path."""
+    p = Path(model_name_or_path)
+    if p.is_dir() and (p / "config.json").is_file():
+        cfg = json.loads((p / "config.json").read_text(encoding="utf-8"))
+        return cfg.get("model_type"), list(cfg.get("architectures") or [])
+
+    try:
+        config = AutoConfig.from_pretrained(model_name_or_path, trust_remote_code=True)
+        return getattr(config, "model_type", None), list(getattr(config, "architectures", None) or [])
+    except Exception:
+        return None, []
+
+
+def _is_qwen35_model(model_name_or_path: str) -> bool:
+    model_type, architectures = _read_config_hints(model_name_or_path)
+    if model_type in {"qwen3_5", "qwen3_5_text"}:
+        return True
+    return any("qwen3_5" in arch.lower() for arch in architectures)
 
 
 def _register_qwen35_rope_delta_batch_guard(model: torch.nn.Module) -> None:
@@ -58,7 +81,7 @@ def load_model_and_processor(model_name_or_path: str):
 
 
     print(f"Loading Training Model: {model_name_or_path}...")
-    if "Qwen3.5" in model_name_or_path:
+    if _is_qwen35_model(model_name_or_path):
         model = AutoModelForImageTextToText.from_pretrained(
             model_name_or_path, 
             trust_remote_code=True,
