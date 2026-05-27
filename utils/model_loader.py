@@ -10,6 +10,10 @@ from transformers import (
     AutoTokenizer,
 )
 
+def _strtobool_env(name: str, default: str = "false") -> bool:
+    v = str(os.environ.get(name, default)).strip().lower()
+    return v in {"1", "true", "t", "yes", "y", "on"}
+
 def _multi_gpu():
     return os.environ.get("LOCAL_RANK") is not None
 
@@ -93,9 +97,16 @@ def load_model_and_processor(model_name_or_path: str):
         return model, processor
 
     elif "Qwen2.5" in model_name_or_path:
-        tokenizer = AutoTokenizer.from_pretrained(
-            model_name_or_path, trust_remote_code=True
-        )
+        tok_kwargs = {"trust_remote_code": True}
+        if _strtobool_env("FIX_MISTRAL_REGEX", "true"):
+            # Some tokenizers accept this kwarg; if unsupported, fall back silently.
+            tok_kwargs["fix_mistral_regex"] = True
+        try:
+            tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, **tok_kwargs)
+        except TypeError:
+            tok_kwargs.pop("fix_mistral_regex", None)
+            print("Fix mistral regex not supported. Trying without fix_mistral_regex...")
+            tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, **tok_kwargs)
 
         tokenizer.padding_side = "left"
         if tokenizer.pad_token is None:
@@ -120,7 +131,13 @@ def load_model_and_processor(model_name_or_path: str):
             model_name_or_path, trust_remote_code=True
         )
         if device is not None: model = model.to(device)
-        tokenizer = AutoTokenizer.from_pretrained(
-            model_name_or_path, trust_remote_code=True
-        )
+        tok_kwargs = {"trust_remote_code": True}
+        if _strtobool_env("FIX_MISTRAL_REGEX", "true"):
+            tok_kwargs["fix_mistral_regex"] = True
+        try:
+            tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, **tok_kwargs)
+        except TypeError:
+            print("Fix mistral regex not supported. Trying without fix_mistral_regex...")
+            tok_kwargs.pop("fix_mistral_regex", None)
+            tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, **tok_kwargs)
         return model, tokenizer
