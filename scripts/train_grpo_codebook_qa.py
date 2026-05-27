@@ -52,6 +52,9 @@ CORRECTNESS_REWARD_SCHEDULE = {
     "scaling_end": float(os.environ.get("CORRECTNESS_REWARD_SCALING_END", "0.6")),
 }
 
+def _env_bool(name: str, default: str = "false") -> bool:
+    return str(os.environ.get(name, default)).strip().lower() in {"1", "true", "t", "yes", "y", "on"}
+
 
 def compute_learning_schedule_scale(progress: float, schedule: dict[str, float]) -> float:
     if progress < schedule["penalty_deactivation"]:
@@ -110,7 +113,6 @@ def _strict_reasoning_citations(response: str) -> dict[str, bool] | None:
         attr = citation_match.group(1).upper()
         pred[attr] = citation_match.group(2).lower() == "true"
     return pred
-
 
 def thinking_tags_reward(completions, **kwargs):
     # 0 - 0.5 reward depending on the presence of <thinking>...</thinking> tags
@@ -172,6 +174,7 @@ def citation_format_reward(completions, trainer_state, node_ids, log_metric=None
             # attr = citation_match.group(1).upper()
             # if f"[{attr}]" in paragraph.upper(): matching += 0.5 # We give extra credit when the citation is relevant to the paragraph
         reward = matching / len(paragraphs)
+        log_metric("reward/citation_format_reward_norm", reward * CITATION_FORMAT_REWARD)
         rewards.append(reward * CITATION_FORMAT_REWARD * learning_schedule_scale)
         if os.environ.get("DEBUG_CITATION_FORMAT", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for citation format.\nPASSAGE END ---------------\n")
     return rewards
@@ -199,7 +202,9 @@ def answer_format_reward(completions, trainer_state, sink_id, sink_label=None, l
     for response, sink, label in zip(responses, sink_id, labels, strict=True):
         out = _final_answer_tail(response.lower())
         matched = _matches_answer_format_line(out, sink, label)
-        rewards.append((1.0 if matched else 0.0) * ANSWER_FORMAT_REWARD * learning_schedule_scale)
+        reward = 1.0 if matched else 0.0
+        log_metric("reward/answer_format_reward_norm", reward * ANSWER_FORMAT_REWARD)
+        rewards.append(reward * ANSWER_FORMAT_REWARD * learning_schedule_scale)
         if os.environ.get("DEBUG_ANSWER_FORMAT", "false").lower() == "true":
             print(
                 f"---------------------\nResponse: {response}\nReward: {rewards[-1]} "
@@ -244,6 +249,7 @@ def answer_accuracy_reward(completions, trainer_state, sink_id, answer, log_metr
         elif final_response == gold_bool: reward += 1.0
         else: reward += 0.0
 
+        log_metric("reward/answer_accuracy_reward_norm", reward * ANSWER_ACCURACY_REWARD)
         rewards.append(reward * ANSWER_ACCURACY_REWARD * learning_schedule_scale)
         if os.environ.get("DEBUG_ANSWER_ACCURACY", "false").lower() == "true": print(f"---------------------\nResponse: {response}\nReward: {rewards[-1]} for answer accuracy. Gold answer: {gold_bool}. Sink: {sink}.\nPASSAGE END ---------------\n")
     return rewards
@@ -284,21 +290,21 @@ def average_response_length_reward(completions, **kwargs):
 
 
 def reward_functions_for_mode(mode: RewardMode):
-    if mode == "structure":
-        return [thinking_tags_reward, citation_format_reward, answer_format_reward]
-    if mode == "answer_only" or mode == "answer-only":
-        return [answer_accuracy_reward]
-    if mode == "process":
-        return [
+    if mode == "structure": fns = [thinking_tags_reward, citation_format_reward, answer_format_reward]
+    elif mode == "answer_only" or mode == "answer-only": fns = [answer_accuracy_reward]
+    elif mode == "process":
+        fns = [
             thinking_tags_reward,
             citation_format_reward,
             intermediate_steps_reward,
             answer_format_reward,
             answer_accuracy_reward,
         ]
-    if mode == "test":
-        return [average_response_length_reward]
-    raise ValueError(f"Unknown reward mode: {mode!r}")
+    elif mode == "test": fns = [average_response_length_reward]
+    else: raise ValueError(f"Unknown reward mode: {mode!r}")
+    
+    return fns
+    
 
 
 def run_grpo_training(
@@ -343,6 +349,7 @@ def run_grpo_training(
             f"(num_examples={num_examples}, effective_batch={effective_batch})."
         )
 
+    save_steps = int(os.environ.get("SAVE_STEPS", "1000"))
     training_args = GRPOConfig(
         output_dir=output_dir,
         num_generations=num_generations,
@@ -359,10 +366,13 @@ def run_grpo_training(
 
         # Tracking info
         report_to="wandb",
+        # Enable the W&B/trackio "completions" table written by GRPOTrainer.log().
+        # (Needed for log_extra columns to show up.)
+        log_completions=_env_bool("LOG_REWARD_TABLE", "false") or _env_bool("LOG_COMPLETIONS", "false"),
         save_strategy="steps",
         logging_steps=10,
-        save_steps=100,
-        run_name=f"grpo-{reward_mode}-{base_name}",
+        save_steps=save_steps if save_steps > 0 else None,
+        run_name=f"grpo-{reward_mode}-{'peft' if peft else 'full'}-{'vllm' if use_vllm else 'hf'}-{base_name}",
 
         # Sampling (used for both HF and vLLM generation in GRPOTrainer)
         temperature=float(os.environ.get("TEMPERATURE", "1.0")),
