@@ -279,7 +279,7 @@ def average_response_length_reward(completions, **kwargs):
     responses = extract_responses(completions)
     rewards = []
     for response in responses:
-        rewards.append(abs(20 - len(response.splitlines()))/10)
+        rewards.append(max(0, (20 - len(response.splitlines()))/10))
     return rewards
 
 

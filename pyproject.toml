@@ -13,10 +13,6 @@ dependencies = [
     "openai==2.15.0",
     "peft==0.19.1",
     "python-dotenv==1.2.1",
-    "torch==2.10.0",
-    "torchvision==0.25.0",
-    "transformers==5.5.4",
-    "trl==1.2.0",
-    "vllm==0.19.1",
+    "trl[vllm]>=1.4.0",
     "wandb==0.25.1",
 ]
