@@ -349,7 +349,9 @@ def run_grpo_training(
             f"(num_examples={num_examples}, effective_batch={effective_batch})."
         )
 
-    save_steps = int(os.environ.get("SAVE_STEPS", "1000"))
+    save_steps_env = int(os.environ.get("SAVE_STEPS", "1000"))
+    save_strategy = "steps" if save_steps_env > 0 else "no"
+    save_steps = save_steps_env if save_steps_env > 0 else None
     training_args = GRPOConfig(
         output_dir=output_dir,
         num_generations=num_generations,
@@ -369,9 +371,9 @@ def run_grpo_training(
         # Enable the W&B/trackio "completions" table written by GRPOTrainer.log().
         # (Needed for log_extra columns to show up.)
         log_completions=_env_bool("LOG_REWARD_TABLE", "false") or _env_bool("LOG_COMPLETIONS", "false"),
-        save_strategy="steps",
+        save_strategy=save_strategy,
         logging_steps=10,
-        save_steps=save_steps if save_steps > 0 else None,
+        save_steps=save_steps,
         run_name=f"grpo-{reward_mode}-{'peft' if peft else 'full'}-{'vllm' if use_vllm else 'hf'}-{base_name}",
 
         # Sampling (used for both HF and vLLM generation in GRPOTrainer)
@@ -381,6 +383,7 @@ def run_grpo_training(
         # vLLM colocate (only active when use_vllm=True)
         use_vllm=use_vllm,
         vllm_mode="colocate",
+        vllm_gpu_memory_utilization=float(os.environ.get("VLLM_GPU_MEMORY_UTILIZATION", "0.90")),
         vllm_max_model_length=os.environ.get("VLLM_MAX_MODEL_LEN", 16384),
         vllm_enable_sleep_mode=False # See if possible
     )
