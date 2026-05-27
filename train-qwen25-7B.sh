@@ -7,6 +7,9 @@
 #   USE_SFT              true | false
 #     true  — GRPO from SFT checkpoint; run SFT first only if that dir is missing
 #     false — GRPO from base /hf model; no SFT step
+#   USE_VLLM             true | false
+#     true  — pass --use-vllm to GRPO trainer
+#     false — do not use vLLM in GRPO trainer
 #
 # Examples:
 #   PROMPT_STYLE=full CUDA_VISIBLE_DEVICES=0 USE_SFT=true ./train-qwen25-3B.sh
@@ -47,6 +50,11 @@ if [ -z "${USE_SFT:-}" ]; then
   read -r -p "Use SFT checkpoint for GRPO? (true=train SFT if missing, then GRPO from it; false=GRPO from base): " USE_SFT
 fi
 USE_SFT="$(_parse_bool "$USE_SFT")"
+
+if [ -z "${USE_VLLM:-}" ]; then
+  read -r -p "Use vLLM for GRPO? (true/false): " USE_VLLM
+fi
+USE_VLLM="$(_parse_bool "$USE_VLLM")"
 
 export MODEL_NAME="Qwen2.5-7B-Instruct"
 export MODEL_PATH="Qwen/${MODEL_NAME}" # no local option
@@ -118,6 +126,10 @@ for REWARD_MODE in process structure answer-only; do
     echo "GRPO ($REWARD_MODE) already exists at $GRPO_OUTPUT_DIR"
   else
     echo "Training GRPO ($REWARD_MODE) -> $GRPO_OUTPUT_DIR"
+    VLLM_FLAG=()
+    if [ "$USE_VLLM" = "true" ]; then
+      VLLM_FLAG+=(--use-vllm)
+    fi
     run_uv scripts/train_grpo_codebook_qa.py \
       --model "$GRPO_MODEL" \
       --prompt-style "$PROMPT_STYLE" \
@@ -125,7 +137,7 @@ for REWARD_MODE in process structure answer-only; do
       --reward-mode "$REWARD_MODE" \
       --num-examples 16000 \
       --batch-size "$BATCH_SIZE" \
-      --use-vllm \
+      "${VLLM_FLAG[@]}" \
       --peft "$PEFT"
   fi
 done
